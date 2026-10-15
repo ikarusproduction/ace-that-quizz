@@ -1,0 +1,22 @@
+{
+  "category": "tunes",
+  "review": "unreviewed",
+  "_readme": [
+    "NAME THAT TUNE bank. Intentionally empty.",
+    "Showing song lyrics and playing music both require rights. Do not paste lyrics here unless you hold a licence or have permission from the rightsholder.",
+    "When this list is empty the game fills the Name That Tune slot with a music question from arts.json, so every round is still playable.",
+    "To add a tune, append an object like the example below. The 'snippet' is the lyric excerpt shown to the player and 'audio' is an optional URL or relative path played on the reveal.",
+    {
+      "id": "tun-EXAMPLE",
+      "subcategory": "music",
+      "difficulty": 2,
+      "snippet": "<short licensed lyric excerpt shown to the player>",
+      "choices": ["Song A — Artist A", "Song B — Artist B", "Song C — Artist C", "Song D — Artist D"],
+      "answer": 0,
+      "explanation": "<one sentence of context about the song>",
+      "audio": "assets/audio/example.mp3",
+      "audioCredit": "<licence / source>"
+    }
+  ],
+  "questions": []
+}

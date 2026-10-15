@@ -1,0 +1,12 @@
+{
+  "name": "The House Knows",
+  "short_name": "House Knows",
+  "description": "A trivia game of nerve for 1 to 4 players.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#121314",
+  "theme_color": "#121314",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

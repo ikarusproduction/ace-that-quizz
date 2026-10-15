@@ -1,0 +1,475 @@
+// Domain operations on top of a storage adapter: profiles, sessions, results,
+// settings, the saved game, and export/import.
+//
+// Principles:
+//  * Profiles are keyed by a stable id. A display name is only a label, so
+//    renaming never touches results or history.
+//  * Results are the source of truth. Nothing here stores a counter that could
+//    disagree with them.
+//  * Writing the same result twice is harmless: result ids are deterministic.
+import { SCHEMA_VERSION, DATA_STORES } from './schema.js';
+import { runMigrations, migrateSnapshot, SchemaError, MIGRATIONS } from './migrations.js';
+import { STARTER_CARDS, CARDS } from '../engine/cards.js';
+
+export const AVATAR_KEYS = ['gasmask', 'welder', 'radio', 'owl', 'fox', 'crow', 'miner', 'jester'];
+export const NAME_MAX = 20;
+export const EXPORT_FORMAT = 'the-house-knows.export';
+export const RECENT_MAX = 8;
+
+export const DEFAULT_SETTINGS = {
+  minSample: 10, // answers needed before a category is ranked
+  confidentSample: 25, // answers before an observation stops being "provisional"
+  sound: true,
+  volume: 0.7,
+  reduceMotion: false,
+};
+
+export class RepoError extends Error {
+  constructor(code, message) {
+    super(message);
+    this.name = 'RepoError';
+    this.code = code;
+  }
+}
+
+/** Collapse whitespace, strip control characters, trim. */
+export function normalizeName(raw) {
+  return String(raw ?? '')
+    .replace(/[\u0000-\u001f\u007f]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+const sameName = (a, b) => normalizeName(a).toLocaleLowerCase() === normalizeName(b).toLocaleLowerCase();
+
+function defaultUuid() {
+  if (globalThis.crypto?.randomUUID) return globalThis.crypto.randomUUID();
+  return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
+}
+
+/** The small per-game summary stored in `sessions`. Built from a game state. */
+export function sessionRecord(state) {
+  const players = state.players.map((p) => {
+    const mine = state.log.filter((r) => r.playerId === p.playerId);
+    return {
+      playerId: p.playerId,
+      name: p.name,
+      result: p.result,
+      score: p.finalScore,
+      placement: p.placement ?? null,
+      answered: mine.length,
+      correct: mine.filter((r) => r.correct).length,
+      roundsCleared: p.roundsCleared,
+      bossesCleared: p.bossesCleared,
+      longestStreak: p.longestStreak,
+      strikes: p.strikes,
+      chips: p.chips,
+      vault: p.vault,
+    };
+  });
+  const totalRounds = state.config.noBoss ? state.config.rounds : state.config.acts * (state.config.roundsPerAct + 1);
+  return {
+    schema: SCHEMA_VERSION,
+    sessionId: state.sessionId,
+    mode: state.mode,
+    seed: state.seed,
+    startedAt: state.startedAt,
+    endedAt: state.endedAt,
+    status: state.status, // active | completed | abandoned
+    totalRounds,
+    roundsPlayed: state.roundLog.length,
+    players,
+  };
+}
+
+export async function createRepo(storage, { now = Date.now, uuid = defaultUuid, migrations = MIGRATIONS, schemaVersion = SCHEMA_VERSION } = {}) {
+  const migration = await runMigrations(storage, { migrations, target: schemaVersion, now });
+
+  const getProfiles = () => storage.getAll('profiles');
+
+  async function requireProfile(id) {
+    const p = await storage.get('profiles', id);
+    if (!p) throw new RepoError('NOT_FOUND', 'That profile no longer exists.');
+    return p;
+  }
+
+  function checkName(name, profiles, exceptId) {
+    const clean = normalizeName(name);
+    if (!clean) throw new RepoError('NAME_EMPTY', 'Please enter a name.');
+    if ([...clean].length > NAME_MAX) throw new RepoError('NAME_TOO_LONG', `Names can be up to ${NAME_MAX} characters.`);
+    if (profiles.some((p) => p.id !== exceptId && sameName(p.name, clean))) {
+      throw new RepoError('NAME_TAKEN', `There is already a player called "${clean}" on this device.`);
+    }
+    return clean;
+  }
+
+  function checkAvatar(avatar) {
+    const key = avatar?.key ?? avatar;
+    return { key: AVATAR_KEYS.includes(key) ? key : AVATAR_KEYS[0] };
+  }
+
+  const repo = {
+    storage,
+    migration,
+    storageInfo: () => ({ kind: storage.kind, persistent: storage.persistent }),
+
+    /* ---------------- profiles ---------------- */
+
+    async listProfiles() {
+      return (await getProfiles()).sort((a, b) => a.createdAt - b.createdAt);
+    },
+
+    getProfile: (id) => storage.get('profiles', id),
+
+    async createProfile({ name, avatar }) {
+      const profiles = await getProfiles();
+      const clean = checkName(name, profiles, null);
+      const t = now();
+      const profile = {
+        schema: SCHEMA_VERSION,
+        id: `p_${uuid()}`,
+        name: clean,
+        avatar: checkAvatar(avatar),
+        createdAt: t,
+        updatedAt: t,
+        ownedCards: [...STARTER_CARDS],
+      };
+      // A new random id can never collide with, or overwrite, an existing profile.
+      await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
+      return profile;
+    },
+
+    async updateProfile(id, { name, avatar }) {
+      const profile = await requireProfile(id);
+      if (name !== undefined) profile.name = checkName(name, await getProfiles(), id);
+      if (avatar !== undefined) profile.avatar = checkAvatar(avatar);
+      profile.updatedAt = now();
+      await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
+      return profile;
+    },
+
+    /** Remove a profile and everything recorded for it. Other players' history is untouched. */
+    async deleteProfile(id) {
+      await requireProfile(id);
+      const active = await storage.get('kv', 'activeGame');
+      if (active?.state?.players?.some((p) => p.playerId === id)) {
+        throw new RepoError('IN_ACTIVE_GAME', 'Finish or abandon the game in progress before deleting this player.');
+      }
+      const ops = await removePlayerData(id);
+      ops.push({ op: 'delete', store: 'profiles', key: id });
+      const recent = await storage.get('kv', 'recent');
+      if (recent) {
+        ops.push({ op: 'put', store: 'kv', value: { ...recent, ids: recent.ids.filter((x) => x !== id), lastGroup: recent.lastGroup?.ids.includes(id) ? null : recent.lastGroup } });
+      }
+      const rewards = await storage.get('kv', 'rewards');
+      if (rewards) ops.push({ op: 'put', store: 'kv', value: { ...rewards, items: rewards.items.filter((r) => r.playerId !== id) } });
+      await storage.transact(ops);
+    },
+
+    /** Wipe a player's statistics and history but keep the profile and its cards. */
+    async resetProfileStats(id) {
+      await requireProfile(id);
+      const active = await storage.get('kv', 'activeGame');
+      if (active?.state?.players?.some((p) => p.playerId === id)) {
+        throw new RepoError('IN_ACTIVE_GAME', 'Finish or abandon the game in progress first.');
+      }
+      await storage.transact(await removePlayerData(id));
+    },
+
+    async addCards(id, cardIds) {
+      const profile = await requireProfile(id);
+      const valid = cardIds.filter((c) => CARDS[c]);
+      profile.ownedCards = [...new Set([...profile.ownedCards, ...valid])];
+      profile.updatedAt = now();
+      await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
+      return profile;
+    },
+
+    /* ---------------- card rewards waiting to be claimed ---------------- */
+
+    async listPendingRewards() {
+      const rec = await storage.get('kv', 'rewards');
+      const existing = new Set((await getProfiles()).map((p) => p.id));
+      return (rec?.items ?? []).filter((r) => existing.has(r.playerId));
+    },
+
+    /** Offers are stored when a game ends so closing the app before picking never loses them. */
+    async addPendingRewards(items) {
+      const rec = (await storage.get('kv', 'rewards')) ?? { key: 'rewards', items: [] };
+      const have = new Set(rec.items.map((r) => `${r.sessionId}:${r.playerId}`));
+      const fresh = items.filter((r) => r.options?.length && !have.has(`${r.sessionId}:${r.playerId}`)).map((r) => ({ sessionId: r.sessionId, playerId: r.playerId, options: [...r.options], createdAt: now() }));
+      if (!fresh.length) return;
+      await storage.transact([{ op: 'put', store: 'kv', value: { key: 'rewards', items: [...rec.items, ...fresh] } }]);
+    },
+
+    /** Take one offered card. The profile and the offer are updated in one transaction. */
+    async claimReward(sessionId, playerId, cardId) {
+      const rec = (await storage.get('kv', 'rewards')) ?? { key: 'rewards', items: [] };
+      const offer = rec.items.find((r) => r.sessionId === sessionId && r.playerId === playerId);
+      if (!offer) throw new RepoError('NO_REWARD', 'That reward has already been claimed.');
+      if (!offer.options.includes(cardId)) throw new RepoError('BAD_CARD', 'That card was not on offer.');
+      const profile = await requireProfile(playerId);
+      profile.ownedCards = [...new Set([...profile.ownedCards, cardId])];
+      profile.updatedAt = now();
+      const items = rec.items.filter((r) => r !== offer);
+      await storage.transact([
+        { op: 'put', store: 'profiles', value: profile },
+        { op: 'put', store: 'kv', value: { key: 'rewards', items } },
+      ]);
+      return profile;
+    },
+
+    /* ---------------- recent players ---------------- */
+
+    async getRecent() {
+      const rec = (await storage.get('kv', 'recent')) ?? { ids: [], lastGroup: null };
+      const existing = new Set((await getProfiles()).map((p) => p.id));
+      return {
+        ids: rec.ids.filter((x) => existing.has(x)),
+        lastGroup: rec.lastGroup && rec.lastGroup.ids.every((x) => existing.has(x)) ? rec.lastGroup : null,
+      };
+    },
+
+    async pushRecent(ids, mode) {
+      const old = (await storage.get('kv', 'recent')) ?? { ids: [] };
+      const next = { key: 'recent', ids: [...ids, ...old.ids.filter((x) => !ids.includes(x))].slice(0, RECENT_MAX), lastGroup: { mode, ids: [...ids] } };
+      await storage.transact([{ op: 'put', store: 'kv', value: next }]);
+    },
+
+    /* ---------------- settings ---------------- */
+
+    async getSettings() {
+      const rec = await storage.get('kv', 'settings');
+      return { ...DEFAULT_SETTINGS, ...(rec?.values ?? {}) };
+    },
+
+    async saveSettings(partial) {
+      const merged = { ...(await repo.getSettings()), ...partial };
+      merged.minSample = Math.max(3, Math.min(50, Math.round(merged.minSample)));
+      merged.confidentSample = Math.max(merged.minSample, Math.min(200, Math.round(merged.confidentSample)));
+      await storage.transact([{ op: 'put', store: 'kv', value: { key: 'settings', values: merged } }]);
+      return merged;
+    },
+
+    /* ---------------- games ---------------- */
+
+    /**
+     * Save progress after an action. Writes any answers not yet persisted, the
+     * session summary and the resumable game state in one transaction.
+     * Returns the new persisted count to pass next time. Passing 0 is always
+     * safe: it just re-writes identical rows.
+     */
+    async saveProgress(state, persistedCount = 0) {
+      const ops = state.log.slice(persistedCount).map((value) => ({ op: 'put', store: 'results', value }));
+      ops.push({ op: 'put', store: 'sessions', value: sessionRecord(state) });
+      if (state.status === 'active') ops.push({ op: 'put', store: 'kv', value: { key: 'activeGame', state, savedAt: now() } });
+      await storage.transact(ops);
+      return state.log.length;
+    },
+
+    /** Write the final record of a finished or abandoned game and clear the saved game. */
+    async finalizeSession(state) {
+      if (state.status === 'active') throw new RepoError('NOT_FINISHED', 'The game has not ended yet.');
+      const ops = state.log.map((value) => ({ op: 'put', store: 'results', value }));
+      ops.push({ op: 'put', store: 'sessions', value: sessionRecord(state) });
+      const active = await storage.get('kv', 'activeGame');
+      if (active?.state?.sessionId === state.sessionId) ops.push({ op: 'delete', store: 'kv', key: 'activeGame' });
+      await storage.transact(ops);
+    },
+
+    async loadActiveGame() {
+      const rec = await storage.get('kv', 'activeGame');
+      return rec ? rec.state : null;
+    },
+
+    async clearActiveGame() {
+      await storage.transact([{ op: 'delete', store: 'kv', key: 'activeGame' }]);
+    },
+
+    listSessions: () => storage.getAll('sessions'),
+    listResults: (playerId) => storage.getAllByIndex('results', 'playerId', playerId),
+    listSessionResults: (sessionId) => storage.getAllByIndex('results', 'sessionId', sessionId),
+
+    async listSessionsForPlayer(playerId) {
+      return (await storage.getAll('sessions')).filter((s) => s.players.some((p) => p.playerId === playerId));
+    },
+
+    /** Delete everything stored by the game on this device (profiles, history, settings). */
+    async wipeAll() {
+      const ops = DATA_STORES.map((store) => ({ op: 'clear', store }));
+      for (const key of ['activeGame', 'recent', 'rewards', 'settings']) ops.push({ op: 'delete', store: 'kv', key });
+      await storage.transact(ops);
+    },
+
+    /* ---------------- export / import ---------------- */
+
+    async exportData() {
+      const settings = await storage.get('kv', 'settings');
+      return {
+        format: EXPORT_FORMAT,
+        schemaVersion,
+        exportedAt: now(),
+        profiles: await storage.getAll('profiles'),
+        sessions: await storage.getAll('sessions'),
+        results: await storage.getAll('results'),
+        settings: settings?.values ?? null,
+      };
+    },
+
+    /**
+     * Import an export file. 'merge' (default) adds to what is here and never
+     * deletes. 'replace' swaps everything for the file's contents.
+     */
+    async importData(data, { mode = 'merge' } = {}) {
+      const parsed = parseExport(data, { migrations, schemaVersion });
+      const local = await getProfiles();
+      const summary = { profilesAdded: 0, profilesUpdated: 0, renamed: [], resultsAdded: 0, sessionsAdded: 0, skipped: { ...parsed.skipped } };
+      const ops = [];
+
+      if (mode === 'replace') {
+        for (const store of DATA_STORES) ops.push({ op: 'clear', store });
+        ops.push({ op: 'delete', store: 'kv', key: 'activeGame' }, { op: 'delete', store: 'kv', key: 'recent' });
+      }
+      const existingProfiles = mode === 'replace' ? [] : local;
+      const taken = existingProfiles.map((p) => p.name);
+      const knownIds = new Set(existingProfiles.map((p) => p.id));
+
+      for (const imp of parsed.profiles) {
+        const mine = existingProfiles.find((p) => p.id === imp.id);
+        if (mine) {
+          const newer = imp.updatedAt > mine.updatedAt ? imp : mine;
+          const nameClash = existingProfiles.some((p) => p.id !== imp.id && sameName(p.name, newer.name));
+          const merged = {
+            ...mine,
+            name: nameClash ? mine.name : newer.name,
+            avatar: newer.avatar,
+            createdAt: Math.min(mine.createdAt, imp.createdAt),
+            updatedAt: Math.max(mine.updatedAt, imp.updatedAt),
+            ownedCards: [...new Set([...mine.ownedCards, ...imp.ownedCards])],
+          };
+          ops.push({ op: 'put', store: 'profiles', value: merged });
+          summary.profilesUpdated++;
+        } else {
+          let name = imp.name;
+          let n = 2;
+          while (taken.some((t) => sameName(t, name))) name = `${imp.name.slice(0, NAME_MAX - 4)} (${n++})`;
+          if (name !== imp.name) summary.renamed.push({ from: imp.name, to: name });
+          taken.push(name);
+          ops.push({ op: 'put', store: 'profiles', value: { ...imp, name } });
+          summary.profilesAdded++;
+        }
+        knownIds.add(imp.id);
+      }
+
+      const existingResultIds = new Set(mode === 'replace' ? [] : (await storage.getAll('results')).map((r) => r.resultId));
+      for (const r of parsed.results) {
+        if (!knownIds.has(r.playerId)) {
+          summary.skipped.results++;
+          continue;
+        }
+        if (!existingResultIds.has(r.resultId)) summary.resultsAdded++;
+        ops.push({ op: 'put', store: 'results', value: r });
+      }
+      const existingSessionIds = new Set(mode === 'replace' ? [] : (await storage.getAll('sessions')).map((s) => s.sessionId));
+      for (const s of parsed.sessions) {
+        if (existingSessionIds.has(s.sessionId)) continue; // never alter a game already recorded here
+        const players = s.players.filter((p) => knownIds.has(p.playerId));
+        if (!players.length) {
+          summary.skipped.sessions++;
+          continue;
+        }
+        ops.push({ op: 'put', store: 'sessions', value: { ...s, players } });
+        summary.sessionsAdded++;
+      }
+      if (mode === 'replace' && data.settings) ops.push({ op: 'put', store: 'kv', value: { key: 'settings', values: { ...DEFAULT_SETTINGS, ...data.settings } } });
+
+      await storage.transact(ops);
+      return summary;
+    },
+  };
+
+  async function removePlayerData(id) {
+    const ops = [];
+    for (const r of await storage.getAllByIndex('results', 'playerId', id)) ops.push({ op: 'delete', store: 'results', key: r.resultId });
+    for (const s of await storage.getAll('sessions')) {
+      if (!s.players.some((p) => p.playerId === id)) continue;
+      const players = s.players.filter((p) => p.playerId !== id);
+      if (players.length) ops.push({ op: 'put', store: 'sessions', value: { ...s, players } });
+      else ops.push({ op: 'delete', store: 'sessions', key: s.sessionId });
+    }
+    return ops;
+  }
+
+  return repo;
+}
+
+/* ---------------- export parsing ---------------- */
+
+const isObj = (v) => v && typeof v === 'object' && !Array.isArray(v);
+
+function cleanProfile(p) {
+  if (!isObj(p) || typeof p.id !== 'string' || !p.id) return null;
+  const name = normalizeName(p.name).slice(0, NAME_MAX);
+  if (!name) return null;
+  return {
+    schema: SCHEMA_VERSION,
+    id: p.id,
+    name,
+    avatar: { key: AVATAR_KEYS.includes(p.avatar?.key) ? p.avatar.key : AVATAR_KEYS[0] },
+    createdAt: Number.isFinite(p.createdAt) ? p.createdAt : 0,
+    updatedAt: Number.isFinite(p.updatedAt) ? p.updatedAt : 0,
+    ownedCards: [...new Set([...(Array.isArray(p.ownedCards) ? p.ownedCards.filter((c) => CARDS[c]) : []), ...STARTER_CARDS])],
+  };
+}
+
+function validResult(r) {
+  return (
+    isObj(r) &&
+    typeof r.resultId === 'string' &&
+    typeof r.playerId === 'string' &&
+    typeof r.sessionId === 'string' &&
+    typeof r.questionId === 'string' &&
+    typeof r.category === 'string' &&
+    [1, 2, 3, 4].includes(r.difficulty) &&
+    typeof r.correct === 'boolean' &&
+    Number.isFinite(r.timestamp)
+  );
+}
+
+function validSession(s) {
+  return isObj(s) && typeof s.sessionId === 'string' && typeof s.mode === 'string' && ['active', 'completed', 'abandoned'].includes(s.status) && Array.isArray(s.players);
+}
+
+/** Validate and migrate an export file. Malformed records are skipped and counted. */
+export function parseExport(data, { migrations = MIGRATIONS, schemaVersion = SCHEMA_VERSION } = {}) {
+  if (!isObj(data) || data.format !== EXPORT_FORMAT) {
+    throw new RepoError('INVALID_IMPORT', 'This file is not a The House Knows export.');
+  }
+  if (!Number.isInteger(data.schemaVersion) || data.schemaVersion < 0) {
+    throw new RepoError('INVALID_IMPORT', 'The export file has no valid version.');
+  }
+  for (const key of ['profiles', 'sessions', 'results']) {
+    if (!Array.isArray(data[key])) throw new RepoError('INVALID_IMPORT', `The export file is missing its ${key} list.`);
+  }
+  let snap;
+  try {
+    snap = migrateSnapshot({ profiles: data.profiles, sessions: data.sessions, results: data.results, kv: [] }, data.schemaVersion, schemaVersion, migrations);
+  } catch (err) {
+    if (err instanceof SchemaError) throw new RepoError(err.code, err.message);
+    throw err;
+  }
+  const skipped = { profiles: 0, sessions: 0, results: 0 };
+  const profiles = [];
+  const seen = new Set();
+  for (const p of snap.profiles) {
+    const c = cleanProfile(p);
+    if (!c || seen.has(c.id)) skipped.profiles++;
+    else {
+      seen.add(c.id);
+      profiles.push(c);
+    }
+  }
+  const results = snap.results.filter((r) => (validResult(r) ? true : (skipped.results++, false)));
+  const sessions = snap.sessions.filter((s) => (validSession(s) ? true : (skipped.sessions++, false)));
+  return { profiles, results, sessions, skipped };
+}
