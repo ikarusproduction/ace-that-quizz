@@ -1,0 +1,14 @@
+# One-click deploy of the game server (relay) on Render.com: New + > Blueprint > pick this repo.
+services:
+  - type: web
+    name: house-knows-relay
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: ACCESS_CODE
+        sync: false            # you type the shared access code in the Render dashboard
+      - key: ALLOW_ORIGIN
+        value: https://www.suraki-production.com
+      - key: STATIC
+        value: "0"             # the game itself lives on your website; the server only links the phones

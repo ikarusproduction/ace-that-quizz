@@ -147,7 +147,7 @@ test('oversized bodies are rejected and server code is not served as a static fi
   try {
     const host = (await post(s.base, '/api/rooms', {})).body;
     const big = 'x'.repeat(600 * 1024);
-    const r = await fetch(`${s.base}/api/rooms/${host.code}/send`, { method: 'POST', body: JSON.stringify({ token: host.token, type: 'state', payload: big }) });
+    const r = await fetch(`${s.base}/api/rooms/${host.code}/send`, { method: 'POST', headers: { Connection: 'close' }, body: JSON.stringify({ token: host.token, type: 'state', payload: big }) });
     assert.equal(r.status, 413);
     assert.equal((await fetch(`${s.base}/server/relay.js`)).status, 404);
     assert.equal((await fetch(`${s.base}/package.json`)).status, 404);
@@ -155,5 +155,30 @@ test('oversized bodies are rejected and server code is not served as a static fi
     assert.equal((await fetch(`${s.base}/`)).status, 200);
     assert.equal((await fetch(`${s.base}/src/main.js`)).status, 200);
     assert.equal((await fetch(`${s.base}/data/questions/index.json`)).status, 200);
+  } finally { await s.close(); }
+});
+
+test('access code: rooms need the code, wrong codes are refused and rate-limited', async () => {
+  const s = await start({ accessCode: 'sesame' });
+  try {
+    const h = await (await fetch(`${s.base}/api/health`)).json();
+    assert.equal(h.gated, true);
+    assert.equal((await fetch(`${s.base}/api/check?access=nope`)).status, 401);
+    assert.equal((await fetch(`${s.base}/api/check?access=sesame`)).status, 200);
+    assert.equal((await post(s.base, '/api/rooms', { name: 'Ana' })).status, 401);
+    const ok = await post(s.base, '/api/rooms', { name: 'Ana', access: 'sesame' });
+    assert.equal(ok.status, 200);
+    assert.equal((await post(s.base, `/api/rooms/${ok.body.code}/join`, { name: 'Ben' })).status, 401);
+    assert.equal((await post(s.base, `/api/rooms/${ok.body.code}/join`, { name: 'Ben', access: 'sesame' })).status, 200);
+    for (let i = 0; i < 12; i++) await fetch(`${s.base}/api/check?access=bad${i}`);
+    assert.equal((await fetch(`${s.base}/api/check?access=sesame`)).status, 429, 'too many wrong tries locks the address out for a while');
+  } finally { await s.close(); }
+});
+
+test('no access code configured: everything stays open', async () => {
+  const s = await start({});
+  try {
+    assert.equal((await post(s.base, '/api/rooms', { name: 'Ana' })).status, 200);
+    assert.equal((await (await fetch(`${s.base}/api/health`)).json()).gated, false);
   } finally { await s.close(); }
 });

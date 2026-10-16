@@ -5,13 +5,14 @@
 // plain POST up) and, optionally, serves the game's static files so one process
 // can host everything:   node server/relay.js   ->  http://localhost:8787
 //
-// Env: PORT (8787), HOST (0.0.0.0), ALLOW_ORIGIN (* by default; set to your site's origin),
+// Env: ACCESS_CODE (optional shared code; when set, nobody can create or join rooms without it),
+//      PORT (8787), HOST (0.0.0.0), ALLOW_ORIGIN (* by default; set to your site's origin),
 //      STATIC=0 to disable serving the game files, ROOM_TTL_MIN (180).
 import { createServer } from 'node:http';
 import { readFile, stat } from 'node:fs/promises';
 import { extname, join, normalize, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { randomBytes } from 'node:crypto';
+import { randomBytes, timingSafeEqual, createHash } from 'node:crypto';
 
 const ROOT = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const TYPES = {
@@ -20,7 +21,7 @@ const TYPES = {
   '.mp3': 'audio/mpeg', '.webmanifest': 'application/manifest+json',
 };
 // Only these paths are public. Server code, tests and docs never are.
-const PUBLIC = [/^\/$/, /^\/index\.html$/, /^\/manifest\.webmanifest$/, /^\/sw\.js$/, /^\/icon\.svg$/, /^\/src\//, /^\/data\//];
+const PUBLIC = [/^\/$/, /^\/index\.html$/, /^\/manifest\.webmanifest$/, /^\/sw\.js$/, /^\/icon\.svg$/, /^\/config\.json$/, /^\/src\//, /^\/data\//];
 
 const CODE_CHARS = 'ABCDEFGHJKLMNPQRSTUVWXYZ'; // no I or O
 export const MAX_PLAYERS = 4;
@@ -33,7 +34,25 @@ const json = (res, status, body, headers) => {
   res.end(JSON.stringify(body));
 };
 
-export function createRelay({ allowOrigin = '*', serveStatic = true, roomTtlMs = 180 * 60_000, now = () => Date.now() } = {}) {
+const digest = (v) => createHash('sha256').update(String(v ?? '')).digest();
+
+export function createRelay({ allowOrigin = '*', serveStatic = true, roomTtlMs = 180 * 60_000, accessCode = '', now = () => Date.now() } = {}) {
+  const gated = Boolean(accessCode);
+  const wanted = digest(accessCode);
+  const failLog = new Map(); // ip -> timestamps of wrong codes
+  const clientIp = (req) => String(req.headers['x-forwarded-for'] ?? req.socket.remoteAddress ?? '').split(',')[0].trim();
+  /** true when no code is required or the supplied one is right; records wrong tries per address. */
+  function accessOk(req, supplied) {
+    if (!gated) return { ok: true };
+    const ip = clientIp(req);
+    const t = now();
+    const fails = (failLog.get(ip) ?? []).filter((x) => t - x < 600_000);
+    if (fails.length >= 10) return { ok: false, status: 429, error: 'too many wrong codes, try again in 10 minutes' };
+    if (timingSafeEqual(digest(supplied), wanted)) return { ok: true };
+    fails.push(t);
+    failLog.set(ip, fails);
+    return { ok: false, status: 401, error: 'wrong access code' };
+  }
   /** @type {Map<string, any>} */
   const rooms = new Map();
   const createLog = new Map(); // ip -> timestamps
@@ -90,18 +109,24 @@ export function createRelay({ allowOrigin = '*', serveStatic = true, roomTtlMs =
     const parts = url.pathname.split('/').filter(Boolean); // ['api','rooms',CODE,action]
     const send = (status, body) => json(res, status, body, cors);
 
-    if (parts[1] === 'health') return send(200, { ok: true, rooms: rooms.size, time: now() });
+    if (parts[1] === 'health') return send(200, { ok: true, rooms: rooms.size, time: now(), gated });
+    if (parts[1] === 'check') {
+      const a = accessOk(req, url.searchParams.get('access'));
+      return a.ok ? send(200, { ok: true }) : send(a.status, { error: a.error });
+    }
 
     if (parts[1] !== 'rooms') return send(404, { error: 'not found' });
 
     if (parts.length === 2 && req.method === 'POST') {
-      const ip = String(req.headers['x-forwarded-for'] ?? req.socket.remoteAddress ?? '').split(',')[0].trim();
+      const ip = clientIp(req);
       const t = now();
       const recent = (createLog.get(ip) ?? []).filter((x) => t - x < 3_600_000);
       if (recent.length >= 30) return send(429, { error: 'too many rooms created from this address, try again later' });
       recent.push(t);
       createLog.set(ip, recent);
       const body = await readBody(req);
+      const a = accessOk(req, body.access);
+      if (!a.ok) return send(a.status, { error: a.error });
       const code = newCode();
       const hostId = 'm_' + rid(6);
       const room = { code, hostId, createdAt: t, touched: t, locked: false, members: new Map(), latest: null, seq: 0 };
@@ -119,6 +144,8 @@ export function createRelay({ allowOrigin = '*', serveStatic = true, roomTtlMs =
 
     if (action === 'join' && req.method === 'POST') {
       const body = await readBody(req);
+      const a = accessOk(req, body.access);
+      if (!a.ok) return send(a.status, { error: a.error });
       if (room.locked) return send(403, { error: 'the game has already started' });
       if (room.members.size >= MAX_PLAYERS) return send(403, { error: 'room is full (4 players max)' });
       const profileId = clean(body.profileId, 80);
@@ -238,6 +265,6 @@ export function createRelay({ allowOrigin = '*', serveStatic = true, roomTtlMs =
 
 if (process.argv[1] && resolve(process.argv[1]) === resolve(fileURLToPath(import.meta.url))) {
   const port = Number(process.env.PORT) || 8787;
-  const { server } = createRelay({ allowOrigin: process.env.ALLOW_ORIGIN ?? '*', serveStatic: process.env.STATIC !== '0', roomTtlMs: (Number(process.env.ROOM_TTL_MIN) || 180) * 60_000 });
+  const { server } = createRelay({ allowOrigin: process.env.ALLOW_ORIGIN ?? '*', serveStatic: process.env.STATIC !== '0', roomTtlMs: (Number(process.env.ROOM_TTL_MIN) || 180) * 60_000, accessCode: process.env.ACCESS_CODE ?? '' });
   server.listen(port, process.env.HOST ?? '0.0.0.0', () => console.log(`The House Knows relay on http://localhost:${port}  (game files ${process.env.STATIC === '0' ? 'off' : 'served'})`));
 }

@@ -16,8 +16,9 @@ export class OnlineSession {
    * @param {typeof fetch} [o.fetchImpl]
    * @param {typeof EventSource} [o.EventSourceImpl]
    */
-  constructor({ base, fetchImpl, EventSourceImpl } = {}) {
+  constructor({ base, access = '', fetchImpl, EventSourceImpl } = {}) {
     this.base = trimSlash(base);
+    this.access = access;
     this.fetch = fetchImpl ?? globalThis.fetch.bind(globalThis);
     this.ES = EventSourceImpl ?? globalThis.EventSource;
     this.listeners = new Map();
@@ -69,15 +70,34 @@ export class OnlineSession {
     }
   }
 
+  /** Ask the relay whether an access code is right. Resolves { ok, error? }. */
+  static async checkAccess(base, access, fetchImpl = globalThis.fetch?.bind(globalThis)) {
+    try {
+      const res = await fetchImpl(`${trimSlash(base)}/api/check?access=${encodeURIComponent(access ?? '')}`, { cache: 'no-store' });
+      const j = await res.json().catch(() => ({}));
+      return res.ok ? { ok: true } : { ok: false, error: j.error ?? `Server error (${res.status})` };
+    } catch {
+      return { ok: false, error: 'Could not reach the game server.' };
+    }
+  }
+  static async gateInfo(base, fetchImpl = globalThis.fetch?.bind(globalThis)) {
+    try {
+      const j = await (await fetchImpl(`${trimSlash(base)}/api/health`, { cache: 'no-store' })).json();
+      return j?.ok ? { reachable: true, gated: Boolean(j.gated) } : { reachable: false, gated: false };
+    } catch {
+      return { reachable: false, gated: false };
+    }
+  }
+
   async create(profile) {
-    const d = await this.#post('/api/rooms', profileFields(profile));
+    const d = await this.#post('/api/rooms', { ...profileFields(profile), access: this.access });
     this.#adopt('host', d, profile);
     return this;
   }
   async join(code, profile) {
     const c = String(code).trim().toUpperCase();
     if (!/^[A-Z]{4}$/.test(c)) throw new Error('Room codes are 4 letters.');
-    const d = await this.#post(`/api/rooms/${c}/join`, profileFields(profile));
+    const d = await this.#post(`/api/rooms/${c}/join`, { ...profileFields(profile), access: this.access });
     this.#adopt('guest', d, profile);
     return this;
   }

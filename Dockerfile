@@ -1,6 +1,6 @@
 FROM node:22-alpine
 WORKDIR /app
-COPY index.html manifest.webmanifest sw.js icon.svg ./
+COPY index.html manifest.webmanifest sw.js icon.svg config.json ./
 COPY src ./src
 COPY data ./data
 COPY server ./server

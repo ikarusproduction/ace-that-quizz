@@ -12,6 +12,7 @@ import { languageOf } from '../../i18n/languages.js';
 
 const LAST_KEY = 'thk-online-profile';
 const RELAY_KEY = 'thk-relay-url';
+import { ACCESS_KEY } from '../gate.js';
 const lsGet = (k) => { try { return localStorage.getItem(k); } catch { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch { /* ignore */ } };
 
@@ -27,7 +28,7 @@ export async function onlineScreen(app, params) {
   const profiles = await app.repo.listProfiles();
   let chosen = lsGet(LAST_KEY);
   if (!profiles.some((p) => p.id === chosen)) chosen = profiles[0]?.id ?? null;
-  let relay = params.relay ?? lsGet(RELAY_KEY) ?? '';
+  let relay = params.relay ?? app.config?.relay ?? lsGet(RELAY_KEY) ?? '';
   let relayState = 'checking'; // checking | ok | none
   let customRelay = Boolean(params.relay);
   let busy = false;
@@ -72,7 +73,7 @@ export async function onlineScreen(app, params) {
     busy = true; paint();
     unlockAudio(); sfx.tap();
     try {
-      const s = new OnlineSession({ base: relay });
+      const s = new OnlineSession({ base: relay, access: lsGet(ACCESS_KEY) ?? '' });
       if (kind === 'create') await s.create(profile);
       else await s.join(code, profile);
       lsSet(LAST_KEY, profile.id);

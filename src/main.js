@@ -9,6 +9,7 @@ import { cardsScreen } from './ui/screens/cards.js';
 import { rewardsScreen } from './ui/screens/rewards.js';
 import { statsScreen } from './ui/screens/stats.js';
 import { settingsScreen } from './ui/screens/settings.js';
+import { loadConfig, ensureAccess } from './ui/gate.js';
 
 register('menu', menuScreen);
 register('profiles', profilesScreen);
@@ -21,6 +22,9 @@ register('rewards', rewardsScreen);
 register('stats', statsScreen);
 register('settings', settingsScreen);
 
+const config = await loadConfig();
+app.config = config;
+await ensureAccess(document.getElementById('app'), config);
 const ok = await boot(document.getElementById('app'));
 if (ok) {
   await startRouter('menu');
