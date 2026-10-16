@@ -8,6 +8,7 @@
 //        empty, slot 2 is a music question, so Arts can appear twice.
 import { RULES, ACT_DIFFICULTY, ACT_BOSSES, NORMAL_HAZARD_IDS, HAZARDS, BOSSES } from './modifiers.js';
 import { statCategory } from './bank.js';
+import { themePool } from './themes.js';
 
 const ROTATING = ['news', 'history', 'geography', 'nature', 'arts'];
 
@@ -34,7 +35,7 @@ function difficultyWeights(act, boss) {
  * Pick one question. Prefers: right category and difficulty, not used this run,
  * not recently seen. Widens gradually instead of ever failing.
  */
-export function pickQuestion({ pool, rng, difficulty, usedIds, avoidIds = new Set(), minDifficulty = 1 }) {
+export function pickQuestion({ pool, rng, difficulty, usedIds, avoidIds = new Set(), minDifficulty = 1, seen = null }) {
   const ok = (q, { fresh, exact }) =>
     (!exact || q.difficulty === difficulty) &&
     q.difficulty >= minDifficulty &&
@@ -53,7 +54,14 @@ export function pickQuestion({ pool, rng, difficulty, usedIds, avoidIds = new Se
       const best = Math.min(...candidates.map((q) => Math.abs(q.difficulty - difficulty)));
       candidates = candidates.filter((q) => Math.abs(q.difficulty - difficulty) === best);
     }
-    if (candidates.length) return rng.pick(candidates);
+    if (candidates.length) {
+      // Variety: among the candidates, prefer those this group has seen least often.
+      if (seen) {
+        const least = Math.min(...candidates.map((q) => seen[q.id] ?? 0));
+        candidates = candidates.filter((q) => (seen[q.id] ?? 0) === least);
+      }
+      return rng.pick(candidates);
+    }
   }
   // Last resort: allow repeats rather than failing a round.
   const repeats = pool.filter((q) => q.difficulty >= minDifficulty);
@@ -73,7 +81,7 @@ export function pickQuestion({ pool, rng, difficulty, usedIds, avoidIds = new Se
  * @param {string|null} o.previousHazard
  * @param {string[]} o.previousCategories  categories used in the previous round (soft avoid)
  */
-export function buildRound({ questions, rng, roundIndex, config, usedIds, avoidIds, usedBosses, previousHazard, previousCategories = [] }) {
+export function buildRound({ questions, rng, roundIndex, config, usedIds, avoidIds, usedBosses, previousHazard, previousCategories = [], seen = null }) {
   const { act, isBoss } = roundInfo(roundIndex, config);
 
   // Boss or hazard.
@@ -102,7 +110,8 @@ export function buildRound({ questions, rng, roundIndex, config, usedIds, avoidI
   const rotating = rotatingChoices.slice(0, 2);
 
   const wantsPhobia = rng.chance(0.33) && byStat('phobia').length > 0;
-  const slotDefs = [
+  const themed = Array.isArray(config.themes) && config.themes.length > 0;
+  const slotDefs = themed ? config.themes.map((id) => ({ key: id, pool: themePool(id, questions, config.today ?? Date.now()) })) : [
     { key: wantsPhobia ? 'phobia' : 'science', pool: byStat(wantsPhobia ? 'phobia' : 'science') },
     { key: tunes.length ? 'tunes' : 'arts', pool: tunes.length ? tunes : music },
     { key: 'symbols', pool: byStat('symbols') },
@@ -118,10 +127,10 @@ export function buildRound({ questions, rng, roundIndex, config, usedIds, avoidI
   const slots = [];
   for (const def of slotDefs) {
     const difficulty = Number(rng.weighted(weights));
-    const q = pickQuestion({ pool: def.pool, rng, difficulty, usedIds: used, avoidIds, minDifficulty: boss?.minDifficulty ?? 1 });
+    const q = pickQuestion({ pool: def.pool, rng, difficulty, usedIds: used, avoidIds, minDifficulty: boss?.minDifficulty ?? 1, seen });
     if (!q) throw new Error(`Question bank has no questions for category "${def.key}"`);
     used.add(q.id);
-    slots.push({ category: def.key, difficulty, questionId: q.id });
+    slots.push({ category: themed ? statCategory(q) : def.key, theme: themed ? def.key : null, difficulty, questionId: q.id });
   }
 
   // Shuffle presentation order so the slot structure is not predictable.

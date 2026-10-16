@@ -1,5 +1,5 @@
 {
   "version": "0.1.0",
   "note": "Question content lives here, separate from game code. Every question defaults to review='unreviewed' until a human has checked it against a reliable source. The game never claims otherwise.",
-  "files": ["science.json", "history.json", "geography.json", "nature.json", "symbols.json", "arts.json", "news.json", "tunes.json"]
+  "files": ["science.json", "history.json", "geography.json", "nature.json", "symbols.json", "arts.json", "news.json", "news-live.json", "tunes.json", "cinema.json", "popculture.json", "manga.json", "cooking.json", "finance.json", "business.json", "sports.json", "f1.json", "hockey.json", "music.json"]
 }

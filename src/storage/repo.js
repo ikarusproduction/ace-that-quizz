@@ -7,6 +7,7 @@
 //  * Results are the source of truth. Nothing here stores a counter that could
 //    disagree with them.
 //  * Writing the same result twice is harmless: result ids are deterministic.
+import { isLanguage, DEFAULT_LANGUAGE } from '../i18n/languages.js';
 import { SCHEMA_VERSION, DATA_STORES } from './schema.js';
 import { runMigrations, migrateSnapshot, SchemaError, MIGRATIONS } from './migrations.js';
 import { STARTER_CARDS, CARDS } from '../engine/cards.js';
@@ -22,6 +23,7 @@ export const DEFAULT_SETTINGS = {
   sound: true,
   volume: 0.7,
   reduceMotion: false,
+  haptics: true,
 };
 
 export class RepoError extends Error {
@@ -121,7 +123,7 @@ export async function createRepo(storage, { now = Date.now, uuid = defaultUuid, 
 
     getProfile: (id) => storage.get('profiles', id),
 
-    async createProfile({ name, avatar }) {
+    async createProfile({ name, avatar, language }) {
       const profiles = await getProfiles();
       const clean = checkName(name, profiles, null);
       const t = now();
@@ -130,6 +132,7 @@ export async function createRepo(storage, { now = Date.now, uuid = defaultUuid, 
         id: `p_${uuid()}`,
         name: clean,
         avatar: checkAvatar(avatar),
+        language: isLanguage(language) ? language : DEFAULT_LANGUAGE,
         createdAt: t,
         updatedAt: t,
         ownedCards: [...STARTER_CARDS],
@@ -139,10 +142,11 @@ export async function createRepo(storage, { now = Date.now, uuid = defaultUuid, 
       return profile;
     },
 
-    async updateProfile(id, { name, avatar }) {
+    async updateProfile(id, { name, avatar, language }) {
       const profile = await requireProfile(id);
       if (name !== undefined) profile.name = checkName(name, await getProfiles(), id);
       if (avatar !== undefined) profile.avatar = checkAvatar(avatar);
+      if (language !== undefined) profile.language = isLanguage(language) ? language : DEFAULT_LANGUAGE;
       profile.updatedAt = now();
       await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
       return profile;
@@ -259,18 +263,20 @@ export async function createRepo(storage, { now = Date.now, uuid = defaultUuid, 
      * Returns the new persisted count to pass next time. Passing 0 is always
      * safe: it just re-writes identical rows.
      */
-    async saveProgress(state, persistedCount = 0) {
-      const ops = state.log.slice(persistedCount).map((value) => ({ op: 'put', store: 'results', value }));
-      ops.push({ op: 'put', store: 'sessions', value: sessionRecord(state) });
-      if (state.status === 'active') ops.push({ op: 'put', store: 'kv', value: { key: 'activeGame', state, savedAt: now() } });
+    async saveProgress(state, persistedCount = 0, { onlyPlayers = null, resumable = true } = {}) {
+      // Online games: a phone only keeps the answers of its own player(s), and cannot resume a shared game.
+      const mine = (r) => !onlyPlayers || onlyPlayers.includes(r.playerId);
+      const ops = state.log.slice(persistedCount).filter(mine).map((value) => ({ op: 'put', store: 'results', value }));
+      if (resumable) ops.push({ op: 'put', store: 'sessions', value: sessionRecord(state) });
+      if (state.status === 'active' && resumable) ops.push({ op: 'put', store: 'kv', value: { key: 'activeGame', state, savedAt: now() } });
       await storage.transact(ops);
       return state.log.length;
     },
 
     /** Write the final record of a finished or abandoned game and clear the saved game. */
-    async finalizeSession(state) {
+    async finalizeSession(state, { onlyPlayers = null } = {}) {
       if (state.status === 'active') throw new RepoError('NOT_FINISHED', 'The game has not ended yet.');
-      const ops = state.log.map((value) => ({ op: 'put', store: 'results', value }));
+      const ops = state.log.filter((r) => !onlyPlayers || onlyPlayers.includes(r.playerId)).map((value) => ({ op: 'put', store: 'results', value }));
       ops.push({ op: 'put', store: 'sessions', value: sessionRecord(state) });
       const active = await storage.get('kv', 'activeGame');
       if (active?.state?.sessionId === state.sessionId) ops.push({ op: 'delete', store: 'kv', key: 'activeGame' });
@@ -416,6 +422,7 @@ function cleanProfile(p) {
     id: p.id,
     name,
     avatar: { key: AVATAR_KEYS.includes(p.avatar?.key) ? p.avatar.key : AVATAR_KEYS[0] },
+    language: isLanguage(p.language) ? p.language : DEFAULT_LANGUAGE,
     createdAt: Number.isFinite(p.createdAt) ? p.createdAt : 0,
     updatedAt: Number.isFinite(p.updatedAt) ? p.updatedAt : 0,
     ownedCards: [...new Set([...(Array.isArray(p.ownedCards) ? p.ownedCards.filter((c) => CARDS[c]) : []), ...STARTER_CARDS])],

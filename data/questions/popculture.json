@@ -1,0 +1,538 @@
+{
+ "category": "popculture",
+ "review": "unreviewed",
+ "questions": [
+  {
+   "id": "pop-001",
+   "subcategory": "tv",
+   "difficulty": 1,
+   "question": "Which fantasy TV series features the Iron Throne?",
+   "choices": [
+    "Game of Thrones",
+    "Vikings",
+    "The Witcher",
+    "Merlin"
+   ],
+   "answer": 0,
+   "explanation": "The HBO series ran from 2011 to 2019."
+  },
+  {
+   "id": "pop-002",
+   "subcategory": "tv",
+   "difficulty": 1,
+   "question": "In 'Friends', what is the name of the coffee shop where the characters hang out?",
+   "choices": [
+    "Cheers",
+    "Central Perk",
+    "Monk's Cafe",
+    "Luke's Diner"
+   ],
+   "answer": 1,
+   "explanation": "Central Perk is the group's regular hangout in New York."
+  },
+  {
+   "id": "pop-003",
+   "subcategory": "games",
+   "difficulty": 1,
+   "question": "Which video game character is Mario's brother?",
+   "choices": [
+    "Luigi",
+    "Yoshi",
+    "Toad",
+    "Wario"
+   ],
+   "answer": 0,
+   "explanation": "Luigi first appeared in Mario Bros. in 1983."
+  },
+  {
+   "id": "pop-004",
+   "subcategory": "tv",
+   "difficulty": 1,
+   "question": "Which Netflix series from 2021 features a deadly series of children's games in South Korea?",
+   "choices": [
+    "Alice in Borderland",
+    "Squid Game",
+    "Money Heist",
+    "Kingdom"
+   ],
+   "answer": 1,
+   "explanation": "Squid Game became Netflix's most-watched series at launch."
+  },
+  {
+   "id": "pop-005",
+   "subcategory": "tv",
+   "difficulty": 1,
+   "question": "Which TV series features a chemistry teacher named Walter White?",
+   "choices": [
+    "Dexter",
+    "Ozark",
+    "Breaking Bad",
+    "Better Call Saul"
+   ],
+   "answer": 2,
+   "explanation": "Bryan Cranston plays Walter White in the AMC series."
+  },
+  {
+   "id": "pop-006",
+   "subcategory": "tv",
+   "difficulty": 1,
+   "question": "What is the name of SpongeBob's pet snail?",
+   "choices": [
+    "Patrick",
+    "Gary",
+    "Squidward",
+    "Larry"
+   ],
+   "answer": 1,
+   "explanation": "Gary meows like a cat."
+  },
+  {
+   "id": "pop-007",
+   "subcategory": "games",
+   "difficulty": 1,
+   "question": "Which video game series features a hero named Link?",
+   "choices": [
+    "Dragon Quest",
+    "The Legend of Zelda",
+    "Metroid",
+    "Final Fantasy"
+   ],
+   "answer": 1,
+   "explanation": "Link is the hero; Zelda is the princess."
+  },
+  {
+   "id": "pop-008",
+   "subcategory": "games",
+   "difficulty": 1,
+   "question": "Which 2016 mobile game had players walking outside to catch creatures?",
+   "choices": [
+    "Ingress",
+    "Pokémon GO",
+    "Angry Birds",
+    "Clash Royale"
+   ],
+   "answer": 1,
+   "explanation": "Pokémon GO was developed by Niantic."
+  },
+  {
+   "id": "pop-009",
+   "subcategory": "games",
+   "difficulty": 1,
+   "question": "Which block-building sandbox game features creepers?",
+   "choices": [
+    "Minecraft",
+    "Roblox",
+    "Fortnite",
+    "Terraria"
+   ],
+   "answer": 0,
+   "explanation": "Minecraft was created by Markus Persson and released in full in 2011."
+  },
+  {
+   "id": "pop-010",
+   "subcategory": "internet",
+   "difficulty": 1,
+   "question": "What does 'GOAT' stand for in slang?",
+   "choices": [
+    "Gold Over All Trophies",
+    "Greatest Of All Time",
+    "Great Offer And Trade",
+    "Good On All Tests"
+   ],
+   "answer": 1,
+   "explanation": "Used to describe the best ever in a field."
+  },
+  {
+   "id": "pop-011",
+   "subcategory": "internet",
+   "difficulty": 1,
+   "question": "What does 'FOMO' stand for?",
+   "choices": [
+    "Find Out More Online",
+    "Friends Only Meet Online",
+    "Fear Of Missing Out",
+    "Full Of Mixed Opinions"
+   ],
+   "answer": 2,
+   "explanation": "It describes anxiety about missing something others are enjoying."
+  },
+  {
+   "id": "pop-012",
+   "subcategory": "internet",
+   "difficulty": 1,
+   "question": "Which messaging app has a ghost as its logo?",
+   "choices": [
+    "Snapchat",
+    "Telegram",
+    "Signal",
+    "WhatsApp"
+   ],
+   "answer": 0,
+   "explanation": "Snapchat is known for disappearing photos and short videos."
+  },
+  {
+   "id": "pop-013",
+   "subcategory": "music",
+   "difficulty": 1,
+   "question": "Which K-pop group includes Jungkook, V and Jimin?",
+   "choices": [
+    "Blackpink",
+    "Stray Kids",
+    "BTS",
+    "EXO"
+   ],
+   "answer": 2,
+   "explanation": "BTS debuted in 2013 and became a global phenomenon."
+  },
+  {
+   "id": "pop-014",
+   "subcategory": "internet",
+   "difficulty": 1,
+   "question": "Which chatbot did OpenAI launch in November 2022?",
+   "choices": [
+    "Siri",
+    "Bard",
+    "Alexa",
+    "ChatGPT"
+   ],
+   "answer": 3,
+   "explanation": "ChatGPT reached 100 million users within about two months."
+  },
+  {
+   "id": "pop-015",
+   "subcategory": "films",
+   "difficulty": 1,
+   "question": "Which actor plays Tony Stark in the Marvel Cinematic Universe?",
+   "choices": [
+    "Robert Downey Jr.",
+    "Chris Evans",
+    "Mark Ruffalo",
+    "Chris Hemsworth"
+   ],
+   "answer": 0,
+   "explanation": "He first played Iron Man in 2008."
+  },
+  {
+   "id": "pop-016",
+   "subcategory": "tv",
+   "difficulty": 1,
+   "question": "Which Netflix series follows Eleven and her friends in Hawkins, Indiana?",
+   "choices": [
+    "The OA",
+    "Locke & Key",
+    "Stranger Things",
+    "Dark"
+   ],
+   "answer": 2,
+   "explanation": "Stranger Things premiered in 2016."
+  },
+  {
+   "id": "pop-017",
+   "subcategory": "games",
+   "difficulty": 1,
+   "question": "Which blue hedgehog is a video game icon of Sega?",
+   "choices": [
+    "Crash",
+    "Sonic",
+    "Rayman",
+    "Knuckles"
+   ],
+   "answer": 1,
+   "explanation": "Sonic the Hedgehog debuted in 1991."
+  },
+  {
+   "id": "pop-018",
+   "subcategory": "music",
+   "difficulty": 2,
+   "question": "Which 2012 song by Psy made a horse-riding dance go viral?",
+   "choices": [
+    "Despacito",
+    "Gangnam Style",
+    "Call Me Maybe",
+    "Harlem Shake"
+   ],
+   "answer": 1,
+   "explanation": "It was the first YouTube video to reach one billion views."
+  },
+  {
+   "id": "pop-019",
+   "subcategory": "internet",
+   "difficulty": 2,
+   "question": "Which internet meme features a Shiba Inu dog?",
+   "choices": [
+    "Success Kid",
+    "Doge",
+    "Pepe",
+    "Grumpy Cat"
+   ],
+   "answer": 1,
+   "explanation": "Doge inspired the Dogecoin cryptocurrency."
+  },
+  {
+   "id": "pop-020",
+   "subcategory": "internet",
+   "difficulty": 2,
+   "question": "Which phrase is linked to the prank known as 'Rickrolling'?",
+   "choices": [
+    "Together Forever",
+    "Take On Me",
+    "Never Gonna Give You Up",
+    "Never Gonna Let You Go"
+   ],
+   "answer": 2,
+   "explanation": "The prank uses Rick Astley's 1987 hit."
+  },
+  {
+   "id": "pop-021",
+   "subcategory": "films",
+   "difficulty": 2,
+   "question": "Which two films opened on the same day in July 2023, creating the 'Barbenheimer' phenomenon?",
+   "choices": [
+    "Oppenheimer and Dune",
+    "Barbie and Mission: Impossible",
+    "Barbie and Oppenheimer",
+    "Barbie and Wonka"
+   ],
+   "answer": 2,
+   "explanation": "Both opened on 21 July 2023."
+  },
+  {
+   "id": "pop-022",
+   "subcategory": "tv",
+   "difficulty": 2,
+   "question": "Who created 'The Simpsons'?",
+   "choices": [
+    "Trey Parker",
+    "Matt Groening",
+    "Mike Judge",
+    "Seth MacFarlane"
+   ],
+   "answer": 1,
+   "explanation": "The show began as shorts in 1987 and became a series in 1989."
+  },
+  {
+   "id": "pop-023",
+   "subcategory": "tv",
+   "difficulty": 2,
+   "question": "Which character is nicknamed 'Baby Yoda' by fans?",
+   "choices": [
+    "Grogu",
+    "Yaddle",
+    "Kanan",
+    "Ahsoka"
+   ],
+   "answer": 0,
+   "explanation": "Grogu appears in The Mandalorian."
+  },
+  {
+   "id": "pop-024",
+   "subcategory": "games",
+   "difficulty": 2,
+   "question": "Which Nintendo item in Mario Kart targets the player in first place?",
+   "choices": [
+    "Blue shell",
+    "Lightning",
+    "Banana",
+    "Red shell"
+   ],
+   "answer": 0,
+   "explanation": "The spiny blue shell flies over the track to hit the leader."
+  },
+  {
+   "id": "pop-025",
+   "subcategory": "tech",
+   "difficulty": 2,
+   "question": "What year did the first iPhone launch?",
+   "choices": [
+    "2009",
+    "2007",
+    "2005",
+    "2010"
+   ],
+   "answer": 1,
+   "explanation": "Steve Jobs introduced it in January 2007."
+  },
+  {
+   "id": "pop-026",
+   "subcategory": "games",
+   "difficulty": 2,
+   "question": "Which digital store by Valve is the largest PC game marketplace?",
+   "choices": [
+    "Steam",
+    "GOG",
+    "Origin",
+    "Epic Games Store"
+   ],
+   "answer": 0,
+   "explanation": "Steam launched in 2003."
+  },
+  {
+   "id": "pop-027",
+   "subcategory": "fashion",
+   "difficulty": 2,
+   "question": "Which luxury fashion house uses a logo of two interlocking Cs?",
+   "choices": [
+    "Gucci",
+    "Cavalli",
+    "Chanel",
+    "Cartier"
+   ],
+   "answer": 2,
+   "explanation": "Coco Chanel founded the house in the early 20th century."
+  },
+  {
+   "id": "pop-028",
+   "subcategory": "internet",
+   "difficulty": 3,
+   "question": "What was the title of the first video uploaded to YouTube?",
+   "choices": [
+    "First Video",
+    "Me at the zoo",
+    "Elephant Dream",
+    "Hello World"
+   ],
+   "answer": 1,
+   "explanation": "It was uploaded on 23 April 2005 by co-founder Jawed Karim."
+  },
+  {
+   "id": "pop-029",
+   "subcategory": "games",
+   "difficulty": 3,
+   "question": "Which video game is widely reported as the best-selling of all time?",
+   "choices": [
+    "Wii Sports",
+    "Tetris",
+    "Minecraft",
+    "Grand Theft Auto V"
+   ],
+   "answer": 2,
+   "explanation": "Minecraft has sold over 300 million copies."
+  },
+  {
+   "id": "pop-030",
+   "subcategory": "tv",
+   "difficulty": 3,
+   "question": "Which TV drama follows the Roy family and their media empire?",
+   "choices": [
+    "Succession",
+    "The Crown",
+    "Billions",
+    "Yellowstone"
+   ],
+   "answer": 0,
+   "explanation": "Succession aired on HBO from 2018 to 2023."
+  },
+  {
+   "id": "pop-031",
+   "subcategory": "tv",
+   "difficulty": 3,
+   "question": "Which TV talent show features a 'Golden Buzzer'?",
+   "choices": [
+    "X Factor",
+    "America's Got Talent",
+    "The Voice",
+    "American Idol"
+   ],
+   "answer": 1,
+   "explanation": "A Golden Buzzer sends an act straight to the live shows."
+  },
+  {
+   "id": "pop-032",
+   "subcategory": "games",
+   "difficulty": 3,
+   "question": "In what year did Fortnite first release in early access?",
+   "choices": [
+    "2017",
+    "2015",
+    "2019",
+    "2020"
+   ],
+   "answer": 0,
+   "explanation": "Epic Games released Fortnite's Save the World mode in July 2017."
+  },
+  {
+   "id": "pop-033",
+   "subcategory": "films",
+   "difficulty": 3,
+   "question": "Which actress starred as Barbie in the 2023 film directed by Greta Gerwig?",
+   "choices": [
+    "Anne Hathaway",
+    "Margot Robbie",
+    "Florence Pugh",
+    "Emma Stone"
+   ],
+   "answer": 1,
+   "explanation": "The film grossed over a billion dollars."
+  },
+  {
+   "id": "pop-034",
+   "subcategory": "music",
+   "difficulty": 4,
+   "question": "What is the name of the AI-generated virtual character who became a pop star in Japan in 2007?",
+   "choices": [
+    "Lil Miquela",
+    "Eve",
+    "Hatsune Miku",
+    "Kizuna AI"
+   ],
+   "answer": 2,
+   "explanation": "Hatsune Miku is a voice-synthesizer mascot by Crypton Future Media."
+  },
+  {
+   "id": "pop-035",
+   "subcategory": "tv",
+   "difficulty": 4,
+   "question": "Which British broadcaster first aired the anthology series 'Black Mirror' in 2011?",
+   "choices": [
+    "BBC One",
+    "Channel 4",
+    "ITV",
+    "Sky One"
+   ],
+   "answer": 1,
+   "explanation": "Black Mirror premiered on Channel 4 in 2011 before moving to Netflix."
+  },
+  {
+   "id": "pop-036",
+   "subcategory": "games",
+   "difficulty": 3,
+   "question": "Which game features crewmates and impostors on a spaceship?",
+   "choices": [
+    "Overcooked",
+    "Fall Guys",
+    "Among Us",
+    "Phasmophobia"
+   ],
+   "answer": 2,
+   "explanation": "Among Us was released in 2018 and went viral in 2020."
+  },
+  {
+   "id": "pop-037",
+   "subcategory": "fashion",
+   "difficulty": 3,
+   "question": "Which rapper-producer founded the brand Yeezy?",
+   "choices": [
+    "Pharrell Williams",
+    "Travis Scott",
+    "Jay-Z",
+    "Kanye West"
+   ],
+   "answer": 3,
+   "explanation": "Yeezy sneakers began with Nike and then Adidas."
+  },
+  {
+   "id": "pop-038",
+   "subcategory": "music",
+   "difficulty": 2,
+   "question": "Which singer's tour is known as 'The Eras Tour'?",
+   "choices": [
+    "Adele",
+    "Dua Lipa",
+    "Taylor Swift",
+    "Beyoncé"
+   ],
+   "answer": 2,
+   "explanation": "The Eras Tour ran from 2023 to 2024."
+  }
+ ]
+}

@@ -11,7 +11,12 @@ import { roundInfo, roundCategories } from '../../engine/rounds.js';
 import { CARDS, equippableCards } from '../../engine/cards.js';
 import { RULES, HAZARDS, BOSSES, SHOP_ITEMS } from '../../engine/modifiers.js';
 import { CATEGORIES, DIFFICULTIES } from '../../engine/bank.js';
-import { recentlySeenIds } from '../../stats/stats.js';
+import { haptic, confetti, coinBurst, stamp, streakHype } from '../fx.js';
+import { languageOf } from '../../i18n/languages.js';
+import { createTranslator, applyTranslation } from '../../i18n/translate.js';
+import { recentlySeenIds, seenCounts } from '../../stats/stats.js';
+import { CARDS as ALL_CARDS } from '../../engine/cards.js';
+import { STARTER_CARDS } from '../../engine/cards.js';
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
 const MODE_NAME = { solo: 'Solo run', quick: 'Quick run', versus: 'Versus', daily: 'Daily' };
@@ -45,6 +50,179 @@ class GameController {
     this.label = 'solo';
     this.keyHandler = null;
     this.notes = []; // transient notices shown on the next render
+    this.translator = createTranslator({ fetchJson: (p) => app.readJson(p) });
+    this.trCache = new Map(); // `${lang}:${questionId}` -> translation | null
+    this.trPending = new Map();
+  }
+
+  /* ------------------------------------------------------ translation */
+
+  langOf(pid) {
+    return this.profiles.get(pid)?.language ?? 'en';
+  }
+
+  /** Kick off (or reuse) translation of the current question for a player. Never rejects. */
+  ensureTranslation(pid) {
+    const lang = this.langOf(pid);
+    const qid = this.s.q?.questionId;
+    if (!qid || lang === 'en') return Promise.resolve(null);
+    const key = `${lang}:${qid}`;
+    if (this.trCache.has(key)) return Promise.resolve(this.trCache.get(key));
+    if (!this.trPending.has(key)) {
+      const q = this.ctx.byId.get(qid);
+      this.trPending.set(key, this.translator.translateQuestion(q, lang).catch(() => null).then((r) => {
+        this.trCache.set(key, r);
+        this.trPending.delete(key);
+        return r;
+      }));
+    }
+    return this.trPending.get(key);
+  }
+
+  /** The question view for a player, in that player's language when a translation is ready. */
+  view(pid, langPid = pid) {
+    const v = getQuestionView(this.s, this.ctx, pid);
+    const lang = this.langOf(langPid);
+    if (!v || lang === 'en') return v;
+    return applyTranslation(v, this.trCache.get(`${lang}:${v.id}`) ?? null);
+  }
+
+  /* ------------------------------------------------------------ online */
+
+  get myPlayerId() {
+    return this.net?.myPlayerId ?? null;
+  }
+  get myPlayer() {
+    return this.net ? this.s.players.find((p) => p.playerId === this.myPlayerId) ?? this.s.players[0] : null;
+  }
+  get isMyTurn() {
+    return !this.net || this.turnPlayer.playerId === this.myPlayerId;
+  }
+  get passPhone() {
+    return this.multi && !this.net;
+  }
+
+  async initOnline(params, localProfiles) {
+    const { app } = this;
+    const net = app.online;
+    if (!net || net.closed) { toast('The room is not open any more', 'err'); return false; }
+    this.net = net;
+    this.label = 'versus';
+    this.rev = 0;
+    this.lastProgress = Date.now();
+
+    // Everyone's display data (name, portrait, language) comes from the room.
+    for (const m of net.members) {
+      const local = localProfiles.find((p) => p.id === net.playerIdOf(m));
+      this.profiles.set(net.playerIdOf(m), local ?? { id: net.playerIdOf(m), name: m.name, avatar: { key: m.avatar }, language: m.language || 'en' });
+    }
+
+    if (net.isHost && !net.startInfo) {
+      const infos = net.infos;
+      const seen = {};
+      const avoid = new Set();
+      const valid = (list) => [...new Set([...(Array.isArray(list) ? list : []).filter((c) => ALL_CARDS[c]), ...STARTER_CARDS])];
+      const players = net.members.map((m) => {
+        const pid = net.playerIdOf(m);
+        const info = infos.get(m.id);
+        for (const [id, n] of Object.entries(info?.seen ?? {})) if (typeof n === 'number' && this.ctx.byId.has(id)) seen[id] = (seen[id] ?? 0) + Math.min(n, 50);
+        for (const id of (info?.recent ?? []).slice(0, 150)) avoid.add(id);
+        return { id: pid, name: m.name, ownedCards: valid(info?.ownedCards) };
+      });
+      this.state = createGame({
+        mode: 'versus', players, ctx: app.ctx,
+        overrides: { themes: params.themes },
+        avoidIds: [...avoid], seenCounts: seen,
+      });
+      this.rev = 1;
+      await net.start({ rev: 1, state: this.state });
+    } else {
+      const latest = net.latest ?? (net.startInfo ? { rev: net.startInfo.rev, state: net.startInfo.state } : null);
+      if (!latest) { toast('The game has not started yet', 'err'); return false; }
+      this.state = latest.state;
+      this.rev = latest.rev;
+    }
+    this.persisted = 0;
+    this.myIds = [this.myPlayerId];
+
+    this.offs = [
+      net.on('state', ({ rev, state }) => this.onRemoteState(rev, state)),
+      net.on('members', () => this.onMembers()),
+      net.on('closed', () => this.onRoomClosed()),
+      net.on('status', () => this.render()),
+    ];
+    if (net.isHost) {
+      this.offs.push(net.on('action', (m) => this.onRemoteAction(m)));
+      this.watchdog = setInterval(() => this.checkAfk(), 1000);
+    }
+    lightsOn();
+    this.render();
+    return true;
+  }
+
+  onRemoteState(rev, state) {
+    if (rev <= this.rev && this.state) return;
+    this.rev = rev;
+    this.state = state;
+    this.lastProgress = Date.now();
+    this.save();
+    if (state.phase === 'finished') this.onFinished();
+    this.render();
+  }
+
+  onMembers() {
+    if (!this.net) return;
+    for (const m of this.net.members) {
+      const pid = this.net.playerIdOf(m);
+      if (!this.profiles.has(pid)) this.profiles.set(pid, { id: pid, name: m.name, avatar: { key: m.avatar }, language: m.language || 'en' });
+    }
+    if (this.s?.phase === 'stake' || this.s?.phase === 'question') { if (!this.isMyTurn) this.render(); }
+  }
+
+  async onRoomClosed() {
+    if (this.disposed || !this.s || this.s.phase === 'finished') return;
+    toast('The host left, so the game ended.', 'err');
+    const res = dispatch(this.s, { type: 'ABANDON' }, this.ctx);
+    if (res.ok) { this.state = res.state; await this.save(); }
+    go('menu', {}, { replace: true });
+  }
+
+  /** Host: apply an action sent by a guest after checking it is really theirs. */
+  onRemoteAction({ from, action, rev }) {
+    if (!this.net?.isHost || !action || typeof action.type !== 'string') return;
+    const member = this.net.members.find((m) => m.id === from);
+    if (!member) return;
+    const pid = this.net.playerIdOf(member);
+    const allowed = ['SET_LOADOUT', 'USE_CARD', 'CONFIRM_STAKE', 'ANSWER', 'NEXT', 'CONTINUE'];
+    if (!allowed.includes(action.type)) return;
+    if (action.type === 'NEXT' || action.type === 'CONTINUE') {
+      if (rev !== this.rev) return; // stale: someone already advanced
+    } else if (action.playerId !== pid) {
+      return; // you can only act for yourself
+    }
+    if (action.type === 'ANSWER') {
+      // A phone's own clock cannot be trusted to be faster than the host's view of it.
+      const qp = this.s.q?.byPlayer?.[pid];
+      if (qp?.startedAt) action = { ...action, elapsedMs: Math.max(Number(action.elapsedMs) || 0, this.ctx.now() - qp.startedAt - 2500) };
+    }
+    this.act(action, { silent: true, remote: true });
+  }
+
+  /** Host: keep the game moving if the player whose turn it is has gone quiet. */
+  checkAfk() {
+    const s = this.s;
+    if (!this.net?.isHost || this.disposed || !s || this.isMyTurn) return;
+    if (s.phase !== 'stake' && s.phase !== 'question') return;
+    const p = this.turnPlayer;
+    const member = this.net.memberByPlayerId(p.playerId);
+    const gone = member && !member.connected;
+    const idle = Date.now() - this.lastProgress;
+    if (s.phase === 'stake' && (idle > 45000 || (gone && idle > 6000))) {
+      this.act({ type: 'CONFIRM_STAKE', playerId: p.playerId, stake: 1 }, { silent: true });
+    } else if (s.phase === 'question') {
+      const timerMs = s.q.byPlayer[p.playerId]?.timerMs ?? 20000;
+      if (idle > timerMs + 9000 || (gone && idle > 6000)) this.act({ type: 'ANSWER', playerId: p.playerId, choice: null, elapsedMs: timerMs }, { silent: true });
+    }
   }
 
   /* ------------------------------------------------------------ setup */
@@ -53,6 +231,8 @@ class GameController {
     const { app } = this;
     const profiles = await app.repo.listProfiles();
     profiles.forEach((p) => this.profiles.set(p.id, p));
+
+    if (params.online) return this.initOnline(params, profiles);
 
     if (params.resume) {
       const state = await app.repo.loadActiveGame();
@@ -86,8 +266,9 @@ class GameController {
         players: players.map((p) => ({ id: p.id, name: p.name, ownedCards: p.ownedCards })),
         ctx: app.ctx,
         seed: mode === 'daily' ? `daily-${localDateKey()}` : undefined,
-        overrides: params.mode === 'quick' ? { acts: 1 } : {},
+        overrides: { ...(params.mode === 'quick' ? { acts: 1 } : {}), ...(params.themes && mode !== 'daily' ? { themes: params.themes } : {}) },
         avoidIds,
+        seenCounts: mode === 'daily' ? {} : seenCounts(results, ids),
       });
       await app.repo.pushRecent(ids, mode);
       this.persisted = await app.repo.saveProgress(this.state, 0).catch((e) => this.reportSaveError(e) ?? 0);
@@ -99,6 +280,9 @@ class GameController {
 
   dispose() {
     this.disposed = true;
+    if (this.watchdog) clearInterval(this.watchdog);
+    this.offs?.forEach((f) => f());
+    if (this.net) { const n = this.net; this.app.online = null; n.leave(); }
     this.stopTimer();
     stopClip();
     if (this.keyHandler) document.removeEventListener('keydown', this.keyHandler);
@@ -134,9 +318,10 @@ class GameController {
     const state = this.s;
     this.saveChain = this.saveChain.then(async () => {
       try {
-        if (state.status === 'active') this.persisted = await this.app.repo.saveProgress(state, this.persisted);
+        const online = this.net ? { onlyPlayers: this.myIds, resumable: false } : undefined;
+        if (state.status === 'active') this.persisted = await this.app.repo.saveProgress(state, this.persisted, online);
         else {
-          await this.app.repo.finalizeSession(state);
+          await this.app.repo.finalizeSession(state, online ? { onlyPlayers: this.myIds } : undefined);
           this.persisted = state.log.length;
         }
       } catch (e) {
@@ -146,13 +331,23 @@ class GameController {
     return this.saveChain;
   }
 
-  act(action, { silent = false } = {}) {
+  act(action, { silent = false, remote = false } = {}) {
+    if (this.net && !this.net.isHost) {
+      // Guests never change the game themselves: the host does, and sends the result back.
+      this.net.sendAction(action, this.rev);
+      return true;
+    }
     const res = dispatch(this.s, action, this.ctx);
     if (!res.ok) {
       if (!silent) toast(res.reason.charAt(0).toUpperCase() + res.reason.slice(1));
       return false;
     }
     this.state = res.state;
+    this.lastProgress = Date.now();
+    if (this.net?.isHost) {
+      this.rev += 1;
+      this.net.broadcastState(this.rev, this.s);
+    }
     this.save();
     if (this.s.phase === 'finished') this.onFinished();
     this.render();
@@ -162,7 +357,7 @@ class GameController {
   async onFinished() {
     const s = this.s;
     if (s.status !== 'completed') return;
-    const offers = s.players.map((p) => ({ sessionId: s.sessionId, playerId: p.playerId, options: cardReward(s, p.playerId).options }));
+    const offers = s.players.filter((p) => !this.net || this.myIds.includes(p.playerId)).map((p) => ({ sessionId: s.sessionId, playerId: p.playerId, options: cardReward(s, p.playerId).options }));
     await this.saveChain;
     try {
       await this.app.repo.addPendingRewards(offers);
@@ -183,6 +378,11 @@ class GameController {
     }
     const phase = this.s.phase;
     this.setMoodForState();
+    if (this.net && (phase === 'stake' || phase === 'question') && !this.isMyTurn) {
+      mount(this.root, this.viewWaiting());
+      window.scrollTo(0, 0);
+      return;
+    }
     const body = {
       loadout: () => this.viewLoadout(),
       stake: () => this.viewStake(),
@@ -217,6 +417,7 @@ class GameController {
 
   hud(p = this.turnPlayer, { menu = true } = {}) {
     const s = this.s;
+    if (this.net) p = this.myPlayer;
     return h('div.hud', {},
       avatar(this.profileOf(p.playerId), 16),
       h('span.who', {}, p.name),
@@ -245,6 +446,21 @@ class GameController {
     if (s.phase === 'finished') return false;
     if (this.pauseOpen) return true;
     this.pauseOpen = true;
+    if (this.net) {
+      modal((close) => [
+        h('h2', {}, 'Room menu'),
+        h('p.small.dim', {}, this.net.isHost ? 'You are the host. If you leave, the game ends for everyone.' : 'If you leave, the others carry on and your remaining questions count as timeouts.'),
+        h('button.btn.primary.block', { type: 'button', onclick: () => close('resume') }, 'Back to the game'),
+        h('button.btn.danger.block', { type: 'button', onclick: () => close('leave') }, this.net.isHost ? 'End game for everyone' : 'Leave game'),
+      ]).then(async (choice) => {
+        this.pauseOpen = false;
+        if (choice === 'leave') {
+          await this.save();
+          go('menu', {}, { replace: true });
+        }
+      });
+      return true;
+    }
     modal((close) => [
       h('h2', {}, 'Paused'),
       s.phase === 'question' ? h('p.small.red', {}, 'The clock keeps running while this menu is open.') : null,
@@ -273,6 +489,26 @@ class GameController {
     return true;
   }
 
+  /* ----------------------------------------------------------- waiting */
+
+  viewWaiting() {
+    const s = this.s;
+    const p = this.turnPlayer;
+    const member = this.net.memberByPlayerId(p.playerId);
+    const doing = s.phase === 'stake' ? 'is choosing a stake' : 'is answering';
+    return [
+      this.hud(),
+      h('div.row.between', {}, h('span.tiny.dim', {}, this.roundTitle()), h('span.tiny.dim', {}, `Question ${s.qIndex + 1} of 5`)),
+      h('div.panel.waiting-card', {},
+        avatar(this.profileOf(p.playerId), 48),
+        h('h2', {}, p.name),
+        h('p.dim', {}, member && !member.connected ? 'lost connection… the game will move on without them' : `${doing}…`),
+        h('div.tiny.mute', {}, 'The question stays hidden until everyone has answered.'),
+      ),
+      h('div.standings', {}, [...s.players].sort((a, b) => b.chips + b.vault - (a.chips + a.vault)).map((pl) => h('div.panel.tight.row', { class: pl.playerId === p.playerId ? 'now' : '' }, avatar(this.profileOf(pl.playerId), 16), h('b.grow', {}, pl.name), h('span.pill', {}, sprite('chip', 16), pl.chips)))),
+    ];
+  }
+
   /* ---------------------------------------------------------- loadout */
 
   viewLoadout() {
@@ -281,7 +517,7 @@ class GameController {
     const boss = round.bossId ? BOSSES[round.bossId] : null;
     const hazard = HAZARDS[round.hazardId];
     const cats = roundCategories(round, this.ctx.byId);
-    const tab = Math.min(this.loadoutTab, s.players.length - 1);
+    const tab = this.net ? s.players.indexOf(this.myPlayer) : Math.min(this.loadoutTab, s.players.length - 1);
     const p = s.players[tab];
     const owned = equippableCards(p.owned, s.mode);
     const locked = !s.config.cardsEnabled || Boolean(boss?.cardsLocked);
@@ -314,8 +550,8 @@ class GameController {
       s.players.some((x) => x.comeback) ? h('p.small.green.center', {}, `Comeback charge: ${s.players.filter((x) => x.comeback).map((x) => x.name).join(', ')} get an extra use of each equipped card.`) : null,
       s.config.cardsEnabled
         ? [
-            this.multi ? h('div.tabs', {}, s.players.map((pl, i) => h('button.tab', { type: 'button', role: 'tab', 'aria-selected': String(i === tab), onclick: () => { this.loadoutTab = i; this.render(); } }, pl.name))) : null,
-            h('div.row.between', {}, h('h3', {}, this.multi ? `${p.name}: equip two` : 'Equip two cards'), h('span.tiny.dim', {}, `${p.loadout.filter(Boolean).length}/2`)),
+            this.multi && !this.net ? h('div.tabs', {}, s.players.map((pl, i) => h('button.tab', { type: 'button', role: 'tab', 'aria-selected': String(i === tab), onclick: () => { this.loadoutTab = i; this.render(); } }, pl.name))) : null,
+            h('div.row.between', {}, h('h3', {}, this.multi && !this.net ? `${p.name}: equip two` : 'Equip two cards'), h('span.tiny.dim', {}, `${p.loadout.filter(Boolean).length}/2`)),
             locked ? h('p.small.red', {}, `Cards are locked this round (${boss?.name}). You can still equip for later rounds.`) : round.hazardId === 'cold_table' ? h('p.small.red', {}, 'Cold Table: Scalpel, Peek and Ghost Note are locked this round.') : null,
             h('div.hand', {}, p.loadout.map((id, i) => h('div.slot', {}, id ? cardTile(id, { selected: true, onclick: () => unequip(i), charges: CARDS[id].timing === 'run' ? p.runCharges[id] : CARDS[id].uses + (p.bonusCharges ? 1 : 0) + (p.comeback ? 1 : 0) }) : emptySlot('Empty slot')))),
             hand.length ? h('div.tiny.dim', {}, 'Your collection · tap to equip') : null,
@@ -323,7 +559,9 @@ class GameController {
             !owned.length ? h('p.small.dim', {}, 'No cards available in this mode yet. Win cards by finishing games.') : null,
           ]
         : h('p.small.dim.center', {}, 'No bonus cards in the Daily, so everyone plays the same game.'),
-      h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', onclick: () => { unlockAudio(); sfx.stake(); if (round.isBoss) sfx.boss(); this.gateKey = null; this.act({ type: 'START_ROUND' }); if (round.isBoss || round.hazardId === 'cold_table') lightsOn({ sound: false }); } }, round.isBoss ? 'Face the boss' : 'Start round')),
+      this.net && !this.net.isHost
+        ? h('div.stick-bottom', {}, h('p.small.dim.center', {}, 'Equip your cards. The host starts the round.'))
+        : h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', onclick: () => { unlockAudio(); sfx.stake(); if (round.isBoss) sfx.boss(); this.gateKey = null; this.act({ type: 'START_ROUND' }); if (round.isBoss || round.hazardId === 'cold_table') lightsOn({ sound: false }); } }, round.isBoss ? 'Face the boss' : 'Start round')),
     ];
   }
 
@@ -349,9 +587,10 @@ class GameController {
   viewStake() {
     const s = this.s;
     const p = this.turnPlayer;
-    if (this.multi && this.gateKey !== this.turnKey()) return this.gate(p, `${this.roundTitle()} · question ${s.qIndex + 1} of 5. Make sure the others look away from the screen.`);
+    if (this.passPhone && this.gateKey !== this.turnKey()) return this.gate(p, `${this.roundTitle()} · question ${s.qIndex + 1} of 5. Make sure the others look away from the screen.`);
 
-    const view = getQuestionView(s, this.ctx, p.playerId);
+    this.ensureTranslation(p.playerId).then(() => {});
+    const view = this.view(p.playerId);
     const options = getStakeOptions(s, this.ctx, p.playerId);
     const boss = s.round.bossId ? BOSSES[s.round.bossId] : null;
     if (this.stakeSelKey !== this.turnKey()) {
@@ -381,13 +620,13 @@ class GameController {
       qp.usedCards.length ? h('p.tiny.amber', {}, `Armed: ${qp.usedCards.map((c) => CARDS[c].name).join(', ')}`) : null,
       h('div.stick-bottom', {}, h('button.btn.primary.block', {
         type: 'button', disabled: !sel,
-        onclick: () => { sfx.stake(); this.act({ type: 'CONFIRM_STAKE', playerId: p.playerId, stake: sel.stake }); },
+        onclick: async (e) => { sfx.stake(); if (sel.stake >= 3) { sfx.drumroll(); haptic('big'); } e.currentTarget.disabled = true; await Promise.race([this.ensureTranslation(p.playerId), new Promise((r) => setTimeout(r, 3500))]); this.act({ type: 'CONFIRM_STAKE', playerId: p.playerId, stake: sel.stake }); },
       }, sel ? `Lock in ${sel.stake}× · start the clock` : 'Pick a stake')),
     ];
   }
 
-  questionCard(view, { hidden = false, tune = false } = {}) {
-    return h('div.panel.paper.qcard', { class: `${tune ? 'lyric' : ''} ${hidden ? 'hidden-q' : ''}` },
+  questionCard(view, { hidden = false, tune = false, dir = null } = {}) {
+    return h('div.panel.paper.qcard', { dir, class: `${tune ? 'lyric' : ''} ${hidden ? 'hidden-q' : ''}` },
       tune ? h('div.tiny', { style: { textAlign: 'center', marginBottom: '6px' } }, 'Name that tune: which song are these lyrics from?') : null,
       h('div.q', {}, hidden ? 'Question hidden until you stake' : view.text),
     );
@@ -458,7 +697,7 @@ class GameController {
   viewQuestion() {
     const s = this.s;
     const p = this.turnPlayer;
-    const view = getQuestionView(s, this.ctx, p.playerId);
+    const view = this.view(p.playerId);
     const qp = s.q.byPlayer[p.playerId];
     const isTf = view.type === 'tf';
 
@@ -479,11 +718,12 @@ class GameController {
       h('div.row.between', {}, h('span.tiny.dim', {}, this.roundTitle()), s.round.markedSlot === s.qIndex ? h('span.tag.amber', {}, '★ Marked question') : null),
       this.slotDots(),
       h('div.cat-line', {}, categoryIcon(view.category, 20), CATEGORIES[view.category]?.label ?? view.category, h('span', { style: { marginLeft: 'auto' } }, diffPips(view.difficulty))),
-      this.questionCard(view, { tune: view.type === 'tune' }),
+      this.questionCard(view, { tune: view.type === 'tune', dir: view.translated ? (languageOf(this.langOf(p.playerId)).rtl ? 'rtl' : null) : null }),
+      this.langOf(p.playerId) !== 'en' && !view.translated && view.type !== 'tune' ? h('p.tiny.amber.center', {}, `No ${languageOf(this.langOf(p.playerId)).name} translation was available, so this one is in English.`) : null,
       h('div.row', {}, h('div.grow', {}, timerBar), timerText),
       view.retry ? h('p.small.amber.center.pop', {}, 'Rewind! One wrong option is gone. Try again.') : null,
       view.ghostLetter ? h('p.small.amber.center', {}, `Ghost Note: the answer starts with “${view.ghostLetter}”`) : null,
-      h('div.choices', { class: isTf ? 'grid2' : '' }, choiceEls),
+      h('div.choices', { class: isTf ? 'grid2' : '', dir: view.translated && languageOf(this.langOf(p.playerId)).rtl ? 'rtl' : null }, choiceEls),
       this.cardsBar('question'),
     ];
   }
@@ -539,6 +779,7 @@ class GameController {
     this.stopTimer();
     if (el) el.classList.add('picked');
     sfx.tap();
+    haptic('tap');
     this.finishAnswer(display, elapsed, el);
   }
 
@@ -559,10 +800,18 @@ class GameController {
       sfx.correct();
       sfx.coin();
       pulse('good');
+      haptic('correct');
+      const big = (rec.stake ?? 1) >= 3;
+      coinBurst(this.root.querySelector('.hud') ?? this.root, big ? 22 : 9);
+      if (big) { sfx.cash(); stamp('BIG WIN!', { kind: 'jackpot' }); confetti({ count: 50 }); haptic('big'); }
+      else streakHype(rec.streakAfter ?? 0);
     } else {
       rec.outcome === 'timeout' ? sfx.timeout() : sfx.wrong();
       pulse('bad');
       shake(this.root);
+      haptic(rec.outcome === 'timeout' ? 'timeout' : 'wrong');
+      if ((rec.stake ?? 1) >= 3) { sfx.sadTrombone(); stamp('OUCH!', { kind: 'bad' }); }
+      else if (rec.outcome !== 'timeout') sfx.boing();
     }
     floatText(`${rec.delta > 0 ? '+' : rec.delta < 0 ? '−' : ''}${Math.abs(rec.delta)}`, rec.delta >= 0 ? 'up' : 'down');
     if (rec.strikeLost) blackout();
@@ -573,8 +822,8 @@ class GameController {
   viewReveal() {
     const s = this.s;
     const q = this.ctx.byId.get(s.q.questionId);
-    const viewFor = (pid) => getQuestionView(s, this.ctx, pid);
-    const v = viewFor(s.players[0].playerId);
+    const langs = new Set(s.players.map((x) => this.langOf(x.playerId)));
+    const v = this.net ? this.view(this.myPlayerId) : langs.size === 1 ? this.view(s.players[0].playerId) : getQuestionView(s, this.ctx, s.players[0].playerId);
     const rightText = v.choices.find((c) => c.correct).text;
     const last = s.qIndex + 1 >= RULES.questionsPerRound;
     const key = `${s.roundIndex}:${s.qIndex}`;
@@ -586,6 +835,8 @@ class GameController {
       const anyRight = mine.some((r) => r.correct);
       anyRight ? sfx.correct() : sfx.wrong();
       pulse(anyRight ? 'good' : 'bad');
+      haptic(anyRight ? 'correct' : 'wrong');
+      if (anyRight) coinBurst(this.root, 12);
     }
     if (!this.multi) this.revealKey = key;
 
@@ -644,7 +895,7 @@ class GameController {
     const lostBulb = s.players.some((p) => last.players[p.playerId].strikesLost > 0);
     if (this.summaryKey !== s.roundIndex) {
       this.summaryKey = s.roundIndex;
-      if (lostBulb) { sfx.wrong(); blackout(); } else sfx.win();
+      if (lostBulb) { sfx.wrong(); blackout(); haptic('warn'); } else { sfx.win(); haptic('big'); confetti({ count: boss ? 90 : 45 }); if (boss) { sfx.jackpot(); stamp('BOSS DOWN!', { kind: 'jackpot' }); } }
     }
     return [
       this.hud(s.players[0], {}),
@@ -720,8 +971,8 @@ class GameController {
     const done = s.status === 'completed';
     if (this.finishKey !== s.sessionId) {
       this.finishKey = s.sessionId;
-      if (done && s.players.some((p) => p.result === 'won')) sfx.win();
-      else if (done) sfx.lose();
+      if (done && s.players.some((p) => p.result === 'won')) { sfx.jackpot(); haptic('jackpot'); confetti({ count: 120, duration: 2600 }); }
+      else if (done) { sfx.sadTrombone(); haptic('wrong'); }
     }
     const solo = s.mode !== 'versus';
     const title = !done ? 'Game abandoned' : solo ? (s.players[0].result === 'won' ? 'You beat the house' : 'The house wins') : 'Final standings';

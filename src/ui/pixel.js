@@ -85,6 +85,35 @@ const SPRITES = {
     '............', '.....kkkkkk.', '.....kbbbbk.', '.....kbkkkk.', '.....kb.k...', '.....kb.k...',
     '.....kb.k...', '..kkkkb.k...', '.kbbbkb.k...', '.kbbbkb.....', '.kbbbk......', '..kkk.......' ] },
 
+  /* ------------------------------ theme icons ----------------------------- */
+  cinema: { rows: [
+    '............', '.kkkkkkkkkk.', '.kaakaakaak.', '.kkkkkkkkkk.', '.kbbbbbbbbk.', '.kbkbbbbkbk.',
+    '.kbbbbbbbbk.', '.kbbkkkkbbk.', '.kbbbbbbbbk.', '.kbbbbbbbbk.', '.kkkkkkkkkk.', '............' ] },
+  popculture: { m: true, rows: [
+    '......', '.....k', '....ka', '...kaa', 'kkkkaa', 'kaaaaa', '.kaaaa', '..kaaa', '.kaaak', 'kaakkk', 'kkk...', '......' ] },
+  manga: { m: true, rows: [
+    '......', '..kkkk', '.kbbbb', 'kbbbbb', 'kbkkbb', 'kbkwbb', 'kbbbbb', 'kbbkkk', '.kbbbb', '..kkrr', '...kkk', '......' ] },
+  cooking: { rows: [
+    '............', '...kkkkkk...', '..kwwwwwwk..', '.kwwwwwwwwk.', '.kwwwwwwwwk.', '..kkkkkkkk..',
+    '..kbbbbbbk..', '..kbbbbbbk..', '..kbbbbbbk..', '..kbbbbbbk..', '..kkkkkkkk..', '............' ] },
+  finance: { rows: [
+    '............', '...kkkkkk...', '..kaaaaaak..', '.kaaakkaaak.', '.kaakaaaaak.', '.kaaakkaaak.',
+    '.kaaaaakaak.', '.kaakkkaaak.', '..kaaaaaak..', '...kkkkkk...', '............', '............' ] },
+  business: { rows: [
+    '............', '....kkkk....', '....k..k....', '.kkkkkkkkkk.', '.kbbbbbbbbk.', '.kbbbaabbbk.',
+    '.kbbbaabbbk.', '.kbbbbbbbbk.', '.kbbbbbbbbk.', '.kkkkkkkkkk.', '............', '............' ] },
+  sports: { m: true, rows: [
+    '......', '..kkkk', '.koooo', 'koookO', 'kokooo', 'kooOko', 'kooook', 'kookoo', 'kOoooo', '.kooOo', '..kkkk', '......' ] },
+  f1: { rows: [
+    '............', '............', '....kkkk....', '...krrrrk...', '.kkkrrrrkkk.', 'krrrrrrrrrrk',
+    'kkrkkkkkkrkk', '.kkgkkkkgkk.', '.kkkk..kkkk.', '............', '............', '............' ] },
+  hockey: { rows: [
+    '............', '.kk.........', '.kbk........', '..kbk.......', '...kbk......', '....kbk.....',
+    '.....kbk....', '......kbkkk.', '.......kkddk', '........kddk', '.........kkk', '............' ] },
+  music: { rows: [
+    '............', '....kkkkkk..', '....kbbbbk..', '....kbkkkk..', '....kb..k...', '....kb..k...',
+    '..kkkb.kkk..', '.kbbbk.kbbk.', '.kbbbk.kbbk.', '..kkk...kk..', '............', '............' ] },
+
   /* ------------------------------ card icons ----------------------------- */
   scalpel: { rows: [
     '............', '..........kk', '.........klk', '........klk.', '.......klk..', '......klk...',
@@ -195,4 +224,4 @@ export function sprite(name, px = 32, alt = '') {
 }
 
 export const AVATAR_SPRITES = ['gasmask', 'welder', 'radio', 'owl', 'fox', 'crow', 'miner', 'jester'];
-export const CATEGORY_SPRITES = { news: 'news', history: 'history', geography: 'geography', science: 'science', phobia: 'phobia', nature: 'nature', arts: 'arts', symbols: 'symbols', tunes: 'tunes' };
+export const CATEGORY_SPRITES = { news: 'news', history: 'history', geography: 'geography', science: 'science', phobia: 'phobia', nature: 'nature', arts: 'arts', symbols: 'symbols', tunes: 'tunes', cinema: 'cinema', popculture: 'popculture', manga: 'manga', cooking: 'cooking', finance: 'finance', business: 'business', sports: 'sports', f1: 'f1', hockey: 'hockey', music: 'music' };

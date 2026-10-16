@@ -367,3 +367,11 @@ export function recentlySeenIds(results, playerIds, { limit = 150 } = {}) {
   }
   return seen;
 }
+
+/** How many times each question was answered by these players (for least-seen picking). */
+export function seenCounts(results, playerIds) {
+  const ids = new Set(playerIds);
+  const out = {};
+  for (const r of results) if (ids.has(r.playerId)) out[r.questionId] = (out[r.questionId] ?? 0) + 1;
+  return out;
+}

@@ -342,3 +342,38 @@ footer.legal { color: var(--mute); font-size: 12px; text-align: center; margin-t
 @media (max-width: 360px) { .logo { font-size: 44px; } .btn { font-size: 19px; } .choice { font-size: 16px; } }
 @media (prefers-reduced-motion: reduce) { .hang { animation: none; } }
 .crossroads-opt:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* ------------------------------------------------------------ themes / juice */
+.slots { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.slot { appearance: none; border: 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 84px; padding: 6px 2px; background: var(--steel); box-shadow: inset 0 0 0 3px var(--edge); color: var(--bone); font: inherit; overflow: hidden; }
+.slot.filled { background: #3a2f18; box-shadow: inset 0 0 0 3px var(--amber); }
+.slot.reeling { box-shadow: inset 0 0 0 3px var(--bone), 0 0 14px rgba(232, 163, 61, 0.6); }
+.slot.spinning .reel-item { filter: blur(1.2px); }
+.slot-q { font-family: var(--font-display); font-size: 34px; color: var(--edge); line-height: 1; }
+.slot-name { font-family: var(--font-display); font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; line-height: 1.05; text-align: center; }
+.reel-item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.spin-btn { background: linear-gradient(#e8a33d, #b9761d); color: #1a1205; font-weight: 800; letter-spacing: 0.06em; animation: spinglow 1.8s ease-in-out infinite; }
+@keyframes spinglow { 0%, 100% { box-shadow: 0 0 0 rgba(232, 163, 61, 0); } 50% { box-shadow: 0 0 18px rgba(232, 163, 61, 0.7); } }
+.theme-group { margin-top: 10px; }
+.theme-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; margin-top: 6px; }
+.theme { appearance: none; border: 0; cursor: pointer; position: relative; display: flex; align-items: center; gap: 8px; min-height: 52px; padding: 6px 8px; text-align: left; background: var(--steel); box-shadow: inset 0 0 0 3px var(--edge); color: var(--bone); font: inherit; }
+.theme[aria-pressed='true'] { background: #3a2f18; box-shadow: inset 0 0 0 3px var(--amber); }
+.theme:active { transform: translateY(2px); }
+.theme-name { font-family: var(--font-display); font-size: 16px; text-transform: uppercase; line-height: 1.05; }
+.theme .badge { position: absolute; top: 3px; right: 6px; font-family: var(--font-display); color: var(--amber); font-size: 16px; }
+.fx-layer { position: fixed; inset: 0; z-index: 950; pointer-events: none; overflow: hidden; }
+.confetti { position: absolute; display: block; image-rendering: pixelated; }
+.coin { position: absolute; display: block; width: 14px; height: 14px; margin: -7px 0 0 -7px; background: #f6d77f; box-shadow: inset -3px -3px 0 #a8711f, 0 0 0 2px #0b0c0d; border-radius: 2px; }
+.stamp { position: fixed; z-index: 960; left: 50%; top: 38%; transform: translate(-50%, -50%) rotate(-4deg); pointer-events: none; font-family: var(--font-display); font-weight: 800; font-size: clamp(34px, 11vw, 64px); text-transform: uppercase; white-space: nowrap; text-shadow: 0 4px 0 #000, 0 0 24px rgba(232, 163, 61, 0.6); }
+.stamp.good { color: var(--amber); }
+.stamp.bad { color: #e0554b; }
+.stamp.jackpot { color: #f6d77f; }
+.theme-hint { color: var(--dim); }
+.slots { position: sticky; top: 0; z-index: 20; padding: 8px 0; background: linear-gradient(#121314 85%, transparent); }
+.room-code { font-family: var(--font-display); font-weight: 800; font-size: 76px; letter-spacing: 0.18em; color: var(--amber); text-shadow: 0 4px 0 #000, 0 0 22px rgba(232, 163, 61, 0.45); line-height: 1; padding: 6px 0 10px 0.18em; }
+.code-input { width: 120px; text-transform: uppercase; letter-spacing: 0.2em; text-align: center; font-family: var(--font-display); font-size: 26px; }
+.pick.static { cursor: default; }
+.dot { width: 12px; height: 12px; margin-left: auto; box-shadow: 0 0 0 2px #000; }
+.dot.on { background: var(--green, #6fa86b); } .dot.off { background: #555; }
+.waiting-card { text-align: center; }
+.standings { display: flex; flex-direction: column; gap: 6px; }

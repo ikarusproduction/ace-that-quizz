@@ -2,7 +2,7 @@
 
 A mobile-first pixel-art trivia roguelite for 1–4 players. Five questions a round, stakes you choose, a bulb that goes out when you fail, bosses, a crossroads where you bank or push, and bonus cards (two slots per round) that each carry a drawback.
 
-Zero dependencies, no build step, no backend. Everything is stored on the device (IndexedDB).
+Zero dependencies, no build step. Everything is stored on the device (IndexedDB). The only server piece is the optional online relay (see below).
 
 ## Play
 ```
@@ -10,11 +10,22 @@ npm start          # http://localhost:5173 (use your LAN address on a phone)
 ```
 Modes: **Solo run** (3 acts), **Quick run** (1 act), **Versus** (2–4 players, one phone, pass-the-phone gates, attack cards), **Daily** (fixed seed, no cards).
 
+## Themes, variety, languages
+- **Theme picker:** before a game, fill 5 slots from 12 themes (science, music, cinema, pop culture, manga, cooking, finance, business, sports, F1, hockey, current affairs) or hit **Random**. Each round draws one question per slot.
+- **Current affairs is live news only:** questions carry a `date`; only items from the last 14 days count, and the theme hides itself when fewer than 4 are fresh. Refresh `data/questions/news-live.json` weekly.
+- **Variety:** the picker prefers the questions each player has seen least (counted from their saved history), so repeats only come back once the pool is exhausted.
+- **Languages:** each player has their own question language (Profile). French ships as a bundled dictionary (machine-drafted by Claude, not yet proofread by a native speaker); other languages use the browser's Translator API or an online service and fall back to English. Answers and stats never depend on the translation.
+- **Feel:** synthesized sound effects, vibration, confetti, slot-style reels. Sound and haptics can be switched off in Settings.
+
+## Online (several phones)
+GitHub Pages alone cannot link phones; run `node server/relay.js` somewhere (see `docs/ONLINE.md`). Create a room, share the 4-letter code or link.
+
 ## Test
 ```
-npm test                    # 152 unit tests: engine, scoring, storage, migrations, stats
+npm test                    # 170 unit tests: engine, scoring, storage, migrations, stats
 npm run validate:questions  # content checks
 python3 tests/e2e/versus.py # browser smoke test (Python Playwright + Chromium)
+python3 tests/e2e/online.py # three phones through the relay
 ```
 
 ## Deploy (GitHub Pages)

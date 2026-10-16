@@ -24,13 +24,13 @@ export function makeContext(questions, now = () => Date.now()) {
 
 export function buildConfig(mode, overrides = {}) {
   if (mode === 'versus') {
-    return { acts: 1, roundsPerAct: 0, noBoss: true, rounds: overrides.rounds ?? RULES.versusRounds, cardsEnabled: true, shop: false, crossroads: false, strikes: false };
+    return { acts: 1, roundsPerAct: 0, noBoss: true, rounds: overrides.rounds ?? RULES.versusRounds, cardsEnabled: true, shop: false, crossroads: false, strikes: false, ...(overrides.themes ? { themes: overrides.themes } : {}) };
   }
   if (mode === 'daily') {
     return { acts: 1, roundsPerAct: RULES.roundsPerAct, noBoss: false, cardsEnabled: false, shop: false, crossroads: true, strikes: true };
   }
   const acts = Math.max(1, Math.min(3, overrides.acts ?? RULES.acts));
-  return { acts, roundsPerAct: RULES.roundsPerAct, noBoss: false, cardsEnabled: true, shop: true, crossroads: true, strikes: true };
+  return { acts, roundsPerAct: RULES.roundsPerAct, noBoss: false, cardsEnabled: true, shop: true, crossroads: true, strikes: true, ...(overrides.themes ? { themes: overrides.themes } : {}) };
 }
 
 const clone = (x) => structuredClone(x);
@@ -56,7 +56,7 @@ const succeed = (state) => ({ state, ok: true });
  * @param {Object} [o.overrides]    e.g. { acts: 1 } for a quick run
  * @param {Iterable<string>} [o.avoidIds] questions recently seen by participants
  */
-export function createGame({ mode, players, ctx, seed, sessionId, overrides = {}, avoidIds = [] }) {
+export function createGame({ mode, players, ctx, seed, sessionId, overrides = {}, avoidIds = [], seenCounts = {} }) {
   if (!['solo', 'versus', 'daily'].includes(mode)) throw new Error(`Unknown mode "${mode}"`);
   const n = players.length;
   if ((mode === 'solo' || mode === 'daily') && n !== 1) throw new Error(`${mode} needs exactly one player`);
@@ -64,6 +64,7 @@ export function createGame({ mode, players, ctx, seed, sessionId, overrides = {}
   if (new Set(players.map((p) => p.id)).size !== n) throw new Error('players must be distinct');
 
   const config = buildConfig(mode, overrides);
+  if (config.themes) config.today = ctx.now();
   const gameSeed = seed ?? randomSeed();
   const s = {
     version: STATE_VERSION,
@@ -82,6 +83,7 @@ export function createGame({ mode, players, ctx, seed, sessionId, overrides = {}
     turn: 0,
     q: null,
     avoidIds: mode === 'daily' ? [] : [...avoidIds],
+    seenCounts: mode === 'daily' ? {} : { ...seenCounts },
     usedIds: [],
     usedBosses: [],
     previousHazard: null,
@@ -140,6 +142,7 @@ function prepareRound(s, ctx) {
       config: s.config,
       usedIds: new Set(s.usedIds),
       avoidIds: new Set(s.avoidIds),
+      seen: s.seenCounts ?? null,
       usedBosses: s.usedBosses,
       previousHazard: s.previousHazard,
       previousCategories: s.previousCategories,
@@ -649,6 +652,7 @@ export function getQuestionView(s, ctx, playerId) {
     text: showText ? q.question : null,
     choices: s.q.order.map((orig, display) => ({
       display,
+      orig,
       text: q.choices[orig],
       hidden: Boolean(qp?.hidden.includes(display)),
       correct: orig === q.answer,

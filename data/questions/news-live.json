@@ -1,0 +1,152 @@
+{
+ "category": "news",
+ "review": "unreviewed",
+ "freshness": "dated",
+ "live": true,
+ "questions": [
+  {
+   "id": "live-001",
+   "subcategory": "science",
+   "difficulty": 2,
+   "question": "The 2026 Nobel Prize in Physiology or Medicine honoured work on which technique, which uses light to control nerve cells?",
+   "choices": [
+    "CRISPR gene editing",
+    "mRNA vaccines",
+    "PET brain scanning",
+    "Optogenetics"
+   ],
+   "answer": 3,
+   "explanation": "Karl Deisseroth, Peter Hegemann and Georg Nagel were honoured on 5 October 2026 for the discovery of a molecular switch for nerve cells.",
+   "asOf": "2026-10",
+   "date": "2026-10-05"
+  },
+  {
+   "id": "live-002",
+   "subcategory": "science",
+   "difficulty": 3,
+   "question": "Francis Halzen won the 2026 Nobel Prize in Physics for contributions to which neutrino observatory?",
+   "choices": [
+    "IceCube",
+    "ATLAS at CERN",
+    "LIGO",
+    "Super-Kamiokande"
+   ],
+   "answer": 0,
+   "explanation": "IceCube, built in the Antarctic ice, detected high-energy neutrinos of astrophysical origin. The prize was announced on 6 October 2026.",
+   "asOf": "2026-10",
+   "date": "2026-10-06"
+  },
+  {
+   "id": "live-003",
+   "subcategory": "science",
+   "difficulty": 3,
+   "question": "Which two scientists won the 2026 Nobel Prize in Chemistry for 'mirror image' (asymmetric) molecule work?",
+   "choices": [
+    "Karl Deisseroth and Peter Hegemann",
+    "Robert Hall and Michael Woodford",
+    "Henri Kagan and Kenso Soai",
+    "Francis Halzen and Georg Nagel"
+   ],
+   "answer": 2,
+   "explanation": "The Chemistry prize was announced on 7 October 2026.",
+   "asOf": "2026-10",
+   "date": "2026-10-07"
+  },
+  {
+   "id": "live-004",
+   "subcategory": "culture",
+   "difficulty": 2,
+   "question": "Who won the 2026 Nobel Prize in Literature?",
+   "choices": [
+    "Anne Carson",
+    "Haruki Murakami",
+    "Margaret Atwood",
+    "Ngũgĩ wa Thiong'o"
+   ],
+   "answer": 0,
+   "explanation": "Anne Carson is a Canadian poet, essayist and classicist. The prize was announced on 8 October 2026.",
+   "asOf": "2026-10",
+   "date": "2026-10-08"
+  },
+  {
+   "id": "live-005",
+   "subcategory": "politics",
+   "difficulty": 3,
+   "question": "Navi Pillay, a former UN High Commissioner for Human Rights, won the 2026 Nobel Peace Prize. Which country is she from?",
+   "choices": [
+    "Ireland",
+    "Kenya",
+    "South Africa",
+    "India"
+   ],
+   "answer": 2,
+   "explanation": "The Norwegian Nobel Committee announced the prize on 9 October 2026. Pillay is South African of Indian Tamil origin.",
+   "asOf": "2026-10",
+   "date": "2026-10-09"
+  },
+  {
+   "id": "live-006",
+   "subcategory": "economy",
+   "difficulty": 3,
+   "question": "The 2026 Nobel Prize in Economic Sciences, awarded to Robert Hall and Michael Woodford, recognised research on what?",
+   "choices": [
+    "Stabilising the economy through booms and busts",
+    "Auction theory",
+    "Tariffs and trade wars",
+    "Cryptocurrency pricing"
+   ],
+   "answer": 0,
+   "explanation": "They were recognised for the microeconomic foundations of macroeconomic stabilisation. Announced on 12 October 2026.",
+   "asOf": "2026-10",
+   "date": "2026-10-12"
+  },
+  {
+   "id": "live-007",
+   "subcategory": "sport",
+   "difficulty": 2,
+   "question": "Who won the 2026 Formula 1 Singapore Grand Prix on 11 October?",
+   "choices": [
+    "Kimi Antonelli",
+    "Charles Leclerc",
+    "George Russell",
+    "Max Verstappen"
+   ],
+   "answer": 3,
+   "explanation": "Verstappen won from pole, his first Singapore GP win, ahead of Charles Leclerc and Kimi Antonelli.",
+   "asOf": "2026-10",
+   "date": "2026-10-11"
+  },
+  {
+   "id": "live-008",
+   "subcategory": "sport",
+   "difficulty": 3,
+   "question": "Who leads the 2026 Formula 1 drivers' championship after the Singapore Grand Prix?",
+   "choices": [
+    "George Russell",
+    "Lando Norris",
+    "Kimi Antonelli",
+    "Max Verstappen"
+   ],
+   "answer": 2,
+   "explanation": "Mercedes' Kimi Antonelli led his teammate George Russell by 102 points after Singapore.",
+   "asOf": "2026-10",
+   "date": "2026-10-11"
+  },
+  {
+   "id": "live-009",
+   "subcategory": "film",
+   "difficulty": 3,
+   "question": "Which film topped the US box office on the weekend of 9 to 11 October 2026 with about $27.8 million?",
+   "choices": [
+    "Verity",
+    "Other Mommy",
+    "Resident Evil",
+    "Heart of the Beast"
+   ],
+   "answer": 1,
+   "explanation": "Other Mommy opened at number one, ahead of Verity ($12.0M).",
+   "asOf": "2026-10",
+   "date": "2026-10-11"
+  }
+ ]
+}

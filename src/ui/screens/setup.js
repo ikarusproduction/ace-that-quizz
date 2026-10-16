@@ -92,5 +92,6 @@ async function start(app, mode, playerIds) {
     const res = dispatch(active, { type: 'ABANDON' }, app.ctx);
     await app.repo.finalizeSession(res.state);
   }
-  go('game', { mode, playerIds });
+  // Daily is a fixed shared run, so it has no theme choice.
+  go(mode === 'daily' ? 'game' : 'themes', { mode, playerIds });
 }

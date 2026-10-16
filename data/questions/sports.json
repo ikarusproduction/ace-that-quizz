@@ -1,0 +1,524 @@
+{
+ "category": "sports",
+ "review": "unreviewed",
+ "questions": [
+  {
+   "id": "spo-001",
+   "subcategory": "football",
+   "difficulty": 1,
+   "question": "How many players are on the pitch for each team in a football (soccer) match?",
+   "choices": [
+    "11",
+    "12",
+    "10",
+    "9"
+   ],
+   "answer": 0,
+   "explanation": "Each side fields eleven players including the goalkeeper."
+  },
+  {
+   "id": "spo-002",
+   "subcategory": "olympics",
+   "difficulty": 1,
+   "question": "Which country hosted the 2016 Summer Olympics?",
+   "choices": [
+    "China",
+    "United Kingdom",
+    "Brazil",
+    "Greece"
+   ],
+   "answer": 2,
+   "explanation": "The Games were held in Rio de Janeiro."
+  },
+  {
+   "id": "spo-003",
+   "subcategory": "tennis",
+   "difficulty": 1,
+   "question": "In tennis, what is a score of zero called?",
+   "choices": [
+    "Duck",
+    "Love",
+    "Nil",
+    "Zero"
+   ],
+   "answer": 1,
+   "explanation": "'Love' is used in tennis scoring."
+  },
+  {
+   "id": "spo-004",
+   "subcategory": "basketball",
+   "difficulty": 1,
+   "question": "How many points is a free throw worth in basketball?",
+   "choices": [
+    "2",
+    "3",
+    "0",
+    "1"
+   ],
+   "answer": 3,
+   "explanation": "A free throw is worth one point."
+  },
+  {
+   "id": "spo-005",
+   "subcategory": "tennis",
+   "difficulty": 1,
+   "question": "Which sport is played at Wimbledon?",
+   "choices": [
+    "Rugby",
+    "Golf",
+    "Tennis",
+    "Cricket"
+   ],
+   "answer": 2,
+   "explanation": "Wimbledon is the oldest tennis tournament, played on grass."
+  },
+  {
+   "id": "spo-006",
+   "subcategory": "olympics",
+   "difficulty": 1,
+   "question": "How many rings are on the Olympic flag?",
+   "choices": [
+    "4",
+    "6",
+    "5",
+    "7"
+   ],
+   "answer": 2,
+   "explanation": "The five rings represent five continents."
+  },
+  {
+   "id": "spo-007",
+   "subcategory": "football",
+   "difficulty": 1,
+   "question": "Which country won the 2018 FIFA World Cup?",
+   "choices": [
+    "Germany",
+    "France",
+    "Brazil",
+    "Croatia"
+   ],
+   "answer": 1,
+   "explanation": "France beat Croatia 4–2 in the final."
+  },
+  {
+   "id": "spo-008",
+   "subcategory": "american-football",
+   "difficulty": 1,
+   "question": "In which sport do you score a 'touchdown'?",
+   "choices": [
+    "Basketball",
+    "Rugby union only",
+    "Baseball",
+    "American football"
+   ],
+   "answer": 3,
+   "explanation": "A touchdown is worth six points."
+  },
+  {
+   "id": "spo-009",
+   "subcategory": "football",
+   "difficulty": 2,
+   "question": "Who won the 2022 FIFA World Cup?",
+   "choices": [
+    "France",
+    "Brazil",
+    "Croatia",
+    "Argentina"
+   ],
+   "answer": 3,
+   "explanation": "Argentina beat France on penalties in Qatar."
+  },
+  {
+   "id": "spo-010",
+   "subcategory": "athletics",
+   "difficulty": 2,
+   "question": "Which athlete holds the 100 m world record of 9.58 seconds?",
+   "choices": [
+    "Yohan Blake",
+    "Usain Bolt",
+    "Carl Lewis",
+    "Tyson Gay"
+   ],
+   "answer": 1,
+   "explanation": "Bolt set it at the 2009 World Championships in Berlin."
+  },
+  {
+   "id": "spo-011",
+   "subcategory": "basketball",
+   "difficulty": 2,
+   "question": "How many players are on a basketball team on court at once?",
+   "choices": [
+    "4",
+    "7",
+    "6",
+    "5"
+   ],
+   "answer": 3,
+   "explanation": "Each team has five players on court."
+  },
+  {
+   "id": "spo-012",
+   "subcategory": "olympics",
+   "difficulty": 2,
+   "question": "Which city hosted the 2024 Summer Olympics?",
+   "choices": [
+    "Tokyo",
+    "Los Angeles",
+    "London",
+    "Paris"
+   ],
+   "answer": 3,
+   "explanation": "Paris hosted for the third time, 100 years after 1924."
+  },
+  {
+   "id": "spo-013",
+   "subcategory": "golf",
+   "difficulty": 2,
+   "question": "Which golfer has won the most major championships (18)?",
+   "choices": [
+    "Gary Player",
+    "Jack Nicklaus",
+    "Arnold Palmer",
+    "Tiger Woods"
+   ],
+   "answer": 1,
+   "explanation": "Tiger Woods has 15 majors."
+  },
+  {
+   "id": "spo-014",
+   "subcategory": "basketball",
+   "difficulty": 2,
+   "question": "In which sport would you perform a 'slam dunk'?",
+   "choices": [
+    "Basketball",
+    "Volleyball",
+    "Netball",
+    "Handball"
+   ],
+   "answer": 0,
+   "explanation": "A slam dunk is a forceful shot above the rim."
+  },
+  {
+   "id": "spo-015",
+   "subcategory": "rugby",
+   "difficulty": 2,
+   "question": "Which country invented the sport of rugby?",
+   "choices": [
+    "Ireland",
+    "England",
+    "New Zealand",
+    "Wales"
+   ],
+   "answer": 1,
+   "explanation": "Rugby is said to have originated at Rugby School in the 1820s."
+  },
+  {
+   "id": "spo-016",
+   "subcategory": "athletics",
+   "difficulty": 2,
+   "question": "How long is a marathon?",
+   "choices": [
+    "42.195 km",
+    "26 km",
+    "40 km",
+    "45 km"
+   ],
+   "answer": 0,
+   "explanation": "That is about 26.2 miles."
+  },
+  {
+   "id": "spo-017",
+   "subcategory": "tennis",
+   "difficulty": 2,
+   "question": "Which tennis player has won the most men's Grand Slam singles titles (24)?",
+   "choices": [
+    "Novak Djokovic",
+    "Roger Federer",
+    "Pete Sampras",
+    "Rafael Nadal"
+   ],
+   "answer": 0,
+   "explanation": "Djokovic overtook Nadal's 22 titles."
+  },
+  {
+   "id": "spo-018",
+   "subcategory": "basketball",
+   "difficulty": 2,
+   "question": "Which NBA team did Michael Jordan win six titles with?",
+   "choices": [
+    "Los Angeles Lakers",
+    "Chicago Bulls",
+    "Boston Celtics",
+    "Detroit Pistons"
+   ],
+   "answer": 1,
+   "explanation": "The Bulls won two three-peats in the 1990s."
+  },
+  {
+   "id": "spo-019",
+   "subcategory": "football",
+   "difficulty": 2,
+   "question": "Which country has won the most men's FIFA World Cups?",
+   "choices": [
+    "Germany",
+    "Argentina",
+    "Italy",
+    "Brazil"
+   ],
+   "answer": 3,
+   "explanation": "Brazil has won five titles."
+  },
+  {
+   "id": "spo-020",
+   "subcategory": "football",
+   "difficulty": 3,
+   "question": "Who scored the 'Hand of God' goal at the 1986 World Cup?",
+   "choices": [
+    "Pelé",
+    "Diego Maradona",
+    "Zinedine Zidane",
+    "Johan Cruyff"
+   ],
+   "answer": 1,
+   "explanation": "Argentina beat England 2–1 in the quarter-final."
+  },
+  {
+   "id": "spo-021",
+   "subcategory": "cycling",
+   "difficulty": 3,
+   "question": "Which cyclist won seven consecutive Tours de France, later stripped for doping?",
+   "choices": [
+    "Eddy Merckx",
+    "Chris Froome",
+    "Lance Armstrong",
+    "Miguel Induráin"
+   ],
+   "answer": 2,
+   "explanation": "His titles from 1999 to 2005 were vacated."
+  },
+  {
+   "id": "spo-022",
+   "subcategory": "tennis",
+   "difficulty": 3,
+   "question": "How many Grand Slam tournaments are there in tennis each year?",
+   "choices": [
+    "4",
+    "5",
+    "6",
+    "3"
+   ],
+   "answer": 0,
+   "explanation": "Australian Open, French Open, Wimbledon and US Open."
+  },
+  {
+   "id": "spo-023",
+   "subcategory": "golf",
+   "difficulty": 3,
+   "question": "Which sport uses the terms 'birdie', 'bogey' and 'eagle'?",
+   "choices": [
+    "Golf",
+    "Baseball",
+    "Cricket",
+    "Archery"
+   ],
+   "answer": 0,
+   "explanation": "They describe scores relative to par."
+  },
+  {
+   "id": "spo-024",
+   "subcategory": "other",
+   "difficulty": 3,
+   "question": "What is the term for three strikes in a row in bowling?",
+   "choices": [
+    "Hawk",
+    "Triple",
+    "Hat-trick",
+    "Turkey"
+   ],
+   "answer": 3,
+   "explanation": "Three consecutive strikes make a turkey."
+  },
+  {
+   "id": "spo-025",
+   "subcategory": "football",
+   "difficulty": 3,
+   "question": "Which country won the first FIFA World Cup in 1930?",
+   "choices": [
+    "Argentina",
+    "Italy",
+    "Brazil",
+    "Uruguay"
+   ],
+   "answer": 3,
+   "explanation": "Uruguay hosted and won the first tournament."
+  },
+  {
+   "id": "spo-026",
+   "subcategory": "olympics",
+   "difficulty": 3,
+   "question": "Which swimmer holds the most Olympic gold medals (23)?",
+   "choices": [
+    "Michael Phelps",
+    "Ian Thorpe",
+    "Mark Spitz",
+    "Ryan Lochte"
+   ],
+   "answer": 0,
+   "explanation": "Phelps won 23 golds across four Olympics."
+  },
+  {
+   "id": "spo-027",
+   "subcategory": "cycling",
+   "difficulty": 3,
+   "question": "Which famous cycling race traditionally finishes on the Champs-Élysées in Paris?",
+   "choices": [
+    "Tour de France",
+    "Paris–Roubaix",
+    "Vuelta a España",
+    "Giro d'Italia"
+   ],
+   "answer": 0,
+   "explanation": "The Tour usually ends in Paris."
+  },
+  {
+   "id": "spo-028",
+   "subcategory": "combat",
+   "difficulty": 3,
+   "question": "Which country is the origin of judo?",
+   "choices": [
+    "Japan",
+    "Korea",
+    "China",
+    "Thailand"
+   ],
+   "answer": 0,
+   "explanation": "Judo was founded by Jigoro Kano in 1882."
+  },
+  {
+   "id": "spo-029",
+   "subcategory": "golf",
+   "difficulty": 3,
+   "question": "Which tournament is nicknamed 'The Open' and is the oldest golf major?",
+   "choices": [
+    "The Open Championship",
+    "PGA Championship",
+    "The Masters",
+    "US Open"
+   ],
+   "answer": 0,
+   "explanation": "First held in 1860 at Prestwick."
+  },
+  {
+   "id": "spo-030",
+   "subcategory": "football",
+   "difficulty": 4,
+   "question": "Which player scored the most goals in a single World Cup tournament (13)?",
+   "choices": [
+    "Just Fontaine",
+    "Miroslav Klose",
+    "Gerd Müller",
+    "Ronaldo"
+   ],
+   "answer": 0,
+   "explanation": "Fontaine scored 13 for France in 1958."
+  },
+  {
+   "id": "spo-031",
+   "subcategory": "other",
+   "difficulty": 4,
+   "question": "What is the maximum break in snooker?",
+   "choices": [
+    "147",
+    "100",
+    "180",
+    "155"
+   ],
+   "answer": 0,
+   "explanation": "A maximum break is 15 reds with 15 blacks then all colours."
+  },
+  {
+   "id": "spo-032",
+   "subcategory": "olympics",
+   "difficulty": 4,
+   "question": "Who won the first modern Olympic marathon in 1896?",
+   "choices": [
+    "Dorando Pietri",
+    "Spyridon Louis",
+    "Emil Zátopek",
+    "Abebe Bikila"
+   ],
+   "answer": 1,
+   "explanation": "Louis won in Athens for Greece."
+  },
+  {
+   "id": "spo-033",
+   "subcategory": "olympics",
+   "difficulty": 4,
+   "question": "In which year were the first modern Olympics held?",
+   "choices": [
+    "1900",
+    "1912",
+    "1896",
+    "1888"
+   ],
+   "answer": 2,
+   "explanation": "Athens hosted the first modern Games."
+  },
+  {
+   "id": "spo-034",
+   "subcategory": "football",
+   "difficulty": 4,
+   "question": "How many Ballon d'Or awards has Lionel Messi won as of 2025?",
+   "choices": [
+    "9",
+    "8",
+    "7",
+    "6"
+   ],
+   "answer": 1,
+   "explanation": "Messi's eighth came in 2023."
+  },
+  {
+   "id": "spo-035",
+   "subcategory": "american-football",
+   "difficulty": 3,
+   "question": "Which sport features the 'Super Bowl'?",
+   "choices": [
+    "American football",
+    "Ice hockey",
+    "Baseball",
+    "Basketball"
+   ],
+   "answer": 0,
+   "explanation": "The NFL championship game."
+  },
+  {
+   "id": "spo-036",
+   "subcategory": "rugby",
+   "difficulty": 3,
+   "question": "How many points is a try worth in rugby union?",
+   "choices": [
+    "4",
+    "5",
+    "7",
+    "3"
+   ],
+   "answer": 1,
+   "explanation": "A conversion adds 2."
+  },
+  {
+   "id": "spo-037",
+   "subcategory": "rugby",
+   "difficulty": 2,
+   "question": "Which country is known for the 'Haka' before rugby matches?",
+   "choices": [
+    "Samoa",
+    "Tonga",
+    "New Zealand",
+    "Australia"
+   ],
+   "answer": 2,
+   "explanation": "The All Blacks perform the haka."
+  }
+ ]
+}

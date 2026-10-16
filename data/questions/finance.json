@@ -1,0 +1,482 @@
+{
+ "category": "finance",
+ "review": "unreviewed",
+ "questions": [
+  {
+   "id": "fin-001",
+   "subcategory": "basics",
+   "difficulty": 1,
+   "question": "What does 'ATM' stand for?",
+   "choices": [
+    "Automatic Transfer Money",
+    "Automated Teller Machine",
+    "Advanced Teller Method",
+    "Accounts Transaction Meter"
+   ],
+   "answer": 1,
+   "explanation": "ATMs let you withdraw cash and check balances."
+  },
+  {
+   "id": "fin-002",
+   "subcategory": "basics",
+   "difficulty": 1,
+   "question": "What do we call the extra money a bank pays you for savings?",
+   "choices": [
+    "Interest",
+    "Tax",
+    "Fee",
+    "Commission"
+   ],
+   "answer": 0,
+   "explanation": "Interest is a percentage of your balance."
+  },
+  {
+   "id": "fin-003",
+   "subcategory": "currencies",
+   "difficulty": 1,
+   "question": "What is the currency of Japan?",
+   "choices": [
+    "Yen",
+    "Ringgit",
+    "Won",
+    "Yuan"
+   ],
+   "answer": 0,
+   "explanation": "The yen has been Japan's currency since 1871."
+  },
+  {
+   "id": "fin-004",
+   "subcategory": "currencies",
+   "difficulty": 1,
+   "question": "What is the currency of the United Kingdom?",
+   "choices": [
+    "Pound sterling",
+    "Euro",
+    "Franc",
+    "Dollar"
+   ],
+   "answer": 0,
+   "explanation": "Pound sterling is the world's oldest currency still in use."
+  },
+  {
+   "id": "fin-005",
+   "subcategory": "basics",
+   "difficulty": 1,
+   "question": "What does 'ROI' stand for?",
+   "choices": [
+    "Return on Investment",
+    "Risk of Insolvency",
+    "Revenue of Interest",
+    "Rate of Inflation"
+   ],
+   "answer": 0,
+   "explanation": "ROI measures profit relative to cost."
+  },
+  {
+   "id": "fin-006",
+   "subcategory": "markets",
+   "difficulty": 1,
+   "question": "What is a 'bull market'?",
+   "choices": [
+    "A closed market",
+    "A market where prices fall",
+    "A market for cattle",
+    "A market where prices are rising"
+   ],
+   "answer": 3,
+   "explanation": "Bear markets are the opposite."
+  },
+  {
+   "id": "fin-007",
+   "subcategory": "markets",
+   "difficulty": 1,
+   "question": "What is the name of the US stock exchange on Wall Street?",
+   "choices": [
+    "New York Stock Exchange",
+    "Chicago Board",
+    "Nasdaq Tokyo",
+    "London Exchange"
+   ],
+   "answer": 0,
+   "explanation": "The NYSE is the world's largest exchange by market capitalisation."
+  },
+  {
+   "id": "fin-008",
+   "subcategory": "economics",
+   "difficulty": 2,
+   "question": "What does 'GDP' stand for?",
+   "choices": [
+    "Gross Dividend Percentage",
+    "General Debt Payment",
+    "Gross Domestic Product",
+    "Global Dollar Price"
+   ],
+   "answer": 2,
+   "explanation": "GDP measures the total value of goods and services produced."
+  },
+  {
+   "id": "fin-009",
+   "subcategory": "economics",
+   "difficulty": 2,
+   "question": "What is inflation?",
+   "choices": [
+    "A general rise in prices over time",
+    "A rise in unemployment",
+    "A fall in interest rates",
+    "A drop in exports"
+   ],
+   "answer": 0,
+   "explanation": "Inflation reduces purchasing power."
+  },
+  {
+   "id": "fin-010",
+   "subcategory": "markets",
+   "difficulty": 2,
+   "question": "What does 'IPO' stand for?",
+   "choices": [
+    "Investor Portfolio Overview",
+    "Internal Profit Option",
+    "Initial Public Offering",
+    "International Price Order"
+   ],
+   "answer": 2,
+   "explanation": "An IPO is when a company first sells shares to the public."
+  },
+  {
+   "id": "fin-011",
+   "subcategory": "institutions",
+   "difficulty": 2,
+   "question": "Which central bank sets euro-area monetary policy?",
+   "choices": [
+    "Swiss National Bank",
+    "European Central Bank",
+    "Federal Reserve",
+    "Bank of England"
+   ],
+   "answer": 1,
+   "explanation": "The ECB is headquartered in Frankfurt."
+  },
+  {
+   "id": "fin-012",
+   "subcategory": "markets",
+   "difficulty": 2,
+   "question": "Which index tracks 500 of the largest US companies?",
+   "choices": [
+    "S&P 500",
+    "CAC 40",
+    "Dow Jones 30",
+    "FTSE 100"
+   ],
+   "answer": 0,
+   "explanation": "The S&P 500 is a market-capitalisation-weighted index."
+  },
+  {
+   "id": "fin-013",
+   "subcategory": "basics",
+   "difficulty": 2,
+   "question": "What is a 'dividend'?",
+   "choices": [
+    "A share of profits paid to shareholders",
+    "A bank fee",
+    "A loan repayment",
+    "A government tax"
+   ],
+   "answer": 0,
+   "explanation": "Companies may pay dividends quarterly or yearly."
+  },
+  {
+   "id": "fin-014",
+   "subcategory": "crypto",
+   "difficulty": 2,
+   "question": "What is a cryptocurrency created by the pseudonymous Satoshi Nakamoto?",
+   "choices": [
+    "Litecoin",
+    "Ripple",
+    "Ethereum",
+    "Bitcoin"
+   ],
+   "answer": 3,
+   "explanation": "The Bitcoin whitepaper was published in 2008."
+  },
+  {
+   "id": "fin-015",
+   "subcategory": "basics",
+   "difficulty": 2,
+   "question": "What does 'diversification' mean in investing?",
+   "choices": [
+    "Borrowing to invest",
+    "Selling all assets",
+    "Investing in a single stock",
+    "Spreading investments across different assets"
+   ],
+   "answer": 3,
+   "explanation": "It reduces risk."
+  },
+  {
+   "id": "fin-016",
+   "subcategory": "basics",
+   "difficulty": 2,
+   "question": "What is compound interest?",
+   "choices": [
+    "A fixed bank fee",
+    "Interest on principal only",
+    "Interest paid by the government",
+    "Interest earned on both principal and past interest"
+   ],
+   "answer": 3,
+   "explanation": "Compounding can grow savings exponentially."
+  },
+  {
+   "id": "fin-017",
+   "subcategory": "economics",
+   "difficulty": 3,
+   "question": "What is a 'recession' commonly defined as?",
+   "choices": [
+    "A fall in inflation",
+    "A one-day stock drop",
+    "Two consecutive quarters of falling GDP",
+    "A rise in unemployment only"
+   ],
+   "answer": 2,
+   "explanation": "This is a common rule of thumb; official dating differs by country."
+  },
+  {
+   "id": "fin-018",
+   "subcategory": "institutions",
+   "difficulty": 3,
+   "question": "Which institution is the central bank of the United States?",
+   "choices": [
+    "Wall Street Bank",
+    "FDIC",
+    "US Treasury",
+    "The Federal Reserve"
+   ],
+   "answer": 3,
+   "explanation": "The Fed was created in 1913."
+  },
+  {
+   "id": "fin-019",
+   "subcategory": "markets",
+   "difficulty": 3,
+   "question": "What does 'P/E ratio' stand for?",
+   "choices": [
+    "Profit-to-Equity",
+    "Price-to-Equity",
+    "Price-to-Earnings ratio",
+    "Payout-to-Expense"
+   ],
+   "answer": 2,
+   "explanation": "It compares a share price to earnings per share."
+  },
+  {
+   "id": "fin-020",
+   "subcategory": "markets",
+   "difficulty": 3,
+   "question": "What is 'short selling'?",
+   "choices": [
+    "Buying shares at a discount",
+    "Trading on weekends",
+    "Selling in small quantities",
+    "Betting that a stock will fall in price"
+   ],
+   "answer": 3,
+   "explanation": "The seller borrows shares and sells them hoping to repurchase cheaper."
+  },
+  {
+   "id": "fin-021",
+   "subcategory": "currencies",
+   "difficulty": 3,
+   "question": "In which year did the euro banknotes and coins enter circulation?",
+   "choices": [
+    "1995",
+    "2005",
+    "1999",
+    "2002"
+   ],
+   "answer": 3,
+   "explanation": "The euro was introduced for accounting in 1999."
+  },
+  {
+   "id": "fin-022",
+   "subcategory": "institutions",
+   "difficulty": 3,
+   "question": "Which Swiss city is the headquarters of the Bank for International Settlements?",
+   "choices": [
+    "Geneva",
+    "Bern",
+    "Basel",
+    "Zurich"
+   ],
+   "answer": 2,
+   "explanation": "The BIS is often called the central bank of central banks."
+  },
+  {
+   "id": "fin-023",
+   "subcategory": "history",
+   "difficulty": 3,
+   "question": "What was the 1929 event on Wall Street that triggered the Great Depression?",
+   "choices": [
+    "The stock market crash",
+    "The dot-com bubble",
+    "The Bretton Woods collapse",
+    "The oil embargo"
+   ],
+   "answer": 0,
+   "explanation": "Black Tuesday was 29 October 1929."
+  },
+  {
+   "id": "fin-024",
+   "subcategory": "markets",
+   "difficulty": 3,
+   "question": "Which ancient commodity is measured in 'troy ounces'?",
+   "choices": [
+    "Oil",
+    "Gold",
+    "Cotton",
+    "Wheat"
+   ],
+   "answer": 1,
+   "explanation": "A troy ounce is about 31.1 grams."
+  },
+  {
+   "id": "fin-025",
+   "subcategory": "markets",
+   "difficulty": 3,
+   "question": "What does 'ETF' stand for?",
+   "choices": [
+    "Estimated Tax Filing",
+    "Equity Transfer Fee",
+    "Exchange-Traded Fund",
+    "Electronic Trading Format"
+   ],
+   "answer": 2,
+   "explanation": "ETFs trade on exchanges like stocks."
+  },
+  {
+   "id": "fin-026",
+   "subcategory": "basics",
+   "difficulty": 3,
+   "question": "What does the Latin phrase 'bona fide' mean in contracts?",
+   "choices": [
+    "Under penalty",
+    "For the profit",
+    "With interest",
+    "In good faith"
+   ],
+   "answer": 3,
+   "explanation": "A bona fide buyer acts in good faith."
+  },
+  {
+   "id": "fin-027",
+   "subcategory": "history",
+   "difficulty": 4,
+   "question": "Which economist wrote 'The Wealth of Nations' in 1776?",
+   "choices": [
+    "Karl Marx",
+    "Adam Smith",
+    "David Ricardo",
+    "John Maynard Keynes"
+   ],
+   "answer": 1,
+   "explanation": "The book popularised the idea of the 'invisible hand'."
+  },
+  {
+   "id": "fin-028",
+   "subcategory": "economics",
+   "difficulty": 4,
+   "question": "What is 'quantitative easing'?",
+   "choices": [
+    "Raising interest rates",
+    "A central bank buying assets to inject money",
+    "Capping prices",
+    "Taxing exports"
+   ],
+   "answer": 1,
+   "explanation": "QE is used to lower long-term rates and stimulate demand."
+  },
+  {
+   "id": "fin-029",
+   "subcategory": "history",
+   "difficulty": 4,
+   "question": "What was the Bretton Woods system?",
+   "choices": [
+    "A post-WWII fixed exchange-rate system",
+    "A trading card game",
+    "A gold mining rule",
+    "A tax treaty"
+   ],
+   "answer": 0,
+   "explanation": "The 1944 conference tied currencies to the dollar, which was tied to gold."
+  },
+  {
+   "id": "fin-030",
+   "subcategory": "basics",
+   "difficulty": 4,
+   "question": "In simple interest, which formula gives the interest earned?",
+   "choices": [
+    "Principal × rate × time",
+    "Principal + rate",
+    "Rate × time ÷ principal",
+    "Principal squared × rate"
+   ],
+   "answer": 0,
+   "explanation": "Simple interest is not compounded."
+  },
+  {
+   "id": "fin-031",
+   "subcategory": "history",
+   "difficulty": 4,
+   "question": "Which year did the Lehman Brothers bankruptcy occur?",
+   "choices": [
+    "2011",
+    "2001",
+    "2008",
+    "1998"
+   ],
+   "answer": 2,
+   "explanation": "It triggered a global financial crisis."
+  },
+  {
+   "id": "fin-032",
+   "subcategory": "economics",
+   "difficulty": 2,
+   "question": "What is a 'budget deficit'?",
+   "choices": [
+    "When revenue exceeds spending",
+    "When spending exceeds revenue",
+    "A balanced budget",
+    "A tax surplus"
+   ],
+   "answer": 1,
+   "explanation": "Deficits are financed by borrowing."
+  },
+  {
+   "id": "fin-033",
+   "subcategory": "basics",
+   "difficulty": 2,
+   "question": "What is a mortgage?",
+   "choices": [
+    "A loan to buy property",
+    "An insurance policy",
+    "A savings account",
+    "A type of tax"
+   ],
+   "answer": 0,
+   "explanation": "The property serves as collateral."
+  },
+  {
+   "id": "fin-034",
+   "subcategory": "basics",
+   "difficulty": 1,
+   "question": "What does 'VAT' stand for?",
+   "choices": [
+    "Variable Annual Tax",
+    "Verified Account Transfer",
+    "Value Added Tax",
+    "Value Asset Trust"
+   ],
+   "answer": 2,
+   "explanation": "VAT is a consumption tax added at each production stage."
+  }
+ ]
+}

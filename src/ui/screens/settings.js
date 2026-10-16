@@ -23,6 +23,7 @@ export async function settingsScreen(app) {
         h('h3', {}, 'Sound & motion'),
         h('label.switch', {}, h('span', {}, 'Sound effects'), h('input', { type: 'checkbox', checked: st.sound, onchange: async (e) => { await save({ sound: e.target.checked }); unlockAudio(); sfx.coin(); } })),
         h('label.field', {}, h('span', {}, `Volume · ${Math.round(st.volume * 100)}%`), h('input', { type: 'range', min: '0', max: '1', step: '0.05', value: String(st.volume), onchange: async (e) => { await save({ volume: Number(e.target.value) }); sfx.tap(); paint(); } })),
+        h('label.switch', {}, h('span', {}, 'Vibration (phones that support it)'), h('input', { type: 'checkbox', checked: st.haptics !== false, onchange: async (e) => { await save({ haptics: e.target.checked }); } })),
         h('label.switch', {}, h('span', {}, 'Reduce motion (no flicker, sway or shake)'), h('input', { type: 'checkbox', checked: st.reduceMotion, onchange: async (e) => { await save({ reduceMotion: e.target.checked }); } })),
       ),
       h('div.panel', {},

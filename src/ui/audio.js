@@ -105,6 +105,39 @@ export const sfx = {
   win: () => {
     [523, 659, 784, 1047].forEach((f, i) => tone({ f, dur: 0.2, gain: 0.1, delay: i * 0.12 }));
   },
+  // --- goofy / casino extras ---
+  spin: () => tone({ f: 1100 + Math.random() * 300, dur: 0.025, gain: 0.05, type: 'square' }),
+  reelStop: () => {
+    tone({ f: 140, f2: 90, dur: 0.12, gain: 0.16, type: 'triangle' });
+    noise({ dur: 0.05, gain: 0.1, low: 1800 });
+  },
+  boing: () => tone({ f: 200, f2: 700, dur: 0.28, gain: 0.12, type: 'sine' }),
+  pop: () => {
+    tone({ f: 900, f2: 300, dur: 0.07, gain: 0.1, type: 'sine' });
+  },
+  whoosh: () => noise({ dur: 0.3, gain: 0.12, low: 1500 }),
+  cash: () => {
+    [1568, 1976, 2349, 3136].forEach((f, i) => tone({ f, dur: 0.07, gain: 0.07, delay: i * 0.05 }));
+  },
+  combo: (n = 2) => {
+    const base = 440 * Math.pow(2, Math.min(n, 8) / 12);
+    tone({ f: base, dur: 0.07, gain: 0.09 });
+    tone({ f: base * 1.5, dur: 0.14, gain: 0.09, delay: 0.07 });
+  },
+  jackpot: () => {
+    [523, 659, 784, 1047, 784, 1047, 1319].forEach((f, i) => tone({ f, dur: 0.14, gain: 0.11, delay: i * 0.09 }));
+    noise({ dur: 0.5, gain: 0.08, low: 3000, delay: 0.1 });
+  },
+  sadTrombone: () => {
+    [233, 220, 208].forEach((f, i) => tone({ f, dur: 0.32, gain: 0.12, type: 'sawtooth', delay: i * 0.3 }));
+    tone({ f: 196, f2: 150, dur: 0.7, gain: 0.12, type: 'sawtooth', delay: 0.9 });
+  },
+  kazoo: () => {
+    [392, 440, 392, 330].forEach((f, i) => tone({ f, f2: f * 1.04, dur: 0.1, gain: 0.07, type: 'sawtooth', delay: i * 0.1 }));
+  },
+  drumroll: () => {
+    for (let i = 0; i < 14; i++) noise({ dur: 0.05, gain: 0.06 + i * 0.004, low: 900, delay: i * 0.06 });
+  },
   lose: () => {
     [392, 330, 262, 196].forEach((f, i) => tone({ f, dur: 0.3, gain: 0.1, type: 'triangle', delay: i * 0.18 }));
   },

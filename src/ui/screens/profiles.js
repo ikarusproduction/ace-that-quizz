@@ -6,6 +6,7 @@ import { avatar, modal, confirmDialog, toast, screenHeader, pct } from '../compo
 import { computeStats } from '../../stats/stats.js';
 import { NAME_MAX } from '../../storage/repo.js';
 import { sfx } from '../audio.js';
+import { LANGUAGES, guessLanguage } from '../../i18n/languages.js';
 
 /** Create or edit a profile in a modal. Resolves with the saved profile, or undefined. */
 export function profileEditor(app, profile = null) {
@@ -13,6 +14,7 @@ export function profileEditor(app, profile = null) {
     let avatarKey = profile?.avatar?.key ?? AVATAR_SPRITES[Math.floor(Math.random() * AVATAR_SPRITES.length)];
     const err = h('div.error', { role: 'alert' });
     const input = h('input', { type: 'text', value: profile?.name ?? '', maxlength: String(NAME_MAX), placeholder: 'Player name', autocomplete: 'off', autofocus: true, 'aria-label': 'Player name' });
+    const langSel = h('select', { 'aria-label': 'Question language' }, LANGUAGES.map((l) => h('option', { value: l.code, selected: l.code === (profile?.language ?? guessLanguage()) }, `${l.native}${l.native !== l.name ? ` (${l.name})` : ''}`)));
     const grid = h('div.avatar-grid');
     const paint = () => {
       grid.replaceChildren(...AVATAR_SPRITES.map((k) => h('button', { type: 'button', 'aria-pressed': String(k === avatarKey), 'aria-label': k, onclick: () => { avatarKey = k; sfx.select(); paint(); } }, sprite(k, 48))));
@@ -21,7 +23,7 @@ export function profileEditor(app, profile = null) {
     const save = async () => {
       err.textContent = '';
       try {
-        const saved = profile ? await app.repo.updateProfile(profile.id, { name: input.value, avatar: avatarKey }) : await app.repo.createProfile({ name: input.value, avatar: avatarKey });
+        const saved = profile ? await app.repo.updateProfile(profile.id, { name: input.value, avatar: avatarKey, language: langSel.value }) : await app.repo.createProfile({ name: input.value, avatar: avatarKey, language: langSel.value });
         close(saved);
       } catch (e) {
         err.textContent = e.message;
@@ -31,6 +33,7 @@ export function profileEditor(app, profile = null) {
     return [
       h('h2', {}, profile ? 'Edit player' : 'New player'),
       h('label.field', {}, h('span', {}, 'Name'), input),
+      h('label.field', {}, h('span', {}, 'Question language'), langSel, h('span.tiny.dim', {}, 'Questions are shown to you in this language. Statistics are unaffected.')),
       h('div', {}, h('div.tiny.dim', { style: { marginBottom: '6px' } }, 'Portrait'), grid),
       err,
       h('button.btn.primary.block', { type: 'button', onclick: save }, profile ? 'Save' : 'Create player'),

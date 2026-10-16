@@ -1,0 +1,412 @@
+{
+ "category": "f1",
+ "review": "unreviewed",
+ "questions": [
+  {
+   "id": "f1-001",
+   "subcategory": "basics",
+   "difficulty": 1,
+   "question": "What does 'F1' stand for?",
+   "choices": [
+    "Fifth Formula",
+    "Formula One",
+    "Fast One",
+    "Final One"
+   ],
+   "answer": 1,
+   "explanation": "Formula One is the top class of single-seater racing."
+  },
+  {
+   "id": "f1-002",
+   "subcategory": "teams",
+   "difficulty": 1,
+   "question": "Which team uses prancing horse as its emblem?",
+   "choices": [
+    "McLaren",
+    "Mercedes",
+    "Red Bull",
+    "Ferrari"
+   ],
+   "answer": 3,
+   "explanation": "Scuderia Ferrari's logo is a prancing horse."
+  },
+  {
+   "id": "f1-003",
+   "subcategory": "drivers",
+   "difficulty": 1,
+   "question": "Which driver won seven F1 world championships alongside Michael Schumacher?",
+   "choices": [
+    "Max Verstappen",
+    "Lewis Hamilton",
+    "Ayrton Senna",
+    "Sebastian Vettel"
+   ],
+   "answer": 1,
+   "explanation": "Hamilton tied Schumacher's seven titles in 2020."
+  },
+  {
+   "id": "f1-004",
+   "subcategory": "basics",
+   "difficulty": 1,
+   "question": "What colour flag is waved at the end of a race?",
+   "choices": [
+    "Chequered",
+    "Blue",
+    "Green",
+    "Red"
+   ],
+   "answer": 0,
+   "explanation": "The chequered flag signals the finish."
+  },
+  {
+   "id": "f1-005",
+   "subcategory": "drivers",
+   "difficulty": 1,
+   "question": "Which Dutch driver won titles from 2021 to 2024?",
+   "choices": [
+    "Robin Frijns",
+    "Jos Verstappen",
+    "Nyck de Vries",
+    "Max Verstappen"
+   ],
+   "answer": 3,
+   "explanation": "Verstappen won four consecutive titles with Red Bull."
+  },
+  {
+   "id": "f1-006",
+   "subcategory": "circuits",
+   "difficulty": 1,
+   "question": "Which country is Monza's famous F1 circuit in?",
+   "choices": [
+    "Italy",
+    "Germany",
+    "France",
+    "Spain"
+   ],
+   "answer": 0,
+   "explanation": "Monza hosts the Italian Grand Prix."
+  },
+  {
+   "id": "f1-007",
+   "subcategory": "circuits",
+   "difficulty": 2,
+   "question": "Which circuit hosts the Monaco Grand Prix?",
+   "choices": [
+    "Spa-Francorchamps",
+    "Circuit de Monaco (Monte Carlo)",
+    "Suzuka",
+    "Silverstone"
+   ],
+   "answer": 1,
+   "explanation": "It is a street circuit through Monte Carlo."
+  },
+  {
+   "id": "f1-008",
+   "subcategory": "tech",
+   "difficulty": 2,
+   "question": "What does DRS stand for in F1?",
+   "choices": [
+    "Dynamic Racing Setup",
+    "Drag Reduction System",
+    "Driver Response Signal",
+    "Downforce Release System"
+   ],
+   "answer": 1,
+   "explanation": "DRS opens the rear wing flap to reduce drag."
+  },
+  {
+   "id": "f1-009",
+   "subcategory": "basics",
+   "difficulty": 2,
+   "question": "How many points does a race winner get in a Grand Prix?",
+   "choices": [
+    "30",
+    "20",
+    "25",
+    "15"
+   ],
+   "answer": 2,
+   "explanation": "Points go 25-18-15-12-10-8-6-4-2-1 for the top ten."
+  },
+  {
+   "id": "f1-010",
+   "subcategory": "teams",
+   "difficulty": 2,
+   "question": "Which team is based in Woking, England and uses papaya orange?",
+   "choices": [
+    "Aston Martin",
+    "Williams",
+    "Alpine",
+    "McLaren"
+   ],
+   "answer": 3,
+   "explanation": "McLaren Racing was founded by Bruce McLaren."
+  },
+  {
+   "id": "f1-011",
+   "subcategory": "drivers",
+   "difficulty": 2,
+   "question": "Which driver won the 2008 title by a single point?",
+   "choices": [
+    "Lewis Hamilton",
+    "Felipe Massa",
+    "Kimi Räikkönen",
+    "Fernando Alonso"
+   ],
+   "answer": 0,
+   "explanation": "Hamilton passed Timo Glock on the final lap in Brazil."
+  },
+  {
+   "id": "f1-012",
+   "subcategory": "circuits",
+   "difficulty": 2,
+   "question": "Which circuit is known as the 'Temple of Speed'?",
+   "choices": [
+    "Suzuka",
+    "Silverstone",
+    "Spa",
+    "Monza"
+   ],
+   "answer": 3,
+   "explanation": "Monza is one of the fastest circuits."
+  },
+  {
+   "id": "f1-013",
+   "subcategory": "tech",
+   "difficulty": 2,
+   "question": "Which tyre company is the sole F1 supplier?",
+   "choices": [
+    "Goodyear",
+    "Michelin",
+    "Bridgestone",
+    "Pirelli"
+   ],
+   "answer": 3,
+   "explanation": "Pirelli has supplied since 2011."
+  },
+  {
+   "id": "f1-014",
+   "subcategory": "history",
+   "difficulty": 3,
+   "question": "Who is the only driver to win the F1 title posthumously?",
+   "choices": [
+    "Ronnie Peterson",
+    "Ayrton Senna",
+    "Jochen Rindt",
+    "Gilles Villeneuve"
+   ],
+   "answer": 2,
+   "explanation": "Rindt died at Monza in 1970 and won the title."
+  },
+  {
+   "id": "f1-015",
+   "subcategory": "history",
+   "difficulty": 3,
+   "question": "Which driver won three titles and died at Imola in 1994?",
+   "choices": [
+    "Ayrton Senna",
+    "Alain Prost",
+    "Niki Lauda",
+    "Nelson Piquet"
+   ],
+   "answer": 0,
+   "explanation": "Senna was Brazilian and raced for McLaren and Williams."
+  },
+  {
+   "id": "f1-016",
+   "subcategory": "circuits",
+   "difficulty": 3,
+   "question": "Which circuit is nicknamed the 'Green Hell'?",
+   "choices": [
+    "Monza",
+    "Interlagos",
+    "Nürburgring Nordschleife",
+    "Spa-Francorchamps"
+   ],
+   "answer": 2,
+   "explanation": "It is a 20 km track in Germany."
+  },
+  {
+   "id": "f1-017",
+   "subcategory": "drivers",
+   "difficulty": 3,
+   "question": "Which Finnish driver won the 2007 world title for Ferrari?",
+   "choices": [
+    "Valtteri Bottas",
+    "Mika Häkkinen",
+    "Keke Rosberg",
+    "Kimi Räikkönen"
+   ],
+   "answer": 3,
+   "explanation": "Räikkönen won by one point."
+  },
+  {
+   "id": "f1-018",
+   "subcategory": "drivers",
+   "difficulty": 3,
+   "question": "Which year did Hamilton first win the F1 title?",
+   "choices": [
+    "2014",
+    "2008",
+    "2007",
+    "2010"
+   ],
+   "answer": 1,
+   "explanation": "He drove for McLaren."
+  },
+  {
+   "id": "f1-019",
+   "subcategory": "tech",
+   "difficulty": 3,
+   "question": "What is 'parc fermé'?",
+   "choices": [
+    "The restricted area where cars are kept under regulations",
+    "A tyre compound",
+    "A flag signal",
+    "A pit lane"
+   ],
+   "answer": 0,
+   "explanation": "Teams cannot freely modify cars after qualifying."
+  },
+  {
+   "id": "f1-020",
+   "subcategory": "circuits",
+   "difficulty": 3,
+   "question": "Which country hosts the Suzuka circuit?",
+   "choices": [
+    "Japan",
+    "South Korea",
+    "Singapore",
+    "China"
+   ],
+   "answer": 0,
+   "explanation": "Suzuka's figure-eight layout is unique."
+  },
+  {
+   "id": "f1-021",
+   "subcategory": "history",
+   "difficulty": 4,
+   "question": "Which driver holds the record for most Grand Prix wins?",
+   "choices": [
+    "Lewis Hamilton",
+    "Max Verstappen",
+    "Sebastian Vettel",
+    "Michael Schumacher"
+   ],
+   "answer": 0,
+   "explanation": "Hamilton passed 100 wins."
+  },
+  {
+   "id": "f1-022",
+   "subcategory": "history",
+   "difficulty": 4,
+   "question": "Who won the first F1 World Championship in 1950?",
+   "choices": [
+    "Alberto Ascari",
+    "Juan Manuel Fangio",
+    "Stirling Moss",
+    "Giuseppe Farina"
+   ],
+   "answer": 3,
+   "explanation": "Farina drove an Alfa Romeo."
+  },
+  {
+   "id": "f1-023",
+   "subcategory": "circuits",
+   "difficulty": 4,
+   "question": "Which Brazilian circuit is known for its Senna 'S' curve?",
+   "choices": [
+    "Curitiba",
+    "Brasília",
+    "Jacarepaguá",
+    "Interlagos"
+   ],
+   "answer": 3,
+   "explanation": "Interlagos is in São Paulo."
+  },
+  {
+   "id": "f1-024",
+   "subcategory": "history",
+   "difficulty": 4,
+   "question": "Which constructor has won the most Constructors' Championships?",
+   "choices": [
+    "Williams",
+    "Mercedes",
+    "Ferrari",
+    "McLaren"
+   ],
+   "answer": 2,
+   "explanation": "Ferrari has 16 titles."
+  },
+  {
+   "id": "f1-025",
+   "subcategory": "drivers",
+   "difficulty": 3,
+   "question": "Which team did Michael Schumacher win five consecutive titles with?",
+   "choices": [
+    "Benetton",
+    "Williams",
+    "Ferrari",
+    "Mercedes"
+   ],
+   "answer": 2,
+   "explanation": "Ferrari won 2000-2004."
+  },
+  {
+   "id": "f1-026",
+   "subcategory": "tech",
+   "difficulty": 3,
+   "question": "Which engine type replaced V8s in F1 in 2014?",
+   "choices": [
+    "Electric motor only",
+    "V12 turbo",
+    "1.6-litre turbo hybrid V6",
+    "V10 hybrid"
+   ],
+   "answer": 2,
+   "explanation": "Hybrid power units arrived in 2014."
+  },
+  {
+   "id": "f1-027",
+   "subcategory": "circuits",
+   "difficulty": 3,
+   "question": "Which street circuit in Singapore holds the first F1 night race (2008)?",
+   "choices": [
+    "Sentosa",
+    "Changi",
+    "Bukit Timah",
+    "Marina Bay"
+   ],
+   "answer": 3,
+   "explanation": "Marina Bay hosted the first night race."
+  },
+  {
+   "id": "f1-028",
+   "subcategory": "basics",
+   "difficulty": 2,
+   "question": "What is a 'safety car' used for?",
+   "choices": [
+    "To measure speed",
+    "To qualify",
+    "To slow the field after an incident",
+    "To refuel cars"
+   ],
+   "answer": 2,
+   "explanation": "Cars must queue behind the safety car."
+  },
+  {
+   "id": "f1-029",
+   "subcategory": "basics",
+   "difficulty": 3,
+   "question": "How many races are there on the 2024 F1 calendar?",
+   "choices": [
+    "20",
+    "22",
+    "24",
+    "26"
+   ],
+   "answer": 2,
+   "explanation": "The record calendar had 24 races."
+  }
+ ]
+}

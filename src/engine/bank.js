@@ -12,6 +12,16 @@ export const CATEGORIES = {
   arts: { label: 'Arts & Entertainment', short: 'Arts' },
   symbols: { label: 'Symbols, Elements & Abbreviations', short: 'Symbols' },
   tunes: { label: 'Name That Tune', short: 'Tunes' },
+  cinema: { label: 'Cinema', short: 'Cinema' },
+  popculture: { label: 'Pop Culture', short: 'Pop' },
+  manga: { label: 'Manga & Anime', short: 'Manga' },
+  cooking: { label: 'Cooking & Food', short: 'Cooking' },
+  finance: { label: 'Finance', short: 'Finance' },
+  business: { label: 'Business', short: 'Business' },
+  sports: { label: 'Sports', short: 'Sports' },
+  f1: { label: 'Formula 1', short: 'F1' },
+  hockey: { label: 'Hockey', short: 'Hockey' },
+  music: { label: 'Music', short: 'Music' },
 };
 
 /** Categories shown in statistics, in display order. */
@@ -52,6 +62,7 @@ export function normalizeQuestion(raw, file) {
     explanation: raw.explanation,
     tags: raw.tags ?? [],
     asOf: raw.asOf ?? null,
+    date: raw.date ?? null, // YYYY-MM-DD of the event, used to expire live news
     freshness: raw.freshness ?? file.freshness ?? 'evergreen',
     review: raw.review ?? file.review ?? 'unreviewed',
     audio: raw.audio ?? null,
@@ -129,6 +140,7 @@ export function validateQuestions(questions, { minPerCategory = 8 } = {}) {
     if (typeof q.explanation !== 'string' || q.explanation.trim().length < 8) err('explanation missing');
     if (!REVIEW_STATES.includes(q.review)) err(`unknown review state "${q.review}"`);
     if (q.freshness === 'dated' && !q.asOf) err('dated question needs an asOf date (YYYY-MM)');
+    if (q.date && !/^\d{4}-\d{2}-\d{2}$/.test(q.date)) err('date must look like YYYY-MM-DD');
     if (q.asOf && !/^\d{4}-\d{2}$/.test(q.asOf)) err('asOf must look like YYYY-MM');
 
     if (!Array.isArray(q.choices) || q.choices.length < 2) err('needs at least 2 choices');

@@ -1,0 +1,552 @@
+{
+ "category": "manga",
+ "review": "unreviewed",
+ "questions": [
+  {
+   "id": "man-001",
+   "subcategory": "shonen",
+   "difficulty": 1,
+   "question": "Who is the main character of 'One Piece'?",
+   "choices": [
+    "Portgas D. Ace",
+    "Monkey D. Luffy",
+    "Roronoa Zoro",
+    "Usopp"
+   ],
+   "answer": 1,
+   "explanation": "Luffy dreams of becoming King of the Pirates."
+  },
+  {
+   "id": "man-002",
+   "subcategory": "seinen",
+   "difficulty": 1,
+   "question": "In 'Death Note', what is the name of the student who finds the notebook?",
+   "choices": [
+    "Near",
+    "Ryuk",
+    "Light Yagami",
+    "L Lawliet"
+   ],
+   "answer": 2,
+   "explanation": "Ryuk is the shinigami who drops the notebook."
+  },
+  {
+   "id": "man-003",
+   "subcategory": "shonen",
+   "difficulty": 1,
+   "question": "Which anime features the hero Goku?",
+   "choices": [
+    "Bleach",
+    "Dragon Ball",
+    "One Piece",
+    "Naruto"
+   ],
+   "answer": 1,
+   "explanation": "Dragon Ball was created by Akira Toriyama."
+  },
+  {
+   "id": "man-004",
+   "subcategory": "anime",
+   "difficulty": 1,
+   "question": "What is the name of Ash's partner Pokémon in the anime?",
+   "choices": [
+    "Bulbasaur",
+    "Eevee",
+    "Charmander",
+    "Pikachu"
+   ],
+   "answer": 3,
+   "explanation": "Ash Ketchum receives Pikachu from Professor Oak."
+  },
+  {
+   "id": "man-005",
+   "subcategory": "shonen",
+   "difficulty": 1,
+   "question": "What is the name of Tanjiro Kamado's sister in 'Demon Slayer'?",
+   "choices": [
+    "Kanao",
+    "Mitsuri",
+    "Shinobu",
+    "Nezuko"
+   ],
+   "answer": 3,
+   "explanation": "Nezuko is turned into a demon but keeps her humanity."
+  },
+  {
+   "id": "man-006",
+   "subcategory": "shonen",
+   "difficulty": 1,
+   "question": "What is the name of Naruto's home village?",
+   "choices": [
+    "Iwagakure",
+    "Sunagakure",
+    "Konohagakure (Hidden Leaf Village)",
+    "Kirigakure"
+   ],
+   "answer": 2,
+   "explanation": "Naruto Uzumaki lives in Konoha."
+  },
+  {
+   "id": "man-007",
+   "subcategory": "anime",
+   "difficulty": 1,
+   "question": "Which Japanese studio made 'Spirited Away'?",
+   "choices": [
+    "Pierrot",
+    "Toei Animation",
+    "Bones",
+    "Studio Ghibli"
+   ],
+   "answer": 3,
+   "explanation": "Hayao Miyazaki directed Spirited Away (2001)."
+  },
+  {
+   "id": "man-008",
+   "subcategory": "shonen",
+   "difficulty": 1,
+   "question": "How many punches does Saitama need to defeat enemies in 'One Punch Man'?",
+   "choices": [
+    "One",
+    "Ten",
+    "Three",
+    "Two"
+   ],
+   "answer": 0,
+   "explanation": "The series plays on Saitama's overwhelming power."
+  },
+  {
+   "id": "man-009",
+   "subcategory": "shonen",
+   "difficulty": 2,
+   "question": "Who created 'Dragon Ball'?",
+   "choices": [
+    "Tite Kubo",
+    "Masashi Kishimoto",
+    "Akira Toriyama",
+    "Eiichiro Oda"
+   ],
+   "answer": 2,
+   "explanation": "Toriyama published Dragon Ball from 1984 to 1995."
+  },
+  {
+   "id": "man-010",
+   "subcategory": "shonen",
+   "difficulty": 2,
+   "question": "What is the name of the nine-tailed fox sealed inside Naruto?",
+   "choices": [
+    "Gyuki",
+    "Matatabi",
+    "Shukaku",
+    "Kurama"
+   ],
+   "answer": 3,
+   "explanation": "Kurama is the Nine-Tailed Fox."
+  },
+  {
+   "id": "man-011",
+   "subcategory": "shonen",
+   "difficulty": 2,
+   "question": "Who wrote and drew 'Attack on Titan'?",
+   "choices": [
+    "Kohei Horikoshi",
+    "Tsugumi Ohba",
+    "Gege Akutami",
+    "Hajime Isayama"
+   ],
+   "answer": 3,
+   "explanation": "The manga ran from 2009 to 2021."
+  },
+  {
+   "id": "man-012",
+   "subcategory": "shonen",
+   "difficulty": 2,
+   "question": "What is Izuku Midoriya's hero nickname in 'My Hero Academia'?",
+   "choices": [
+    "Shoto",
+    "Deku",
+    "Kacchan",
+    "Dynamight"
+   ],
+   "answer": 1,
+   "explanation": "Deku is also what his childhood friend calls him dismissively."
+  },
+  {
+   "id": "man-013",
+   "subcategory": "anime",
+   "difficulty": 2,
+   "question": "In which Ghibli film does a giant cat that works as a bus appear?",
+   "choices": [
+    "Howl's Moving Castle",
+    "My Neighbor Totoro",
+    "Kiki's Delivery Service",
+    "Ponyo"
+   ],
+   "answer": 1,
+   "explanation": "The Catbus appears in My Neighbor Totoro (1988)."
+  },
+  {
+   "id": "man-014",
+   "subcategory": "culture",
+   "difficulty": 2,
+   "question": "What do you call a person obsessively fond of anime and manga in Japanese?",
+   "choices": [
+    "Senpai",
+    "Kohai",
+    "Sensei",
+    "Otaku"
+   ],
+   "answer": 3,
+   "explanation": "The word otaku originally means 'your home' and now means a devoted fan."
+  },
+  {
+   "id": "man-015",
+   "subcategory": "shonen",
+   "difficulty": 2,
+   "question": "Which brothers search for the Philosopher's Stone in 'Fullmetal Alchemist'?",
+   "choices": [
+    "Light and Ryuk",
+    "Luffy and Ace",
+    "Edward and Alphonse Elric",
+    "Naruto and Sasuke"
+   ],
+   "answer": 2,
+   "explanation": "They attempt a forbidden alchemy to bring back their mother."
+  },
+  {
+   "id": "man-016",
+   "subcategory": "shonen",
+   "difficulty": 2,
+   "question": "Who is the main character of 'Jujutsu Kaisen'?",
+   "choices": [
+    "Megumi Fushiguro",
+    "Nobara Kugisaki",
+    "Satoru Gojo",
+    "Yuji Itadori"
+   ],
+   "answer": 3,
+   "explanation": "Yuji swallows a cursed finger of Sukuna."
+  },
+  {
+   "id": "man-017",
+   "subcategory": "sports",
+   "difficulty": 2,
+   "question": "Which sport is played in 'Haikyu!!'?",
+   "choices": [
+    "Tennis",
+    "Basketball",
+    "Baseball",
+    "Volleyball"
+   ],
+   "answer": 3,
+   "explanation": "The manga is by Haruichi Furudate."
+  },
+  {
+   "id": "man-018",
+   "subcategory": "sports",
+   "difficulty": 2,
+   "question": "Which sport is played in the manga 'Slam Dunk'?",
+   "choices": [
+    "Basketball",
+    "Volleyball",
+    "Football",
+    "Baseball"
+   ],
+   "answer": 0,
+   "explanation": "Takehiko Inoue wrote and drew Slam Dunk."
+  },
+  {
+   "id": "man-019",
+   "subcategory": "shonen",
+   "difficulty": 2,
+   "question": "In 'Spy x Family', what is Anya's secret ability?",
+   "choices": [
+    "Invisibility",
+    "Super strength",
+    "Time travel",
+    "Telepathy"
+   ],
+   "answer": 3,
+   "explanation": "Anya can read minds, which neither of her adoptive parents knows."
+  },
+  {
+   "id": "man-020",
+   "subcategory": "shonen",
+   "difficulty": 2,
+   "question": "What is the power Luffy gets from eating the Gum-Gum Fruit?",
+   "choices": [
+    "His body stretches like rubber",
+    "He becomes fire",
+    "He controls ice",
+    "He turns invisible"
+   ],
+   "answer": 0,
+   "explanation": "Luffy becomes a rubber man."
+  },
+  {
+   "id": "man-021",
+   "subcategory": "anime",
+   "difficulty": 2,
+   "question": "How many original Pokémon were in the first generation Pokédex?",
+   "choices": [
+    "251",
+    "150",
+    "151",
+    "100"
+   ],
+   "answer": 2,
+   "explanation": "Mew is the 151st Pokémon."
+  },
+  {
+   "id": "man-022",
+   "subcategory": "culture",
+   "difficulty": 2,
+   "question": "What is the Japanese word for 'cute' widely used in anime culture?",
+   "choices": [
+    "Kawaii",
+    "Baka",
+    "Sugoi",
+    "Kakkoii"
+   ],
+   "answer": 0,
+   "explanation": "Kawaii culture is a big part of Japanese pop culture."
+  },
+  {
+   "id": "man-023",
+   "subcategory": "shonen",
+   "difficulty": 2,
+   "question": "What are Dragon Ball's Goku's people called?",
+   "choices": [
+    "Majins",
+    "Kais",
+    "Saiyans",
+    "Namekians"
+   ],
+   "answer": 2,
+   "explanation": "Goku was born as a Saiyan named Kakarot."
+  },
+  {
+   "id": "man-024",
+   "subcategory": "industry",
+   "difficulty": 3,
+   "question": "Which manga is the best-selling manga series of all time?",
+   "choices": [
+    "One Piece",
+    "Naruto",
+    "Dragon Ball",
+    "Golgo 13"
+   ],
+   "answer": 0,
+   "explanation": "One Piece has sold over 500 million copies worldwide."
+  },
+  {
+   "id": "man-025",
+   "subcategory": "culture",
+   "difficulty": 3,
+   "question": "What are Korean comics called?",
+   "choices": [
+    "Manhwa",
+    "Manhua",
+    "Manga",
+    "Webtoon only"
+   ],
+   "answer": 0,
+   "explanation": "Manhwa is the Korean term; Chinese comics are called manhua."
+  },
+  {
+   "id": "man-026",
+   "subcategory": "history",
+   "difficulty": 3,
+   "question": "Who is known as the 'God of Manga' and created 'Astro Boy'?",
+   "choices": [
+    "Hayao Miyazaki",
+    "Shotaro Ishinomori",
+    "Go Nagai",
+    "Osamu Tezuka"
+   ],
+   "answer": 3,
+   "explanation": "Tezuka shaped modern manga and anime from the 1950s."
+  },
+  {
+   "id": "man-027",
+   "subcategory": "industry",
+   "difficulty": 3,
+   "question": "Which weekly magazine published Dragon Ball, Naruto and One Piece?",
+   "choices": [
+    "Ribon",
+    "Weekly Shōnen Magazine",
+    "Young Jump only",
+    "Weekly Shōnen Jump"
+   ],
+   "answer": 3,
+   "explanation": "Shueisha publishes Weekly Shōnen Jump."
+  },
+  {
+   "id": "man-028",
+   "subcategory": "anime",
+   "difficulty": 3,
+   "question": "Which film won the Oscar for Best Animated Feature at the 2003 ceremony?",
+   "choices": [
+    "Ice Age",
+    "Lilo & Stitch",
+    "Spirited Away",
+    "Finding Nemo"
+   ],
+   "answer": 2,
+   "explanation": "Spirited Away won the award for 2002 films."
+  },
+  {
+   "id": "man-029",
+   "subcategory": "anime",
+   "difficulty": 3,
+   "question": "Which Ghibli film features the characters Ashitaka and San?",
+   "choices": [
+    "Princess Mononoke",
+    "Porco Rosso",
+    "Castle in the Sky",
+    "Nausicaä"
+   ],
+   "answer": 0,
+   "explanation": "Princess Mononoke was released in 1997."
+  },
+  {
+   "id": "man-030",
+   "subcategory": "shonen",
+   "difficulty": 3,
+   "question": "Who is the protagonist of 'Chainsaw Man'?",
+   "choices": [
+    "Power",
+    "Denji",
+    "Aki Hayakawa",
+    "Makima"
+   ],
+   "answer": 1,
+   "explanation": "Denji merges with his pet devil Pochita."
+  },
+  {
+   "id": "man-031",
+   "subcategory": "anime",
+   "difficulty": 3,
+   "question": "Which anime follows bounty hunters aboard the spaceship Bebop?",
+   "choices": [
+    "Outlaw Star",
+    "Trigun",
+    "Cowboy Bebop",
+    "Space Dandy"
+   ],
+   "answer": 2,
+   "explanation": "Cowboy Bebop aired in 1998 and 1999."
+  },
+  {
+   "id": "man-032",
+   "subcategory": "anime",
+   "difficulty": 3,
+   "question": "What is the name of Shinji Ikari's giant mecha in 'Neon Genesis Evangelion'?",
+   "choices": [
+    "Gundam",
+    "Eva-00",
+    "Mazinger Z",
+    "Evangelion Unit-01"
+   ],
+   "answer": 3,
+   "explanation": "Shinji pilots Unit-01."
+  },
+  {
+   "id": "man-033",
+   "subcategory": "seinen",
+   "difficulty": 3,
+   "question": "Who created the cyberpunk manga 'Akira'?",
+   "choices": [
+    "Katsuhiro Otomo",
+    "Masamune Shirow",
+    "Yukito Kishiro",
+    "Hiroshi Hirata"
+   ],
+   "answer": 0,
+   "explanation": "Akira was adapted into a landmark film in 1988."
+  },
+  {
+   "id": "man-034",
+   "subcategory": "shonen",
+   "difficulty": 3,
+   "question": "Which ship carries the Straw Hat Pirates at the start of One Piece?",
+   "choices": [
+    "Red Force",
+    "Going Merry",
+    "Moby Dick",
+    "Thousand Sunny"
+   ],
+   "answer": 1,
+   "explanation": "Going Merry is replaced by the Thousand Sunny later."
+  },
+  {
+   "id": "man-035",
+   "subcategory": "shonen",
+   "difficulty": 3,
+   "question": "What card game is central to 'Yu-Gi-Oh!'?",
+   "choices": [
+    "Digimon Card Game",
+    "Duel Monsters",
+    "Beyblade",
+    "Magic Duels"
+   ],
+   "answer": 1,
+   "explanation": "Duel Monsters is the in-story card game."
+  },
+  {
+   "id": "man-036",
+   "subcategory": "industry",
+   "difficulty": 4,
+   "question": "Which studio animated the 'Demon Slayer' TV series?",
+   "choices": [
+    "MAPPA",
+    "Wit Studio",
+    "Bones",
+    "Ufotable"
+   ],
+   "answer": 3,
+   "explanation": "Ufotable is known for its detailed digital animation."
+  },
+  {
+   "id": "man-037",
+   "subcategory": "shonen",
+   "difficulty": 4,
+   "question": "What is the name of Gon's father in 'Hunter x Hunter'?",
+   "choices": [
+    "Silva",
+    "Ging Freecss",
+    "Kite",
+    "Netero"
+   ],
+   "answer": 1,
+   "explanation": "Gon becomes a Hunter to find his father."
+  },
+  {
+   "id": "man-038",
+   "subcategory": "seinen",
+   "difficulty": 4,
+   "question": "Who created the dark fantasy manga 'Berserk'?",
+   "choices": [
+    "Hiromu Arakawa",
+    "Buronson",
+    "Kentaro Miura",
+    "Naoki Urasawa"
+   ],
+   "answer": 2,
+   "explanation": "Miura began Berserk in 1989."
+  },
+  {
+   "id": "man-039",
+   "subcategory": "seinen",
+   "difficulty": 4,
+   "question": "Who created 'Ghost in the Shell'?",
+   "choices": [
+    "Hajime Isayama",
+    "Buichi Terasawa",
+    "Masamune Shirow",
+    "Katsuhiro Otomo"
+   ],
+   "answer": 2,
+   "explanation": "The manga was first serialised in 1989."
+  }
+ ]
+}

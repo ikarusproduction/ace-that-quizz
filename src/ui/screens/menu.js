@@ -24,6 +24,7 @@ export async function menuScreen(app) {
     rewards.length ? h('button.btn.good.block', { type: 'button', onclick: () => go('rewards') }, sprite('key', 28), `${rewards.length} card reward${rewards.length > 1 ? 's' : ''} waiting`) : null,
     h('div.menu', {},
       menuBtn('primary', 'star', 'Play', profiles.length ? 'solo · versus · daily' : 'start here', () => go('setup')),
+      menuBtn('', 'radio', 'Online', 'friends on their own phones', () => go('online')),
       menuBtn('', 'gasmask', 'Players', `${profiles.length} on this device`, () => go('profiles')),
       menuBtn('', 'key', 'Cards', 'your collection', () => go('cards')),
       menuBtn('', 'science', 'Stats', 'strengths & weaknesses', () => go('stats')),

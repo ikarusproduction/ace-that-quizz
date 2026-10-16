@@ -6,6 +6,7 @@ import { openIdbStorage } from '../storage/idb.js';
 import { createRepo } from '../storage/repo.js';
 import { h, mount } from './dom.js';
 import { configureAudio } from './audio.js';
+import { configureFx } from './fx.js';
 import { setReducedMotion, installLighting, setMood } from './lighting.js';
 import { toast } from './components.js';
 
@@ -40,6 +41,7 @@ export async function applySettings() {
   app.settings = await app.repo.getSettings();
   configureAudio(app.settings);
   setReducedMotion(app.settings.reduceMotion);
+  configureFx(app.settings);
   return app.settings;
 }
 
@@ -53,6 +55,7 @@ export async function boot(root) {
     if (!res.ok) throw new Error(`Could not load ${rel} (${res.status})`);
     return res.json();
   };
+  app.readJson = readJson;
   try {
     app.bank = await loadBank(readJson);
     app.ctx = makeContext(app.bank.questions);

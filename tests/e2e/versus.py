@@ -17,6 +17,8 @@ try:
         pg.click('.menu button >> nth=0', no_wait_after=True); time.sleep(.4)
         pg.click('text=Versus', no_wait_after=True)
         for i in range(3): pg.locator('.pick').nth(4 + i).click(no_wait_after=True)
+        pg.click('text=Start game', no_wait_after=True); time.sleep(.6)
+        pg.wait_for_selector('.slots'); pg.click('.spin-btn', no_wait_after=True); pg.wait_for_function('document.querySelectorAll(".slot.filled").length===5 && !document.querySelector(".slot.reeling .spinning")', timeout=9000); time.sleep(.8)
         pg.click('text=Start game', no_wait_after=True); time.sleep(1)
         gates = 0
         for step in range(900):
@@ -24,7 +26,7 @@ try:
             if 'Final standings' in t: break
             if pg.locator('.gate').count(): gates += 1; pg.locator('.gate .btn').click(no_wait_after=True)
             elif pg.locator('.timer').count(): pg.locator('.choice:not(.removed)').first.click(no_wait_after=True)
-            elif pg.locator('.stake').count(): pg.locator('.stake').first.click(no_wait_after=True); pg.locator('text=/Lock in/').click(no_wait_after=True)
+            elif pg.locator('.stake:not([disabled])').count(): pg.locator('.stake:not([disabled])').first.click(no_wait_after=True, timeout=1500); pg.locator('text=/Lock in/').click(no_wait_after=True, timeout=1500)
             elif pg.locator('.stick-bottom .btn').count(): pg.locator('.stick-bottom .btn').first.click(no_wait_after=True)
             time.sleep(.12)
         else:
