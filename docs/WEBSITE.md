@@ -1,22 +1,17 @@
-# Putting the game on www.suraki-production.com (private, access code)
+# Putting the game on your own website (no dedicated server)
 
-Two pieces:
+The game and its multiplayer relay both run on ordinary PHP web hosting such as OVH.
 
-1. **The game pages** live on your site at `https://www.suraki-production.com/play/` (static files, deployed by your
-   existing OVH workflow). They are not linked from the site, are marked `noindex`, and ask for the access code.
-2. **The game server (relay)** links the phones together. OVH shared hosting cannot run it (it needs Node), so it runs
-   on a small separate host (Render free plan via `render.yaml`, or any Node 22 / Docker host).
+* The game: `https://<your site>/play/` (static files).
+* The relay: `play/api/index.php` (source: `server/php/index.php`). Phones ask it for news about once a second;
+  it keeps each room as a small JSON file in `play/api/data/` (blocked from the web, swept after 3 hours).
+* The access code: `play/api/config.php` holds only a SHA-256 hash of the code. To change the code, replace the hash
+  (`printf '%s' 'new-code' | sha256sum`). An empty hash makes the game open to everyone.
+* `play/config.json`: `{ "relay": "/play/api/index.php", "gate": true }` shows the access-code screen first.
 
-## Steps
-1. Render.com → New → **Blueprint** → choose `ikarusproduction/ace-that-quizz`. When asked, type your **ACCESS_CODE**.
-   Note the address it gives you, e.g. `https://house-knows-relay.onrender.com`.
-2. In the website repo, edit `public/play/config.json`:
-   `{ "relay": "https://house-knows-relay.onrender.com", "gate": true }` and merge the pull request.
-3. Give friends `https://www.suraki-production.com/play/` and the access code.
+Requirements: PHP 7.4+ with `mbstring`, and a web folder PHP can write to. Nothing else.
 
-## Honest limits
-* The code is checked by the server before anyone can create or join a room, with lock-out after 10 wrong tries.
-  The game's own files are plain static files: someone who knows the exact address can still download them, but they
-  cannot play online without the code.
-* Render's free plan sleeps after ~15 minutes idle; the first visit then takes ~30 s to wake it. Rooms live in memory.
-* To change the code: change `ACCESS_CODE` in Render.
+Honest limits: the code is checked by the relay before any room can be created or joined (10 wrong tries lock an
+address out for 10 minutes). The game's files themselves are plain static files, so someone who knows the address could
+download them, but they cannot play online without the code. The host's phone is the referee: friends only, not tournaments.
+The Node relay (`server/relay.js`, `render.yaml`) is still there if you ever want live connections on a separate host.

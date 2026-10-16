@@ -8,6 +8,16 @@
 // developer tools. This is built for friends in a room, not for tournaments.
 
 const trimSlash = (s) => String(s ?? '').replace(/\/+$/, '');
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+/** A base ending in .php is the PHP relay (poll mode, call as index.php?p=/api/...); anything else is the Node relay. */
+export const isPollBase = (base) => /\.php$/i.test(trimSlash(base));
+export function apiUrl(base, path, query = {}) {
+  const b = trimSlash(base);
+  const qs = Object.entries(query).filter(([, v]) => v != null).map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`).join('&');
+  if (isPollBase(b)) return `${b}?p=${encodeURIComponent(path)}${qs ? `&${qs}` : ''}`;
+  return `${b}${path}${qs ? `?${qs}` : ''}`;
+}
 
 export class OnlineSession {
   /**
@@ -51,7 +61,7 @@ export class OnlineSession {
   async #post(path, body) {
     let res;
     try {
-      res = await this.fetch(`${this.base}${path}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body ?? {}) });
+      res = await this.fetch(apiUrl(this.base, path), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body ?? {}) });
     } catch {
       throw new Error('Could not reach the game server. Check the address and your connection.');
     }
@@ -62,7 +72,7 @@ export class OnlineSession {
 
   static async health(base, fetchImpl = globalThis.fetch?.bind(globalThis)) {
     try {
-      const res = await fetchImpl(`${trimSlash(base)}/api/health`, { cache: 'no-store' });
+      const res = await fetchImpl(apiUrl(base, '/api/health'), { cache: 'no-store' });
       const j = await res.json();
       return j?.ok === true;
     } catch {
@@ -73,7 +83,7 @@ export class OnlineSession {
   /** Ask the relay whether an access code is right. Resolves { ok, error? }. */
   static async checkAccess(base, access, fetchImpl = globalThis.fetch?.bind(globalThis)) {
     try {
-      const res = await fetchImpl(`${trimSlash(base)}/api/check?access=${encodeURIComponent(access ?? '')}`, { cache: 'no-store' });
+      const res = await fetchImpl(apiUrl(base, '/api/check', { access: access ?? '' }), { cache: 'no-store' });
       const j = await res.json().catch(() => ({}));
       return res.ok ? { ok: true } : { ok: false, error: j.error ?? `Server error (${res.status})` };
     } catch {
@@ -82,7 +92,7 @@ export class OnlineSession {
   }
   static async gateInfo(base, fetchImpl = globalThis.fetch?.bind(globalThis)) {
     try {
-      const j = await (await fetchImpl(`${trimSlash(base)}/api/health`, { cache: 'no-store' })).json();
+      const j = await (await fetchImpl(apiUrl(base, '/api/health'), { cache: 'no-store' })).json();
       return j?.ok ? { reachable: true, gated: Boolean(j.gated) } : { reachable: false, gated: false };
     } catch {
       return { reachable: false, gated: false };
@@ -123,11 +133,35 @@ export class OnlineSession {
     return this.members.find((m) => this.playerIdOf(m) === pid) ?? null;
   }
 
-  /** Open the live connection. Safe to call once; EventSource reconnects by itself. */
+  #onHello(d) {
+    this.members = d.members;
+    this.hostId = d.hostId;
+    this.locked = d.locked;
+    this.status = 'online';
+    this.emit('status', this.status);
+    this.emit('members', this.members);
+    if (d.latest) this.#handle(d.latest);
+  }
+  #onMembers(d) {
+    this.members = d.members;
+    this.locked = d.locked;
+    this.emit('members', this.members);
+  }
+  #onClosed() {
+    if (this.closed) return;
+    this.closed = true;
+    this.status = 'closed';
+    this.es?.close?.();
+    this.emit('closed', { reason: 'The host left, so the room is closed.' });
+  }
+
+  /** Open the live connection. Safe to call once; reconnects by itself. */
   open() {
-    if (this.es || !this.ES) return;
+    if (this.es || this.polling) return;
+    if (isPollBase(this.base)) return this.#poll();
+    if (!this.ES) return;
     this.status = 'connecting';
-    const url = `${this.base}/api/rooms/${this.code}/events?token=${encodeURIComponent(this.me.token)}`;
+    const url = apiUrl(this.base, `/api/rooms/${this.code}/events`, { token: this.me.token });
     const es = new this.ES(url);
     this.es = es;
     es.addEventListener('open', () => { this.status = 'online'; this.emit('status', this.status); });
@@ -136,29 +170,45 @@ export class OnlineSession {
       this.status = es.readyState === 2 ? 'closed' : 'reconnecting';
       this.emit('status', this.status);
     });
-    es.addEventListener('hello', (e) => {
-      const d = JSON.parse(e.data);
-      this.members = d.members;
-      this.hostId = d.hostId;
-      this.locked = d.locked;
-      this.status = 'online';
-      this.emit('status', this.status);
-      this.emit('members', this.members);
-      if (d.latest) this.#handle(d.latest);
-    });
-    es.addEventListener('members', (e) => {
-      const d = JSON.parse(e.data);
-      this.members = d.members;
-      this.locked = d.locked;
-      this.emit('members', this.members);
-    });
+    es.addEventListener('hello', (e) => this.#onHello(JSON.parse(e.data)));
+    es.addEventListener('members', (e) => this.#onMembers(JSON.parse(e.data)));
     es.addEventListener('msg', (e) => this.#handle(JSON.parse(e.data)));
-    es.addEventListener('closed', () => {
-      this.closed = true;
-      this.status = 'closed';
-      this.es?.close();
-      this.emit('closed', { reason: 'The host left, so the room is closed.' });
-    });
+    es.addEventListener('closed', () => this.#onClosed());
+  }
+
+  /** Poll mode (PHP relay on ordinary web hosting): ask for news about once a second. */
+  async #poll() {
+    this.polling = true;
+    this.status = 'connecting';
+    let after = -1;
+    let fails = 0;
+    let lastMembers = '';
+    while (!this.closed && this.polling) {
+      let wait = 900;
+      try {
+        const res = await this.fetch(apiUrl(this.base, `/api/rooms/${this.code}/events`, { token: this.me.token, after }), { cache: 'no-store' });
+        if (res.status === 404 || res.status === 403) { this.#onClosed(); break; }
+        const d = await res.json();
+        if (!res.ok) throw new Error(d.error ?? 'poll failed');
+        fails = 0;
+        if (this.status !== 'online') { this.status = 'online'; this.emit('status', this.status); }
+        if (d.hello) { this.#onHello({ ...d.hello, members: d.members, hostId: d.hostId, locked: d.locked }); lastMembers = JSON.stringify(d.members); }
+        else {
+          const sig = JSON.stringify(d.members);
+          if (sig !== lastMembers || d.locked !== this.locked) { lastMembers = sig; this.#onMembers(d); }
+        }
+        for (const m of d.events ?? []) this.#handle(m);
+        after = d.seq;
+        if (d.closed) { this.#onClosed(); break; }
+        wait = d.events?.length ? 120 : 900;
+      } catch {
+        fails++;
+        if (this.status !== 'reconnecting') { this.status = 'reconnecting'; this.emit('status', this.status); }
+        wait = Math.min(4000, 800 + fails * 600);
+      }
+      await Promise.race([sleep(wait), new Promise((r) => { this.wake = r; })]);
+    }
+    this.polling = false;
   }
 
   #handle(msg) {
@@ -188,7 +238,9 @@ export class OnlineSession {
 
   async send(type, payload, to) {
     if (this.closed) return { ok: false };
-    return this.#post(`/api/rooms/${this.code}/send`, { token: this.me.token, type, payload, ...(to ? { to } : {}) });
+    const r = await this.#post(`/api/rooms/${this.code}/send`, { token: this.me.token, type, payload, ...(to ? { to } : {}) });
+    this.wake?.();
+    return r;
   }
   sendInfo(info) {
     return this.send('info', info, 'host').catch(() => {});
@@ -207,6 +259,8 @@ export class OnlineSession {
 
   async leave() {
     this.closed = true;
+    this.polling = false;
+    this.wake?.();
     try { this.es?.close(); } catch { /* ignore */ }
     this.es = null;
     if (this.code && this.me) await this.#post(`/api/rooms/${this.code}/leave`, { token: this.me.token }).catch(() => {});
@@ -219,7 +273,7 @@ export class OnlineSession {
     u.hash = '';
     u.search = '';
     u.searchParams.set('room', this.code);
-    if (this.base && this.base !== trimSlash(u.origin)) u.searchParams.set('relay', this.base);
+    if (this.base && !this.base.startsWith('/') && this.base !== trimSlash(u.origin)) u.searchParams.set('relay', this.base);
     return u.toString();
   }
 }

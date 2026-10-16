@@ -1,0 +1,270 @@
+<?php
+/**
+ * THE HOUSE KNOWS: room relay in plain PHP, for ordinary web hosting (OVH, etc.). No database, no Node.
+ *
+ * Same job as server/relay.js: it only passes messages between the phones of one room. The host's phone runs the
+ * game. Phones "poll" this file about once a second instead of holding a live connection (shared hosting cannot
+ * hold one open), which is plenty for a turn-based quiz.
+ *
+ * Calls look like  index.php?p=/api/rooms/ABCD/send . State lives in small JSON files under ./data (blocked from the
+ * web by data/.htaccess and deleted automatically after a few hours).
+ * Access code: config.php returns ['access_hash' => sha256 of the code]; empty = open to everyone.
+ */
+declare(strict_types=1);
+
+const MAX_PLAYERS = 4;
+const MAX_BODY = 524288;
+const ROOM_TTL = 10800;      // seconds without activity before a room is swept away
+const CONNECTED_WITHIN = 12; // a phone counts as connected if it polled this recently
+const LOG_KEEP = 80;
+const HOST_ONLY = ['state', 'start', 'end', 'kick', 'lobby'];
+
+$cfg = @include __DIR__ . '/config.php';
+$cfg = is_array($cfg) ? $cfg : [];
+$ACCESS = strtolower((string) ($cfg['access_hash'] ?? ''));
+$DATA = (string) ($cfg['data_dir'] ?? (__DIR__ . '/data'));
+
+header('Content-Type: application/json; charset=utf-8');
+header('Cache-Control: no-store');
+header('X-Content-Type-Options: nosniff');
+
+function reply(int $status, array $body) {
+    http_response_code($status);
+    echo json_encode($body, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+    exit;
+}
+function clean($s, int $n): string {
+    $s = preg_replace('/[\x00-\x1f<>]/u', '', (string) $s) ?? '';
+    return mb_substr(trim($s), 0, $n);
+}
+function rid(int $n = 6): string { return rtrim(strtr(base64_encode(random_bytes($n)), '+/', '-_'), '='); }
+function body(): array {
+    $raw = file_get_contents('php://input', false, null, 0, MAX_BODY + 1);
+    if ($raw === false || $raw === '') return [];
+    if (strlen($raw) > MAX_BODY) reply(413, ['error' => 'too large']);
+    $j = json_decode($raw, true);
+    if (!is_array($j)) reply(400, ['error' => 'bad json']);
+    return $j;
+}
+function ip(): string { return (string) ($_SERVER['REMOTE_ADDR'] ?? ''); }
+
+if (!is_dir($DATA)) {
+    @mkdir($DATA, 0755, true);
+}
+if (!is_dir($DATA) || !is_writable($DATA)) reply(500, ['error' => 'the server folder is not writable']);
+if (!file_exists($DATA . '/.htaccess')) @file_put_contents($DATA . '/.htaccess', "Require all denied\nDeny from all\n");
+if (!file_exists($DATA . '/index.html')) @file_put_contents($DATA . '/index.html', '');
+
+/* ---------- access code (with lock-out after repeated wrong tries) ---------- */
+function access_ok($supplied): array {
+    global $ACCESS, $DATA;
+    if ($ACCESS === '') return [true, 200, ''];
+    $f = $DATA . '/fails-' . substr(sha1(ip()), 0, 16) . '.json';
+    $fails = [];
+    if (is_file($f)) { $j = json_decode((string) @file_get_contents($f), true); if (is_array($j)) $fails = $j; }
+    $now = time();
+    $fails = array_values(array_filter($fails, fn($t) => $now - (int) $t < 600));
+    if (count($fails) >= 10) return [false, 429, 'too many wrong codes, try again in 10 minutes'];
+    if (hash_equals($ACCESS, hash('sha256', (string) $supplied))) return [true, 200, ''];
+    $fails[] = $now;
+    @file_put_contents($f, json_encode($fails), LOCK_EX);
+    return [false, 401, 'wrong access code'];
+}
+
+/* ---------- rooms ---------- */
+function room_path(string $code): string { global $DATA; return $DATA . '/room-' . $code . '.json'; }
+
+/** Run $fn(&$room) with the room locked. Returns [found, result]. $fn may return false to skip saving. */
+function with_room(string $code, callable $fn): array {
+    $path = room_path($code);
+    if (!is_file($path)) return [false, null];
+    $h = @fopen($path, 'c+');
+    if (!$h) return [false, null];
+    flock($h, LOCK_EX);
+    rewind($h);
+    $raw = stream_get_contents($h);
+    $room = json_decode($raw ?: '', true);
+    if (!is_array($room)) { flock($h, LOCK_UN); fclose($h); return [false, null]; }
+    $dirty = true;
+    $res = $fn($room, $dirty);
+    if ($dirty) {
+        rewind($h);
+        ftruncate($h, 0);
+        fwrite($h, json_encode($room, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+        fflush($h);
+    }
+    flock($h, LOCK_UN);
+    fclose($h);
+    return [true, $res];
+}
+
+function sweep(): void {
+    global $DATA;
+    $now = time();
+    foreach (glob($DATA . '/room-*.json') ?: [] as $f) {
+        $age = $now - (int) @filemtime($f);
+        if ($age > ROOM_TTL) @unlink($f);
+    }
+    foreach (glob($DATA . '/fails-*.json') ?: [] as $f) {
+        if ($now - (int) @filemtime($f) > 900) @unlink($f);
+    }
+}
+
+function public_members(array $room): array {
+    $now = time();
+    $out = [];
+    foreach ($room['members'] as $m) {
+        $out[] = ['id' => $m['id'], 'name' => $m['name'], 'avatar' => $m['avatar'], 'language' => $m['language'], 'profileId' => $m['profileId'],
+            'host' => $m['id'] === $room['hostId'], 'connected' => ($now - (int) ($m['seen'] ?? 0)) < CONNECTED_WITHIN];
+    }
+    return $out;
+}
+function find_member(array $room, $token): ?array {
+    if (!is_string($token) || $token === '') return null;
+    foreach ($room['members'] as $m) if (hash_equals((string) $m['token'], $token)) return $m;
+    return null;
+}
+function new_code(): string {
+    $chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ';
+    for ($i = 0; $i < 60; $i++) {
+        $c = '';
+        for ($k = 0; $k < 4; $k++) $c .= $chars[random_int(0, strlen($chars) - 1)];
+        if (!is_file(room_path($c))) return $c;
+    }
+    reply(503, ['error' => 'no room code available']);
+}
+
+/* ---------- routing ---------- */
+$path = (string) ($_GET['p'] ?? '');
+$method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
+$parts = array_values(array_filter(explode('/', $path), fn($x) => $x !== ''));
+// parts: ['api', 'health'] | ['api','check'] | ['api','rooms'] | ['api','rooms',CODE,action]
+if (($parts[0] ?? '') !== 'api') reply(404, ['error' => 'not found']);
+$what = $parts[1] ?? '';
+
+if ($what === 'health') {
+    sweep();
+    $n = count(glob($DATA . '/room-*.json') ?: []);
+    reply(200, ['ok' => true, 'rooms' => $n, 'time' => time() * 1000, 'gated' => $ACCESS !== '']);
+}
+if ($what === 'check') {
+    [$ok, $st, $err] = access_ok($_GET['access'] ?? '');
+    $ok ? reply(200, ['ok' => true]) : reply($st, ['error' => $err]);
+}
+if ($what !== 'rooms') reply(404, ['error' => 'not found']);
+
+/* create */
+if (count($parts) === 2 && $method === 'POST') {
+    $b = body();
+    [$ok, $st, $err] = access_ok($b['access'] ?? '');
+    if (!$ok) reply($st, ['error' => $err]);
+    sweep();
+    $code = new_code();
+    $hostId = 'm_' . rid(6);
+    $host = ['id' => $hostId, 'token' => rid(18), 'name' => clean($b['name'] ?? '', 20) ?: 'Host', 'avatar' => clean($b['avatar'] ?? '', 16),
+        'language' => clean($b['language'] ?? '', 5), 'profileId' => clean($b['profileId'] ?? '', 80), 'seen' => time()];
+    $room = ['code' => $code, 'hostId' => $hostId, 'locked' => false, 'closed' => false, 'seq' => 0, 'latest' => null, 'log' => [], 'members' => [$hostId => $host]];
+    file_put_contents(room_path($code), json_encode($room, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), LOCK_EX);
+    reply(200, ['code' => $code, 'memberId' => $hostId, 'token' => $host['token'], 'hostId' => $hostId, 'members' => public_members($room)]);
+}
+
+$code = strtoupper((string) ($parts[2] ?? ''));
+$action = (string) ($parts[3] ?? '');
+if (!preg_match('/^[A-Z]{4}$/', $code) || !is_file(room_path($code))) reply(404, ['error' => 'room not found']);
+
+/* join */
+if ($action === 'join' && $method === 'POST') {
+    $b = body();
+    [$ok, $st, $err] = access_ok($b['access'] ?? '');
+    if (!$ok) reply($st, ['error' => $err]);
+    $out = null;
+    with_room($code, function (&$room) use ($b, $code, &$out) {
+        if ($room['closed']) { $out = [404, ['error' => 'room not found']]; return false; }
+        if ($room['locked']) { $out = [403, ['error' => 'the game has already started']]; return false; }
+        if (count($room['members']) >= MAX_PLAYERS) { $out = [403, ['error' => 'room is full (4 players max)']]; return false; }
+        $pid = clean($b['profileId'] ?? '', 80);
+        $name = clean($b['name'] ?? '', 20) ?: 'Player';
+        foreach ($room['members'] as $m) {
+            if ($pid !== '' && $m['profileId'] === $pid) { $out = [409, ['error' => 'that player is already in this room']]; return false; }
+            if (mb_strtolower($m['name']) === mb_strtolower($name)) { $out = [409, ['error' => "\"$name\" is already taken in this room, pick another player"]]; return false; }
+        }
+        $id = 'm_' . rid(6);
+        $m = ['id' => $id, 'token' => rid(18), 'name' => $name, 'avatar' => clean($b['avatar'] ?? '', 16), 'language' => clean($b['language'] ?? '', 5), 'profileId' => $pid, 'seen' => time()];
+        $room['members'][$id] = $m;
+        $out = [200, ['code' => $code, 'memberId' => $id, 'token' => $m['token'], 'hostId' => $room['hostId'], 'members' => public_members($room)]];
+    });
+    reply($out[0], $out[1]);
+}
+
+/* poll: GET events?token=..&after=N   (after = -1 on the first call) */
+if ($action === 'events' && $method === 'GET') {
+    $token = (string) ($_GET['token'] ?? '');
+    $after = (int) ($_GET['after'] ?? -1);
+    $out = null;
+    [$found] = with_room($code, function (&$room, &$dirty) use ($token, $after, &$out) {
+        $me = find_member($room, $token);
+        if (!$me) { $out = [403, ['error' => 'bad token']]; $dirty = false; return null; }
+        $now = time();
+        $dirty = false;
+        if ($now - (int) ($room['members'][$me['id']]['seen'] ?? 0) >= 3) { $room['members'][$me['id']]['seen'] = $now; $dirty = true; }
+        $resp = ['seq' => $room['seq'], 'hostId' => $room['hostId'], 'members' => public_members($room), 'locked' => $room['locked'], 'closed' => (bool) $room['closed'], 'events' => []];
+        if ($after < 0) {
+            $resp['hello'] = ['you' => ['id' => $me['id'], 'name' => $me['name'], 'avatar' => $me['avatar'], 'language' => $me['language'], 'profileId' => $me['profileId']], 'latest' => $room['latest']];
+        } else {
+            foreach ($room['log'] as $e) {
+                if ($e['msg']['seq'] > $after && ($e['to'] === 'all' || in_array($me['id'], $e['to'], true))) $resp['events'][] = $e['msg'];
+            }
+        }
+        $out = [200, $resp];
+        return null;
+    });
+    if (!$found) reply(404, ['error' => 'room not found']);
+    reply($out[0], $out[1]);
+}
+
+/* send */
+if ($action === 'send' && $method === 'POST') {
+    $b = body();
+    $out = null;
+    with_room($code, function (&$room) use ($b, &$out) {
+        $me = find_member($room, $b['token'] ?? '');
+        if (!$me) { $out = [403, ['error' => 'bad token']]; return false; }
+        $type = clean($b['type'] ?? '', 24);
+        if ($type === '') { $out = [400, ['error' => 'missing type']]; return false; }
+        $isHost = $me['id'] === $room['hostId'];
+        if (in_array($type, HOST_ONLY, true) && !$isHost) { $out = [403, ['error' => 'host only']]; return false; }
+        if ($type === 'start') $room['locked'] = true;
+        $room['seq']++;
+        $msg = ['seq' => $room['seq'], 'from' => $me['id'], 'type' => $type, 'payload' => $b['payload'] ?? null];
+        if (in_array($type, ['state', 'start', 'lobby'], true)) $room['latest'] = $msg;
+        $to = $b['to'] ?? ($isHost ? 'all' : 'host');
+        if ($to === 'all') $targets = array_keys($room['members']);
+        elseif ($to === 'host') $targets = [$room['hostId']];
+        elseif (is_string($to) && isset($room['members'][$to])) $targets = [$to];
+        else $targets = [];
+        // a newer state replaces older ones; everything else is kept until it ages out
+        if ($type === 'state') $room['log'] = array_values(array_filter($room['log'], fn($e) => $e['msg']['type'] !== 'state'));
+        $room['log'][] = ['to' => $targets, 'msg' => $msg];
+        if (count($room['log']) > LOG_KEEP) $room['log'] = array_slice($room['log'], -LOG_KEEP);
+        if ($type === 'end') $room['locked'] = true;
+        $out = [200, ['ok' => true, 'seq' => $msg['seq'], 'delivered' => count($targets)]];
+    });
+    reply($out[0] ?? 404, $out[1] ?? ['error' => 'room not found']);
+}
+
+/* leave */
+if ($action === 'leave' && $method === 'POST') {
+    $b = body();
+    $out = [403, ['error' => 'bad token']];
+    with_room($code, function (&$room) use ($b, &$out) {
+        $me = find_member($room, $b['token'] ?? '');
+        if (!$me) return false;
+        if ($me['id'] === $room['hostId']) { $room['closed'] = true; }
+        elseif (!$room['locked']) { unset($room['members'][$me['id']]); }
+        else { $room['members'][$me['id']]['seen'] = 0; }
+        $out = [200, ['ok' => true]];
+    });
+    reply($out[0], $out[1]);
+}
+
+reply(404, ['error' => 'not found']);
