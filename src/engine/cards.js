@@ -162,13 +162,13 @@ export const CARDS = {
   },
   /* ---- Hexes: dirty tricks you can play on a rival, or on yourself for a risky bonus ---- */
   ink_blast: {
-    id: 'ink_blast', name: 'Ink Blast', rarity: 'common', kind: 'hex', timing: 'pre-stake', uses: 1, starter: false, clue: false, icon: 'ink',
+    id: 'ink_blast', name: 'Ink Blast', rarity: 'common', kind: 'hex', timing: 'pre-stake', uses: 1, starter: true, clue: false, icon: 'ink',
     targets: 'any', hex: 'ink',
     text: "Squirts ink over the target's next question. They have to wipe it away to read.",
     drawback: 'On yourself it pays +20% if you get it right. On a rival it costs them 15% of their win.',
   },
   goo_splat: {
-    id: 'goo_splat', name: 'Goo Splat', rarity: 'common', kind: 'hex', timing: 'pre-stake', uses: 1, starter: false, clue: false, icon: 'goo',
+    id: 'goo_splat', name: 'Goo Splat', rarity: 'common', kind: 'hex', timing: 'pre-stake', uses: 1, starter: true, clue: false, icon: 'goo',
     targets: 'any', hex: 'goo',
     text: "Splats slime across the target's screen. It drips slowly.",
     drawback: 'On yourself it pays +20% if you get it right. On a rival it costs them 15% of their win.',
@@ -192,7 +192,7 @@ export const CARDS = {
     drawback: 'On yourself it pays +20% if you get it right. On a rival it costs them 15% of their win.',
   },
   pickpocket: {
-    id: 'pickpocket', name: 'Pickpocket', rarity: 'uncommon', kind: 'hex', timing: 'pre-stake', uses: 1, starter: false, clue: false, icon: 'hand',
+    id: 'pickpocket', name: 'Pickpocket', rarity: 'uncommon', kind: 'hex', timing: 'pre-stake', uses: 1, starter: true, clue: false, icon: 'hand',
     targets: 'rival', steal: 'pickpocket',
     text: 'Lifts 2 chips from a rival right now.',
     drawback: 'Only takes what they carry in hand. Versus only.',
