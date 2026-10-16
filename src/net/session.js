@@ -9,6 +9,9 @@
 
 const trimSlash = (s) => String(s ?? '').replace(/\/+$/, '');
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const SAVE_KEY = 'thk-online-session';
+const SAVE_TTL = 3 * 3600 * 1000;
+const store = () => { try { return globalThis.localStorage ?? null; } catch { return null; } };
 
 /** A base ending in .php is the PHP relay (poll mode, call as index.php?p=/api/...); anything else is the Node relay. */
 export const isPollBase = (base) => /\.php$/i.test(trimSlash(base));
@@ -111,12 +114,50 @@ export class OnlineSession {
     this.#adopt('guest', d, profile);
     return this;
   }
+  /** Remember this room on the device so a reload or a killed tab can come back to it. */
+  #persist() {
+    try {
+      store()?.setItem(SAVE_KEY, JSON.stringify({ base: this.base, access: this.access, role: this.role, code: this.code, hostId: this.hostId, me: this.me, savedAt: Date.now() }));
+    } catch { /* ignore */ }
+  }
+  static clearSaved() {
+    try { store()?.removeItem(SAVE_KEY); } catch { /* ignore */ }
+  }
+  /** The room this device was in a moment ago, if any (rooms expire after 3 hours). */
+  static loadSaved() {
+    try {
+      const j = JSON.parse(store()?.getItem(SAVE_KEY) ?? 'null');
+      if (!j?.code || !j?.me?.token || Date.now() - (j.savedAt ?? 0) > SAVE_TTL) return null;
+      return j;
+    } catch { return null; }
+  }
+  /** Rebuild a session from loadSaved(); call open() then ready() to rejoin with the same identity. */
+  static fromSaved(saved, opts = {}) {
+    const s = new OnlineSession({ base: saved.base, access: saved.access, ...opts });
+    s.role = saved.role;
+    s.code = saved.code;
+    s.hostId = saved.hostId;
+    s.me = saved.me;
+    return s;
+  }
+  /** Resolves with the room once the first reply from the server has arrived; rejects if the room is gone. */
+  ready(timeoutMs = 8000) {
+    return new Promise((resolve, reject) => {
+      if (this.status === 'online') return resolve(this);
+      const off = [];
+      const done = (fn, v) => { off.forEach((f) => f()); clearTimeout(t); fn(v); };
+      const t = setTimeout(() => done(reject, new Error('Could not reach the room.')), timeoutMs);
+      off.push(this.on('members', () => done(resolve, this)), this.on('closed', () => done(reject, new Error('The room is closed.'))));
+    });
+  }
+
   #adopt(role, d, profile) {
     this.role = role;
     this.code = d.code;
     this.hostId = d.hostId;
     this.members = d.members ?? [];
     this.me = { id: d.memberId, token: d.token, profileId: profile.id, name: profile.name };
+    this.#persist();
   }
 
   get isHost() {
@@ -152,12 +193,19 @@ export class OnlineSession {
     this.closed = true;
     this.status = 'closed';
     this.es?.close?.();
+    OnlineSession.clearSaved();
     this.emit('closed', { reason: 'The host left, so the room is closed.' });
   }
 
   /** Open the live connection. Safe to call once; reconnects by itself. */
   open() {
     if (this.es || this.polling) return;
+    if (!this.wired && typeof document !== 'undefined') {
+      this.wired = true;
+      const nudge = () => { if (!this.closed && document.visibilityState !== 'hidden') this.wake?.(); };
+      document.addEventListener('visibilitychange', nudge);
+      globalThis.addEventListener?.('online', nudge);
+    }
     if (isPollBase(this.base)) return this.#poll();
     if (!this.ES) return;
     this.status = 'connecting';
@@ -261,6 +309,7 @@ export class OnlineSession {
     this.closed = true;
     this.polling = false;
     this.wake?.();
+    OnlineSession.clearSaved();
     try { this.es?.close(); } catch { /* ignore */ }
     this.es = null;
     if (this.code && this.me) await this.#post(`/api/rooms/${this.code}/leave`, { token: this.me.token }).catch(() => {});

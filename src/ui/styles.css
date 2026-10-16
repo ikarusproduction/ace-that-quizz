@@ -377,3 +377,22 @@ footer.legal { color: var(--mute); font-size: 12px; text-align: center; margin-t
 .dot.on { background: var(--green, #6fa86b); } .dot.off { background: #555; }
 .waiting-card { text-align: center; }
 .standings { display: flex; flex-direction: column; gap: 6px; }
+
+.net-banner{position:fixed;left:0;right:0;top:0;z-index:60;padding:6px 10px;text-align:center;font:600 13px var(--font-body,system-ui);background:#b3261e;color:#fff;box-shadow:0 2px 10px #0008}
+
+.waitgame { margin-top: 10px; }
+.waitgame .puzzle-prompt { font-size: 18px; line-height: 1.35; margin: 10px 0; }
+
+/* ---- hexes ---- */
+.hex-layer { position: fixed; inset: 0; z-index: 60; pointer-events: none; overflow: hidden; }
+.hex-blot { position: absolute; display: block; pointer-events: auto; touch-action: none; opacity: .94; transform-origin: center; animation: hex-splat .28s cubic-bezier(.2,1.6,.4,1) both; transition: opacity .25s, transform .25s; }
+.hex-blot.goo { opacity: .85; animation: hex-splat .28s cubic-bezier(.2,1.6,.4,1) both, hex-drip 6s ease-in forwards; }
+.hex-blot.gone { opacity: 0; transform: scale(.7) translateY(20px); }
+@keyframes hex-splat { from { transform: scale(.1); } to { transform: scale(1); } }
+@keyframes hex-drip { to { translate: 0 60px; } }
+.hex-quake .screen { animation: hex-quake .22s linear infinite; }
+@keyframes hex-quake { 0% { transform: translate(0,0); } 25% { transform: translate(-3px,1px); } 50% { transform: translate(2px,-1px); } 75% { transform: translate(-2px,-1px); } 100% { transform: translate(0,0); } }
+.hex-flip { transform: rotate(180deg); }
+.hex-blur .choice { filter: blur(6px); }
+.hex-tag { margin: 4px 0; }
+.reduce-motion .hex-quake .screen, .reduce-motion .hex-blot { animation: none; }

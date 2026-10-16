@@ -7,6 +7,7 @@ import { createRepo } from '../storage/repo.js';
 import { h, mount } from './dom.js';
 import { configureAudio } from './audio.js';
 import { configureFx } from './fx.js';
+import { configureHexFx } from './hexfx.js';
 import { setReducedMotion, installLighting, setMood } from './lighting.js';
 import { toast } from './components.js';
 
@@ -42,6 +43,7 @@ export async function applySettings() {
   configureAudio(app.settings);
   setReducedMotion(app.settings.reduceMotion);
   configureFx(app.settings);
+  configureHexFx(app.settings);
   return app.settings;
 }
 

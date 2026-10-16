@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createGame, dispatch, getQuestionView, getStakeOptions, cardReward } from '../src/engine/game.js';
-import { CARD_IDS, STARTER_CARDS } from '../src/engine/cards.js';
+import { CARDS as CARD_DEFS, CARD_IDS, STARTER_CARDS } from '../src/engine/cards.js';
 import { realBank, fakeContext, must, correctDisplay, wrongDisplay, playToEnd, stepBot, advanceTo, accuracyBot } from './helpers.js';
 import { syntheticQuestions } from './synthetic.js';
 
@@ -678,7 +678,7 @@ test('card rewards: a win offers three new cards including a rare one, and never
   const r = cardReward(end, 'p1');
   assert.equal(r.options.length, 3);
   assert.ok(r.options.every((id) => !STARTER_CARDS.includes(id)));
-  assert.ok(r.options.some((id) => ['rare', 'legendary'].includes(CARD_IDS.includes(id) && id) || ['rewind', 'siphon', 'skeleton_key'].includes(id)));
+  assert.ok(r.options.some((id) => ['rare', 'legendary'].includes(CARD_DEFS[id].rarity)));
   assert.deepEqual(cardReward(end, 'p1'), r, 'deterministic for the same session');
 });
 

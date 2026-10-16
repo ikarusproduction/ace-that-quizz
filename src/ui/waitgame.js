@@ -1,0 +1,65 @@
+// "While you wait" panel: a puzzle for players who are not on turn (online). The element is reused across
+// renders so a half-read puzzle is never wiped by an incoming game update.
+import { h } from './dom.js';
+import { makePuzzle, randomFact, PUZZLE_RULES } from '../engine/minigame.js';
+import { puzzleSeed } from '../engine/game.js';
+import { Rng } from '../engine/rng.js';
+import { sfx } from './audio.js';
+import { haptic } from './fx.js';
+
+const LEVELS = [[1, 'Easy'], [2, 'Medium'], [3, 'Hard']];
+const FR_LEVELS = { Easy: 'Facile', Medium: 'Moyen', Hard: 'Difficile' };
+const UI = {
+  en: { title: 'While you wait', sub: (r, g) => `Solve puzzles for bonus chips (up to ${r} per round, ${g} per game).`, got: (n) => `+${n} chips`, none: 'Chip cap reached for now', right: 'Correct!', wrong: 'Not quite.', next: 'Next puzzle', fact: 'Did you know?', earned: (a, b) => `Earned this round: ${a} / ${b}` },
+  fr: { title: 'En attendant', sub: (r, g) => `Résous des énigmes pour gagner des jetons (max ${r} par manche, ${g} par partie).`, got: (n) => `+${n} jetons`, none: 'Plafond de jetons atteint pour le moment', right: 'Bonne réponse !', wrong: 'Raté.', next: 'Énigme suivante', fact: 'Le saviez-vous ?', earned: (a, b) => `Gagnés cette manche : ${a} / ${b}` },
+};
+
+export class WaitGame {
+  /** @param {{getState:()=>object, myId:string, lang:string, act:(a:object)=>void}} o */
+  constructor(o) {
+    this.o = o;
+    this.level = 1;
+    this.sent = null;     // puzzle index we answered, waiting for the host
+    this.feedback = null; // { ok, gain, fact }
+    this.el = h('div.panel.waitgame', {});
+    this.refresh();
+  }
+
+  get t() { return UI[this.o.lang === 'fr' ? 'fr' : 'en']; }
+
+  refresh() {
+    const s = this.o.getState();
+    const me = s.players.find((p) => p.playerId === this.o.myId);
+    if (!me) return;
+    const lang = this.o.lang === 'fr' ? 'fr' : 'en';
+    const pz = me.puzzle ?? { n: 0, roundBonus: 0 };
+    const roundBonus = pz.round === s.roundIndex ? pz.roundBonus : 0;
+    if (this.sent !== null && pz.n > this.sent) { // the host judged our answer
+      const last = s.lastPuzzle?.playerId === me.playerId ? s.lastPuzzle : { ok: false, gain: 0 };
+      const done = makePuzzle(puzzleSeed(s, me.playerId, this.sent, this.sentLevel), lang);
+      this.feedback = { ok: last.ok, gain: last.gain, fact: randomFact(Rng.fromSeed(done.seed), lang), explain: done.kind === 'fact' ? done.fact : null };
+      this.sent = null;
+      if (last.ok) { sfx.coin?.(); haptic?.('ok'); } else sfx.wrong?.();
+    }
+    const kids = [h('h3', {}, this.t.title), h('p.tiny.dim', {}, this.t.sub(PUZZLE_RULES.roundCap, PUZZLE_RULES.gameCap)), h('p.tiny.mute', {}, this.t.earned(roundBonus, PUZZLE_RULES.roundCap))];
+    if (this.feedback) {
+      const f = this.feedback;
+      kids.push(
+        h('p.big', { class: f.ok ? 'green' : 'red' }, f.ok ? this.t.right : this.t.wrong, ' ', f.ok ? (f.gain ? this.t.got(f.gain) : this.t.none) : ''),
+        h('p.small.dim', {}, `${this.t.fact} ${f.explain ?? f.fact}`),
+        h('button.btn.primary.block', { type: 'button', onclick: () => { this.feedback = null; this.refresh(); } }, this.t.next),
+      );
+    } else {
+      kids.push(h('div.row.gap-s', {}, LEVELS.map(([lv, name]) => h('button.btn.small', { type: 'button', 'aria-pressed': String(this.level === lv), class: this.level === lv ? 'primary' : '', onclick: () => { this.level = lv; this.refresh(); } }, lang === 'fr' ? FR_LEVELS[name] : name))));
+      const seed = puzzleSeed(s, me.playerId, pz.n, this.level);
+      const p = makePuzzle(seed, lang);
+      kids.push(h('p.puzzle-prompt', {}, p.prompt));
+      const locked = this.sent !== null;
+      kids.push(h('div.col.gap-s', {}, p.choices.map((c) => h('button.btn.block', {
+        type: 'button', disabled: locked,
+        onclick: () => { this.sent = pz.n; this.sentLevel = this.level; sfx.select?.(); const mine = pz.n; setTimeout(() => { if (this.sent === mine) { this.sent = null; this.refresh(); } }, 6000); this.o.act({ type: 'PUZZLE', playerId: me.playerId, level: this.level, seed, choice: c.key }); this.refresh(); },
+      }, c.label))));
+    }
+    this.el.replaceChildren(...kids);
+  }
+}

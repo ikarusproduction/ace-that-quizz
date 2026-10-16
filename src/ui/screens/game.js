@@ -12,6 +12,8 @@ import { CARDS, equippableCards } from '../../engine/cards.js';
 import { RULES, HAZARDS, BOSSES, SHOP_ITEMS } from '../../engine/modifiers.js';
 import { CATEGORIES, DIFFICULTIES } from '../../engine/bank.js';
 import { haptic, confetti, coinBurst, stamp, streakHype } from '../fx.js';
+import { splash, clearHexFx, unblurOnFirstTap } from '../hexfx.js';
+import { WaitGame } from '../waitgame.js';
 import { languageOf } from '../../i18n/languages.js';
 import { createTranslator, applyTranslation } from '../../i18n/translate.js';
 import { recentlySeenIds, seenCounts } from '../../stats/stats.js';
@@ -117,7 +119,7 @@ class GameController {
       this.profiles.set(net.playerIdOf(m), local ?? { id: net.playerIdOf(m), name: m.name, avatar: { key: m.avatar }, language: m.language || 'en' });
     }
 
-    if (net.isHost && !net.startInfo) {
+    if (net.isHost && !net.startInfo && !net.latest) {
       const infos = net.infos;
       const seen = {};
       const avoid = new Set();
@@ -149,7 +151,7 @@ class GameController {
       net.on('state', ({ rev, state }) => this.onRemoteState(rev, state)),
       net.on('members', () => this.onMembers()),
       net.on('closed', () => this.onRoomClosed()),
-      net.on('status', () => this.render()),
+      net.on('status', () => this.updateNetBanner()),
     ];
     if (net.isHost) {
       this.offs.push(net.on('action', (m) => this.onRemoteAction(m)));
@@ -168,6 +170,17 @@ class GameController {
     this.save();
     if (state.phase === 'finished') this.onFinished();
     this.render();
+  }
+
+  /** A thin bar at the top while this phone is not connected; no re-render, so a question in progress is untouched. */
+  updateNetBanner() {
+    if (this.disposed) return;
+    const bad = this.net && this.net.status !== 'online';
+    if (!bad) { this.banner?.remove(); this.banner = null; return; }
+    if (!this.banner) {
+      this.banner = h('div.net-banner', { role: 'status' }, 'Connection lost. Reconnecting… your game is safe.');
+      document.body.append(this.banner);
+    }
   }
 
   onMembers() {
@@ -193,7 +206,7 @@ class GameController {
     const member = this.net.members.find((m) => m.id === from);
     if (!member) return;
     const pid = this.net.playerIdOf(member);
-    const allowed = ['SET_LOADOUT', 'USE_CARD', 'CONFIRM_STAKE', 'ANSWER', 'NEXT', 'CONTINUE'];
+    const allowed = ['SET_LOADOUT', 'USE_CARD', 'CONFIRM_STAKE', 'ANSWER', 'NEXT', 'CONTINUE', 'PUZZLE'];
     if (!allowed.includes(action.type)) return;
     if (action.type === 'NEXT' || action.type === 'CONTINUE') {
       if (rev !== this.rev) return; // stale: someone already advanced
@@ -217,11 +230,12 @@ class GameController {
     const member = this.net.memberByPlayerId(p.playerId);
     const gone = member && !member.connected;
     const idle = Date.now() - this.lastProgress;
-    if (s.phase === 'stake' && (idle > 45000 || (gone && idle > 6000))) {
+    // A dropped connection gets a generous grace period (a reload or a tunnel takes a while).
+    if (s.phase === 'stake' && (idle > 60000 || (gone && idle > 45000))) {
       this.act({ type: 'CONFIRM_STAKE', playerId: p.playerId, stake: 1 }, { silent: true });
     } else if (s.phase === 'question') {
       const timerMs = s.q.byPlayer[p.playerId]?.timerMs ?? 20000;
-      if (idle > timerMs + 9000 || (gone && idle > 6000)) this.act({ type: 'ANSWER', playerId: p.playerId, choice: null, elapsedMs: timerMs }, { silent: true });
+      if (idle > timerMs + 12000 || (gone && idle > timerMs + 30000)) this.act({ type: 'ANSWER', playerId: p.playerId, choice: null, elapsedMs: timerMs }, { silent: true });
     }
   }
 
@@ -280,6 +294,8 @@ class GameController {
 
   dispose() {
     this.disposed = true;
+    this.banner?.remove();
+    clearHexFx();
     if (this.watchdog) clearInterval(this.watchdog);
     this.offs?.forEach((f) => f());
     if (this.net) { const n = this.net; this.app.online = null; n.leave(); }
@@ -343,7 +359,7 @@ class GameController {
       return false;
     }
     this.state = res.state;
-    this.lastProgress = Date.now();
+    if (action.type !== 'PUZZLE') this.lastProgress = Date.now(); // puzzles must not keep an idle turn alive
     if (this.net?.isHost) {
       this.rev += 1;
       this.net.broadcastState(this.rev, this.s);
@@ -378,6 +394,8 @@ class GameController {
     }
     const phase = this.s.phase;
     this.setMoodForState();
+    this.noticeHex();
+    if (phase !== 'question') clearHexFx();
     if (this.net && (phase === 'stake' || phase === 'question') && !this.isMyTurn) {
       mount(this.root, this.viewWaiting());
       window.scrollTo(0, 0);
@@ -397,6 +415,19 @@ class GameController {
     if (phase !== 'question') window.scrollTo(0, 0);
     const notes = this.notes.splice(0);
     notes.forEach((n) => toast(n));
+  }
+
+  /** Tell a player when a rival hexed them (each hex is announced once per phone). */
+  noticeHex() {
+    const hx = this.s.lastHex;
+    if (this.seenHexSeq === undefined) { this.seenHexSeq = hx?.seq ?? 0; return; }
+    if (!hx || hx.seq <= this.seenHexSeq) return;
+    this.seenHexSeq = hx.seq;
+    if (!this.net || hx.self || !this.myIds.includes(hx.target)) return;
+    const by = this.s.players.find((x) => x.playerId === hx.by)?.name ?? 'A rival';
+    this.notes.push(`${by} played ${CARDS[hx.cardId].name} on you${hx.stolen ? ` and took ${hx.stolen} chips` : ''}!`);
+    sfx.wrong?.();
+    haptic('warn');
   }
 
   setMoodForState() {
@@ -491,6 +522,13 @@ class GameController {
 
   /* ----------------------------------------------------------- waiting */
 
+  waitGameEl() {
+    if (!this.net || !this.myPlayerId) return null;
+    if (!this.waitGame) this.waitGame = new WaitGame({ getState: () => this.s, myId: this.myPlayerId, lang: this.langOf(this.myPlayerId), act: (a) => this.act(a, { silent: true }) });
+    this.waitGame.refresh();
+    return this.waitGame.el;
+  }
+
   viewWaiting() {
     const s = this.s;
     const p = this.turnPlayer;
@@ -502,9 +540,10 @@ class GameController {
       h('div.panel.waiting-card', {},
         avatar(this.profileOf(p.playerId), 48),
         h('h2', {}, p.name),
-        h('p.dim', {}, member && !member.connected ? 'lost connection… the game will move on without them' : `${doing}…`),
+        h('p.dim', {}, member && !member.connected ? 'lost connection… waiting for them to come back (the game moves on after a minute)' : `${doing}…`),
         h('div.tiny.mute', {}, 'The question stays hidden until everyone has answered.'),
       ),
+      this.waitGameEl(),
       h('div.standings', {}, [...s.players].sort((a, b) => b.chips + b.vault - (a.chips + a.vault)).map((pl) => h('div.panel.tight.row', { class: pl.playerId === p.playerId ? 'now' : '' }, avatar(this.profileOf(pl.playerId), 16), h('b.grow', {}, pl.name), h('span.pill', {}, sprite('chip', 16), pl.chips)))),
     ];
   }
@@ -672,6 +711,32 @@ class GameController {
     const c = CARDS[id];
     const p = this.turnPlayer;
     unlockAudio();
+    if (c.kind === 'hex') {
+      const s = this.s;
+      const options = [];
+      if (c.targets !== 'rival') options.push({ playerId: p.playerId, label: 'Yourself', note: 'Risky: +20% if you still get it right' });
+      if (s.mode === 'versus') for (const r of s.players) if (r.playerId !== p.playerId) options.push({ playerId: r.playerId, label: r.name, note: c.steal ? '' : '−15% on their win' });
+      if (!options.length) return toast('No valid target');
+      let target = options[0].playerId;
+      if (options.length > 1 || c.targets !== 'rival') {
+        target = await modal((close) => [
+          h('h2', {}, c.name),
+          h('p', {}, c.text),
+          h('p.small.dim', {}, `Drawback: ${c.drawback}`),
+          h('div.col.gap-s', {}, options.map((o) => h('button.pick', { type: 'button', onclick: () => close(o.playerId) }, avatar(this.profileOf(o.playerId), 32), h('span.name.profile-row', { style: { fontFamily: 'var(--font-display)', fontSize: '22px', fontWeight: 800, textTransform: 'uppercase' } }, o.label), o.note ? h('span.tiny.dim', {}, o.note) : null))),
+          h('button.btn.ghost.block', { type: 'button', onclick: () => close(undefined) }, 'Cancel'),
+        ]);
+        if (!target) return;
+      }
+      if (this.act({ type: 'USE_CARD', playerId: p.playerId, cardId: id, targetId: target })) {
+        sfx.card();
+        const hx = this.s.lastHex;
+        const tn = this.s.players.find((x) => x.playerId === target).name;
+        toast(target === p.playerId ? `${c.name}: you dared yourself` : `${c.name} on ${tn}${hx?.stolen ? ` · took ${hx.stolen} chips` : ''}`);
+        if (hx?.stolen) { haptic('big'); floatText?.(`+${hx.stolen}`); }
+      }
+      return;
+    }
     if (c.kind === 'attack') {
       const rivals = this.s.players.filter((x) => x.playerId !== p.playerId);
       const target = await modal((close) => [
@@ -712,20 +777,34 @@ class GameController {
 
     this.startTimer(view, qp, { fill: timerFill, bar: timerBar, text: timerText });
     this.bindKeys(view, choiceEls);
+    const hexKey = `${s.roundIndex}:${s.qIndex}:${p.playerId}:${qp.startedAt}`;
+    const hexes = view.hexes ?? [];
+    if (hexes.length && this.hexShown !== hexKey) { this.hexShown = hexKey; splash(hexes); }
 
     return [
       this.hud(p),
       h('div.row.between', {}, h('span.tiny.dim', {}, this.roundTitle()), s.round.markedSlot === s.qIndex ? h('span.tag.amber', {}, '★ Marked question') : null),
       this.slotDots(),
       h('div.cat-line', {}, categoryIcon(view.category, 20), CATEGORIES[view.category]?.label ?? view.category, h('span', { style: { marginLeft: 'auto' } }, diffPips(view.difficulty))),
-      this.questionCard(view, { tune: view.type === 'tune', dir: view.translated ? (languageOf(this.langOf(p.playerId)).rtl ? 'rtl' : null) : null }),
+      hexes.length ? h('p.tiny.amber.center.hex-tag', {}, `Hexed: ${hexes.join(', ')}`) : null,
+      h('div', { class: hexes.includes('flip') ? 'hex-flip' : '' }, this.questionCard(view, { tune: view.type === 'tune', dir: view.translated ? (languageOf(this.langOf(p.playerId)).rtl ? 'rtl' : null) : null })),
       this.langOf(p.playerId) !== 'en' && !view.translated && view.type !== 'tune' ? h('p.tiny.amber.center', {}, `No ${languageOf(this.langOf(p.playerId)).name} translation was available, so this one is in English.`) : null,
       h('div.row', {}, h('div.grow', {}, timerBar), timerText),
       view.retry ? h('p.small.amber.center.pop', {}, 'Rewind! One wrong option is gone. Try again.') : null,
       view.ghostLetter ? h('p.small.amber.center', {}, `Ghost Note: the answer starts with “${view.ghostLetter}”`) : null,
-      h('div.choices', { class: isTf ? 'grid2' : '', dir: view.translated && languageOf(this.langOf(p.playerId)).rtl ? 'rtl' : null }, choiceEls),
+      this.choicesBox(hexes, h('div.choices', { class: isTf ? 'grid2' : '', dir: view.translated && languageOf(this.langOf(p.playerId)).rtl ? 'rtl' : null }, choiceEls)),
       this.cardsBar('question'),
     ];
+  }
+
+  choicesBox(hexes, el) {
+    if (hexes.includes('flip')) el.classList.add('hex-flip');
+    if (hexes.includes('blur') && this.blurClearedKey !== this.hexShown) {
+      el.classList.add('hex-blur');
+      unblurOnFirstTap(el);
+      el.addEventListener('click', () => { this.blurClearedKey = this.hexShown; }, { once: true });
+    }
+    return el;
   }
 
   bindKeys(view, els) {

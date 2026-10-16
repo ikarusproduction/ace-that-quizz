@@ -144,6 +144,30 @@ const SPRITES = {
   siphon: { rows: [
     '............', '.....kkkk...', '....kbbbbk..', '....kb..kk..', '....kb......', '....kb......',
     '...kkbk.....', '...krrrk....', '..krrrrrk...', '..krrrrrk...', '...krrrk....', '....kkk.....' ] },
+  ink: { rows: [
+    '............', '.....kk.....', '....kddk.k..', '..kkkddkkdk.', '.kddddddddk.', '.kddddddddk.',
+    '..kddddddk..', '.kdddkkddk..', '..kkk..kdk..', '.......kk...', '............', '............' ] },
+  goo: { rows: [
+    '............', '..kkkkkkkk..', '.kvvvvvvvvk.', '.kvwvvvvvvk.', '.kvvvvvVvvk.', '..kvvvvvvk..',
+    '..kvk.kvvk..', '..kvk..kk...', '..kVk.......', '...k........', '............', '............' ] },
+  quake: { rows: [
+    '............', '.......k....', '......ka....', '.....ka.....', '....kaak....', '.....kak....',
+    '......kak...', '.....kak....', '....ka......', '...kk.......', '............', '............' ] },
+  blur: { rows: [
+    '............', '..kk..kk....', '.kuuk.kuuk..', '.kuuuukuuuk.', '..kuuuuuuk..', '...kuuuuk...',
+    '....kuuk....', '.....kk.....', '............', '.k.k.k.k.k..', '............', '............' ] },
+  flip: { rows: [
+    '............', '..kkkkkkkk..', '..kbbbbbbk..', '..kbkkkkbk..', '..kbbbbbbk..', '..kkkkkkkk..',
+    '....k..k....', '....k..k....', '.kk......kk.', '.kvk....kvk.', '..kvkkkkvk..', '...kkkkkk...' ] },
+  hand: { rows: [
+    '............', '..k.k.k.....', '.ksksksk....', '.kssssssk...', '.kssssssskk.', '.kssssssssk.',
+    '..kssssssk..', '..kssssssk..', '...kssssk...', '...kkkkkk...', '............', '............' ] },
+  bag: { rows: [
+    '............', '....kkkk....', '.....kk.....', '....kaak....', '...kaaaak...', '..kaaAAaak..',
+    '..kaaAaaak..', '..kaaAAaak..', '..kaaaaaak..', '...kaaaak...', '....kkkk....', '............' ] },
+  squid: { rows: [
+    '............', '....kkkk....', '...kppppk...', '..kppppppk..', '..kpwkpwkpk.', '..kppppppk..',
+    '..kppppppk..', '..kpkpkpkk..', '.kpk.kk.kpk.', '.kk..kk..kk.', '............', '............' ] },
 
   /* ------------------------------- interface ----------------------------- */
   bulb_on: { m: true, rows: [

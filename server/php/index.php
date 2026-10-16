@@ -14,6 +14,7 @@ declare(strict_types=1);
 
 const MAX_PLAYERS = 4;
 const MAX_BODY = 524288;
+const MAX_SAVE = 4194304;   // cloud save: 4 MB per player key (compressed)
 const ROOM_TTL = 10800;      // seconds without activity before a room is swept away
 const CONNECTED_WITHIN = 12; // a phone counts as connected if it polled this recently
 const LOG_KEEP = 80;
@@ -38,10 +39,10 @@ function clean($s, int $n): string {
     return mb_substr(trim($s), 0, $n);
 }
 function rid(int $n = 6): string { return rtrim(strtr(base64_encode(random_bytes($n)), '+/', '-_'), '='); }
-function body(): array {
-    $raw = file_get_contents('php://input', false, null, 0, MAX_BODY + 1);
+function body(int $max = MAX_BODY): array {
+    $raw = file_get_contents('php://input', false, null, 0, $max + 1);
     if ($raw === false || $raw === '') return [];
-    if (strlen($raw) > MAX_BODY) reply(413, ['error' => 'too large']);
+    if (strlen($raw) > $max) reply(413, ['error' => 'too large']);
     $j = json_decode($raw, true);
     if (!is_array($j)) reply(400, ['error' => 'bad json']);
     return $j;
@@ -150,6 +151,36 @@ if ($what === 'health') {
 if ($what === 'check') {
     [$ok, $st, $err] = access_ok($_GET['access'] ?? '');
     $ok ? reply(200, ['ok' => true]) : reply($st, ['error' => $err]);
+}
+
+/* ---------- cloud save: one JSON blob per random save key (the key is the secret) ---------- */
+if ($what === 'save') {
+    $b = $method === 'POST' ? body(MAX_SAVE + 4096) : [];
+    [$ok, $st, $err] = access_ok($method === 'POST' ? ($b['access'] ?? '') : ($_GET['access'] ?? ''));
+    if (!$ok) reply($st, ['error' => $err]);
+    $key = $method === 'POST' ? (string) ($b['key'] ?? '') : (string) ($_GET['key'] ?? '');
+    if (!preg_match('/^[A-Za-z0-9]{4}(-[A-Za-z0-9]{4}){3}$/', $key)) reply(400, ['error' => 'that save code is not valid']);
+    $file = $DATA . '/save-' . hash('sha256', strtoupper($key)) . '.json';
+    if ($method === 'GET') {
+        if (!is_file($file)) reply(404, ['error' => 'no save found for that code']);
+        $j = json_decode((string) file_get_contents($file), true);
+        if (!is_array($j)) reply(500, ['error' => 'the save is damaged']);
+        reply(200, $j);
+    }
+    if ($method === 'POST') {
+        $data = $b['data'] ?? null;
+        if (!is_string($data) || $data === '' || strlen($data) > MAX_SAVE) reply(413, ['error' => 'the save is too large']);
+        // Never let an older device overwrite a newer save.
+        $updatedAt = (int) ($b['updatedAt'] ?? 0);
+        if (is_file($file)) {
+            $cur = json_decode((string) file_get_contents($file), true);
+            if (is_array($cur) && (int) ($cur['updatedAt'] ?? 0) > $updatedAt && empty($b['force'])) reply(409, ['error' => 'a newer save exists', 'updatedAt' => $cur['updatedAt']]);
+        }
+        $enc = ($b['enc'] ?? '') === 'gzip-b64' ? 'gzip-b64' : 'json';
+        file_put_contents($file, json_encode(['updatedAt' => $updatedAt ?: time() * 1000, 'enc' => $enc, 'data' => $data]), LOCK_EX);
+        reply(200, ['ok' => true, 'updatedAt' => $updatedAt]);
+    }
+    reply(405, ['error' => 'method']);
 }
 if ($what !== 'rooms') reply(404, ['error' => 'not found']);
 

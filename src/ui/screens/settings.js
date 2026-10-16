@@ -5,6 +5,7 @@ import { screenHeader, toast, confirmDialog, modal, infoDialog } from '../compon
 import { sfx, unlockAudio } from '../audio.js';
 import { CATEGORIES } from '../../engine/bank.js';
 import { statCategory } from '../../engine/bank.js';
+import { formatKey } from '../../storage/cloud.js';
 
 export async function settingsScreen(app) {
   setMood('calm');
@@ -32,6 +33,7 @@ export async function settingsScreen(app) {
         numberField('Answers needed to rank a category', st.minSample, 3, 50, (v) => save({ minSample: v }).then(paint)),
         numberField('Answers before a result stops being "provisional"', st.confidentSample, st.minSample, 200, (v) => save({ confidentSample: v }).then(paint)),
       ),
+      cloudPanel(app),
       h('div.panel', {},
         h('h3', {}, 'Your data'),
         h('p.small.dim', {}, info.persistent ? 'Everything is stored on this device only, in this browser. It does not sync between devices. Use export to move or back up your players.' : 'Storage is unavailable in this browser session, so nothing will be kept. Export before you close the tab.'),
@@ -115,4 +117,54 @@ async function wipe(app) {
   await applySettings();
   toast('All data deleted');
   go('menu', {}, { replace: true });
+}
+
+/* ---------------- cloud save (website) ---------------- */
+function cloudPanel(app) {
+  const cloud = app.cloud;
+  if (!cloud) return null;
+  const when = (t) => (t ? new Date(t).toLocaleString() : 'not yet');
+  const status = h('p.small.dim', {});
+  const paintStatus = () => {
+    const m = cloud.meta();
+    status.textContent = m.error ? `Last attempt failed: ${m.error}` : `Last saved on the site: ${when(m.lastSavedAt)}`;
+  };
+  paintStatus();
+  const codeEl = h('div.room-code', { style: { fontSize: '26px', letterSpacing: '2px' } }, cloud.ensureKey());
+  const off = cloud.onChange(paintStatus);
+  return h('div.panel', {},
+    h('h3', {}, 'Cloud save'),
+    h('p.small', {}, 'Your players, cards, stats and progress are also kept on this website, so clearing the browser or changing phone does not lose them. Write down your save code: it is the only key.'),
+    h('div.center', {}, codeEl),
+    status,
+    h('div.col.gap-s', {},
+      h('button.btn.block', { type: 'button', onclick: async (e) => { e.target.disabled = true; try { await cloud.push({ force: true }); toast('Saved on the site'); } catch (err) { toast(err.message, 'err'); } e.target.disabled = false; paintStatus(); } }, 'Save now'),
+      h('button.btn.block', { type: 'button', onclick: async () => { try { await navigator.clipboard.writeText(cloud.key()); toast('Save code copied'); } catch { toast(cloud.key()); } } }, 'Copy my save code'),
+      h('button.btn.block', { type: 'button', onclick: () => restoreFlow(app).then((done) => { if (done) { off(); go('settings', {}, { replace: true }); } }) }, 'Restore from a save code'),
+    ),
+  );
+}
+
+/** Ask for a save code and merge that save into this device. Resolves true when something was restored. */
+export async function restoreFlow(app) {
+  const code = await modal((close) => {
+    const input = h('input', { type: 'text', placeholder: 'AB12-CD34-EF56-GH78', autocomplete: 'off', autocapitalize: 'characters', 'aria-label': 'Save code', style: { textAlign: 'center' }, oninput: (e) => { e.target.value = formatKey(e.target.value); } });
+    return [
+      h('h2', {}, 'Restore from a save code'),
+      h('p', {}, 'Type the save code of the device you want to recover. Players and progress from that save are merged into this device; nothing here is deleted.'),
+      input,
+      h('button.btn.primary.block', { type: 'button', onclick: () => close(input.value) }, 'Restore'),
+      h('button.btn.ghost.block', { type: 'button', onclick: () => close(undefined) }, 'Cancel'),
+    ];
+  });
+  if (!code) return false;
+  try {
+    const sum = await app.cloud.restore(code);
+    await applySettings();
+    await infoDialog('Restored', [`${sum.profilesAdded} players added, ${sum.profilesUpdated} updated, ${sum.resultsAdded} answers and ${sum.sessionsAdded} games recovered.`]);
+    return true;
+  } catch (e) {
+    toast(e.message, 'err');
+    return false;
+  }
 }

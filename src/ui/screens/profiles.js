@@ -72,7 +72,7 @@ export async function profilesScreen(app) {
   return h('div.screen', {},
     screenHeader('Players', () => goBack('menu')),
     h('p.small.dim', {}, 'Each player has their own statistics and card collection, stored on this device. Names are labels: renaming keeps all history.'),
-    ...(rows.length ? rows : [h('div.panel.inset.empty-state', {}, 'No players yet. Create the first one to start playing.')]),
+    ...(rows.length ? rows : [h('div.panel.inset.empty-state', {}, 'No players yet. Create the first one to start playing.'), app.cloud ? h('button.btn.block', { type: 'button', onclick: () => import('./settings.js').then((m) => m.restoreFlow(app)).then((done) => { if (done) go('profiles', {}, { replace: true }); }) }, 'I already have a save code: restore my players') : null]),
     h('button.btn.primary.block', { type: 'button', onclick: async () => { if (await profileEditor(app)) go('profiles', {}, { replace: true }); } }, '+ New player'),
   );
 }

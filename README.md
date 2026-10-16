@@ -20,6 +20,10 @@ Modes: **Solo run** (3 acts), **Quick run** (1 act), **Versus** (2–4 players, 
 ## Online (several phones)
 GitHub Pages alone cannot link phones; run `node server/relay.js` somewhere (see `docs/ONLINE.md`). Create a room, share the 4-letter code or link.
 
+## Hexes and the waiting game
+- **Hex cards** (Ink Blast, Goo Splat, Quake, Blur Out, Flip the Table, Pickpocket, Heist, The Kraken) are played while choosing a stake. Visual hexes can hit a rival's next question (−15% on their win) or yourself (a dare: +20% if you still get it right). Pickpocket, Heist and the Kraken steal chips from a rival (Versus). They use the normal card rarity and reward draft. Reduce motion turns off shaking and shortens ink and goo; nothing flashes.
+- **While you wait** (online): a player who is not on turn can solve number sequences, equations, hex/binary hacks, logic puzzles and true-or-fib facts for 2–5 bonus chips (max 10 per round, 40 per game). The host regenerates every puzzle from its seed to judge it, so a phone cannot award itself chips.
+
 ## Test
 ```
 npm test                    # 170 unit tests: engine, scoring, storage, migrations, stats

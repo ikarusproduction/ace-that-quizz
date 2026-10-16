@@ -69,3 +69,42 @@ test('PHP relay: access code is enforced and wrong tries lock out', { skip: !has
     assert.match((await OnlineSession.checkAccess(s.base, 'sesame')).error, /too many/);
   } finally { s.stop(); }
 });
+
+import { createMemoryStorage } from '../src/storage/memory.js';
+import { createRepo } from '../src/storage/repo.js';
+import { createCloud, formatKey, isValidKey, newKey } from '../src/storage/cloud.js';
+
+test('save codes are well formed', () => {
+  const k = newKey();
+  assert.ok(isValidKey(k), k);
+  assert.equal(formatKey('ab12cd34ef56gh78'), 'AB12-CD34-EF56-GH78');
+  assert.equal(isValidKey('nope'), false);
+});
+
+test('cloud save: players and cards survive a wiped device (PHP relay)', { skip: !hasPhp }, async () => {
+  const s = await startPhp('sesame');
+  try {
+    const repoA = await createRepo(createMemoryStorage());
+    const ana = await repoA.createProfile({ name: 'Ana', language: 'fr' });
+    const cloudA = createCloud({ repo: repoA, base: s.base, getAccess: () => 'sesame' });
+    const key = cloudA.ensureKey();
+    assert.equal((await cloudA.push()).ok, true);
+    // a brand new device with an empty database
+    const repoB = await createRepo(createMemoryStorage());
+    assert.equal((await repoB.listProfiles()).length, 0);
+    const cloudB = createCloud({ repo: repoB, base: s.base, getAccess: () => 'sesame' });
+    const sum = await cloudB.restore(key.toLowerCase().replaceAll('-', ''));
+    assert.equal(sum.profilesAdded, 1);
+    const back = (await repoB.listProfiles())[0];
+    assert.equal(back.id, ana.id);
+    assert.equal(back.name, 'Ana');
+    // wrong code / wrong access
+    await assert.rejects(cloudB.restore('AAAA-AAAA-AAAA-AAAA'), /no save found/);
+    const bad = createCloud({ repo: repoB, base: s.base, getAccess: () => 'wrong' });
+    await assert.rejects(bad.restore(key), /access code/);
+    // an older save can't overwrite a newer one
+    const old = createCloud({ repo: repoA, base: s.base, getAccess: () => 'sesame', now: () => 1 });
+    old.setKey(key);
+    await assert.rejects(old.push(), /newer save/);
+  } finally { s.stop(); }
+});

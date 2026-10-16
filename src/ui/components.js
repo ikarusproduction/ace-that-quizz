@@ -43,7 +43,7 @@ export function cardTile(id, opts = {}) {
   const c = CARDS[id];
   if (!c) return h('div');
   const tag = h('span.tag', { class: rarityTagClass[c.rarity] }, rarityLabel(c.rarity));
-  const when = c.kind === 'attack' ? 'Attack · Versus' : c.timing === 'pre-stake' ? 'Before staking' : c.timing === 'run' ? 'Once per run' : 'During question';
+  const when = c.kind === 'attack' ? 'Attack · Versus' : c.kind === 'hex' ? (c.targets === 'rival' ? 'Hex · rival' : 'Hex · you or a rival') : c.timing === 'pre-stake' ? 'Before staking' : c.timing === 'run' ? 'Once per run' : 'During question';
   const body = [
     h('div.row', { style: { gap: '8px' } }, sprite(c.icon, 32), h('span.nm', {}, c.name)),
     opts.compact ? null : h('div.tx', {}, c.text),

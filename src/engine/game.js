@@ -14,6 +14,7 @@ import { CARDS, CARD_NUMBERS, equippableCards, draftCards } from './cards.js';
 import { computeOutcome, previewStake, timerFor, nextStreak, runScore } from './scoring.js';
 import { buildRound, roundInfo, roundCategories } from './rounds.js';
 import { statCategory } from './bank.js';
+import { checkPuzzle, PUZZLE_RULES } from './minigame.js';
 
 export const STATE_VERSION = 1;
 
@@ -110,6 +111,8 @@ export function createGame({ mode, players, ctx, seed, sessionId, overrides = {}
         comeback: false,
         jammed: false,
         siphonedBy: null,
+        pendingHexes: [],
+        puzzle: { n: 0, round: -1, roundBonus: 0, gameBonus: 0 },
         shopBought: {},
         roundsCleared: 0,
         bossesCleared: 0,
@@ -202,6 +205,7 @@ function openQuestion(s, ctx) {
       used: {},
       usedCards: [],
       hidden: [],
+      hexes: [],
       eliminated: [],
       ghostLetter: null,
       startedAt: null,
@@ -279,6 +283,10 @@ function finish(s, ctx, { abandoned = false } = {}) {
 /* ------------------------------------------------------------------ */
 /* Actions                                                             */
 /* ------------------------------------------------------------------ */
+
+export function puzzleSeed(s, playerId, n, level) {
+  return `${s.sessionId}:${playerId}:${n}:L${level}`;
+}
 
 export function dispatch(prev, action, ctx) {
   if (prev.phase === 'finished' && action.type !== 'NOOP') return fail(prev, 'game is finished');
@@ -389,12 +397,69 @@ const HANDLERS = {
         else target.siphonedBy = p.playerId;
         break;
       }
+      case 'ink_blast':
+      case 'goo_splat':
+      case 'quake':
+      case 'blur_out':
+      case 'flip_table':
+      case 'pickpocket':
+      case 'heist':
+      case 'kraken': {
+        const targetId = a.targetId ?? p.playerId;
+        const target = playerOf(s, targetId);
+        if (!target) return { ok: false, reason: 'choose a target' };
+        const self = target.playerId === p.playerId;
+        if (self && card.targets === 'rival') return { ok: false, reason: `${card.name} needs a rival` };
+        if (!self && s.mode !== 'versus') return { ok: false, reason: 'rivals only exist in Versus' };
+        const effects = card.hex ? card.hex.split('+') : [];
+        let stolen = 0;
+        if (card.steal) {
+          const want = card.steal === 'pickpocket' ? CARD_NUMBERS.pickpocketChips
+            : card.steal === 'kraken' ? CARD_NUMBERS.krakenChips
+              : Math.max(CARD_NUMBERS.heistMin, Math.min(CARD_NUMBERS.heistMax, Math.round(target.chips * CARD_NUMBERS.heistShare)));
+          stolen = Math.min(want, target.chips);
+          target.chips -= stolen;
+          p.chips += stolen;
+          if (card.steal === 'heist') p.chips = Math.max(0, p.chips - CARD_NUMBERS.heistCost);
+        }
+        if (effects.length) {
+          if (self) {
+            for (const e of effects) qp.hexes.push({ fx: e, by: p.playerId });
+          } else {
+            for (const e of effects) target.pendingHexes.push({ fx: e, by: p.playerId });
+            target.pendingHexes = target.pendingHexes.slice(-CARD_NUMBERS.maxPendingHexes);
+          }
+        }
+        s.hexSeq = (s.hexSeq ?? 0) + 1;
+        s.lastHex = { seq: s.hexSeq, cardId: card.id, by: p.playerId, target: target.playerId, self, effects, stolen };
+        break;
+      }
       default:
         return { ok: false, reason: 'card has no effect' };
     }
     if (isRun) p.runCharges[card.id] -= 1;
     else p.charges[card.id] -= 1;
     qp.usedCards.push(card.id);
+  },
+
+  /** Waiting-room puzzle: the seed is derived from state, so the host can regenerate and judge it. */
+  PUZZLE(s, a) {
+    if (s.phase !== 'stake' && s.phase !== 'question') return { ok: false, reason: 'no puzzles right now' };
+    const p = playerOf(s, a.playerId);
+    if (!p) return { ok: false, reason: 'unknown player' };
+    if (turnPlayer(s).playerId === p.playerId) return { ok: false, reason: 'it is your turn' };
+    const pz = (p.puzzle ??= { n: 0, round: -1, roundBonus: 0, gameBonus: 0 });
+    if (pz.round !== s.roundIndex) { pz.round = s.roundIndex; pz.roundBonus = 0; }
+    const level = Number(a.level);
+    if (![1, 2, 3].includes(level)) return { ok: false, reason: 'bad level' };
+    const seed = puzzleSeed(s, p.playerId, pz.n, level);
+    if (a.seed !== seed) return { ok: false, reason: 'stale puzzle' };
+    pz.n += 1; // one attempt per puzzle
+    const ok = checkPuzzle(seed, a.choice);
+    const room = Math.max(0, Math.min(PUZZLE_RULES.roundCap - pz.roundBonus, PUZZLE_RULES.gameCap - pz.gameBonus));
+    const gain = ok ? Math.min(PUZZLE_RULES.reward[level], room) : 0;
+    p.chips += gain; pz.roundBonus += gain; pz.gameBonus += gain;
+    s.lastPuzzle = { playerId: p.playerId, ok, gain, n: pz.n };
   },
 
   CONFIRM_STAKE(s, a, ctx) {
@@ -411,6 +476,7 @@ const HANDLERS = {
     qp.stake = stake;
     qp.timerMs = timerFor({ type: q.type, hazard, boss, slowClock: p.slowClock, jammed: p.jammed });
     p.jammed = false;
+    if (p.pendingHexes?.length) { qp.hexes.push(...p.pendingHexes); p.pendingHexes = []; }
     qp.startedAt = ctx.now();
     qp.phase = 'question';
     s.phase = 'question';
@@ -552,6 +618,15 @@ function resolveAnswer(s, ctx, p, { correct, timeout, elapsedMs, choice = null }
   });
 
   let delta = out.delta;
+  if (correct && qp.hexes?.length) {
+    // Hexes on your own question are a dare (+20%); hexes from a rival cost you 15% of the win. One bonus, one penalty at most.
+    const mine = qp.hexes.some((x) => x.by === p.playerId);
+    const theirs = qp.hexes.some((x) => x.by !== p.playerId);
+    let factor = 1;
+    if (mine) factor *= CARD_NUMBERS.hexSelfBonus;
+    if (theirs) factor *= CARD_NUMBERS.hexVictimFactor;
+    delta += Math.round(out.gain * factor) - out.gain;
+  }
   let siphoned = 0;
   const siphoner = p.siphonedBy ? playerOf(s, p.siphonedBy) : null;
   if (correct && siphoner) {
@@ -658,6 +733,7 @@ export function getQuestionView(s, ctx, playerId) {
       correct: orig === q.answer,
     })),
     ghostLetter: qp?.ghostLetter ?? null,
+    hexes: [...new Set((qp?.hexes ?? []).map((x) => x.fx))],
     timerMs: qp?.timerMs ?? null,
     startedAt: qp?.startedAt ?? null,
     retry: Boolean(qp?.retry),
