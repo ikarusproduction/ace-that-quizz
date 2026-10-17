@@ -7,6 +7,7 @@ import { onlineScreen } from './ui/screens/online.js';
 import { gameScreen } from './ui/screens/game.js';
 import { cardsScreen } from './ui/screens/cards.js';
 import { rewardsScreen } from './ui/screens/rewards.js';
+import { hexesScreen } from './ui/screens/hexes.js';
 import { statsScreen } from './ui/screens/stats.js';
 import { settingsScreen } from './ui/screens/settings.js';
 import { loadConfig, ensureAccess, ACCESS_KEY } from './ui/gate.js';
@@ -22,6 +23,7 @@ register('online', onlineScreen);
 register('game', gameScreen);
 register('cards', cardsScreen);
 register('rewards', rewardsScreen);
+register('hexes', hexesScreen);
 register('stats', statsScreen);
 register('settings', settingsScreen);
 

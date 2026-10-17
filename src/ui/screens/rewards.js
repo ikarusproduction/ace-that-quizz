@@ -5,6 +5,7 @@ import { setMood, pulse } from '../lighting.js';
 import { avatar, cardTile, screenHeader, toast } from '../components.js';
 import { sfx } from '../audio.js';
 import { CARDS } from '../../engine/cards.js';
+import { cardReveal } from '../rarityfx.js';
 
 export async function rewardsScreen(app) {
   setMood('win');
@@ -24,9 +25,8 @@ export async function rewardsScreen(app) {
                 onclick: async () => {
                   try {
                     await app.repo.claimReward(o.sessionId, o.playerId, id);
-                    sfx.win();
                     pulse('good');
-                    toast(`${CARDS[id].name} added to ${p?.name}'s collection`);
+                    await cardReveal(id, { title: 'New bonus card', sub: `Added to ${p?.name}'s collection` });
                     paint();
                   } catch (e) {
                     toast(e.message, 'err');

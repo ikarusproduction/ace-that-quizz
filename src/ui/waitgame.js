@@ -10,8 +10,8 @@ import { haptic } from './fx.js';
 const LEVELS = [[1, 'Easy'], [2, 'Medium'], [3, 'Hard']];
 const FR_LEVELS = { Easy: 'Facile', Medium: 'Moyen', Hard: 'Difficile' };
 const UI = {
-  en: { title: 'While you wait', sub: (r, g) => `Solve puzzles for bonus chips (up to ${r} per round, ${g} per game).`, got: (n) => `+${n} chips`, none: 'Chip cap reached for now', right: 'Correct!', wrong: 'Not quite.', next: 'Next puzzle', fact: 'Did you know?', earned: (a, b) => `Earned this round: ${a} / ${b}`, late: 'Too late: the turn moved on before your answer counted. Here is a fresh one.', checking: 'Checking your answer with the host…' },
-  fr: { title: 'En attendant', sub: (r, g) => `Résous des énigmes pour gagner des jetons (max ${r} par manche, ${g} par partie).`, got: (n) => `+${n} jetons`, none: 'Plafond de jetons atteint pour le moment', right: 'Bonne réponse !', wrong: 'Raté.', next: 'Énigme suivante', fact: 'Le saviez-vous ?', earned: (a, b) => `Gagnés cette manche : ${a} / ${b}`, late: "Trop tard : le tour a changé avant que ta réponse compte. En voici une nouvelle.", checking: "Vérification de ta réponse par l'hôte…" },
+  en: { title: 'While you wait', sub: (r, g) => `Solve puzzles for bonus chips (up to ${r} per round, ${g} per game).`, got: (n) => `+${n} chips`, none: 'Chip cap reached for now', right: 'Correct!', wrong: 'Not quite.', next: 'Next puzzle', fact: 'Did you know?', earned: (a, b) => `Earned this round: ${a} / ${b}`, late: 'Too late: the turn moved on before your answer counted. Here is a fresh one.', checking: 'Checking your answer with the host…', meter: (n, of, full) => (full ? 'Hex hand full: play a prank!' : `Prank meter ${n}/${of}: every ${of} right answers earn a hex to play on the answerer`) },
+  fr: { title: 'En attendant', sub: (r, g) => `Résous des énigmes pour gagner des jetons (max ${r} par manche, ${g} par partie).`, got: (n) => `+${n} jetons`, none: 'Plafond de jetons atteint pour le moment', right: 'Bonne réponse !', wrong: 'Raté.', next: 'Énigme suivante', fact: 'Le saviez-vous ?', earned: (a, b) => `Gagnés cette manche : ${a} / ${b}`, late: "Trop tard : le tour a changé avant que ta réponse compte. En voici une nouvelle.", checking: "Vérification de ta réponse par l'hôte…", meter: (n, of, full) => (full ? 'Main de hexes pleine : lance une farce !' : `Jauge de farce ${n}/${of} : ${of} bonnes réponses = un hex à lancer sur celui qui répond`) },
 };
 
 export class WaitGame {
@@ -50,6 +50,7 @@ export class WaitGame {
     }
     if (this.sent !== null) this.checking = true; else this.checking = false;
     const kids = [h('h3', {}, this.t.title), h('p.tiny.dim', {}, this.t.sub(PUZZLE_RULES.roundCap, PUZZLE_RULES.gameCap)), h('p.tiny.mute', {}, this.t.earned(roundBonus, PUZZLE_RULES.roundCap))];
+    if (s.mode === 'versus' && s.config.cardsEnabled) kids.push(h('p.tiny.mute', {}, this.t.meter((pz.meter ?? 0), 3, (me.hexHand ?? []).length >= 3)));
     if (this.feedback) {
       const f = this.feedback;
       kids.push(

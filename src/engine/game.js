@@ -15,8 +15,19 @@ import { computeOutcome, previewStake, timerFor, nextStreak, runScore } from './
 import { buildRound, roundInfo, roundCategories } from './rounds.js';
 import { statCategory } from './bank.js';
 import { checkPuzzle, PUZZLE_RULES } from './minigame.js';
+import { HEXES, STARTER_HEXES, HEX_NUMBERS, tierForStreak, drawHex, usableHexes, missionsFor } from './hexes.js';
 
 export const STATE_VERSION = 1;
+
+function hexOwned(p) {
+  return [...new Set([...(Array.isArray(p.ownedHexes) ? p.ownedHexes.filter((h) => HEXES[h]) : []), ...STARTER_HEXES])];
+}
+function hexDeck(p, mode) {
+  const owned = hexOwned(p);
+  const want = (Array.isArray(p.hexDeck) ? p.hexDeck : []).filter((h, i, a) => owned.includes(h) && a.indexOf(h) === i);
+  const deck = usableHexes(want.length ? want : owned, mode).slice(0, HEX_NUMBERS.deckSize);
+  return deck.length ? deck : usableHexes(STARTER_HEXES, mode).slice(0, HEX_NUMBERS.deckSize);
+}
 
 /** Everything the reducer needs besides state: the bank and a clock. */
 export function makeContext(questions, now = () => Date.now()) {
@@ -67,9 +78,10 @@ export function createGame({ mode, players, ctx, seed, sessionId, overrides = {}
   const config = buildConfig(mode, overrides);
   if (config.themes) config.today = ctx.now();
   const gameSeed = seed ?? randomSeed();
+  const sessionIdFinal = sessionId ?? `s_${ctx.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`;
   const s = {
     version: STATE_VERSION,
-    sessionId: sessionId ?? `s_${ctx.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`,
+    sessionId: sessionIdFinal,
     mode,
     seed: gameSeed,
     rngState: Rng.fromSeed(gameSeed).state,
@@ -112,7 +124,13 @@ export function createGame({ mode, players, ctx, seed, sessionId, overrides = {}
         jammed: false,
         siphonedBy: null,
         pendingHexes: [],
-        puzzle: { n: 0, round: -1, roundBonus: 0, gameBonus: 0 },
+        hexOwned: hexOwned(p),
+        hexDeck: hexDeck(p, mode),
+        hexHand: [],
+        shield: null,
+        stats: { hexesPlayed: 0, chipsStolen: 0, dareWins: 0, puzzlesSolved: 0, blocked: 0 },
+        missions: missionsFor(Rng.fromSeed(`${sessionIdFinal}:${p.id}:missions`)),
+        puzzle: { n: 0, round: -1, roundBonus: 0, gameBonus: 0, meter: 0 },
         shopBought: {},
         roundsCleared: 0,
         bossesCleared: 0,
@@ -196,7 +214,7 @@ function openQuestion(s, ctx) {
   const order = q.type === 'tf'
     ? q.choices.map((_, i) => i)
     : withRng(s, (rng) => rng.shuffle(q.choices.map((_, i) => i)));
-  s.q = { questionId: q.id, order, byPlayer: {} };
+  s.q = { questionId: q.id, order, byPlayer: {}, hexBy: [] };
   for (const p of s.players) {
     s.q.byPlayer[p.playerId] = {
       phase: 'waiting',
@@ -397,49 +415,105 @@ const HANDLERS = {
         else target.siphonedBy = p.playerId;
         break;
       }
-      case 'ink_blast':
-      case 'goo_splat':
-      case 'quake':
-      case 'blur_out':
-      case 'flip_table':
-      case 'pickpocket':
-      case 'heist':
-      case 'kraken': {
-        const targetId = a.targetId ?? p.playerId;
-        const target = playerOf(s, targetId);
-        if (!target) return { ok: false, reason: 'choose a target' };
-        const self = target.playerId === p.playerId;
-        if (self && card.targets === 'rival') return { ok: false, reason: `${card.name} needs a rival` };
-        if (!self && s.mode !== 'versus') return { ok: false, reason: 'rivals only exist in Versus' };
-        const effects = card.hex ? card.hex.split('+') : [];
-        let stolen = 0;
-        if (card.steal) {
-          const want = card.steal === 'pickpocket' ? CARD_NUMBERS.pickpocketChips
-            : card.steal === 'kraken' ? CARD_NUMBERS.krakenChips
-              : Math.max(CARD_NUMBERS.heistMin, Math.min(CARD_NUMBERS.heistMax, Math.round(target.chips * CARD_NUMBERS.heistShare)));
-          stolen = Math.min(want, target.chips);
-          target.chips -= stolen;
-          p.chips += stolen;
-          if (card.steal === 'heist') p.chips = Math.max(0, p.chips - CARD_NUMBERS.heistCost);
-        }
-        if (effects.length) {
-          if (self) {
-            for (const e of effects) qp.hexes.push({ fx: e, by: p.playerId });
-          } else {
-            for (const e of effects) target.pendingHexes.push({ fx: e, by: p.playerId });
-            target.pendingHexes = target.pendingHexes.slice(-CARD_NUMBERS.maxPendingHexes);
-          }
-        }
-        s.hexSeq = (s.hexSeq ?? 0) + 1;
-        s.lastHex = { seq: s.hexSeq, cardId: card.id, by: p.playerId, target: target.playerId, self, effects, stolen };
-        break;
-      }
       default:
         return { ok: false, reason: 'card has no effect' };
     }
     if (isRun) p.runCharges[card.id] -= 1;
     else p.charges[card.id] -= 1;
     qp.usedCards.push(card.id);
+  },
+
+  SET_HEXDECK(s, a) {
+    if (s.phase !== 'loadout') return { ok: false, reason: 'not in loadout phase' };
+    const p = playerOf(s, a.playerId);
+    if (!p) return { ok: false, reason: 'unknown player' };
+    const deck = [...new Set(Array.isArray(a.deck) ? a.deck : [])];
+    if (deck.length > HEX_NUMBERS.deckSize) return { ok: false, reason: `a hex deck holds ${HEX_NUMBERS.deckSize}` };
+    if (deck.some((id) => !p.hexOwned.includes(id) || !usableHexes([id], s.mode).length)) return { ok: false, reason: 'hex not available' };
+    p.hexDeck = deck.length ? deck : usableHexes(STARTER_HEXES, s.mode).slice(0, HEX_NUMBERS.deckSize);
+  },
+
+  /** Play a hex from your hand. The turn player plays before staking; everyone else can prank the turn player live. */
+  USE_HEX(s, a) {
+    if (!s.config.cardsEnabled) return { ok: false, reason: 'no hexes in this mode' };
+    if (s.phase !== 'stake' && s.phase !== 'question') return { ok: false, reason: 'cannot play a hex now' };
+    const p = playerOf(s, a.playerId);
+    const hex = HEXES[a.hexId];
+    if (!p || !hex) return { ok: false, reason: 'unknown hex' };
+    const at = p.hexHand.indexOf(hex.id);
+    if (at < 0) return { ok: false, reason: 'that hex is not in your hand' };
+    const turn = turnPlayer(s);
+    const myTurn = turn.playerId === p.playerId;
+    if (s.q.hexBy.includes(p.playerId)) return { ok: false, reason: 'one hex per question' };
+    const qpTurn = s.q.byPlayer[turn.playerId];
+
+    if (hex.kind === 'defense') {
+      if (p.shield) return { ok: false, reason: 'you already have a shield up' };
+      p.shield = hex.shield;
+      if (hex.shield === 'cloth') {
+        p.pendingHexes = [];
+        const qp = s.q.byPlayer[p.playerId];
+        if (qp) qp.hexes = [];
+      }
+      p.hexHand.splice(at, 1);
+      s.q.hexBy.push(p.playerId);
+      s.hexSeq = (s.hexSeq ?? 0) + 1;
+      s.lastHex = { seq: s.hexSeq, hexId: hex.id, by: p.playerId, target: p.playerId, self: true, effects: [], stolen: 0, blocked: null, live: false, at: p.playerId };
+      p.stats.hexesPlayed += 1;
+      return;
+    }
+
+    const targetId = a.targetId ?? p.playerId;
+    const target = playerOf(s, targetId);
+    if (!target) return { ok: false, reason: 'choose a target' };
+    const self = target.playerId === p.playerId;
+    if (self && hex.targets === 'rival') return { ok: false, reason: `${hex.name} needs a rival` };
+    if (!self && s.mode !== 'versus') return { ok: false, reason: 'rivals only exist in Versus' };
+    if (!myTurn) {
+      // A prank from the sidelines: it hits the player who is answering right now.
+      if (self || target.playerId !== turn.playerId) return { ok: false, reason: 'while you wait you can only hex the player who is answering' };
+    } else if (s.phase !== 'stake') {
+      return { ok: false, reason: 'play hexes before you stake' };
+    }
+    const live = !myTurn && target.playerId === turn.playerId;
+
+    let victim = target;
+    let attacker = p;
+    let blocked = null;
+    if (!self && target.shield) {
+      blocked = target.shield;
+      target.shield = null;
+      target.stats.blocked += 1;
+      if (blocked === 'mirror') { victim = p; attacker = target; }
+    }
+    let stolen = 0;
+    let effects = hex.fx ?? [];
+    if (blocked === 'sponge' || blocked === 'cloth') effects = [];
+    if (hex.steal && blocked !== 'sponge' && blocked !== 'cloth') {
+      const want = hex.steal === 'pickpocket' ? CARD_NUMBERS.pickpocketChips
+        : hex.steal === 'kraken' ? CARD_NUMBERS.krakenChips
+          : Math.max(CARD_NUMBERS.heistMin, Math.min(CARD_NUMBERS.heistMax, Math.round(victim.chips * CARD_NUMBERS.heistShare)));
+      stolen = Math.min(want, victim.chips);
+      victim.chips -= stolen;
+      attacker.chips += stolen;
+      if (hex.steal === 'heist') attacker.chips = Math.max(0, attacker.chips - CARD_NUMBERS.heistCost);
+      attacker.stats.chipsStolen += stolen;
+    }
+    if (effects.length) {
+      const vqp = s.q.byPlayer[victim.playerId];
+      const applyNow = victim.playerId === turn.playerId && (s.phase === 'question' || (self && s.phase === 'stake') || (live && s.phase === 'stake'));
+      if (applyNow && vqp) for (const e of effects) vqp.hexes.push({ fx: e, by: attacker.playerId });
+      else {
+        for (const e of effects) victim.pendingHexes.push({ fx: e, by: attacker.playerId });
+        victim.pendingHexes = victim.pendingHexes.slice(-CARD_NUMBERS.maxPendingHexes);
+      }
+    }
+    p.hexHand.splice(at, 1);
+    s.q.hexBy.push(p.playerId);
+    p.stats.hexesPlayed += 1;
+    s.hexSeq = (s.hexSeq ?? 0) + 1;
+    s.lastHex = { seq: s.hexSeq, hexId: hex.id, by: p.playerId, target: victim.playerId, self, effects, stolen, blocked, live, at: target.playerId };
+    void qpTurn;
   },
 
   /** Waiting-room puzzle: the seed is derived from state, so the host can regenerate and judge it. */
@@ -461,6 +535,16 @@ const HANDLERS = {
     p.chips += gain; pz.roundBonus += gain; pz.gameBonus += gain;
     pz.last = { n: pz.n, ok, gain }; // per player, so two players answering at once never read each other's result
     s.puzzleSeq = (s.puzzleSeq ?? 0) + 1;
+    if (ok) {
+      p.stats.puzzlesSolved += 1;
+      pz.meter = (pz.meter ?? 0) + (level === 3 ? 2 : 1);
+      while (pz.meter >= HEX_NUMBERS.puzzlesPerPrank && p.hexHand.length < HEX_NUMBERS.handMax) {
+        pz.meter -= HEX_NUMBERS.puzzlesPerPrank;
+        const id = drawHex(Rng.fromSeed(`${s.sessionId}:${p.playerId}:hex:${(s.earnSeq ?? 0) + 1}`), p.hexDeck, 'common', s.mode);
+        if (id) { p.hexHand.push(id); s.lastEarn = { seq: (s.earnSeq = (s.earnSeq ?? 0) + 1), playerId: p.playerId, hexId: id, tier: 'common', from: 'puzzles' }; }
+      }
+      if (p.hexHand.length >= HEX_NUMBERS.handMax) pz.meter = Math.min(pz.meter, HEX_NUMBERS.puzzlesPerPrank - 1);
+    }
   },
 
   CONFIRM_STAKE(s, a, ctx) {
@@ -641,6 +725,14 @@ function resolveAnswer(s, ctx, p, { correct, timeout, elapsedMs, choice = null }
   const shielded = Boolean(qp.armed.streakShield);
   p.streak = nextStreak(p.streak, correct, shielded);
   p.longestStreak = Math.max(p.longestStreak, p.streak);
+  if (correct && qp.hexes?.some((x) => x.by === p.playerId)) p.stats.dareWins += 1;
+  if (correct && s.config.cardsEnabled) {
+    const tier = tierForStreak(p.streak);
+    if (tier && p.hexHand.length < HEX_NUMBERS.handMax) {
+      const id = drawHex(Rng.fromSeed(`${s.sessionId}:${p.playerId}:hex:${(s.earnSeq ?? 0) + 1}`), p.hexDeck, tier, s.mode);
+      if (id) { p.hexHand.push(id); s.lastEarn = { seq: (s.earnSeq = (s.earnSeq ?? 0) + 1), playerId: p.playerId, hexId: id, tier, from: 'streak' }; }
+    }
+  }
 
   let strikeLost = false;
   if (!correct && boss?.strikeOnWrong) {

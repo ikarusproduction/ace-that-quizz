@@ -35,7 +35,7 @@ function difficultyWeights(act, boss) {
  * Pick one question. Prefers: right category and difficulty, not used this run,
  * not recently seen. Widens gradually instead of ever failing.
  */
-export function pickQuestion({ pool, rng, difficulty, usedIds, avoidIds = new Set(), minDifficulty = 1, seen = null }) {
+export function pickQuestion({ pool, rng, difficulty, usedIds, avoidIds = new Set(), minDifficulty = 1, seen = null, fallbackPool = null }) {
   const ok = (q, { fresh, exact }) =>
     (!exact || q.difficulty === difficulty) &&
     q.difficulty >= minDifficulty &&
@@ -61,6 +61,14 @@ export function pickQuestion({ pool, rng, difficulty, usedIds, avoidIds = new Se
         candidates = candidates.filter((q) => (seen[q.id] ?? 0) === least);
       }
       return rng.pick(candidates);
+    }
+  }
+  // A small category can run dry in a long run. Borrow an unused question from anywhere before ever repeating one.
+  if (fallbackPool) {
+    const spare = fallbackPool.filter((q) => !usedIds.has(q.id) && q.difficulty >= minDifficulty);
+    if (spare.length) {
+      const best = Math.min(...spare.map((q) => Math.abs(q.difficulty - difficulty)));
+      return rng.pick(spare.filter((q) => Math.abs(q.difficulty - difficulty) === best));
     }
   }
   // Last resort: allow repeats rather than failing a round.
@@ -127,7 +135,7 @@ export function buildRound({ questions, rng, roundIndex, config, usedIds, avoidI
   const slots = [];
   for (const def of slotDefs) {
     const difficulty = Number(rng.weighted(weights));
-    const q = pickQuestion({ pool: def.pool, rng, difficulty, usedIds: used, avoidIds, minDifficulty: boss?.minDifficulty ?? 1, seen });
+    const q = pickQuestion({ pool: def.pool, rng, difficulty, usedIds: used, avoidIds, minDifficulty: boss?.minDifficulty ?? 1, seen, fallbackPool: questions });
     if (!q) throw new Error(`Question bank has no questions for category "${def.key}"`);
     used.add(q.id);
     slots.push({ category: themed ? statCategory(q) : def.key, theme: themed ? def.key : null, difficulty, questionId: q.id });

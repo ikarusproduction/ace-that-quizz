@@ -22,7 +22,7 @@ def newphone(b, name, lang='en'):
     pg.on('console', lambda m: errors.append((name, m.text)) if m.type == 'error' and 'Failed to load resource' not in m.text else None)
     pg.on('pageerror', lambda e: errors.append((name, str(e))))
     pg.goto(BASE); pg.wait_for_selector('input[type=password]'); pg.fill('input[type=password]','sesame'); pg.click('button:text-is("Enter")'); pg.wait_for_selector('.menu')
-    pg.evaluate("async([n,l])=>{await window.__app.repo.createProfile({name:n, language:l});}", [name, lang])
+    pg.evaluate("async([n,l])=>{const p = await window.__app.repo.createProfile({name:n, language:l}); await window.__app.repo.setHexDeck(p.id, ['ink_blast']);}", [name, lang])
     return pg
 try:
     with sync_playwright() as p:
@@ -73,6 +73,8 @@ try:
         for rnd in range(5):
             # both waiters answer CORRECTLY at (almost) the same moment
             for n in waiters:
+                if phones[n].locator('.reveal-overlay .btn').count(): phones[n].locator('.reveal-overlay .btn').click(no_wait_after=True); time.sleep(.3)
+            for n in waiters:
                 phones[n].evaluate("() => { const w = document.querySelector('.waitgame').__wg; document.querySelectorAll('.waitgame .col.gap-s .btn')[w.cur.answerIndex].click(); }")
             for n in waiters:
                 try: phones[n].wait_for_selector('.waitgame .big', timeout=15000)
@@ -82,7 +84,32 @@ try:
                 print(rnd, n, txt.replace(chr(10), ' '))
                 assert re.search(r'Correct|Bonne', txt) and 'Not quite' not in txt and 'Rat' not in txt, (n, txt)
                 ok_total += 1
-            for n in waiters: phones[n].click('.waitgame .btn.primary')
+            time.sleep(.8)
+            for n in waiters:
+                while phones[n].locator('.reveal-overlay .btn').count(): phones[n].locator('.reveal-overlay .btn').click(no_wait_after=True); time.sleep(.5)
+                phones[n].click('.waitgame .btn.primary')
+        # 10 correct puzzles each: the prank meter must have earned each waiter a hex. Dismiss the reveals, then prank the answerer.
+        time.sleep(1.5)
+        pranker = None
+        for n in waiters:
+            if phones[n].locator('.reveal-overlay .btn').count(): phones[n].locator('.reveal-overlay .btn').click(no_wait_after=True); time.sleep(.3)
+            if phones[n].locator('.hexbar .hex-chip:not([disabled])').count() and pranker is None: pranker = n
+        print('pranker', pranker)
+        assert pranker, 'no waiter earned a prank hex'
+        turn = [n for n in phones if n not in waiters][0]
+        phones[pranker].screenshot(path='/tmp/prank-hand.png')
+        chips0 = int(re.search(r'\n(\d+)\n', phones[turn].inner_text('.hud')).group(1))
+        chip_name = phones[pranker].locator('.hexbar .hex-chip:not([disabled])').first.inner_text().split(chr(10))[0]
+        phones[pranker].locator('.hexbar .hex-chip:not([disabled])').first.click(no_wait_after=True)
+        time.sleep(2)
+        # the answerer locks a stake and must see the hex on the question
+        phones[turn].evaluate(DRIVE); time.sleep(2.5)
+        chips1 = int(re.search(r'\n(\d+)\n', phones[turn].inner_text('.hud')).group(1))
+        hexed = phones[turn].locator('.hex-tag').count() or phones[turn].locator('.hex-blot').count() or chips1 < chips0
+        print('prank', chip_name, 'victim chips', chips0, '->', chips1)
+        phones[turn].screenshot(path='/tmp/prank-victim.png')
+        print('victim sees hex', bool(hexed))
+        assert hexed, 'the answerer did not see the prank'
         assert not errors, errors
         print('OK', ok_total); b.close()
 finally:

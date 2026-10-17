@@ -168,6 +168,12 @@ const SPRITES = {
   squid: { rows: [
     '............', '....kkkk....', '...kppppk...', '..kppppppk..', '..kpwkpwkpk.', '..kppppppk..',
     '..kppppppk..', '..kpkpkpkk..', '.kpk.kk.kpk.', '.kk..kk..kk.', '............', '............' ] },
+  sponge: { rows: [
+    '............', '..kkkkkkkk..', '.kyyyayyyyk.', '.kyayyyyayk.', '.kyyyyayyyk.', '.kayyyyyayk.',
+    '.kyyyayyyyk.', '.kyyyyyayyk.', '..kkkkkkkk..', '............', '............', '............' ] },
+  mirror: { rows: [
+    '............', '...kkkkkk...', '..kbwwwwbk..', '.kbwuuuubbk.', '.kbwuuubbbk.', '.kbwuubbbbk.',
+    '.kbbbbbbbbk.', '..kbbbbbbk..', '...kkkkkk...', '....kddk....', '....kddk....', '...kkkkkk...' ] },
 
   /* ------------------------------- interface ----------------------------- */
   bulb_on: { m: true, rows: [

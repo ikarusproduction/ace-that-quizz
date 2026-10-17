@@ -1,4 +1,5 @@
 // Play online: create or join a room, wait in the lobby, then the host starts the game.
+import { metaOf } from '../../storage/meta.js';
 import { h, mount } from '../dom.js';
 import { sprite } from '../pixel.js';
 import { go, goBack } from '../app.js';
@@ -44,7 +45,7 @@ export async function onlineScreen(app, params) {
     if (!s) return;
     const me = profiles.find((p) => p.id === s.me.profileId);
     const results = await app.repo.storage.getAll('results');
-    const info = { ownedCards: me?.ownedCards ?? [], seen: seenCounts(results, [s.me.profileId]), recent: recentlySeenIds(results, [s.me.profileId]) };
+    const info = { ownedCards: me?.ownedCards ?? [], ownedHexes: metaOf(me ?? {}).hexes.owned, hexDeck: metaOf(me ?? {}).hexes.deck, seen: seenCounts(results, [s.me.profileId]), recent: recentlySeenIds(results, [s.me.profileId]) };
     s.infos.set(s.me.id, info);
     if (!s.isHost) s.sendInfo(info);
   }

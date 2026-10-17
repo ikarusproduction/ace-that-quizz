@@ -8,7 +8,7 @@
  *  - 'pre-stake'   used while choosing a stake, applies to the coming question
  *  - 'in-question' used while the question is on screen
  *  - 'run'         once per run, used in-question
- * kind: 'self' helps you; 'attack' targets a rival (Versus only); 'hex' is a dirty trick on a rival or (visual hexes) yourself.
+ * kind: 'self' helps you; 'attack' targets a rival (Versus only). Hexes live in their own deck: see hexes.js.
  * uses: charges per round (or per run for timing 'run').
  */
 export const CARDS = {
@@ -158,58 +158,6 @@ export const CARDS = {
     icon: 'siphon',
     text: "If a rival's next answer is right, you take 25% of their winnings.",
     drawback: 'Versus only. Nothing happens if they miss.',
-    versusOnly: true,
-  },
-  /* ---- Hexes: dirty tricks you can play on a rival, or on yourself for a risky bonus ---- */
-  ink_blast: {
-    id: 'ink_blast', name: 'Ink Blast', rarity: 'common', kind: 'hex', timing: 'pre-stake', uses: 1, starter: true, clue: false, icon: 'ink',
-    targets: 'any', hex: 'ink',
-    text: "Squirts ink over the target's next question. They have to wipe it away to read.",
-    drawback: 'On yourself it pays +20% if you get it right. On a rival it costs them 15% of their win.',
-  },
-  goo_splat: {
-    id: 'goo_splat', name: 'Goo Splat', rarity: 'common', kind: 'hex', timing: 'pre-stake', uses: 1, starter: true, clue: false, icon: 'goo',
-    targets: 'any', hex: 'goo',
-    text: "Splats slime across the target's screen. It drips slowly.",
-    drawback: 'On yourself it pays +20% if you get it right. On a rival it costs them 15% of their win.',
-  },
-  quake: {
-    id: 'quake', name: 'Quake', rarity: 'uncommon', kind: 'hex', timing: 'pre-stake', uses: 1, starter: false, clue: false, icon: 'quake',
-    targets: 'any', hex: 'quake',
-    text: "Shakes the target's screen while they answer.",
-    drawback: 'On yourself it pays +20% if you get it right. On a rival it costs them 15% of their win.',
-  },
-  blur_out: {
-    id: 'blur_out', name: 'Blur Out', rarity: 'uncommon', kind: 'hex', timing: 'pre-stake', uses: 1, starter: false, clue: false, icon: 'blur',
-    targets: 'any', hex: 'blur',
-    text: "Blurs the target's answers until they tap to focus.",
-    drawback: 'On yourself it pays +20% if you get it right. On a rival it costs them 15% of their win.',
-  },
-  flip_table: {
-    id: 'flip_table', name: 'Flip the Table', rarity: 'rare', kind: 'hex', timing: 'pre-stake', uses: 1, starter: false, clue: false, icon: 'flip',
-    targets: 'any', hex: 'flip',
-    text: "Turns the target's question upside down.",
-    drawback: 'On yourself it pays +20% if you get it right. On a rival it costs them 15% of their win.',
-  },
-  pickpocket: {
-    id: 'pickpocket', name: 'Pickpocket', rarity: 'uncommon', kind: 'hex', timing: 'pre-stake', uses: 1, starter: true, clue: false, icon: 'hand',
-    targets: 'rival', steal: 'pickpocket',
-    text: 'Lifts 2 chips from a rival right now.',
-    drawback: 'Only takes what they carry in hand. Versus only.',
-    versusOnly: true,
-  },
-  heist: {
-    id: 'heist', name: 'Heist', rarity: 'rare', kind: 'hex', timing: 'pre-stake', uses: 1, starter: false, clue: false, icon: 'bag',
-    targets: 'rival', steal: 'heist',
-    text: "Robs 15% of a rival's chips (at least 3, at most 12).",
-    drawback: 'The job costs you 1 chip. Versus only.',
-    versusOnly: true,
-  },
-  kraken: {
-    id: 'kraken', name: 'The Kraken', rarity: 'legendary', kind: 'hex', timing: 'pre-stake', uses: 1, starter: false, clue: false, icon: 'squid',
-    targets: 'rival', hex: 'ink+goo+quake', steal: 'kraken',
-    text: 'Ink, slime and a quake on a rival, and it grabs 4 chips on the way out.',
-    drawback: 'Versus only. They keep their full win chance.',
     versusOnly: true,
   },
 };

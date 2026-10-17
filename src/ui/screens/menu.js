@@ -5,6 +5,8 @@ import { lightsOn, setMood } from '../lighting.js';
 import { sfx, unlockAudio } from '../audio.js';
 import { confirmDialog, toast } from '../components.js';
 import { dispatch } from '../../engine/game.js';
+import { metaOf } from '../../storage/meta.js';
+import { localDateKey } from '../dom.js';
 
 let introPlayed = false;
 
@@ -13,6 +15,9 @@ export async function menuScreen(app) {
   const profiles = await app.repo.listProfiles();
   const active = await app.repo.loadActiveGame();
   const rewards = await app.repo.listPendingRewards();
+  const metas = profiles.map((p) => metaOf(p));
+  const packsWaiting = metas.reduce((n, m) => n + m.packs.length, 0);
+  const dailyReady = metas.some((m) => m.daily.lastDay !== localDateKey());
 
   const el = h('div.screen', {},
     h('div.title-stage', {},
@@ -22,11 +27,13 @@ export async function menuScreen(app) {
     ),
     active ? resumeCard(app, active) : null,
     rewards.length ? h('button.btn.good.block', { type: 'button', onclick: () => go('rewards') }, sprite('key', 28), `${rewards.length} card reward${rewards.length > 1 ? 's' : ''} waiting`) : null,
+    packsWaiting ? h('button.btn.good.block', { type: 'button', onclick: () => go('hexes', { tab: 'packs' }) }, sprite('ink', 28), `${packsWaiting} hex pack${packsWaiting > 1 ? 's' : ''} to open`) : dailyReady && profiles.length ? h('button.btn.block', { type: 'button', onclick: () => go('hexes') }, sprite('flame', 28), 'Daily pack ready') : null,
     h('div.menu', {},
       menuBtn('primary', 'star', 'Play', profiles.length ? 'solo · versus · daily' : 'start here', () => go('setup')),
       menuBtn('', 'radio', 'Online', 'friends on their own phones', () => go('online')),
       menuBtn('', 'gasmask', 'Players', `${profiles.length} on this device`, () => go('profiles')),
-      menuBtn('', 'key', 'Cards', 'your collection', () => go('cards')),
+      menuBtn('', 'key', 'Cards', 'bonus collection', () => go('cards')),
+      menuBtn('', 'ink', 'Hexes', 'deck · packs · daily', () => go('hexes')),
       menuBtn('', 'science', 'Stats', 'strengths & weaknesses', () => go('stats')),
       menuBtn('', 'lock', 'Settings', 'sound · data · about', () => go('settings')),
     ),

@@ -13,6 +13,9 @@ import { RULES, HAZARDS, BOSSES, SHOP_ITEMS } from '../../engine/modifiers.js';
 import { CATEGORIES, DIFFICULTIES } from '../../engine/bank.js';
 import { haptic, confetti, coinBurst, stamp, streakHype } from '../fx.js';
 import { splash, clearHexFx, unblurOnFirstTap } from '../hexfx.js';
+import { cardReveal, rarityFx } from '../rarityfx.js';
+import { HEXES, HEX_NUMBERS, STREAK_TIERS, tierForStreak, packsEarned, evaluateMissions, usableHexes } from '../../engine/hexes.js';
+import { metaOf } from '../../storage/meta.js';
 import { WaitGame } from '../waitgame.js';
 import { languageOf } from '../../i18n/languages.js';
 import { createTranslator, applyTranslation } from '../../i18n/translate.js';
@@ -129,7 +132,7 @@ class GameController {
         const info = infos.get(m.id);
         for (const [id, n] of Object.entries(info?.seen ?? {})) if (typeof n === 'number' && this.ctx.byId.has(id)) seen[id] = (seen[id] ?? 0) + Math.min(n, 50);
         for (const id of (info?.recent ?? []).slice(0, 150)) avoid.add(id);
-        return { id: pid, name: m.name, ownedCards: valid(info?.ownedCards) };
+        return { id: pid, name: m.name, ownedCards: valid(info?.ownedCards), ownedHexes: info?.ownedHexes, hexDeck: info?.hexDeck };
       });
       this.state = createGame({
         mode: 'versus', players, ctx: app.ctx,
@@ -286,7 +289,7 @@ class GameController {
       const avoidIds = mode === 'daily' ? [] : recentlySeenIds(results, ids);
       this.state = createGame({
         mode,
-        players: players.map((p) => ({ id: p.id, name: p.name, ownedCards: p.ownedCards })),
+        players: players.map((p) => ({ id: p.id, name: p.name, ownedCards: p.ownedCards, ownedHexes: metaOf(p).hexes.owned, hexDeck: metaOf(p).hexes.deck })),
         ctx: app.ctx,
         seed: mode === 'daily' ? `daily-${localDateKey()}` : undefined,
         overrides: { ...(params.mode === 'quick' ? { acts: 1 } : {}), ...(params.themes && mode !== 'daily' ? { themes: params.themes } : {}) },
@@ -387,6 +390,11 @@ class GameController {
     await this.saveChain;
     try {
       await this.app.repo.addPendingRewards(offers);
+      for (const p of s.players.filter((x) => !this.net || this.myIds.includes(x.playerId))) {
+        const list = packsEarned(s, p.playerId).map((type, i) => ({ id: `${s.sessionId}:${p.playerId}:g${i}`, type, from: i === 0 ? 'Game pack' : i === 1 ? 'Great game' : 'Streak master' }));
+        for (const m of evaluateMissions(s, p.playerId, p.missions ?? []).filter((x) => x.done)) list.push({ id: `${s.sessionId}:${p.playerId}:m:${m.id}`, type: 'bronze', from: `Mission: ${m.text}` });
+        await this.app.repo.addPacks(p.playerId, list);
+      }
     } catch (e) {
       this.reportSaveError(e);
     }
@@ -427,17 +435,145 @@ class GameController {
     notes.forEach((n) => toast(n));
   }
 
-  /** Tell a player when a rival hexed them (each hex is announced once per phone). */
+  /** Announce hexes (once per phone) and the hexes this player just earned. */
   noticeHex() {
-    const hx = this.s.lastHex;
-    if (this.seenHexSeq === undefined) { this.seenHexSeq = hx?.seq ?? 0; return; }
-    if (!hx || hx.seq <= this.seenHexSeq) return;
-    this.seenHexSeq = hx.seq;
-    if (!this.net || hx.self || !this.myIds.includes(hx.target)) return;
-    const by = this.s.players.find((x) => x.playerId === hx.by)?.name ?? 'A rival';
-    this.notes.push(`${by} played ${CARDS[hx.cardId].name} on you${hx.stolen ? ` and took ${hx.stolen} chips` : ''}!`);
-    sfx.wrong?.();
-    haptic('warn');
+    const s = this.s;
+    const hx = s.lastHex;
+    if (this.seenHexSeq === undefined) this.seenHexSeq = hx?.seq ?? 0;
+    else if (hx && hx.seq > this.seenHexSeq) {
+      this.seenHexSeq = hx.seq;
+      if (this.net) {
+        const name = (id) => s.players.find((x) => x.playerId === id)?.name ?? 'Someone';
+        const hex = HEXES[hx.hexId];
+        const iBy = this.myIds.includes(hx.by); const iAt = this.myIds.includes(hx.at);
+        const bits = [];
+        if (hex.kind === 'defense') bits.push(iBy ? `${hex.name} is up. Your next hex-hit is covered.` : `${name(hx.by)} raised a ${hex.name}.`);
+        else if (iBy) bits.push(`You played ${hex.name} on ${name(hx.at)}${hx.stolen ? ` and took ${hx.stolen} chips` : ''}.`);
+        else if (iAt) bits.push(`${name(hx.by)} played ${hex.name} on you${hx.stolen ? ` and took ${hx.stolen} chips` : ''}!`);
+        else bits.push(`${name(hx.by)} played ${hex.name} on ${name(hx.at)}.`);
+        if (hx.blocked) bits.push(hx.blocked === 'mirror' ? 'A Mirror bounced it back!' : `It was soaked up by a ${hx.blocked === 'cloth' ? 'Wet Cloth' : 'Sponge'}.`);
+        this.notes.push(bits.join(' '));
+        if (hx.blocked || hex.kind === 'defense') sfx.shield?.(); else if (iAt && !iBy) { sfx.splat?.(); haptic('warn'); } else if (hx.stolen) sfx.steal?.();
+      }
+    }
+    // Hexes earned by a streak or by puzzles: a reveal, shown only to the player who earned it.
+    const ea = s.lastEarn;
+    if (this.seenEarnSeq === undefined) { this.seenEarnSeq = ea?.seq ?? 0; return; }
+    if (ea && ea.seq > this.seenEarnSeq) {
+      this.seenEarnSeq = ea.seq;
+      if (!this.net || this.myIds.includes(ea.playerId)) {
+        const who = s.players.find((x) => x.playerId === ea.playerId)?.name;
+        const show = () => cardReveal(ea.hexId, { title: ea.from === 'puzzles' ? 'Prank earned' : `Streak! ${HEXES[ea.hexId].rarity} hex`, sub: `${this.net || !this.passPhone ? '' : `${who}: `}Added to your hand. Play it before a stake${this.net ? ', or prank the answerer while you wait' : ''}.` });
+        if (this.passPhone) {
+          // One shared phone: never show a hex to the next player. It is revealed when its owner's turn comes back.
+          (this.earnQueue ??= {})[ea.playerId] = [...((this.earnQueue ??= {})[ea.playerId] ?? []), show];
+          this.notes.push(`${who} earned a hex! They see it on their next turn.`);
+        } else setTimeout(() => { if (!this.disposed) show(); }, 350);
+      }
+    }
+  }
+
+  /* ------------------------------------------------------------ hexes */
+
+  /** Next streak that earns a hex, with its rarity. */
+  nextStreakTier(streak) {
+    let n = streak + 1;
+    while (!tierForStreak(n)) n += 1;
+    return { at: n, rarity: tierForStreak(n) };
+  }
+
+  /** The player's hex hand: tap a hex to play it. `where` is 'stake', 'question' or 'waiting'. */
+  hexBar(where) {
+    const s = this.s;
+    if (!s.config.cardsEnabled) return null;
+    const me = this.net ? this.myPlayer : this.turnPlayer;
+    if (!me || me.defeated) return null;
+    const turn = this.turnPlayer;
+    const myTurn = me.playerId === turn.playerId;
+    const next = this.nextStreakTier(me.streak);
+    const hand = me.hexHand ?? [];
+    const full = hand.length >= HEX_NUMBERS.handMax;
+    const usedThisQ = s.q?.hexBy?.includes(me.playerId);
+    const chips = hand.map((id, i) => {
+      const hx = HEXES[id];
+      let why = null;
+      if (usedThisQ) why = 'One per question';
+      else if (hx.kind === 'defense') why = me.shield ? 'Shield is up' : null;
+      else if (hx.versusOnly && s.mode !== 'versus') why = 'Versus only';
+      else if (myTurn && s.phase !== 'stake') why = 'Before staking';
+      else if (!myTurn && s.mode !== 'versus') why = 'Versus only';
+      return h('button.card-mini.hex-chip', { type: 'button', class: hx.rarity, disabled: Boolean(why), title: `${hx.text} ${hx.drawback}`, onclick: () => this.useHex(id, i) },
+        sprite(hx.icon, 28), h('span', {}, hx.name, h('small', {}, why ?? (hx.kind === 'defense' ? 'Shield' : !myTurn ? `Prank ${turn.name}` : hx.targets === 'rival' ? 'On a rival' : 'You or a rival'))));
+    });
+    return h('div.col.gap-s.hexbar', {},
+      h('div.row.between', {}, h('div.tiny.dim', {}, where === 'waiting' ? 'Your hexes · prank the player answering' : 'Your hexes'), h('span.tiny.mute', {}, full ? 'Hand full' : `Streak ${me.streak} · next hex at ${next.at}`)),
+      me.shield ? h('p.tiny.green', {}, `Shield up: ${me.shield === 'mirror' ? 'Mirror' : me.shield === 'cloth' ? 'Wet Cloth' : 'Sponge'}. It catches the next hex played on you.`) : null,
+      chips.length ? h('div.cards-bar', {}, chips) : h('p.tiny.mute', {}, `No hex yet. Streak of ${next.at} earns a ${next.rarity} one, drawn from your hex deck.${where === 'waiting' && s.mode === 'versus' ? ' Solving puzzles fills a prank meter too.' : ''}`),
+    );
+  }
+
+  async useHex(id) {
+    const s = this.s;
+    const hex = HEXES[id];
+    const me = this.net ? this.myPlayer : this.turnPlayer;
+    const turn = this.turnPlayer;
+    unlockAudio();
+    let targetId;
+    if (hex.kind !== 'defense') {
+      if (me.playerId !== turn.playerId) targetId = turn.playerId;
+      else {
+        const options = [];
+        if (hex.targets !== 'rival') options.push({ playerId: me.playerId, label: 'Yourself', note: 'A dare: +20% if you still answer right' });
+        if (s.mode === 'versus') for (const r of s.players) if (r.playerId !== me.playerId) options.push({ playerId: r.playerId, label: r.name, note: hex.steal ? '' : '−15% on their win' });
+        if (!options.length) return toast('No valid target');
+        targetId = options[0].playerId;
+        if (options.length > 1) {
+          targetId = await modal((close) => [
+            h('h2', {}, hex.name), h('p', {}, hex.text), h('p.small.dim', {}, `Drawback: ${hex.drawback}`),
+            h('div.col.gap-s', {}, options.map((o) => h('button.pick', { type: 'button', onclick: () => close(o.playerId) }, avatar(this.profileOf(o.playerId), 32), h('span.name.profile-row', { style: { fontFamily: 'var(--font-display)', fontSize: '22px', fontWeight: 800, textTransform: 'uppercase' } }, o.label), o.note ? h('span.tiny.dim', {}, o.note) : null))),
+            h('button.btn.ghost.block', { type: 'button', onclick: () => close(undefined) }, 'Cancel'),
+          ]);
+          if (!targetId) return;
+        }
+      }
+    }
+    if (this.act({ type: 'USE_HEX', playerId: me.playerId, hexId: id, targetId })) {
+      const hx = this.s.lastHex;
+      if (hex.kind === 'defense') sfx.shield?.(); else if (hx?.stolen) { sfx.steal?.(); floatText?.(`+${hx.stolen}`); } else sfx.splat?.();
+      rarityFx(hex.rarity);
+      haptic('big');
+      if (!this.net) {
+        const tn = this.s.players.find((x) => x.playerId === (hx?.at ?? targetId))?.name;
+        toast(hex.kind === 'defense' ? `${hex.name} is up` : `${hex.name} on ${tn}${hx?.stolen ? ` · took ${hx.stolen} chips` : ''}${hx?.blocked ? ' · blocked!' : ''}`);
+      }
+    }
+  }
+
+  /** The three missions of this game: each one finished is a free Bronze Pack at the end. */
+  missionsPanel(p) {
+    const list = evaluateMissions(this.s, p.playerId, p.missions ?? []);
+    if (!list.length) return null;
+    return h('div.panel.tight', {},
+      h('div.row.between', {}, h('h3', {}, 'Missions'), h('span.tiny.dim', {}, 'each = 1 free pack')),
+      ...list.map((m) => h('div.kv', {}, h('span', {}, `${m.done ? '✔' : '○'} ${m.text}`), h('b', { class: m.done ? 'green' : 'dim' }, m.done ? 'done' : ''))));
+  }
+
+  /** Hex deck editor shown with the loadout: four hexes per game, drawn when you earn streaks. */
+  hexDeckSection(p) {
+    const s = this.s;
+    const owned = usableHexes(p.hexOwned ?? [], s.mode);
+    const rest = owned.filter((id) => !p.hexDeck.includes(id));
+    const mine = !this.net || this.myIds.includes(p.playerId);
+    const set = (deck) => {
+      this.act({ type: 'SET_HEXDECK', playerId: p.playerId, deck }, { silent: false });
+      if (mine) this.app.repo.setHexDeck(p.playerId, deck).catch(() => {});
+    };
+    return [
+      h('div.row.between', {}, h('h3', {}, 'Hex deck'), h('span.tiny.dim', {}, `${p.hexDeck.length}/${HEX_NUMBERS.deckSize} · earned by streaks`)),
+      h('p.tiny.dim', {}, 'Streak 2 earns a common hex, 4 an uncommon, 6 a rare, 8 a legendary, drawn from this deck. Tap to swap.'),
+      h('div.reward-grid', {}, p.hexDeck.map((id) => cardTile(id, { selected: true, compact: true, onclick: () => set(p.hexDeck.filter((x) => x !== id)) }))),
+      rest.length ? h('div.reward-grid', {}, rest.map((id) => cardTile(id, { compact: true, onclick: () => (p.hexDeck.length >= HEX_NUMBERS.deckSize ? toast('The deck is full. Tap a deck hex to remove it.') : set([...p.hexDeck, id])) }))) : null,
+    ];
   }
 
   setMoodForState() {
@@ -554,6 +690,7 @@ class GameController {
         h('p.dim', {}, member && !member.connected ? 'lost connection… waiting for them to come back (the game moves on after a minute)' : `${doing}…`),
         h('div.tiny.mute', {}, 'The question stays hidden until everyone has answered.'),
       ),
+      this.hexBar('waiting'),
       this.waitGameEl(),
       h('div.standings', {}, [...s.players].sort((a, b) => b.chips + b.vault - (a.chips + a.vault)).map((pl) => h('div.panel.tight.row', { class: pl.playerId === p.playerId ? 'now' : '' }, avatar(this.profileOf(pl.playerId), 16), h('b.grow', {}, pl.name), h('span.pill', {}, sprite('chip', 16), pl.chips)))),
     ];
@@ -608,7 +745,9 @@ class GameController {
             h('div.reward-grid', {}, hand.map((id) => cardTile(id, { onclick: equip }))),
             !owned.length ? h('p.small.dim', {}, 'No cards available in this mode yet. Win cards by finishing games.') : null,
           ]
-        : h('p.small.dim.center', {}, 'No bonus cards in the Daily, so everyone plays the same game.'),
+        : h('p.small.dim.center', {}, 'No bonus cards or hexes in the Daily, so everyone plays the same game.'),
+      s.config.cardsEnabled ? this.hexDeckSection(p) : null,
+      s.config.cardsEnabled ? this.missionsPanel(p) : null,
       this.net && !this.net.isHost
         ? h('div.stick-bottom', {}, h('p.small.dim.center', {}, 'Equip your cards. The host starts the round.'))
         : h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', onclick: () => { unlockAudio(); sfx.stake(); if (round.isBoss) sfx.boss(); this.gateKey = null; this.act({ type: 'START_ROUND' }); if (round.isBoss || round.hazardId === 'cold_table') lightsOn({ sound: false }); } }, round.isBoss ? 'Face the boss' : 'Start round')),
@@ -640,6 +779,8 @@ class GameController {
     if (this.passPhone && this.gateKey !== this.turnKey()) return this.gate(p, `${this.roundTitle()} · question ${s.qIndex + 1} of 5. Make sure the others look away from the screen.`);
 
     this.ensureTranslation(p.playerId).then(() => {});
+    const queued = this.earnQueue?.[p.playerId];
+    if (queued?.length) { this.earnQueue[p.playerId] = []; setTimeout(() => queued.forEach((f) => f()), 250); }
     const view = this.view(p.playerId);
     const options = getStakeOptions(s, this.ctx, p.playerId);
     const boss = s.round.bossId ? BOSSES[s.round.bossId] : null;
@@ -657,6 +798,7 @@ class GameController {
       h('div.cat-line', {}, categoryIcon(view.category, 20), CATEGORIES[view.category]?.label ?? view.category, h('span', { style: { marginLeft: 'auto' } }, diffPips(view.difficulty))),
       this.questionCard(view, { hidden: view.text == null, tune: view.type === 'tune' }),
       this.cardsBar('pre-stake'),
+      this.hexBar('stake'),
       h('div.row.between', {}, h('h3', {}, boss?.lockStake ? 'Stake locked' : 'Choose your stake'), h('span.tiny.dim', {}, `${p.chips} chips`)),
       p.chips <= 0 ? h('p.small.green', {}, 'You are out of chips, so this one is played for free. A correct answer still pays.') : null,
       h('div.stakes', {}, options.map((o) => h('button.stake', {
@@ -722,32 +864,6 @@ class GameController {
     const c = CARDS[id];
     const p = this.turnPlayer;
     unlockAudio();
-    if (c.kind === 'hex') {
-      const s = this.s;
-      const options = [];
-      if (c.targets !== 'rival') options.push({ playerId: p.playerId, label: 'Yourself', note: 'Risky: +20% if you still get it right' });
-      if (s.mode === 'versus') for (const r of s.players) if (r.playerId !== p.playerId) options.push({ playerId: r.playerId, label: r.name, note: c.steal ? '' : '−15% on their win' });
-      if (!options.length) return toast('No valid target');
-      let target = options[0].playerId;
-      if (options.length > 1 || c.targets !== 'rival') {
-        target = await modal((close) => [
-          h('h2', {}, c.name),
-          h('p', {}, c.text),
-          h('p.small.dim', {}, `Drawback: ${c.drawback}`),
-          h('div.col.gap-s', {}, options.map((o) => h('button.pick', { type: 'button', onclick: () => close(o.playerId) }, avatar(this.profileOf(o.playerId), 32), h('span.name.profile-row', { style: { fontFamily: 'var(--font-display)', fontSize: '22px', fontWeight: 800, textTransform: 'uppercase' } }, o.label), o.note ? h('span.tiny.dim', {}, o.note) : null))),
-          h('button.btn.ghost.block', { type: 'button', onclick: () => close(undefined) }, 'Cancel'),
-        ]);
-        if (!target) return;
-      }
-      if (this.act({ type: 'USE_CARD', playerId: p.playerId, cardId: id, targetId: target })) {
-        sfx.card();
-        const hx = this.s.lastHex;
-        const tn = this.s.players.find((x) => x.playerId === target).name;
-        toast(target === p.playerId ? `${c.name}: you dared yourself` : `${c.name} on ${tn}${hx?.stolen ? ` · took ${hx.stolen} chips` : ''}`);
-        if (hx?.stolen) { haptic('big'); floatText?.(`+${hx.stolen}`); }
-      }
-      return;
-    }
     if (c.kind === 'attack') {
       const rivals = this.s.players.filter((x) => x.playerId !== p.playerId);
       const target = await modal((close) => [
@@ -765,6 +881,7 @@ class GameController {
     }
     if (this.act({ type: 'USE_CARD', playerId: p.playerId, cardId: id })) {
       sfx.card();
+      rarityFx(c.rarity);
     }
   }
 
@@ -790,7 +907,9 @@ class GameController {
     this.bindKeys(view, choiceEls);
     const hexKey = `${s.roundIndex}:${s.qIndex}:${p.playerId}:${qp.startedAt}`;
     const hexes = view.hexes ?? [];
-    if (hexes.length && this.hexShown !== hexKey) { this.hexShown = hexKey; splash(hexes); }
+    if (this.hexShown !== hexKey) { this.hexShown = hexKey; this.hexSplashed = new Set(); }
+    const freshFx = hexes.filter((e) => !this.hexSplashed.has(e));
+    if (freshFx.length) { freshFx.forEach((e) => this.hexSplashed.add(e)); splash(freshFx); }
 
     return [
       this.hud(p),
@@ -805,6 +924,7 @@ class GameController {
       view.ghostLetter ? h('p.small.amber.center', {}, `Ghost Note: the answer starts with “${view.ghostLetter}”`) : null,
       this.choicesBox(hexes, h('div.choices', { class: isTf ? 'grid2' : '', dir: view.translated && languageOf(this.langOf(p.playerId)).rtl ? 'rtl' : null }, choiceEls)),
       this.cardsBar('question'),
+      this.hexBar('question'),
     ];
   }
 
@@ -1085,11 +1205,14 @@ class GameController {
             p.result === 'won' ? h('div.kv', {}, h('span', {}, 'Chips kept'), h('b', {}, p.chips)) : h('div.kv', {}, h('span', {}, 'Chips lost with the run'), h('b', {}, p.chips)),
           ] : null,
           !solo && done ? h('div.kv', {}, h('span', {}, 'Chips'), h('b', {}, p.chips)) : null,
+          done && (p.missions ?? []).length ? [h('div.hr'), h('div.tiny.dim', {}, 'Missions'), ...evaluateMissions(s, p.playerId, p.missions).map((m) => h('div.kv', {}, h('span', {}, `${m.done ? '✔' : '✖'} ${m.text}`), h('b', { class: m.done ? 'green' : 'dim' }, m.done ? '+1 pack' : '')))] : null,
+          done ? h('div.kv', {}, h('span', {}, 'Packs earned'), h('b', {}, `${packsEarned(s, p.playerId).length + evaluateMissions(s, p.playerId, p.missions ?? []).filter((m) => m.done).length}`)) : null,
         );
       }),
       done ? h('div.panel.good.tight.small', {}, sprite('key', 24), ' New cards are waiting for you. Claim them now or any time from the main menu.') : h('p.small.dim.center', {}, 'Your answers were kept in your statistics.'),
       h('div.stick-bottom.col', {},
         done ? h('button.btn.primary.block', { type: 'button', onclick: () => go('rewards') }, 'Claim cards') : null,
+        done ? h('button.btn.block', { type: 'button', onclick: () => go('hexes', { tab: 'packs', playerId: this.net ? this.myPlayerId : s.players[0].playerId }) }, 'Open hex packs') : null,
         h('button.btn.block', { type: 'button', onclick: () => go('setup', { mode: this.label }, { replace: true }) }, 'Play again'),
         h('div.row', {}, h('button.btn.ghost.grow', { type: 'button', onclick: () => go('stats', { playerId: s.players[0].playerId }) }, 'Stats'), h('button.btn.ghost.grow', { type: 'button', onclick: () => go('menu', {}, { replace: true }) }, 'Menu')),
       ),

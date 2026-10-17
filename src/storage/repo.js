@@ -9,6 +9,9 @@
 //  * Writing the same result twice is harmless: result ids are deterministic.
 import { isLanguage, DEFAULT_LANGUAGE } from '../i18n/languages.js';
 import { SCHEMA_VERSION, DATA_STORES } from './schema.js';
+import { metaOf, mergeMeta, daysBetween } from './meta.js';
+import { HEXES, PACKS, openPack, FORGE_COST, HEX_NUMBERS } from '../engine/hexes.js';
+import { Rng } from '../engine/rng.js';
 import { runMigrations, migrateSnapshot, SchemaError, MIGRATIONS } from './migrations.js';
 import { STARTER_CARDS, CARDS } from '../engine/cards.js';
 
@@ -136,6 +139,7 @@ export async function createRepo(storage, { now = Date.now, uuid = defaultUuid, 
         createdAt: t,
         updatedAt: t,
         ownedCards: [...STARTER_CARDS],
+        ...metaOf({}),
       };
       // A new random id can never collide with, or overwrite, an existing profile.
       await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
@@ -221,6 +225,86 @@ export async function createRepo(storage, { now = Date.now, uuid = defaultUuid, 
         { op: 'put', store: 'kv', value: { key: 'rewards', items } },
       ]);
       return profile;
+    },
+
+    /* ---------------- hexes, packs, daily ---------------- */
+
+    async getMeta(id) {
+      return metaOf(await requireProfile(id));
+    },
+
+    async setHexDeck(id, deck) {
+      const profile = await requireProfile(id);
+      const m = metaOf(profile);
+      const clean = [...new Set(deck)].filter((h) => m.hexes.owned.includes(h)).slice(0, HEX_NUMBERS.deckSize);
+      profile.hexes = { ...m.hexes, deck: clean };
+      profile.packs = m.packs; profile.daily = m.daily;
+      profile.updatedAt = now();
+      await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
+      return clean;
+    },
+
+    /** Add packs. Ids are unique per source, so awarding the same game twice never double-pays. */
+    async addPacks(id, list) {
+      const profile = await requireProfile(id);
+      const m = metaOf(profile);
+      const have = new Set(m.packs.map((k) => k.id));
+      const fresh = list.filter((k) => PACKS[k.type] && !have.has(k.id));
+      if (!fresh.length) return 0;
+      profile.hexes = m.hexes; profile.daily = m.daily;
+      profile.packs = [...m.packs, ...fresh.map((k) => ({ id: k.id, type: k.type, from: k.from ?? '' }))].slice(-60);
+      profile.updatedAt = now();
+      await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
+      return fresh.length;
+    },
+
+    /** Open one pack: the same pack id always yields the same cards. Duplicates become dust. */
+    async openPack(id, packId) {
+      const profile = await requireProfile(id);
+      const m = metaOf(profile);
+      const pack = m.packs.find((k) => k.id === packId);
+      if (!pack) throw new RepoError('NO_PACK', 'That pack has already been opened.');
+      const cards = openPack(Rng.fromSeed(`pack:${pack.id}`), pack.type, m.hexes.owned);
+      const owned = [...new Set([...m.hexes.owned, ...cards.map((c) => c.id)])];
+      const dust = m.hexes.dust + cards.reduce((n, c) => n + c.dust, 0);
+      profile.hexes = { ...m.hexes, owned, dust };
+      profile.packs = m.packs.filter((k) => k.id !== packId);
+      profile.daily = m.daily;
+      profile.updatedAt = now();
+      await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
+      return { type: pack.type, cards };
+    },
+
+    /** Spend dust to craft a hex you are missing. */
+    async forgeHex(id, hexId) {
+      const profile = await requireProfile(id);
+      const m = metaOf(profile);
+      const hex = HEXES[hexId];
+      if (!hex) throw new RepoError('BAD_HEX', 'Unknown hex.');
+      if (m.hexes.owned.includes(hexId)) throw new RepoError('HAVE_HEX', 'You already own that hex.');
+      const cost = FORGE_COST[hex.rarity];
+      if (m.hexes.dust < cost) throw new RepoError('NO_DUST', `You need ${cost} dust (you have ${m.hexes.dust}).`);
+      profile.hexes = { ...m.hexes, owned: [...m.hexes.owned, hexId], dust: m.hexes.dust - cost };
+      profile.packs = m.packs; profile.daily = m.daily;
+      profile.updatedAt = now();
+      await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
+      return profile.hexes;
+    },
+
+    /** One free pack a day. Consecutive days build a streak: day 3 and up is silver, day 7 and up is gold. */
+    async claimDaily(id, dayKey) {
+      const profile = await requireProfile(id);
+      const m = metaOf(profile);
+      if (m.daily.lastDay === dayKey) return null;
+      const gap = m.daily.lastDay ? daysBetween(m.daily.lastDay, dayKey) : null;
+      const streak = gap === 1 ? m.daily.streak + 1 : 1;
+      const type = streak >= 7 ? 'gold' : streak >= 3 ? 'silver' : 'bronze';
+      profile.hexes = m.hexes;
+      profile.daily = { lastDay: dayKey, streak };
+      profile.packs = [...m.packs, { id: `daily:${dayKey}`, type, from: `Day ${streak}` }].slice(-60);
+      profile.updatedAt = now();
+      await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
+      return { type, streak };
     },
 
     /* ---------------- recent players ---------------- */
@@ -352,6 +436,7 @@ export async function createRepo(storage, { now = Date.now, uuid = defaultUuid, 
             createdAt: Math.min(mine.createdAt, imp.createdAt),
             updatedAt: Math.max(mine.updatedAt, imp.updatedAt),
             ownedCards: [...new Set([...mine.ownedCards, ...imp.ownedCards])],
+            ...mergeMeta(mine, imp, imp.updatedAt > mine.updatedAt),
           };
           ops.push({ op: 'put', store: 'profiles', value: merged });
           summary.profilesUpdated++;
@@ -426,6 +511,7 @@ function cleanProfile(p) {
     createdAt: Number.isFinite(p.createdAt) ? p.createdAt : 0,
     updatedAt: Number.isFinite(p.updatedAt) ? p.updatedAt : 0,
     ownedCards: [...new Set([...(Array.isArray(p.ownedCards) ? p.ownedCards.filter((c) => CARDS[c]) : []), ...STARTER_CARDS])],
+    ...metaOf(p),
   };
 }
 

@@ -4,6 +4,7 @@ import { sprite, AVATAR_SPRITES, CATEGORY_SPRITES } from './pixel.js';
 import { CARDS, RARITY_ORDER } from '../engine/cards.js';
 import { CATEGORIES, DIFFICULTIES } from '../engine/bank.js';
 import { sfx } from './audio.js';
+import { HEXES } from '../engine/hexes.js';
 
 export function avatar(profileOrKey, px = 48) {
   const key = typeof profileOrKey === 'string' ? profileOrKey : profileOrKey?.avatar?.key;
@@ -40,10 +41,10 @@ export const rarityRank = (id) => RARITY_ORDER.indexOf(CARDS[id]?.rarity);
 
 /** Full card tile. opts: { charges, locked, selected, onclick, disabled, compact } */
 export function cardTile(id, opts = {}) {
-  const c = CARDS[id];
+  const c = CARDS[id] ?? HEXES[id];
   if (!c) return h('div');
   const tag = h('span.tag', { class: rarityTagClass[c.rarity] }, rarityLabel(c.rarity));
-  const when = c.kind === 'attack' ? 'Attack · Versus' : c.kind === 'hex' ? (c.targets === 'rival' ? 'Hex · rival' : 'Hex · you or a rival') : c.timing === 'pre-stake' ? 'Before staking' : c.timing === 'run' ? 'Once per run' : 'During question';
+  const when = HEXES[id] ? (c.kind === 'defense' ? 'Hex · shield' : c.targets === 'rival' ? 'Hex · rival' : 'Hex · you or a rival') : c.kind === 'attack' ? 'Attack · Versus' : c.timing === 'pre-stake' ? 'Before staking' : c.timing === 'run' ? 'Once per run' : 'During question';
   const body = [
     h('div.row', { style: { gap: '8px' } }, sprite(c.icon, 32), h('span.nm', {}, c.name)),
     opts.compact ? null : h('div.tx', {}, c.text),

@@ -11,6 +11,8 @@ export function configureFx({ haptics, reduceMotion }) {
   reduce = Boolean(reduceMotion);
 }
 
+export const motionReduced = () => reduce;
+
 const PATTERNS = {
   tap: 8,
   select: 12,

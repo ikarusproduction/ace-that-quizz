@@ -105,6 +105,18 @@ export const sfx = {
   win: () => {
     [523, 659, 784, 1047].forEach((f, i) => tone({ f, dur: 0.2, gain: 0.1, delay: i * 0.12 }));
   },
+  // --- rarity: the better the card, the bigger the sound ---
+  rarity: (r = 'common') => {
+    if (r === 'common') { tone({ f: 660, dur: 0.1, gain: 0.08 }); tone({ f: 880, dur: 0.14, gain: 0.08, delay: 0.08 }); }
+    else if (r === 'uncommon') { [523, 659, 784].forEach((f, i) => tone({ f, dur: 0.14, gain: 0.09, delay: i * 0.08 })); noise({ dur: 0.15, gain: 0.05, low: 2500 }); }
+    else if (r === 'rare') { [523, 659, 784, 1047].forEach((f, i) => tone({ f, dur: 0.18, gain: 0.1, delay: i * 0.08, type: 'triangle' })); tone({ f: 262, dur: 0.5, gain: 0.1, type: 'sawtooth', delay: 0.1 }); noise({ dur: 0.35, gain: 0.07, low: 3500, delay: 0.1 }); }
+    else { [392, 523, 659, 784, 1047, 1319, 1568].forEach((f, i) => tone({ f, dur: 0.22, gain: 0.11, delay: i * 0.07, type: 'triangle' })); tone({ f: 131, f2: 196, dur: 0.9, gain: 0.14, type: 'sawtooth' }); noise({ dur: 0.7, gain: 0.09, low: 4500, delay: 0.05 }); }
+  },
+  packTear: () => { noise({ dur: 0.25, gain: 0.12, low: 5000 }); tone({ f: 300, f2: 120, dur: 0.2, gain: 0.08, type: 'sawtooth' }); },
+  packShake: () => { noise({ dur: 0.08, gain: 0.08, low: 700 }); tone({ f: 120, dur: 0.06, gain: 0.08, type: 'square' }); },
+  splat: () => { noise({ dur: 0.22, gain: 0.14, low: 900 }); tone({ f: 220, f2: 70, dur: 0.18, gain: 0.12, type: 'sine' }); },
+  steal: () => { tone({ f: 1318, dur: 0.05, gain: 0.07 }); tone({ f: 988, dur: 0.05, gain: 0.07, delay: 0.05 }); tone({ f: 740, dur: 0.1, gain: 0.07, delay: 0.1 }); },
+  shield: () => { tone({ f: 400, f2: 800, dur: 0.12, gain: 0.09, type: 'triangle' }); tone({ f: 1200, dur: 0.1, gain: 0.06, delay: 0.1 }); },
   // --- goofy / casino extras ---
   spin: () => tone({ f: 1100 + Math.random() * 300, dur: 0.025, gain: 0.05, type: 'square' }),
   reelStop: () => {
