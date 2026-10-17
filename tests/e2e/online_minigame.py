@@ -63,24 +63,27 @@ try:
             r0 = {n: pg.evaluate(DRIVE) for n, pg in phones.items()}
             if sum(v == 'wait' for v in r0.values()) >= 1 and any(v == 'stake' for v in r0.values()) is False and 'wait' in r0.values(): break
             time.sleep(.15)
+        # settle: stop driving, let in-flight updates land, then look for a stable state with two waiters
+        time.sleep(3)
         res = {n: pg.evaluate('!!document.querySelector(".waiting-card")') for n, pg in phones.items()}
+        waiters = [n for n, v in res.items() if v]
         print('waiting?', res)
-        for name, pg in phones.items():
-            if not res[name]: continue
-            if not pg.evaluate('!!document.querySelector(".waitgame")'): print(name, 'turn moved on, skipping'); continue
-            title = pg.inner_text('.waitgame h3'); print(name, title)
-            assert title.lower() == ('en attendant' if name == 'Ben' else 'while you wait')
-            correct = 0
-            for i in range(6):
-                if not pg.evaluate('!!document.querySelector(".waitgame")'): break
-                pg.locator('.waitgame .col.gap-s .btn').first.click()
-                pg.wait_for_selector('.waitgame .big', timeout=9000)
-                txt = pg.inner_text('.waitgame .big')
-                if re.search(r'Correct|Bonne', txt): correct += 1
-                pg.click('.waitgame .btn.primary')
-            print(name, 'solved', correct, 'of 6')
-            pg.screenshot(path=f'/tmp/waitgame-{name}.png')
+        assert len(waiters) == 2, 'need two waiting phones'
+        ok_total = 0
+        for rnd in range(5):
+            # both waiters answer CORRECTLY at (almost) the same moment
+            for n in waiters:
+                phones[n].evaluate("() => { const w = document.querySelector('.waitgame').__wg; document.querySelectorAll('.waitgame .col.gap-s .btn')[w.cur.answerIndex].click(); }")
+            for n in waiters:
+                try: phones[n].wait_for_selector('.waitgame .big', timeout=15000)
+                except Exception:
+                    print('STUCK', n, phones[n].inner_text('#app', timeout=2000)[:500].replace(chr(10),' | ')); raise
+                txt = phones[n].inner_text('.waitgame .big')
+                print(rnd, n, txt.replace(chr(10), ' '))
+                assert re.search(r'Correct|Bonne', txt) and 'Not quite' not in txt and 'Rat' not in txt, (n, txt)
+                ok_total += 1
+            for n in waiters: phones[n].click('.waitgame .btn.primary')
         assert not errors, errors
-        print('OK'); b.close()
+        print('OK', ok_total); b.close()
 finally:
     srv.terminate(); shutil.rmtree(site, ignore_errors=True)

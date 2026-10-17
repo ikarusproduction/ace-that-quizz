@@ -99,3 +99,17 @@ test('hex cards: rival hex lands on their question and costs them; self hex pays
 test('hex cards show up in the reward draft pool with rarity weights', () => {
   assert.ok(['ink_blast', 'kraken', 'heist'].every((id) => CARDS[id].kind === 'hex'));
 });
+
+test('two players answering at the same time each get their own result', async () => {
+  const { questions } = await realBank();
+  const ctx = fakeContext(questions);
+  const players = ['p1', 'p2', 'p3'].map((id) => ({ id, name: id, ownedCards: CARD_IDS }));
+  let s = createGame({ mode: 'versus', players, ctx, seed: 'pz3', sessionId: 'sess' });
+  s = must(dispatch(s, { type: 'START_ROUND' }, ctx));
+  const [a, b] = s.players.filter((p, i) => i !== s.turn).map((p) => p.playerId);
+  const sa = puzzleSeed(s, a, 0, 2); const sb = puzzleSeed(s, b, 0, 2);
+  s = must(dispatch(s, { type: 'PUZZLE', playerId: a, level: 2, seed: sa, choice: makePuzzle(sa).answerKey }, ctx));
+  s = must(dispatch(s, { type: 'PUZZLE', playerId: b, level: 2, seed: sb, choice: 'wrong!' }, ctx));
+  const pa = s.players.find((p) => p.playerId === a).puzzle.last; const pb = s.players.find((p) => p.playerId === b).puzzle.last;
+  assert.equal(pa.ok, true); assert.equal(pa.n, 1); assert.equal(pb.ok, false);
+});

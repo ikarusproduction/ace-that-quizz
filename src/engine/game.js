@@ -459,7 +459,8 @@ const HANDLERS = {
     const room = Math.max(0, Math.min(PUZZLE_RULES.roundCap - pz.roundBonus, PUZZLE_RULES.gameCap - pz.gameBonus));
     const gain = ok ? Math.min(PUZZLE_RULES.reward[level], room) : 0;
     p.chips += gain; pz.roundBonus += gain; pz.gameBonus += gain;
-    s.lastPuzzle = { playerId: p.playerId, ok, gain, n: pz.n };
+    pz.last = { n: pz.n, ok, gain }; // per player, so two players answering at once never read each other's result
+    s.puzzleSeq = (s.puzzleSeq ?? 0) + 1;
   },
 
   CONFIRM_STAKE(s, a, ctx) {

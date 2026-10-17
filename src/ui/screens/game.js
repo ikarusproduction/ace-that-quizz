@@ -164,12 +164,21 @@ class GameController {
 
   onRemoteState(rev, state) {
     if (rev <= this.rev && this.state) return;
+    const calm = this.puzzleOnly(this.state, state);
     this.rev = rev;
     this.state = state;
     this.lastProgress = Date.now();
     this.save();
     if (state.phase === 'finished') this.onFinished();
-    this.render();
+    if (!calm) this.render();
+  }
+
+  /** True when only another player's puzzle changed the state and I am the one answering: do not rebuild my screen under my finger. */
+  puzzleOnly(prev, next) {
+    if (!prev || !this.net || !next) return false;
+    const same = prev.phase === next.phase && prev.turn === next.turn && prev.qIndex === next.qIndex && prev.roundIndex === next.roundIndex;
+    const mine = next.players?.[next.turn]?.playerId === this.myPlayerId && (next.phase === 'stake' || next.phase === 'question');
+    return same && mine && (next.puzzleSeq ?? 0) !== (prev.puzzleSeq ?? 0);
   }
 
   /** A thin bar at the top while this phone is not connected; no re-render, so a question in progress is untouched. */
@@ -358,6 +367,7 @@ class GameController {
       if (!silent) toast(res.reason.charAt(0).toUpperCase() + res.reason.slice(1));
       return false;
     }
+    const calm = action.type === 'PUZZLE' && this.isMyTurn;
     this.state = res.state;
     if (action.type !== 'PUZZLE') this.lastProgress = Date.now(); // puzzles must not keep an idle turn alive
     if (this.net?.isHost) {
@@ -366,7 +376,7 @@ class GameController {
     }
     this.save();
     if (this.s.phase === 'finished') this.onFinished();
-    this.render();
+    if (!calm) this.render();
     return true;
   }
 
@@ -524,6 +534,7 @@ class GameController {
 
   waitGameEl() {
     if (!this.net || !this.myPlayerId) return null;
+    if (!this.myPlayer?.puzzle) return null; // the host runs an older version without puzzles
     if (!this.waitGame) this.waitGame = new WaitGame({ getState: () => this.s, myId: this.myPlayerId, lang: this.langOf(this.myPlayerId), act: (a) => this.act(a, { silent: true }) });
     this.waitGame.refresh();
     return this.waitGame.el;

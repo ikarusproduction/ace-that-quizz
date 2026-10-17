@@ -10,8 +10,8 @@ import { haptic } from './fx.js';
 const LEVELS = [[1, 'Easy'], [2, 'Medium'], [3, 'Hard']];
 const FR_LEVELS = { Easy: 'Facile', Medium: 'Moyen', Hard: 'Difficile' };
 const UI = {
-  en: { title: 'While you wait', sub: (r, g) => `Solve puzzles for bonus chips (up to ${r} per round, ${g} per game).`, got: (n) => `+${n} chips`, none: 'Chip cap reached for now', right: 'Correct!', wrong: 'Not quite.', next: 'Next puzzle', fact: 'Did you know?', earned: (a, b) => `Earned this round: ${a} / ${b}` },
-  fr: { title: 'En attendant', sub: (r, g) => `Résous des énigmes pour gagner des jetons (max ${r} par manche, ${g} par partie).`, got: (n) => `+${n} jetons`, none: 'Plafond de jetons atteint pour le moment', right: 'Bonne réponse !', wrong: 'Raté.', next: 'Énigme suivante', fact: 'Le saviez-vous ?', earned: (a, b) => `Gagnés cette manche : ${a} / ${b}` },
+  en: { title: 'While you wait', sub: (r, g) => `Solve puzzles for bonus chips (up to ${r} per round, ${g} per game).`, got: (n) => `+${n} chips`, none: 'Chip cap reached for now', right: 'Correct!', wrong: 'Not quite.', next: 'Next puzzle', fact: 'Did you know?', earned: (a, b) => `Earned this round: ${a} / ${b}`, late: 'Too late: the turn moved on before your answer counted. Here is a fresh one.', checking: 'Checking your answer with the host…' },
+  fr: { title: 'En attendant', sub: (r, g) => `Résous des énigmes pour gagner des jetons (max ${r} par manche, ${g} par partie).`, got: (n) => `+${n} jetons`, none: 'Plafond de jetons atteint pour le moment', right: 'Bonne réponse !', wrong: 'Raté.', next: 'Énigme suivante', fact: 'Le saviez-vous ?', earned: (a, b) => `Gagnés cette manche : ${a} / ${b}`, late: "Trop tard : le tour a changé avant que ta réponse compte. En voici une nouvelle.", checking: "Vérification de ta réponse par l'hôte…" },
 };
 
 export class WaitGame {
@@ -22,6 +22,7 @@ export class WaitGame {
     this.sent = null;     // puzzle index we answered, waiting for the host
     this.feedback = null; // { ok, gain, fact }
     this.el = h('div.panel.waitgame', {});
+    this.el.__wg = this; // handy for tests
     this.refresh();
   }
 
@@ -34,13 +35,20 @@ export class WaitGame {
     const lang = this.o.lang === 'fr' ? 'fr' : 'en';
     const pz = me.puzzle ?? { n: 0, roundBonus: 0 };
     const roundBonus = pz.round === s.roundIndex ? pz.roundBonus : 0;
+    const turnKey = `${s.roundIndex}:${s.qIndex}:${s.turn}:${s.phase}`;
+    if (this.sent !== null && pz.n === this.sent && this.turnKey && this.turnKey !== turnKey) { // the question moved on before the host saw our answer
+      this.sent = null;
+      this.late = true;
+    }
+    this.turnKey = turnKey;
     if (this.sent !== null && pz.n > this.sent) { // the host judged our answer
-      const last = s.lastPuzzle?.playerId === me.playerId ? s.lastPuzzle : { ok: false, gain: 0 };
+      const last = pz.last && pz.last.n === this.sent + 1 ? pz.last : { ok: false, gain: 0 };
       const done = makePuzzle(puzzleSeed(s, me.playerId, this.sent, this.sentLevel), lang);
       this.feedback = { ok: last.ok, gain: last.gain, fact: randomFact(Rng.fromSeed(done.seed), lang), explain: done.kind === 'fact' ? done.fact : null };
       this.sent = null;
       if (last.ok) { sfx.coin?.(); haptic?.('ok'); } else sfx.wrong?.();
     }
+    if (this.sent !== null) this.checking = true; else this.checking = false;
     const kids = [h('h3', {}, this.t.title), h('p.tiny.dim', {}, this.t.sub(PUZZLE_RULES.roundCap, PUZZLE_RULES.gameCap)), h('p.tiny.mute', {}, this.t.earned(roundBonus, PUZZLE_RULES.roundCap))];
     if (this.feedback) {
       const f = this.feedback;
@@ -53,8 +61,11 @@ export class WaitGame {
       kids.push(h('div.row.gap-s', {}, LEVELS.map(([lv, name]) => h('button.btn.small', { type: 'button', 'aria-pressed': String(this.level === lv), class: this.level === lv ? 'primary' : '', onclick: () => { this.level = lv; this.refresh(); } }, lang === 'fr' ? FR_LEVELS[name] : name))));
       const seed = puzzleSeed(s, me.playerId, pz.n, this.level);
       const p = makePuzzle(seed, lang);
+      this.cur = { seed, answerIndex: p.choices.findIndex((c) => c.key === p.answerKey) };
       kids.push(h('p.puzzle-prompt', {}, p.prompt));
       const locked = this.sent !== null;
+      if (this.late) { kids.push(h('p.tiny.amber', {}, this.t.late)); this.late = false; }
+      if (locked) kids.push(h('p.tiny.dim', {}, this.t.checking));
       kids.push(h('div.col.gap-s', {}, p.choices.map((c) => h('button.btn.block', {
         type: 'button', disabled: locked,
         onclick: () => { this.sent = pz.n; this.sentLevel = this.level; sfx.select?.(); const mine = pz.n; setTimeout(() => { if (this.sent === mine) { this.sent = null; this.refresh(); } }, 6000); this.o.act({ type: 'PUZZLE', playerId: me.playerId, level: this.level, seed, choice: c.key }); this.refresh(); },
