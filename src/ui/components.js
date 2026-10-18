@@ -1,5 +1,6 @@
 // Reusable UI pieces shared by every screen.
 import { h } from './dom.js';
+import { COSMETICS } from '../engine/cosmetics.js';
 import { sprite, AVATAR_SPRITES, CATEGORY_SPRITES } from './pixel.js';
 import { CARDS, RARITY_ORDER } from '../engine/cards.js';
 import { CATEGORIES, DIFFICULTIES } from '../engine/bank.js';
@@ -9,7 +10,13 @@ import { HEXES } from '../engine/hexes.js';
 export function avatar(profileOrKey, px = 48) {
   const key = typeof profileOrKey === 'string' ? profileOrKey : profileOrKey?.avatar?.key;
   const name = AVATAR_SPRITES.includes(key) ? key : AVATAR_SPRITES[0];
-  return h('span.avatar', { style: { width: `${px + 12}px`, height: `${px + 12}px` } }, sprite(name, px));
+  const eq = typeof profileOrKey === 'object' ? profileOrKey?.cos?.equipped : null;
+  const body = sprite(name, px);
+  const parts = [body];
+  if (eq?.tint && COSMETICS[eq.tint]?.filter) body.style.filter = COSMETICS[eq.tint].filter;
+  if (eq?.hat && COSMETICS[eq.hat]) { const hat = sprite(COSMETICS[eq.hat].sprite, px); hat.classList.add('av-hat'); parts.push(hat); }
+  const cls = ['avatar', eq?.frame ? `fr-${eq.frame.slice(3)}` : '', eq?.bg ? `bg-${eq.bg.slice(3)}` : ''].filter(Boolean).join('.');
+  return h(`span.${cls}`, { style: { width: `${px + 12}px`, height: `${px + 12}px` } }, ...parts);
 }
 
 export function categoryIcon(key, px = 20) {

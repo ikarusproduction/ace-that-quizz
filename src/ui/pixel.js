@@ -180,6 +180,14 @@ const SPRITES = {
     '......', '..kkkk', '.kyyyy', 'kyywww', 'kyywyy', 'kyyyyy', 'kyyyyy', '.kyyyy', '..kaaa', '..kdgg', '..kdgg', '...kkk' ] },
   bulb_off: { m: true, rows: [
     '......', '..kkkk', '.kggdd', 'kgggdd', 'kgglgd', 'kggggd', 'kggggd', '.kggdd', '..kddd', '..kdgg', '..kdgg', '...kkk' ] },
+  hat_cap: { m: true, rows: [
+    '........', '...kkkkk', '..knnnnn', '.knnnnnn', '.kkkkkkk', '........', '........', '........', '........', '........', '........', '........', '........', '........', '........', '........' ] },
+  hat_top: { m: true, rows: [
+    '....kkkk', '....kddd', '....kddd', '....krrr', '.kkkkkkk', '........', '........', '........', '........', '........', '........', '........', '........', '........', '........', '........' ] },
+  hat_shades: { m: true, rows: [
+    '........', '........', '........', '........', '........', '.kkkkkkk', '.kdlddkk', '..kddk..', '........', '........', '........', '........', '........', '........', '........', '........' ] },
+  hat_crown: { m: true, rows: [
+    '.y..y..y', '.yyyyyyy', '.yaayaay', '.kkkkkkk', '........', '........', '........', '........', '........', '........', '........', '........', '........', '........', '........', '........' ] },
   bulb_broken: { rows: [
     '....k.k.k...', '..kkgkkgkk..', '.kgglk.ddgk.', '.kglk.dadk..', '.kgkddadgk..', '.kgkdaaddgk.', '.kgdkdddkgk.', '.kggkgkkgk..', '..kggkgggk..', '...kkaAAkk..', '....kdgdk...', '....kkkkk...' ] },
   chip: { m: true, rows: [

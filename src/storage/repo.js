@@ -9,6 +9,7 @@
 //  * Writing the same result twice is harmless: result ids are deterministic.
 import { isLanguage, DEFAULT_LANGUAGE } from '../i18n/languages.js';
 import { SCHEMA_VERSION, DATA_STORES } from './schema.js';
+import { levelOf, cleanWardrobe, buyCheck, COSMETICS } from '../engine/cosmetics.js';
 import { metaOf, mergeMeta, daysBetween, cleanFriends, MAX_FRIENDS } from './meta.js';
 import { newFriendCode, newFriendSecret, normalizeFriendCode, FRIEND_CODE_RE, buildCard, cleanCard } from '../stats/card.js';
 import { HEXES, PACKS, openPack, FORGE_COST, HEX_NUMBERS } from '../engine/hexes.js';
@@ -330,6 +331,45 @@ export async function createRepo(storage, { now = Date.now, uuid = defaultUuid, 
       profile.updatedAt = now();
       await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
       return { type: pack.type, cards };
+    },
+
+    /** Add XP for a finished game once (the session id is remembered). Returns { xp, before, after } levels. */
+    async addXp(id, sessionId, amount) {
+      const profile = await requireProfile(id);
+      const m = metaOf(profile);
+      if (m.xpLog.includes(sessionId) || !(amount > 0)) return { xp: m.xp, before: levelOf(m.xp).level, after: levelOf(m.xp).level, gained: 0 };
+      profile.xp = m.xp + Math.floor(amount);
+      profile.xpLog = [...m.xpLog, sessionId].slice(-30);
+      profile.updatedAt = now();
+      await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
+      return { xp: profile.xp, before: levelOf(m.xp).level, after: levelOf(profile.xp).level, gained: Math.floor(amount) };
+    },
+
+    /** Buy a wardrobe item with dust. */
+    async buyCosmetic(id, itemId) {
+      const profile = await requireProfile(id);
+      const m = metaOf(profile);
+      const why = buyCheck(m.cos, itemId, levelOf(m.xp).level, m.hexes.dust);
+      if (why) throw new RepoError('NO_BUY', why);
+      profile.hexes = { ...m.hexes, dust: m.hexes.dust - COSMETICS[itemId].cost };
+      profile.cos = { owned: [...m.cos.owned, itemId], equipped: { ...m.cos.equipped, [COSMETICS[itemId].slot]: itemId } };
+      profile.packs = m.packs; profile.daily = m.daily;
+      profile.updatedAt = now();
+      await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
+      return metaOf(profile);
+    },
+
+    /** Wear an owned item, or take a slot off with itemId = null. Titles use slot 'title' with a title id. */
+    async equipCosmetic(id, slot, itemId) {
+      const profile = await requireProfile(id);
+      const m = metaOf(profile);
+      const equipped = { ...m.cos.equipped };
+      if (itemId == null) delete equipped[slot];
+      else equipped[slot] = itemId;
+      profile.cos = cleanWardrobe({ owned: m.cos.owned, equipped }, levelOf(m.xp).level);
+      profile.updatedAt = now();
+      await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
+      return metaOf(profile);
     },
 
     /** Spend dust to craft a hex you are missing. */
