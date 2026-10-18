@@ -1,0 +1,1299 @@
+{
+ "category": "popculture",
+ "review": "unreviewed",
+ "note": "Difficulty ladders: the original question keeps its own level, these are the other levels. Unreviewed.",
+ "families": [
+  {
+   "id": "pop-001",
+   "ask": {
+    "1": "Name the show",
+    "2": "TV network",
+    "3": "Famous episode"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Game of Thrones is based on novels by which author?",
+     "choices": [
+      "George R. R. Martin",
+      "Robert Jordan",
+      "J. R. R. Tolkien",
+      "Brandon Sanderson"
+     ],
+     "answer": 0,
+     "explanation": "The novels are A Song of Ice and Fire by George R. R. Martin."
+    },
+    {
+     "level": 3,
+     "question": "Game of Thrones premiered in which year on HBO?",
+     "choices": [
+      "2011",
+      "2017",
+      "2008",
+      "2014"
+     ],
+     "answer": 0,
+     "explanation": "It premiered in April 2011."
+    }
+   ]
+  },
+  {
+   "id": "pop-002",
+   "ask": {
+    "1": "Coffee shop",
+    "2": "Friends",
+    "3": "Characters"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which actress played Rachel Green in Friends?",
+     "choices": [
+      "Lisa Kudrow",
+      "Courteney Cox",
+      "Jennifer Aniston",
+      "Reese Witherspoon"
+     ],
+     "answer": 2,
+     "explanation": "Jennifer Aniston played Rachel."
+    },
+    {
+     "level": 3,
+     "question": "In which US city is Friends set?",
+     "choices": [
+      "Chicago",
+      "Boston",
+      "Los Angeles",
+      "New York City"
+     ],
+     "answer": 3,
+     "explanation": "Friends is set in Manhattan, New York City."
+    }
+   ]
+  },
+  {
+   "id": "pop-003",
+   "ask": {
+    "1": "Mario's brother",
+    "2": "Game brothers",
+    "3": "Which game"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is Luigi's signature colour of clothing?",
+     "choices": [
+      "Red",
+      "Blue",
+      "Yellow",
+      "Green"
+     ],
+     "answer": 3,
+     "explanation": "Luigi wears green."
+    },
+    {
+     "level": 3,
+     "question": "Which Nintendo game from 1983 first starred Mario and Luigi as the 'Mario Bros.'?",
+     "choices": [
+      "Duck Hunt",
+      "Donkey Kong",
+      "Super Mario Bros.",
+      "Mario Bros."
+     ],
+     "answer": 3,
+     "explanation": "The 1983 arcade game Mario Bros. introduced Luigi."
+    }
+   ]
+  },
+  {
+   "id": "pop-004",
+   "ask": {
+    "1": "Show",
+    "2": "Squid Game",
+    "3": "Creator"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which colourful shape is on the guards' masks in Squid Game: a circle, triangle or square?",
+     "choices": [
+      "Stripes only",
+      "Hearts and stars",
+      "Diamond only",
+      "Circle, triangle and square"
+     ],
+     "answer": 3,
+     "explanation": "The guards wear masks marked with a circle, triangle or square."
+    },
+    {
+     "level": 3,
+     "question": "Who created Squid Game?",
+     "choices": [
+      "Na Hong-jin",
+      "Park Chan-wook",
+      "Hwang Dong-hyuk",
+      "Bong Joon-ho"
+     ],
+     "answer": 2,
+     "explanation": "Hwang Dong-hyuk wrote and directed it."
+    }
+   ]
+  },
+  {
+   "id": "pop-005",
+   "ask": {
+    "1": "Show",
+    "2": "Walter White",
+    "3": "Actor"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which actor plays Walter White in Breaking Bad?",
+     "choices": [
+      "Aaron Paul",
+      "Bob Odenkirk",
+      "Bryan Cranston",
+      "Jon Hamm"
+     ],
+     "answer": 2,
+     "explanation": "Bryan Cranston played Walter White."
+    },
+    {
+     "level": 3,
+     "question": "What is Walter White's alias as a drug lord in Breaking Bad?",
+     "choices": [
+      "Gus",
+      "Tuco",
+      "Mr. Chips",
+      "Heisenberg"
+     ],
+     "answer": 3,
+     "explanation": "Walter adopts the name Heisenberg."
+    }
+   ]
+  },
+  {
+   "id": "pop-006",
+   "ask": {
+    "1": "Pet snail",
+    "2": "SpongeBob",
+    "3": "Setting"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "In which fictional town does SpongeBob live?",
+     "choices": [
+      "Bikini Bottom",
+      "Quahog",
+      "Springfield",
+      "South Park"
+     ],
+     "answer": 0,
+     "explanation": "SpongeBob lives in Bikini Bottom."
+    },
+    {
+     "level": 3,
+     "question": "What sound does Gary the snail make?",
+     "choices": [
+      "Meow",
+      "Squeak",
+      "Ribbit",
+      "Woof"
+     ],
+     "answer": 0,
+     "explanation": "Gary meows."
+    }
+   ]
+  },
+  {
+   "id": "pop-007",
+   "ask": {
+    "1": "Game series",
+    "2": "Hero",
+    "3": "Princess"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which princess does Link try to save in The Legend of Zelda?",
+     "choices": [
+      "Peach",
+      "Zelda",
+      "Daisy",
+      "Rosalina"
+     ],
+     "answer": 1,
+     "explanation": "Zelda is the title princess."
+    },
+    {
+     "level": 3,
+     "question": "In which year was the original Legend of Zelda released in Japan?",
+     "choices": [
+      "1996",
+      "1981",
+      "1991",
+      "1986"
+     ],
+     "answer": 3,
+     "explanation": "The original game came out in February 1986."
+    }
+   ]
+  },
+  {
+   "id": "pop-008",
+   "ask": {
+    "1": "Mobile game",
+    "2": "Pokemon GO",
+    "3": "Developer"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which company developed Pokemon GO?",
+     "choices": [
+      "Zynga",
+      "Ubisoft",
+      "Nintendo",
+      "Niantic"
+     ],
+     "answer": 3,
+     "explanation": "Niantic developed it with The Pokemon Company."
+    },
+    {
+     "level": 3,
+     "question": "In which month and year was Pokemon GO released?",
+     "choices": [
+      "December 2020",
+      "January 2013",
+      "March 2019",
+      "July 2016"
+     ],
+     "answer": 3,
+     "explanation": "It launched in July 2016."
+    }
+   ]
+  },
+  {
+   "id": "pop-009",
+   "ask": {
+    "1": "Game",
+    "2": "Creeper",
+    "3": "Developer"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What does a creeper do in Minecraft when it gets near you?",
+     "choices": [
+      "It builds a house",
+      "It heals you",
+      "It steals your items",
+      "It explodes"
+     ],
+     "answer": 3,
+     "explanation": "Creepers explode."
+    },
+    {
+     "level": 3,
+     "question": "In which year was Minecraft's full release?",
+     "choices": [
+      "2019",
+      "2015",
+      "2005",
+      "2011"
+     ],
+     "answer": 3,
+     "explanation": "The full release was November 2011."
+    }
+   ]
+  },
+  {
+   "id": "pop-010",
+   "ask": {
+    "1": "Slang",
+    "2": "GOAT",
+    "3": "Meaning"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "In internet slang, what does 'TBH' stand for?",
+     "choices": [
+      "Think before hype",
+      "To be honest",
+      "Take back home",
+      "Too bad hey"
+     ],
+     "answer": 1,
+     "explanation": "TBH means to be honest."
+    },
+    {
+     "level": 3,
+     "question": "In slang, what does 'IYKYK' stand for?",
+     "choices": [
+      "I yell, you keep yelling",
+      "If you know, you know",
+      "I like your kind of yoga",
+      "It's your kingdom you know"
+     ],
+     "answer": 1,
+     "explanation": "IYKYK means if you know, you know."
+    }
+   ]
+  },
+  {
+   "id": "pop-011",
+   "ask": {
+    "1": "Slang",
+    "2": "FOMO",
+    "3": "Meaning"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "In slang, what does 'YOLO' stand for?",
+     "choices": [
+      "You only live once",
+      "You often laugh out",
+      "Your own little office",
+      "Yearly only, long odds"
+     ],
+     "answer": 0,
+     "explanation": "YOLO means you only live once."
+    },
+    {
+     "level": 3,
+     "question": "What does 'JOMO' stand for, as a counter to FOMO?",
+     "choices": [
+      "Joy of Missing Out",
+      "Just Over My Opinion",
+      "Jump on My Orders",
+      "Join Our Meeting Online"
+     ],
+     "answer": 0,
+     "explanation": "JOMO is the joy of missing out."
+    }
+   ]
+  },
+  {
+   "id": "pop-012",
+   "ask": {
+    "1": "App",
+    "2": "Snapchat",
+    "3": "Ghost"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What feature of Snapchat makes photos and videos disappear after viewing?",
+     "choices": [
+      "Filters only",
+      "Group voice calls only",
+      "Cloud storage",
+      "Disappearing snaps"
+     ],
+     "answer": 3,
+     "explanation": "Snaps disappear."
+    },
+    {
+     "level": 3,
+     "question": "Which company owns Snapchat?",
+     "choices": [
+      "Snap Inc.",
+      "Google",
+      "Meta",
+      "ByteDance"
+     ],
+     "answer": 0,
+     "explanation": "Snap Inc. owns Snapchat."
+    }
+   ]
+  },
+  {
+   "id": "pop-013",
+   "ask": {
+    "1": "K-pop group",
+    "2": "BTS",
+    "3": "Members"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "How many members does BTS have?",
+     "choices": [
+      "9",
+      "12",
+      "7",
+      "5"
+     ],
+     "answer": 2,
+     "explanation": "BTS has seven members."
+    },
+    {
+     "level": 3,
+     "question": "In which year did BTS debut?",
+     "choices": [
+      "2010",
+      "2013",
+      "2016",
+      "2019"
+     ],
+     "answer": 1,
+     "explanation": "They debuted in June 2013."
+    }
+   ]
+  },
+  {
+   "id": "pop-014",
+   "ask": {
+    "1": "Chatbot",
+    "2": "ChatGPT",
+    "3": "Company"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which company created ChatGPT?",
+     "choices": [
+      "OpenAI",
+      "Meta",
+      "Microsoft",
+      "Google"
+     ],
+     "answer": 0,
+     "explanation": "OpenAI created it."
+    },
+    {
+     "level": 3,
+     "question": "What do the letters GPT stand for in ChatGPT?",
+     "choices": [
+      "Giant Processing Tool",
+      "Graphical Prompt Terminal",
+      "Generative Pre-trained Transformer",
+      "General Public Translator"
+     ],
+     "answer": 2,
+     "explanation": "GPT is Generative Pre-trained Transformer."
+    }
+   ]
+  },
+  {
+   "id": "pop-015",
+   "ask": {
+    "1": "Actor",
+    "2": "Iron Man",
+    "3": "First MCU film"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "In which year was the first Iron Man film released?",
+     "choices": [
+      "2008",
+      "2002",
+      "2012",
+      "2015"
+     ],
+     "answer": 0,
+     "explanation": "Iron Man came out in 2008."
+    },
+    {
+     "level": 3,
+     "question": "Which company owns Marvel Studios, since 2009?",
+     "choices": [
+      "Universal",
+      "Disney",
+      "Warner Bros.",
+      "Sony"
+     ],
+     "answer": 1,
+     "explanation": "Disney bought Marvel in 2009."
+    }
+   ]
+  },
+  {
+   "id": "pop-016",
+   "ask": {
+    "1": "Show",
+    "2": "Stranger Things",
+    "3": "Town"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which streaming service releases Stranger Things?",
+     "choices": [
+      "Disney+",
+      "HBO Max",
+      "Hulu",
+      "Netflix"
+     ],
+     "answer": 3,
+     "explanation": "Stranger Things is a Netflix series."
+    },
+    {
+     "level": 3,
+     "question": "In Stranger Things, what name does the alternate dimension have?",
+     "choices": [
+      "The Shadow Realm",
+      "The Upside Down",
+      "The Backwards",
+      "The Void"
+     ],
+     "answer": 1,
+     "explanation": "It is called the Upside Down."
+    }
+   ]
+  },
+  {
+   "id": "pop-017",
+   "ask": {
+    "1": "Hedgehog",
+    "2": "Sonic",
+    "3": "Company"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What does Sonic collect in his games to protect himself?",
+     "choices": [
+      "Mushrooms",
+      "Stars",
+      "Coins",
+      "Rings"
+     ],
+     "answer": 3,
+     "explanation": "Sonic collects rings."
+    },
+    {
+     "level": 3,
+     "question": "In which year was the first Sonic the Hedgehog game released?",
+     "choices": [
+      "1991",
+      "1985",
+      "1998",
+      "2003"
+     ],
+     "answer": 0,
+     "explanation": "It was released on the Sega Genesis in 1991."
+    }
+   ]
+  },
+  {
+   "id": "pop-018",
+   "ask": {
+    "1": "Song",
+    "2": "Gangnam Style",
+    "3": "Singer"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country is Psy from?",
+     "choices": [
+      "Japan",
+      "Thailand",
+      "China",
+      "South Korea"
+     ],
+     "answer": 3,
+     "explanation": "Psy is a South Korean singer."
+    },
+    {
+     "level": 3,
+     "question": "Gangnam Style was the first video to reach one billion views on which site?",
+     "choices": [
+      "Instagram",
+      "YouTube",
+      "Vimeo",
+      "Dailymotion"
+     ],
+     "answer": 1,
+     "explanation": "It passed a billion views on YouTube in December 2012."
+    }
+   ]
+  },
+  {
+   "id": "pop-019",
+   "ask": {
+    "1": "Meme",
+    "2": "Doge",
+    "3": "Dog"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which dog breed is Doge?",
+     "choices": [
+      "Shiba Inu",
+      "Chihuahua",
+      "Pug",
+      "Husky"
+     ],
+     "answer": 0,
+     "explanation": "Doge is a Shiba Inu."
+    },
+    {
+     "level": 3,
+     "question": "Which cryptocurrency was inspired by the Doge meme?",
+     "choices": [
+      "Dogecoin",
+      "Bitcoin",
+      "Ethereum",
+      "Litecoin"
+     ],
+     "answer": 0,
+     "explanation": "Dogecoin was created in 2013 as a joke."
+    }
+   ]
+  },
+  {
+   "id": "pop-020",
+   "ask": {
+    "1": "Prank",
+    "2": "Rickroll",
+    "3": "Singer"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which singer is behind the Rickroll?",
+     "choices": [
+      "Rick James",
+      "Rick Astley",
+      "Rick Ross",
+      "Rick Springfield"
+     ],
+     "answer": 1,
+     "explanation": "Rick Astley performed Never Gonna Give You Up."
+    },
+    {
+     "level": 3,
+     "question": "In which year was Never Gonna Give You Up released?",
+     "choices": [
+      "1987",
+      "1995",
+      "1977",
+      "2007"
+     ],
+     "answer": 0,
+     "explanation": "It was released in 1987."
+    }
+   ]
+  },
+  {
+   "id": "pop-021",
+   "ask": {
+    "1": "Films",
+    "2": "Barbenheimer",
+    "3": "Date"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which doll is the star of Greta Gerwig's 2023 movie?",
+     "choices": [
+      "Cabbage Patch Kids",
+      "Bratz",
+      "Barbie",
+      "Polly Pocket"
+     ],
+     "answer": 2,
+     "explanation": "Barbie starred Margot Robbie."
+    },
+    {
+     "level": 3,
+     "question": "On which date were Barbie and Oppenheimer both released in cinemas in 2023?",
+     "choices": [
+      "14 June",
+      "1 August",
+      "4 July",
+      "21 July"
+     ],
+     "answer": 3,
+     "explanation": "Both opened on 21 July 2023."
+    }
+   ]
+  },
+  {
+   "id": "pop-022",
+   "ask": {
+    "1": "Creator",
+    "2": "The Simpsons",
+    "3": "Town"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which fictional town do the Simpsons live?",
+     "choices": [
+      "South Park",
+      "Langley Falls",
+      "Quahog",
+      "Springfield"
+     ],
+     "answer": 3,
+     "explanation": "The Simpsons live in Springfield."
+    },
+    {
+     "level": 3,
+     "question": "The Simpsons first aired as a full series on which US channel in 1989?",
+     "choices": [
+      "ABC",
+      "NBC",
+      "Fox",
+      "CBS"
+     ],
+     "answer": 2,
+     "explanation": "It premiered on Fox in December 1989."
+    }
+   ]
+  },
+  {
+   "id": "pop-023",
+   "ask": {
+    "1": "Baby Yoda",
+    "2": "Show",
+    "3": "Character"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which Star Wars series does Baby Yoda appear?",
+     "choices": [
+      "Andor",
+      "The Mandalorian",
+      "Obi-Wan Kenobi",
+      "The Book of Boba Fett"
+     ],
+     "answer": 1,
+     "explanation": "Grogu appears in The Mandalorian."
+    },
+    {
+     "level": 3,
+     "question": "Which streaming service launched The Mandalorian in 2019?",
+     "choices": [
+      "Hulu",
+      "Netflix",
+      "Prime Video",
+      "Disney+"
+     ],
+     "answer": 3,
+     "explanation": "It launched with Disney+."
+    }
+   ]
+  },
+  {
+   "id": "pop-024",
+   "ask": {
+    "1": "Mario Kart item",
+    "2": "Blue shell",
+    "3": "Position"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In Mario Kart, which item can you throw to make others slip?",
+     "choices": [
+      "Banana peel",
+      "Blue shell",
+      "Super Star",
+      "Lightning"
+     ],
+     "answer": 0,
+     "explanation": "A banana peel makes karts spin out."
+    },
+    {
+     "level": 3,
+     "question": "In which Mario Kart game did the spiny blue shell first appear?",
+     "choices": [
+      "Mario Kart Wii",
+      "Mario Kart 8",
+      "Super Mario Kart",
+      "Mario Kart 64"
+     ],
+     "answer": 3,
+     "explanation": "The blue shell debuted in Mario Kart 64."
+    }
+   ]
+  },
+  {
+   "id": "pop-025",
+   "ask": {
+    "1": "Year",
+    "2": "Phone",
+    "3": "Founder"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which company makes the iPhone?",
+     "choices": [
+      "Apple",
+      "Nokia",
+      "Samsung",
+      "Google"
+     ],
+     "answer": 0,
+     "explanation": "Apple makes the iPhone."
+    },
+    {
+     "level": 3,
+     "question": "Who unveiled the first iPhone on stage in January 2007?",
+     "choices": [
+      "Jony Ive",
+      "Steve Wozniak",
+      "Steve Jobs",
+      "Tim Cook"
+     ],
+     "answer": 2,
+     "explanation": "Steve Jobs announced it at Macworld."
+    }
+   ]
+  },
+  {
+   "id": "pop-026",
+   "ask": {
+    "1": "PC store",
+    "2": "Steam",
+    "3": "Company"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which company runs Steam?",
+     "choices": [
+      "Valve",
+      "Ubisoft",
+      "Microsoft",
+      "EA"
+     ],
+     "answer": 0,
+     "explanation": "Valve runs Steam."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Steam launch?",
+     "choices": [
+      "2012",
+      "2008",
+      "1998",
+      "2003"
+     ],
+     "answer": 3,
+     "explanation": "Steam launched in September 2003."
+    }
+   ]
+  },
+  {
+   "id": "pop-027",
+   "ask": {
+    "1": "Fashion",
+    "2": "Chanel",
+    "3": "Founder"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which French fashion house created Chanel No. 5?",
+     "choices": [
+      "Chanel",
+      "Hermes",
+      "Louis Vuitton",
+      "Dior"
+     ],
+     "answer": 0,
+     "explanation": "Chanel No. 5 was launched in 1921."
+    },
+    {
+     "level": 3,
+     "question": "Who founded the Chanel brand?",
+     "choices": [
+      "Hubert de Givenchy",
+      "Yves Saint Laurent",
+      "Christian Dior",
+      "Coco Chanel"
+     ],
+     "answer": 3,
+     "explanation": "Gabrielle Coco Chanel founded it."
+    }
+   ]
+  },
+  {
+   "id": "pop-028",
+   "ask": {
+    "1": "Video",
+    "2": "First YouTube video",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which video platform has the logo of a red play button?",
+     "choices": [
+      "YouTube",
+      "TikTok",
+      "Twitch",
+      "Vimeo"
+     ],
+     "answer": 0,
+     "explanation": "YouTube uses a red button."
+    },
+    {
+     "level": 2,
+     "question": "In which year was YouTube founded?",
+     "choices": [
+      "2012",
+      "2005",
+      "2009",
+      "1999"
+     ],
+     "answer": 1,
+     "explanation": "YouTube was founded in 2005."
+    }
+   ]
+  },
+  {
+   "id": "pop-029",
+   "ask": {
+    "1": "Best-selling game",
+    "2": "Minecraft",
+    "3": "Sales"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which game lets you mine blocks and craft items?",
+     "choices": [
+      "Tetris",
+      "Mario Kart",
+      "Fortnite",
+      "Minecraft"
+     ],
+     "answer": 3,
+     "explanation": "Minecraft is a sandbox game."
+    },
+    {
+     "level": 2,
+     "question": "Which company bought Mojang in 2014?",
+     "choices": [
+      "Google",
+      "Sony",
+      "Microsoft",
+      "Nintendo"
+     ],
+     "answer": 2,
+     "explanation": "Microsoft acquired Mojang."
+    }
+   ]
+  },
+  {
+   "id": "pop-030",
+   "ask": {
+    "1": "Show",
+    "2": "Succession",
+    "3": "Family"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which HBO series features a family fighting over a media empire?",
+     "choices": [
+      "Dallas",
+      "Succession",
+      "The Wire",
+      "Euphoria"
+     ],
+     "answer": 1,
+     "explanation": "Succession is an HBO drama."
+    },
+    {
+     "level": 2,
+     "question": "Which actor plays Logan Roy in Succession?",
+     "choices": [
+      "Kieran Culkin",
+      "Brian Cox",
+      "Jeremy Strong",
+      "Hugh Laurie"
+     ],
+     "answer": 1,
+     "explanation": "Brian Cox plays Logan Roy."
+    }
+   ]
+  },
+  {
+   "id": "pop-031",
+   "ask": {
+    "1": "Talent show",
+    "2": "Golden Buzzer",
+    "3": "Judge"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which TV competition featured Simon Cowell as a judge in the 2000s?",
+     "choices": [
+      "American Idol",
+      "MasterChef",
+      "The Bachelor",
+      "Survivor"
+     ],
+     "answer": 0,
+     "explanation": "Simon Cowell judged American Idol."
+    },
+    {
+     "level": 2,
+     "question": "On which US network does America's Got Talent air?",
+     "choices": [
+      "Fox",
+      "ABC",
+      "NBC",
+      "CBS"
+     ],
+     "answer": 2,
+     "explanation": "America's Got Talent airs on NBC."
+    }
+   ]
+  },
+  {
+   "id": "pop-032",
+   "ask": {
+    "1": "Game",
+    "2": "Fortnite",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which game features a Battle Bus and building structures?",
+     "choices": [
+      "Fortnite",
+      "Minecraft",
+      "Roblox",
+      "Among Us"
+     ],
+     "answer": 0,
+     "explanation": "Fortnite Battle Royale has the Battle Bus."
+    },
+    {
+     "level": 2,
+     "question": "Which company developed Fortnite?",
+     "choices": [
+      "Activision",
+      "Riot Games",
+      "Valve",
+      "Epic Games"
+     ],
+     "answer": 3,
+     "explanation": "Epic Games developed Fortnite."
+    }
+   ]
+  },
+  {
+   "id": "pop-033",
+   "ask": {
+    "1": "Barbie",
+    "2": "Actress",
+    "3": "Director"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which doll is the star of the 2023 film directed by Greta Gerwig?",
+     "choices": [
+      "Barbie",
+      "Cabbage Patch",
+      "Bratz",
+      "Polly Pocket"
+     ],
+     "answer": 0,
+     "explanation": "It is the Barbie movie."
+    },
+    {
+     "level": 2,
+     "question": "Who played Ken in the 2023 Barbie film?",
+     "choices": [
+      "Chris Evans",
+      "Ryan Gosling",
+      "Ryan Reynolds",
+      "Timothee Chalamet"
+     ],
+     "answer": 1,
+     "explanation": "Ryan Gosling played Ken."
+    }
+   ]
+  },
+  {
+   "id": "pop-034",
+   "ask": {
+    "1": "Virtual idol",
+    "2": "Hatsune Miku",
+    "3": "Software"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country is Hatsune Miku from?",
+     "choices": [
+      "France",
+      "The United States",
+      "Japan",
+      "South Korea"
+     ],
+     "answer": 2,
+     "explanation": "Hatsune Miku is a Japanese virtual singer."
+    },
+    {
+     "level": 2,
+     "question": "What colour is Hatsune Miku's famous hair?",
+     "choices": [
+      "Pink",
+      "Turquoise",
+      "Blue",
+      "Orange"
+     ],
+     "answer": 1,
+     "explanation": "Her twin-tails are turquoise."
+    }
+   ]
+  },
+  {
+   "id": "pop-035",
+   "ask": {
+    "1": "Series",
+    "2": "Black Mirror",
+    "3": "Creator"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which TV anthology series explores dark technology themes and was created by Charlie Brooker?",
+     "choices": [
+      "Black Mirror",
+      "Doctor Who",
+      "Utopia",
+      "Westworld"
+     ],
+     "answer": 0,
+     "explanation": "Black Mirror is by Charlie Brooker."
+    },
+    {
+     "level": 2,
+     "question": "Which streaming service took over Black Mirror in 2016?",
+     "choices": [
+      "Prime Video",
+      "Hulu",
+      "Netflix",
+      "Disney+"
+     ],
+     "answer": 2,
+     "explanation": "Netflix picked it up for season 3."
+    }
+   ]
+  },
+  {
+   "id": "pop-036",
+   "ask": {
+    "1": "Game",
+    "2": "Among Us",
+    "3": "Role"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which game features colourful astronauts?",
+     "choices": [
+      "Among Us",
+      "Minecraft",
+      "Fall Guys",
+      "Overwatch"
+     ],
+     "answer": 0,
+     "explanation": "Among Us has colourful crewmates."
+    },
+    {
+     "level": 2,
+     "question": "What do you call the traitors in Among Us?",
+     "choices": [
+      "Killers",
+      "Zombies",
+      "Monsters",
+      "Impostors"
+     ],
+     "answer": 3,
+     "explanation": "The traitors are impostors."
+    }
+   ]
+  },
+  {
+   "id": "pop-037",
+   "ask": {
+    "1": "Brand",
+    "2": "Yeezy",
+    "3": "Founder"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which brand is the sneaker line founded by Kanye West?",
+     "choices": [
+      "Yeezy",
+      "Jordan",
+      "Air Max",
+      "Superstar"
+     ],
+     "answer": 0,
+     "explanation": "Yeezy sneakers were made with Adidas."
+    },
+    {
+     "level": 2,
+     "question": "Which company partnered with Kanye West on Yeezy sneakers from 2013 until 2022?",
+     "choices": [
+      "Reebok",
+      "Nike",
+      "Puma",
+      "Adidas"
+     ],
+     "answer": 3,
+     "explanation": "Adidas made Yeezys."
+    }
+   ]
+  },
+  {
+   "id": "pop-038",
+   "ask": {
+    "1": "Singer",
+    "2": "Eras Tour",
+    "3": "Artist"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which singer wrote the album 1989?",
+     "choices": [
+      "Taylor Swift",
+      "Billie Eilish",
+      "Adele",
+      "Dua Lipa"
+     ],
+     "answer": 0,
+     "explanation": "Taylor Swift released 1989 in 2014."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Taylor Swift's Eras Tour begin?",
+     "choices": [
+      "2021",
+      "2019",
+      "2023",
+      "2025"
+     ],
+     "answer": 2,
+     "explanation": "The Eras Tour began in March 2023."
+    }
+   ]
+  }
+ ]
+}

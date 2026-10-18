@@ -23,6 +23,12 @@ GitHub Pages alone cannot link phones; run `node server/relay.js` somewhere (see
 ## Level, XP and the wardrobe
 Every finished game gives XP (more for correct answers, wins, bosses and streaks). Levels run to 50 and unlock titles (free) and wardrobe items. Dust buys portrait frames, backgrounds, colour dyes and costume pieces on the Style tab of the Hexes page. Logic in `src/engine/cosmetics.js`, tests in `tests/cosmetics.test.js`, `tests/e2e/style.py`.
 
+## Stakes and difficulty ladders
+
+Every question that is not live news or a tune has three versions: level 1 (coarser or easier, e.g. the year), level 2, and level 3 (precise or harder, e.g. the exact date). The stake you choose picks the level (1× → level 1, 2× → level 2, 3× → level 3) and each stake button shows what it will ask. A boss of tier 3 or more adds one level, and in solo a question you have already answered adds one level the next time (capped at 3).
+
+Ladders live in `data/questions/variants/<category>.json` and are listed under `variantFiles` in `data/questions/index.json`. Each file is a list of families `{ id, ask: {1,2,3}, variants: [{ level, question, choices, answer, explanation }] }`; the original question keeps its own level and the other two are generated as `<id>~<level>`. Only the originals are drawn into rounds. Check a file with `node scripts/check-variants.mjs data/questions/variants/<category>.json`. All variants are hand-written and marked `unreviewed`.
+
 ## Hexes, packs and the waiting game
 - **Hexes are their own deck**, separate from the bonus cards (Hexes page: Deck, Collection, Packs, Forge). Pick up to 4 for your deck. In a game a streak of 2 earns a common hex drawn from your deck, 4 an uncommon, 6 a rare, 8 a legendary (then every extra even streak). Hold up to 3. Play one per question: before staking on yourself (a dare, +20% if you still answer right) or on a rival (−15% on their win), or steal chips (Pickpocket, Heist, The Kraken, Versus). Shields (Sponge, Wet Cloth, Mirror) catch the next hex played on you. No hexes in the Daily.
 - **Starter hexes:** Ink Blast, Goo Splat, Pickpocket, Sponge. The rest unlock from packs, the daily pack, missions, or the Forge (dust from duplicates).

@@ -862,6 +862,7 @@ class GameController {
         onclick: () => { this.stakeSel = o.stake; sfx.select(); this.render(); },
       },
       h('span.mult', {}, `${o.stake}×`),
+      o.ask ? h('span.ask', {}, o.ask) : null,
       h('span.nums', {}, h('span.w', {}, `Win +${o.win}`), h('span.l', {}, `Lose −${o.lose}`)),
       s.enc
         ? h('span.note', {}, h('span.dmg', {}, `Hit ${o.dmg}${o.dmgFast > o.dmg ? `–${o.dmgFast} fast` : ''}`), ' · ', h('span.heat-cost', {}, o.heatCost ? `Heat −${o.heatCost}${o.locked ? ' (not enough)' : ''}` : 'Free'), o.broke ? ' · free play' : ` · risk ${Math.min(p.chips, o.stake * RULES.baseWager)} chips`)

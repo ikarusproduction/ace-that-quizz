@@ -1,0 +1,993 @@
+{
+ "category": "f1",
+ "review": "unreviewed",
+ "note": "Difficulty ladders: the original question keeps its own level, these are the other levels. Unreviewed.",
+ "families": [
+  {
+   "id": "f1-001",
+   "ask": {
+    "1": "Meaning",
+    "2": "Sport",
+    "3": "Racing"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which type of vehicle competes in Formula One?",
+     "choices": [
+      "Motorbikes",
+      "Trucks",
+      "Rally cars",
+      "Single-seater cars"
+     ],
+     "answer": 3,
+     "explanation": "F1 uses open-wheel single-seaters."
+    },
+    {
+     "level": 3,
+     "question": "Which organisation governs Formula One racing?",
+     "choices": [
+      "FIA",
+      "FIFA",
+      "UEFA",
+      "IOC"
+     ],
+     "answer": 0,
+     "explanation": "The FIA is the governing body."
+    }
+   ]
+  },
+  {
+   "id": "f1-002",
+   "ask": {
+    "1": "Team",
+    "2": "Emblem",
+    "3": "Colour"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What colour are Ferrari's F1 cars traditionally?",
+     "choices": [
+      "Yellow",
+      "Red",
+      "Green",
+      "Blue"
+     ],
+     "answer": 1,
+     "explanation": "Ferrari uses Rosso Corsa red."
+    },
+    {
+     "level": 3,
+     "question": "In which Italian town is Ferrari based?",
+     "choices": [
+      "Monza",
+      "Turin",
+      "Maranello",
+      "Imola"
+     ],
+     "answer": 2,
+     "explanation": "Ferrari is in Maranello."
+    }
+   ]
+  },
+  {
+   "id": "f1-003",
+   "ask": {
+    "1": "Driver",
+    "2": "Titles",
+    "3": "Record"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "For which team did Lewis Hamilton win titles from 2014 to 2020?",
+     "choices": [
+      "Ferrari",
+      "Red Bull",
+      "Williams",
+      "Mercedes"
+     ],
+     "answer": 3,
+     "explanation": "Hamilton won with Mercedes."
+    },
+    {
+     "level": 3,
+     "question": "Which team did Hamilton win his first title with in 2008?",
+     "choices": [
+      "McLaren",
+      "Mercedes",
+      "Ferrari",
+      "Renault"
+     ],
+     "answer": 0,
+     "explanation": "He won with McLaren in 2008."
+    }
+   ]
+  },
+  {
+   "id": "f1-004",
+   "ask": {
+    "1": "Flag",
+    "2": "Race end",
+    "3": "Pattern"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What does a red flag mean in F1?",
+     "choices": [
+      "A pit stop is required",
+      "The race is over",
+      "A faster car is behind",
+      "The session is stopped"
+     ],
+     "answer": 3,
+     "explanation": "A red flag stops the session."
+    },
+    {
+     "level": 3,
+     "question": "What does a blue flag tell a driver?",
+     "choices": [
+      "That the track is wet",
+      "That there is oil",
+      "To let a faster car pass",
+      "To stop immediately"
+     ],
+     "answer": 2,
+     "explanation": "A blue flag means let faster cars by."
+    }
+   ]
+  },
+  {
+   "id": "f1-005",
+   "ask": {
+    "1": "Dutch",
+    "2": "Red Bull",
+    "3": "Titles"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which team does Max Verstappen drive for?",
+     "choices": [
+      "Mercedes",
+      "McLaren",
+      "Ferrari",
+      "Red Bull Racing"
+     ],
+     "answer": 3,
+     "explanation": "Verstappen drives for Red Bull."
+    },
+    {
+     "level": 3,
+     "question": "Max Verstappen won his first world title in which year?",
+     "choices": [
+      "2018",
+      "2023",
+      "2016",
+      "2021"
+     ],
+     "answer": 3,
+     "explanation": "He won his first title in 2021."
+    }
+   ]
+  },
+  {
+   "id": "f1-006",
+   "ask": {
+    "1": "Circuit",
+    "2": "Italy",
+    "3": "Park"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which Italian circuit is nicknamed the Temple of Speed?",
+     "choices": [
+      "Misano",
+      "Imola",
+      "Mugello",
+      "Monza"
+     ],
+     "answer": 3,
+     "explanation": "Monza is the Temple of Speed."
+    },
+    {
+     "level": 3,
+     "question": "Which Italian city is Monza close to?",
+     "choices": [
+      "Milan",
+      "Venice",
+      "Rome",
+      "Naples"
+     ],
+     "answer": 0,
+     "explanation": "Monza is near Milan."
+    }
+   ]
+  },
+  {
+   "id": "f1-007",
+   "ask": {
+    "1": "Circuit",
+    "2": "Monaco",
+    "3": "Street"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which tiny country is a famous street race held every year in F1?",
+     "choices": [
+      "Andorra",
+      "Liechtenstein",
+      "Monaco",
+      "Luxembourg"
+     ],
+     "answer": 2,
+     "explanation": "Monaco hosts a Grand Prix."
+    },
+    {
+     "level": 3,
+     "question": "In which month is the Monaco Grand Prix traditionally held?",
+     "choices": [
+      "November",
+      "January",
+      "September",
+      "May"
+     ],
+     "answer": 3,
+     "explanation": "It is held in late May."
+    }
+   ]
+  },
+  {
+   "id": "f1-008",
+   "ask": {
+    "1": "Acronym",
+    "2": "Overtake",
+    "3": "Rear wing"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What does a driver use to help overtake by opening a flap on the rear wing?",
+     "choices": [
+      "ABS",
+      "ERS",
+      "DRS",
+      "GPS"
+     ],
+     "answer": 2,
+     "explanation": "DRS opens the rear flap."
+    },
+    {
+     "level": 3,
+     "question": "Within how many seconds of the car ahead must a driver be to use DRS?",
+     "choices": [
+      "5 seconds",
+      "30 seconds",
+      "10 seconds",
+      "1 second"
+     ],
+     "answer": 3,
+     "explanation": "DRS requires being within one second."
+    }
+   ]
+  },
+  {
+   "id": "f1-009",
+   "ask": {
+    "1": "Points",
+    "2": "Winner",
+    "3": "Race"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In F1, who gets the most points in a race?",
+     "choices": [
+      "The winner",
+      "The last finisher",
+      "The qualifier",
+      "The mechanic"
+     ],
+     "answer": 0,
+     "explanation": "The winner scores the most."
+    },
+    {
+     "level": 3,
+     "question": "How many points does second place get in a Grand Prix?",
+     "choices": [
+      "18",
+      "15",
+      "12",
+      "20"
+     ],
+     "answer": 0,
+     "explanation": "Second gets 18."
+    }
+   ]
+  },
+  {
+   "id": "f1-010",
+   "ask": {
+    "1": "Team",
+    "2": "Orange",
+    "3": "Woking"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which F1 team is famous for papaya orange cars?",
+     "choices": [
+      "Ferrari",
+      "McLaren",
+      "Haas",
+      "Mercedes"
+     ],
+     "answer": 1,
+     "explanation": "McLaren uses papaya."
+    },
+    {
+     "level": 3,
+     "question": "Which New Zealander founded McLaren in 1963?",
+     "choices": [
+      "Ron Dennis",
+      "Chris Amon",
+      "Denny Hulme",
+      "Bruce McLaren"
+     ],
+     "answer": 3,
+     "explanation": "Bruce McLaren founded the team."
+    }
+   ]
+  },
+  {
+   "id": "f1-011",
+   "ask": {
+    "1": "Title",
+    "2": "2008",
+    "3": "Margin"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which British driver won his first F1 title in 2008?",
+     "choices": [
+      "Damon Hill",
+      "Lewis Hamilton",
+      "Nigel Mansell",
+      "Jenson Button"
+     ],
+     "answer": 1,
+     "explanation": "Hamilton won in 2008."
+    },
+    {
+     "level": 3,
+     "question": "At which Brazilian race did Hamilton clinch the 2008 title on the last corner?",
+     "choices": [
+      "Suzuka",
+      "Monza",
+      "Interlagos",
+      "Spa"
+     ],
+     "answer": 2,
+     "explanation": "He won it at Interlagos."
+    }
+   ]
+  },
+  {
+   "id": "f1-012",
+   "ask": {
+    "1": "Circuit",
+    "2": "Italy",
+    "3": "Nickname"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which country is Monza?",
+     "choices": [
+      "Italy",
+      "Spain",
+      "France",
+      "Germany"
+     ],
+     "answer": 0,
+     "explanation": "Monza is in Italy."
+    },
+    {
+     "level": 3,
+     "question": "Which Italian region is Monza in?",
+     "choices": [
+      "Lombardy",
+      "Veneto",
+      "Sicily",
+      "Tuscany"
+     ],
+     "answer": 0,
+     "explanation": "Monza is in Lombardy."
+    }
+   ]
+  },
+  {
+   "id": "f1-013",
+   "ask": {
+    "1": "Tyres",
+    "2": "Supplier",
+    "3": "Italy"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What do F1 cars have on their wheels?",
+     "choices": [
+      "Tyres",
+      "Wooden rims",
+      "Skis",
+      "Tracks"
+     ],
+     "answer": 0,
+     "explanation": "F1 cars use tyres."
+    },
+    {
+     "level": 3,
+     "question": "Which compound is the softest F1 slick tyre, marked with a red sidewall?",
+     "choices": [
+      "Intermediate",
+      "Soft",
+      "Hard",
+      "Medium"
+     ],
+     "answer": 1,
+     "explanation": "Red marks the soft compound."
+    }
+   ]
+  },
+  {
+   "id": "f1-014",
+   "ask": {
+    "1": "Posthumous",
+    "2": "Champion",
+    "3": "Austrian"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What does 'posthumous' mean?",
+     "choices": [
+      "At night",
+      "After death",
+      "Before birth",
+      "During a race"
+     ],
+     "answer": 1,
+     "explanation": "It means after death."
+    },
+    {
+     "level": 2,
+     "question": "In which year did Jochen Rindt win his title posthumously?",
+     "choices": [
+      "1990",
+      "1980",
+      "1962",
+      "1970"
+     ],
+     "answer": 3,
+     "explanation": "Rindt died in 1970 and was crowned champion."
+    }
+   ]
+  },
+  {
+   "id": "f1-015",
+   "ask": {
+    "1": "Senna",
+    "2": "Country",
+    "3": "Death"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country was Ayrton Senna from?",
+     "choices": [
+      "Brazil",
+      "Argentina",
+      "Portugal",
+      "Italy"
+     ],
+     "answer": 0,
+     "explanation": "Senna was Brazilian."
+    },
+    {
+     "level": 2,
+     "question": "In which year did Ayrton Senna die at Imola?",
+     "choices": [
+      "1994",
+      "1985",
+      "2001",
+      "1988"
+     ],
+     "answer": 0,
+     "explanation": "Senna died on 1 May 1994."
+    }
+   ]
+  },
+  {
+   "id": "f1-016",
+   "ask": {
+    "1": "Nürburgring",
+    "2": "Nickname",
+    "3": "Germany"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which country is the Nürburgring?",
+     "choices": [
+      "Belgium",
+      "Netherlands",
+      "Austria",
+      "Germany"
+     ],
+     "answer": 3,
+     "explanation": "It is in western Germany."
+    },
+    {
+     "level": 2,
+     "question": "Who nicknamed the Nordschleife the 'Green Hell'?",
+     "choices": [
+      "Jackie Stewart",
+      "Mika Häkkinen",
+      "Niki Lauda",
+      "Ayrton Senna"
+     ],
+     "answer": 0,
+     "explanation": "Jackie Stewart coined it."
+    }
+   ]
+  },
+  {
+   "id": "f1-017",
+   "ask": {
+    "1": "Finland",
+    "2": "Ferrari",
+    "3": "Title"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country is Kimi Räikkönen from?",
+     "choices": [
+      "Finland",
+      "Sweden",
+      "Norway",
+      "Denmark"
+     ],
+     "answer": 0,
+     "explanation": "Kimi is Finnish."
+    },
+    {
+     "level": 2,
+     "question": "At which race did Räikkönen clinch the 2007 title?",
+     "choices": [
+      "Monaco Grand Prix",
+      "British Grand Prix",
+      "Belgian Grand Prix",
+      "Brazilian Grand Prix"
+     ],
+     "answer": 3,
+     "explanation": "He won it in Brazil."
+    }
+   ]
+  },
+  {
+   "id": "f1-018",
+   "ask": {
+    "1": "Hamilton",
+    "2": "Year",
+    "3": "Title"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "How old was Lewis Hamilton when he won his first title: 23, 33 or 43?",
+     "choices": [
+      "23",
+      "13",
+      "33",
+      "43"
+     ],
+     "answer": 0,
+     "explanation": "He was 23 in 2008."
+    },
+    {
+     "level": 2,
+     "question": "How many world titles has Lewis Hamilton won in total?",
+     "choices": [
+      "5",
+      "7",
+      "9",
+      "3"
+     ],
+     "answer": 1,
+     "explanation": "Hamilton has seven titles."
+    }
+   ]
+  },
+  {
+   "id": "f1-019",
+   "ask": {
+    "1": "Rule",
+    "2": "Cars",
+    "3": "Setup"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "After qualifying, are teams free to change the cars completely before the race?",
+     "choices": [
+      "Only tyres",
+      "No",
+      "Only wings",
+      "Yes"
+     ],
+     "answer": 1,
+     "explanation": "Parc fermé limits changes."
+    },
+    {
+     "level": 2,
+     "question": "What does 'parc fermé' mean in French?",
+     "choices": [
+      "Free park",
+      "Closed park",
+      "Fast park",
+      "Pit park"
+     ],
+     "answer": 1,
+     "explanation": "Parc fermé means closed park."
+    }
+   ]
+  },
+  {
+   "id": "f1-020",
+   "ask": {
+    "1": "Japan",
+    "2": "Circuit",
+    "3": "Figure-eight"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which country is the Suzuka circuit?",
+     "choices": [
+      "Korea",
+      "Japan",
+      "Malaysia",
+      "China"
+     ],
+     "answer": 1,
+     "explanation": "Suzuka is in Japan."
+    },
+    {
+     "level": 2,
+     "question": "What unusual shape has the Suzuka track?",
+     "choices": [
+      "A triangle",
+      "A circle",
+      "A square",
+      "A figure eight"
+     ],
+     "answer": 3,
+     "explanation": "Suzuka crosses over itself."
+    }
+   ]
+  },
+  {
+   "id": "f1-021",
+   "ask": {
+    "1": "Wins",
+    "2": "Record",
+    "3": "Driver"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which sport has Grands Prix and constructors' championships?",
+     "choices": [
+      "Cycling",
+      "Formula One",
+      "Tennis",
+      "Golf"
+     ],
+     "answer": 1,
+     "explanation": "F1 has constructors."
+    },
+    {
+     "level": 2,
+     "question": "How many Grand Prix wins does Lewis Hamilton have, more than 100?",
+     "choices": [
+      "About 75",
+      "More than 100",
+      "About 20",
+      "About 50"
+     ],
+     "answer": 1,
+     "explanation": "He passed 100 wins in 2021."
+    }
+   ]
+  },
+  {
+   "id": "f1-022",
+   "ask": {
+    "1": "1950",
+    "2": "Italian",
+    "3": "Champion"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which decade did the Formula One world championship begin?",
+     "choices": [
+      "1950s",
+      "1930s",
+      "1970s",
+      "1990s"
+     ],
+     "answer": 0,
+     "explanation": "It began in 1950."
+    },
+    {
+     "level": 2,
+     "question": "In which country was the first 1950 championship race, at Silverstone?",
+     "choices": [
+      "France",
+      "Monaco",
+      "Britain",
+      "Italy"
+     ],
+     "answer": 2,
+     "explanation": "It was the 1950 British Grand Prix."
+    }
+   ]
+  },
+  {
+   "id": "f1-023",
+   "ask": {
+    "1": "Brazil",
+    "2": "Circuit",
+    "3": "Corner"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which country is Interlagos?",
+     "choices": [
+      "Brazil",
+      "Mexico",
+      "Argentina",
+      "Portugal"
+     ],
+     "answer": 0,
+     "explanation": "Interlagos is Brazilian."
+    },
+    {
+     "level": 2,
+     "question": "In which Brazilian city is Interlagos?",
+     "choices": [
+      "Salvador",
+      "Brasilia",
+      "Rio de Janeiro",
+      "Sao Paulo"
+     ],
+     "answer": 3,
+     "explanation": "Interlagos is in Sao Paulo."
+    }
+   ]
+  },
+  {
+   "id": "f1-024",
+   "ask": {
+    "1": "Constructor",
+    "2": "Record",
+    "3": "Team"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which team has a prancing horse and the most constructors' titles?",
+     "choices": [
+      "Lotus",
+      "Mercedes",
+      "Red Bull",
+      "Ferrari"
+     ],
+     "answer": 3,
+     "explanation": "Ferrari leads."
+    },
+    {
+     "level": 2,
+     "question": "About how many constructors' titles does Ferrari have?",
+     "choices": [
+      "3",
+      "6",
+      "30",
+      "16"
+     ],
+     "answer": 3,
+     "explanation": "Ferrari has sixteen."
+    }
+   ]
+  },
+  {
+   "id": "f1-025",
+   "ask": {
+    "1": "Schumacher",
+    "2": "Titles",
+    "3": "Years"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which German driver was a seven-time champion?",
+     "choices": [
+      "Nico Rosberg",
+      "Sebastian Vettel",
+      "Nico Hulkenberg",
+      "Michael Schumacher"
+     ],
+     "answer": 3,
+     "explanation": "Schumacher won seven."
+    },
+    {
+     "level": 2,
+     "question": "In which year did Schumacher win his fifth consecutive title?",
+     "choices": [
+      "1999",
+      "2004",
+      "1994",
+      "2010"
+     ],
+     "answer": 1,
+     "explanation": "He won five straight from 2000 to 2004."
+    }
+   ]
+  },
+  {
+   "id": "f1-026",
+   "ask": {
+    "1": "Engine",
+    "2": "2014",
+    "3": "Hybrid"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of power do modern F1 cars use alongside a petrol engine?",
+     "choices": [
+      "Wind",
+      "Coal",
+      "Steam",
+      "Electric hybrid"
+     ],
+     "answer": 3,
+     "explanation": "Hybrid power units."
+    },
+    {
+     "level": 2,
+     "question": "How many cylinders do modern F1 engines have?",
+     "choices": [
+      "8",
+      "12",
+      "6",
+      "4"
+     ],
+     "answer": 2,
+     "explanation": "They are V6 engines."
+    }
+   ]
+  },
+  {
+   "id": "f1-027",
+   "ask": {
+    "1": "Singapore",
+    "2": "Night",
+    "3": "Circuit"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In F1, which Asian city-state hosts a night race?",
+     "choices": [
+      "Hong Kong",
+      "Dubai",
+      "Macau",
+      "Singapore"
+     ],
+     "answer": 3,
+     "explanation": "Singapore hosts under lights."
+    },
+    {
+     "level": 2,
+     "question": "In which year was the first Singapore Grand Prix?",
+     "choices": [
+      "2002",
+      "2008",
+      "2015",
+      "1998"
+     ],
+     "answer": 1,
+     "explanation": "The first was in 2008."
+    }
+   ]
+  },
+  {
+   "id": "f1-028",
+   "ask": {
+    "1": "Safety",
+    "2": "Car",
+    "3": "Slow"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What colour is the F1 safety car usually?",
+     "choices": [
+      "Red",
+      "Pink",
+      "Green or silver",
+      "Yellow"
+     ],
+     "answer": 2,
+     "explanation": "It is typically a Mercedes or Aston Martin in green or silver."
+    },
+    {
+     "level": 3,
+     "question": "What can drivers NOT do while the safety car is on track?",
+     "choices": [
+      "Pit",
+      "Overtake",
+      "Brake",
+      "Steer"
+     ],
+     "answer": 1,
+     "explanation": "Overtaking is not allowed behind it."
+    }
+   ]
+  },
+  {
+   "id": "f1-029",
+   "ask": {
+    "1": "Calendar",
+    "2": "Races",
+    "3": "Season"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In F1, a full season is made up of many what?",
+     "choices": [
+      "Concerts",
+      "Marathons",
+      "Matches",
+      "Grands Prix"
+     ],
+     "answer": 3,
+     "explanation": "A season has many Grands Prix."
+    },
+    {
+     "level": 2,
+     "question": "Which continent hosts the most F1 races?",
+     "choices": [
+      "Antarctica",
+      "Oceania",
+      "Europe",
+      "Africa"
+     ],
+     "answer": 2,
+     "explanation": "Europe hosts the most."
+    }
+   ]
+  }
+ ]
+}

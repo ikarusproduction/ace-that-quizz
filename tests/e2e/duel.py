@@ -9,7 +9,7 @@ errors = []
 CORRECT = """(wrong) => {
   const app = window.__app;
   const text = document.querySelector('#app').innerText;
-  const q = app.bank.questions.find((x) => text.includes(x.question));
+  const q = [...app.bank.questions, ...app.bank.variants].find((x) => text.includes(x.question));
   if (!q) return 'noq';
   const want = String(q.choices[q.answer]);
   const els = [...document.querySelectorAll('.choice:not(.removed)')];

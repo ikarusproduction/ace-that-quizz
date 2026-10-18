@@ -3,7 +3,7 @@ async () => {
   const { Rng } = await import('/src/engine/rng.js');
   const app = window.__app;
   let t = Date.now() - 20 * 86400000;
-  const ctx = makeContext(app.bank.questions, () => (t += 4000));
+  const ctx = makeContext([...app.bank.questions, ...(app.bank.variants ?? [])], () => (t += 4000));
   const profiles = await app.repo.listProfiles();
   const byName = Object.fromEntries(profiles.map((p) => [p.name, p]));
   const strength = { Ana: { history: .9, geography: .85, science: .35, symbols: .5, arts: .7, nature: .6, news: .6, phobia: .5 }, Ben: { science: .9, symbols: .85, nature: .8, history: .4, geography: .45, arts: .5, news: .5, phobia: .7 } };

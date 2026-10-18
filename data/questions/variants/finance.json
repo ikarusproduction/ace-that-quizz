@@ -1,0 +1,1163 @@
+{
+ "category": "finance",
+ "review": "unreviewed",
+ "note": "Difficulty ladders: the original question keeps its own level, these are the other levels. Unreviewed.",
+ "families": [
+  {
+   "id": "fin-001",
+   "ask": {
+    "1": "Meaning",
+    "2": "Machine",
+    "3": "Term"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the secret code used to access an ATM?",
+     "choices": [
+      "CVV",
+      "PIN",
+      "SWIFT",
+      "IBAN"
+     ],
+     "answer": 1,
+     "explanation": "A PIN is a personal identification number."
+    },
+    {
+     "level": 3,
+     "question": "What does 'PIN' stand for?",
+     "choices": [
+      "Personal Identification Number",
+      "Partial Income Number",
+      "Payment Index Note",
+      "Private Internal Network"
+     ],
+     "answer": 0,
+     "explanation": "PIN is Personal Identification Number."
+    }
+   ]
+  },
+  {
+   "id": "fin-002",
+   "ask": {
+    "1": "Savings",
+    "2": "Interest",
+    "3": "Bank"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What do you call the percentage rate a bank pays on savings per year?",
+     "choices": [
+      "Exchange rate",
+      "Interest rate",
+      "Tax rate",
+      "Fee rate"
+     ],
+     "answer": 1,
+     "explanation": "It is the interest rate."
+    },
+    {
+     "level": 3,
+     "question": "What do you call a bank account that pays interest on money kept in it?",
+     "choices": [
+      "Savings account",
+      "Current account",
+      "Joint account",
+      "Escrow account"
+     ],
+     "answer": 0,
+     "explanation": "A savings account earns interest."
+    }
+   ]
+  },
+  {
+   "id": "fin-003",
+   "ask": {
+    "1": "Currency",
+    "2": "Japan",
+    "3": "Name"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the currency of China called, also known as renminbi?",
+     "choices": [
+      "Won",
+      "Yuan",
+      "Rupee",
+      "Yen"
+     ],
+     "answer": 1,
+     "explanation": "The renminbi's unit is the yuan."
+    },
+    {
+     "level": 3,
+     "question": "What is the currency of South Korea?",
+     "choices": [
+      "Baht",
+      "Dong",
+      "Yen",
+      "Won"
+     ],
+     "answer": 3,
+     "explanation": "South Korea uses the won."
+    }
+   ]
+  },
+  {
+   "id": "fin-004",
+   "ask": {
+    "1": "Currency",
+    "2": "UK",
+    "3": "Name"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the currency of Switzerland?",
+     "choices": [
+      "Euro",
+      "Krona",
+      "Mark",
+      "Swiss franc"
+     ],
+     "answer": 3,
+     "explanation": "Switzerland uses the franc."
+    },
+    {
+     "level": 3,
+     "question": "What does the British penny's plural coin 'pence' make up of a pound?",
+     "choices": [
+      "20 pence",
+      "12 pence",
+      "10 pence",
+      "100 pence"
+     ],
+     "answer": 3,
+     "explanation": "A pound is 100 pence."
+    }
+   ]
+  },
+  {
+   "id": "fin-005",
+   "ask": {
+    "1": "Meaning",
+    "2": "Investment",
+    "3": "Return"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "In business, what does 'profit' mean?",
+     "choices": [
+      "Costs only",
+      "Revenue plus costs",
+      "Taxes only",
+      "Revenue minus costs"
+     ],
+     "answer": 3,
+     "explanation": "Profit is revenue minus costs."
+    },
+    {
+     "level": 3,
+     "question": "If you invest 100 and get 110 back, what is the return?",
+     "choices": [
+      "1 percent",
+      "100 percent",
+      "10 percent",
+      "110 percent"
+     ],
+     "answer": 2,
+     "explanation": "A 10 gain on 100 is 10 percent."
+    }
+   ]
+  },
+  {
+   "id": "fin-006",
+   "ask": {
+    "1": "Market",
+    "2": "Bull",
+    "3": "Rise"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What do we call a market where prices are falling for a long time?",
+     "choices": [
+      "Open market",
+      "Flat market",
+      "Bear market",
+      "Bull market"
+     ],
+     "answer": 2,
+     "explanation": "A bear market is falling."
+    },
+    {
+     "level": 3,
+     "question": "By what common threshold of decline is a bear market defined?",
+     "choices": [
+      "80 percent",
+      "50 percent",
+      "2 percent",
+      "20 percent"
+     ],
+     "answer": 3,
+     "explanation": "A 20 percent fall from the high is typical."
+    }
+   ]
+  },
+  {
+   "id": "fin-007",
+   "ask": {
+    "1": "Wall Street",
+    "2": "Exchange",
+    "3": "Name"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which exchange in New York is known for tech stocks and is all-electronic?",
+     "choices": [
+      "Nikkei",
+      "Euronext",
+      "Nasdaq",
+      "Dax"
+     ],
+     "answer": 2,
+     "explanation": "Nasdaq lists many tech firms."
+    },
+    {
+     "level": 3,
+     "question": "In which city is the London Stock Exchange located?",
+     "choices": [
+      "Paris",
+      "Frankfurt",
+      "Dublin",
+      "London"
+     ],
+     "answer": 3,
+     "explanation": "The LSE is in London."
+    }
+   ]
+  },
+  {
+   "id": "fin-008",
+   "ask": {
+    "1": "GDP",
+    "2": "Economy",
+    "3": "Measure"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What do economists measure with GDP?",
+     "choices": [
+      "Population",
+      "The size of an economy",
+      "The weather",
+      "Crime"
+     ],
+     "answer": 1,
+     "explanation": "GDP measures economic output."
+    },
+    {
+     "level": 3,
+     "question": "Which expenditure approach adds consumption, investment, government spending and what else?",
+     "choices": [
+      "Savings",
+      "Net exports",
+      "Wages",
+      "Inflation"
+     ],
+     "answer": 1,
+     "explanation": "GDP = C + I + G + net exports."
+    }
+   ]
+  },
+  {
+   "id": "fin-009",
+   "ask": {
+    "1": "Prices",
+    "2": "Rise",
+    "3": "Money"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "If prices rise over time, your money buys what?",
+     "choices": [
+      "More",
+      "The same",
+      "Nothing at all",
+      "Less"
+     ],
+     "answer": 3,
+     "explanation": "Inflation reduces purchasing power."
+    },
+    {
+     "level": 3,
+     "question": "Which index tracks the cost of a basket of consumer goods?",
+     "choices": [
+      "Dow Jones",
+      "Gini index",
+      "Consumer Price Index",
+      "Nikkei"
+     ],
+     "answer": 2,
+     "explanation": "The CPI measures inflation."
+    }
+   ]
+  },
+  {
+   "id": "fin-010",
+   "ask": {
+    "1": "IPO",
+    "2": "Stock",
+    "3": "Company"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "When a company first sells shares to the public, what happens?",
+     "choices": [
+      "It is taxed",
+      "It goes public",
+      "It is sold",
+      "It closes"
+     ],
+     "answer": 1,
+     "explanation": "That is an IPO."
+    },
+    {
+     "level": 3,
+     "question": "What do you call the first price at which shares are sold in an IPO?",
+     "choices": [
+      "The spot price",
+      "The offer price",
+      "The strike price",
+      "The face rate"
+     ],
+     "answer": 1,
+     "explanation": "The offer price is set before listing."
+    }
+   ]
+  },
+  {
+   "id": "fin-011",
+   "ask": {
+    "1": "Central bank",
+    "2": "Euro",
+    "3": "Name"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which currency do most countries of the European Union use?",
+     "choices": [
+      "Franc",
+      "Dollar",
+      "Euro",
+      "Pound"
+     ],
+     "answer": 2,
+     "explanation": "The euro is used by the eurozone."
+    },
+    {
+     "level": 3,
+     "question": "In which German city is the European Central Bank based?",
+     "choices": [
+      "Berlin",
+      "Munich",
+      "Hamburg",
+      "Frankfurt"
+     ],
+     "answer": 3,
+     "explanation": "The ECB is in Frankfurt."
+    }
+   ]
+  },
+  {
+   "id": "fin-012",
+   "ask": {
+    "1": "Index",
+    "2": "US",
+    "3": "Companies"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which American index tracks big companies on Wall Street?",
+     "choices": [
+      "S&P 500",
+      "Nikkei",
+      "CAC 40",
+      "Hang Seng"
+     ],
+     "answer": 0,
+     "explanation": "The S&P 500 tracks 500 firms."
+    },
+    {
+     "level": 3,
+     "question": "Which French index tracks 40 large companies?",
+     "choices": [
+      "IBEX",
+      "DAX",
+      "FTSE",
+      "CAC 40"
+     ],
+     "answer": 3,
+     "explanation": "The CAC 40 is Paris-based."
+    }
+   ]
+  },
+  {
+   "id": "fin-013",
+   "ask": {
+    "1": "Profit",
+    "2": "Shareholders",
+    "3": "Payment"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "If you own shares of a company, what are you called?",
+     "choices": [
+      "A shareholder",
+      "A debtor",
+      "A landlord",
+      "A tenant"
+     ],
+     "answer": 0,
+     "explanation": "Shares make you a shareholder."
+    },
+    {
+     "level": 3,
+     "question": "How often do many companies pay dividends?",
+     "choices": [
+      "Quarterly",
+      "Every minute",
+      "Never",
+      "Every decade"
+     ],
+     "answer": 0,
+     "explanation": "Many pay every quarter."
+    }
+   ]
+  },
+  {
+   "id": "fin-014",
+   "ask": {
+    "1": "Crypto",
+    "2": "Bitcoin",
+    "3": "Creator"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of money is Bitcoin?",
+     "choices": [
+      "Paper money",
+      "Cryptocurrency",
+      "Cheques",
+      "Coins"
+     ],
+     "answer": 1,
+     "explanation": "Bitcoin is digital money."
+    },
+    {
+     "level": 3,
+     "question": "What technology records Bitcoin transactions?",
+     "choices": [
+      "Blockchain",
+      "Telegraph",
+      "Fax",
+      "Spreadsheet"
+     ],
+     "answer": 0,
+     "explanation": "Bitcoin uses a blockchain."
+    }
+   ]
+  },
+  {
+   "id": "fin-015",
+   "ask": {
+    "1": "Investing",
+    "2": "Risk",
+    "3": "Spread"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Why do people avoid putting all their money in one stock?",
+     "choices": [
+      "To avoid interest",
+      "To reduce risk",
+      "To pay more tax",
+      "To save time"
+     ],
+     "answer": 1,
+     "explanation": "Spreading reduces risk."
+    },
+    {
+     "level": 3,
+     "question": "What proverb explains diversification: don't put all your eggs in what?",
+     "choices": [
+      "One nest",
+      "One box",
+      "One bowl",
+      "One basket"
+     ],
+     "answer": 3,
+     "explanation": "Eggs in one basket."
+    }
+   ]
+  },
+  {
+   "id": "fin-016",
+   "ask": {
+    "1": "Interest",
+    "2": "Growth",
+    "3": "Compound"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "If your savings earn interest on past interest, it grows how?",
+     "choices": [
+      "Slower",
+      "Backwards",
+      "Faster",
+      "Not at all"
+     ],
+     "answer": 2,
+     "explanation": "Compounding speeds growth."
+    },
+    {
+     "level": 3,
+     "question": "Roughly how long does money take to double at 7 percent compound interest?",
+     "choices": [
+      "About 2 years",
+      "About 50 years",
+      "About 10 years",
+      "About 30 years"
+     ],
+     "answer": 2,
+     "explanation": "The rule of 72 gives about 10 years."
+    }
+   ]
+  },
+  {
+   "id": "fin-017",
+   "ask": {
+    "1": "Economy",
+    "2": "Fall",
+    "3": "Recession"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What do we call a period of economic decline?",
+     "choices": [
+      "A merger",
+      "A recession",
+      "A holiday",
+      "A boom"
+     ],
+     "answer": 1,
+     "explanation": "A recession is a decline."
+    },
+    {
+     "level": 2,
+     "question": "How long is a quarter in economic reporting?",
+     "choices": [
+      "One year",
+      "Three months",
+      "Six months",
+      "One month"
+     ],
+     "answer": 1,
+     "explanation": "A quarter is three months."
+    }
+   ]
+  },
+  {
+   "id": "fin-018",
+   "ask": {
+    "1": "US",
+    "2": "Bank",
+    "3": "Fed"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which currency does the US use?",
+     "choices": [
+      "Peso",
+      "Euro",
+      "Dollar",
+      "Pound"
+     ],
+     "answer": 2,
+     "explanation": "The US uses the dollar."
+    },
+    {
+     "level": 2,
+     "question": "In which US city does the Federal Reserve have its headquarters?",
+     "choices": [
+      "Boston",
+      "Washington D.C.",
+      "Chicago",
+      "New York"
+     ],
+     "answer": 1,
+     "explanation": "The Fed's Board is in Washington D.C."
+    }
+   ]
+  },
+  {
+   "id": "fin-019",
+   "ask": {
+    "1": "Ratio",
+    "2": "Stock",
+    "3": "Earnings"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "If a company makes profits, what does it earn?",
+     "choices": [
+      "Fines",
+      "Earnings",
+      "Losses",
+      "Debts"
+     ],
+     "answer": 1,
+     "explanation": "Profits are earnings."
+    },
+    {
+     "level": 2,
+     "question": "What does a high P/E ratio typically suggest?",
+     "choices": [
+      "Zero dividends",
+      "A tax refund",
+      "A bankrupt firm",
+      "Investors expect growth"
+     ],
+     "answer": 3,
+     "explanation": "A high P/E suggests expected growth."
+    }
+   ]
+  },
+  {
+   "id": "fin-020",
+   "ask": {
+    "1": "Trade",
+    "2": "Bet",
+    "3": "Fall"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "If you expect a share price to fall, you might do what?",
+     "choices": [
+      "Buy more",
+      "Ignore it",
+      "Sell",
+      "Save it"
+     ],
+     "answer": 2,
+     "explanation": "Selling avoids loss."
+    },
+    {
+     "level": 2,
+     "question": "What do you borrow in a short sale?",
+     "choices": [
+      "Cash",
+      "Land",
+      "Shares",
+      "Gold"
+     ],
+     "answer": 2,
+     "explanation": "Short sellers borrow shares."
+    }
+   ]
+  },
+  {
+   "id": "fin-021",
+   "ask": {
+    "1": "Euro",
+    "2": "Year",
+    "3": "Cash"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which currency replaced the French franc?",
+     "choices": [
+      "Mark",
+      "Pound",
+      "Euro",
+      "Dollar"
+     ],
+     "answer": 2,
+     "explanation": "The euro replaced the franc."
+    },
+    {
+     "level": 2,
+     "question": "In which year was the euro introduced as an accounting currency?",
+     "choices": [
+      "1985",
+      "2010",
+      "1999",
+      "1975"
+     ],
+     "answer": 2,
+     "explanation": "The euro began in 1999 for accounts."
+    }
+   ]
+  },
+  {
+   "id": "fin-022",
+   "ask": {
+    "1": "Swiss",
+    "2": "Bank",
+    "3": "City"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country is famous for its secretive banks?",
+     "choices": [
+      "Brazil",
+      "Japan",
+      "Egypt",
+      "Switzerland"
+     ],
+     "answer": 3,
+     "explanation": "Switzerland is known for banking."
+    },
+    {
+     "level": 2,
+     "question": "Which Swiss city is known as a hub for banks and is the largest city?",
+     "choices": [
+      "Bern",
+      "Basel",
+      "Zurich",
+      "Lausanne"
+     ],
+     "answer": 2,
+     "explanation": "Zurich is a banking centre."
+    }
+   ]
+  },
+  {
+   "id": "fin-023",
+   "ask": {
+    "1": "Crash",
+    "2": "1929",
+    "3": "Depression"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What is a sudden collapse in share prices called?",
+     "choices": [
+      "A bonus",
+      "A raise",
+      "A merger",
+      "A crash"
+     ],
+     "answer": 3,
+     "explanation": "A crash is a sudden collapse."
+    },
+    {
+     "level": 2,
+     "question": "In which decade did the Great Depression start?",
+     "choices": [
+      "The 1920s",
+      "The 1960s",
+      "The 2000s",
+      "The 1980s"
+     ],
+     "answer": 0,
+     "explanation": "It started in 1929."
+    }
+   ]
+  },
+  {
+   "id": "fin-024",
+   "ask": {
+    "1": "Gold",
+    "2": "Weight",
+    "3": "Metal"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which precious metal is yellow and used in jewellery and bars?",
+     "choices": [
+      "Copper",
+      "Iron",
+      "Gold",
+      "Silver"
+     ],
+     "answer": 2,
+     "explanation": "Gold is yellow."
+    },
+    {
+     "level": 2,
+     "question": "What is the chemical symbol of gold?",
+     "choices": [
+      "Go",
+      "Ag",
+      "Gd",
+      "Au"
+     ],
+     "answer": 3,
+     "explanation": "Au comes from aurum."
+    }
+   ]
+  },
+  {
+   "id": "fin-025",
+   "ask": {
+    "1": "Fund",
+    "2": "Basket",
+    "3": "Trade"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "A fund that holds many stocks at once is a kind of what?",
+     "choices": [
+      "Investment fund",
+      "Coupon",
+      "Bank loan",
+      "Tax"
+     ],
+     "answer": 0,
+     "explanation": "Funds pool investments."
+    },
+    {
+     "level": 2,
+     "question": "On what do ETFs trade like ordinary shares?",
+     "choices": [
+      "A farmers' market",
+      "A post office",
+      "A courtroom",
+      "A stock exchange"
+     ],
+     "answer": 3,
+     "explanation": "ETFs trade on exchanges."
+    }
+   ]
+  },
+  {
+   "id": "fin-026",
+   "ask": {
+    "1": "Latin",
+    "2": "Phrase",
+    "3": "Meaning"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which language does 'bona fide' come from?",
+     "choices": [
+      "French",
+      "Latin",
+      "German",
+      "Greek"
+     ],
+     "answer": 1,
+     "explanation": "Bona fide is Latin."
+    },
+    {
+     "level": 2,
+     "question": "What does 'pro bono' mean?",
+     "choices": [
+      "For the public good",
+      "For free speech",
+      "For profit",
+      "For a tax"
+     ],
+     "answer": 0,
+     "explanation": "Pro bono means for the public good."
+    }
+   ]
+  },
+  {
+   "id": "fin-027",
+   "ask": {
+    "1": "Economist",
+    "2": "Book",
+    "3": "1776"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which economist is famous for the 'invisible hand'?",
+     "choices": [
+      "Karl Marx",
+      "Milton Friedman",
+      "John Nash",
+      "Adam Smith"
+     ],
+     "answer": 3,
+     "explanation": "Smith used the phrase."
+    },
+    {
+     "level": 2,
+     "question": "In which country was Adam Smith born?",
+     "choices": [
+      "Germany",
+      "France",
+      "Scotland",
+      "Spain"
+     ],
+     "answer": 2,
+     "explanation": "Adam Smith was Scottish."
+    }
+   ]
+  },
+  {
+   "id": "fin-028",
+   "ask": {
+    "1": "Central bank",
+    "2": "Stimulus",
+    "3": "QE"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What does a central bank control to influence the economy?",
+     "choices": [
+      "The weather",
+      "Interest rates",
+      "Prices of food",
+      "Wages"
+     ],
+     "answer": 1,
+     "explanation": "Interest rates are its main tool."
+    },
+    {
+     "level": 2,
+     "question": "What does QE stand for?",
+     "choices": [
+      "Quick Exchange",
+      "Quantitative Easing",
+      "Quarterly Equity",
+      "Quality Estimate"
+     ],
+     "answer": 1,
+     "explanation": "QE is quantitative easing."
+    }
+   ]
+  },
+  {
+   "id": "fin-029",
+   "ask": {
+    "1": "Post-war",
+    "2": "Exchange",
+    "3": "Gold"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "After which war was the Bretton Woods conference held?",
+     "choices": [
+      "World War I",
+      "The Cold War",
+      "World War II",
+      "The Vietnam War"
+     ],
+     "answer": 2,
+     "explanation": "It was held in 1944."
+    },
+    {
+     "level": 2,
+     "question": "In which US state is Bretton Woods located?",
+     "choices": [
+      "Oregon",
+      "Florida",
+      "New Hampshire",
+      "Texas"
+     ],
+     "answer": 2,
+     "explanation": "Bretton Woods is in New Hampshire."
+    }
+   ]
+  },
+  {
+   "id": "fin-030",
+   "ask": {
+    "1": "Interest",
+    "2": "Formula",
+    "3": "Simple"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "If you lend 100 at 5 percent for one year, how much interest do you earn?",
+     "choices": [
+      "5",
+      "0.5",
+      "50",
+      "105"
+     ],
+     "answer": 0,
+     "explanation": "5 percent of 100 is 5."
+    },
+    {
+     "level": 2,
+     "question": "How much simple interest is earned on 200 at 10 percent for two years?",
+     "choices": [
+      "20",
+      "400",
+      "10",
+      "40"
+     ],
+     "answer": 3,
+     "explanation": "200 times 0.10 times 2 equals 40."
+    }
+   ]
+  },
+  {
+   "id": "fin-031",
+   "ask": {
+    "1": "Crisis",
+    "2": "Bank",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which kind of event hit global finance in 2008?",
+     "choices": [
+      "A world cup",
+      "A financial crisis",
+      "An eclipse",
+      "A pandemic"
+     ],
+     "answer": 1,
+     "explanation": "The 2008 crisis shook banks."
+    },
+    {
+     "level": 2,
+     "question": "Which US bank went bankrupt in September 2008?",
+     "choices": [
+      "JPMorgan",
+      "Lehman Brothers",
+      "Wells Fargo",
+      "Goldman Sachs"
+     ],
+     "answer": 1,
+     "explanation": "Lehman collapsed in September 2008."
+    }
+   ]
+  },
+  {
+   "id": "fin-032",
+   "ask": {
+    "1": "Budget",
+    "2": "Deficit",
+    "3": "Government"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "If you spend more than you earn, what do you have?",
+     "choices": [
+      "A bonus",
+      "A surplus",
+      "A deficit",
+      "A profit"
+     ],
+     "answer": 2,
+     "explanation": "Spending more is a deficit."
+    },
+    {
+     "level": 3,
+     "question": "What do we call the sum of past deficits that a government owes?",
+     "choices": [
+      "National debt",
+      "Inflation",
+      "Surplus",
+      "GDP"
+     ],
+     "answer": 0,
+     "explanation": "Accumulated deficits form the debt."
+    }
+   ]
+  },
+  {
+   "id": "fin-033",
+   "ask": {
+    "1": "Loan",
+    "2": "Home",
+    "3": "Bank"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What do people usually borrow to buy a house?",
+     "choices": [
+      "A pension",
+      "A gift card",
+      "A coupon",
+      "A mortgage"
+     ],
+     "answer": 3,
+     "explanation": "A mortgage funds a home."
+    },
+    {
+     "level": 3,
+     "question": "What does a lender take as security on a mortgage?",
+     "choices": [
+      "A car",
+      "Shares",
+      "The property",
+      "Jewellery"
+     ],
+     "answer": 2,
+     "explanation": "The home is collateral."
+    }
+   ]
+  },
+  {
+   "id": "fin-034",
+   "ask": {
+    "1": "Tax",
+    "2": "Meaning",
+    "3": "Sales"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is a tax paid on goods and services when you buy them?",
+     "choices": [
+      "Property tax",
+      "Sales tax",
+      "Income tax",
+      "Inheritance tax"
+     ],
+     "answer": 1,
+     "explanation": "Sales tax is charged at purchase."
+    },
+    {
+     "level": 3,
+     "question": "Which standard VAT rate applies in France on most goods?",
+     "choices": [
+      "5 percent",
+      "10 percent",
+      "20 percent",
+      "30 percent"
+     ],
+     "answer": 2,
+     "explanation": "France's standard VAT is 20 percent."
+    }
+   ]
+  }
+ ]
+}

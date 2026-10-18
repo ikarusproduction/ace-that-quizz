@@ -1,0 +1,891 @@
+{
+ "category": "hockey",
+ "review": "unreviewed",
+ "note": "Difficulty ladders: the original question keeps its own level, these are the other levels. Unreviewed.",
+ "families": [
+  {
+   "id": "hoc-001",
+   "ask": {
+    "1": "Players",
+    "2": "Team",
+    "3": "Ice"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "How many periods are in an ice hockey game?",
+     "choices": [
+      "3",
+      "4",
+      "5",
+      "2"
+     ],
+     "answer": 0,
+     "explanation": "Games have three periods."
+    },
+    {
+     "level": 3,
+     "question": "How many skaters, not counting the goalie, does a team have on the ice?",
+     "choices": [
+      "3",
+      "7",
+      "6",
+      "5"
+     ],
+     "answer": 3,
+     "explanation": "Five skaters plus a goalie."
+    }
+   ]
+  },
+  {
+   "id": "hoc-002",
+   "ask": {
+    "1": "Puck",
+    "2": "Disc",
+    "3": "Material"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the ice hockey puck made of?",
+     "choices": [
+      "Wood",
+      "Steel",
+      "Plastic foam",
+      "Rubber"
+     ],
+     "answer": 3,
+     "explanation": "Pucks are vulcanised rubber."
+    },
+    {
+     "level": 3,
+     "question": "About how much does a regulation puck weigh?",
+     "choices": [
+      "1 kilogram",
+      "500 grams",
+      "5 grams",
+      "170 grams"
+     ],
+     "answer": 3,
+     "explanation": "A puck weighs about 6 ounces."
+    }
+   ]
+  },
+  {
+   "id": "hoc-003",
+   "ask": {
+    "1": "Trophy",
+    "2": "Champion",
+    "3": "Cup"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which sport awards the Stanley Cup?",
+     "choices": [
+      "Ice hockey",
+      "Golf",
+      "Rugby",
+      "Baseball"
+     ],
+     "answer": 0,
+     "explanation": "The Stanley Cup is hockey."
+    },
+    {
+     "level": 3,
+     "question": "Which Governor General of Canada donated the Stanley Cup in 1892?",
+     "choices": [
+      "Lord Nelson",
+      "Lord Elgin",
+      "Lord Stanley",
+      "Lord Byron"
+     ],
+     "answer": 2,
+     "explanation": "Lord Stanley of Preston donated it."
+    }
+   ]
+  },
+  {
+   "id": "hoc-004",
+   "ask": {
+    "1": "Goalie",
+    "2": "Gear",
+    "3": "Net"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What do goalies wear to protect their face?",
+     "choices": [
+      "A helmet only",
+      "A mask",
+      "A bandana",
+      "Goggles"
+     ],
+     "answer": 1,
+     "explanation": "Goalies wear masks."
+    },
+    {
+     "level": 3,
+     "question": "Who was the first NHL goalie to wear a mask regularly, in 1959?",
+     "choices": [
+      "Jacques Plante",
+      "Martin Brodeur",
+      "Terry Sawchuk",
+      "Patrick Roy"
+     ],
+     "answer": 0,
+     "explanation": "Jacques Plante."
+    }
+   ]
+  },
+  {
+   "id": "hoc-005",
+   "ask": {
+    "1": "Team",
+    "2": "Montreal",
+    "3": "Cups"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which Canadian city do the Canadiens play?",
+     "choices": [
+      "Calgary",
+      "Vancouver",
+      "Halifax",
+      "Montreal"
+     ],
+     "answer": 3,
+     "explanation": "The Canadiens play in Montreal."
+    },
+    {
+     "level": 3,
+     "question": "How many Stanley Cups have the Canadiens won?",
+     "choices": [
+      "24",
+      "8",
+      "12",
+      "30"
+     ],
+     "answer": 0,
+     "explanation": "They have won 24."
+    }
+   ]
+  },
+  {
+   "id": "hoc-006",
+   "ask": {
+    "1": "Great One",
+    "2": "Number",
+    "3": "Nickname"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which sport is Wayne Gretzky famous for?",
+     "choices": [
+      "Golf",
+      "Basketball",
+      "Ice hockey",
+      "Baseball"
+     ],
+     "answer": 2,
+     "explanation": "Gretzky played hockey."
+    },
+    {
+     "level": 3,
+     "question": "What number did Wayne Gretzky wear, now retired league-wide?",
+     "choices": [
+      "66",
+      "4",
+      "99",
+      "10"
+     ],
+     "answer": 2,
+     "explanation": "His 99 was retired league-wide."
+    }
+   ]
+  },
+  {
+   "id": "hoc-007",
+   "ask": {
+    "1": "Game",
+    "2": "Length",
+    "3": "Periods"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Is an ice hockey game divided into halves or periods?",
+     "choices": [
+      "Periods",
+      "Quarters",
+      "Sets",
+      "Halves"
+     ],
+     "answer": 0,
+     "explanation": "Hockey is played in periods."
+    },
+    {
+     "level": 3,
+     "question": "How long is each period in an NHL game?",
+     "choices": [
+      "10 minutes",
+      "30 minutes",
+      "15 minutes",
+      "20 minutes"
+     ],
+     "answer": 3,
+     "explanation": "Each period is 20 minutes."
+    }
+   ]
+  },
+  {
+   "id": "hoc-008",
+   "ask": {
+    "1": "Three goals",
+    "2": "Hat",
+    "3": "Name"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In hockey, scoring three goals in a game is a what?",
+     "choices": [
+      "Triple crown",
+      "Slam",
+      "Grand slam",
+      "Hat trick"
+     ],
+     "answer": 3,
+     "explanation": "It is a hat trick."
+    },
+    {
+     "level": 3,
+     "question": "What do fans traditionally throw on the ice after a hat trick?",
+     "choices": [
+      "Shoes",
+      "Pucks",
+      "Hats",
+      "Gloves"
+     ],
+     "answer": 2,
+     "explanation": "Fans throw hats."
+    }
+   ]
+  },
+  {
+   "id": "hoc-009",
+   "ask": {
+    "1": "Origin",
+    "2": "Canada",
+    "3": "Birth"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country has a maple leaf on its flag and is a hockey powerhouse?",
+     "choices": [
+      "Brazil",
+      "Spain",
+      "Italy",
+      "Canada"
+     ],
+     "answer": 3,
+     "explanation": "Canada loves hockey."
+    },
+    {
+     "level": 3,
+     "question": "In which Canadian city was the first indoor game played in 1875?",
+     "choices": [
+      "Ottawa",
+      "Quebec City",
+      "Toronto",
+      "Montreal"
+     ],
+     "answer": 3,
+     "explanation": "Montreal hosted it."
+    }
+   ]
+  },
+  {
+   "id": "hoc-010",
+   "ask": {
+    "1": "Pittsburgh",
+    "2": "Team",
+    "3": "Nickname"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which US state is Pittsburgh?",
+     "choices": [
+      "Pennsylvania",
+      "Ohio",
+      "Texas",
+      "Florida"
+     ],
+     "answer": 0,
+     "explanation": "Pittsburgh is in Pennsylvania."
+    },
+    {
+     "level": 3,
+     "question": "Which star has captained the Penguins and won three Stanley Cups?",
+     "choices": [
+      "Auston Matthews",
+      "Sidney Crosby",
+      "Alex Ovechkin",
+      "Connor McDavid"
+     ],
+     "answer": 1,
+     "explanation": "Crosby won three."
+    }
+   ]
+  },
+  {
+   "id": "hoc-011",
+   "ask": {
+    "1": "Goals",
+    "2": "Russian",
+    "3": "Record"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Russian star plays for the Washington Capitals?",
+     "choices": [
+      "Nikita Kucherov",
+      "Alex Ovechkin",
+      "Evgeni Malkin",
+      "Artemi Panarin"
+     ],
+     "answer": 1,
+     "explanation": "Ovechkin is a Capital."
+    },
+    {
+     "level": 2,
+     "question": "Whose all-time NHL goals record did Ovechkin break in 2025?",
+     "choices": [
+      "Gordie Howe",
+      "Wayne Gretzky",
+      "Mario Lemieux",
+      "Brett Hull"
+     ],
+     "answer": 1,
+     "explanation": "He passed Gretzky's 894."
+    }
+   ]
+  },
+  {
+   "id": "hoc-012",
+   "ask": {
+    "1": "Retire",
+    "2": "Gretzky",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Canadian star retired in 1999 and is called The Great One?",
+     "choices": [
+      "Wayne Gretzky",
+      "Patrick Roy",
+      "Mario Lemieux",
+      "Sidney Crosby"
+     ],
+     "answer": 0,
+     "explanation": "Gretzky retired in 1999."
+    },
+    {
+     "level": 2,
+     "question": "In which decade did Gretzky retire?",
+     "choices": [
+      "The 2000s",
+      "The 1980s",
+      "The 1990s",
+      "The 1970s"
+     ],
+     "answer": 2,
+     "explanation": "He retired in 1999."
+    }
+   ]
+  },
+  {
+   "id": "hoc-013",
+   "ask": {
+    "1": "Rule",
+    "2": "Icing",
+    "3": "Puck"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Is hockey played on ice or grass?",
+     "choices": [
+      "Wood",
+      "Ice",
+      "Sand",
+      "Grass"
+     ],
+     "answer": 1,
+     "explanation": "Ice hockey is played on ice."
+    },
+    {
+     "level": 2,
+     "question": "What stops play when the puck is shot over the goal line from the other half without being touched?",
+     "choices": [
+      "Tripping",
+      "Icing",
+      "Slashing",
+      "Offside"
+     ],
+     "answer": 1,
+     "explanation": "That is icing."
+    }
+   ]
+  },
+  {
+   "id": "hoc-014",
+   "ask": {
+    "1": "Miracle on Ice",
+    "2": "1980",
+    "3": "Upset"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which city was the 1980 Winter Olympics where a famous hockey upset happened?",
+     "choices": [
+      "Sochi",
+      "Turin",
+      "Lake Placid",
+      "Oslo"
+     ],
+     "answer": 2,
+     "explanation": "The 1980 Games were in Lake Placid."
+    },
+    {
+     "level": 2,
+     "question": "Which team did the US beat in the Miracle on Ice?",
+     "choices": [
+      "Canada",
+      "The Soviet Union",
+      "Sweden",
+      "Finland"
+     ],
+     "answer": 1,
+     "explanation": "The US beat the Soviet Union."
+    }
+   ]
+  },
+  {
+   "id": "hoc-015",
+   "ask": {
+    "1": "Goal",
+    "2": "Width",
+    "3": "Net"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What is the goal made of, a net and what other main parts?",
+     "choices": [
+      "Two posts and a crossbar",
+      "A basket",
+      "A bell",
+      "A wall"
+     ],
+     "answer": 0,
+     "explanation": "A goal has posts and a crossbar."
+    },
+    {
+     "level": 2,
+     "question": "What is the NHL goal's height in feet?",
+     "choices": [
+      "2",
+      "4",
+      "6",
+      "8"
+     ],
+     "answer": 1,
+     "explanation": "The goal is 4 feet high."
+    }
+   ]
+  },
+  {
+   "id": "hoc-016",
+   "ask": {
+    "1": "Hart",
+    "2": "MVP",
+    "3": "Gretzky"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What do we call the award given to the NHL's most valuable player?",
+     "choices": [
+      "Hart Trophy",
+      "Calder Trophy",
+      "Norris Trophy",
+      "Vezina Trophy"
+     ],
+     "answer": 0,
+     "explanation": "The Hart is for MVP."
+    },
+    {
+     "level": 2,
+     "question": "Which NHL award is given to the best goalie?",
+     "choices": [
+      "Vezina Trophy",
+      "Hart Trophy",
+      "Calder Trophy",
+      "Norris Trophy"
+     ],
+     "answer": 0,
+     "explanation": "The Vezina goes to the top goalie."
+    }
+   ]
+  },
+  {
+   "id": "hoc-017",
+   "ask": {
+    "1": "First",
+    "2": "Cup",
+    "3": "Arenas"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which Canadian city do the Maple Leafs play?",
+     "choices": [
+      "Toronto",
+      "Calgary",
+      "Ottawa",
+      "Winnipeg"
+     ],
+     "answer": 0,
+     "explanation": "The Maple Leafs are in Toronto."
+    },
+    {
+     "level": 2,
+     "question": "The Toronto Arenas won the first Stanley Cup of the NHL era in which year?",
+     "choices": [
+      "1918",
+      "1950",
+      "1900",
+      "1935"
+     ],
+     "answer": 0,
+     "explanation": "They won in 1918."
+    }
+   ]
+  },
+  {
+   "id": "hoc-018",
+   "ask": {
+    "1": "Olympics",
+    "2": "2022",
+    "3": "Gold"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Nordic country won Olympic men's hockey gold in 2022?",
+     "choices": [
+      "Denmark",
+      "Norway",
+      "Finland",
+      "Iceland"
+     ],
+     "answer": 2,
+     "explanation": "Finland won gold in Beijing."
+    },
+    {
+     "level": 2,
+     "question": "In which city were the 2022 Winter Olympics?",
+     "choices": [
+      "Vancouver",
+      "Beijing",
+      "Sochi",
+      "Pyeongchang"
+     ],
+     "answer": 1,
+     "explanation": "The 2022 Games were in Beijing."
+    }
+   ]
+  },
+  {
+   "id": "hoc-019",
+   "ask": {
+    "1": "Line",
+    "2": "Offside",
+    "3": "Zone"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What colour is the line in the middle of an ice hockey rink?",
+     "choices": [
+      "Black",
+      "Green",
+      "Yellow",
+      "Red"
+     ],
+     "answer": 3,
+     "explanation": "The centre line is red."
+    },
+    {
+     "level": 3,
+     "question": "How many blue lines are on an ice hockey rink?",
+     "choices": [
+      "Three",
+      "Two",
+      "Four",
+      "One"
+     ],
+     "answer": 1,
+     "explanation": "There are two blue lines."
+    }
+   ]
+  },
+  {
+   "id": "hoc-020",
+   "ask": {
+    "1": "Stanley Cup",
+    "2": "2024",
+    "3": "Winner"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which US state are the Florida Panthers based?",
+     "choices": [
+      "Florida",
+      "Utah",
+      "Ohio",
+      "Texas"
+     ],
+     "answer": 0,
+     "explanation": "The Panthers play in Florida."
+    },
+    {
+     "level": 2,
+     "question": "Which team did the Panthers beat in the 2024 Stanley Cup Final?",
+     "choices": [
+      "Vegas Golden Knights",
+      "Dallas Stars",
+      "Edmonton Oilers",
+      "Boston Bruins"
+     ],
+     "answer": 2,
+     "explanation": "Florida beat Edmonton in seven games."
+    }
+   ]
+  },
+  {
+   "id": "hoc-021",
+   "ask": {
+    "1": "Stanley Cup",
+    "2": "2025",
+    "3": "Winner"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which animal is the symbol of the Florida team that won the Cup in 2025?",
+     "choices": [
+      "Tiger",
+      "Panther",
+      "Lion",
+      "Bear"
+     ],
+     "answer": 1,
+     "explanation": "Florida are the Panthers."
+    },
+    {
+     "level": 2,
+     "question": "In how many consecutive years did Florida reach the Stanley Cup Final through 2025?",
+     "choices": [
+      "Five",
+      "One",
+      "Three",
+      "Seven"
+     ],
+     "answer": 2,
+     "explanation": "Florida reached it in 2023, 2024 and 2025."
+    }
+   ]
+  },
+  {
+   "id": "hoc-022",
+   "ask": {
+    "1": "Swiss",
+    "2": "League",
+    "3": "Name"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which small Alpine country has a hockey league with teams like Zurich and Bern?",
+     "choices": [
+      "Spain",
+      "Switzerland",
+      "Slovenia",
+      "Sweden"
+     ],
+     "answer": 1,
+     "explanation": "Switzerland has a top league."
+    },
+    {
+     "level": 3,
+     "question": "Which Swiss club from Zurich has won many titles in the National League?",
+     "choices": [
+      "HC Davos",
+      "SC Bern",
+      "ZSC Lions",
+      "Geneva-Servette"
+     ],
+     "answer": 2,
+     "explanation": "The ZSC Lions are a Zurich club."
+    }
+   ]
+  },
+  {
+   "id": "hoc-023",
+   "ask": {
+    "1": "Swedish",
+    "2": "League",
+    "3": "Name"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Scandinavian country has the SHL hockey league?",
+     "choices": [
+      "Norway",
+      "Switzerland",
+      "Sweden",
+      "Finland"
+     ],
+     "answer": 2,
+     "explanation": "The SHL is Swedish."
+    },
+    {
+     "level": 3,
+     "question": "What does the S in SHL stand for?",
+     "choices": [
+      "Slovak",
+      "Spanish",
+      "Swedish",
+      "Swiss"
+     ],
+     "answer": 2,
+     "explanation": "SHL is the Swedish Hockey League."
+    }
+   ]
+  },
+  {
+   "id": "hoc-024",
+   "ask": {
+    "1": "Faceoff",
+    "2": "Start",
+    "3": "Referee"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "How is play started at the start of a hockey game?",
+     "choices": [
+      "A puck drop",
+      "A whistle only",
+      "A coin toss",
+      "A pistol"
+     ],
+     "answer": 0,
+     "explanation": "A faceoff starts play."
+    },
+    {
+     "level": 3,
+     "question": "In which circle does a faceoff take place at the start of a game?",
+     "choices": [
+      "Crease",
+      "Centre circle",
+      "Blue line",
+      "Net"
+     ],
+     "answer": 1,
+     "explanation": "Opening faceoff is at centre."
+    }
+   ]
+  },
+  {
+   "id": "hoc-025",
+   "ask": {
+    "1": "Captain",
+    "2": "Canada",
+    "3": "Crosby"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Pittsburgh star is nicknamed Sid the Kid?",
+     "choices": [
+      "Connor McDavid",
+      "Sidney Crosby",
+      "Joe Sakic",
+      "Sidney Gretzky"
+     ],
+     "answer": 1,
+     "explanation": "Crosby is Sid the Kid."
+    },
+    {
+     "level": 2,
+     "question": "Which country does Sidney Crosby come from?",
+     "choices": [
+      "Canada",
+      "Russia",
+      "Sweden",
+      "Finland"
+     ],
+     "answer": 0,
+     "explanation": "Crosby is Canadian."
+    }
+   ]
+  },
+  {
+   "id": "hoc-026",
+   "ask": {
+    "1": "Federation",
+    "2": "Governing",
+    "3": "Swiss"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which European country is home to the international hockey federation?",
+     "choices": [
+      "Sweden",
+      "Canada",
+      "Russia",
+      "Switzerland"
+     ],
+     "answer": 3,
+     "explanation": "The IIHF is in Zurich."
+    },
+    {
+     "level": 2,
+     "question": "In which Swiss city is the IIHF headquartered?",
+     "choices": [
+      "Geneva",
+      "Zurich",
+      "Basel",
+      "Bern"
+     ],
+     "answer": 1,
+     "explanation": "The IIHF is in Zurich."
+    }
+   ]
+  }
+ ]
+}

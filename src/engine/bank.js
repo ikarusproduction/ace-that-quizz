@@ -83,7 +83,39 @@ export async function loadBank(readJson, base = 'data/questions/') {
   const index = await readJson(base + 'index.json');
   const files = await Promise.all(index.files.map((name) => readJson(base + name)));
   const questions = files.flatMap(normalizeFile);
-  return { version: index.version, questions };
+  const vfiles = await Promise.all((index.variantFiles ?? []).map((name) => Promise.resolve(readJson(base + name)).catch(() => null)));
+  const variants = applyVariants(questions, vfiles.filter(Boolean));
+  return { version: index.version, questions, variants };
+}
+
+/** The level a question naturally sits at: easy (1), medium (2) or hard (3, which includes expert). */
+export const levelOfDifficulty = (d) => (d <= 1 ? 1 : d === 2 ? 2 : 3);
+
+/**
+ * Difficulty ladders. A variants file lists families: { id, ask: {1,2,3}, variants: [{ level, question, choices, answer, explanation }] }.
+ * The original question stays as it is and is marked with its own level; the other levels become extra questions
+ * (id "<id>~<level>") that are never drawn by themselves, only asked when the stake picks that level.
+ * Returns the generated variants. Primary questions get `family`, `level` and `ask` filled in.
+ */
+export function applyVariants(questions, files) {
+  const byId = new Map(questions.map((q) => [q.id, q]));
+  const out = [];
+  for (const file of files) {
+    for (const fam of file.families ?? []) {
+      const base = byId.get(fam.id);
+      if (!base) continue;
+      base.family = base.id;
+      base.level = levelOfDifficulty(base.difficulty);
+      base.ask = fam.ask?.[base.level] ?? null;
+      for (const v of fam.variants ?? []) {
+        if (![1, 2, 3].includes(v.level) || v.level === base.level) continue;
+        const q = normalizeQuestion({ ...base, ...v, type: v.type ?? 'mcq', id: `${base.id}~${v.level}`, difficulty: v.difficulty ?? v.level, tags: base.tags, refs: [], subcategory: v.subcategory ?? base.subcategory }, { category: base.category, review: base.review, freshness: base.freshness });
+        q.family = base.id; q.level = v.level; q.ask = fam.ask?.[v.level] ?? null; q.review = base.review;
+        out.push(q);
+      }
+    }
+  }
+  return out;
 }
 
 const norm = (s) =>
@@ -160,14 +192,15 @@ export function validateQuestions(questions, { minPerCategory = 8 } = {}) {
   const seenText = new Map();
   for (const [q] of tokens) {
     const key = norm(q.question);
-    if (seenText.has(key)) errors.push(`${q.id}: same question text as ${seenText.get(key)}`);
-    else seenText.set(key, q.id);
+    if (seenText.has(key) && !(q.family && q.family === seenText.get(key).family)) errors.push(`${q.id}: same question text as ${seenText.get(key).id}`);
+    else seenText.set(key, q);
   }
   for (let i = 0; i < tokens.length; i++) {
     for (let j = i + 1; j < tokens.length; j++) {
       const [a, ta] = tokens[i];
       const [b, tb] = tokens[j];
       if (norm(a.question) === norm(b.question)) continue;
+      if (a.family && a.family === b.family) continue;
       // Templated questions ("Which element has the symbol X?") share most
       // words by design, so also require the same answer or overlapping choices.
       if (jaccard(ta, tb) >= 0.75 && sameAnswerOrChoices(a, b)) {

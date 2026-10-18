@@ -9,7 +9,7 @@ const root = fileURLToPath(new URL('..', import.meta.url));
 const readJson = async (rel) => JSON.parse(await readFile(join(root, rel), 'utf8'));
 
 const bank = await loadBank(readJson);
-const { errors, warnings, stats } = validateQuestions(bank.questions);
+const { errors, warnings, stats } = validateQuestions([...bank.questions, ...bank.variants]);
 
 console.log(`Question bank v${bank.version}: ${stats.total} questions`);
 console.log('By category:  ', JSON.stringify(stats.byCategory));

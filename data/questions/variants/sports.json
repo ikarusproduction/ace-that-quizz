@@ -1,0 +1,1265 @@
+{
+ "category": "sports",
+ "review": "unreviewed",
+ "note": "Difficulty ladders: the original question keeps its own level, these are the other levels. Unreviewed.",
+ "families": [
+  {
+   "id": "spo-001",
+   "ask": {
+    "1": "Players",
+    "2": "Team",
+    "3": "Pitch"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "How many minutes does a standard football match last, not counting extra time?",
+     "choices": [
+      "80",
+      "120",
+      "90",
+      "60"
+     ],
+     "answer": 2,
+     "explanation": "A match is two halves of 45 minutes."
+    },
+    {
+     "level": 3,
+     "question": "How many substitutions are normally allowed in a modern football match?",
+     "choices": [
+      "Eight",
+      "Five",
+      "Two",
+      "Ten"
+     ],
+     "answer": 1,
+     "explanation": "Five substitutions are now standard."
+    }
+   ]
+  },
+  {
+   "id": "spo-002",
+   "ask": {
+    "1": "Olympics",
+    "2": "Host",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which city hosted the 2016 Summer Olympics?",
+     "choices": [
+      "Salvador",
+      "Rio de Janeiro",
+      "Brasilia",
+      "Sao Paulo"
+     ],
+     "answer": 1,
+     "explanation": "Rio hosted in 2016."
+    },
+    {
+     "level": 3,
+     "question": "In which year were the Olympics in Tokyo, delayed by the pandemic, actually held?",
+     "choices": [
+      "2021",
+      "2022",
+      "2019",
+      "2020"
+     ],
+     "answer": 0,
+     "explanation": "They were held in 2021."
+    }
+   ]
+  },
+  {
+   "id": "spo-003",
+   "ask": {
+    "1": "Tennis",
+    "2": "Score",
+    "3": "Term"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "After 40-40 in tennis, what is the next score called?",
+     "choices": [
+      "Advantage",
+      "Match point",
+      "Love",
+      "Deuce"
+     ],
+     "answer": 3,
+     "explanation": "40-40 is deuce."
+    },
+    {
+     "level": 3,
+     "question": "In tennis, how many games must you win to take a set, with a two-game lead?",
+     "choices": [
+      "Ten",
+      "Six",
+      "Eight",
+      "Four"
+     ],
+     "answer": 1,
+     "explanation": "A set is first to six games."
+    }
+   ]
+  },
+  {
+   "id": "spo-004",
+   "ask": {
+    "1": "Basketball",
+    "2": "Free throw",
+    "3": "Points"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "How many points is a shot from behind the three-point line worth?",
+     "choices": [
+      "4",
+      "1",
+      "2",
+      "3"
+     ],
+     "answer": 3,
+     "explanation": "A long shot is worth three."
+    },
+    {
+     "level": 3,
+     "question": "How many fouls does a player commit to be fouled out in an NBA game?",
+     "choices": [
+      "Eight",
+      "Four",
+      "Five",
+      "Six"
+     ],
+     "answer": 3,
+     "explanation": "NBA players foul out at six."
+    }
+   ]
+  },
+  {
+   "id": "spo-005",
+   "ask": {
+    "1": "Tennis",
+    "2": "Grass",
+    "3": "London"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "On which surface is Wimbledon played?",
+     "choices": [
+      "Carpet",
+      "Hard court",
+      "Grass",
+      "Clay"
+     ],
+     "answer": 2,
+     "explanation": "Wimbledon is on grass."
+    },
+    {
+     "level": 3,
+     "question": "What colour do players traditionally wear at Wimbledon?",
+     "choices": [
+      "Red",
+      "Black",
+      "White",
+      "Green"
+     ],
+     "answer": 2,
+     "explanation": "Wimbledon enforces an all-white dress code."
+    }
+   ]
+  },
+  {
+   "id": "spo-006",
+   "ask": {
+    "1": "Olympics",
+    "2": "Rings",
+    "3": "Flag"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which colours are the Olympic rings?",
+     "choices": [
+      "Blue, yellow, black, green and red",
+      "Gold, silver and bronze",
+      "Black and white",
+      "Red, white and blue"
+     ],
+     "answer": 0,
+     "explanation": "The five rings are blue, yellow, black, green and red."
+    },
+    {
+     "level": 3,
+     "question": "Who designed the Olympic rings in 1912?",
+     "choices": [
+      "Baron Rothschild",
+      "Pierre de Coubertin",
+      "Walt Disney",
+      "Louis Lumière"
+     ],
+     "answer": 1,
+     "explanation": "Coubertin designed them."
+    }
+   ]
+  },
+  {
+   "id": "spo-007",
+   "ask": {
+    "1": "World Cup",
+    "2": "France",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Who did France beat in the 2018 World Cup final?",
+     "choices": [
+      "England",
+      "Belgium",
+      "Brazil",
+      "Croatia"
+     ],
+     "answer": 3,
+     "explanation": "France beat Croatia 4-2."
+    },
+    {
+     "level": 3,
+     "question": "Which French player scored in the 2018 final and was just 19?",
+     "choices": [
+      "Antoine Griezmann",
+      "N'Golo Kanté",
+      "Kylian Mbappé",
+      "Paul Pogba"
+     ],
+     "answer": 2,
+     "explanation": "Mbappé scored in the final."
+    }
+   ]
+  },
+  {
+   "id": "spo-008",
+   "ask": {
+    "1": "American football",
+    "2": "Score",
+    "3": "Name"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "How many points is a touchdown worth in American football?",
+     "choices": [
+      "5",
+      "7",
+      "6",
+      "3"
+     ],
+     "answer": 2,
+     "explanation": "A touchdown is six points."
+    },
+    {
+     "level": 3,
+     "question": "How many yards is a standard American football field between end zones?",
+     "choices": [
+      "120",
+      "80",
+      "90",
+      "100"
+     ],
+     "answer": 3,
+     "explanation": "The field is 100 yards."
+    }
+   ]
+  },
+  {
+   "id": "spo-009",
+   "ask": {
+    "1": "World Cup",
+    "2": "2022",
+    "3": "Final"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which country was the 2022 FIFA World Cup held?",
+     "choices": [
+      "Germany",
+      "Brazil",
+      "Qatar",
+      "Russia"
+     ],
+     "answer": 2,
+     "explanation": "The 2022 World Cup was in Qatar."
+    },
+    {
+     "level": 3,
+     "question": "Who scored a hat-trick for France in the 2022 final despite losing?",
+     "choices": [
+      "Antoine Griezmann",
+      "Kylian Mbappé",
+      "Karim Benzema",
+      "Olivier Giroud"
+     ],
+     "answer": 1,
+     "explanation": "Mbappé scored three."
+    }
+   ]
+  },
+  {
+   "id": "spo-010",
+   "ask": {
+    "1": "Sprint",
+    "2": "Record",
+    "3": "Jamaica"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country is Usain Bolt from?",
+     "choices": [
+      "Jamaica",
+      "Kenya",
+      "Brazil",
+      "Ethiopia"
+     ],
+     "answer": 0,
+     "explanation": "Bolt is Jamaican."
+    },
+    {
+     "level": 3,
+     "question": "At which 2009 championships did Bolt run 9.58 seconds?",
+     "choices": [
+      "Doha",
+      "Beijing",
+      "London",
+      "Berlin"
+     ],
+     "answer": 3,
+     "explanation": "He set it in Berlin."
+    }
+   ]
+  },
+  {
+   "id": "spo-011",
+   "ask": {
+    "1": "Basketball",
+    "2": "Team",
+    "3": "Court"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Is basketball played with hands or feet?",
+     "choices": [
+      "Hands",
+      "Bats",
+      "Heads",
+      "Feet"
+     ],
+     "answer": 0,
+     "explanation": "Basketball is played mostly with hands."
+    },
+    {
+     "level": 3,
+     "question": "In basketball, how many seconds does a team have to shoot in the NBA?",
+     "choices": [
+      "24",
+      "12",
+      "60",
+      "40"
+     ],
+     "answer": 0,
+     "explanation": "The NBA shot clock is 24 seconds."
+    }
+   ]
+  },
+  {
+   "id": "spo-012",
+   "ask": {
+    "1": "Olympics",
+    "2": "Paris",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which country were the 2024 Olympics held?",
+     "choices": [
+      "Brazil",
+      "France",
+      "Australia",
+      "Japan"
+     ],
+     "answer": 1,
+     "explanation": "The 2024 Games were in France."
+    },
+    {
+     "level": 3,
+     "question": "Which river flowed through the 2024 Olympic opening ceremony?",
+     "choices": [
+      "The Thames",
+      "The Loire",
+      "The Seine",
+      "The Rhine"
+     ],
+     "answer": 2,
+     "explanation": "The ceremony floated on the Seine."
+    }
+   ]
+  },
+  {
+   "id": "spo-013",
+   "ask": {
+    "1": "Golf",
+    "2": "Majors",
+    "3": "Record"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which sport uses a club and a small white ball with holes?",
+     "choices": [
+      "Golf",
+      "Cricket",
+      "Squash",
+      "Polo"
+     ],
+     "answer": 0,
+     "explanation": "Golf has holes."
+    },
+    {
+     "level": 3,
+     "question": "How many major championships has Tiger Woods won?",
+     "choices": [
+      "18",
+      "10",
+      "15",
+      "12"
+     ],
+     "answer": 2,
+     "explanation": "Tiger Woods has won 15 majors."
+    }
+   ]
+  },
+  {
+   "id": "spo-014",
+   "ask": {
+    "1": "Basketball",
+    "2": "Dunk",
+    "3": "Hoop"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which sport uses a ball and a hoop with a net on a backboard?",
+     "choices": [
+      "Basketball",
+      "Volleyball",
+      "Rugby",
+      "Handball"
+     ],
+     "answer": 0,
+     "explanation": "Basketball has hoops."
+    },
+    {
+     "level": 3,
+     "question": "How tall is an official basketball hoop in feet?",
+     "choices": [
+      "12",
+      "8",
+      "10",
+      "15"
+     ],
+     "answer": 2,
+     "explanation": "The rim is ten feet high."
+    }
+   ]
+  },
+  {
+   "id": "spo-015",
+   "ask": {
+    "1": "Rugby",
+    "2": "Origin",
+    "3": "Country"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which sport uses an oval ball and tackles?",
+     "choices": [
+      "Rugby",
+      "Tennis",
+      "Golf",
+      "Basketball"
+     ],
+     "answer": 0,
+     "explanation": "Rugby uses an oval ball."
+    },
+    {
+     "level": 3,
+     "question": "In which English school is rugby said to have started in 1823?",
+     "choices": [
+      "Eton",
+      "Harrow",
+      "Winchester",
+      "Rugby School"
+     ],
+     "answer": 3,
+     "explanation": "Rugby School."
+    }
+   ]
+  },
+  {
+   "id": "spo-016",
+   "ask": {
+    "1": "Marathon",
+    "2": "Distance",
+    "3": "Run"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "A marathon is a long what?",
+     "choices": [
+      "Run",
+      "Swim",
+      "Throw",
+      "Jump"
+     ],
+     "answer": 0,
+     "explanation": "A marathon is a run."
+    },
+    {
+     "level": 3,
+     "question": "From which Greek battlefield did the legendary runner come to Athens?",
+     "choices": [
+      "Delphi",
+      "Sparta",
+      "Marathon",
+      "Thermopylae"
+     ],
+     "answer": 2,
+     "explanation": "The legend is about Marathon."
+    }
+   ]
+  },
+  {
+   "id": "spo-017",
+   "ask": {
+    "1": "Tennis",
+    "2": "Grand Slam",
+    "3": "Record"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which sport has the four Grand Slam tournaments?",
+     "choices": [
+      "Tennis",
+      "Hockey",
+      "Cricket",
+      "Golf only"
+     ],
+     "answer": 0,
+     "explanation": "Tennis has four Grand Slams."
+    },
+    {
+     "level": 3,
+     "question": "Which country is Novak Djokovic from?",
+     "choices": [
+      "Switzerland",
+      "Croatia",
+      "Serbia",
+      "Spain"
+     ],
+     "answer": 2,
+     "explanation": "Djokovic is Serbian."
+    }
+   ]
+  },
+  {
+   "id": "spo-018",
+   "ask": {
+    "1": "NBA",
+    "2": "Chicago",
+    "3": "Jordan"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which sport did Michael Jordan play?",
+     "choices": [
+      "Basketball",
+      "Baseball only",
+      "Golf only",
+      "Football"
+     ],
+     "answer": 0,
+     "explanation": "Jordan played basketball."
+    },
+    {
+     "level": 3,
+     "question": "How many NBA championships did Michael Jordan win in total?",
+     "choices": [
+      "8",
+      "3",
+      "10",
+      "6"
+     ],
+     "answer": 3,
+     "explanation": "He won six."
+    }
+   ]
+  },
+  {
+   "id": "spo-019",
+   "ask": {
+    "1": "World Cup",
+    "2": "Brazil",
+    "3": "Record"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country is known as the home of samba and football legend Pelé?",
+     "choices": [
+      "Chile",
+      "Peru",
+      "Mexico",
+      "Brazil"
+     ],
+     "answer": 3,
+     "explanation": "Pelé was Brazilian."
+    },
+    {
+     "level": 3,
+     "question": "How many men's World Cups has Brazil won?",
+     "choices": [
+      "7",
+      "3",
+      "4",
+      "5"
+     ],
+     "answer": 3,
+     "explanation": "Brazil has won five."
+    }
+   ]
+  },
+  {
+   "id": "spo-020",
+   "ask": {
+    "1": "World Cup",
+    "2": "Maradona",
+    "3": "Goal"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country is Diego Maradona from?",
+     "choices": [
+      "Spain",
+      "Portugal",
+      "Colombia",
+      "Argentina"
+     ],
+     "answer": 3,
+     "explanation": "Maradona was Argentine."
+    },
+    {
+     "level": 2,
+     "question": "Which team did Maradona beat with the Hand of God goal in 1986?",
+     "choices": [
+      "Italy",
+      "Brazil",
+      "Germany",
+      "England"
+     ],
+     "answer": 3,
+     "explanation": "It was against England."
+    }
+   ]
+  },
+  {
+   "id": "spo-021",
+   "ask": {
+    "1": "Cycling",
+    "2": "Tour",
+    "3": "Rider"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which race is the most famous cycling event in France?",
+     "choices": [
+      "Vuelta",
+      "Paris-Roubaix",
+      "Tour de France",
+      "Giro d'Italia"
+     ],
+     "answer": 2,
+     "explanation": "The Tour de France."
+    },
+    {
+     "level": 2,
+     "question": "What colour is the Tour de France leader's jersey?",
+     "choices": [
+      "Green",
+      "Blue",
+      "Red",
+      "Yellow"
+     ],
+     "answer": 3,
+     "explanation": "Yellow jersey for the leader."
+    }
+   ]
+  },
+  {
+   "id": "spo-022",
+   "ask": {
+    "1": "Tennis",
+    "2": "Slams",
+    "3": "Count"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which sport are the Australian Open and Roland Garros played?",
+     "choices": [
+      "Cricket",
+      "Golf",
+      "Rowing",
+      "Tennis"
+     ],
+     "answer": 3,
+     "explanation": "Both are tennis slams."
+    },
+    {
+     "level": 2,
+     "question": "Which Grand Slam is played on clay in Paris?",
+     "choices": [
+      "Australian Open",
+      "Wimbledon",
+      "Roland Garros",
+      "US Open"
+     ],
+     "answer": 2,
+     "explanation": "Roland Garros uses clay."
+    }
+   ]
+  },
+  {
+   "id": "spo-023",
+   "ask": {
+    "1": "Golf",
+    "2": "Terms",
+    "3": "Score"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which sport has a hole, a green and a fairway?",
+     "choices": [
+      "Rugby",
+      "Judo",
+      "Golf",
+      "Fencing"
+     ],
+     "answer": 2,
+     "explanation": "Golf has greens."
+    },
+    {
+     "level": 2,
+     "question": "In golf, what is one stroke under par on a hole called?",
+     "choices": [
+      "Eagle",
+      "Birdie",
+      "Bogey",
+      "Albatross"
+     ],
+     "answer": 1,
+     "explanation": "One under is a birdie."
+    }
+   ]
+  },
+  {
+   "id": "spo-024",
+   "ask": {
+    "1": "Bowling",
+    "2": "Strikes",
+    "3": "Term"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In bowling, what do you try to knock down?",
+     "choices": [
+      "Pins",
+      "Cones",
+      "Walls",
+      "Bottles"
+     ],
+     "answer": 0,
+     "explanation": "Bowling uses pins."
+    },
+    {
+     "level": 2,
+     "question": "How many pins are used in ten-pin bowling?",
+     "choices": [
+      "Six",
+      "Twelve",
+      "Nine",
+      "Ten"
+     ],
+     "answer": 3,
+     "explanation": "Ten-pin has ten pins."
+    }
+   ]
+  },
+  {
+   "id": "spo-025",
+   "ask": {
+    "1": "World Cup",
+    "2": "1930",
+    "3": "Host"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "How often is the football World Cup held?",
+     "choices": [
+      "Every two years",
+      "Every ten years",
+      "Every year",
+      "Every four years"
+     ],
+     "answer": 3,
+     "explanation": "It is held every four years."
+    },
+    {
+     "level": 2,
+     "question": "Which country hosted the first World Cup in 1930?",
+     "choices": [
+      "Brazil",
+      "Italy",
+      "France",
+      "Uruguay"
+     ],
+     "answer": 3,
+     "explanation": "Uruguay hosted and won."
+    }
+   ]
+  },
+  {
+   "id": "spo-026",
+   "ask": {
+    "1": "Swimming",
+    "2": "Olympics",
+    "3": "Medals"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which sport is Michael Phelps famous for?",
+     "choices": [
+      "Cycling",
+      "Swimming",
+      "Boxing",
+      "Running"
+     ],
+     "answer": 1,
+     "explanation": "Phelps is a swimmer."
+    },
+    {
+     "level": 2,
+     "question": "Which country is Michael Phelps from?",
+     "choices": [
+      "Australia",
+      "Brazil",
+      "Hungary",
+      "The United States"
+     ],
+     "answer": 3,
+     "explanation": "Phelps is American."
+    }
+   ]
+  },
+  {
+   "id": "spo-027",
+   "ask": {
+    "1": "Cycling",
+    "2": "Paris",
+    "3": "Finish"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which famous race ends in Paris on a boulevard in July?",
+     "choices": [
+      "Monaco Grand Prix",
+      "Tour de France",
+      "Dakar Rally",
+      "Boston Marathon"
+     ],
+     "answer": 1,
+     "explanation": "It ends on the Champs-Élysées."
+    },
+    {
+     "level": 2,
+     "question": "Which famous avenue is the traditional finish of the Tour de France?",
+     "choices": [
+      "Rue de Rivoli",
+      "Avenue Foch",
+      "Champs-Élysées",
+      "Boulevard Haussmann"
+     ],
+     "answer": 2,
+     "explanation": "The finish is on the Champs-Élysées."
+    }
+   ]
+  },
+  {
+   "id": "spo-028",
+   "ask": {
+    "1": "Martial art",
+    "2": "Japan",
+    "3": "Belt"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which martial art do athletes wear a white gi and coloured belts?",
+     "choices": [
+      "Sumo",
+      "Judo",
+      "Fencing",
+      "Boxing"
+     ],
+     "answer": 1,
+     "explanation": "Judo uses belts."
+    },
+    {
+     "level": 2,
+     "question": "Who founded judo in 1882?",
+     "choices": [
+      "Jigoro Kano",
+      "Bruce Lee",
+      "Gichin Funakoshi",
+      "Morihei Ueshiba"
+     ],
+     "answer": 0,
+     "explanation": "Jigoro Kano founded it."
+    }
+   ]
+  },
+  {
+   "id": "spo-029",
+   "ask": {
+    "1": "Golf",
+    "2": "Open",
+    "3": "Oldest"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which sport is the Masters held every April in Augusta?",
+     "choices": [
+      "Golf",
+      "Cricket",
+      "Tennis",
+      "Rugby"
+     ],
+     "answer": 0,
+     "explanation": "The Masters is golf."
+    },
+    {
+     "level": 2,
+     "question": "In which country was the first Open Championship played in 1860?",
+     "choices": [
+      "Scotland",
+      "Australia",
+      "United States",
+      "Ireland"
+     ],
+     "answer": 0,
+     "explanation": "The first Open was at Prestwick in Scotland."
+    }
+   ]
+  },
+  {
+   "id": "spo-030",
+   "ask": {
+    "1": "World Cup",
+    "2": "Goals",
+    "3": "Record"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In football, what is scoring three goals in one match called?",
+     "choices": [
+      "A clean sheet",
+      "A volley",
+      "A brace",
+      "A hat-trick"
+     ],
+     "answer": 3,
+     "explanation": "Three goals is a hat-trick."
+    },
+    {
+     "level": 2,
+     "question": "Which French striker scored 13 goals at the 1958 World Cup?",
+     "choices": [
+      "Zinedine Zidane",
+      "Michel Platini",
+      "Thierry Henry",
+      "Just Fontaine"
+     ],
+     "answer": 3,
+     "explanation": "Fontaine scored 13 in 1958."
+    }
+   ]
+  },
+  {
+   "id": "spo-031",
+   "ask": {
+    "1": "Snooker",
+    "2": "Break",
+    "3": "Maximum"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "On which table is snooker played?",
+     "choices": [
+      "A table with pockets and a cloth",
+      "A court",
+      "A pitch",
+      "A track"
+     ],
+     "answer": 0,
+     "explanation": "Snooker uses a baize table."
+    },
+    {
+     "level": 2,
+     "question": "How many red balls are on the table at the start of a snooker frame?",
+     "choices": [
+      "21",
+      "15",
+      "6",
+      "10"
+     ],
+     "answer": 1,
+     "explanation": "There are fifteen reds."
+    }
+   ]
+  },
+  {
+   "id": "spo-032",
+   "ask": {
+    "1": "Marathon",
+    "2": "Olympics",
+    "3": "Winner"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which country did the modern Olympics start in 1896?",
+     "choices": [
+      "Greece",
+      "France",
+      "Britain",
+      "Italy"
+     ],
+     "answer": 0,
+     "explanation": "The first modern Games were in Athens."
+    },
+    {
+     "level": 2,
+     "question": "In which Greek city were the first modern Olympics held?",
+     "choices": [
+      "Athens",
+      "Corinth",
+      "Sparta",
+      "Thessaloniki"
+     ],
+     "answer": 0,
+     "explanation": "Athens hosted in 1896."
+    }
+   ]
+  },
+  {
+   "id": "spo-033",
+   "ask": {
+    "1": "Olympics",
+    "2": "First",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which century were the first modern Olympic Games held?",
+     "choices": [
+      "The 21st century",
+      "The 15th century",
+      "The 19th century",
+      "The 17th century"
+     ],
+     "answer": 2,
+     "explanation": "They began in 1896."
+    },
+    {
+     "level": 2,
+     "question": "Which Frenchman revived the modern Olympic Games?",
+     "choices": [
+      "Pierre de Coubertin",
+      "Napoleon",
+      "Jules Verne",
+      "Louis Pasteur"
+     ],
+     "answer": 0,
+     "explanation": "Coubertin revived them."
+    }
+   ]
+  },
+  {
+   "id": "spo-034",
+   "ask": {
+    "1": "Ballon d'Or",
+    "2": "Messi",
+    "3": "Count"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Argentine footballer is famous for winning many Ballon d'Or awards?",
+     "choices": [
+      "Angel Di Maria",
+      "Lionel Messi",
+      "Gonzalo Higuain",
+      "Diego Maradona"
+     ],
+     "answer": 1,
+     "explanation": "Messi has won many."
+    },
+    {
+     "level": 2,
+     "question": "Which Portuguese footballer is Messi's great rival?",
+     "choices": [
+      "Bruno Fernandes",
+      "Joao Felix",
+      "Luis Figo",
+      "Cristiano Ronaldo"
+     ],
+     "answer": 3,
+     "explanation": "Ronaldo is Messi's rival."
+    }
+   ]
+  },
+  {
+   "id": "spo-035",
+   "ask": {
+    "1": "NFL",
+    "2": "Final",
+    "3": "Game"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which country is the Super Bowl played?",
+     "choices": [
+      "Canada",
+      "The United States",
+      "Australia",
+      "The United Kingdom"
+     ],
+     "answer": 1,
+     "explanation": "The Super Bowl is American."
+    },
+    {
+     "level": 2,
+     "question": "How many players are on the field per team in American football?",
+     "choices": [
+      "7",
+      "11",
+      "9",
+      "15"
+     ],
+     "answer": 1,
+     "explanation": "Each side has eleven."
+    }
+   ]
+  },
+  {
+   "id": "spo-036",
+   "ask": {
+    "1": "Rugby",
+    "2": "Try",
+    "3": "Points"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What do you call scoring by touching the ball down in rugby?",
+     "choices": [
+      "A hit",
+      "A try",
+      "A goal",
+      "A basket"
+     ],
+     "answer": 1,
+     "explanation": "A try is a touchdown."
+    },
+    {
+     "level": 2,
+     "question": "How many points is a conversion kick worth in rugby union?",
+     "choices": [
+      "5",
+      "3",
+      "1",
+      "2"
+     ],
+     "answer": 3,
+     "explanation": "A conversion is two."
+    }
+   ]
+  },
+  {
+   "id": "spo-037",
+   "ask": {
+    "1": "Haka",
+    "2": "Rugby",
+    "3": "Team"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which rugby team is nicknamed the All Blacks?",
+     "choices": [
+      "New Zealand",
+      "Australia",
+      "Ireland",
+      "South Africa"
+     ],
+     "answer": 0,
+     "explanation": "The All Blacks are from New Zealand."
+    },
+    {
+     "level": 3,
+     "question": "What is the Maori war dance performed by the All Blacks called?",
+     "choices": [
+      "Hula",
+      "Samba",
+      "Tango",
+      "Haka"
+     ],
+     "answer": 3,
+     "explanation": "The haka is the traditional war dance."
+    }
+   ]
+  }
+ ]
+}

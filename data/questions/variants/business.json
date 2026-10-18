@@ -1,0 +1,1197 @@
+{
+ "category": "business",
+ "review": "unreviewed",
+ "note": "Difficulty ladders: the original question keeps its own level, these are the other levels. Unreviewed.",
+ "families": [
+  {
+   "id": "biz-001",
+   "ask": {
+    "1": "Product",
+    "2": "Company",
+    "3": "Founder"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which Apple co-founder introduced the first iPhone in 2007?",
+     "choices": [
+      "Steve Jobs",
+      "Jeff Bezos",
+      "Bill Gates",
+      "Larry Page"
+     ],
+     "answer": 0,
+     "explanation": "Steve Jobs presented it."
+    },
+    {
+     "level": 3,
+     "question": "In which California city is Apple's headquarters?",
+     "choices": [
+      "San Diego",
+      "Palo Alto",
+      "Sacramento",
+      "Cupertino"
+     ],
+     "answer": 3,
+     "explanation": "Apple Park is in Cupertino."
+    }
+   ]
+  },
+  {
+   "id": "biz-002",
+   "ask": {
+    "1": "Logo",
+    "2": "Brand",
+    "3": "Slogan"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is Nike's famous slogan?",
+     "choices": [
+      "Just Do It",
+      "Think Different",
+      "I'm Lovin' It",
+      "Impossible Is Nothing"
+     ],
+     "answer": 0,
+     "explanation": "Nike's slogan is Just Do It."
+    },
+    {
+     "level": 3,
+     "question": "Which Greek goddess of victory inspired the Nike name?",
+     "choices": [
+      "Artemis",
+      "Nike",
+      "Athena",
+      "Hera"
+     ],
+     "answer": 1,
+     "explanation": "The brand is named after Nike, goddess of victory."
+    }
+   ]
+  },
+  {
+   "id": "biz-003",
+   "ask": {
+    "1": "Online store",
+    "2": "Founder",
+    "3": "Start"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "In which US state was Amazon founded as an online bookstore in 1994?",
+     "choices": [
+      "Texas",
+      "Washington",
+      "Oregon",
+      "Colorado"
+     ],
+     "answer": 1,
+     "explanation": "Amazon was founded in Washington state."
+    },
+    {
+     "level": 3,
+     "question": "What is the name of Amazon's cloud computing service?",
+     "choices": [
+      "AWS",
+      "Oracle Cloud",
+      "iCloud",
+      "Azure"
+     ],
+     "answer": 0,
+     "explanation": "AWS is Amazon Web Services."
+    }
+   ]
+  },
+  {
+   "id": "biz-004",
+   "ask": {
+    "1": "Car",
+    "2": "Founder",
+    "3": "Electric"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which Tesla car is the compact family sedan launched in 2017?",
+     "choices": [
+      "Model 3",
+      "Roadster",
+      "Model X",
+      "Model S"
+     ],
+     "answer": 0,
+     "explanation": "The Model 3 arrived in 2017."
+    },
+    {
+     "level": 3,
+     "question": "In which year was Tesla founded?",
+     "choices": [
+      "1995",
+      "2010",
+      "2015",
+      "2003"
+     ],
+     "answer": 3,
+     "explanation": "Tesla was incorporated in 2003."
+    }
+   ]
+  },
+  {
+   "id": "biz-005",
+   "ask": {
+    "1": "Title",
+    "2": "Letters",
+    "3": "Boss"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What does 'CFO' stand for?",
+     "choices": [
+      "Chief Factory Operator",
+      "Chief Financial Officer",
+      "Central Funding Office",
+      "Company Finance Owner"
+     ],
+     "answer": 1,
+     "explanation": "CFO is chief financial officer."
+    },
+    {
+     "level": 3,
+     "question": "What does 'COO' stand for?",
+     "choices": [
+      "Central Output Office",
+      "Company Owner Operator",
+      "Chief Online Officer",
+      "Chief Operating Officer"
+     ],
+     "answer": 3,
+     "explanation": "COO is chief operating officer."
+    }
+   ]
+  },
+  {
+   "id": "biz-006",
+   "ask": {
+    "1": "Social media",
+    "2": "Owner",
+    "3": "Parent"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which company owns WhatsApp?",
+     "choices": [
+      "Google",
+      "Meta",
+      "Apple",
+      "Snap"
+     ],
+     "answer": 1,
+     "explanation": "Meta bought WhatsApp in 2014."
+    },
+    {
+     "level": 3,
+     "question": "Who founded Facebook in 2004?",
+     "choices": [
+      "Kevin Systrom",
+      "Evan Spiegel",
+      "Mark Zuckerberg",
+      "Jack Dorsey"
+     ],
+     "answer": 2,
+     "explanation": "Zuckerberg founded Facebook."
+    }
+   ]
+  },
+  {
+   "id": "biz-007",
+   "ask": {
+    "1": "Fast food",
+    "2": "Logo",
+    "3": "Chain"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which mascot is associated with McDonald's?",
+     "choices": [
+      "Ronald McDonald",
+      "Wendy",
+      "The King",
+      "Colonel Sanders"
+     ],
+     "answer": 0,
+     "explanation": "Ronald McDonald is the clown."
+    },
+    {
+     "level": 3,
+     "question": "In which year did the first McDonald's franchise restaurant open under Ray Kroc?",
+     "choices": [
+      "1985",
+      "1970",
+      "1940",
+      "1955"
+     ],
+     "answer": 3,
+     "explanation": "Ray Kroc opened in Des Plaines in 1955."
+    }
+   ]
+  },
+  {
+   "id": "biz-008",
+   "ask": {
+    "1": "Acronym",
+    "2": "Sales",
+    "3": "Model"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Selling to ordinary customers is called B2C. What does the C stand for?",
+     "choices": [
+      "Company",
+      "Contract",
+      "Consumer",
+      "Capital"
+     ],
+     "answer": 2,
+     "explanation": "B2C is business to consumer."
+    },
+    {
+     "level": 3,
+     "question": "Which kind of company sells software subscriptions to other businesses, as in 'B2B SaaS'?",
+     "choices": [
+      "A bakery",
+      "A taxi firm",
+      "A software provider",
+      "A farm"
+     ],
+     "answer": 2,
+     "explanation": "SaaS firms sell to businesses."
+    }
+   ]
+  },
+  {
+   "id": "biz-009",
+   "ask": {
+    "1": "OS",
+    "2": "Phone",
+    "3": "Owner"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which company runs the Google search engine?",
+     "choices": [
+      "Apple",
+      "Netflix",
+      "Google",
+      "Amazon"
+     ],
+     "answer": 2,
+     "explanation": "Google runs the search engine."
+    },
+    {
+     "level": 3,
+     "question": "Which company bought Android in 2005?",
+     "choices": [
+      "Samsung",
+      "Google",
+      "Microsoft",
+      "Nokia"
+     ],
+     "answer": 1,
+     "explanation": "Google acquired Android Inc. in 2005."
+    }
+   ]
+  },
+  {
+   "id": "biz-010",
+   "ask": {
+    "1": "Startup",
+    "2": "Valuation",
+    "3": "Animal"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What mythical animal is used for startups worth billions?",
+     "choices": [
+      "Unicorn",
+      "Phoenix",
+      "Griffin",
+      "Dragon"
+     ],
+     "answer": 0,
+     "explanation": "The term is unicorn."
+    },
+    {
+     "level": 3,
+     "question": "Who coined the term 'unicorn' for startups worth over a billion in 2013?",
+     "choices": [
+      "Jack Ma",
+      "Aileen Lee",
+      "Elon Musk",
+      "Mark Cuban"
+     ],
+     "answer": 1,
+     "explanation": "Aileen Lee coined it."
+    }
+   ]
+  },
+  {
+   "id": "biz-011",
+   "ask": {
+    "1": "Founder",
+    "2": "Software",
+    "3": "Windows"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which company makes Windows?",
+     "choices": [
+      "Microsoft",
+      "IBM",
+      "Google",
+      "Apple"
+     ],
+     "answer": 0,
+     "explanation": "Microsoft makes Windows."
+    },
+    {
+     "level": 3,
+     "question": "In which year was Microsoft founded?",
+     "choices": [
+      "1965",
+      "1985",
+      "1995",
+      "1975"
+     ],
+     "answer": 3,
+     "explanation": "Founded in April 1975."
+    }
+   ]
+  },
+  {
+   "id": "biz-012",
+   "ask": {
+    "1": "Metrics",
+    "2": "Acronym",
+    "3": "Goal"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What do managers use to measure whether a team reaches its goals?",
+     "choices": [
+      "KPIs",
+      "Passwords",
+      "Logos",
+      "Slogans"
+     ],
+     "answer": 0,
+     "explanation": "KPIs measure performance."
+    },
+    {
+     "level": 3,
+     "question": "What does 'OKR' stand for?",
+     "choices": [
+      "Operating Key Ratio",
+      "Order Keeping Rules",
+      "Objectives and Key Results",
+      "Output Known Revenue"
+     ],
+     "answer": 2,
+     "explanation": "OKRs set goals and results."
+    }
+   ]
+  },
+  {
+   "id": "biz-013",
+   "ask": {
+    "1": "Streaming",
+    "2": "Owner",
+    "3": "Studio"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which company owns Mickey Mouse?",
+     "choices": [
+      "Disney",
+      "Paramount",
+      "Warner Bros.",
+      "Pixar only"
+     ],
+     "answer": 0,
+     "explanation": "Disney owns Mickey Mouse."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Disney+ launch?",
+     "choices": [
+      "2022",
+      "2019",
+      "2015",
+      "2012"
+     ],
+     "answer": 1,
+     "explanation": "Disney+ launched in November 2019."
+    }
+   ]
+  },
+  {
+   "id": "biz-014",
+   "ask": {
+    "1": "Brand",
+    "2": "Identity",
+    "3": "Marketing"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which visual symbol identifies a company?",
+     "choices": [
+      "A tax form",
+      "A receipt",
+      "A contract",
+      "A logo"
+     ],
+     "answer": 3,
+     "explanation": "A logo identifies a brand."
+    },
+    {
+     "level": 3,
+     "question": "What do you call the sentence that sums up a brand's promise?",
+     "choices": [
+      "A tagline",
+      "A clause",
+      "A balance",
+      "A footnote"
+     ],
+     "answer": 0,
+     "explanation": "A tagline summarises the promise."
+    }
+   ]
+  },
+  {
+   "id": "biz-015",
+   "ask": {
+    "1": "Furniture",
+    "2": "Sweden",
+    "3": "Company"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country is IKEA from?",
+     "choices": [
+      "Denmark",
+      "Sweden",
+      "Finland",
+      "Norway"
+     ],
+     "answer": 1,
+     "explanation": "IKEA is Swedish."
+    },
+    {
+     "level": 3,
+     "question": "Who founded IKEA in 1943?",
+     "choices": [
+      "Stefan Persson",
+      "Ingvar Kamprad",
+      "Ingvar Persson",
+      "Lars Rebien"
+     ],
+     "answer": 1,
+     "explanation": "Ingvar Kamprad founded IKEA."
+    }
+   ]
+  },
+  {
+   "id": "biz-016",
+   "ask": {
+    "1": "Funding",
+    "2": "Startup",
+    "3": "Investor"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Where do startups often get money to grow, from investors?",
+     "choices": [
+      "Tax rebate",
+      "Pocket money",
+      "Lottery",
+      "Venture capital"
+     ],
+     "answer": 3,
+     "explanation": "VCs fund startups."
+    },
+    {
+     "level": 3,
+     "question": "In a funding round, what do investors typically receive?",
+     "choices": [
+      "A gift card",
+      "A tax credit",
+      "Equity in the company",
+      "A free product"
+     ],
+     "answer": 2,
+     "explanation": "They take a share of ownership."
+    }
+   ]
+  },
+  {
+   "id": "biz-017",
+   "ask": {
+    "1": "Value",
+    "2": "Trillion",
+    "3": "Company"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which company makes the iPhone and was the first worth $1 trillion?",
+     "choices": [
+      "Nokia",
+      "Dell",
+      "Apple",
+      "Sony"
+     ],
+     "answer": 2,
+     "explanation": "Apple reached $1 trillion first."
+    },
+    {
+     "level": 2,
+     "question": "In which year did Apple first reach a $1 trillion market value?",
+     "choices": [
+      "2010",
+      "2022",
+      "2005",
+      "2018"
+     ],
+     "answer": 3,
+     "explanation": "Apple hit $1 trillion in August 2018."
+    }
+   ]
+  },
+  {
+   "id": "biz-018",
+   "ask": {
+    "1": "Analysis",
+    "2": "Acronym",
+    "3": "Tool"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What do companies analyse in a SWOT table?",
+     "choices": [
+      "Taxes only",
+      "Weather",
+      "Strengths and weaknesses",
+      "Salaries only"
+     ],
+     "answer": 2,
+     "explanation": "SWOT lists strengths and weaknesses."
+    },
+    {
+     "level": 2,
+     "question": "In a SWOT analysis, which letters describe internal factors?",
+     "choices": [
+      "S and W",
+      "O and T",
+      "S and O",
+      "W and T"
+     ],
+     "answer": 0,
+     "explanation": "Strengths and weaknesses are internal."
+    }
+   ]
+  },
+  {
+   "id": "biz-019",
+   "ask": {
+    "1": "Walkman",
+    "2": "Japan",
+    "3": "Product"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Japanese company made the PlayStation?",
+     "choices": [
+      "Sony",
+      "Nintendo",
+      "Toshiba",
+      "Sega"
+     ],
+     "answer": 0,
+     "explanation": "Sony made the PlayStation."
+    },
+    {
+     "level": 2,
+     "question": "In which year was the Sony Walkman launched?",
+     "choices": [
+      "1990",
+      "1965",
+      "2001",
+      "1979"
+     ],
+     "answer": 3,
+     "explanation": "The Walkman launched in 1979."
+    }
+   ]
+  },
+  {
+   "id": "biz-020",
+   "ask": {
+    "1": "Method",
+    "2": "Toyota",
+    "3": "Stock"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Japanese carmaker makes the Corolla?",
+     "choices": [
+      "Toyota",
+      "Nissan",
+      "Honda",
+      "Mazda"
+     ],
+     "answer": 0,
+     "explanation": "Toyota makes the Corolla."
+    },
+    {
+     "level": 2,
+     "question": "What is the Toyota system built on 'just-in-time' and waste reduction called?",
+     "choices": [
+      "The Toyota Production System",
+      "Agile",
+      "Scrum",
+      "Six Sigma"
+     ],
+     "answer": 0,
+     "explanation": "TPS popularised just-in-time."
+    }
+   ]
+  },
+  {
+   "id": "biz-021",
+   "ask": {
+    "1": "Market",
+    "2": "Share",
+    "3": "Percentage"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "If a firm sells half of all products in a market, it has what share?",
+     "choices": [
+      "100 percent",
+      "15 percent",
+      "5 percent",
+      "50 percent"
+     ],
+     "answer": 3,
+     "explanation": "Half is 50 percent."
+    },
+    {
+     "level": 2,
+     "question": "If a firm sells 30 of 200 units in a market, what is its market share?",
+     "choices": [
+      "60 percent",
+      "15 percent",
+      "6 percent",
+      "30 percent"
+     ],
+     "answer": 1,
+     "explanation": "30 divided by 200 is 15 percent."
+    }
+   ]
+  },
+  {
+   "id": "biz-022",
+   "ask": {
+    "1": "Startup",
+    "2": "Change",
+    "3": "Strategy"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "If a startup changes its main idea, what does it do?",
+     "choices": [
+      "Merges",
+      "Pivots",
+      "Freezes",
+      "Retires"
+     ],
+     "answer": 1,
+     "explanation": "It pivots."
+    },
+    {
+     "level": 2,
+     "question": "Which workplace messaging app grew out of a failed video game called Glitch?",
+     "choices": [
+      "Dropbox",
+      "Slack",
+      "Trello",
+      "Zoom"
+     ],
+     "answer": 1,
+     "explanation": "Slack's team pivoted from Glitch."
+    }
+   ]
+  },
+  {
+   "id": "biz-023",
+   "ask": {
+    "1": "Headquarters",
+    "2": "Google",
+    "3": "City"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which country is Google's headquarters?",
+     "choices": [
+      "Ireland",
+      "The United States",
+      "Canada",
+      "India"
+     ],
+     "answer": 1,
+     "explanation": "Google is based in the US."
+    },
+    {
+     "level": 2,
+     "question": "Which US state is Google's headquarters in?",
+     "choices": [
+      "Washington",
+      "New York",
+      "California",
+      "Texas"
+     ],
+     "answer": 2,
+     "explanation": "The Googleplex is in California."
+    }
+   ]
+  },
+  {
+   "id": "biz-024",
+   "ask": {
+    "1": "Netflix",
+    "2": "Streaming",
+    "3": "Founder"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What was Netflix's original business?",
+     "choices": [
+      "Making phones",
+      "Printing books",
+      "DVD rental by mail",
+      "Selling cars"
+     ],
+     "answer": 2,
+     "explanation": "Netflix mailed DVDs."
+    },
+    {
+     "level": 2,
+     "question": "In which year was Netflix founded?",
+     "choices": [
+      "1997",
+      "1985",
+      "2010",
+      "2005"
+     ],
+     "answer": 0,
+     "explanation": "Founded in 1997."
+    }
+   ]
+  },
+  {
+   "id": "biz-025",
+   "ask": {
+    "1": "Deals",
+    "2": "Company",
+    "3": "Merge"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "When two companies combine into one, it is called a what?",
+     "choices": [
+      "Refund",
+      "Audit",
+      "Merger",
+      "Split"
+     ],
+     "answer": 2,
+     "explanation": "A merger combines firms."
+    },
+    {
+     "level": 2,
+     "question": "What do you call it when one company buys another?",
+     "choices": [
+      "A subsidy",
+      "A refund",
+      "A strike",
+      "An acquisition"
+     ],
+     "answer": 3,
+     "explanation": "An acquisition is a purchase."
+    }
+   ]
+  },
+  {
+   "id": "biz-026",
+   "ask": {
+    "1": "Cars",
+    "2": "Ford",
+    "3": "Assembly line"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which carmaker made the Model T?",
+     "choices": [
+      "Renault",
+      "Ford",
+      "Fiat",
+      "Toyota"
+     ],
+     "answer": 1,
+     "explanation": "Ford made the Model T."
+    },
+    {
+     "level": 2,
+     "question": "Who founded the Ford Motor Company in 1903?",
+     "choices": [
+      "Karl Benz",
+      "Walter Chrysler",
+      "Louis Chevrolet",
+      "Henry Ford"
+     ],
+     "answer": 3,
+     "explanation": "Henry Ford founded it."
+    }
+   ]
+  },
+  {
+   "id": "biz-027",
+   "ask": {
+    "1": "First",
+    "2": "Company",
+    "3": "Dutch"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country is the Dutch East India Company from?",
+     "choices": [
+      "Portugal",
+      "Belgium",
+      "Spain",
+      "The Netherlands"
+     ],
+     "answer": 3,
+     "explanation": "VOC was Dutch."
+    },
+    {
+     "level": 2,
+     "question": "What was the Dutch East India Company's abbreviation?",
+     "choices": [
+      "VOC",
+      "IBM",
+      "EIC",
+      "AOL"
+     ],
+     "answer": 0,
+     "explanation": "VOC stands for Vereenigde Oostindische Compagnie."
+    }
+   ]
+  },
+  {
+   "id": "biz-028",
+   "ask": {
+    "1": "Book",
+    "2": "Lean",
+    "3": "Author"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which strategy builds a minimum version of a product to test ideas fast?",
+     "choices": [
+      "Overstock",
+      "Lobbying",
+      "Hoarding",
+      "Lean startup"
+     ],
+     "answer": 3,
+     "explanation": "The Lean Startup relies on quick tests."
+    },
+    {
+     "level": 2,
+     "question": "What does MVP stand for in startups?",
+     "choices": [
+      "Market Value Price",
+      "Minimum Viable Product",
+      "Most Valuable Player",
+      "Maximum Value Plan"
+     ],
+     "answer": 1,
+     "explanation": "MVP is minimum viable product."
+    }
+   ]
+  },
+  {
+   "id": "biz-029",
+   "ask": {
+    "1": "Theory",
+    "2": "Disruption",
+    "3": "Author"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "When a small new company beats a big old one with a cheaper product, it is called what?",
+     "choices": [
+      "Monopoly",
+      "Inflation",
+      "Disruption",
+      "Embargo"
+     ],
+     "answer": 2,
+     "explanation": "Disruption upends leaders."
+    },
+    {
+     "level": 2,
+     "question": "Which university was Clayton Christensen a professor at?",
+     "choices": [
+      "Stanford",
+      "MIT",
+      "Harvard",
+      "Yale"
+     ],
+     "answer": 2,
+     "explanation": "He taught at Harvard Business School."
+    }
+   ]
+  },
+  {
+   "id": "biz-030",
+   "ask": {
+    "1": "Search",
+    "2": "Founders",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which two Stanford students founded the search engine Google?",
+     "choices": [
+      "Larry Page and Sergey Brin",
+      "Bill Gates and Paul Allen",
+      "Steve Jobs and Steve Wozniak",
+      "Jack Ma and Pony Ma"
+     ],
+     "answer": 0,
+     "explanation": "Page and Brin founded Google."
+    },
+    {
+     "level": 2,
+     "question": "In which US state were Google's founders students?",
+     "choices": [
+      "Massachusetts",
+      "California",
+      "Texas",
+      "New York"
+     ],
+     "answer": 1,
+     "explanation": "They studied at Stanford."
+    }
+   ]
+  },
+  {
+   "id": "biz-031",
+   "ask": {
+    "1": "Bill",
+    "2": "Payment",
+    "3": "Invoice"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What do you get when a supplier asks you to pay for goods?",
+     "choices": [
+      "An invoice",
+      "A ticket",
+      "A diploma",
+      "A trophy"
+     ],
+     "answer": 0,
+     "explanation": "An invoice requests payment."
+    },
+    {
+     "level": 3,
+     "question": "What does 'net 30' mean on an invoice?",
+     "choices": [
+      "A 30 dollar fee",
+      "A 30 percent discount",
+      "Payment due in 30 days",
+      "30 items"
+     ],
+     "answer": 2,
+     "explanation": "Net 30 means payment within 30 days."
+    }
+   ]
+  },
+  {
+   "id": "biz-032",
+   "ask": {
+    "1": "Franchise",
+    "2": "Brand",
+    "3": "Restaurant"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which restaurant chain sells franchises to owners all over the world?",
+     "choices": [
+      "McDonald's",
+      "A school canteen",
+      "A village bakery",
+      "A family kitchen"
+     ],
+     "answer": 0,
+     "explanation": "McDonald's is a big franchise."
+    },
+    {
+     "level": 3,
+     "question": "What fee does a franchisee typically pay to the franchisor?",
+     "choices": [
+      "Tuition",
+      "Dividends",
+      "Tips",
+      "Royalties"
+     ],
+     "answer": 3,
+     "explanation": "Franchisees pay royalties."
+    }
+   ]
+  },
+  {
+   "id": "biz-033",
+   "ask": {
+    "1": "One-click",
+    "2": "Shop",
+    "3": "Patent"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which online retailer is known for fast delivery with Prime?",
+     "choices": [
+      "Netflix",
+      "Amazon",
+      "Uber",
+      "Spotify"
+     ],
+     "answer": 1,
+     "explanation": "Amazon runs Prime."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Amazon launch its Prime subscription?",
+     "choices": [
+      "2018",
+      "2005",
+      "2012",
+      "1995"
+     ],
+     "answer": 1,
+     "explanation": "Amazon Prime began in 2005."
+    }
+   ]
+  },
+  {
+   "id": "biz-034",
+   "ask": {
+    "1": "Luxury",
+    "2": "Group",
+    "3": "Brands"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which luxury brand is known for its monogram bags?",
+     "choices": [
+      "Zara",
+      "Levi's",
+      "Louis Vuitton",
+      "Nike"
+     ],
+     "answer": 2,
+     "explanation": "Louis Vuitton uses monograms."
+    },
+    {
+     "level": 2,
+     "question": "In which country is LVMH headquartered?",
+     "choices": [
+      "Switzerland",
+      "United Kingdom",
+      "France",
+      "Italy"
+     ],
+     "answer": 2,
+     "explanation": "LVMH is based in Paris."
+    }
+   ]
+  },
+  {
+   "id": "biz-035",
+   "ask": {
+    "1": "Staff",
+    "2": "Department",
+    "3": "Jobs"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which department recruits new employees?",
+     "choices": [
+      "Repairs",
+      "Shipping",
+      "Human resources",
+      "Catering"
+     ],
+     "answer": 2,
+     "explanation": "HR recruits staff."
+    },
+    {
+     "level": 3,
+     "question": "What do you call the document that outlines an employee's pay and terms?",
+     "choices": [
+      "Brochure",
+      "Employment contract",
+      "Invoice",
+      "Receipt"
+     ],
+     "answer": 1,
+     "explanation": "The contract sets terms."
+    }
+   ]
+  }
+ ]
+}

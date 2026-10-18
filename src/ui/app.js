@@ -60,7 +60,7 @@ export async function boot(root) {
   app.readJson = readJson;
   try {
     app.bank = await loadBank(readJson);
-    app.ctx = makeContext(app.bank.questions);
+    app.ctx = makeContext([...app.bank.questions, ...(app.bank.variants ?? [])]);
   } catch (err) {
     console.error(err);
     mount(root, h('div.screen', {}, h('div.panel.warn', {}, h('h2', {}, 'Could not load the questions'), h('p', {}, String(err.message ?? err)), h('p.small.dim', {}, 'Check your connection and reload. If you opened index.html straight from disk, run a local server instead (npm start).'), h('button.btn.primary', { onclick: () => location.reload() }, 'Reload'))));

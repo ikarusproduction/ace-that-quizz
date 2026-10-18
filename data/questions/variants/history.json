@@ -1,0 +1,959 @@
+{
+ "category": "history",
+ "review": "unreviewed",
+ "note": "Difficulty ladders: the original question keeps its own level, these are the other levels. Unreviewed.",
+ "families": [
+  {
+   "id": "his-001",
+   "ask": {
+    "1": "Year",
+    "2": "Month and year",
+    "3": "Exact date in Europe"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "World War II in Europe ended with the German surrender in which month of 1945?",
+     "choices": [
+      "August",
+      "December",
+      "May",
+      "January"
+     ],
+     "answer": 2,
+     "explanation": "Germany surrendered in early May 1945, celebrated as V-E Day on 8 May."
+    },
+    {
+     "level": 3,
+     "question": "On which exact date did Japan announce its surrender, which is often counted as the end of World War II, in 1945?",
+     "choices": [
+      "8 May",
+      "6 August",
+      "15 August",
+      "2 September"
+     ],
+     "answer": 2,
+     "explanation": "Emperor Hirohito announced the surrender on 15 August 1945; the formal signing came on 2 September."
+    }
+   ]
+  },
+  {
+   "id": "his-002",
+   "ask": {
+    "1": "Name the president",
+    "2": "First president",
+    "3": "Years in office"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "George Washington became president in which year?",
+     "choices": [
+      "1801",
+      "1789",
+      "1812",
+      "1776"
+     ],
+     "answer": 1,
+     "explanation": "Washington was inaugurated on 30 April 1789."
+    },
+    {
+     "level": 3,
+     "question": "Which battle's victory in 1781 effectively ended major fighting in the American Revolution, with Washington commanding?",
+     "choices": [
+      "Lexington",
+      "Bunker Hill",
+      "Saratoga",
+      "Yorktown"
+     ],
+     "answer": 3,
+     "explanation": "The British surrender at Yorktown in October 1781 ended major combat."
+    }
+   ]
+  },
+  {
+   "id": "his-003",
+   "ask": {
+    "1": "Civilization",
+    "2": "Pharaoh and pyramid",
+    "3": "Great Pyramid builder"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which pharaoh is traditionally credited with the Great Pyramid of Giza?",
+     "choices": [
+      "Tutankhamun",
+      "Khufu",
+      "Ramesses II",
+      "Cleopatra"
+     ],
+     "answer": 1,
+     "explanation": "The Great Pyramid was built for Khufu, around 2560 BC."
+    },
+    {
+     "level": 3,
+     "question": "Roughly how many years ago, to the nearest thousand, was the Great Pyramid of Giza built?",
+     "choices": [
+      "About 6,000 years ago",
+      "About 2,000 years ago",
+      "About 3,000 years ago",
+      "About 4,500 years ago"
+     ],
+     "answer": 3,
+     "explanation": "Built around 2560 BC, it is roughly 4,500 years old."
+    }
+   ]
+  },
+  {
+   "id": "his-004",
+   "ask": {
+    "1": "Decade",
+    "2": "Year",
+    "3": "Exact date"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which decade did the Berlin Wall fall?",
+     "choices": [
+      "The 1980s",
+      "The 2000s",
+      "The 1970s",
+      "The 1960s"
+     ],
+     "answer": 0,
+     "explanation": "The wall fell in November 1989."
+    },
+    {
+     "level": 3,
+     "question": "On which date did the Berlin Wall open, in 1989?",
+     "choices": [
+      "11 November",
+      "9 November",
+      "25 December",
+      "3 October"
+     ],
+     "answer": 1,
+     "explanation": "The border opened on the night of 9 November 1989."
+    }
+   ]
+  },
+  {
+   "id": "his-005",
+   "ask": {
+    "1": "Empire",
+    "2": "Roman emperor builder",
+    "3": "Amphitheatre name"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which Roman dynasty began the building of the Colosseum, starting under Emperor Vespasian?",
+     "choices": [
+      "The Julio-Claudian dynasty",
+      "The Antonine dynasty",
+      "The Flavian dynasty",
+      "The Severan dynasty"
+     ],
+     "answer": 2,
+     "explanation": "Vespasian began it in about AD 70 and his son Titus opened it in AD 80."
+    },
+    {
+     "level": 3,
+     "question": "In what year did Emperor Titus open the Colosseum with games?",
+     "choices": [
+      "AD 122",
+      "AD 80",
+      "AD 64",
+      "AD 117"
+     ],
+     "answer": 1,
+     "explanation": "The Flavian Amphitheatre was inaugurated in AD 80."
+    }
+   ]
+  },
+  {
+   "id": "his-006",
+   "ask": {
+    "1": "Century",
+    "2": "Year",
+    "3": "Exact date"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The French Revolution began in which century?",
+     "choices": [
+      "The 16th",
+      "The 18th",
+      "The 19th",
+      "The 17th"
+     ],
+     "answer": 1,
+     "explanation": "It started in 1789."
+    },
+    {
+     "level": 3,
+     "question": "On which date did a crowd storm the Bastille in Paris?",
+     "choices": [
+      "14 July 1789",
+      "4 August 1789",
+      "5 May 1789",
+      "21 January 1793"
+     ],
+     "answer": 0,
+     "explanation": "The storming of the Bastille happened on 14 July 1789."
+    }
+   ]
+  },
+  {
+   "id": "his-007",
+   "ask": {
+    "1": "Name the emperor",
+    "2": "First emperor",
+    "3": "Famous army"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which famous army of clay figures was buried near the tomb of China's first emperor?",
+     "choices": [
+      "The Silk Army",
+      "The Terracotta Army",
+      "The Jade Army",
+      "The Bronze Army"
+     ],
+     "answer": 1,
+     "explanation": "Thousands of terracotta soldiers guard Qin Shi Huang's tomb near Xi'an."
+    },
+    {
+     "level": 2,
+     "question": "Which famous structure was joined and extended under Qin Shi Huang?",
+     "choices": [
+      "The Great Wall",
+      "The Forbidden City",
+      "The Grand Canal",
+      "The Summer Palace"
+     ],
+     "answer": 0,
+     "explanation": "Earlier walls were linked under the first emperor."
+    }
+   ]
+  },
+  {
+   "id": "his-008",
+   "ask": {
+    "1": "Document",
+    "2": "Magna Carta",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Magna Carta is a famous charter from which country?",
+     "choices": [
+      "Germany",
+      "France",
+      "Spain",
+      "England"
+     ],
+     "answer": 3,
+     "explanation": "King John of England sealed it."
+    },
+    {
+     "level": 2,
+     "question": "Magna Carta limited the power of which king?",
+     "choices": [
+      "Richard I",
+      "William I",
+      "John",
+      "Henry VIII"
+     ],
+     "answer": 2,
+     "explanation": "King John accepted it at Runnymede."
+    }
+   ]
+  },
+  {
+   "id": "his-009",
+   "ask": {
+    "1": "Civilization",
+    "2": "Where is Machu Picchu",
+    "3": "Empire's capital"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Machu Picchu is a famous ruin in which South American country?",
+     "choices": [
+      "Argentina",
+      "Mexico",
+      "Peru",
+      "Chile"
+     ],
+     "answer": 2,
+     "explanation": "It sits high in the Andes in Peru."
+    },
+    {
+     "level": 3,
+     "question": "Which city was the capital of the Inca Empire?",
+     "choices": [
+      "Cusco",
+      "Quito",
+      "La Paz",
+      "Lima"
+     ],
+     "answer": 0,
+     "explanation": "Cusco was the heart of the Inca Empire."
+    }
+   ]
+  },
+  {
+   "id": "his-010",
+   "ask": {
+    "1": "War",
+    "2": "Treaty and war",
+    "3": "Year and place"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Treaty of Versailles was signed in which country?",
+     "choices": [
+      "Germany",
+      "Belgium",
+      "Italy",
+      "France"
+     ],
+     "answer": 3,
+     "explanation": "It was signed in the Hall of Mirrors at Versailles, France."
+    },
+    {
+     "level": 3,
+     "question": "On which date was the Treaty of Versailles signed, five years after the assassination in Sarajevo?",
+     "choices": [
+      "11 November 1918",
+      "7 May 1920",
+      "28 June 1919",
+      "1 September 1939"
+     ],
+     "answer": 2,
+     "explanation": "It was signed on 28 June 1919."
+    }
+   ]
+  },
+  {
+   "id": "his-011",
+   "ask": {
+    "1": "Name the leader",
+    "2": "Founder",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Mongol leader is known as the founder of the largest contiguous land empire in history?",
+     "choices": [
+      "Alexander",
+      "Julius Caesar",
+      "Genghis Khan",
+      "Napoleon"
+     ],
+     "answer": 2,
+     "explanation": "Genghis Khan united the Mongol tribes."
+    },
+    {
+     "level": 3,
+     "question": "Genghis Khan's birth name was what?",
+     "choices": [
+      "Ogedei",
+      "Kublai",
+      "Batu",
+      "Temujin"
+     ],
+     "answer": 3,
+     "explanation": "Temujin was given the title Genghis Khan in 1206."
+    }
+   ]
+  },
+  {
+   "id": "his-012",
+   "ask": {
+    "1": "Ship",
+    "2": "Mayflower",
+    "3": "Landing place"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Pilgrims travelled to America on which famous type of vessel in 1620?",
+     "choices": [
+      "An aircraft",
+      "A canoe",
+      "A steamship",
+      "A sailing ship"
+     ],
+     "answer": 3,
+     "explanation": "The Mayflower was a sailing ship."
+    },
+    {
+     "level": 3,
+     "question": "Which colony did the Pilgrims found after landing in 1620?",
+     "choices": [
+      "Roanoke",
+      "Plymouth Colony",
+      "Jamestown",
+      "New Amsterdam"
+     ],
+     "answer": 1,
+     "explanation": "The Pilgrims settled Plymouth in present-day Massachusetts."
+    }
+   ]
+  },
+  {
+   "id": "his-013",
+   "ask": {
+    "1": "Country",
+    "2": "Where it began",
+    "3": "Famous invention"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Industrial Revolution began in which continent?",
+     "choices": [
+      "Asia",
+      "Africa",
+      "South America",
+      "Europe"
+     ],
+     "answer": 3,
+     "explanation": "It began in Britain in the 18th century."
+    },
+    {
+     "level": 3,
+     "question": "Which invention improved by James Watt powered early factories?",
+     "choices": [
+      "The steam engine",
+      "The light bulb",
+      "The radio",
+      "The telegraph"
+     ],
+     "answer": 0,
+     "explanation": "Watt's improvements made steam engines far more efficient."
+    }
+   ]
+  },
+  {
+   "id": "his-014",
+   "ask": {
+    "1": "Country",
+    "2": "Where it began",
+    "3": "City"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Renaissance means \"rebirth\". It began in which European country?",
+     "choices": [
+      "Italy",
+      "Portugal",
+      "Poland",
+      "Norway"
+     ],
+     "answer": 0,
+     "explanation": "It began in Italian city-states."
+    },
+    {
+     "level": 3,
+     "question": "Which Italian city is regarded as the cradle of the Renaissance?",
+     "choices": [
+      "Naples",
+      "Turin",
+      "Florence",
+      "Venice"
+     ],
+     "answer": 2,
+     "explanation": "Florence was home to the Medici, Botticelli, and Leonardo."
+    }
+   ]
+  },
+  {
+   "id": "his-015",
+   "ask": {
+    "1": "Name the general",
+    "2": "Elephants",
+    "3": "Which war"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Hannibal came from which ancient city?",
+     "choices": [
+      "Carthage",
+      "Troy",
+      "Athens",
+      "Sparta"
+     ],
+     "answer": 0,
+     "explanation": "Hannibal was a general of Carthage."
+    },
+    {
+     "level": 2,
+     "question": "Hannibal fought Rome in which war?",
+     "choices": [
+      "The Second Punic War",
+      "The First Punic War",
+      "The Peloponnesian War",
+      "The Gallic Wars"
+     ],
+     "answer": 0,
+     "explanation": "His Alpine march was in the Second Punic War, 218 BC."
+    }
+   ]
+  },
+  {
+   "id": "his-016",
+   "ask": {
+    "1": "Year",
+    "2": "Day and month",
+    "3": "Astronaut"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which Apollo mission carried the first humans to land on the Moon?",
+     "choices": [
+      "Apollo 13",
+      "Apollo 8",
+      "Apollo 11",
+      "Apollo 17"
+     ],
+     "answer": 2,
+     "explanation": "Apollo 11 landed in July 1969."
+    },
+    {
+     "level": 3,
+     "question": "On which exact date did the Apollo 11 lunar module land on the Moon?",
+     "choices": [
+      "20 July 1969",
+      "24 July 1969",
+      "16 July 1969",
+      "21 July 1969"
+     ],
+     "answer": 0,
+     "explanation": "The lunar module Eagle landed on 20 July 1969."
+    }
+   ]
+  },
+  {
+   "id": "his-017",
+   "ask": {
+    "1": "Kingdoms",
+    "2": "Which two",
+    "3": "Years"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Hundred Years' War involved England and which other country?",
+     "choices": [
+      "Denmark",
+      "Spain",
+      "Italy",
+      "France"
+     ],
+     "answer": 3,
+     "explanation": "It was a long conflict between England and France."
+    },
+    {
+     "level": 2,
+     "question": "Which French heroine led troops during the Hundred Years' War?",
+     "choices": [
+      "Catherine de Medici",
+      "Marie Antoinette",
+      "Eleanor of Aquitaine",
+      "Joan of Arc"
+     ],
+     "answer": 3,
+     "explanation": "Joan of Arc helped relieve Orleans in 1429."
+    }
+   ]
+  },
+  {
+   "id": "his-018",
+   "ask": {
+    "1": "Year",
+    "2": "Crisis",
+    "3": "Which island"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Cuban Missile Crisis happened during which tense period?",
+     "choices": [
+      "World War I",
+      "The Industrial Revolution",
+      "The Cold War",
+      "The Napoleonic Wars"
+     ],
+     "answer": 2,
+     "explanation": "It was a tense Cold War standoff."
+    },
+    {
+     "level": 2,
+     "question": "Which US president handled the Cuban Missile Crisis?",
+     "choices": [
+      "Lyndon Johnson",
+      "Dwight Eisenhower",
+      "John F. Kennedy",
+      "Richard Nixon"
+     ],
+     "answer": 2,
+     "explanation": "Kennedy was president in October 1962."
+    }
+   ]
+  },
+  {
+   "id": "his-019",
+   "ask": {
+    "1": "Nobel winner",
+    "2": "First woman",
+    "3": "Fields"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Marie Curie was born in which country?",
+     "choices": [
+      "Germany",
+      "France",
+      "Russia",
+      "Poland"
+     ],
+     "answer": 3,
+     "explanation": "Born in Warsaw in 1867."
+    },
+    {
+     "level": 3,
+     "question": "In which two scientific fields did Marie Curie win Nobel Prizes?",
+     "choices": [
+      "Chemistry and peace",
+      "Physics and medicine",
+      "Physics and chemistry",
+      "Medicine and literature"
+     ],
+     "answer": 2,
+     "explanation": "She won the physics prize in 1903 and the chemistry prize in 1911."
+    }
+   ]
+  },
+  {
+   "id": "his-020",
+   "ask": {
+    "1": "Stone",
+    "2": "Rosetta Stone",
+    "3": "Decipherer"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Rosetta Stone helped scholars read which ancient civilization's writing?",
+     "choices": [
+      "Egyptian",
+      "Viking",
+      "Chinese",
+      "Roman"
+     ],
+     "answer": 0,
+     "explanation": "The stone carries a decree in Egyptian and Greek scripts."
+    },
+    {
+     "level": 2,
+     "question": "Which French scholar deciphered Egyptian hieroglyphs in 1822?",
+     "choices": [
+      "Auguste Rodin",
+      "Jean-François Champollion",
+      "Napoleon Bonaparte",
+      "Louis Pasteur"
+     ],
+     "answer": 1,
+     "explanation": "Champollion announced his breakthrough in 1822."
+    }
+   ]
+  },
+  {
+   "id": "his-021",
+   "ask": {
+    "1": "Year",
+    "2": "Western Rome fall",
+    "3": "Last emperor"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Roman Empire is divided into a Western half and an Eastern half. Which city was the capital of the Eastern half?",
+     "choices": [
+      "Constantinople",
+      "Alexandria",
+      "Athens",
+      "Jerusalem"
+     ],
+     "answer": 0,
+     "explanation": "The Eastern Empire is known as the Byzantine Empire, with its capital at Constantinople."
+    },
+    {
+     "level": 2,
+     "question": "In which century did the Western Roman Empire fall?",
+     "choices": [
+      "The 9th century",
+      "The 3rd century",
+      "The 5th century",
+      "The 7th century"
+     ],
+     "answer": 2,
+     "explanation": "The traditional date is AD 476."
+    }
+   ]
+  },
+  {
+   "id": "his-022",
+   "ask": {
+    "1": "Year",
+    "2": "Battle",
+    "3": "Date"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Battle of Hastings was fought in which country?",
+     "choices": [
+      "England",
+      "Wales",
+      "Scotland",
+      "France"
+     ],
+     "answer": 0,
+     "explanation": "It took place near Hastings in southern England."
+    },
+    {
+     "level": 3,
+     "question": "On which date was the Battle of Hastings fought?",
+     "choices": [
+      "15 June 1066",
+      "14 October 1066",
+      "1 January 1066",
+      "25 December 1066"
+     ],
+     "answer": 1,
+     "explanation": "William of Normandy defeated Harold on 14 October 1066."
+    }
+   ]
+  },
+  {
+   "id": "his-023",
+   "ask": {
+    "1": "Wartime PM",
+    "2": "Churchill",
+    "3": "Party"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which wartime British Prime Minister gave the \"blood, toil, tears and sweat\" speech?",
+     "choices": [
+      "Margaret Thatcher",
+      "Clement Attlee",
+      "Winston Churchill",
+      "Tony Blair"
+     ],
+     "answer": 2,
+     "explanation": "Churchill gave it in May 1940."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Churchill become Prime Minister, replacing Chamberlain?",
+     "choices": [
+      "1941",
+      "1945",
+      "1940",
+      "1939"
+     ],
+     "answer": 2,
+     "explanation": "Churchill took office on 10 May 1940."
+    }
+   ]
+  },
+  {
+   "id": "his-024",
+   "ask": {
+    "1": "Explorer",
+    "2": "Circumnavigation",
+    "3": "Ship"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Magellan's expedition set sail from which country?",
+     "choices": [
+      "England",
+      "Spain",
+      "Portugal",
+      "France"
+     ],
+     "answer": 1,
+     "explanation": "Magellan was Portuguese but sailed for Spain."
+    },
+    {
+     "level": 2,
+     "question": "Which ship of Magellan's fleet completed the voyage under Juan Sebastian Elcano?",
+     "choices": [
+      "Mayflower",
+      "Endeavour",
+      "Victoria",
+      "Santa Maria"
+     ],
+     "answer": 2,
+     "explanation": "The Victoria returned to Spain in 1522."
+    }
+   ]
+  },
+  {
+   "id": "his-025",
+   "ask": {
+    "1": "Empire",
+    "2": "Sultan",
+    "3": "Capital"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Suleiman the Magnificent was a sultan of which empire?",
+     "choices": [
+      "The British Empire",
+      "The Ottoman Empire",
+      "The Mongol Empire",
+      "The Roman Empire"
+     ],
+     "answer": 1,
+     "explanation": "He ruled the Ottomans from 1520 to 1566."
+    },
+    {
+     "level": 2,
+     "question": "Which city was the Ottoman capital under Suleiman?",
+     "choices": [
+      "Cairo",
+      "Istanbul",
+      "Baghdad",
+      "Damascus"
+     ],
+     "answer": 1,
+     "explanation": "Constantinople, now Istanbul, was the capital."
+    }
+   ]
+  },
+  {
+   "id": "his-026",
+   "ask": {
+    "1": "Year",
+    "2": "Ship",
+    "3": "Date"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Titanic sank after hitting what?",
+     "choices": [
+      "Another ship",
+      "A reef",
+      "A rock",
+      "An iceberg"
+     ],
+     "answer": 3,
+     "explanation": "It hit an iceberg in the North Atlantic."
+    },
+    {
+     "level": 3,
+     "question": "On which date did the Titanic sink, early in its first voyage?",
+     "choices": [
+      "14 July 1912",
+      "10 April 1912",
+      "1 May 1912",
+      "15 April 1912"
+     ],
+     "answer": 3,
+     "explanation": "It struck the iceberg late on 14 April and sank on 15 April 1912."
+    }
+   ]
+  },
+  {
+   "id": "his-027",
+   "ask": {
+    "1": "Emperor",
+    "2": "Wall",
+    "3": "Which island"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Hadrian's Wall was built in which part of the Roman Empire?",
+     "choices": [
+      "Gaul",
+      "Britain",
+      "Spain",
+      "Egypt"
+     ],
+     "answer": 1,
+     "explanation": "It crossed northern Roman Britain."
+    },
+    {
+     "level": 2,
+     "question": "Hadrian's Wall marked the northern frontier against which people?",
+     "choices": [
+      "The Gauls",
+      "The Saxons",
+      "The Visigoths",
+      "The Caledonians"
+     ],
+     "answer": 3,
+     "explanation": "It guarded against tribes from the north, in what is now Scotland."
+    }
+   ]
+  },
+  {
+   "id": "his-028",
+   "ask": {
+    "1": "Astronaut",
+    "2": "First in space",
+    "3": "Spacecraft"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Yuri Gagarin was a citizen of which country?",
+     "choices": [
+      "The United States",
+      "France",
+      "The Soviet Union",
+      "China"
+     ],
+     "answer": 2,
+     "explanation": "He was a Soviet cosmonaut."
+    },
+    {
+     "level": 3,
+     "question": "What was the name of Gagarin's spacecraft?",
+     "choices": [
+      "Vostok 1",
+      "Mercury 3",
+      "Sputnik 2",
+      "Apollo 11"
+     ],
+     "answer": 0,
+     "explanation": "Vostok 1 launched on 12 April 1961."
+    }
+   ]
+  }
+ ]
+}

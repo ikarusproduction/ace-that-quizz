@@ -278,7 +278,7 @@ input[type='range'] { width: 100%; accent-color: var(--amber); height: 32px; }
 .card-mini.armed { box-shadow: inset 0 0 0 3px var(--amber); background: #4a3a1b; }
 .stakes { display: flex; flex-direction: column; gap: 10px; }
 .stake { appearance: none; border: 0; cursor: pointer; text-align: left; padding: 12px 14px; background: var(--steel); box-shadow: inset 0 0 0 3px var(--edge), inset 0 -5px 0 3px rgba(0, 0, 0, 0.3); display: grid; grid-template-columns: auto 1fr; gap: 2px 14px; align-items: center; color: var(--bone); min-height: 76px; }
-.stake .mult { grid-row: span 2; font-family: var(--font-display); font-size: 44px; font-weight: 800; color: var(--amber); line-height: 1; min-width: 2ch; }
+.stake .mult { grid-row: span 3; font-family: var(--font-display); font-size: 44px; font-weight: 800; color: var(--amber); line-height: 1; min-width: 2ch; }
 .stake .nums { display: flex; gap: 14px; font-family: var(--font-mono); font-size: 15px; font-weight: 600; }
 .stake .nums .w { color: var(--green); }
 .stake .nums .l { color: #e0584f; }
@@ -887,3 +887,5 @@ html.pressure .light-pressure { opacity: 1; animation: pressure-breathe 1.25s ea
 .ward small { font-family: var(--font-mono); font-size: 11px; color: var(--bone-dim); }
 .lvl-card { display: flex; gap: 12px; align-items: center; }
 .lvl-badge { font-family: var(--font-display); font-weight: 800; font-size: 30px; color: var(--amber); min-width: 52px; text-align: center; line-height: 1; }
+
+.stake .ask { grid-column: 2; font-size: 12px; line-height: 1.2; color: var(--amber); letter-spacing: 0.02em; }

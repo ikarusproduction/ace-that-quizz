@@ -1,0 +1,1685 @@
+{
+ "category": "science",
+ "review": "unreviewed",
+ "note": "Difficulty ladders: the original question keeps its own level, these are the other levels. Unreviewed.",
+ "families": [
+  {
+   "id": "sci-001",
+   "ask": {
+    "1": "Rough speed",
+    "2": "Distance in one second",
+    "3": "Exact defined value"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "In a vacuum, roughly how far does light travel in one second?",
+     "choices": [
+      "About half the way to the Sun",
+      "About once around the Earth",
+      "About 100 times around the Earth",
+      "About seven and a half times around the Earth"
+     ],
+     "answer": 3,
+     "explanation": "Light covers about 300,000 km each second, which is roughly 7.5 laps of the Earth."
+    },
+    {
+     "level": 3,
+     "question": "What is the exact speed of light in a vacuum, as fixed by the SI definition of the metre?",
+     "choices": [
+      "299,792,458 m/s",
+      "299,729,458 m/s",
+      "299,972,458 m/s",
+      "300,000,000 m/s"
+     ],
+     "answer": 0,
+     "explanation": "Since 1983 the metre is defined from the speed of light, which is exactly 299,792,458 m/s."
+    }
+   ]
+  },
+  {
+   "id": "sci-002",
+   "ask": {
+    "1": "Name the planet",
+    "2": "Planet and its colour",
+    "3": "Cause of the colour"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which planet has a surface colour caused by iron oxide dust, giving it a rusty look?",
+     "choices": [
+      "Saturn",
+      "Venus",
+      "Mars",
+      "Mercury"
+     ],
+     "answer": 2,
+     "explanation": "Mars looks red because its dust and rocks are rich in iron oxide, or rust."
+    },
+    {
+     "level": 3,
+     "question": "Which two small moons orbit Mars?",
+     "choices": [
+      "Phobos and Deimos",
+      "Io and Europa",
+      "Titan and Rhea",
+      "Triton and Nereid"
+     ],
+     "answer": 0,
+     "explanation": "Phobos and Deimos are Mars' two tiny moons, discovered by Asaph Hall in 1877."
+    }
+   ]
+  },
+  {
+   "id": "sci-003",
+   "ask": {
+    "1": "Boiling point",
+    "2": "Boiling in Kelvin",
+    "3": "Boiling at altitude"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the boiling point of pure water at sea level in kelvin?",
+     "choices": [
+      "473.15 K",
+      "100 K",
+      "273.15 K",
+      "373.15 K"
+     ],
+     "answer": 3,
+     "explanation": "100 °C equals 373.15 K, because kelvin is Celsius plus 273.15."
+    },
+    {
+     "level": 3,
+     "question": "Why does water boil at a lower temperature on a high mountain?",
+     "choices": [
+      "The air is colder so the water loses heat faster",
+      "There is less oxygen in the water",
+      "Gravity is weaker",
+      "The air pressure is lower"
+     ],
+     "answer": 3,
+     "explanation": "Water boils when its vapour pressure matches the surrounding pressure, which drops with altitude."
+    }
+   ]
+  },
+  {
+   "id": "sci-004",
+   "ask": {
+    "1": "Name the force",
+    "2": "Who explained it",
+    "3": "Law behind it"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Who published the law of universal gravitation in 1687?",
+     "choices": [
+      "Isaac Newton",
+      "Galileo Galilei",
+      "Johannes Kepler",
+      "Robert Hooke"
+     ],
+     "answer": 0,
+     "explanation": "Newton set out universal gravitation in the Principia in 1687."
+    },
+    {
+     "level": 3,
+     "question": "In Newton's law of gravitation, how does the force change if the distance between two masses doubles?",
+     "choices": [
+      "It falls to one half",
+      "It falls to one quarter",
+      "It stays the same",
+      "It doubles"
+     ],
+     "answer": 1,
+     "explanation": "Gravity follows an inverse-square law, so doubling the distance divides the force by four."
+    }
+   ]
+  },
+  {
+   "id": "sci-005",
+   "ask": {
+    "1": "Main gas",
+    "2": "Share of nitrogen",
+    "3": "Second most common gas"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which gas do we breathe in to stay alive?",
+     "choices": [
+      "Helium",
+      "Hydrogen",
+      "Oxygen",
+      "Nitrogen"
+     ],
+     "answer": 2,
+     "explanation": "We use the oxygen in air for respiration."
+    },
+    {
+     "level": 3,
+     "question": "About what percentage of Earth's dry atmosphere is nitrogen?",
+     "choices": [
+      "About 21%",
+      "About 78%",
+      "About 50%",
+      "About 95%"
+     ],
+     "answer": 1,
+     "explanation": "Nitrogen makes up about 78% of dry air, oxygen about 21%."
+    }
+   ]
+  },
+  {
+   "id": "sci-006",
+   "ask": {
+    "1": "Neutral pH",
+    "2": "Exact pH of pure water",
+    "3": "pH scale type"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "A pH of 7 is considered what?",
+     "choices": [
+      "Strongly basic",
+      "Slightly acidic",
+      "Strongly acidic",
+      "Neutral"
+     ],
+     "answer": 3,
+     "explanation": "pH 7 is neutral, neither acidic nor basic."
+    },
+    {
+     "level": 3,
+     "question": "The pH scale is logarithmic. How much more acidic is a solution at pH 3 than one at pH 5?",
+     "choices": [
+      "10 times",
+      "2 times",
+      "1,000 times",
+      "100 times"
+     ],
+     "answer": 3,
+     "explanation": "Each pH step is a factor of ten in hydrogen-ion concentration, so two steps is 100 times."
+    }
+   ]
+  },
+  {
+   "id": "sci-007",
+   "ask": {
+    "1": "Charged particle",
+    "2": "Negative particle",
+    "3": "Who found it"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which tiny particle zips around the nucleus of an atom?",
+     "choices": [
+      "Nucleus",
+      "Neutron",
+      "Electron",
+      "Proton"
+     ],
+     "answer": 2,
+     "explanation": "Electrons orbit the nucleus and carry a negative charge."
+    },
+    {
+     "level": 2,
+     "question": "Which scientist discovered the electron in 1897?",
+     "choices": [
+      "J. J. Thomson",
+      "James Chadwick",
+      "Ernest Rutherford",
+      "Niels Bohr"
+     ],
+     "answer": 0,
+     "explanation": "J. J. Thomson identified the electron at the Cavendish Laboratory in 1897."
+    },
+    {
+     "level": 3,
+     "question": "The electron carries an elementary electric charge of about 1.6 x 10^-19 coulombs. What is its sign?",
+     "choices": [
+      "Neutral",
+      "Negative",
+      "Positive",
+      "It alternates"
+     ],
+     "answer": 1,
+     "explanation": "By convention the electron's charge is negative."
+    }
+   ]
+  },
+  {
+   "id": "sci-008",
+   "ask": {
+    "1": "Famous physicist",
+    "2": "Author of relativity",
+    "3": "Year of general relativity"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which scientist is famous for the equation E = mc²?",
+     "choices": [
+      "Albert Einstein",
+      "Charles Darwin",
+      "Isaac Newton",
+      "Marie Curie"
+     ],
+     "answer": 0,
+     "explanation": "E = mc² comes from Einstein's special relativity of 1905."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Einstein present the final field equations of general relativity?",
+     "choices": [
+      "1921",
+      "1905",
+      "1927",
+      "1915"
+     ],
+     "answer": 3,
+     "explanation": "Einstein presented the field equations to the Prussian Academy in November 1915."
+    }
+   ]
+  },
+  {
+   "id": "sci-009",
+   "ask": {
+    "1": "Unit of force",
+    "2": "SI unit of force",
+    "3": "Defined as"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which unit is the force of gravity on an object usually measured in physics class?",
+     "choices": [
+      "Metre",
+      "Second",
+      "Kilogram",
+      "Newton"
+     ],
+     "answer": 3,
+     "explanation": "Weight is a force, measured in newtons."
+    },
+    {
+     "level": 3,
+     "question": "One newton is the force needed to give one kilogram which acceleration?",
+     "choices": [
+      "10 metres per second squared",
+      "1 metre per second squared",
+      "1 metre per second",
+      "9.8 metres per second squared"
+     ],
+     "answer": 1,
+     "explanation": "By definition 1 N = 1 kg·m/s²."
+    }
+   ]
+  },
+  {
+   "id": "sci-010",
+   "ask": {
+    "1": "Lightest element",
+    "2": "Most abundant element",
+    "3": "Share of hydrogen"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which is the lightest chemical element?",
+     "choices": [
+      "Oxygen",
+      "Hydrogen",
+      "Lithium",
+      "Helium"
+     ],
+     "answer": 1,
+     "explanation": "Hydrogen has atomic number 1 and is the lightest element."
+    },
+    {
+     "level": 2,
+     "question": "The Sun is made mostly of which element?",
+     "choices": [
+      "Iron",
+      "Oxygen",
+      "Helium",
+      "Hydrogen"
+     ],
+     "answer": 3,
+     "explanation": "The Sun is about three quarters hydrogen by mass."
+    }
+   ]
+  },
+  {
+   "id": "sci-011",
+   "ask": {
+    "1": "Light travel time",
+    "2": "Sun to Earth time",
+    "3": "Moon to Earth time"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which is faster, the light from the Sun or a plane flying overhead?",
+     "choices": [
+      "The plane",
+      "The light from the Sun",
+      "It depends on the weather",
+      "They are equally fast"
+     ],
+     "answer": 1,
+     "explanation": "Light is by far the fastest thing there is."
+    },
+    {
+     "level": 2,
+     "question": "About how long does moonlight take to reach Earth?",
+     "choices": [
+      "About 8 minutes",
+      "About 1.3 seconds",
+      "About 1 hour",
+      "About 10 milliseconds"
+     ],
+     "answer": 1,
+     "explanation": "The Moon is about 384,000 km away, so its light takes around 1.3 seconds to arrive."
+    }
+   ]
+  },
+  {
+   "id": "sci-012",
+   "ask": {
+    "1": "Count the planets",
+    "2": "Planets of the solar system",
+    "3": "Which was demoted"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which object was reclassified as a dwarf planet in 2006?",
+     "choices": [
+      "Ceres",
+      "Pluto",
+      "Makemake",
+      "Eris"
+     ],
+     "answer": 1,
+     "explanation": "The IAU created the dwarf planet class in 2006 and Pluto was moved into it."
+    },
+    {
+     "level": 3,
+     "question": "Which is the only planet in the solar system that spins on its side, with an axial tilt of about 98 degrees?",
+     "choices": [
+      "Neptune",
+      "Uranus",
+      "Venus",
+      "Saturn"
+     ],
+     "answer": 1,
+     "explanation": "Uranus rolls around the Sun tilted almost on its side."
+    }
+   ]
+  },
+  {
+   "id": "sci-013",
+   "ask": {
+    "1": "Black hole edge",
+    "2": "Point of no return",
+    "3": "Name of the boundary"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What is the name for an extremely dense region of space where gravity is so strong that not even light escapes?",
+     "choices": [
+      "A black hole",
+      "A comet",
+      "A pulsar",
+      "A nebula"
+     ],
+     "answer": 0,
+     "explanation": "Black holes trap everything, including light, inside their horizon."
+    },
+    {
+     "level": 2,
+     "question": "Which famous physicist predicted that black holes slowly emit radiation?",
+     "choices": [
+      "Richard Feynman",
+      "Stephen Hawking",
+      "Niels Bohr",
+      "Carl Sagan"
+     ],
+     "answer": 1,
+     "explanation": "Hawking radiation was proposed by Stephen Hawking in 1974."
+    }
+   ]
+  },
+  {
+   "id": "sci-014",
+   "ask": {
+    "1": "Orbit laws",
+    "2": "Astronomer of the laws",
+    "3": "Shape of orbits"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which scientist proposed that the Earth orbits the Sun, in a book published in 1543?",
+     "choices": [
+      "Aristotle",
+      "Nicolaus Copernicus",
+      "Isaac Newton",
+      "Johannes Kepler"
+     ],
+     "answer": 1,
+     "explanation": "Copernicus put the Sun at the centre in De revolutionibus, 1543."
+    },
+    {
+     "level": 2,
+     "question": "Kepler's first law says planets orbit the Sun in which shape?",
+     "choices": [
+      "Perfect circles",
+      "Ellipses",
+      "Spirals",
+      "Parabolas"
+     ],
+     "answer": 1,
+     "explanation": "Planets move on ellipses with the Sun at one focus."
+    }
+   ]
+  },
+  {
+   "id": "sci-015",
+   "ask": {
+    "1": "Coldest possible",
+    "2": "Absolute zero",
+    "3": "Value in Celsius"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What is the name for the coldest possible temperature?",
+     "choices": [
+      "Dew point",
+      "Freezing point",
+      "Absolute zero",
+      "Triple point"
+     ],
+     "answer": 2,
+     "explanation": "Absolute zero is the lowest limit of temperature."
+    },
+    {
+     "level": 2,
+     "question": "Absolute zero is 0 on which temperature scale?",
+     "choices": [
+      "Fahrenheit",
+      "Réaumur",
+      "Celsius",
+      "Kelvin"
+     ],
+     "answer": 3,
+     "explanation": "Kelvin starts at absolute zero."
+    }
+   ]
+  },
+  {
+   "id": "sci-016",
+   "ask": {
+    "1": "Particle found",
+    "2": "Who discovered",
+    "3": "Year and particle"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which particle in an atom has a negative charge?",
+     "choices": [
+      "Electron",
+      "Neutron",
+      "Quark",
+      "Proton"
+     ],
+     "answer": 0,
+     "explanation": "The electron carries negative charge."
+    },
+    {
+     "level": 2,
+     "question": "In which experiment tool did J. J. Thomson study the particle he found, in 1897?",
+     "choices": [
+      "A cloud chamber",
+      "A bubble chamber",
+      "A mass spectrometer",
+      "A cathode ray tube"
+     ],
+     "answer": 3,
+     "explanation": "He deflected cathode rays with electric and magnetic fields and measured their charge-to-mass ratio."
+    }
+   ]
+  },
+  {
+   "id": "sci-017",
+   "ask": {
+    "1": "Moving energy",
+    "2": "Energy of motion",
+    "3": "Formula"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which formula gives the kinetic energy of an object?",
+     "choices": [
+      "Mass times gravity times height",
+      "Force times distance",
+      "One half mass times speed squared",
+      "Mass times speed"
+     ],
+     "answer": 2,
+     "explanation": "Kinetic energy is KE = ½mv²."
+    },
+    {
+     "level": 3,
+     "question": "If a car doubles its speed, by what factor does its kinetic energy increase?",
+     "choices": [
+      "Sixteen",
+      "Four",
+      "Two",
+      "Eight"
+     ],
+     "answer": 1,
+     "explanation": "Kinetic energy depends on the square of speed, so doubling speed quadruples it."
+    }
+   ]
+  },
+  {
+   "id": "sci-018",
+   "ask": {
+    "1": "Reaction law",
+    "2": "Third law",
+    "3": "Who wrote it"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "When you push a wall, the wall pushes back. Who described this idea in his laws of motion?",
+     "choices": [
+      "Albert Einstein",
+      "Galileo Galilei",
+      "Isaac Newton",
+      "Thomas Edison"
+     ],
+     "answer": 2,
+     "explanation": "It is Newton's third law of motion."
+    },
+    {
+     "level": 3,
+     "question": "A rocket accelerates upward. Which law best explains why expelling gas downward pushes it up?",
+     "choices": [
+      "Boyle's law",
+      "Hooke's law",
+      "Newton's first law",
+      "Newton's third law"
+     ],
+     "answer": 3,
+     "explanation": "The rocket pushes gas down, and the gas pushes the rocket up with an equal force."
+    }
+   ]
+  },
+  {
+   "id": "sci-019",
+   "ask": {
+    "1": "Final stage",
+    "2": "Chandrasekhar limit",
+    "3": "Limit in solar masses"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What is a small, dense, dying star core called that slowly cools after a star like the Sun runs out of fuel?",
+     "choices": [
+      "A red giant",
+      "A quasar",
+      "A white dwarf",
+      "A pulsar"
+     ],
+     "answer": 2,
+     "explanation": "Sun-like stars end as white dwarfs."
+    },
+    {
+     "level": 2,
+     "question": "What is the name of the supernova remnant that spins and emits beams of radiation?",
+     "choices": [
+      "A nebula",
+      "A pulsar",
+      "A white dwarf",
+      "A comet"
+     ],
+     "answer": 1,
+     "explanation": "A pulsar is a rotating neutron star."
+    }
+   ]
+  },
+  {
+   "id": "sci-020",
+   "ask": {
+    "1": "Hardest substance",
+    "2": "Diamond is made of",
+    "3": "Mohs value"
+   },
+   "variants": [
+    {
+     "level": 3,
+     "question": "What is the Mohs hardness of diamond?",
+     "choices": [
+      "10",
+      "7",
+      "5",
+      "9"
+     ],
+     "answer": 0,
+     "explanation": "Diamond sits at the top of the Mohs scale, at 10."
+    },
+    {
+     "level": 2,
+     "question": "Which scale ranks mineral hardness from 1 to 10?",
+     "choices": [
+      "The Mohs scale",
+      "The Beaufort scale",
+      "The Richter scale",
+      "The Kelvin scale"
+     ],
+     "answer": 0,
+     "explanation": "The Mohs scale ranks minerals by how easily they are scratched."
+    }
+   ]
+  },
+  {
+   "id": "sci-021",
+   "ask": {
+    "1": "Why sky is blue",
+    "2": "Scattering",
+    "3": "Named effect"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What colour is the daytime sky on a clear day?",
+     "choices": [
+      "Red",
+      "Green",
+      "White",
+      "Blue"
+     ],
+     "answer": 3,
+     "explanation": "Air scatters blue light the most."
+    },
+    {
+     "level": 2,
+     "question": "Why are sunsets often red?",
+     "choices": [
+      "Sunlight travels through more air, scattering the blue away",
+      "The Sun gets hotter at the end of the day",
+      "Red light is made by the clouds",
+      "The ozone layer glows red"
+     ],
+     "answer": 0,
+     "explanation": "At sunset the light passes through more atmosphere, leaving mostly red and orange."
+    }
+   ]
+  },
+  {
+   "id": "sci-022",
+   "ask": {
+    "1": "Nearest star",
+    "2": "The Sun",
+    "3": "Next nearest star"
+   },
+   "variants": [
+    {
+     "level": 3,
+     "question": "Which star is the nearest to the Sun, about 4.2 light-years away?",
+     "choices": [
+      "Proxima Centauri",
+      "Sirius",
+      "Betelgeuse",
+      "Alpha Centauri A"
+     ],
+     "answer": 0,
+     "explanation": "Proxima Centauri is the nearest known star to the Sun."
+    },
+    {
+     "level": 2,
+     "question": "Which star is the brightest in Earth's night sky, apart from the Sun?",
+     "choices": [
+      "Vega",
+      "Betelgeuse",
+      "Polaris",
+      "Sirius"
+     ],
+     "answer": 3,
+     "explanation": "Sirius, the Dog Star, is the brightest star in the night sky."
+    }
+   ]
+  },
+  {
+   "id": "sci-023",
+   "ask": {
+    "1": "Sound change",
+    "2": "Doppler effect",
+    "3": "Redshift"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "An ambulance siren sounds higher as it comes toward you and lower as it leaves. What is this called?",
+     "choices": [
+      "The Coriolis effect",
+      "The Doppler effect",
+      "The greenhouse effect",
+      "The echo effect"
+     ],
+     "answer": 1,
+     "explanation": "The Doppler effect shifts the observed frequency when source and listener move."
+    },
+    {
+     "level": 3,
+     "question": "Galaxies moving away from us show their light shifted toward which colour?",
+     "choices": [
+      "Red",
+      "Green",
+      "Violet",
+      "Blue"
+     ],
+     "answer": 0,
+     "explanation": "Light from receding sources is redshifted."
+    }
+   ]
+  },
+  {
+   "id": "sci-024",
+   "ask": {
+    "1": "Reaction helper",
+    "2": "Catalyst",
+    "3": "Enzymes"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What does a catalyst do to a chemical reaction?",
+     "choices": [
+      "Makes it explode",
+      "Slows it down",
+      "Speeds it up",
+      "Stops it"
+     ],
+     "answer": 2,
+     "explanation": "A catalyst speeds a reaction without being used up."
+    },
+    {
+     "level": 2,
+     "question": "What are biological catalysts, found in living cells, called?",
+     "choices": [
+      "Vitamins",
+      "Hormones",
+      "Antibodies",
+      "Enzymes"
+     ],
+     "answer": 3,
+     "explanation": "Enzymes are proteins that catalyse reactions in cells."
+    }
+   ]
+  },
+  {
+   "id": "sci-025",
+   "ask": {
+    "1": "Shortest wave",
+    "2": "Gamma rays",
+    "3": "Energy order"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which type of light can we see with our eyes?",
+     "choices": [
+      "Visible light",
+      "Microwaves",
+      "Gamma rays",
+      "X-rays"
+     ],
+     "answer": 0,
+     "explanation": "The visible spectrum is the narrow band our eyes detect."
+    },
+    {
+     "level": 2,
+     "question": "Which radiation is used to see bones in a hospital?",
+     "choices": [
+      "X-rays",
+      "Radio waves",
+      "Infrared",
+      "Microwaves"
+     ],
+     "answer": 0,
+     "explanation": "X-rays pass through soft tissue but are absorbed by bone."
+    }
+   ]
+  },
+  {
+   "id": "sci-026",
+   "ask": {
+    "1": "Resistance unit",
+    "2": "Ohm",
+    "3": "Ohm's law"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which unit measures electric current?",
+     "choices": [
+      "Ampere",
+      "Watt",
+      "Ohm",
+      "Newton"
+     ],
+     "answer": 0,
+     "explanation": "Current is measured in amperes."
+    },
+    {
+     "level": 2,
+     "question": "Ohm's law links voltage, current and what?",
+     "choices": [
+      "Charge",
+      "Resistance",
+      "Frequency",
+      "Power"
+     ],
+     "answer": 1,
+     "explanation": "V = I x R."
+    }
+   ]
+  },
+  {
+   "id": "sci-027",
+   "ask": {
+    "1": "State change",
+    "2": "Sublimation",
+    "3": "Dry ice"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What happens when ice melts?",
+     "choices": [
+      "It turns into liquid water",
+      "It evaporates",
+      "It turns into steam",
+      "It turns into gas"
+     ],
+     "answer": 0,
+     "explanation": "Melting is the change from solid to liquid."
+    },
+    {
+     "level": 2,
+     "question": "What does dry ice do at normal air pressure instead of melting?",
+     "choices": [
+      "It turns into oil",
+      "It turns into water",
+      "It turns straight into gas",
+      "It explodes"
+     ],
+     "answer": 2,
+     "explanation": "Solid carbon dioxide sublimates, going directly to gas."
+    }
+   ]
+  },
+  {
+   "id": "sci-028",
+   "ask": {
+    "1": "Short year",
+    "2": "Closest planet",
+    "3": "Days in the year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which planet is closest to the Sun?",
+     "choices": [
+      "Mercury",
+      "Earth",
+      "Venus",
+      "Mars"
+     ],
+     "answer": 0,
+     "explanation": "Mercury is the innermost planet."
+    },
+    {
+     "level": 3,
+     "question": "Which planet has a day longer than its year in the sense of rotating very slowly, taking about 243 Earth days to spin once?",
+     "choices": [
+      "Venus",
+      "Mercury",
+      "Jupiter",
+      "Mars"
+     ],
+     "answer": 0,
+     "explanation": "Venus rotates once in about 243 Earth days, longer than its 225-day year."
+    }
+   ]
+  },
+  {
+   "id": "sci-029",
+   "ask": {
+    "1": "Penicillin",
+    "2": "Discoverer",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Penicillin is used to treat what kind of infections?",
+     "choices": [
+      "Allergies",
+      "Broken bones",
+      "Bacterial infections",
+      "Viral infections"
+     ],
+     "answer": 2,
+     "explanation": "Penicillin is an antibiotic against bacteria."
+    },
+    {
+     "level": 3,
+     "question": "From which mould was penicillin first noticed?",
+     "choices": [
+      "Penicillium",
+      "Rhizopus",
+      "Aspergillus",
+      "Saccharomyces"
+     ],
+     "answer": 0,
+     "explanation": "Fleming observed that a Penicillium mould killed bacteria on a dish."
+    }
+   ]
+  },
+  {
+   "id": "sci-030",
+   "ask": {
+    "1": "Jupiter's storm",
+    "2": "Great Red Spot",
+    "3": "Size"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which is the largest planet in our solar system?",
+     "choices": [
+      "Saturn",
+      "Neptune",
+      "Earth",
+      "Jupiter"
+     ],
+     "answer": 3,
+     "explanation": "Jupiter is the giant of the solar system."
+    },
+    {
+     "level": 3,
+     "question": "The Great Red Spot is a long-lived storm of what type?",
+     "choices": [
+      "A volcanic plume",
+      "A tornado",
+      "A hurricane with a calm eye",
+      "An anticyclone"
+     ],
+     "answer": 3,
+     "explanation": "It is a giant high-pressure anticyclone observed for well over a century."
+    }
+   ]
+  },
+  {
+   "id": "pho-001",
+   "ask": {
+    "1": "Fear of",
+    "2": "Spider fear",
+    "3": "Arachnid class"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "The fear of spiders belongs to which group of animals that includes scorpions?",
+     "choices": [
+      "Arachnids",
+      "Myriapods",
+      "Crustaceans",
+      "Insects"
+     ],
+     "answer": 0,
+     "explanation": "Spiders are arachnids with eight legs."
+    },
+    {
+     "level": 3,
+     "question": "How many legs does a spider have?",
+     "choices": [
+      "Ten",
+      "Six",
+      "Twelve",
+      "Eight"
+     ],
+     "answer": 3,
+     "explanation": "Spiders have eight legs, unlike insects with six."
+    }
+   ]
+  },
+  {
+   "id": "pho-002",
+   "ask": {
+    "1": "Fear of",
+    "2": "Phobia of spaces",
+    "3": "Opposite"
+   },
+   "variants": [
+    {
+     "level": 3,
+     "question": "The Greek root \"claustro\" in claustrophobia is from which word meaning closed place?",
+     "choices": [
+      "Claustrum",
+      "Claudere",
+      "Clavis",
+      "Castrum"
+     ],
+     "answer": 0,
+     "explanation": "Claustrum is Latin for a closed place or lock."
+    },
+    {
+     "level": 2,
+     "question": "Claustrophobia can cause panic in which of these situations?",
+     "choices": [
+      "Swimming in a lake",
+      "Looking out from a balcony",
+      "Speaking on a stage",
+      "Being stuck in a lift"
+     ],
+     "answer": 3,
+     "explanation": "Claustrophobes fear confined spaces such as lifts."
+    }
+   ]
+  },
+  {
+   "id": "pho-003",
+   "ask": {
+    "1": "Fear of",
+    "2": "Fear of heights",
+    "3": "Name of the phobia"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which phobia is the fear of high places?",
+     "choices": [
+      "Nyctophobia",
+      "Acrophobia",
+      "Claustrophobia",
+      "Hydrophobia"
+     ],
+     "answer": 1,
+     "explanation": "Acrophobia is the fear of heights."
+    },
+    {
+     "level": 3,
+     "question": "The Greek root \"akron\" in acrophobia means what?",
+     "choices": [
+      "Fire",
+      "Water",
+      "Summit or peak",
+      "Open"
+     ],
+     "answer": 2,
+     "explanation": "Akron means highest point or edge."
+    }
+   ]
+  },
+  {
+   "id": "pho-004",
+   "ask": {
+    "1": "Fear of",
+    "2": "Water fear",
+    "3": "Root word"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which is the fear of water?",
+     "choices": [
+      "Hydrophobia",
+      "Acrophobia",
+      "Pyrophobia",
+      "Cynophobia"
+     ],
+     "answer": 0,
+     "explanation": "\"Hydro\" means water."
+    },
+    {
+     "level": 3,
+     "question": "Which disease is classically called hydrophobia because of the fear of swallowing water?",
+     "choices": [
+      "Rabies",
+      "Cholera",
+      "Tetanus",
+      "Typhus"
+     ],
+     "answer": 0,
+     "explanation": "Rabies was historically called hydrophobia because swallowing causes painful spasms."
+    }
+   ]
+  },
+  {
+   "id": "pho-005",
+   "ask": {
+    "1": "Fear of",
+    "2": "Snake fear",
+    "3": "Greek root"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which is the fear of snakes?",
+     "choices": [
+      "Ornithophobia",
+      "Ophidiophobia",
+      "Arachnophobia",
+      "Cynophobia"
+     ],
+     "answer": 1,
+     "explanation": "Ophidiophobia is the fear of snakes."
+    },
+    {
+     "level": 2,
+     "question": "Which Greek word for snake gives ophidiophobia its name?",
+     "choices": [
+      "Herpeton",
+      "Ophis",
+      "Echis",
+      "Drakon"
+     ],
+     "answer": 1,
+     "explanation": "\"Ophis\" means snake."
+    }
+   ]
+  },
+  {
+   "id": "pho-006",
+   "ask": {
+    "1": "Fear of",
+    "2": "Clown fear",
+    "3": "Name it"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which is the fear of clowns?",
+     "choices": [
+      "Claustrophobia",
+      "Coulrophobia",
+      "Xenophobia",
+      "Pyrophobia"
+     ],
+     "answer": 1,
+     "explanation": "Coulrophobia is the fear of clowns."
+    },
+    {
+     "level": 3,
+     "question": "Which novel, adapted in 1990 and 2017, popularised the creepy clown Pennywise?",
+     "choices": [
+      "It",
+      "Misery",
+      "Cujo",
+      "Carrie"
+     ],
+     "answer": 0,
+     "explanation": "Stephen King's It features Pennywise the Dancing Clown."
+    }
+   ]
+  },
+  {
+   "id": "pho-007",
+   "ask": {
+    "1": "Fear of",
+    "2": "Fear of darkness",
+    "3": "Root word"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which is the fear of the dark?",
+     "choices": [
+      "Acrophobia",
+      "Cynophobia",
+      "Pyrophobia",
+      "Nyctophobia"
+     ],
+     "answer": 3,
+     "explanation": "Nyctophobia is the fear of night or darkness."
+    },
+    {
+     "level": 3,
+     "question": "The Greek root \"nyx\" gives nyctophobia its name. What does it mean?",
+     "choices": [
+      "Night",
+      "Sleep",
+      "Light",
+      "Fear"
+     ],
+     "answer": 0,
+     "explanation": "Nyx is the Greek goddess and word for night."
+    }
+   ]
+  },
+  {
+   "id": "pho-008",
+   "ask": {
+    "1": "Fear of",
+    "2": "Speaking fear",
+    "3": "Root word"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which is a common fear of speaking in front of an audience?",
+     "choices": [
+      "Pyrophobia",
+      "Claustrophobia",
+      "Glossophobia",
+      "Hydrophobia"
+     ],
+     "answer": 2,
+     "explanation": "Glossophobia is the fear of public speaking."
+    },
+    {
+     "level": 2,
+     "question": "The root \"glossa\" in glossophobia means what?",
+     "choices": [
+      "Voice",
+      "Tongue",
+      "Stage",
+      "Crowd"
+     ],
+     "answer": 1,
+     "explanation": "Glossa is Greek for tongue."
+    }
+   ]
+  },
+  {
+   "id": "pho-009",
+   "ask": {
+    "1": "Fear of",
+    "2": "Fear of 13",
+    "3": "Unlucky day"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which number is traditionally thought of as unlucky in many Western countries?",
+     "choices": [
+      "13",
+      "7",
+      "8",
+      "3"
+     ],
+     "answer": 0,
+     "explanation": "Thirteen is widely regarded as unlucky."
+    },
+    {
+     "level": 2,
+     "question": "The fear of Friday the 13th is called what?",
+     "choices": [
+      "Arithmophobia",
+      "Paraskevidekatriaphobia",
+      "Triskaidekaphobia",
+      "Hexakosioihexekontahexaphobia"
+     ],
+     "answer": 1,
+     "explanation": "Paraskevidekatriaphobia is the fear specifically of Friday the 13th."
+    }
+   ]
+  },
+  {
+   "id": "pho-010",
+   "ask": {
+    "1": "Fear of",
+    "2": "Dog fear",
+    "3": "Root word"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which is the fear of dogs?",
+     "choices": [
+      "Ailurophobia",
+      "Hippophobia",
+      "Ornithophobia",
+      "Cynophobia"
+     ],
+     "answer": 3,
+     "explanation": "Cynophobia is the fear of dogs."
+    },
+    {
+     "level": 2,
+     "question": "The root \"kyon\" in cynophobia means what?",
+     "choices": [
+      "Wolf",
+      "Dog",
+      "Cat",
+      "Horse"
+     ],
+     "answer": 1,
+     "explanation": "Kyon is Greek for dog."
+    }
+   ]
+  },
+  {
+   "id": "pho-011",
+   "ask": {
+    "1": "Fear of",
+    "2": "Insect fear",
+    "3": "Root word"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which is the fear of insects?",
+     "choices": [
+      "Ornithophobia",
+      "Arachnophobia",
+      "Hippophobia",
+      "Entomophobia"
+     ],
+     "answer": 3,
+     "explanation": "Entomophobia is the fear of insects."
+    },
+    {
+     "level": 2,
+     "question": "Which of these creatures would an entomophobe fear?",
+     "choices": [
+      "A beetle",
+      "A goldfish",
+      "A rabbit",
+      "A sparrow"
+     ],
+     "answer": 0,
+     "explanation": "A beetle is an insect, the subject of the phobia."
+    }
+   ]
+  },
+  {
+   "id": "pho-012",
+   "ask": {
+    "1": "Fear of",
+    "2": "Beard fear",
+    "3": "Root word"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which is the fear of beards?",
+     "choices": [
+      "Trypophobia",
+      "Xanthophobia",
+      "Pogonophobia",
+      "Glossophobia"
+     ],
+     "answer": 2,
+     "explanation": "Pogonophobia is the fear of beards."
+    },
+    {
+     "level": 2,
+     "question": "The root \"pogon\" means what in Greek?",
+     "choices": [
+      "Face",
+      "Beard",
+      "Hat",
+      "Hair"
+     ],
+     "answer": 1,
+     "explanation": "Pogon is Greek for beard."
+    }
+   ]
+  },
+  {
+   "id": "pho-013",
+   "ask": {
+    "1": "Fear of",
+    "2": "Blood fear",
+    "3": "Root word"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which is the fear of blood?",
+     "choices": [
+      "Claustrophobia",
+      "Acrophobia",
+      "Hemophobia",
+      "Glossophobia"
+     ],
+     "answer": 2,
+     "explanation": "Hemophobia is the fear of blood."
+    },
+    {
+     "level": 2,
+     "question": "The root \"haima\" in hemophobia means what?",
+     "choices": [
+      "Skin",
+      "Bone",
+      "Heart",
+      "Blood"
+     ],
+     "answer": 3,
+     "explanation": "Haima is Greek for blood."
+    }
+   ]
+  },
+  {
+   "id": "pho-014",
+   "ask": {
+    "1": "Fear of",
+    "2": "Crowd fear",
+    "3": "Root word"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which phobia is related to a fear of open public places or crowds?",
+     "choices": [
+      "Cynophobia",
+      "Hydrophobia",
+      "Acrophobia",
+      "Agoraphobia"
+     ],
+     "answer": 3,
+     "explanation": "Agoraphobia often involves fear of crowds and open spaces."
+    },
+    {
+     "level": 2,
+     "question": "The Greek word \"agora\" originally meant what?",
+     "choices": [
+      "A marketplace or gathering place",
+      "A river",
+      "A mountain",
+      "A temple"
+     ],
+     "answer": 0,
+     "explanation": "The agora was the central public square in ancient Greek cities."
+    }
+   ]
+  },
+  {
+   "id": "pho-015",
+   "ask": {
+    "1": "Fear of",
+    "2": "Cat fear",
+    "3": "Root word"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which is the fear of cats?",
+     "choices": [
+      "Ornithophobia",
+      "Hippophobia",
+      "Ailurophobia",
+      "Cynophobia"
+     ],
+     "answer": 2,
+     "explanation": "Ailurophobia is the fear of cats."
+    },
+    {
+     "level": 2,
+     "question": "The root \"ailouros\" in ailurophobia means what?",
+     "choices": [
+      "Dog",
+      "Cat",
+      "Snake",
+      "Bird"
+     ],
+     "answer": 1,
+     "explanation": "Ailouros is Greek for cat."
+    }
+   ]
+  },
+  {
+   "id": "pho-016",
+   "ask": {
+    "1": "Fear of",
+    "2": "Germ fear",
+    "3": "Root word"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which is an intense fear of dirt and germs?",
+     "choices": [
+      "Hydrophobia",
+      "Mysophobia",
+      "Acrophobia",
+      "Glossophobia"
+     ],
+     "answer": 1,
+     "explanation": "Mysophobia is the fear of germs and contamination."
+    },
+    {
+     "level": 2,
+     "question": "Which tiny organisms cause many infections and are central to germ fears?",
+     "choices": [
+      "Plankton",
+      "Algae",
+      "Bacteria",
+      "Lichens"
+     ],
+     "answer": 2,
+     "explanation": "Bacteria and viruses cause many infections."
+    }
+   ]
+  },
+  {
+   "id": "pho-017",
+   "ask": {
+    "1": "Fear of",
+    "2": "Bird fear",
+    "3": "Root word"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which is the fear of birds?",
+     "choices": [
+      "Ailurophobia",
+      "Hippophobia",
+      "Cynophobia",
+      "Ornithophobia"
+     ],
+     "answer": 3,
+     "explanation": "Ornithophobia is the fear of birds."
+    },
+    {
+     "level": 2,
+     "question": "The study of birds is called what?",
+     "choices": [
+      "Ichthyology",
+      "Entomology",
+      "Herpetology",
+      "Ornithology"
+     ],
+     "answer": 3,
+     "explanation": "Ornithology is the study of birds."
+    }
+   ]
+  },
+  {
+   "id": "pho-018",
+   "ask": {
+    "1": "Fear of",
+    "2": "Hole aversion",
+    "3": "Root word"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which is a disgust or unease at clusters of tiny holes?",
+     "choices": [
+      "Acrophobia",
+      "Trypophobia",
+      "Glossophobia",
+      "Claustrophobia"
+     ],
+     "answer": 1,
+     "explanation": "Trypophobia is aversion to clustered holes."
+    },
+    {
+     "level": 2,
+     "question": "The root \"trypa\" in trypophobia means what?",
+     "choices": [
+      "Triangle",
+      "Hole",
+      "Trip",
+      "Tree"
+     ],
+     "answer": 1,
+     "explanation": "Trypa is Greek for hole."
+    }
+   ]
+  },
+  {
+   "id": "pho-019",
+   "ask": {
+    "1": "Fear of",
+    "2": "Long word fear",
+    "3": "Irony"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which is the fear of long words?",
+     "choices": [
+      "Arachnophobia",
+      "Claustrophobia",
+      "Hippopotomonstrosesquippedaliophobia",
+      "Acrophobia"
+     ],
+     "answer": 2,
+     "explanation": "It is a deliberately long, jocular word for the fear of long words."
+    },
+    {
+     "level": 2,
+     "question": "What makes the name hippopotomonstrosesquippedaliophobia ironic?",
+     "choices": [
+      "It is the fear of hippos",
+      "It is itself a very long word",
+      "It is a very short word",
+      "It has only two syllables"
+     ],
+     "answer": 1,
+     "explanation": "The word describing the fear of long words is itself extremely long."
+    }
+   ]
+  }
+ ]
+}

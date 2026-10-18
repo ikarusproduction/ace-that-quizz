@@ -1,0 +1,1333 @@
+{
+ "category": "cooking",
+ "review": "unreviewed",
+ "note": "Difficulty ladders: the original question keeps its own level, these are the other levels. Unreviewed.",
+ "families": [
+  {
+   "id": "coo-001",
+   "ask": {
+    "1": "Country",
+    "2": "Dish type",
+    "3": "Key ingredient"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which Japanese dish pairs vinegared rice with raw fish slices on top?",
+     "choices": [
+      "Udon",
+      "Gyoza",
+      "Tempura",
+      "Nigiri"
+     ],
+     "answer": 3,
+     "explanation": "Nigiri is a hand-pressed rice and fish piece."
+    },
+    {
+     "level": 3,
+     "question": "Which seaweed sheet is used to wrap maki rolls?",
+     "choices": [
+      "Kombu",
+      "Wakame",
+      "Hijiki",
+      "Nori"
+     ],
+     "answer": 3,
+     "explanation": "Nori is dried laver seaweed."
+    }
+   ]
+  },
+  {
+   "id": "coo-002",
+   "ask": {
+    "1": "Country",
+    "2": "Dish parts",
+    "3": "Sauce"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which sauce is layered with meat ragù in a classic lasagna?",
+     "choices": [
+      "Carbonara",
+      "Béchamel",
+      "Pesto",
+      "Alfredo"
+     ],
+     "answer": 1,
+     "explanation": "Béchamel is the white sauce."
+    },
+    {
+     "level": 3,
+     "question": "Which Italian city is the Bolognese ragù named after?",
+     "choices": [
+      "Bologna",
+      "Florence",
+      "Milan",
+      "Naples"
+     ],
+     "answer": 0,
+     "explanation": "Ragù alla bolognese comes from Bologna."
+    }
+   ]
+  },
+  {
+   "id": "coo-003",
+   "ask": {
+    "1": "Fruit",
+    "2": "Dip",
+    "3": "Origin"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which citrus juice is added to guacamole to keep it green?",
+     "choices": [
+      "Grapefruit",
+      "Lime",
+      "Lemon zest only",
+      "Orange"
+     ],
+     "answer": 1,
+     "explanation": "Lime juice slows browning."
+    },
+    {
+     "level": 3,
+     "question": "Which country does guacamole come from?",
+     "choices": [
+      "Spain",
+      "Peru",
+      "Mexico",
+      "Cuba"
+     ],
+     "answer": 2,
+     "explanation": "Guacamole is an Aztec-era Mexican dish."
+    }
+   ]
+  },
+  {
+   "id": "coo-004",
+   "ask": {
+    "1": "Grain",
+    "2": "Risotto rice",
+    "3": "Technique"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which Italian rice variety is most used for risotto?",
+     "choices": [
+      "Arborio",
+      "Basmati",
+      "Wild rice",
+      "Jasmine"
+     ],
+     "answer": 0,
+     "explanation": "Arborio is a short, starchy grain."
+    },
+    {
+     "level": 3,
+     "question": "Which wine-based step comes right after toasting the rice in risotto?",
+     "choices": [
+      "Adding wine",
+      "Adding cheese",
+      "Adding butter",
+      "Adding cream"
+     ],
+     "answer": 0,
+     "explanation": "The rice is deglazed with white wine."
+    }
+   ]
+  },
+  {
+   "id": "coo-005",
+   "ask": {
+    "1": "Cheese",
+    "2": "Pizza",
+    "3": "Origin"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which Italian city is the Margherita pizza associated with?",
+     "choices": [
+      "Venice",
+      "Genoa",
+      "Naples",
+      "Turin"
+     ],
+     "answer": 2,
+     "explanation": "The Margherita is a Neapolitan pizza."
+    },
+    {
+     "level": 3,
+     "question": "Which queen is the Margherita pizza said to be named after?",
+     "choices": [
+      "Margherita of Savoy",
+      "Elizabeth I",
+      "Victoria",
+      "Maria Theresa"
+     ],
+     "answer": 0,
+     "explanation": "The legend dates to 1889."
+    }
+   ]
+  },
+  {
+   "id": "coo-006",
+   "ask": {
+    "1": "Dish",
+    "2": "Flipping",
+    "3": "Origin"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which French region is famous for its buckwheat galettes?",
+     "choices": [
+      "Burgundy",
+      "Provence",
+      "Alsace",
+      "Brittany"
+     ],
+     "answer": 3,
+     "explanation": "Galettes come from Brittany."
+    },
+    {
+     "level": 3,
+     "question": "On which French holiday are crêpes traditionally eaten on 2 February?",
+     "choices": [
+      "Epiphany",
+      "Candlemas",
+      "Easter",
+      "Bastille Day"
+     ],
+     "answer": 1,
+     "explanation": "La Chandeleur is the crêpe day."
+    }
+   ]
+  },
+  {
+   "id": "coo-007",
+   "ask": {
+    "1": "Spice",
+    "2": "Colour",
+    "3": "Plant"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which part of the turmeric plant is ground into powder?",
+     "choices": [
+      "The seed",
+      "The leaf",
+      "The rhizome",
+      "The flower"
+     ],
+     "answer": 2,
+     "explanation": "Turmeric powder comes from the rhizome."
+    },
+    {
+     "level": 3,
+     "question": "Which active compound gives turmeric its yellow colour?",
+     "choices": [
+      "Piperine",
+      "Allicin",
+      "Capsaicin",
+      "Curcumin"
+     ],
+     "answer": 3,
+     "explanation": "Curcumin is the yellow pigment."
+    }
+   ]
+  },
+  {
+   "id": "coo-008",
+   "ask": {
+    "1": "Temperature",
+    "2": "Boiling",
+    "3": "Water"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "At roughly what temperature in Fahrenheit does water boil at sea level?",
+     "choices": [
+      "212 degrees",
+      "250 degrees",
+      "100 degrees",
+      "180 degrees"
+     ],
+     "answer": 0,
+     "explanation": "212 F equals 100 C."
+    },
+    {
+     "level": 3,
+     "question": "What happens to water's boiling point at high altitude?",
+     "choices": [
+      "It stays the same",
+      "It becomes random",
+      "It goes down",
+      "It goes up"
+     ],
+     "answer": 2,
+     "explanation": "Lower pressure lowers the boiling point."
+    }
+   ]
+  },
+  {
+   "id": "coo-009",
+   "ask": {
+    "1": "Fruit",
+    "2": "Drink",
+    "3": "Making"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which fruit is cider mainly made from?",
+     "choices": [
+      "Cherries",
+      "Grapes",
+      "Apples",
+      "Pears only"
+     ],
+     "answer": 2,
+     "explanation": "Cider is fermented apple juice."
+    },
+    {
+     "level": 3,
+     "question": "What do yeasts convert sugar into during winemaking?",
+     "choices": [
+      "Vinegar and salt",
+      "Starch and oil",
+      "Water only",
+      "Alcohol and carbon dioxide"
+     ],
+     "answer": 3,
+     "explanation": "Fermentation makes alcohol and CO2."
+    }
+   ]
+  },
+  {
+   "id": "coo-010",
+   "ask": {
+    "1": "Dish",
+    "2": "Cut",
+    "3": "Style"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which food is typically made with rice and raw fish in Japan?",
+     "choices": [
+      "Tacos",
+      "Paella",
+      "Sushi",
+      "Pizza"
+     ],
+     "answer": 2,
+     "explanation": "Sushi is a Japanese rice dish."
+    },
+    {
+     "level": 3,
+     "question": "What do you call thin slices of raw fish served without rice?",
+     "choices": [
+      "Maki",
+      "Temaki",
+      "Sashimi",
+      "Nigiri"
+     ],
+     "answer": 2,
+     "explanation": "Sashimi is raw fish alone."
+    }
+   ]
+  },
+  {
+   "id": "coo-011",
+   "ask": {
+    "1": "Meaning",
+    "2": "Prep",
+    "3": "French term"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which language does the cooking term 'mise en place' come from?",
+     "choices": [
+      "Spanish",
+      "German",
+      "French",
+      "Italian"
+     ],
+     "answer": 2,
+     "explanation": "It is French for putting in place."
+    },
+    {
+     "level": 3,
+     "question": "When do chefs do their mise en place?",
+     "choices": [
+      "After service",
+      "At closing",
+      "Before cooking starts",
+      "During dessert"
+     ],
+     "answer": 2,
+     "explanation": "It is prep before cooking."
+    }
+   ]
+  },
+  {
+   "id": "coo-012",
+   "ask": {
+    "1": "Fungus",
+    "2": "Luxury",
+    "3": "Animals"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which food is a fungus, often found by pigs or dogs and very expensive?",
+     "choices": [
+      "Truffle",
+      "Carrot",
+      "Potato",
+      "Garlic"
+     ],
+     "answer": 0,
+     "explanation": "Truffles grow underground."
+    },
+    {
+     "level": 3,
+     "question": "In which French region is the famous black Périgord truffle found?",
+     "choices": [
+      "Normandy",
+      "Brittany",
+      "Alsace",
+      "Périgord"
+     ],
+     "answer": 3,
+     "explanation": "Périgord is famous for black truffles."
+    }
+   ]
+  },
+  {
+   "id": "coo-013",
+   "ask": {
+    "1": "Country",
+    "2": "Dish",
+    "3": "Rice"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which famous Spanish rice dish is cooked in a wide shallow pan?",
+     "choices": [
+      "Biryani",
+      "Paella",
+      "Jambalaya",
+      "Risotto"
+     ],
+     "answer": 1,
+     "explanation": "Paella is Spanish."
+    },
+    {
+     "level": 3,
+     "question": "Which Spanish region is paella originally from?",
+     "choices": [
+      "Catalonia",
+      "Andalusia",
+      "Galicia",
+      "Valencia"
+     ],
+     "answer": 3,
+     "explanation": "Paella comes from Valencia."
+    }
+   ]
+  },
+  {
+   "id": "coo-014",
+   "ask": {
+    "1": "Ingredient",
+    "2": "Dip",
+    "3": "Paste"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which dip is made from mashed chickpeas?",
+     "choices": [
+      "Hummus",
+      "Tzatziki",
+      "Salsa",
+      "Guacamole"
+     ],
+     "answer": 0,
+     "explanation": "Hummus is made from chickpeas."
+    },
+    {
+     "level": 3,
+     "question": "Which sesame paste is blended into hummus?",
+     "choices": [
+      "Wasabi",
+      "Tahini",
+      "Miso",
+      "Harissa"
+     ],
+     "answer": 1,
+     "explanation": "Tahini is ground sesame."
+    }
+   ]
+  },
+  {
+   "id": "coo-015",
+   "ask": {
+    "1": "Meaning",
+    "2": "Pasta",
+    "3": "Italian term"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which language does the term 'al dente' come from?",
+     "choices": [
+      "Spanish",
+      "French",
+      "Greek",
+      "Italian"
+     ],
+     "answer": 3,
+     "explanation": "Al dente is Italian."
+    },
+    {
+     "level": 3,
+     "question": "What does 'al dente' literally mean in English?",
+     "choices": [
+      "To the salt",
+      "To the heat",
+      "To the tooth",
+      "To the plate"
+     ],
+     "answer": 2,
+     "explanation": "It means to the tooth."
+    }
+   ]
+  },
+  {
+   "id": "coo-016",
+   "ask": {
+    "1": "Sauce",
+    "2": "Eggs",
+    "3": "Emulsion"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which breakfast dish is often served with hollandaise sauce?",
+     "choices": [
+      "Granola",
+      "Porridge",
+      "Pancakes",
+      "Eggs Benedict"
+     ],
+     "answer": 3,
+     "explanation": "Eggs Benedict uses hollandaise."
+    },
+    {
+     "level": 3,
+     "question": "What kind of sauce is hollandaise, which can split if too hot?",
+     "choices": [
+      "A broth",
+      "A roux",
+      "An emulsion",
+      "A reduction"
+     ],
+     "answer": 2,
+     "explanation": "Hollandaise is an emulsion."
+    }
+   ]
+  },
+  {
+   "id": "coo-017",
+   "ask": {
+    "1": "Country",
+    "2": "Cabbage",
+    "3": "Fermented"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country is kimchi from?",
+     "choices": [
+      "Vietnam",
+      "Korea",
+      "Japan",
+      "Mongolia"
+     ],
+     "answer": 1,
+     "explanation": "Kimchi is Korean."
+    },
+    {
+     "level": 3,
+     "question": "Which vegetable is the base of the most common kimchi?",
+     "choices": [
+      "Spinach",
+      "Broccoli",
+      "Napa cabbage",
+      "Lettuce"
+     ],
+     "answer": 2,
+     "explanation": "Napa cabbage is the usual base."
+    }
+   ]
+  },
+  {
+   "id": "coo-018",
+   "ask": {
+    "1": "Pastry",
+    "2": "Butter",
+    "3": "Layers"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which French pastry is shaped like a crescent?",
+     "choices": [
+      "Macaron",
+      "Baguette",
+      "Éclair",
+      "Croissant"
+     ],
+     "answer": 3,
+     "explanation": "A croissant is crescent-shaped."
+    },
+    {
+     "level": 3,
+     "question": "What technique folds butter into dough to make layers?",
+     "choices": [
+      "Lamination",
+      "Proofing",
+      "Kneading",
+      "Blanching"
+     ],
+     "answer": 0,
+     "explanation": "Lamination makes flaky layers."
+    }
+   ]
+  },
+  {
+   "id": "coo-019",
+   "ask": {
+    "1": "Country",
+    "2": "Noodles",
+    "3": "Dish"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Asian country is pad thai from?",
+     "choices": [
+      "India",
+      "Korea",
+      "Thailand",
+      "Japan"
+     ],
+     "answer": 2,
+     "explanation": "Pad thai is Thai."
+    },
+    {
+     "level": 3,
+     "question": "Which sour fruit paste is used in pad thai sauce?",
+     "choices": [
+      "Tamarind",
+      "Lime zest",
+      "Mango",
+      "Pineapple"
+     ],
+     "answer": 0,
+     "explanation": "Tamarind gives a sour note."
+    }
+   ]
+  },
+  {
+   "id": "coo-020",
+   "ask": {
+    "1": "Dressing",
+    "2": "Salad",
+    "3": "Base"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Caesar dressing is most often served on which salad?",
+     "choices": [
+      "Fruit salad",
+      "Greek salad",
+      "Caesar salad",
+      "Coleslaw"
+     ],
+     "answer": 2,
+     "explanation": "It is the Caesar salad dressing."
+    },
+    {
+     "level": 3,
+     "question": "Which canned fish gives Caesar dressing a salty depth?",
+     "choices": [
+      "Anchovy",
+      "Salmon",
+      "Tuna",
+      "Sardine"
+     ],
+     "answer": 0,
+     "explanation": "Anchovy is a classic ingredient."
+    }
+   ]
+  },
+  {
+   "id": "coo-021",
+   "ask": {
+    "1": "Herb",
+    "2": "Sauce",
+    "3": "Origin"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which green Italian sauce is mixed with pasta?",
+     "choices": [
+      "Ragù",
+      "Carbonara",
+      "Arrabbiata",
+      "Pesto"
+     ],
+     "answer": 3,
+     "explanation": "Pesto is a green sauce."
+    },
+    {
+     "level": 3,
+     "question": "Which city in Liguria is pesto linked to?",
+     "choices": [
+      "Palermo",
+      "Genoa",
+      "Naples",
+      "Rome"
+     ],
+     "answer": 1,
+     "explanation": "Pesto alla genovese is from Genoa."
+    }
+   ]
+  },
+  {
+   "id": "coo-022",
+   "ask": {
+    "1": "Sauce",
+    "2": "Classic",
+    "3": "Count"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which white sauce is made with milk, flour and butter?",
+     "choices": [
+      "Pesto",
+      "Salsa",
+      "Aioli",
+      "Béchamel"
+     ],
+     "answer": 3,
+     "explanation": "Béchamel is a white sauce."
+    },
+    {
+     "level": 2,
+     "question": "How many classic French mother sauces are there?",
+     "choices": [
+      "Five",
+      "Seven",
+      "Ten",
+      "Three"
+     ],
+     "answer": 0,
+     "explanation": "There are five mother sauces."
+    }
+   ]
+  },
+  {
+   "id": "coo-023",
+   "ask": {
+    "1": "Spice",
+    "2": "Price",
+    "3": "Flower"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which golden spice is often the priciest in the world?",
+     "choices": [
+      "Paprika",
+      "Saffron",
+      "Salt",
+      "Pepper"
+     ],
+     "answer": 1,
+     "explanation": "Saffron is very pricey."
+    },
+    {
+     "level": 2,
+     "question": "Which flower does saffron come from?",
+     "choices": [
+      "Rose",
+      "Lavender",
+      "Tulip",
+      "Crocus"
+     ],
+     "answer": 3,
+     "explanation": "Saffron comes from crocus stigmas."
+    }
+   ]
+  },
+  {
+   "id": "coo-024",
+   "ask": {
+    "1": "Browning",
+    "2": "Chemistry",
+    "3": "Taste"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What turns bread crust golden brown in the oven?",
+     "choices": [
+      "Salt",
+      "Cold",
+      "Heat",
+      "Water"
+     ],
+     "answer": 2,
+     "explanation": "Heat browns crusts."
+    },
+    {
+     "level": 2,
+     "question": "Which two things react in the Maillard reaction?",
+     "choices": [
+      "Oil and vinegar",
+      "Amino acids and sugars",
+      "Yeast and flour",
+      "Salt and water"
+     ],
+     "answer": 1,
+     "explanation": "It is a reaction between amino acids and sugars."
+    }
+   ]
+  },
+  {
+   "id": "coo-025",
+   "ask": {
+    "1": "Mexican sauce",
+    "2": "Chocolate",
+    "3": "Origin"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country is mole sauce from?",
+     "choices": [
+      "Mexico",
+      "Spain",
+      "Argentina",
+      "Peru"
+     ],
+     "answer": 0,
+     "explanation": "Mole is Mexican."
+    },
+    {
+     "level": 2,
+     "question": "Which Mexican state is famous for its mole poblano?",
+     "choices": [
+      "Puebla",
+      "Yucatán",
+      "Sonora",
+      "Chiapas"
+     ],
+     "answer": 0,
+     "explanation": "Mole poblano is from Puebla."
+    }
+   ]
+  },
+  {
+   "id": "coo-026",
+   "ask": {
+    "1": "Michelin",
+    "2": "Highest",
+    "3": "Stars"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which guide gives restaurants stars for excellence?",
+     "choices": [
+      "The Michelin Guide",
+      "The Oscars",
+      "The Nobel Guide",
+      "The Yellow Pages"
+     ],
+     "answer": 0,
+     "explanation": "Michelin awards stars."
+    },
+    {
+     "level": 2,
+     "question": "What is the maximum number of Michelin stars?",
+     "choices": [
+      "Five",
+      "Ten",
+      "Three",
+      "Four"
+     ],
+     "answer": 2,
+     "explanation": "The maximum is three stars."
+    }
+   ]
+  },
+  {
+   "id": "coo-027",
+   "ask": {
+    "1": "Soup base",
+    "2": "Japan",
+    "3": "Kelp"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Japanese soup is made with miso paste?",
+     "choices": [
+      "Miso soup",
+      "Minestrone",
+      "Gazpacho",
+      "Borscht"
+     ],
+     "answer": 0,
+     "explanation": "Miso soup uses miso."
+    },
+    {
+     "level": 2,
+     "question": "Which dried fish is shaved into dashi?",
+     "choices": [
+      "Bonito",
+      "Cod",
+      "Herring",
+      "Salmon"
+     ],
+     "answer": 0,
+     "explanation": "Katsuobushi is dried bonito."
+    }
+   ]
+  },
+  {
+   "id": "coo-028",
+   "ask": {
+    "1": "Flour",
+    "2": "Pizza",
+    "3": "Type"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which basic ingredient is pizza dough mainly made from?",
+     "choices": [
+      "Rice",
+      "Corn",
+      "Flour",
+      "Potato"
+     ],
+     "answer": 2,
+     "explanation": "Pizza dough is flour based."
+    },
+    {
+     "level": 2,
+     "question": "Which Italian pizza style has a soft puffy crust and comes from Naples?",
+     "choices": [
+      "Roman",
+      "Neapolitan",
+      "Detroit",
+      "Sicilian"
+     ],
+     "answer": 1,
+     "explanation": "Neapolitan pizza is soft and puffy."
+    }
+   ]
+  },
+  {
+   "id": "coo-029",
+   "ask": {
+    "1": "Rise",
+    "2": "Microbe",
+    "3": "Bread"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What do bakers add to make bread dough rise?",
+     "choices": [
+      "Vinegar",
+      "Oil",
+      "Pepper",
+      "Yeast"
+     ],
+     "answer": 3,
+     "explanation": "Yeast makes dough rise."
+    },
+    {
+     "level": 2,
+     "question": "What gas does yeast release that makes dough rise?",
+     "choices": [
+      "Nitrogen",
+      "Oxygen",
+      "Helium",
+      "Carbon dioxide"
+     ],
+     "answer": 3,
+     "explanation": "Yeast releases CO2."
+    }
+   ]
+  },
+  {
+   "id": "coo-030",
+   "ask": {
+    "1": "Bread",
+    "2": "Indian",
+    "3": "Oven"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which flat bread is common with Indian curries?",
+     "choices": [
+      "Baguette",
+      "Pretzel",
+      "Ciabatta",
+      "Naan"
+     ],
+     "answer": 3,
+     "explanation": "Naan is a popular Indian bread."
+    },
+    {
+     "level": 2,
+     "question": "What is the clay oven used for naan called?",
+     "choices": [
+      "Tandoor",
+      "Tagine",
+      "Hearth",
+      "Kiln"
+     ],
+     "answer": 0,
+     "explanation": "A tandoor is a clay oven."
+    }
+   ]
+  },
+  {
+   "id": "coo-031",
+   "ask": {
+    "1": "Cheese",
+    "2": "Switzerland",
+    "3": "Hole"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which cheese is known for its holes and comes from Switzerland?",
+     "choices": [
+      "Feta",
+      "Brie",
+      "Emmental",
+      "Parmesan"
+     ],
+     "answer": 2,
+     "explanation": "Emmental has big holes."
+    },
+    {
+     "level": 2,
+     "question": "Which cheese is traditionally used in fondue alongside Emmental?",
+     "choices": [
+      "Camembert",
+      "Gruyère",
+      "Mozzarella",
+      "Cheddar"
+     ],
+     "answer": 1,
+     "explanation": "Fondue mixes Gruyère and Emmental."
+    }
+   ]
+  },
+  {
+   "id": "coo-032",
+   "ask": {
+    "1": "Chicken",
+    "2": "Safe",
+    "3": "Temperature"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Why must chicken be cooked thoroughly?",
+     "choices": [
+      "To avoid food poisoning",
+      "To make it cold",
+      "To make it sweeter",
+      "To make it blue"
+     ],
+     "answer": 0,
+     "explanation": "Undercooked chicken can carry bacteria."
+    },
+    {
+     "level": 2,
+     "question": "What tool measures a roast's inside temperature?",
+     "choices": [
+      "Barometer",
+      "Meat thermometer",
+      "Hygrometer",
+      "Ruler"
+     ],
+     "answer": 1,
+     "explanation": "A meat thermometer checks doneness."
+    }
+   ]
+  },
+  {
+   "id": "coo-033",
+   "ask": {
+    "1": "Chef",
+    "2": "French",
+    "3": "Kitchen"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country is traditionally seen as the home of haute cuisine?",
+     "choices": [
+      "Canada",
+      "France",
+      "Egypt",
+      "Brazil"
+     ],
+     "answer": 1,
+     "explanation": "Haute cuisine is French."
+    },
+    {
+     "level": 2,
+     "question": "What do we call the hierarchy of roles in a professional kitchen?",
+     "choices": [
+      "The guild",
+      "The league",
+      "The orchestra",
+      "The brigade"
+     ],
+     "answer": 3,
+     "explanation": "The kitchen brigade system."
+    }
+   ]
+  },
+  {
+   "id": "coo-034",
+   "ask": {
+    "1": "Taste",
+    "2": "Savoury",
+    "3": "Meaning"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which taste is mainly associated with sweet, sour, salty and bitter alongside umami?",
+     "choices": [
+      "Savoury",
+      "Spicy",
+      "Fizzy",
+      "Crunchy"
+     ],
+     "answer": 0,
+     "explanation": "Umami is the savoury taste."
+    },
+    {
+     "level": 2,
+     "question": "Which Japanese scientist identified umami in 1908?",
+     "choices": [
+      "Kikunae Ikeda",
+      "Masaru Ibuka",
+      "Akira Kurosawa",
+      "Hayao Miyazaki"
+     ],
+     "answer": 0,
+     "explanation": "Ikeda found umami in kombu."
+    }
+   ]
+  },
+  {
+   "id": "coo-035",
+   "ask": {
+    "1": "Soup",
+    "2": "Spain",
+    "3": "Cold"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which cold soup do people eat in Spain in summer?",
+     "choices": [
+      "Ramen",
+      "Chowder",
+      "Pho",
+      "Gazpacho"
+     ],
+     "answer": 3,
+     "explanation": "Gazpacho is served cold."
+    },
+    {
+     "level": 2,
+     "question": "Which red vegetable is the main base of gazpacho?",
+     "choices": [
+      "Beetroot",
+      "Tomato",
+      "Radish",
+      "Carrot"
+     ],
+     "answer": 1,
+     "explanation": "Tomato is the base."
+    }
+   ]
+  },
+  {
+   "id": "coo-036",
+   "ask": {
+    "1": "Hot",
+    "2": "Chilli",
+    "3": "Chemistry"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which sense does eating a chilli pepper trigger?",
+     "choices": [
+      "Cold",
+      "Sound",
+      "Sweetness",
+      "Burning heat"
+     ],
+     "answer": 3,
+     "explanation": "Chillies burn the tongue."
+    },
+    {
+     "level": 2,
+     "question": "Which scale measures the hotness of chilli peppers?",
+     "choices": [
+      "Beaufort scale",
+      "Scoville scale",
+      "Kelvin scale",
+      "Richter scale"
+     ],
+     "answer": 1,
+     "explanation": "The Scoville scale rates heat."
+    }
+   ]
+  },
+  {
+   "id": "coo-037",
+   "ask": {
+    "1": "Rice",
+    "2": "Sushi",
+    "3": "Grain"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which sticky grain is used to make sushi?",
+     "choices": [
+      "Wheat",
+      "Oats",
+      "Rice",
+      "Corn"
+     ],
+     "answer": 2,
+     "explanation": "Sushi uses rice."
+    },
+    {
+     "level": 2,
+     "question": "Which Japanese vinegar-seasoned rice is used for sushi rolls?",
+     "choices": [
+      "Dashi",
+      "Wasabi",
+      "Shari",
+      "Tofu"
+     ],
+     "answer": 2,
+     "explanation": "Shari is sushi rice."
+    }
+   ]
+  },
+  {
+   "id": "coo-038",
+   "ask": {
+    "1": "Dairy",
+    "2": "Cream",
+    "3": "Fat"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which spread is made from cream and used on bread?",
+     "choices": [
+      "Jam",
+      "Mustard",
+      "Butter",
+      "Honey"
+     ],
+     "answer": 2,
+     "explanation": "Butter comes from cream."
+    },
+    {
+     "level": 3,
+     "question": "What is the liquid left after churning butter called?",
+     "choices": [
+      "Buttermilk",
+      "Brine",
+      "Stock",
+      "Whey"
+     ],
+     "answer": 0,
+     "explanation": "Buttermilk is what remains."
+    }
+   ]
+  },
+  {
+   "id": "coo-039",
+   "ask": {
+    "1": "Coffee",
+    "2": "Italy",
+    "3": "Foam"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which hot drink is made from roasted beans?",
+     "choices": [
+      "Tea",
+      "Coffee",
+      "Cocoa",
+      "Cider"
+     ],
+     "answer": 1,
+     "explanation": "Coffee is brewed from beans."
+    },
+    {
+     "level": 3,
+     "question": "Which Italian coffee is a single short shot without milk?",
+     "choices": [
+      "Espresso",
+      "Latte",
+      "Mocha",
+      "Macchiato"
+     ],
+     "answer": 0,
+     "explanation": "Espresso is a short black shot."
+    }
+   ]
+  }
+ ]
+}

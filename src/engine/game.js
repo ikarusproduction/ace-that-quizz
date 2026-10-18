@@ -35,8 +35,27 @@ function hexDeck(p, mode) {
 }
 
 /** Everything the reducer needs besides state: the bank and a clock. */
-export function makeContext(questions, now = () => Date.now()) {
-  return { questions, byId: new Map(questions.map((q) => [q.id, q])), now };
+export function makeContext(all, now = () => Date.now()) {
+  // A question can come in three difficulty levels (a "family"). Only the primary entry is drawn into rounds;
+  // the stake you choose then decides which level you are actually asked.
+  const questions = all.filter((q) => !q.family || q.family === q.id);
+  const families = new Map();
+  for (const q of all) if (q.family && q.level) (families.get(q.family) ?? families.set(q.family, {}).get(q.family))[q.level] = q;
+  return { questions, byId: new Map(all.map((q) => [q.id, q])), families, now };
+}
+
+/** Which difficulty level you are asked: your stake, +1 on a hard boss, +1 if you already saw this question in solo play. */
+export function levelFor(s, q, stake) {
+  let level = stake;
+  if (s.enc && (s.enc.tier ?? 0) >= 3) level += 1;
+  if (s.players.length === 1 && s.mode !== 'daily' && (s.seenCounts?.[q.family ?? q.id] ?? 0) > 0) level += 1;
+  return Math.max(1, Math.min(3, level));
+}
+
+/** The question variant that goes with a stake (the question itself when it has no variants). */
+export function variantFor(s, ctx, q, stake) {
+  const fam = ctx.families?.get(q.family ?? q.id);
+  return fam?.[levelFor(s, q, stake)] ?? q;
 }
 
 export function buildConfig(mode, overrides = {}) {
@@ -722,7 +741,12 @@ const HANDLERS = {
       qp.heatSpent = cost;
     }
     qp.stake = stake;
-    qp.timerMs = timerFor({ type: q.type, hazard, boss, slowClock: p.slowClock, jammed: p.jammed });
+    const asked = variantFor(s, ctx, q, stake);
+    if (asked.id !== q.id) {
+      s.q.questionId = asked.id;
+      s.q.order = asked.type === 'tf' ? asked.choices.map((_, i) => i) : withRng(s, (rng) => rng.shuffle(asked.choices.map((_, i) => i)));
+    }
+    qp.timerMs = timerFor({ type: asked.type, hazard, boss, slowClock: p.slowClock, jammed: p.jammed });
     if (s.q.timerMult && s.q.timerMult !== 1) qp.timerMs = Math.max(RULES.minTimerMs, Math.round(qp.timerMs * s.q.timerMult));
     p.jammed = false;
     if (p.pendingHexes?.length) { qp.hexes.push(...p.pendingHexes); p.pendingHexes = []; }
@@ -1061,7 +1085,9 @@ function resolveAnswer(s, ctx, p, { correct, timeout, elapsedMs, choice = null }
     resultId: `${s.sessionId}:${s.roundIndex}:${s.qIndex}:${p.playerId}`,
     sessionId: s.sessionId,
     playerId: p.playerId,
-    questionId: q.id,
+    questionId: q.family ?? q.id,
+    variantId: q.id,
+    level: q.level ?? null,
     category: statCategory(q),
     subcategory: q.subcategory,
     difficulty: q.difficulty,
@@ -1162,11 +1188,14 @@ export function getStakeOptions(s, ctx, playerId) {
   const mult = s.q.timerMult ?? 1;
   const intentId = s.q.intent ?? 'strike';
   const curse = Boolean(INTENTS[intentId]?.curse);
-  const options = (boss?.lockStake ? [boss.lockStake] : p.chips <= 0 ? [1] : RULES.stakes).map((stake) => ({
+  const options = (boss?.lockStake ? [boss.lockStake] : p.chips <= 0 ? [1] : RULES.stakes).map((stake) => {
+    const v = variantFor(s, ctx, q, stake);
+    return {
+    ask: v.ask ?? null,
     ...previewStake({
       stake,
       chips: p.chips,
-      difficulty: q.difficulty,
+      difficulty: v.difficulty,
       streakBefore: p.streak,
       hazard,
       boss,
@@ -1182,10 +1211,11 @@ export function getStakeOptions(s, ctx, playerId) {
     heatCost: s.config.heat ? heatCostOf(stake) : 0,
     locked: Boolean(s.config.heat && heatCostOf(stake) > (p.heat ?? 0)),
     ...(s.enc ? {
-      dmg: duelDamage({ difficulty: q.difficulty, stake, fast: false, streak: p.streak + 1, intentId, curseThrough: curse, dmgBonus: p.edgeNow ?? 0 }),
-      dmgFast: duelDamage({ difficulty: q.difficulty, stake, fast: true, streak: p.streak + 1, intentId, curseThrough: curse, dmgBonus: p.edgeNow ?? 0 }),
+      dmg: duelDamage({ difficulty: v.difficulty, stake, fast: false, streak: p.streak + 1, intentId, curseThrough: curse, dmgBonus: p.edgeNow ?? 0 }),
+      dmgFast: duelDamage({ difficulty: v.difficulty, stake, fast: true, streak: p.streak + 1, intentId, curseThrough: curse, dmgBonus: p.edgeNow ?? 0 }),
     } : {}),
-  }));
+    };
+  });
   return options;
 }
 

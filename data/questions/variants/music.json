@@ -1,0 +1,1163 @@
+{
+ "category": "music",
+ "review": "unreviewed",
+ "note": "Difficulty ladders: the original question keeps its own level, these are the other levels. Unreviewed.",
+ "families": [
+  {
+   "id": "mus-001",
+   "ask": {
+    "1": "Band",
+    "2": "Song",
+    "3": "Singer"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Who was the lead singer of Queen?",
+     "choices": [
+      "Robert Plant",
+      "Mick Jagger",
+      "Freddie Mercury",
+      "David Bowie"
+     ],
+     "answer": 2,
+     "explanation": "Freddie Mercury fronted Queen."
+    },
+    {
+     "level": 3,
+     "question": "On which 1975 album does 'Bohemian Rhapsody' appear?",
+     "choices": [
+      "News of the World",
+      "Sheer Heart Attack",
+      "A Night at the Opera",
+      "Jazz"
+     ],
+     "answer": 2,
+     "explanation": "It is on A Night at the Opera."
+    }
+   ]
+  },
+  {
+   "id": "mus-002",
+   "ask": {
+    "1": "Guitar",
+    "2": "Strings",
+    "3": "Count"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "How many strings does a standard bass guitar usually have?",
+     "choices": [
+      "8",
+      "6",
+      "12",
+      "4"
+     ],
+     "answer": 3,
+     "explanation": "A standard bass has four."
+    },
+    {
+     "level": 3,
+     "question": "Which note is the lowest open string on a standard 6-string guitar?",
+     "choices": [
+      "D",
+      "E",
+      "G",
+      "A"
+     ],
+     "answer": 1,
+     "explanation": "The low string is E."
+    }
+   ]
+  },
+  {
+   "id": "mus-003",
+   "ask": {
+    "1": "Queen of Pop",
+    "2": "Singer",
+    "3": "Madonna"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which Madonna hit begins with the words 'Like a' and ends in 'Virgin'?",
+     "choices": [
+      "Frozen",
+      "Vogue",
+      "Like a Virgin",
+      "Holiday"
+     ],
+     "answer": 2,
+     "explanation": "Like a Virgin is her 1984 hit."
+    },
+    {
+     "level": 3,
+     "question": "In which decade did Madonna release her debut album?",
+     "choices": [
+      "The 1990s",
+      "The 1960s",
+      "The 1980s",
+      "The 2000s"
+     ],
+     "answer": 2,
+     "explanation": "Her debut came out in 1983."
+    }
+   ]
+  },
+  {
+   "id": "mus-004",
+   "ask": {
+    "1": "Band",
+    "2": "Hey Jude",
+    "3": "Liverpool"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "In which English city did The Beatles form?",
+     "choices": [
+      "London",
+      "Birmingham",
+      "Liverpool",
+      "Manchester"
+     ],
+     "answer": 2,
+     "explanation": "The Beatles formed in Liverpool."
+    },
+    {
+     "level": 3,
+     "question": "Who wrote Hey Jude mainly, as a song for Julian Lennon?",
+     "choices": [
+      "Ringo Starr",
+      "John Lennon",
+      "Paul McCartney",
+      "George Harrison"
+     ],
+     "answer": 2,
+     "explanation": "McCartney wrote it."
+    }
+   ]
+  },
+  {
+   "id": "mus-005",
+   "ask": {
+    "1": "Piano",
+    "2": "Keys",
+    "3": "Instrument"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "How many white keys does a standard piano have?",
+     "choices": [
+      "36",
+      "88",
+      "60",
+      "52"
+     ],
+     "answer": 3,
+     "explanation": "A piano has 52 white and 36 black keys."
+    },
+    {
+     "level": 3,
+     "question": "Who invented the piano around 1700?",
+     "choices": [
+      "Antonio Stradivari",
+      "Johann Sebastian Bach",
+      "Ludwig van Beethoven",
+      "Bartolomeo Cristofori"
+     ],
+     "answer": 3,
+     "explanation": "Cristofori invented it in Italy."
+    }
+   ]
+  },
+  {
+   "id": "mus-006",
+   "ask": {
+    "1": "Thriller",
+    "2": "Michael Jackson",
+    "3": "Album"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which Michael Jackson video features zombies dancing?",
+     "choices": [
+      "Beat It",
+      "Bad",
+      "Thriller",
+      "Billie Jean"
+     ],
+     "answer": 2,
+     "explanation": "The Thriller video has zombies."
+    },
+    {
+     "level": 3,
+     "question": "What nickname is Michael Jackson known by?",
+     "choices": [
+      "The Boss",
+      "The King",
+      "The Godfather",
+      "The King of Pop"
+     ],
+     "answer": 3,
+     "explanation": "He is the King of Pop."
+    }
+   ]
+  },
+  {
+   "id": "mus-007",
+   "ask": {
+    "1": "Beatles",
+    "2": "Quiet",
+    "3": "Guitar"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which Beatle played drums?",
+     "choices": [
+      "Paul McCartney",
+      "John Lennon",
+      "George Harrison",
+      "Ringo Starr"
+     ],
+     "answer": 3,
+     "explanation": "Ringo drummed."
+    },
+    {
+     "level": 3,
+     "question": "Which Beatle was the lead guitarist?",
+     "choices": [
+      "George Harrison",
+      "Paul McCartney",
+      "John Lennon",
+      "Ringo Starr"
+     ],
+     "answer": 0,
+     "explanation": "George was the lead guitarist."
+    }
+   ]
+  },
+  {
+   "id": "mus-008",
+   "ask": {
+    "1": "Composer",
+    "2": "Four Seasons",
+    "3": "Violin"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "How many seasons are in The Four Seasons?",
+     "choices": [
+      "Six",
+      "Three",
+      "Four",
+      "Two"
+     ],
+     "answer": 2,
+     "explanation": "The title says four."
+    },
+    {
+     "level": 3,
+     "question": "In which Italian city was Vivaldi born?",
+     "choices": [
+      "Naples",
+      "Rome",
+      "Florence",
+      "Venice"
+     ],
+     "answer": 3,
+     "explanation": "Vivaldi was born in Venice."
+    }
+   ]
+  },
+  {
+   "id": "mus-009",
+   "ask": {
+    "1": "Beethoven",
+    "2": "Ode",
+    "3": "Symphony"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which famous composer went deaf later in life?",
+     "choices": [
+      "Handel",
+      "Beethoven",
+      "Mozart",
+      "Bach"
+     ],
+     "answer": 1,
+     "explanation": "Beethoven lost his hearing."
+    },
+    {
+     "level": 3,
+     "question": "In which country was Beethoven born?",
+     "choices": [
+      "Austria",
+      "Italy",
+      "Germany",
+      "France"
+     ],
+     "answer": 2,
+     "explanation": "He was born in Bonn."
+    }
+   ]
+  },
+  {
+   "id": "mus-010",
+   "ask": {
+    "1": "Rapper",
+    "2": "Lose Yourself",
+    "3": "Film"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which rapper starred in the film 8 Mile?",
+     "choices": [
+      "Eminem",
+      "Jay-Z",
+      "Kanye West",
+      "Drake"
+     ],
+     "answer": 0,
+     "explanation": "Eminem starred in 8 Mile."
+    },
+    {
+     "level": 3,
+     "question": "Which award did Lose Yourself win in 2003?",
+     "choices": [
+      "Best Picture",
+      "Best Actor",
+      "Best Director",
+      "Academy Award for Best Original Song"
+     ],
+     "answer": 3,
+     "explanation": "It won the Oscar for Best Original Song."
+    }
+   ]
+  },
+  {
+   "id": "mus-011",
+   "ask": {
+    "1": "Singer",
+    "2": "Back to Black",
+    "3": "British"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which British singer is known for Rehab and a beehive hairstyle?",
+     "choices": [
+      "Amy Winehouse",
+      "Adele",
+      "Dua Lipa",
+      "Kate Bush"
+     ],
+     "answer": 0,
+     "explanation": "Amy Winehouse sang Rehab."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Amy Winehouse win five Grammys?",
+     "choices": [
+      "2008",
+      "2003",
+      "2012",
+      "2016"
+     ],
+     "answer": 0,
+     "explanation": "She won five Grammys in 2008."
+    }
+   ]
+  },
+  {
+   "id": "mus-012",
+   "ask": {
+    "1": "Daft Punk",
+    "2": "Helmets",
+    "3": "France"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country is Daft Punk from?",
+     "choices": [
+      "France",
+      "Spain",
+      "Germany",
+      "Italy"
+     ],
+     "answer": 0,
+     "explanation": "Daft Punk is French."
+    },
+    {
+     "level": 3,
+     "question": "Who sang with Daft Punk on Get Lucky?",
+     "choices": [
+      "Drake",
+      "Pharrell Williams",
+      "Justin Timberlake",
+      "Kanye West"
+     ],
+     "answer": 1,
+     "explanation": "Pharrell sang on Get Lucky."
+    }
+   ]
+  },
+  {
+   "id": "mus-013",
+   "ask": {
+    "1": "Cello",
+    "2": "Yo-Yo Ma",
+    "3": "Strings"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Is a cello bigger or smaller than a violin?",
+     "choices": [
+      "Same size",
+      "Smaller",
+      "Bigger",
+      "Tiny"
+     ],
+     "answer": 2,
+     "explanation": "A cello is much bigger."
+    },
+    {
+     "level": 3,
+     "question": "How many strings does a cello have?",
+     "choices": [
+      "3",
+      "4",
+      "8",
+      "6"
+     ],
+     "answer": 1,
+     "explanation": "A cello has four."
+    }
+   ]
+  },
+  {
+   "id": "mus-014",
+   "ask": {
+    "1": "U2",
+    "2": "Frontman",
+    "3": "Irish"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country is U2 from?",
+     "choices": [
+      "England",
+      "Wales",
+      "Ireland",
+      "Scotland"
+     ],
+     "answer": 2,
+     "explanation": "U2 is from Dublin, Ireland."
+    },
+    {
+     "level": 3,
+     "question": "In which city did U2 form in 1976?",
+     "choices": [
+      "Belfast",
+      "Cork",
+      "Dublin",
+      "Galway"
+     ],
+     "answer": 2,
+     "explanation": "They formed in Dublin."
+    }
+   ]
+  },
+  {
+   "id": "mus-015",
+   "ask": {
+    "1": "A cappella",
+    "2": "Meaning",
+    "3": "Voice"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "A cappella music is sung by what?",
+     "choices": [
+      "Voices",
+      "Drums",
+      "Guitars",
+      "Pianos"
+     ],
+     "answer": 0,
+     "explanation": "It is voice only."
+    },
+    {
+     "level": 3,
+     "question": "In which language does 'a cappella' originate?",
+     "choices": [
+      "Latin",
+      "Italian",
+      "French",
+      "German"
+     ],
+     "answer": 1,
+     "explanation": "It is Italian for in the manner of the chapel."
+    }
+   ]
+  },
+  {
+   "id": "mus-018",
+   "ask": {
+    "1": "Genre",
+    "2": "New Orleans",
+    "3": "Birth"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which country did jazz originate?",
+     "choices": [
+      "Brazil",
+      "France",
+      "Japan",
+      "The United States"
+     ],
+     "answer": 3,
+     "explanation": "Jazz began in the US."
+    },
+    {
+     "level": 2,
+     "question": "In which Louisiana city did jazz begin?",
+     "choices": [
+      "New Orleans",
+      "Memphis",
+      "Baton Rouge",
+      "Nashville"
+     ],
+     "answer": 0,
+     "explanation": "Jazz grew in New Orleans."
+    }
+   ]
+  },
+  {
+   "id": "mus-019",
+   "ask": {
+    "1": "Elvis",
+    "2": "King",
+    "3": "Rock"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which singer was nicknamed The King of Rock and Roll?",
+     "choices": [
+      "Frank Sinatra",
+      "Johnny Cash",
+      "Elvis Presley",
+      "Bing Crosby"
+     ],
+     "answer": 2,
+     "explanation": "Elvis Presley."
+    },
+    {
+     "level": 2,
+     "question": "In which US city was Elvis's home, Graceland?",
+     "choices": [
+      "Atlanta",
+      "Memphis",
+      "Dallas",
+      "Nashville"
+     ],
+     "answer": 1,
+     "explanation": "Graceland is in Memphis."
+    }
+   ]
+  },
+  {
+   "id": "mus-020",
+   "ask": {
+    "1": "Duo",
+    "2": "Around the World",
+    "3": "France"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What do Daft Punk's members wear on stage?",
+     "choices": [
+      "Helmets",
+      "Masks of animals",
+      "Hats",
+      "Capes"
+     ],
+     "answer": 0,
+     "explanation": "They wear robot helmets."
+    },
+    {
+     "level": 2,
+     "question": "Which album features Around the World?",
+     "choices": [
+      "Homework",
+      "Discovery",
+      "Random Access Memories",
+      "Human After All"
+     ],
+     "answer": 0,
+     "explanation": "It is on Homework."
+    }
+   ]
+  },
+  {
+   "id": "mus-021",
+   "ask": {
+    "1": "Pink Floyd",
+    "2": "Prism",
+    "3": "Album"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which British band made the prism album cover Dark Side of the Moon?",
+     "choices": [
+      "Pink Floyd",
+      "Coldplay",
+      "Queen",
+      "Oasis"
+     ],
+     "answer": 0,
+     "explanation": "Pink Floyd made it."
+    },
+    {
+     "level": 2,
+     "question": "In which year was Dark Side of the Moon released?",
+     "choices": [
+      "1965",
+      "1973",
+      "1995",
+      "1985"
+     ],
+     "answer": 1,
+     "explanation": "It came out in 1973."
+    }
+   ]
+  },
+  {
+   "id": "mus-022",
+   "ask": {
+    "1": "Tempo",
+    "2": "Speed",
+    "3": "Term"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What do we call how fast or slow music is?",
+     "choices": [
+      "Lyrics",
+      "Tempo",
+      "Colour",
+      "Volume"
+     ],
+     "answer": 1,
+     "explanation": "That is tempo."
+    },
+    {
+     "level": 2,
+     "question": "In what unit is tempo commonly measured?",
+     "choices": [
+      "Watts",
+      "Beats per minute",
+      "Decibels",
+      "Hertz"
+     ],
+     "answer": 1,
+     "explanation": "BPM measures tempo."
+    }
+   ]
+  },
+  {
+   "id": "mus-023",
+   "ask": {
+    "1": "Kind of Blue",
+    "2": "Trumpet",
+    "3": "Jazz"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which instrument did Miles Davis play?",
+     "choices": [
+      "Piano",
+      "Saxophone",
+      "Drums",
+      "Trumpet"
+     ],
+     "answer": 3,
+     "explanation": "Miles Davis played trumpet."
+    },
+    {
+     "level": 2,
+     "question": "Kind of Blue is considered a landmark in which genre?",
+     "choices": [
+      "Jazz",
+      "Rock",
+      "Country",
+      "Disco"
+     ],
+     "answer": 0,
+     "explanation": "It is a jazz landmark."
+    }
+   ]
+  },
+  {
+   "id": "mus-024",
+   "ask": {
+    "1": "Rapper",
+    "2": "Hov",
+    "3": "Brooklyn"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which rapper is married to Beyoncé?",
+     "choices": [
+      "Snoop Dogg",
+      "Jay-Z",
+      "Drake",
+      "Eminem"
+     ],
+     "answer": 1,
+     "explanation": "Jay-Z is her husband."
+    },
+    {
+     "level": 2,
+     "question": "Which New York borough is Jay-Z from?",
+     "choices": [
+      "Brooklyn",
+      "Queens",
+      "Manhattan",
+      "The Bronx"
+     ],
+     "answer": 0,
+     "explanation": "Jay-Z is from Brooklyn."
+    }
+   ]
+  },
+  {
+   "id": "mus-025",
+   "ask": {
+    "1": "Beethoven",
+    "2": "Symphonies",
+    "3": "Count"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Beethoven wrote a famous ninth what?",
+     "choices": [
+      "Concert",
+      "Poem",
+      "Symphony",
+      "Opera"
+     ],
+     "answer": 2,
+     "explanation": "His Ninth Symphony."
+    },
+    {
+     "level": 2,
+     "question": "Which Beethoven symphony begins with the famous four-note motif?",
+     "choices": [
+      "The First",
+      "The Ninth",
+      "The Fifth",
+      "The Third"
+     ],
+     "answer": 2,
+     "explanation": "The Fifth begins with da-da-da-dum."
+    }
+   ]
+  },
+  {
+   "id": "mus-026",
+   "ask": {
+    "1": "Reggae",
+    "2": "Jamaica",
+    "3": "Marley"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Caribbean island is the home of reggae?",
+     "choices": [
+      "Haiti",
+      "Jamaica",
+      "Cuba",
+      "Barbados"
+     ],
+     "answer": 1,
+     "explanation": "Reggae started in Jamaica."
+    },
+    {
+     "level": 2,
+     "question": "Which religion's movement is linked to Bob Marley's lyrics?",
+     "choices": [
+      "Rastafari",
+      "Shinto",
+      "Hinduism",
+      "Buddhism"
+     ],
+     "answer": 0,
+     "explanation": "Marley followed Rastafari."
+    }
+   ]
+  },
+  {
+   "id": "mus-027",
+   "ask": {
+    "1": "Nirvana",
+    "2": "Grunge",
+    "3": "Seattle"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which singer led Nirvana?",
+     "choices": [
+      "Layne Staley",
+      "Eddie Vedder",
+      "Chris Cornell",
+      "Kurt Cobain"
+     ],
+     "answer": 3,
+     "explanation": "Kurt Cobain led Nirvana."
+    },
+    {
+     "level": 2,
+     "question": "Which US city is grunge music associated with?",
+     "choices": [
+      "Seattle",
+      "Miami",
+      "Boston",
+      "Phoenix"
+     ],
+     "answer": 0,
+     "explanation": "Grunge came out of Seattle."
+    }
+   ]
+  },
+  {
+   "id": "mus-028",
+   "ask": {
+    "1": "Scale",
+    "2": "Key",
+    "3": "Notes"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which keys of a piano are used for the scale of C major?",
+     "choices": [
+      "All keys",
+      "Only two keys",
+      "The black keys",
+      "The white keys"
+     ],
+     "answer": 3,
+     "explanation": "C major uses white keys only."
+    },
+    {
+     "level": 2,
+     "question": "How many notes are in a major scale, not counting the repeated octave?",
+     "choices": [
+      "12",
+      "7",
+      "5",
+      "8"
+     ],
+     "answer": 1,
+     "explanation": "A major scale has seven notes."
+    }
+   ]
+  },
+  {
+   "id": "mus-029",
+   "ask": {
+    "1": "Opera",
+    "2": "Carmen",
+    "3": "Composer"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country is the opera Carmen set in?",
+     "choices": [
+      "France",
+      "Italy",
+      "Germany",
+      "Spain"
+     ],
+     "answer": 3,
+     "explanation": "Carmen takes place in Seville, Spain."
+    },
+    {
+     "level": 2,
+     "question": "Which nationality was Georges Bizet?",
+     "choices": [
+      "Spanish",
+      "Italian",
+      "German",
+      "French"
+     ],
+     "answer": 3,
+     "explanation": "Bizet was French."
+    }
+   ]
+  },
+  {
+   "id": "mus-030",
+   "ask": {
+    "1": "Opera",
+    "2": "La Traviata",
+    "3": "Composer"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which country was Giuseppe Verdi born?",
+     "choices": [
+      "Austria",
+      "Germany",
+      "Spain",
+      "Italy"
+     ],
+     "answer": 3,
+     "explanation": "Verdi was Italian."
+    },
+    {
+     "level": 2,
+     "question": "What does 'La Traviata' mean in English?",
+     "choices": [
+      "The Last Dance",
+      "The Fallen Woman",
+      "The Red Lady",
+      "The Lost Child"
+     ],
+     "answer": 1,
+     "explanation": "It means the fallen woman."
+    }
+   ]
+  },
+  {
+   "id": "mus-031",
+   "ask": {
+    "1": "Adele",
+    "2": "21",
+    "3": "Best-selling"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which British singer sang Someone Like You and Hello?",
+     "choices": [
+      "Ellie Goulding",
+      "Rita Ora",
+      "Dua Lipa",
+      "Adele"
+     ],
+     "answer": 3,
+     "explanation": "Adele sang both."
+    },
+    {
+     "level": 2,
+     "question": "What was Adele's album before 21 called?",
+     "choices": [
+      "19",
+      "30",
+      "25",
+      "17"
+     ],
+     "answer": 0,
+     "explanation": "Her first album was 19."
+    }
+   ]
+  },
+  {
+   "id": "mus-032",
+   "ask": {
+    "1": "Forte",
+    "2": "Dynamics",
+    "3": "Loud"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Does a musician play louder or softer when the score says forte?",
+     "choices": [
+      "Slower",
+      "Faster",
+      "Louder",
+      "Softer"
+     ],
+     "answer": 2,
+     "explanation": "Forte means loud."
+    },
+    {
+     "level": 2,
+     "question": "What does 'piano' mean as a dynamic marking?",
+     "choices": [
+      "Fast",
+      "Soft",
+      "Slow",
+      "Loud"
+     ],
+     "answer": 1,
+     "explanation": "Piano means soft."
+    }
+   ]
+  },
+  {
+   "id": "mus-033",
+   "ask": {
+    "1": "Spotify",
+    "2": "Sweden",
+    "3": "Streaming"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What do you use Spotify to do?",
+     "choices": [
+      "Edit photos",
+      "Book flights",
+      "Stream music",
+      "Send emails"
+     ],
+     "answer": 2,
+     "explanation": "Spotify streams music."
+    },
+    {
+     "level": 3,
+     "question": "In which Swedish city is Spotify headquartered?",
+     "choices": [
+      "Uppsala",
+      "Malmo",
+      "Gothenburg",
+      "Stockholm"
+     ],
+     "answer": 3,
+     "explanation": "Spotify is in Stockholm."
+    }
+   ]
+  },
+  {
+   "id": "mus-034",
+   "ask": {
+    "1": "Girl group",
+    "2": "Wannabe",
+    "3": "British"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which British girl group was known as Posh, Baby, Sporty, Scary and Ginger?",
+     "choices": [
+      "Girls Aloud",
+      "Little Mix",
+      "Spice Girls",
+      "Sugababes"
+     ],
+     "answer": 2,
+     "explanation": "Those are the Spice Girls."
+    },
+    {
+     "level": 3,
+     "question": "In which year did the Spice Girls release Wannabe?",
+     "choices": [
+      "1996",
+      "1990",
+      "2005",
+      "2001"
+     ],
+     "answer": 0,
+     "explanation": "Wannabe came out in 1996."
+    }
+   ]
+  },
+  {
+   "id": "mus-035",
+   "ask": {
+    "1": "Shakira",
+    "2": "Colombia",
+    "3": "Song"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country is Shakira from?",
+     "choices": [
+      "Brazil",
+      "Mexico",
+      "Colombia",
+      "Spain"
+     ],
+     "answer": 2,
+     "explanation": "Shakira is Colombian."
+    },
+    {
+     "level": 2,
+     "question": "Which song did Shakira perform for the 2010 World Cup?",
+     "choices": [
+      "Waka Waka",
+      "Loca",
+      "Whenever, Wherever",
+      "Hips Don't Lie"
+     ],
+     "answer": 0,
+     "explanation": "Waka Waka was the 2010 anthem."
+    }
+   ]
+  },
+  {
+   "id": "mus-036",
+   "ask": {
+    "1": "Beatles",
+    "2": "Sgt Pepper",
+    "3": "Album"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which band came from Liverpool and had four members: John, Paul, George and Ringo?",
+     "choices": [
+      "Oasis",
+      "The Who",
+      "The Kinks",
+      "The Beatles"
+     ],
+     "answer": 3,
+     "explanation": "The Fab Four."
+    },
+    {
+     "level": 2,
+     "question": "In which year was Sgt. Pepper's released?",
+     "choices": [
+      "1957",
+      "1967",
+      "1987",
+      "1977"
+     ],
+     "answer": 1,
+     "explanation": "It was released in 1967."
+    }
+   ]
+  }
+ ]
+}

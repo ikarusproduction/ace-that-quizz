@@ -1,0 +1,1333 @@
+{
+ "category": "manga",
+ "review": "unreviewed",
+ "note": "Difficulty ladders: the original question keeps its own level, these are the other levels. Unreviewed.",
+ "families": [
+  {
+   "id": "man-001",
+   "ask": {
+    "1": "Hero",
+    "2": "Straw Hat",
+    "3": "Dream"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is Luffy's dream in One Piece?",
+     "choices": [
+      "To be the strongest swordsman",
+      "To become the Hokage",
+      "To become the Pirate King",
+      "To find the Dragon Balls"
+     ],
+     "answer": 2,
+     "explanation": "Luffy wants to be the Pirate King."
+    },
+    {
+     "level": 3,
+     "question": "Which manga artist created One Piece?",
+     "choices": [
+      "Masashi Kishimoto",
+      "Tite Kubo",
+      "Akira Toriyama",
+      "Eiichiro Oda"
+     ],
+     "answer": 3,
+     "explanation": "Eiichiro Oda started One Piece in 1997."
+    }
+   ]
+  },
+  {
+   "id": "man-002",
+   "ask": {
+    "1": "Student",
+    "2": "Death Note",
+    "3": "Notebook"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the name of the Shinigami who drops the Death Note into the human world?",
+     "choices": [
+      "Rem",
+      "Misa",
+      "Ryuk",
+      "Light"
+     ],
+     "answer": 2,
+     "explanation": "Ryuk is the Shinigami."
+    },
+    {
+     "level": 3,
+     "question": "What is the name of the detective who hunts Kira in Death Note?",
+     "choices": [
+      "Near",
+      "L",
+      "Mello",
+      "Watari"
+     ],
+     "answer": 1,
+     "explanation": "L Lawliet is the detective."
+    }
+   ]
+  },
+  {
+   "id": "man-003",
+   "ask": {
+    "1": "Goku",
+    "2": "Dragon Ball",
+    "3": "Race"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Goku is a member of which alien race?",
+     "choices": [
+      "The Namekians",
+      "The Frieza Force",
+      "The Saiyans",
+      "The Majin"
+     ],
+     "answer": 2,
+     "explanation": "Goku is a Saiyan."
+    },
+    {
+     "level": 3,
+     "question": "What was Goku's birth name as a Saiyan?",
+     "choices": [
+      "Raditz",
+      "Vegeta",
+      "Kakarot",
+      "Bardock"
+     ],
+     "answer": 2,
+     "explanation": "Goku's Saiyan name is Kakarot."
+    }
+   ]
+  },
+  {
+   "id": "man-004",
+   "ask": {
+    "1": "Partner",
+    "2": "Pikachu",
+    "3": "Type"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What type is Pikachu?",
+     "choices": [
+      "Fire",
+      "Grass",
+      "Water",
+      "Electric"
+     ],
+     "answer": 3,
+     "explanation": "Pikachu is an Electric type."
+    },
+    {
+     "level": 3,
+     "question": "Which Pokemon does Pikachu evolve into?",
+     "choices": [
+      "Plusle",
+      "Raichu",
+      "Jolteon",
+      "Pichu"
+     ],
+     "answer": 1,
+     "explanation": "Pikachu evolves into Raichu."
+    }
+   ]
+  },
+  {
+   "id": "man-005",
+   "ask": {
+    "1": "Sister",
+    "2": "Demon Slayer",
+    "3": "Condition"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is Nezuko turned into in Demon Slayer?",
+     "choices": [
+      "A ghost",
+      "A statue",
+      "A vampire",
+      "A demon"
+     ],
+     "answer": 3,
+     "explanation": "Nezuko is turned into a demon."
+    },
+    {
+     "level": 3,
+     "question": "What does Nezuko carry in her mouth in Demon Slayer?",
+     "choices": [
+      "A bamboo tube",
+      "A flower",
+      "A knife",
+      "A ribbon"
+     ],
+     "answer": 0,
+     "explanation": "A bamboo muzzle keeps her from biting."
+    }
+   ]
+  },
+  {
+   "id": "man-006",
+   "ask": {
+    "1": "Village",
+    "2": "Hidden Leaf",
+    "3": "Hokage"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the name of the leader of Naruto's village?",
+     "choices": [
+      "Mizukage",
+      "Kazekage",
+      "Raikage",
+      "Hokage"
+     ],
+     "answer": 3,
+     "explanation": "The village leader is the Hokage."
+    },
+    {
+     "level": 3,
+     "question": "Which Hokage's face is carved first on the Hokage Monument?",
+     "choices": [
+      "The Fourth Hokage",
+      "The Fifth Hokage",
+      "The Third Hokage",
+      "The First Hokage"
+     ],
+     "answer": 3,
+     "explanation": "The faces are carved in order, starting with the First Hokage."
+    }
+   ]
+  },
+  {
+   "id": "man-007",
+   "ask": {
+    "1": "Studio",
+    "2": "Spirited Away",
+    "3": "Founder"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which Studio Ghibli co-founder directed Spirited Away?",
+     "choices": [
+      "Mamoru Hosoda",
+      "Hayao Miyazaki",
+      "Makoto Shinkai",
+      "Isao Takahata"
+     ],
+     "answer": 1,
+     "explanation": "Miyazaki directed it."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Spirited Away win the Oscar for Best Animated Feature?",
+     "choices": [
+      "2003",
+      "2007",
+      "2010",
+      "1999"
+     ],
+     "answer": 0,
+     "explanation": "It won at the 2003 ceremony."
+    }
+   ]
+  },
+  {
+   "id": "man-008",
+   "ask": {
+    "1": "Punches",
+    "2": "One Punch Man",
+    "3": "Hero"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is Saitama's hero rank called at the beginning of One Punch Man?",
+     "choices": [
+      "Class C",
+      "Class S",
+      "Class A",
+      "Class B"
+     ],
+     "answer": 0,
+     "explanation": "He begins in Class C."
+    },
+    {
+     "level": 3,
+     "question": "Which cyborg disciple follows Saitama in One Punch Man?",
+     "choices": [
+      "Tatsumaki",
+      "Genos",
+      "King",
+      "Garou"
+     ],
+     "answer": 1,
+     "explanation": "Genos becomes his disciple."
+    }
+   ]
+  },
+  {
+   "id": "man-009",
+   "ask": {
+    "1": "Creator",
+    "2": "Dragon Ball",
+    "3": "Artist"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which anime and manga is about a boy with a tail looking for dragon balls?",
+     "choices": [
+      "Bleach",
+      "Naruto",
+      "Dragon Ball",
+      "One Piece"
+     ],
+     "answer": 2,
+     "explanation": "Goku searches for the Dragon Balls."
+    },
+    {
+     "level": 3,
+     "question": "In which year did the Dragon Ball manga begin in Weekly Shonen Jump?",
+     "choices": [
+      "1984",
+      "2001",
+      "1975",
+      "1992"
+     ],
+     "answer": 0,
+     "explanation": "It began serialisation in 1984."
+    }
+   ]
+  },
+  {
+   "id": "man-010",
+   "ask": {
+    "1": "Nine-tails",
+    "2": "Naruto",
+    "3": "Fox"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Naruto character has a fox sealed inside him?",
+     "choices": [
+      "Kakashi",
+      "Itachi",
+      "Naruto Uzumaki",
+      "Sasuke"
+     ],
+     "answer": 2,
+     "explanation": "Naruto holds the nine-tailed fox."
+    },
+    {
+     "level": 3,
+     "question": "Who was the Hokage who sealed Kurama into Naruto at his birth?",
+     "choices": [
+      "Tsunade",
+      "Minato Namikaze",
+      "Kakashi",
+      "Hiruzen Sarutobi"
+     ],
+     "answer": 1,
+     "explanation": "The Fourth Hokage Minato did it."
+    }
+   ]
+  },
+  {
+   "id": "man-011",
+   "ask": {
+    "1": "Creator",
+    "2": "Attack on Titan",
+    "3": "Walls"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which anime do humans live behind giant walls to hide from Titans?",
+     "choices": [
+      "Fairy Tail",
+      "Tokyo Ghoul",
+      "Death Note",
+      "Attack on Titan"
+     ],
+     "answer": 3,
+     "explanation": "Humans fear Titans in Attack on Titan."
+    },
+    {
+     "level": 3,
+     "question": "What is the main character Eren's last name in Attack on Titan?",
+     "choices": [
+      "Yeager",
+      "Arlert",
+      "Braun",
+      "Ackerman"
+     ],
+     "answer": 0,
+     "explanation": "Eren Yeager."
+    }
+   ]
+  },
+  {
+   "id": "man-012",
+   "ask": {
+    "1": "Hero name",
+    "2": "My Hero Academia",
+    "3": "Quirk"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In My Hero Academia, what are superpowers called?",
+     "choices": [
+      "Chakra",
+      "Haki",
+      "Skills",
+      "Quirks"
+     ],
+     "answer": 3,
+     "explanation": "Superpowers are Quirks."
+    },
+    {
+     "level": 3,
+     "question": "What is the name of the school Deku attends in My Hero Academia?",
+     "choices": [
+      "Karasuno High",
+      "U.A. High School",
+      "Hogwarts",
+      "Konoha Academy"
+     ],
+     "answer": 1,
+     "explanation": "Deku attends U.A. High School."
+    }
+   ]
+  },
+  {
+   "id": "man-013",
+   "ask": {
+    "1": "Cat bus",
+    "2": "Totoro",
+    "3": "Studio"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Ghibli film features a large fluffy forest spirit?",
+     "choices": [
+      "Arrietty",
+      "My Neighbor Totoro",
+      "Porco Rosso",
+      "Ponyo"
+     ],
+     "answer": 1,
+     "explanation": "Totoro is the forest spirit."
+    },
+    {
+     "level": 3,
+     "question": "In which year was My Neighbor Totoro released in Japan?",
+     "choices": [
+      "1988",
+      "2005",
+      "1979",
+      "1997"
+     ],
+     "answer": 0,
+     "explanation": "It was released in April 1988."
+    }
+   ]
+  },
+  {
+   "id": "man-014",
+   "ask": {
+    "1": "Fan term",
+    "2": "Otaku",
+    "3": "Meaning"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What does 'manga' mean in the sense of Japanese comics?",
+     "choices": [
+      "Costumes",
+      "Comics",
+      "Songs",
+      "Cartoons for kids only"
+     ],
+     "answer": 1,
+     "explanation": "Manga means Japanese comics."
+    },
+    {
+     "level": 3,
+     "question": "What do you call the practice of dressing as an anime character?",
+     "choices": [
+      "Cosplay",
+      "Kabuki",
+      "Ikebana",
+      "Karaoke"
+     ],
+     "answer": 0,
+     "explanation": "Cosplay is costume play."
+    }
+   ]
+  },
+  {
+   "id": "man-015",
+   "ask": {
+    "1": "Brothers",
+    "2": "Fullmetal Alchemist",
+    "3": "Author"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In Fullmetal Alchemist, Alphonse Elric's soul is bound to what?",
+     "choices": [
+      "A suit of armour",
+      "A statue",
+      "A book",
+      "A sword"
+     ],
+     "answer": 0,
+     "explanation": "Alphonse is in a suit of armour."
+    },
+    {
+     "level": 3,
+     "question": "Who wrote Fullmetal Alchemist?",
+     "choices": [
+      "Rumiko Takahashi",
+      "Natsuki Takaya",
+      "Naoko Takeuchi",
+      "Hiromu Arakawa"
+     ],
+     "answer": 3,
+     "explanation": "Hiromu Arakawa wrote it."
+    }
+   ]
+  },
+  {
+   "id": "man-016",
+   "ask": {
+    "1": "Hero",
+    "2": "Jujutsu Kaisen",
+    "3": "Curse"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In Jujutsu Kaisen, what do the heroes fight?",
+     "choices": [
+      "Pirates",
+      "Curses",
+      "Titans",
+      "Ninjas"
+     ],
+     "answer": 1,
+     "explanation": "They fight cursed spirits."
+    },
+    {
+     "level": 3,
+     "question": "Which cursed object does Yuji swallow in Jujutsu Kaisen?",
+     "choices": [
+      "A cursed sword",
+      "A crystal",
+      "A magic scroll",
+      "Sukuna's finger"
+     ],
+     "answer": 3,
+     "explanation": "He swallows Sukuna's finger."
+    }
+   ]
+  },
+  {
+   "id": "man-017",
+   "ask": {
+    "1": "Sport",
+    "2": "Haikyu",
+    "3": "Team"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which sport do players hit a ball over a net with their hands in a team of six?",
+     "choices": [
+      "Tennis",
+      "Volleyball",
+      "Baseball",
+      "Handball"
+     ],
+     "answer": 1,
+     "explanation": "Volleyball is played with six per side."
+    },
+    {
+     "level": 3,
+     "question": "Which high school does Hinata play for in Haikyu!!?",
+     "choices": [
+      "Nekoma",
+      "Aoba Johsai",
+      "Karasuno",
+      "Shiratorizawa"
+     ],
+     "answer": 2,
+     "explanation": "Hinata joins Karasuno."
+    }
+   ]
+  },
+  {
+   "id": "man-018",
+   "ask": {
+    "1": "Sport",
+    "2": "Slam Dunk",
+    "3": "Hero"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which sport features hoops and dunks?",
+     "choices": [
+      "Football",
+      "Tennis",
+      "Basketball",
+      "Baseball"
+     ],
+     "answer": 2,
+     "explanation": "Basketball uses hoops."
+    },
+    {
+     "level": 3,
+     "question": "Who is the red-haired rookie in Slam Dunk?",
+     "choices": [
+      "Hisashi Mitsui",
+      "Hanamichi Sakuragi",
+      "Ryota Miyagi",
+      "Kaede Rukawa"
+     ],
+     "answer": 1,
+     "explanation": "Sakuragi is the red-haired lead."
+    }
+   ]
+  },
+  {
+   "id": "man-019",
+   "ask": {
+    "1": "Anya",
+    "2": "Spy x Family",
+    "3": "Power"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In Spy x Family, what is Anya's father's codename?",
+     "choices": [
+      "Fox",
+      "Twilight",
+      "Shadow",
+      "Hawk"
+     ],
+     "answer": 1,
+     "explanation": "Loid Forger's codename is Twilight."
+    },
+    {
+     "level": 3,
+     "question": "What kind of animal is Bond, the Forgers' pet?",
+     "choices": [
+      "A cat",
+      "A dog",
+      "A rabbit",
+      "A parrot"
+     ],
+     "answer": 1,
+     "explanation": "Bond is a large white dog."
+    }
+   ]
+  },
+  {
+   "id": "man-020",
+   "ask": {
+    "1": "Luffy power",
+    "2": "Gum-Gum",
+    "3": "Weakness"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In One Piece, what is a Devil Fruit?",
+     "choices": [
+      "A magic sword",
+      "A type of ship",
+      "A fruit that gives special powers",
+      "A kind of treasure map"
+     ],
+     "answer": 2,
+     "explanation": "Devil Fruits give powers but take away swimming ability."
+    },
+    {
+     "level": 3,
+     "question": "What can Devil Fruit users no longer do?",
+     "choices": [
+      "Hear",
+      "Swim",
+      "Run",
+      "See"
+     ],
+     "answer": 1,
+     "explanation": "Devil Fruit users sink in water."
+    }
+   ]
+  },
+  {
+   "id": "man-021",
+   "ask": {
+    "1": "Pokedex",
+    "2": "First generation",
+    "3": "Number"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Pokemon is number 25 in the Pokedex?",
+     "choices": [
+      "Pikachu",
+      "Bulbasaur",
+      "Charmander",
+      "Squirtle"
+     ],
+     "answer": 0,
+     "explanation": "Pikachu is number 25."
+    },
+    {
+     "level": 3,
+     "question": "Which Pokemon is number 151, the last of generation one?",
+     "choices": [
+      "Ditto",
+      "Mewtwo",
+      "Mew",
+      "Eevee"
+     ],
+     "answer": 2,
+     "explanation": "Mew is number 151."
+    }
+   ]
+  },
+  {
+   "id": "man-022",
+   "ask": {
+    "1": "Word",
+    "2": "Cute",
+    "3": "Meaning"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What does 'sensei' mean in Japanese?",
+     "choices": [
+      "Student",
+      "Teacher",
+      "Enemy",
+      "Friend"
+     ],
+     "answer": 1,
+     "explanation": "Sensei means teacher."
+    },
+    {
+     "level": 3,
+     "question": "What does 'senpai' mean in Japanese?",
+     "choices": [
+      "A neighbour",
+      "An upperclassman or senior",
+      "A rival",
+      "A younger student"
+     ],
+     "answer": 1,
+     "explanation": "Senpai is a senior."
+    }
+   ]
+  },
+  {
+   "id": "man-023",
+   "ask": {
+    "1": "Goku",
+    "2": "Saiyans",
+    "3": "Home planet"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which character is Goku's friend and later rival, the prince of the Saiyans?",
+     "choices": [
+      "Krillin",
+      "Piccolo",
+      "Gohan",
+      "Vegeta"
+     ],
+     "answer": 3,
+     "explanation": "Vegeta is the Saiyan prince."
+    },
+    {
+     "level": 3,
+     "question": "What is the name of the Saiyan home planet?",
+     "choices": [
+      "Earth",
+      "Planet Vegeta",
+      "Planet Frieza",
+      "Planet Namek"
+     ],
+     "answer": 1,
+     "explanation": "The Saiyan homeworld is Planet Vegeta."
+    }
+   ]
+  },
+  {
+   "id": "man-024",
+   "ask": {
+    "1": "Best-seller",
+    "2": "One Piece",
+    "3": "Sales"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which manga is about a rubber-bodied pirate named Luffy?",
+     "choices": [
+      "Bleach",
+      "Naruto",
+      "One Piece",
+      "Fairy Tail"
+     ],
+     "answer": 2,
+     "explanation": "It is One Piece."
+    },
+    {
+     "level": 2,
+     "question": "About how many copies has One Piece sold worldwide?",
+     "choices": [
+      "About 100 million",
+      "About 10 million",
+      "More than 500 million",
+      "About 50 million"
+     ],
+     "answer": 2,
+     "explanation": "It has passed 500 million copies."
+    }
+   ]
+  },
+  {
+   "id": "man-025",
+   "ask": {
+    "1": "Korean comics",
+    "2": "Manhwa",
+    "3": "Chinese comics"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What do you call Japanese comics?",
+     "choices": [
+      "Webtoon",
+      "Manhwa",
+      "Manga",
+      "Manhua"
+     ],
+     "answer": 2,
+     "explanation": "Japanese comics are manga."
+    },
+    {
+     "level": 2,
+     "question": "What do you call Chinese comics?",
+     "choices": [
+      "Manhwa",
+      "Anime",
+      "Manhua",
+      "Manga"
+     ],
+     "answer": 2,
+     "explanation": "Manhua are Chinese comics."
+    }
+   ]
+  },
+  {
+   "id": "man-026",
+   "ask": {
+    "1": "Creator",
+    "2": "Astro Boy",
+    "3": "Title"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which robot boy is the hero of a classic manga by Osamu Tezuka?",
+     "choices": [
+      "Doraemon",
+      "Mazinger Z",
+      "Gundam",
+      "Astro Boy"
+     ],
+     "answer": 3,
+     "explanation": "Astro Boy is Tezuka's hero."
+    },
+    {
+     "level": 2,
+     "question": "In which decade did Astro Boy first appear?",
+     "choices": [
+      "The 1970s",
+      "The 1930s",
+      "The 1950s",
+      "The 1990s"
+     ],
+     "answer": 2,
+     "explanation": "Astro Boy began in 1952."
+    }
+   ]
+  },
+  {
+   "id": "man-027",
+   "ask": {
+    "1": "Magazine",
+    "2": "Shonen Jump",
+    "3": "Publisher"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which magazine published Dragon Ball?",
+     "choices": [
+      "Nakayoshi",
+      "Ribon",
+      "Weekly Shonen Magazine",
+      "Weekly Shonen Jump"
+     ],
+     "answer": 3,
+     "explanation": "Dragon Ball ran in Weekly Shonen Jump."
+    },
+    {
+     "level": 2,
+     "question": "Which publisher owns Weekly Shonen Jump?",
+     "choices": [
+      "Shueisha",
+      "Kadokawa",
+      "Shogakukan",
+      "Kodansha"
+     ],
+     "answer": 0,
+     "explanation": "Shueisha publishes it."
+    }
+   ]
+  },
+  {
+   "id": "man-028",
+   "ask": {
+    "1": "Oscar",
+    "2": "Spirited Away",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Studio Ghibli film won an Oscar in 2003?",
+     "choices": [
+      "Princess Mononoke",
+      "Ponyo",
+      "Totoro",
+      "Spirited Away"
+     ],
+     "answer": 3,
+     "explanation": "Spirited Away won it."
+    },
+    {
+     "level": 2,
+     "question": "Which director made Spirited Away?",
+     "choices": [
+      "Makoto Shinkai",
+      "Mamoru Hosoda",
+      "Hayao Miyazaki",
+      "Isao Takahata"
+     ],
+     "answer": 2,
+     "explanation": "Miyazaki directed it."
+    }
+   ]
+  },
+  {
+   "id": "man-029",
+   "ask": {
+    "1": "Ashitaka",
+    "2": "Princess Mononoke",
+    "3": "Director"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Ghibli film has a wolf girl named San?",
+     "choices": [
+      "Totoro",
+      "Princess Mononoke",
+      "Kiki",
+      "Ponyo"
+     ],
+     "answer": 1,
+     "explanation": "San is in Princess Mononoke."
+    },
+    {
+     "level": 2,
+     "question": "In what year was Princess Mononoke released in Japan?",
+     "choices": [
+      "1997",
+      "2001",
+      "1988",
+      "2008"
+     ],
+     "answer": 0,
+     "explanation": "It was released in 1997."
+    }
+   ]
+  },
+  {
+   "id": "man-030",
+   "ask": {
+    "1": "Protagonist",
+    "2": "Chainsaw Man",
+    "3": "Devil"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In Chainsaw Man, what does Denji transform into?",
+     "choices": [
+      "A dragon",
+      "A giant fox",
+      "A robot",
+      "A chainsaw devil hybrid"
+     ],
+     "answer": 3,
+     "explanation": "Denji merges with Pochita."
+    },
+    {
+     "level": 2,
+     "question": "What is the name of the chainsaw devil that merges with Denji?",
+     "choices": [
+      "Aki",
+      "Makima",
+      "Pochita",
+      "Power"
+     ],
+     "answer": 2,
+     "explanation": "Pochita is the devil."
+    }
+   ]
+  },
+  {
+   "id": "man-031",
+   "ask": {
+    "1": "Anime",
+    "2": "Cowboy Bebop",
+    "3": "Spaceship"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which space-bounty hunter anime has a hero named Spike Spiegel?",
+     "choices": [
+      "Cowboy Bebop",
+      "Gintama",
+      "Trigun",
+      "Outlaw Star"
+     ],
+     "answer": 0,
+     "explanation": "Spike is the hero of Cowboy Bebop."
+    },
+    {
+     "level": 2,
+     "question": "Which composer wrote the jazzy soundtrack of Cowboy Bebop?",
+     "choices": [
+      "Joe Hisaishi",
+      "Hiroyuki Sawano",
+      "Yoko Kanno",
+      "Yuki Kajiura"
+     ],
+     "answer": 2,
+     "explanation": "Yoko Kanno composed the music."
+    }
+   ]
+  },
+  {
+   "id": "man-032",
+   "ask": {
+    "1": "Mecha",
+    "2": "Evangelion",
+    "3": "Pilot"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Who is the teenage pilot of Eva-01 in Neon Genesis Evangelion?",
+     "choices": [
+      "Shinji Ikari",
+      "Kaworu",
+      "Asuka",
+      "Rei"
+     ],
+     "answer": 0,
+     "explanation": "Shinji is the pilot."
+    },
+    {
+     "level": 2,
+     "question": "What are the giant enemies called that attack in Evangelion?",
+     "choices": [
+      "Angels",
+      "Titans",
+      "Kaiju",
+      "Demons"
+     ],
+     "answer": 0,
+     "explanation": "The enemies are Angels."
+    }
+   ]
+  },
+  {
+   "id": "man-033",
+   "ask": {
+    "1": "Creator",
+    "2": "Akira",
+    "3": "Setting"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In Akira, which city is rebuilt after being destroyed?",
+     "choices": [
+      "Gotham",
+      "Neo-Tokyo",
+      "Seoul",
+      "Osaka"
+     ],
+     "answer": 1,
+     "explanation": "Akira is set in Neo-Tokyo."
+    },
+    {
+     "level": 2,
+     "question": "Which year was the Akira anime film released?",
+     "choices": [
+      "2005",
+      "1975",
+      "1988",
+      "1995"
+     ],
+     "answer": 2,
+     "explanation": "It was released in 1988."
+    }
+   ]
+  },
+  {
+   "id": "man-034",
+   "ask": {
+    "1": "Ship",
+    "2": "Going Merry",
+    "3": "Crew"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which pirate crew does Luffy lead?",
+     "choices": [
+      "The Red Hair Pirates",
+      "The Straw Hat Pirates",
+      "The Whitebeard Pirates",
+      "The Blackbeard Pirates"
+     ],
+     "answer": 1,
+     "explanation": "Luffy leads the Straw Hats."
+    },
+    {
+     "level": 2,
+     "question": "Which ship replaces the Going Merry later in One Piece?",
+     "choices": [
+      "Moby Dick",
+      "Red Force",
+      "Polar Tang",
+      "Thousand Sunny"
+     ],
+     "answer": 3,
+     "explanation": "The Thousand Sunny replaces the Merry."
+    }
+   ]
+  },
+  {
+   "id": "man-035",
+   "ask": {
+    "1": "Card game",
+    "2": "Yu-Gi-Oh",
+    "3": "Hero"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which anime is about a card game with monsters and a boy named Yugi?",
+     "choices": [
+      "Pokemon",
+      "Yu-Gi-Oh!",
+      "Beyblade",
+      "Digimon"
+     ],
+     "answer": 1,
+     "explanation": "Yu-Gi-Oh follows Yugi Muto."
+    },
+    {
+     "level": 2,
+     "question": "What is the name of the golden puzzle Yugi wears?",
+     "choices": [
+      "The Soul Stone",
+      "The Dragon Orb",
+      "The Millennium Puzzle",
+      "The Magic Cube"
+     ],
+     "answer": 2,
+     "explanation": "Yugi solves the Millennium Puzzle."
+    }
+   ]
+  },
+  {
+   "id": "man-036",
+   "ask": {
+    "1": "Studio",
+    "2": "Demon Slayer",
+    "3": "Film"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which anime follows a boy named Tanjiro hunting demons?",
+     "choices": [
+      "Black Clover",
+      "Naruto",
+      "Demon Slayer",
+      "Bleach"
+     ],
+     "answer": 2,
+     "explanation": "Tanjiro is the hero of Demon Slayer."
+    },
+    {
+     "level": 2,
+     "question": "Which 2020 Demon Slayer film became the highest-grossing Japanese film ever at the time?",
+     "choices": [
+      "Swordsmith Village",
+      "Entertainment District Arc",
+      "The Final Chapter",
+      "Mugen Train"
+     ],
+     "answer": 3,
+     "explanation": "Mugen Train broke records in 2020."
+    }
+   ]
+  },
+  {
+   "id": "man-037",
+   "ask": {
+    "1": "Gon's father",
+    "2": "Hunter x Hunter",
+    "3": "Exam"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In Hunter x Hunter, what is the hero's name?",
+     "choices": [
+      "Gon Freecss",
+      "Ichigo",
+      "Luffy",
+      "Naruto Uzumaki"
+     ],
+     "answer": 0,
+     "explanation": "Gon is the hero."
+    },
+    {
+     "level": 2,
+     "question": "What do Gon and his friends take at the start of Hunter x Hunter to become licensed adventurers?",
+     "choices": [
+      "The Chunin Exam",
+      "The Pirate Test",
+      "The Hunter Exam",
+      "The Soul Reaper Trial"
+     ],
+     "answer": 2,
+     "explanation": "They take the Hunter Exam."
+    }
+   ]
+  },
+  {
+   "id": "man-038",
+   "ask": {
+    "1": "Creator",
+    "2": "Berserk",
+    "3": "Hero"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which dark fantasy manga stars a swordsman named Guts?",
+     "choices": [
+      "Berserk",
+      "Slam Dunk",
+      "Dragon Ball",
+      "One Piece"
+     ],
+     "answer": 0,
+     "explanation": "Guts is the hero of Berserk."
+    },
+    {
+     "level": 2,
+     "question": "What huge weapon does Guts carry in Berserk?",
+     "choices": [
+      "The Master Sword",
+      "The Dragonslayer",
+      "The Kusanagi",
+      "Excalibur"
+     ],
+     "answer": 1,
+     "explanation": "Guts wields the huge Dragonslayer."
+    }
+   ]
+  },
+  {
+   "id": "man-039",
+   "ask": {
+    "1": "Creator",
+    "2": "Ghost in the Shell",
+    "3": "Hero"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which anime and manga stars Major Motoko Kusanagi?",
+     "choices": [
+      "Ghost in the Shell",
+      "Cowboy Bebop",
+      "Akira",
+      "Evangelion"
+     ],
+     "answer": 0,
+     "explanation": "Motoko Kusanagi is the main character."
+    },
+    {
+     "level": 2,
+     "question": "Which year was the first Ghost in the Shell anime film released?",
+     "choices": [
+      "2005",
+      "1995",
+      "2015",
+      "1985"
+     ],
+     "answer": 1,
+     "explanation": "The film by Mamoru Oshii came out in 1995."
+    }
+   ]
+  }
+ ]
+}
