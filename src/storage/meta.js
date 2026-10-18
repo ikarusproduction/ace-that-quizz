@@ -2,6 +2,7 @@
 // Everything is optional on old profiles; `metaOf` fills in safe defaults and drops anything invalid.
 import { HEXES, STARTER_HEXES, PACKS, HEX_NUMBERS } from '../engine/hexes.js';
 import { levelOf, cleanWardrobe } from '../engine/cosmetics.js';
+import { ADVENTURE_IDS, cleanProgress } from '../engine/adventure.js';
 import { FRIEND_CODE_RE, cleanCard } from '../stats/card.js';
 
 export const MAX_FRIENDS = 50;
@@ -34,7 +35,8 @@ export function metaOf(p) {
   const xp = Number.isFinite(p?.xp) && p.xp > 0 ? Math.min(Math.floor(p.xp), 10_000_000) : 0;
   const xpLog = (Array.isArray(p?.xpLog) ? p.xpLog : []).filter((x) => typeof x === 'string').map((x) => x.slice(0, 64)).slice(-30);
   const cos = cleanWardrobe(p?.cos, levelOf(xp).level);
-  return { hexes: { owned, deck, dust }, packs, daily, friendCode, friendSecret, friends: cleanFriends(p?.friends), xp, xpLog, cos };
+  const adv = Object.fromEntries(ADVENTURE_IDS.map((id) => [id, cleanProgress(p?.adv?.[id])]));
+  return { hexes: { owned, deck, dust }, packs, daily, friendCode, friendSecret, friends: cleanFriends(p?.friends), xp, xpLog, cos, adv };
 }
 
 /** Day keys look like "2026-10-17" (local date). */
@@ -55,6 +57,11 @@ export function mergeMeta(mine, theirs, theirsIsNewer) {
     packs: [...a.packs, ...b.packs.filter((k) => !ids.has(k.id))],
     daily: a.daily.lastDay >= b.daily.lastDay ? a.daily : b.daily,
     xp: Math.max(a.xp, b.xp),
+    adv: Object.fromEntries(ADVENTURE_IDS.map((id) => {
+      const done = { ...a.adv[id].done };
+      for (const [k, v] of Object.entries(b.adv[id].done)) done[k] = Math.max(done[k] ?? 0, v);
+      return [id, cleanProgress({ done, road: { ...b.adv[id].road, ...a.adv[id].road } })];
+    })),
     xpLog: [...new Set([...a.xpLog, ...b.xpLog])].slice(-30),
     cos: cleanWardrobe({ owned: [...a.cos.owned, ...b.cos.owned], equipped: theirsIsNewer ? b.cos.equipped : a.cos.equipped }, levelOf(Math.max(a.xp, b.xp)).level),
     friendCode: a.friendCode || b.friendCode,

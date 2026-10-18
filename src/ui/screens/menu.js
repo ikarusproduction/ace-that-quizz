@@ -31,6 +31,7 @@ export async function menuScreen(app) {
     packsWaiting ? h('button.btn.good.block', { type: 'button', onclick: () => go('hexes', { tab: 'packs' }) }, sprite('ink', 28), `${packsWaiting} hex pack${packsWaiting > 1 ? 's' : ''} to open`) : dailyReady && profiles.length ? h('button.btn.block', { type: 'button', onclick: () => go('hexes') }, sprite('flame', 28), 'Daily pack ready') : null,
     h('div.menu', {},
       menuBtn('primary', 'star', 'Play', profiles.length ? 'boss rush · map · versus · daily' : 'start here', () => go('setup')),
+      menuBtn('', 'owl', 'Adventure', profiles.length ? '5 paths · 100 steps · learn & practise' : 'create a player first', () => go('adventure')),
       menuBtn('', 'radio', 'Online', 'friends on their own phones', () => go('online')),
       app.cloud ? menuBtn('', 'owl', 'Friends', 'codes · compare stats', () => go('friends')) : null,
       menuBtn('', 'gasmask', 'Players', `${profiles.length} on this device`, () => go('profiles')),

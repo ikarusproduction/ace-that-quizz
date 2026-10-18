@@ -14,6 +14,7 @@ import { metaOf, mergeMeta, daysBetween, cleanFriends, MAX_FRIENDS } from './met
 import { newFriendCode, newFriendSecret, normalizeFriendCode, FRIEND_CODE_RE, buildCard, cleanCard } from '../stats/card.js';
 import { HEXES, PACKS, openPack, FORGE_COST, HEX_NUMBERS } from '../engine/hexes.js';
 import { Rng } from '../engine/rng.js';
+import { ADVENTURES, packForStep, xpForStep } from '../engine/adventure.js';
 import { runMigrations, migrateSnapshot, SchemaError, MIGRATIONS } from './migrations.js';
 import { STARTER_CARDS, CARDS } from '../engine/cards.js';
 
@@ -343,6 +344,36 @@ export async function createRepo(storage, { now = Date.now, uuid = defaultUuid, 
       profile.updatedAt = now();
       await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
       return { xp: profile.xp, before: levelOf(m.xp).level, after: levelOf(profile.xp).level, gained: Math.floor(amount) };
+    },
+
+    /**
+     * Record a finished adventure step. Stars only go up; XP and the boss pack are paid once, the first time.
+     * Returns { first, stars, xp: {gained, before, after}, pack }.
+     */
+    async completeAdventureStep(id, advId, step, road, stars) {
+      if (!ADVENTURES[advId] || !Number.isInteger(step) || step < 1 || step > 100 || !(stars >= 1 && stars <= 3)) throw new RepoError('BAD_STEP', 'That step does not exist.');
+      const profile = await requireProfile(id);
+      const m = metaOf(profile);
+      const mine = m.adv[advId];
+      const first = !mine.done[step];
+      mine.done[step] = Math.max(mine.done[step] ?? 0, stars);
+      if (first) mine.road[step] = road;
+      profile.adv = { ...m.adv, [advId]: mine };
+      let xp = { gained: 0, before: levelOf(m.xp).level, after: levelOf(m.xp).level };
+      let pack = null;
+      if (first) {
+        const gain = xpForStep(step, road, stars);
+        profile.xp = m.xp + gain;
+        xp = { gained: gain, before: levelOf(m.xp).level, after: levelOf(profile.xp).level };
+        pack = packForStep(step);
+        if (pack) {
+          profile.hexes = m.hexes; profile.daily = m.daily;
+          profile.packs = [...m.packs, { id: `adv-${advId}-${step}`, type: pack, from: `${ADVENTURES[advId].name}, step ${step}` }].slice(-60);
+        }
+      }
+      profile.updatedAt = now();
+      await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
+      return { first, stars: mine.done[step], xp, pack };
     },
 
     /** Buy a wardrobe item with dust. */

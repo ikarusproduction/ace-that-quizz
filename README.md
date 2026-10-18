@@ -23,6 +23,10 @@ GitHub Pages alone cannot link phones; run `node server/relay.js` somewhere (see
 ## Level, XP and the wardrobe
 Every finished game gives XP (more for correct answers, wins, bosses and streaks). Levels run to 50 and unlock titles (free) and wardrobe items. Dust buys portrait frames, backgrounds, colour dyes and costume pieces on the Style tab of the Hexes page. Logic in `src/engine/cosmetics.js`, tests in `tests/cosmetics.test.js`, `tests/e2e/style.py`.
 
+## Adventure
+
+Five themed paths (The Lab, The Archive, The Cipher, The Atlas, The Wild), each of 100 steps. A step is three fact cards to learn, then five questions with three hearts; a miss costs a heart and the question returns once at the end. Some steps fork into a safe road and a risky road (one level harder, 1.5× XP), and every tenth step is a boss with seven questions and no second chances. Difficulty climbs with the step by using the three versions of each question. First clears pay XP; boss clears also pay a Silver Pack (a Gold one for step 100). Rules and level building live in `src/engine/adventure.js`, progress in `profile.adv`, the screens in `src/ui/screens/adventure.js`.
+
 ## Stakes and difficulty ladders
 
 Every question that is not live news or a tune has three versions: level 1 (coarser or easier, e.g. the year), level 2, and level 3 (precise or harder, e.g. the exact date). The stake you choose picks the level (1× → level 1, 2× → level 2, 3× → level 3) and each stake button shows what it will ask. A boss of tier 3 or more adds one level, and in solo a question you have already answered adds one level the next time (capped at 3).

@@ -10,6 +10,7 @@ import { friendsScreen } from './ui/screens/friends.js';
 import { cardsScreen } from './ui/screens/cards.js';
 import { rewardsScreen } from './ui/screens/rewards.js';
 import { hexesScreen } from './ui/screens/hexes.js';
+import { adventureScreen } from './ui/screens/adventure.js';
 import { statsScreen } from './ui/screens/stats.js';
 import { settingsScreen } from './ui/screens/settings.js';
 import { loadConfig, ensureAccess, ACCESS_KEY } from './ui/gate.js';
@@ -28,6 +29,7 @@ register('friends', friendsScreen);
 register('cards', cardsScreen);
 register('rewards', rewardsScreen);
 register('hexes', hexesScreen);
+register('adventure', adventureScreen);
 register('stats', statsScreen);
 register('settings', settingsScreen);
 
