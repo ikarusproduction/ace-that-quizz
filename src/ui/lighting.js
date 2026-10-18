@@ -91,7 +91,7 @@ export async function lightsOn({ sound = true } = {}) {
 
 /**
  * The first time the game opens: a black room, a long buzz, then the bulb fights to come on. Several false starts,
- * a loud thunk, and it settles. About three seconds, and the title fades in as it does.
+ * a loud thunk, and it settles. About two seconds, and the title fades in as it does.
  */
 export async function openingLights() {
   if (!dark) return;
@@ -102,10 +102,10 @@ export async function openingLights() {
     [0.46, 1], [0.47, 0.2], [0.49, 0.9], [0.5, 0.1], [0.52, 0.85], [0.6, 0.85], [0.61, 0.35], [0.63, 0.7],
     [0.7, 0.7], [0.71, 0.05], [0.73, 0.6], [0.75, 0.0], [0.83, 0.0], [0.84, 0.25], [0.86, 0], [1, 0],
   ].map(([offset, opacity]) => ({ offset, opacity }));
-  const anim = dark.animate(frames, { duration: 3000, easing: 'steps(1, end)', fill: 'forwards' });
+  const anim = dark.animate(frames, { duration: 1800, easing: 'steps(1, end)', fill: 'forwards' });
   // the sounds line up with the false starts (they are silent until the browser lets the page play audio)
-  [510, 840, 1400, 1520, 1830, 2520].forEach((t) => setTimeout(() => sfx.flicker(), t));
-  setTimeout(() => sfx.lightsOn(), 2250);
+  [300, 500, 840, 910, 1100, 1510].forEach((t) => setTimeout(() => sfx.flicker(), t));
+  setTimeout(() => sfx.lightsOn(), 1350);
   await anim.finished.catch(() => {});
   dark.style.opacity = '0';
   anim.cancel();
@@ -138,4 +138,47 @@ export function shake(el) {
     [{ transform: 'translate(0,0)' }, { transform: 'translate(-6px,2px)' }, { transform: 'translate(5px,-2px)' }, { transform: 'translate(-3px,1px)' }, { transform: 'translate(0,0)' }],
     { duration: 320, easing: 'ease-out' },
   );
+}
+
+/**
+ * The boss loses its temper. `strength` 1 is an enrage, 2 is the House changing phase: the whole screen shakes hard, flashes red,
+ * the lights cut out and stutter back, and the picture glitches for a few frames. Reduce motion gets one soft red pulse.
+ */
+export async function rageStorm(strength = 1) {
+  const app = document.getElementById('app') ?? document.body;
+  if (reduce) { pulse('bad'); return; }
+  const n = strength >= 2 ? 14 : 9;
+  const amp = strength >= 2 ? 16 : 10;
+  const jitter = [{ transform: 'translate(0,0)' }];
+  for (let i = 0; i < n; i++) jitter.push({ transform: `translate(${((Math.random() - 0.5) * 2 * amp * (1 - i / n)).toFixed(1)}px, ${((Math.random() - 0.5) * 2 * amp * 0.6 * (1 - i / n)).toFixed(1)}px) rotate(${((Math.random() - 0.5) * 1.2 * (1 - i / n)).toFixed(2)}deg)` });
+  jitter.push({ transform: 'translate(0,0)' });
+  app.animate?.(jitter, { duration: strength >= 2 ? 900 : 600, easing: 'linear' });
+  // red strobes
+  const flash = h('div.light-flash.rage');
+  document.body.append(flash);
+  const fr = [{ opacity: 0 }];
+  for (let i = 0; i < (strength >= 2 ? 5 : 3); i++) fr.push({ opacity: 0.75 - i * 0.1 }, { opacity: 0.08 });
+  fr.push({ opacity: 0 });
+  flash.animate(fr, { duration: strength >= 2 ? 1100 : 800, easing: 'steps(1, end)' }).finished.finally(() => flash.remove());
+  // the lights die and sputter back
+  if (dark?.animate) {
+    const f = [{ offset: 0, opacity: 0 }, { offset: 0.08, opacity: 0.95 }, { offset: 0.2, opacity: 0.1 }, { offset: 0.28, opacity: 0.9 }, { offset: 0.45, opacity: 0.95 }, { offset: 0.55, opacity: 0.3 }, { offset: 0.7, opacity: 0.85 }, { offset: 0.82, opacity: 0.2 }, { offset: 1, opacity: 0 }];
+    dark.animate(f, { duration: strength >= 2 ? 1500 : 1000, easing: 'steps(1, end)' });
+    [60, 330, 640].forEach((t) => setTimeout(() => sfx.flicker?.(), t));
+  }
+  // a few frames of glitch: hue flips and an inverted flicker
+  if (app.animate) {
+    app.animate([
+      { filter: 'none', offset: 0 }, { filter: 'hue-rotate(160deg) saturate(2.5)', offset: 0.1 }, { filter: 'none', offset: 0.18 },
+      { filter: 'invert(1) hue-rotate(180deg)', offset: 0.3 }, { filter: 'none', offset: 0.36 }, { filter: 'contrast(2) saturate(3)', offset: 0.6 }, { filter: 'none', offset: 0.68 }, { filter: 'none', offset: 1 },
+    ], { duration: strength >= 2 ? 1100 : 700, easing: 'steps(1, end)' });
+  }
+}
+
+/** A short random lights-out stutter, used now and then while a boss stays enraged. */
+export function rageFlicker() {
+  if (reduce || !dark?.animate) return;
+  const a = dark.animate([{ opacity: 0, offset: 0 }, { opacity: 0.8, offset: 0.1 }, { opacity: 0.05, offset: 0.25 }, { opacity: 0.9, offset: 0.4 }, { opacity: 0, offset: 0.6 }, { opacity: 0, offset: 1 }], { duration: 420 + Math.random() * 300, easing: 'steps(1, end)' });
+  sfx.flicker?.();
+  return a.finished.catch(() => {});
 }

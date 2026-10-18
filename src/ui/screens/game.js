@@ -409,7 +409,10 @@ class GameController {
     } catch (e) {
       this.reportSaveError(e);
     }
-    if (!this.disposed && this.s.phase === 'finished') this.render();
+    if (!this.disposed && this.s.phase === 'finished') {
+      if (this.leaveToMenu) { this.leaveToMenu = false; sfx.tap(); go('menu'); return; }
+      this.render();
+    }
   }
 
   /* ------------------------------------------------------------ render */
@@ -427,7 +430,7 @@ class GameController {
     if (phase !== 'question') clearHexFx();
     if (this.net && (phase === 'stake' || phase === 'question') && !this.isMyTurn) {
       mount(this.root, this.viewWaiting());
-      window.scrollTo(0, 0);
+      this.topIfNew('wait:' + phase + ':' + (this.s.turn ?? ''));
       return;
     }
     const body = {
@@ -444,10 +447,17 @@ class GameController {
       finished: () => this.viewFinished(),
     }[phase]();
     mount(this.root, body);
-    if (phase !== 'question') window.scrollTo(0, 0);
+    this.topIfNew(phase + ':' + (this.s.turn ?? '') + ':' + (this.s.roundIndex ?? '') + ':' + (this.s.qIndex ?? ''));
     this.runStagePlay();
     const notes = this.notes.splice(0);
     notes.forEach((n) => toast(n));
+  }
+
+  /** Scroll to the top only when the screen really changed, so other players' moves never move your page. */
+  topIfNew(key) {
+    if (key === this.viewKey) return;
+    this.viewKey = key;
+    if (!key.startsWith('question')) window.scrollTo(0, 0);
   }
 
   /** Announce hexes (once per phone) and the hexes this player just earned. */
@@ -1330,7 +1340,7 @@ class GameController {
         p.defeated ? h('p.small.red', {}, 'Out of bulbs. The run ends here.') : null,
         h('div.row', {}, chipsLine(p.chips), bulbs(p.strikes, DUEL.startLives)),
       ),
-      h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', onclick: () => { sfx.tap(); this.act({ type: 'CONTINUE' }); } }, p.defeated || (finalFight && won) ? 'See results' : finalFight ? 'See results' : 'Back to the map')),
+      h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', onclick: () => { sfx.tap(); if (s.config.variant === 'rush' && won) this.leaveToMenu = true; this.act({ type: 'CONTINUE' }); } }, s.config.variant === 'rush' && won ? 'Main menu' : p.defeated || finalFight ? 'See results' : 'Back to the map')),
     ];
   }
 

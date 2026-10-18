@@ -113,9 +113,9 @@ export const BOSS_IDS = Object.keys(BOSS_ROSTER);
 export const TIER_DIFFICULTY = {
   0: { 1: 70, 2: 30 },
   1: { 1: 45, 2: 40, 3: 15 },
-  2: { 1: 15, 2: 40, 3: 35, 4: 10 },
-  3: { 2: 20, 3: 45, 4: 35 },
-  4: { 2: 10, 3: 45, 4: 45 },
+  2: { 1: 8, 2: 32, 3: 40, 4: 20 },
+  3: { 2: 12, 3: 43, 4: 45 },
+  4: { 3: 40, 4: 60 },
 };
 
 const CONTESTANT_NAMES = ['Gus', 'Mabel', 'Odile', 'Bram', 'Tilda', 'Fenn', 'Ruth', 'Cass', 'Nico', 'Wren'];

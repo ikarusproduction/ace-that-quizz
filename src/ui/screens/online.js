@@ -54,8 +54,9 @@ export async function onlineScreen(app, params) {
     offs.forEach((f) => f());
     offs.length = 0;
     offs.push(
-      s.on('members', () => paint()),
+      s.on('members', () => { if (s.iAmReady) s.setReady(true); paint(); }),
       s.on('status', () => paint()),
+      s.on('ready', () => paint()),
       s.on('closed', (d) => { toast(d.reason, 'err'); app.online = null; paint(); }),
       s.on('start', () => { sfx.stake(); haptic('big'); go('game', { online: true }); }),
       s.on('hello', () => {}),
@@ -104,8 +105,10 @@ export async function onlineScreen(app, params) {
 
   function paint() {
     const s = net();
-    if (s && !s.closed && s.code) return mount(root, lobby(s));
-    mount(root, connectView());
+    const y = window.scrollY;
+    if (s && !s.closed && s.code) mount(root, lobby(s));
+    else mount(root, connectView());
+    if (y) window.scrollTo(0, y);
   }
 
   function connectView() {
@@ -128,7 +131,8 @@ export async function onlineScreen(app, params) {
 
   function lobby(s) {
     const link = s.joinLink();
-    const ready = s.members.length >= 2;
+    const ready = s.members.length >= 2 && s.allReady();
+    const waitingFor = s.members.filter((m) => !m.host && !s.isReady(m.id)).length;
     const connected = (m) => m.connected;
     return [
       screenHeader('Room', () => leave().then(() => goBack('menu'))),
@@ -142,10 +146,10 @@ export async function onlineScreen(app, params) {
         s.status !== 'online' ? h('p.tiny.amber', {}, s.status === 'reconnecting' ? 'Reconnecting…' : 'Connecting…') : null,
       ),
       h('div.row.between', {}, h('h3', {}, `Players (${s.members.length}/4)`), h('span.tiny.dim', {}, '2–4 to start')),
-      h('div.col.gap-s', {}, s.members.map((m) => h('div.pick.static', {}, avatar({ avatar: { key: m.avatar } }, 32), h('div', {}, h('div.name', { style: { fontFamily: 'var(--font-display)', fontSize: '24px', fontWeight: 800, textTransform: 'uppercase', lineHeight: 1 } }, m.name), h('div.tiny.dim', {}, `${m.host ? 'Host · ' : ''}${languageOf(m.language).native}`)), h('span.dot', { class: connected(m) ? 'on' : 'off', title: connected(m) ? 'connected' : 'disconnected' })))),
+      h('div.col.gap-s', {}, s.members.map((m) => h('div.pick.static', {}, avatar({ avatar: { key: m.avatar } }, 32), h('div', {}, h('div.name', { style: { fontFamily: 'var(--font-display)', fontSize: '24px', fontWeight: 800, textTransform: 'uppercase', lineHeight: 1 } }, m.name), h('div.tiny.dim', {}, `${m.host ? 'Host · ' : ''}${languageOf(m.language).native}`)), m.host ? null : h('span.tiny', { class: s.isReady(m.id) ? 'green' : 'amber', style: { marginLeft: 'auto' } }, s.isReady(m.id) ? 'READY' : 'not ready'), h('span.dot', { class: connected(m) ? 'on' : 'off', title: connected(m) ? 'connected' : 'disconnected' })))),
       s.isHost
-        ? h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', disabled: !ready, onclick: () => { sfx.tap(); go('themes', { mode: 'versus', online: true }); } }, ready ? 'Choose themes & start' : 'Waiting for another player…'))
-        : h('div.stick-bottom', {}, h('p.small.dim.center', {}, 'Waiting for the host to pick themes and start…'), h('button.btn.ghost.block', { type: 'button', onclick: () => leave() }, 'Leave room')),
+        ? h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', disabled: !ready, onclick: () => { sfx.tap(); go('themes', { mode: 'versus', online: true }); } }, ready ? 'Everyone is ready · choose themes' : s.members.length < 2 ? 'Waiting for another player…' : `Waiting for ${waitingFor} player${waitingFor > 1 ? 's' : ''} to be ready…`))
+        : h('div.stick-bottom', {}, h('button.btn.block', { type: 'button', class: s.iAmReady ? '' : 'primary', onclick: () => { sfx.tap(); haptic('tap'); s.setReady(!s.iAmReady); paint(); } }, s.iAmReady ? 'Ready ✓ (tap to cancel)' : "I'm ready"), h('p.small.dim.center', {}, s.iAmReady ? 'Waiting for the host to pick themes and start…' : 'Tap ready so the host can start.'), h('button.btn.ghost.block', { type: 'button', onclick: () => leave() }, 'Leave room')),
     ];
   }
 

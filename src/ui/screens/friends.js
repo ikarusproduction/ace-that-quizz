@@ -73,6 +73,14 @@ export async function friendsScreen(app, params = {}) {
     busy = false;
   };
 
+  const invite = async () => {
+    const url = location.origin + location.pathname;
+    const text = `Come and play The House Knows with me! Add my friend code ${identity.code}.`;
+    sfx.tap();
+    if (navigator.share) { try { await navigator.share({ title: 'The House Knows', text, url }); return; } catch (e) { if (e?.name === 'AbortError') return; } }
+    try { await navigator.clipboard.writeText(`${text} ${url}`); toast('Invite copied. Paste it in any chat.'); } catch { toast(`${text} ${url}`); }
+  };
+
   const listView = () => {
     const input = h('input', { type: 'text', placeholder: 'Friend code, e.g. K7QD-4MXP', maxlength: 9, autocapitalize: 'characters', autocomplete: 'off', 'aria-label': 'Friend code' });
     input.addEventListener('input', () => { const v = normalizeFriendCode(input.value); if (v !== input.value.toUpperCase()) input.value = v; });
@@ -80,6 +88,7 @@ export async function friendsScreen(app, params = {}) {
     return [
       screenHeader('Friends', () => goBack('menu')),
       profileTabs(),
+      h('button.btn.primary.block.invite-btn', { type: 'button', onclick: invite }, '✉ Invite friends to play'),
       h('div.panel', {},
         h('div.tiny.dim', {}, `${profiles.find((p) => p.id === pid)?.name}'s friend code`),
         h('div.code-box', {}, identity.code),

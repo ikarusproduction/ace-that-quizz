@@ -42,6 +42,10 @@ try:
             ph.wait_for_selector('text=/Game server:/')
             ph.fill('.code-input', code); ph.click('button:text-is("Join")', no_wait_after=True); ph.wait_for_selector('.room-code')
         ana.wait_for_function('document.querySelectorAll(".pick.static").length===3')
+        assert ana.locator('button:has-text("Choose themes")').count()==0 or ana.locator('button.primary.block').first.is_disabled(), 'host must not start before guests are ready'
+        for ph in (ben, cleo):
+            ph.click('text=I\'m ready', no_wait_after=True)
+        ana.wait_for_selector('text=Choose themes')
         ana.click('text=Choose themes', no_wait_after=True); ana.wait_for_selector('.slots')
         ana.screenshot(path='/tmp/online-themes.png')
         ana.click('text=Start game', no_wait_after=True)

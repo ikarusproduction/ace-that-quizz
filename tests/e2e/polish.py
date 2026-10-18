@@ -20,10 +20,10 @@ try:
         # the bulb is a toy: flicker, then break, then it lights back on
         pg.click('.bulb-btn', no_wait_after=True, force=True); time.sleep(.2)
         assert not pg.locator('.bulb-btn.broken').count()
-        for _ in range(8): pg.click('.bulb-btn', no_wait_after=True, force=True); time.sleep(.08)
+        for _ in range(6): pg.click('.bulb-btn', no_wait_after=True, force=True); time.sleep(.08)
         assert pg.locator('.bulb-btn.broken').count(), 'bulb did not break'
         pg.screenshot(path='/tmp/polish-bulb-broken.png')
-        pg.wait_for_function("!document.querySelector('.bulb-btn.broken')", timeout=12000)
+        pg.wait_for_function("!document.querySelector('.bulb-btn.broken')", timeout=8000)
         print('bulb: broke and relit')
         # music tracks start and stop without errors
         r = pg.evaluate("""async () => {
@@ -66,12 +66,13 @@ try:
           const { createBulbRite } = await import('/src/ui/bulbrite.js');
           const rite = createBulbRite({ name: 'Gold Pack', from: 'test', light: '#ffd24a' });
           document.body.append(rite.el);
-          return rite.el.querySelectorAll('.rite-pips i').length;
+          return rite.el.querySelectorAll('.rite-ring').length;
         }""")
-        assert r == 3
-        for k in range(3):
-            pg.click('.rite-bulb', no_wait_after=True, force=True); time.sleep(.4)
-            if k == 1: pg.screenshot(path='/tmp/polish-rite2.png')
+        assert r == 1
+        bx = pg.locator('.rite-bulb').bounding_box(); pg.mouse.move(bx['x'] + bx['width'] / 2, bx['y'] + bx['height'] * .6); pg.mouse.down(); time.sleep(1.0)
+        pg.screenshot(path='/tmp/polish-rite2.png'); pg.mouse.up()
+        # releasing early drains the charge
+        time.sleep(1.0); assert float(pg.evaluate("document.querySelector('.rite').style.getPropertyValue('--p')")) < .2
         print('pack rite ok')
         # Fog: trace a circle, or tap four times
         pg.goto('http://localhost:5196/'); pg.wait_for_selector('.menu'); time.sleep(3.3)
@@ -86,14 +87,20 @@ try:
           window.__answered = null;
         }""")
         pg.screenshot(path='/tmp/polish-fog.png')
-        d = pg.locator('#fogA ~ .fog-ui .fog-dial, .fog-wrap:nth-child(1) .fog-dial').first
-        box = d.bounding_box(); cx, cy = box['x'] + box['width'] / 2, box['y'] + box['height'] / 2
         import math
-        pg.mouse.move(cx + 40, cy); pg.mouse.down()
-        for i in range(90):
-            a = i / 90 * 2 * math.pi * 1.4
-            pg.mouse.move(cx + 40 * math.cos(a), cy + 40 * math.sin(a)); time.sleep(.01)
-        pg.mouse.up(); time.sleep(.3)
+        seen = set()
+        for attempt in range(8):  # the dial hops every quarter of the way, so re-grab it each time
+            if not pg.evaluate("document.querySelector('#fogA').classList.contains('hex-blur')"): break
+            time.sleep(.35)
+            d = pg.locator('.fog-wrap').first.locator('.fog-dial')
+            box = d.bounding_box(); cx, cy = box['x'] + box['width'] / 2, box['y'] + box['height'] / 2
+            seen.add((round(cx / 20), round(cy / 20)))
+            pg.mouse.move(cx + 40, cy); pg.mouse.down()
+            for i in range(40):
+                a = i / 40 * 2 * math.pi * 0.7
+                pg.mouse.move(cx + 40 * math.cos(a), cy + 40 * math.sin(a)); time.sleep(.01)
+            pg.mouse.up()
+        assert len(seen) >= 2, 'the dial never moved'
         assert not pg.evaluate("document.querySelector('#fogA').classList.contains('hex-blur')"), 'circles did not focus'
         for i in range(4): pg.locator('#fogB .choice').first.click(no_wait_after=True, force=True); time.sleep(.1)
         assert not pg.evaluate("document.querySelector('#fogB').classList.contains('hex-blur')"), 'taps did not focus'

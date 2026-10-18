@@ -180,6 +180,8 @@ const SPRITES = {
     '......', '..kkkk', '.kyyyy', 'kyywww', 'kyywyy', 'kyyyyy', 'kyyyyy', '.kyyyy', '..kaaa', '..kdgg', '..kdgg', '...kkk' ] },
   bulb_off: { m: true, rows: [
     '......', '..kkkk', '.kggdd', 'kgggdd', 'kgglgd', 'kggggd', 'kggggd', '.kggdd', '..kddd', '..kdgg', '..kdgg', '...kkk' ] },
+  bulb_broken: { rows: [
+    '....k.k.k...', '..kkgkkgkk..', '.kgglk.ddgk.', '.kglk.dadk..', '.kgkddadgk..', '.kgkdaaddgk.', '.kgdkdddkgk.', '.kggkgkkgk..', '..kggkgggk..', '...kkaAAkk..', '....kdgdk...', '....kkkkk...' ] },
   chip: { m: true, rows: [
     '......', '..kkkk', '.kaaaa', 'kaAAAA', 'kaAaaa', 'kaAaAA', 'kaAaAA', 'kaAaaa', 'kaAAAA', '.kaaaa', '..kkkk', '......' ] },
   vault: { m: true, rows: [

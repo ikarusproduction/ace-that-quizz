@@ -69,12 +69,19 @@ try:
         pg.click('.tab:has-text("Packs")', no_wait_after=True); time.sleep(.4)
         pg.click('button:has-text("Open")', no_wait_after=True); time.sleep(.4)
         pg.wait_for_selector('.rite-bulb')
-        for k in range(3):
-            pg.click('.rite-bulb', no_wait_after=True, force=True); time.sleep(.45)
-            if k == 1: pg.screenshot(path='/tmp/hex-bulb2.png')
+        box = pg.locator('.rite-bulb').bounding_box()
+        pg.mouse.move(box['x'] + box['width'] / 2, box['y'] + box['height'] * 0.6); pg.mouse.down()
+        time.sleep(1.2); pg.screenshot(path='/tmp/hex-bulb2.png')
+        time.sleep(1.6); pg.mouse.up()
+        pg.wait_for_selector('.pc-grid', timeout=5000); time.sleep(.9)
+        pg.screenshot(path='/tmp/hex-pack0.png')
         for i in range(6):
-            time.sleep(.5)
-            if pg.locator('.reveal-overlay .btn').count(): pg.screenshot(path=f'/tmp/hex-pack{i}.png'); pg.locator('.reveal-overlay .btn').click(no_wait_after=True)
+            lab = pg.locator('.pc-actions .btn.primary').inner_text()
+            pg.locator('.pc-actions .btn.primary').click(no_wait_after=True); time.sleep(.5)
+            if lab == 'OK': break
+        assert pg.locator('.pc-grid').count() == 0
+        # instant path: claim nothing more, open any remaining pack the quick way if there is one
+        pg.screenshot(path="/tmp/hex-pack1.png")
         time.sleep(.5)
         n = pg.evaluate("async()=>{const ps=await window.__app.repo.listProfiles(); const m=await window.__app.repo.getMeta(ps[0].id); return [m.hexes.owned.length, m.packs.length, m.hexes.dust]}")
         print('owned/packs/dust', n)

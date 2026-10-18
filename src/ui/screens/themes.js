@@ -86,12 +86,18 @@ export async function themesScreen(app, params) {
 
   const start = () => {
     if (busy || slots.some((s) => !s)) return;
+    if (params.online && !(app.online?.allReady?.())) { toast('Everyone has to be ready first', 'err'); return; }
     saveLast(slots);
     sfx.stake(); haptic('big');
     go('game', { ...params, themes: [...slots] });
   };
 
   function paint() {
+    const keepY = window.scrollY;
+    paintNow();
+    if (keepY) window.scrollTo(0, keepY);
+  }
+  function paintNow() {
     const full = slots.every(Boolean);
     const used = {};
     for (const s of slots) if (s) used[s] = (used[s] ?? 0) + 1;

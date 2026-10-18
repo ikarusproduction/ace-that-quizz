@@ -36,7 +36,7 @@ export async function bossesScreen(app, params) {
         return el;
       })),
       h('button.btn.ghost.block', { type: 'button', onclick: () => { picked = null; sfx.tap(); go('game', { mode: 'rush', playerIds: params.playerIds, bossId: null }); } }, 'Surprise me'),
-      h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', disabled: !picked, onclick: () => { sfx.stake(); go('game', { mode: 'rush', playerIds: params.playerIds, bossId: picked }); } }, picked ? `Fight ${BOSS_ROSTER[picked].name}` : 'Pick a boss')),
+      h('div.stick-bottom', {}, h('button.btn.ghost.block', { type: 'button', onclick: () => { sfx.tap(); goBack('setup'); } }, '← Back'), h('button.btn.primary.block', { type: 'button', disabled: !picked, onclick: () => { sfx.stake(); go('game', { mode: 'rush', playerIds: params.playerIds, bossId: picked }); } }, picked ? `Fight ${BOSS_ROSTER[picked].name}` : 'Pick a boss')),
     );
   };
   paint();

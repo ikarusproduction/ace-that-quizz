@@ -1,5 +1,5 @@
 // The bulb on the title screen is a toy. Tap it and it flickers, buzzes and your phone vibrates. Hammer it and it
-// breaks: it folds up on its cord and the room goes dark. After a few seconds it stutters back on by itself.
+// breaks: it cracks open, sparks and the room goes dark. After a few seconds it stutters back on by itself.
 import { h } from './dom.js';
 import { sprite } from './pixel.js';
 import { sfx } from './audio.js';
@@ -7,15 +7,17 @@ import { burstAt, haptic, motionReduced } from './fx.js';
 import { setMood, blackout } from './lighting.js';
 
 const WINDOW_MS = 1700;
-const BREAK_AT = 7;
-const REPAIR_MS = 6500;
+const BREAK_AT = 5;
+const REPAIR_MS = 3200;
 
 export function interactiveBulb({ intro = false } = {}) {
   const on = sprite('bulb_on', 64);
   on.classList.add('b-on');
   const off = sprite('bulb_off', 64);
   off.classList.add('b-off');
-  const wrap = h('div.bulb-wrap', {}, off, on);
+  const crack = sprite('bulb_broken', 64);
+  crack.classList.add('b-broken');
+  const wrap = h('div.bulb-wrap', {}, off, crack, on);
   const hint = h('span.bulb-hint', { 'aria-hidden': 'true' }, 'tap the light');
   const btn = h('button.hang.bulb-btn', { type: 'button', class: intro ? 'intro' : '', 'aria-label': 'The light bulb. Tap it to make it flicker.' }, h('div.cord'), wrap, hint);
   let taps = [];
@@ -45,7 +47,7 @@ export function interactiveBulb({ intro = false } = {}) {
     const c = center();
     burstAt(c.x, c.y, { colors: ['#fff2c4', '#ffd98a', '#e8a33d', '#cfd6dc'], count: 26, spread: 130, gravity: 220, size: [3, 7] });
     setMood('out');
-    blackout(700);
+    blackout(450);
     taps = [];
     later(repair, REPAIR_MS);
   };
@@ -59,7 +61,7 @@ export function interactiveBulb({ intro = false } = {}) {
       broken = false;
       setMood('idle');
       stutter(8);
-    }, motionReduced() ? 0 : 520);
+    }, motionReduced() ? 0 : 420);
   };
 
   btn.addEventListener('click', () => {

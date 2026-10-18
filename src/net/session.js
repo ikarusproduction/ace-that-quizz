@@ -48,6 +48,20 @@ export class OnlineSession {
     this.status = 'idle';
     this.infos = new Map(); // memberId -> info sent by that phone (host only)
     this.es = null;
+    this.readyMap = new Map(); // memberId -> true when that guest tapped "ready"
+    this.iAmReady = false;
+  }
+
+  /** Guests must be ready before the host can start; the host counts as ready. */
+  isReady(id) { return id === this.hostId || this.members.find((m) => m.id === id)?.host || this.readyMap.get(id) === true; }
+  allReady() {
+    const guests = this.members.filter((m) => !m.host && m.id !== this.hostId);
+    return guests.length > 0 && guests.every((m) => m.connected !== false && this.readyMap.get(m.id) === true);
+  }
+  setReady(v) {
+    this.iAmReady = Boolean(v);
+    if (this.me) this.readyMap.set(this.me.id, this.iAmReady);
+    return this.send('ready', { ready: this.iAmReady }, 'all').catch(() => {});
   }
 
   on(event, fn) {
@@ -185,6 +199,7 @@ export class OnlineSession {
   }
   #onMembers(d) {
     this.members = d.members;
+    for (const id of [...this.readyMap.keys()]) if (!d.members.some((m) => m.id === id)) this.readyMap.delete(id);
     this.locked = d.locked;
     this.emit('members', this.members);
   }
@@ -277,6 +292,9 @@ export class OnlineSession {
     } else if (type === 'info') {
       this.infos.set(from, payload);
       this.emit('info', { from, info: payload });
+    } else if (type === 'ready') {
+      this.readyMap.set(from, Boolean(payload?.ready));
+      this.emit('ready', { from, ready: Boolean(payload?.ready) });
     } else if (type === 'end') {
       this.emit('end', payload);
     } else {

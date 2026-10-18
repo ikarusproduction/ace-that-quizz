@@ -5,7 +5,7 @@ import { h, sleep } from './dom.js';
 import { sprite } from './pixel.js';
 import { sfx, setMusicIntensity } from './audio.js';
 import { burstAt, haptic, motionReduced } from './fx.js';
-import { shake, pulse, blackout } from './lighting.js';
+import { shake, pulse, blackout, rageStorm, rageFlicker } from './lighting.js';
 import { createRig } from './bossrig.js';
 import { INTENTS, DUEL, intentIdFor } from '../engine/duel.js';
 
@@ -164,6 +164,7 @@ export function createStage({ enc, hp, lives, maxLives = DUEL.maxLives, heat = 0
       if (Math.random() < 0.35) sfx.flicker?.();
     }, 1250);
   };
+  let rageTimer = null;
   const stopPressure = () => { clearInterval(pressureTimer); pressureTimer = null; };
   if (lastBulb) startPressure();
 
@@ -277,6 +278,18 @@ export function createStage({ enc, hp, lives, maxLives = DUEL.maxLives, heat = 0
   }
 
   /** The last room comes apart: the roof leaves, then the walls, and the jester steps out. */
+  /** While a boss stays enraged the lights stutter at random. */
+  function startRageTicks() {
+    if (rageTimer || motionReduced()) return;
+    const tick = () => {
+      if (!root.isConnected) { rageTimer = null; return; }
+      rageFlicker();
+      rageTimer = setTimeout(tick, 2800 + Math.random() * 4200);
+    };
+    rageTimer = setTimeout(tick, 2200);
+  }
+  if (enraged || enc.phase >= 1) startRageTicks();
+
   async function phaseShift(to) {
     const ph = enc.phases?.[to];
     if (!ph) return;
@@ -288,7 +301,7 @@ export function createStage({ enc, hp, lives, maxLives = DUEL.maxLives, heat = 0
     shake(root);
     popup(to === 1 ? 'THE ROOF TEARS OFF' : 'THE WALLS FALL', 'rage');
     burstAt(c.x, c.y - 20, { colors: ['#ecdcb4', '#bda26e', '#92302a', '#ffd24a'], count: 46, spread: 220, gravity: 260, size: [4, 11], duration: [800, 1500] });
-    if (!reduced) { pulse('bad'); await blackout(1000); }
+    if (!reduced) { rageStorm(2); await sleep(900); }
     setSprite(ph.sprite);
     setMusicIntensity?.(to);
     burstAt(c.x, c.y, { colors: ['#ff3b2a', '#ffd0c4', '#ffd24a'], count: 24, spread: 150, size: [3, 8] });
@@ -365,6 +378,8 @@ export function createStage({ enc, hp, lives, maxLives = DUEL.maxLives, heat = 0
       sfx.roar?.();
       popup('ENRAGED!', 'rage');
       flash('rage', 900);
+      rageStorm(1);
+      startRageTicks();
       shake(root);
       burstAt(center.x, center.y, { colors: ['#ff5a4f', '#b3261e', '#ff9a3c'], count: 24, spread: 150, size: [4, 9] });
       await sleep(reduced ? 0 : 500);

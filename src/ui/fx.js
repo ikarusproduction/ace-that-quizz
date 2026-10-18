@@ -35,6 +35,12 @@ export function haptic(name) {
   }
 }
 
+/** One raw buzz of `ms` milliseconds (used for the pack-opening hold). */
+export function buzz(ms) {
+  if (!hapticsOn) return false;
+  try { return Boolean(navigator.vibrate?.(Math.max(1, Math.round(ms)))); } catch { return false; }
+}
+
 const COLORS = ['#e8a33d', '#6fa86b', '#b3261e', '#e8e2d0', '#f6d77f', '#d9772b'];
 let layer = null;
 function fxLayer() {

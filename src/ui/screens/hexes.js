@@ -8,30 +8,37 @@ import { CARD_IDS } from '../../engine/cards.js';
 import { metaOf } from '../../storage/meta.js';
 import { sfx, unlockAudio } from '../audio.js';
 import { cardReveal, rarityFx } from '../rarityfx.js';
-import { createBulbRite, PACK_LIGHT } from '../bulbrite.js';
+import { createBulbRite, showCardsPage, PACK_LIGHT } from '../bulbrite.js';
 
 const TABS = [['deck', 'Deck'], ['book', 'Collection'], ['packs', 'Packs'], ['forge', 'Forge']];
 const byRarity = (a, b) => HEX_RARITY_ORDER.indexOf(HEXES[a].rarity) - HEX_RARITY_ORDER.indexOf(HEXES[b].rarity);
 
-/** The pack-opening ritual: tap the bulb three times, it overloads in the colour of the best card, then each card is revealed. */
+/** Pack opening: press and hold the bulb until it blows (or open instantly), then the cards are dealt side by side. */
 export async function openPackRitual(app, playerId, pack) {
   unlockAudio();
-  const rite = createBulbRite({ name: PACKS[pack.type].name, from: pack.from, light: PACK_LIGHT[pack.type] ?? '#ffd24a' });
+  const rite = createBulbRite({ name: PACKS[pack.type].name, from: pack.from, light: PACK_LIGHT[pack.type] ?? '#ffd24a', count: PACKS[pack.type].count });
   document.body.append(rite.el);
-  await rite.nextTap();
-  await rite.nextTap();
-  const third = rite.nextTap();
-  await third;
+  const how = await rite.hold();
   let result;
   try { result = await app.repo.openPack(playerId, pack.id); } catch (e) { rite.close(); toast(e.message, 'err'); return null; }
-  const best = result.cards.map((c) => HEXES[c.id]?.rarity ?? 'common').sort((a, b) => HEX_RARITY_ORDER.indexOf(b) - HEX_RARITY_ORDER.indexOf(a))[0] ?? 'common';
-  await rite.overload(best);
-  rite.close();
-  for (let i = 0; i < result.cards.length; i++) {
-    const c = result.cards[i];
-    await cardReveal(c.id, { title: `${PACKS[result.type].name} · ${i + 1}/${result.cards.length}`, sub: c.dup ? `Duplicate: +${c.dust} dust` : 'New hex for your collection!' });
+  if (how === 'held') {
+    const best = result.cards.map((c) => HEXES[c.id]?.rarity ?? 'common').sort((a, b) => HEX_RARITY_ORDER.indexOf(b) - HEX_RARITY_ORDER.indexOf(a))[0] ?? 'common';
+    await rite.overload(best);
   }
+  rite.close();
+  await showCardsPage({ title: PACKS[result.type].name, results: [result], instant: how === 'quick' });
   return result;
+}
+
+/** Open every waiting pack with no animation and show all the rewards on one page. */
+export async function openAllPacks(app, playerId, packs) {
+  unlockAudio();
+  const results = [];
+  for (const k of packs) {
+    try { results.push(await app.repo.openPack(playerId, k.id)); } catch (e) { toast(e.message, 'err'); break; }
+  }
+  if (results.length) await showCardsPage({ title: `${results.length} pack${results.length > 1 ? 's' : ''} opened`, results, instant: true });
+  return results;
 }
 
 export async function hexesScreen(app, params) {
@@ -87,6 +94,7 @@ export async function hexesScreen(app, params) {
       },
       packs: () => [
         h('p.small.dim', {}, 'Every finished game earns packs: a Bronze for playing, a Silver for a win or a streak of 5, a Gold for a streak of 8. Finished missions add a Bronze each. Duplicates turn into dust.'),
+        m.packs.length > 1 ? h('button.btn.block', { type: 'button', onclick: async () => { const r = await openAllPacks(app, pid, m.packs); if (r.length) { await sleep(150); paint(); } } }, `Open all ${m.packs.length} instantly`) : null,
         m.packs.length ? h('div.col.gap-s', {}, m.packs.map((k) => h('div.panel.row', {}, sprite('key', 28), h('div.grow', {}, h('b', {}, PACKS[k.type].name), h('div.tiny.dim', {}, k.from || 'Earned')), h('button.btn.primary', { type: 'button', onclick: async () => { const r = await openPackRitual(app, pid, k); if (r) { await sleep(150); paint(); } } }, 'Open')))) : h('div.panel.inset.empty-state', {}, sprite('lock', 32), h('p', {}, 'No packs waiting.'), h('p.tiny', {}, 'Finish a game or claim your daily pack.')),
       ],
       forge: () => {
