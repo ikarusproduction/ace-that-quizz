@@ -1,7 +1,8 @@
 import { h } from '../dom.js';
 import { sprite } from '../pixel.js';
 import { go } from '../app.js';
-import { lightsOn, setMood } from '../lighting.js';
+import { openingLights, setMood } from '../lighting.js';
+import { interactiveBulb } from '../bulb.js';
 import { sfx, unlockAudio } from '../audio.js';
 import { confirmDialog, toast } from '../components.js';
 import { dispatch } from '../../engine/game.js';
@@ -20,8 +21,8 @@ export async function menuScreen(app) {
   const dailyReady = metas.some((m) => m.daily.lastDay !== localDateKey());
 
   const el = h('div.screen', {},
-    h('div.title-stage', {},
-      h('div.hang', {}, h('div.cord'), sprite('bulb_on', 64)),
+    h('div.title-stage', { class: introPlayed ? '' : 'intro' },
+      interactiveBulb({ intro: !introPlayed }),
       h('h1.logo', {}, h('small', {}, 'The'), 'House', h('br'), 'Knows'),
       h('div.tagline', {}, 'A trivia game of nerve · 1–4 players'),
     ),
@@ -45,7 +46,7 @@ export async function menuScreen(app) {
   if (!introPlayed) {
     introPlayed = true;
     // First visit this session: the room starts dark and the bulb stutters on.
-    lightsOn({ sound: false });
+    openingLights();
     const unlock = () => { unlockAudio(); };
     el.addEventListener('pointerdown', unlock, { once: true });
   }

@@ -68,7 +68,10 @@ try:
         pg.click('button:has-text("Claim today")', no_wait_after=True); time.sleep(.6)
         pg.click('.tab:has-text("Packs")', no_wait_after=True); time.sleep(.4)
         pg.click('button:has-text("Open")', no_wait_after=True); time.sleep(.4)
-        for _ in range(2): pg.click('.pack-sealed', no_wait_after=True); time.sleep(.3)
+        pg.wait_for_selector('.rite-bulb')
+        for k in range(3):
+            pg.click('.rite-bulb', no_wait_after=True, force=True); time.sleep(.45)
+            if k == 1: pg.screenshot(path='/tmp/hex-bulb2.png')
         for i in range(6):
             time.sleep(.5)
             if pg.locator('.reveal-overlay .btn').count(): pg.screenshot(path=f'/tmp/hex-pack{i}.png'); pg.locator('.reveal-overlay .btn').click(no_wait_after=True)

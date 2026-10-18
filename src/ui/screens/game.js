@@ -3,8 +3,8 @@
 import { h, mount, localDateKey } from '../dom.js';
 import { sprite } from '../pixel.js';
 import { go } from '../app.js';
-import { lightsOn, setMood, pulse, blackout, shake } from '../lighting.js';
-import { sfx, playClip, stopClip, unlockAudio } from '../audio.js';
+import { lightsOn, setMood, pulse, blackout, shake, setPressure } from '../lighting.js';
+import { sfx, playClip, stopClip, unlockAudio, startMusic, stopMusic } from '../audio.js';
 import { avatar, cardTile, emptySlot, categoryTag, categoryIcon, diffPips, chipsLine, bulbs, modal, confirmDialog, toast, floatText } from '../components.js';
 import { createGame, dispatch, getQuestionView, getStakeOptions, cardReward } from '../../engine/game.js';
 import { roundInfo, roundCategories } from '../../engine/rounds.js';
@@ -12,7 +12,8 @@ import { CARDS, equippableCards } from '../../engine/cards.js';
 import { RULES, HAZARDS, BOSSES, SHOP_ITEMS } from '../../engine/modifiers.js';
 import { CATEGORIES, DIFFICULTIES } from '../../engine/bank.js';
 import { haptic, confetti, coinBurst, stamp, streakHype } from '../fx.js';
-import { splash, clearHexFx, unblurOnFirstTap } from '../hexfx.js';
+import { splash, clearHexFx } from '../hexfx.js';
+import { fogFocus } from '../focus.js';
 import { cardReveal, rarityFx } from '../rarityfx.js';
 import { HEXES, HEX_NUMBERS, STREAK_TIERS, tierForStreak, packsEarned, evaluateMissions, usableHexes } from '../../engine/hexes.js';
 import { metaOf } from '../../storage/meta.js';
@@ -318,6 +319,8 @@ class GameController {
     if (this.net) { const n = this.net; this.app.online = null; n.leave(); }
     this.stopTimer();
     stopClip();
+    stopMusic(0.5);
+    setPressure(false);
     if (this.keyHandler) document.removeEventListener('keydown', this.keyHandler);
   }
 
@@ -595,8 +598,20 @@ class GameController {
     ];
   }
 
+  /** Boss music while a boss or champion is on the stage, the waltz for the last room, quiet everywhere else. */
+  syncMusic() {
+    const s = this.s;
+    const fighting = s.enc && !s.enc.over && ['stake', 'question', 'reveal'].includes(s.phase);
+    if (!fighting || s.enc.kind === 'minion' || s.status === 'finished') { stopMusic(0.8); return; }
+    if (s.enc.kind === 'final') startMusic('house', { intensity: s.enc.phase ?? 0 });
+    else startMusic('boss', { intensity: s.enc.hp <= s.enc.maxHp * DUEL.enrageAt ? 1 : 0 });
+  }
+
   setMoodForState() {
     const s = this.s;
+    const fight = s.enc && s.round && ['stake', 'question', 'reveal'].includes(s.phase);
+    setPressure(Boolean(fight) && s.players.some((p) => p.strikes === 1 && !p.defeated));
+    this.syncMusic();
     if (s.phase === 'finished') return setMood(s.players.some((p) => p.result === 'won') ? 'win' : 'out');
     if (s.enc && ['map', 'rest', 'event', 'shop'].includes(s.phase)) return setMood('calm');
     if (s.enc && s.round) {
@@ -961,9 +976,9 @@ class GameController {
   choicesBox(hexes, el) {
     if (hexes.includes('flip')) el.classList.add('hex-flip');
     if (hexes.includes('blur') && this.blurClearedKey !== this.hexShown) {
-      el.classList.add('hex-blur');
-      unblurOnFirstTap(el);
-      el.addEventListener('click', () => { this.blurClearedKey = this.hexShown; }, { once: true });
+      const key = this.hexShown;
+      const start = this.fogProgress?.key === key ? this.fogProgress.v : 0;
+      return fogFocus(el, { progress: start, onProgress: (v) => { this.fogProgress = { key, v }; }, onDone: () => { this.blurClearedKey = key; } });
     }
     return el;
   }
@@ -1269,7 +1284,8 @@ class GameController {
     const livesBefore = livesAfter + d.bulbsLost;
     const enraged = Boolean(enc.enraged) && hp > 0 && hp <= enc.maxHp * DUEL.enrageAt;
     const missesBefore = enc.kind === 'minion' ? d.misses - (r.correct ? 0 : 1) : 0;
-    const stage = createStage({ enc, hp, lives: played ? livesAfter : livesBefore, heat: p.heat ?? 0, qIndex: s.qIndex, intent: null, enraged, misses: played ? d.misses : missesBefore, showPattern: false });
+    const before = !played && d.phaseTo > d.phaseFrom ? enc.phases?.[d.phaseFrom]?.sprite : null;
+    const stage = createStage({ enc, hp, lives: played ? livesAfter : livesBefore, heat: p.heat ?? 0, qIndex: s.qIndex, intent: null, enraged, misses: played ? d.misses : missesBefore, showPattern: false, spriteName: before, enterKey: `${s.roundIndex}:${enc.id}` });
     if (played && d.over === 'won') stage.boss.classList.add('gone');
     if (!played) this.pendingPlay = { stage, d, key, ctx: { livesBefore, livesAfter, heatAfter: p.heat ?? 0 } };
     return stage.el;

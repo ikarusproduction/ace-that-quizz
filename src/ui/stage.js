@@ -1,10 +1,12 @@
-// The fight stage: the enemy, its health bar, its telegraphed move, your bulbs and your heat. The reveal screen calls
-// `play(duel)` to animate what just happened: a hit, a crit, a block, a heal, a lunge that cracks a bulb, a rage, a death.
+// The fight stage: the enemy, its health bar, its telegraphed move, your string of bulbs and your heat. The reveal screen
+// calls `play(duel)` to animate what just happened: a hit, a crit, a block, a heal, a lunge that cracks a bulb, a rage,
+// a death, and, for the last room, the house tearing itself open.
 import { h, sleep } from './dom.js';
 import { sprite } from './pixel.js';
-import { sfx } from './audio.js';
+import { sfx, setMusicIntensity } from './audio.js';
 import { burstAt, haptic, motionReduced } from './fx.js';
 import { shake, pulse, blackout } from './lighting.js';
+import { createRig } from './bossrig.js';
 import { INTENTS, DUEL, intentIdFor } from '../engine/duel.js';
 
 const GLYPHS = {
@@ -12,17 +14,18 @@ const GLYPHS = {
   cipher: ['01', '#', '?', 'Ω'], news: ['!', '▮', '▬', '·'], vines: ['~', '"', ',', '·'], dread: ['?', '·', '!', '·'],
   house: ['★', '?', '·', '♠'], plain: ['·', '·', '+'],
 };
+const ATTACK_COLORS = { static: ['#6fd1ff', '#effcff'], map: ['#e8a33d', '#f0e4bf'], archive: ['#8a5fb0', '#e8e2d0'], stage: ['#e07b9b', '#ffffff'], cipher: ['#6fd1ff', '#bfc7d1'], news: ['#4f78b4', '#ff5a4f'], vines: ['#6fa86b', '#e0709a'], dread: ['#5c4a86', '#e4dfee'], house: ['#ffd24a', '#c4302b'], plain: ['#ffffff', '#8a9096'] };
 
 const rect = (el) => {
   const r = el.getBoundingClientRect();
   return { x: r.left + r.width / 2, y: r.top + r.height / 2, w: r.width, h: r.height };
 };
 
-/** Small reusable row of bulbs where individual ones can crack and shatter. */
+/** The bulbs you have left, hanging from a wire. Individual ones can crack and shatter. */
 function livesRow(count, max) {
   const shown = Math.max(max, count);
   const row = h('span.lives', { role: 'img', 'aria-label': `${count} bulbs` });
-  for (let i = 0; i < shown; i++) row.append(h('span.life', { class: i < count ? 'on' : 'off' }, sprite(i < count ? 'bulb_on' : 'bulb_off', 28)));
+  for (let i = 0; i < shown; i++) row.append(h('span.life', { class: i < count ? 'on' : 'off' }, sprite(i < count ? 'bulb_on' : 'bulb_off', 32)));
   return row;
 }
 
@@ -31,6 +34,9 @@ function heatRow(heat, cap) {
   for (let i = 0; i < cap; i++) row.append(h('i', { class: i < heat ? 'on' : '' }));
   return row;
 }
+
+const entered = new Set();
+const bossSize = (enc, compact) => (compact ? 96 : enc.kind === 'final' ? 192 : 160);
 
 /**
  * @param {object} o
@@ -41,14 +47,17 @@ function heatRow(heat, cap) {
  * @param {number} o.qIndex    question index, used to show what the boss does next
  * @param {string} o.intent    the move for this question
  * @param {boolean} o.compact  smaller stage for the stake and question screens
+ * @param {string} o.spriteName  show this face instead of the encounter's current one (phase changes play on the reveal)
+ * @param {string} o.enterKey  the first time a key is seen the boss rises out of the dark
  */
-export function createStage({ enc, hp, lives, maxLives = DUEL.maxLives, heat = 0, qIndex = 0, intent = null, enraged = false, compact = false, showPattern = true, misses = 0 }) {
+export function createStage({ enc, hp, lives, maxLives = DUEL.maxLives, heat = 0, qIndex = 0, intent = null, enraged = false, compact = false, showPattern = true, misses = 0, spriteName = null, enterKey = null }) {
   const shownHp = hp ?? enc.hp;
   const arena = enc.arena ?? 'plain';
-  const root = h('div.stage', { class: `arena-${arena} ${compact ? 'compact' : ''} ${enraged ? 'enraged' : ''} kind-${enc.kind}` });
+  const lastBulb = lives === 1;
+  const root = h('div.stage', { class: `arena-${arena} ${compact ? 'compact' : ''} ${enraged ? 'enraged' : ''} ${lastBulb ? 'last-bulb' : ''} kind-${enc.kind}` });
   root.style.setProperty('--boss', enc.color ?? '#8a9096');
 
-  // ambient glyphs drifting behind the boss
+  // ambient glyphs and embers drifting behind the boss
   const bg = h('div.stage-bg', { 'aria-hidden': 'true' });
   const glyphs = GLYPHS[arena] ?? GLYPHS.plain;
   for (let i = 0; i < 14; i++) {
@@ -59,17 +68,31 @@ export function createStage({ enc, hp, lives, maxLives = DUEL.maxLives, heat = 0
     g.style.fontSize = `${12 + ((i * 7) % 14)}px`;
     bg.append(g);
   }
+  for (let i = 0; i < 10; i++) {
+    const e = h('i.ember');
+    e.style.left = `${(i * 53 + 7) % 100}%`;
+    e.style.animationDelay = `${-((i * 1.3) % 6)}s`;
+    e.style.animationDuration = `${3.5 + ((i * 3) % 4)}s`;
+    bg.append(e);
+  }
 
-  const bossImg = sprite(enc.sprite, compact ? 96 : 160, enc.name);
+  const px = bossSize(enc, compact);
+  let rig = createRig(spriteName ?? enc.sprite, px, enc.name);
+  rig.setEnraged(enraged);
+  rig.setDread(lastBulb);
   const aura = h('div.aura');
   const shadow = h('div.shadow');
-  const bossEl = h('div.boss', {}, aura, bossImg);
+  const bossEl = h('div.boss', { class: intent ? `i-${intent}` : '' }, aura, rig.el);
   const bossWrap = h('div.boss-wrap', {}, bossEl, shadow);
+  bossWrap.style.paddingTop = `${6 + rig.overTop}px`; bossWrap.style.paddingBottom = `${rig.overBottom}px`;
+  if (enterKey != null && !entered.has(enterKey)) { entered.add(enterKey); bossEl.classList.add('enter'); setTimeout(() => bossEl.classList.remove('enter'), 1500); }
   const hitLayer = h('div.hit-layer', { 'aria-hidden': 'true' });
   const hpFill = h('i.fill');
   const hpGhost = h('i.ghost');
   const hpText = h('span.hp-text', {}, `${shownHp}/${enc.maxHp}`);
   const hpBar = h('div.hpbar', { role: 'progressbar', 'aria-valuemin': 0, 'aria-valuemax': enc.maxHp, 'aria-valuenow': shownHp, 'aria-label': `${enc.name} health` }, hpGhost, hpFill, h('i.mark'), hpText);
+  // phase notches on the health bar of the last boss
+  if (enc.phases) for (const ph of enc.phases.slice(1)) hpBar.append(h('i.notch', { style: { left: `${ph.at * 100}%` } }));
   const setHpBar = (v) => {
     const pct = `${Math.max(0, Math.min(100, (v / enc.maxHp) * 100))}%`;
     hpFill.style.width = pct;
@@ -107,9 +130,42 @@ export function createStage({ enc, hp, lives, maxLives = DUEL.maxLives, heat = 0
   drawIntent(intent, enraged);
 
   const top = h('div.stage-top', {}, h('b.nm', {}, enc.name), h('span.tiny.dim', {}, enc.title ?? ''));
-  const foot = h('div.stage-foot', {}, livesEl, pips, h('span.grow'), h('span.heat-wrap', {}, sprite('flame', 18), heatEl));
+  // the HUD: your string of bulbs on its wire, your misses (contestants) and your heat
+  const lastTag = h('span.last-tag', { 'aria-live': 'polite' }, lastBulb ? 'ONE LIGHT LEFT' : '');
+  const foot = h('div.life-hud', {}, h('span.lights-label', {}, 'Your lights'), livesEl, pips, h('span.grow'), lastTag, h('span.heat-wrap', {}, sprite('flame', 18), heatEl));
+  const veil = h('div.veil', { 'aria-hidden': 'true' });
   const el = root;
-  root.append(...[bg, top, hitLayer, bossWrap, hpBar, intent ? banner : null, intent && showPattern ? strip : null, foot].filter(Boolean));
+  root.append(...[bg, top, hitLayer, bossWrap, hpBar, intent ? banner : null, intent && showPattern ? strip : null, foot, veil].filter(Boolean));
+
+  /* ----------------------------------------------- pressure: the last bulb */
+
+  let pressureTimer = null;
+  const sparkOne = () => {
+    const bulb = livesEl.querySelector('.life.on');
+    if (!bulb || motionReduced()) return;
+    const n = 3 + Math.floor(Math.random() * 3);
+    for (let i = 0; i < n; i++) {
+      const s = h('i.spark');
+      const a = Math.random() * Math.PI * 2; const d = 10 + Math.random() * 26;
+      s.style.setProperty('--dx', `${Math.cos(a) * d}px`);
+      s.style.setProperty('--dy', `${Math.sin(a) * d - 8}px`);
+      s.style.left = `${40 + Math.random() * 20}%`; s.style.top = `${20 + Math.random() * 30}%`;
+      bulb.append(s);
+      setTimeout(() => s.remove(), 700);
+    }
+  };
+  const startPressure = () => {
+    if (pressureTimer) return;
+    pressureTimer = setInterval(() => {
+      if (!root.isConnected) { clearInterval(pressureTimer); pressureTimer = null; return; }
+      if (document.hidden) return;
+      sfx.heartbeat?.();
+      sparkOne();
+      if (Math.random() < 0.35) sfx.flicker?.();
+    }, 1250);
+  };
+  const stopPressure = () => { clearInterval(pressureTimer); pressureTimer = null; };
+  if (lastBulb) startPressure();
 
   /* ---------------------------------------------------------- effects */
 
@@ -125,6 +181,12 @@ export function createStage({ enc, hp, lives, maxLives = DUEL.maxLives, heat = 0
     bossEl.classList.add(cls);
     setTimeout(() => bossEl.classList.remove(cls), ms);
   };
+  const overlay = (cls, ms, style = {}) => {
+    const o = h('i', { class: `fx ${cls}`, style });
+    root.append(o);
+    setTimeout(() => o.remove(), ms);
+    return o;
+  };
 
   function setHp(v, { ghostDelay = 520 } = {}) {
     const pct = setHpBar(v);
@@ -136,12 +198,27 @@ export function createStage({ enc, hp, lives, maxLives = DUEL.maxLives, heat = 0
     kids.forEach((k, i) => {
       const on = i < n;
       k.className = `life ${on ? 'on' : 'off'}`;
-      k.replaceChildren(sprite(on ? 'bulb_on' : 'bulb_off', 28));
+      k.replaceChildren(sprite(on ? 'bulb_on' : 'bulb_off', 32));
     });
+    const last = n === 1;
+    root.classList.toggle('last-bulb', last);
+    lastTag.textContent = last ? 'ONE LIGHT LEFT' : '';
+    rig.setDread(last);
+    if (last) startPressure(); else stopPressure();
   }
 
   function setHeat(n) {
     [...heatEl.children].forEach((k, i) => k.classList.toggle('on', i < n));
+  }
+
+  function setSprite(name) {
+    const old = rig;
+    rig = createRig(name, px, enc.name);
+    rig.setEnraged(root.classList.contains('enraged'));
+    rig.setDread(root.classList.contains('last-bulb'));
+    bossEl.replaceChild(rig.el, old.el);
+    bossWrap.style.paddingTop = `${6 + rig.overTop}px`; bossWrap.style.paddingBottom = `${rig.overBottom}px`;
+    rig.el.classList.add('rig-arrive');
   }
 
   /** Crack then shatter the bulbs from `from-1` down to `to`. */
@@ -158,9 +235,72 @@ export function createStage({ enc, hp, lives, maxLives = DUEL.maxLives, heat = 0
       sfx.glass?.();
       burstAt(r.x, r.y, { colors: ['#fff2c4', '#ffd98a', '#e8a33d', '#cfd6dc'], count: 16, spread: 90, gravity: 160, size: [3, 7] });
       k.className = 'life off shattered';
-      k.replaceChildren(sprite('bulb_off', 28));
+      k.replaceChildren(sprite('bulb_off', 32));
       await sleep(motionReduced() ? 0 : 180);
     }
+    // all that is left is one flickering bulb: the room closes in
+    const left = kids.filter((k) => k.classList.contains('on')).length;
+    if (left === 1) {
+      root.classList.add('last-bulb');
+      lastTag.textContent = 'ONE LIGHT LEFT';
+      rig.setDread(true);
+      startPressure();
+      popup('ONE LIGHT LEFT', 'leech');
+      sfx.heartbeat?.();
+    }
+  }
+
+  /** What the enemy does when you miss: one signature effect per move. */
+  function attackFx(id, center) {
+    if (motionReduced()) return;
+    const cols = ATTACK_COLORS[arena] ?? ATTACK_COLORS.plain;
+    const glyphBurst = () => {
+      for (let i = 0; i < 7; i++) {
+        const g = h('span.fly-glyph', { style: { left: `calc(50% + ${(i - 3) * 22}px)`, color: cols[i % 2], animationDelay: `${i * 60}ms`, '--sway': `${(i - 3) * 8}px` } }, (GLYPHS[arena] ?? GLYPHS.plain)[i % 3]);
+        hitLayer.append(g);
+        setTimeout(() => g.remove(), 1200);
+      }
+    };
+    switch (id) {
+      case 'surge': case 'accel':
+        for (let i = 0; i < 4; i++) setTimeout(() => overlay('zap', 360, { '--r': `${-50 + i * 34 + Math.random() * 14}deg`, left: `${18 + i * 20}%`, background: cols[0] }), i * 70);
+        break;
+      case 'ink': burstAt(center.x, center.y + 20, { colors: ['#0b0c0d', '#1b1224', '#3a2a4a'], count: 26, spread: 120, gravity: 80, size: [6, 14] }); break;
+      case 'goo': burstAt(center.x, center.y + 10, { colors: ['#6fa86b', '#b9e6a8', '#3f6b44'], count: 24, spread: 100, gravity: 220, size: [5, 11] }); break;
+      case 'quake': overlay('crack', 900); setTimeout(() => shake(root), 160); break;
+      case 'blur': overlay('ripple', 900); overlay('ripple', 900, { animationDelay: '150ms' }); break;
+      case 'flip': flash('spin', 800); break;
+      case 'twin': overlay('slash', 500, { '--r': '28deg' }); setTimeout(() => overlay('slash', 500, { '--r': '-28deg', background: cols[1] }), 160); break;
+      case 'mend': case 'regrow': case 'leech': glyphBurst(); break;
+      default: overlay('slash', 500, { '--r': '-24deg', background: cols[1] }); glyphBurst();
+    }
+  }
+
+  /** The last room comes apart: the roof leaves, then the walls, and the jester steps out. */
+  async function phaseShift(to) {
+    const ph = enc.phases?.[to];
+    if (!ph) return;
+    const reduced = motionReduced();
+    const c = rect(bossWrap);
+    root.classList.add('phase-shift');
+    sfx.houseBreak?.();
+    haptic('jackpot');
+    shake(root);
+    popup(to === 1 ? 'THE ROOF TEARS OFF' : 'THE WALLS FALL', 'rage');
+    burstAt(c.x, c.y - 20, { colors: ['#ecdcb4', '#bda26e', '#92302a', '#ffd24a'], count: 46, spread: 220, gravity: 260, size: [4, 11], duration: [800, 1500] });
+    if (!reduced) { pulse('bad'); await blackout(1000); }
+    setSprite(ph.sprite);
+    setMusicIntensity?.(to);
+    burstAt(c.x, c.y, { colors: ['#ff3b2a', '#ffd0c4', '#ffd24a'], count: 24, spread: 150, size: [3, 8] });
+    if (to === 2) {
+      await sleep(reduced ? 0 : 350);
+      sfx.jesterLaugh?.();
+      popup('HA HA HA', 'leech');
+      rig.ring();
+      haptic('warn');
+    }
+    root.classList.remove('phase-shift');
+    await sleep(reduced ? 0 : 500);
   }
 
   /**
@@ -183,6 +323,7 @@ export function createStage({ enc, hp, lives, maxLives = DUEL.maxLives, heat = 0
       popup(`−${d.dmg}`, d.crit ? 'dmg big' : 'dmg', d.crit ? 52 : 0);
       if (d.curseThrough) popup('THROUGH THE CURSE +1', 'tiny', 0);
       shake(root);
+      if (!d.guarded) overlay('player-strike', 420, { '--r': `${-30 + Math.random() * 60}deg` });
       setHp(d.hpAfter + (d.heal || 0));
       if (d.crit && !reduced) { pulse('good'); root.classList.add('crit-flash'); setTimeout(() => root.classList.remove('crit-flash'), 420); }
       await sleep(reduced ? 0 : 520);
@@ -192,6 +333,7 @@ export function createStage({ enc, hp, lives, maxLives = DUEL.maxLives, heat = 0
       sfx.roar?.();
       pulse('bad');
       shake(root);
+      attackFx(d.intent, center);
       await sleep(reduced ? 0 : 340);
       if (d.heal) { popup(`+${d.heal}`, 'heal'); sfx.heal?.(); setHp(d.hpAfter, { ghostDelay: 0 }); burstAt(center.x, center.y - 20, { colors: ['#6fa86b', '#b9e6a8', '#ffffff'], count: 12, spread: 70, gravity: -40, size: [3, 6] }); }
       if (d.leech) popup(`−${d.leech} chips`, 'leech');
@@ -209,10 +351,17 @@ export function createStage({ enc, hp, lives, maxLives = DUEL.maxLives, heat = 0
       if (d.heatGain) { popup('+1 HEAT', 'heat'); sfx.heat?.(); }
     }
 
+    // the boss changes face
+    if (!killed && d.phaseTo > d.phaseFrom) {
+      await sleep(reduced ? 0 : 200);
+      for (let to = d.phaseFrom + 1; to <= d.phaseTo; to++) await phaseShift(to);
+    }
+
     // the boss enters its rage
     if (!killed && enc.enraged && d.dmg > 0 && d.hpBefore > enc.maxHp * DUEL.enrageAt && d.hpAfter <= enc.maxHp * DUEL.enrageAt) {
       await sleep(reduced ? 0 : 260);
       root.classList.add('enraged');
+      rig.setEnraged(true);
       sfx.roar?.();
       popup('ENRAGED!', 'rage');
       flash('rage', 900);
@@ -234,12 +383,14 @@ export function createStage({ enc, hp, lives, maxLives = DUEL.maxLives, heat = 0
       popup(enc.kind === 'minion' ? 'BEATEN!' : 'DOWN!', 'crit');
       await sleep(reduced ? 0 : 700);
       bossEl.classList.add('gone');
+      stopPressure();
     } else if (d.over === 'beaten') {
       popup('THEY WIN THIS ONE', 'leech');
       bossEl.classList.add('smug');
     } else if (d.over === 'lost') {
       popup('LIGHTS OUT', 'leech');
       root.classList.add('victorious');
+      stopPressure();
     }
   }
 
@@ -247,12 +398,12 @@ export function createStage({ enc, hp, lives, maxLives = DUEL.maxLives, heat = 0
     await blackout(500);
   }
 
-  return { el, root, play, setHp, setLives, setHeat, boss: bossEl };
+  return { el, root, play, setHp, setLives, setHeat, setSprite, boss: bossEl, get rig() { return rig; } };
 }
 
 /** Shorthand used by game.js: build the stage from the game state. */
 export function stageFor(s, p, extra = {}) {
   const enc = s.enc;
   const enraged = Boolean(enc.enraged) && enc.hp > 0 && enc.hp <= enc.maxHp * DUEL.enrageAt;
-  return createStage({ enc, hp: enc.hp, lives: p.strikes, heat: p.heat ?? 0, qIndex: s.qIndex, intent: s.q?.intent ?? null, enraged, misses: enc.misses ?? 0, ...extra });
+  return createStage({ enc, hp: enc.hp, lives: p.strikes, heat: p.heat ?? 0, qIndex: s.qIndex, intent: s.q?.intent ?? null, enraged, misses: enc.misses ?? 0, enterKey: `${s.roundIndex}:${enc.id}`, ...extra });
 }

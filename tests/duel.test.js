@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createGame, dispatch, getStakeOptions } from '../src/engine/game.js';
-import { BOSS_ROSTER, BOSS_IDS, DUEL, INTENTS, makeEncounter, intentIdFor, duelDamage, buildMap, availableNodes, isEnraged, timerMultFor } from '../src/engine/duel.js';
+import { BOSS_ROSTER, BOSS_IDS, DUEL, INTENTS, makeEncounter, intentIdFor, duelDamage, buildMap, availableNodes, isEnraged, timerMultFor, phaseOf, advancePhase } from '../src/engine/duel.js';
 import { Rng } from '../src/engine/rng.js';
 import { realBank, fakeContext, must, correctDisplay, wrongDisplay } from './helpers.js';
 
@@ -310,4 +310,26 @@ test('skeleton key does nothing against a boss, and old classic runs still work'
   assert.equal(s.config.duel, undefined);
   assert.equal(s.enc, null);
   assert.equal(s.round.slots.length, 5);
+});
+
+test('the House has three faces that only move forward, with their own moves and sprites; other bosses have none', () => {
+  const enc = makeEncounter({ kind: 'boss', enemyId: 'house' });
+  assert.equal(enc.kind, 'final');
+  assert.equal(enc.phases.length, 3);
+  assert.equal(phaseOf(enc), 0);
+  assert.equal(enc.sprite, 'boss_house');
+  enc.hp = Math.floor(enc.maxHp * 0.6);
+  assert.deepEqual(advancePhase(enc), { from: 0, to: 1 });
+  assert.equal(enc.sprite, 'boss_house_open');
+  assert.ok(INTENTS[intentIdFor(enc, 0)]);
+  enc.hp = enc.maxHp; // healing never brings the roof back
+  assert.deepEqual(advancePhase(enc), { from: 1, to: 1 });
+  enc.hp = 5;
+  assert.deepEqual(advancePhase(enc), { from: 1, to: 2 });
+  assert.equal(enc.sprite, 'boss_jester');
+  assert.equal(enc.name, 'The Jester');
+  for (const ph of enc.phases) for (const id of [...ph.intents, ...(ph.enraged ?? [])]) assert.ok(INTENTS[id], id);
+  const other = makeEncounter({ kind: 'boss', enemyId: 'static' });
+  assert.equal(other.phases, undefined);
+  assert.deepEqual(advancePhase(other), { from: 0, to: 0 });
 });

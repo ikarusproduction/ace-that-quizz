@@ -53,7 +53,7 @@ Push to GitHub, enable Pages → "GitHub Actions". `.github/workflows/deploy.yml
 
 
 ## Solo duels, friends and puzzles (latest)
-- Duel engine: `src/engine/duel.js` (bosses, intents, heat, map, deals) with tests in `tests/duel.test.js`; the animated stage is `src/ui/stage.js`, boss art `src/ui/art_bosses.js`.
+- Duel engine: `src/engine/duel.js` (bosses, intents, heat, map, deals) with tests in `tests/duel.test.js`; the animated stage is `src/ui/stage.js`, boss art `src/ui/art_bosses.js` (32x32 bodies plus separate moving parts), the part/eye rig is `src/ui/bossrig.js`. The last boss, The House, has three phases (house, roof gone, jester). Boss and House music are WebAudio step sequencers in `src/ui/audio.js`. The title bulb is `src/ui/bulb.js`, pack opening is `src/ui/bulbrite.js`, the Fog focus dial is `src/ui/focus.js`.
 - Friends: a friend code per profile, a public stat card on the PHP relay (`/api/friend`, secret-protected), the list stored inside the profile (`friends`). Needs the PHP relay.
 - Waiting-room puzzles now include sliding tiles, odd-one-out, shape counting, patterns, light memory and riddles (`src/engine/minigame.js`, `src/ui/waitgame.js`).
 - E2E: `tests/e2e/duel.py`, `tests/e2e/friends.py` (plus the existing suites).

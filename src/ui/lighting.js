@@ -34,6 +34,8 @@ export function installLighting() {
     h('div.light-vignette'),
     h('div.light-grain'),
   );
+  const pressure = h('div.light-pressure', { 'aria-hidden': 'true' });
+  document.body.append(pressure);
   dark = h('div.light-dark', { 'aria-hidden': 'true' });
   document.body.prepend(root);
   document.body.append(dark);
@@ -50,6 +52,11 @@ export function setMood(name) {
 }
 
 export const getMood = () => current;
+
+/** One bulb left: a red vignette closes in around the whole screen and breathes with the heartbeat. */
+export function setPressure(on) {
+  document.documentElement.classList.toggle('pressure', Boolean(on));
+}
 
 /** Black room, then the bulb stutters on. Resolves when it has settled. */
 export async function lightsOn({ sound = true } = {}) {
@@ -77,6 +84,28 @@ export async function lightsOn({ sound = true } = {}) {
   const anim = dark.animate(frames, { duration: 1100, easing: 'steps(1, end)', fill: 'forwards' });
   setTimeout(() => sound && sfx.flicker(), 150);
   setTimeout(() => sound && sfx.flicker(), 450);
+  await anim.finished.catch(() => {});
+  dark.style.opacity = '0';
+  anim.cancel();
+}
+
+/**
+ * The first time the game opens: a black room, a long buzz, then the bulb fights to come on. Several false starts,
+ * a loud thunk, and it settles. About three seconds, and the title fades in as it does.
+ */
+export async function openingLights() {
+  if (!dark) return;
+  if (reduce || !dark.animate) { dark.style.opacity = '0'; return; }
+  dark.style.opacity = '1';
+  const frames = [
+    [0, 1], [0.16, 1], [0.17, 0.45], [0.19, 1], [0.27, 1], [0.28, 0.6], [0.3, 1], [0.31, 0.3], [0.33, 1],
+    [0.46, 1], [0.47, 0.2], [0.49, 0.9], [0.5, 0.1], [0.52, 0.85], [0.6, 0.85], [0.61, 0.35], [0.63, 0.7],
+    [0.7, 0.7], [0.71, 0.05], [0.73, 0.6], [0.75, 0.0], [0.83, 0.0], [0.84, 0.25], [0.86, 0], [1, 0],
+  ].map(([offset, opacity]) => ({ offset, opacity }));
+  const anim = dark.animate(frames, { duration: 3000, easing: 'steps(1, end)', fill: 'forwards' });
+  // the sounds line up with the false starts (they are silent until the browser lets the page play audio)
+  [510, 840, 1400, 1520, 1830, 2520].forEach((t) => setTimeout(() => sfx.flicker(), t));
+  setTimeout(() => sfx.lightsOn(), 2250);
   await anim.finished.catch(() => {});
   dark.style.opacity = '0';
   anim.cancel();

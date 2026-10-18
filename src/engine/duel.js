@@ -99,6 +99,12 @@ export const BOSS_ROSTER = {
     id: 'house', name: 'The House', title: 'The House Always Knows', cat: 'any', tier: 4, hp: 34, sprite: 'boss_house', color: '#ffd24a', arena: 'house', final: true,
     blurb: 'Every subject, every trick. The last room.',
     intents: ['strike', 'twin', 'mend', 'ink', 'guard', 'surge'], enraged: ['twin', 'surge', 'mend', 'blur', 'guard', 'twin'],
+    // The last room has three faces. Each one is a different fight; the sprite and the moves change with the health left.
+    phases: [
+      { at: 1, sprite: 'boss_house', name: 'The House', title: 'The House Always Knows', intents: ['strike', 'twin', 'mend', 'ink', 'guard', 'surge'], enraged: ['twin', 'surge', 'mend', 'blur', 'guard', 'twin'] },
+      { at: 0.66, sprite: 'boss_house_open', name: 'The House', title: 'The roof is gone. Something is awake.', intents: ['goo', 'strike', 'guard', 'quake', 'twin', 'mend'], enraged: ['goo', 'twin', 'quake', 'guard', 'twin', 'blur'] },
+      { at: 0.33, sprite: 'boss_jester', name: 'The Jester', title: 'The one who lives inside', intents: ['ink', 'flip', 'twin', 'blur', 'surge', 'quake'], enraged: ['twin', 'flip', 'ink', 'twin', 'blur', 'surge'] },
+    ],
   },
 };
 export const BOSS_IDS = Object.keys(BOSS_ROSTER);
@@ -137,14 +143,41 @@ export function makeEncounter({ kind, enemyId = null, rng = null, depth = 0 }) {
     id: b.id, name: b.name, title: b.title, cat: b.cat, tier: elite ? Math.max(1, b.tier - 1) : b.tier,
     hp, maxHp: hp, intents: elite ? b.intents.slice(0, 3) : b.intents, enraged: elite ? null : b.enraged,
     sprite: b.sprite, color: b.color, arena: b.arena, misses: 0, qCount: 0, over: null, hits: 0, healed: 0,
+    ...(!elite && b.phases ? { phases: b.phases.map((p) => ({ ...p, intents: [...p.intents], enraged: p.enraged ? [...p.enraged] : null })), phase: 0 } : {}),
   };
 }
 
 export const isEnraged = (enc) => Boolean(enc.enraged) && enc.hp > 0 && enc.hp <= enc.maxHp * DUEL.enrageAt;
 
+/** Which face a phased boss (the final one) is wearing: it only ever moves forward. */
+export function phaseOf(enc) {
+  if (!enc.phases) return 0;
+  const ratio = enc.hp / enc.maxHp;
+  let k = 0;
+  enc.phases.forEach((p, i) => { if (ratio <= p.at) k = i; });
+  return Math.max(k, enc.phase ?? 0);
+}
+
+/** Move a phased boss to its next face when its health says so. Returns { from, to }. */
+export function advancePhase(enc) {
+  const from = enc.phase ?? 0;
+  const to = phaseOf(enc);
+  if (to > from) {
+    const ph = enc.phases[to];
+    enc.phase = to;
+    enc.sprite = ph.sprite;
+    if (ph.name) enc.name = ph.name;
+    if (ph.title) enc.title = ph.title;
+  }
+  return { from, to: Math.max(from, to) };
+}
+
 /** The intent id for the question at this index. */
 export function intentIdFor(enc, qIndex) {
-  const list = isEnraged(enc) ? enc.enraged : enc.intents;
+  const ph = enc.phases?.[enc.phase ?? 0];
+  const base = ph ? ph.intents : enc.intents;
+  const rage = ph ? (ph.enraged ?? enc.enraged) : enc.enraged;
+  const list = isEnraged(enc) && rage ? rage : base;
   return list[qIndex % list.length];
 }
 

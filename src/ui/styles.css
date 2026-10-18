@@ -414,7 +414,7 @@ footer.legal { color: var(--mute); font-size: 12px; text-align: center; margin-t
 .hex-quake .screen { animation: hex-quake .22s linear infinite; }
 @keyframes hex-quake { 0% { transform: translate(0,0); } 25% { transform: translate(-3px,1px); } 50% { transform: translate(2px,-1px); } 75% { transform: translate(-2px,-1px); } 100% { transform: translate(0,0); } }
 .hex-flip { transform: rotate(180deg); }
-.hex-blur .choice { filter: blur(6px); }
+.hex-blur .choice { filter: blur(var(--blur, 7px)); }
 .hex-tag { margin: 4px 0; }
 .reduce-motion .hex-quake .screen, .reduce-motion .hex-blot { animation: none; }
 
@@ -467,22 +467,22 @@ footer.legal { color: var(--mute); font-size: 12px; text-align: center; margin-t
 .boss-wrap { position: relative; display: flex; justify-content: center; align-items: flex-end; min-height: 110px; padding-top: 6px; }
 .compact .boss-wrap { min-height: 80px; }
 .boss { position: relative; display: inline-block; animation: boss-bob 3.2s ease-in-out infinite; transform-origin: 50% 90%; }
-.boss img.sprite { position: relative; filter: drop-shadow(0 0 10px color-mix(in srgb, var(--boss) 60%, transparent)) drop-shadow(0 6px 0 rgba(0, 0, 0, 0.5)); }
+.boss > .rig { position: relative; filter: drop-shadow(0 0 10px color-mix(in srgb, var(--boss) 60%, transparent)) drop-shadow(0 6px 0 rgba(0, 0, 0, 0.5)); }
 .boss .aura { position: absolute; inset: -14%; border-radius: 50%; background: radial-gradient(closest-side, color-mix(in srgb, var(--boss) 45%, transparent), transparent 75%); animation: aura 2.4s ease-in-out infinite; z-index: 0; }
 .shadow { position: absolute; bottom: -2px; left: 50%; width: 55%; height: 10px; margin-left: -27.5%; background: radial-gradient(closest-side, rgba(0, 0, 0, 0.6), transparent); }
 @keyframes boss-bob { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-5px) scale(1.015); } }
 @keyframes aura { 0%, 100% { opacity: 0.55; transform: scale(0.95); } 50% { opacity: 1; transform: scale(1.06); } }
 .stage.enraged .boss { animation: boss-rage 0.5s ease-in-out infinite; }
 .stage.enraged .aura { background: radial-gradient(closest-side, rgba(255, 70, 50, 0.6), transparent 75%); animation-duration: 0.8s; }
-.stage.enraged .boss img.sprite { filter: drop-shadow(0 0 12px #ff3b2a) saturate(1.3) contrast(1.1); }
+.stage.enraged .boss > .rig { filter: drop-shadow(0 0 12px #ff3b2a) saturate(1.3) contrast(1.1); }
 .stage.enraged { box-shadow: inset 0 0 0 3px var(--blood), inset 0 0 36px rgba(179, 38, 30, 0.45); }
 @keyframes boss-rage { 0%, 100% { transform: translate(0, 0) scale(1.03); } 25% { transform: translate(-2px, 1px) scale(1.05); } 75% { transform: translate(2px, -1px) scale(1.05); } }
 .boss.hit { animation: boss-hit 0.5s ease-out; }
-.boss.hit img.sprite { filter: brightness(3) saturate(0) drop-shadow(0 0 14px #fff); animation: boss-flash 0.5s steps(2) ; }
+.boss.hit > .rig { filter: brightness(3) saturate(0) drop-shadow(0 0 14px #fff); animation: boss-flash 0.5s steps(2) ; }
 @keyframes boss-hit { 0% { transform: translate(0, 0) scale(1); } 15% { transform: translate(14px, -4px) scale(0.94) rotate(4deg); } 40% { transform: translate(-8px, 2px) scale(0.97) rotate(-3deg); } 100% { transform: translate(0, 0) scale(1); } }
 @keyframes boss-flash { 0%, 40% { filter: brightness(3) saturate(0) drop-shadow(0 0 14px #fff); } 100% { filter: none; } }
 .boss.guarded { animation: boss-guard 0.5s ease-out; }
-.boss.guarded img.sprite { filter: drop-shadow(0 0 14px #cfd6dc) brightness(1.3); }
+.boss.guarded > .rig { filter: drop-shadow(0 0 14px #cfd6dc) brightness(1.3); }
 @keyframes boss-guard { 0% { transform: scale(1); } 20% { transform: scale(1.06); } 100% { transform: scale(1); } }
 .boss.lunge { animation: boss-lunge 0.7s cubic-bezier(.2, .8, .3, 1); z-index: 2; }
 @keyframes boss-lunge { 0% { transform: translateY(0) scale(1); } 30% { transform: translateY(8px) scale(0.9); } 55% { transform: translateY(46px) scale(1.55); } 100% { transform: translateY(0) scale(1); } }
@@ -492,7 +492,7 @@ footer.legal { color: var(--mute); font-size: 12px; text-align: center; margin-t
 .stage.dying .aura { animation: none; opacity: 0; }
 @keyframes boss-die { 0% { filter: none; opacity: 1; transform: scale(1); } 20% { filter: brightness(4); } 40% { filter: brightness(1) contrast(2); transform: translate(3px, 0) scale(1.05); } 60% { filter: brightness(3); transform: translate(-3px, 4px) scale(1); } 100% { opacity: 0; transform: translateY(24px) scale(0.6); filter: brightness(5) blur(2px); } }
 .boss.gone { visibility: hidden; }
-.boss.smug img.sprite { transform: scale(1.1); }
+.boss.smug > .rig { transform: scale(1.1); }
 .stage.victorious { box-shadow: inset 0 0 0 3px var(--blood); }
 .stage.crit-flash::after { content: ''; position: absolute; inset: 0; background: radial-gradient(closest-side, rgba(255, 244, 200, 0.85), transparent 80%); animation: crit-fade 0.42s ease-out forwards; pointer-events: none; z-index: 3; }
 @keyframes crit-fade { to { opacity: 0; } }
@@ -578,7 +578,7 @@ footer.legal { color: var(--mute); font-size: 12px; text-align: center; margin-t
 
 /* ======================================================= boss select */
 .boss-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
-.boss-pick { appearance: none; border: 0; cursor: pointer; text-align: left; display: grid; grid-template-columns: 84px 1fr; gap: 12px; align-items: center; padding: 10px 12px; background: var(--steel); color: var(--bone); box-shadow: inset 0 0 0 3px var(--edge); position: relative; overflow: hidden; }
+.boss-pick { appearance: none; border: 0; cursor: pointer; text-align: left; display: grid; grid-template-columns: 96px 1fr; gap: 12px; align-items: center; padding: 10px 12px; background: var(--steel); color: var(--bone); box-shadow: inset 0 0 0 3px var(--edge); position: relative; overflow: hidden; }
 .boss-pick::before { content: ''; position: absolute; inset: 0; background: radial-gradient(60% 100% at 10% 50%, color-mix(in srgb, var(--boss) 28%, transparent), transparent 70%); pointer-events: none; }
 .boss-pick[aria-pressed='true'] { box-shadow: inset 0 0 0 3px var(--boss); background: #2c2a24; }
 .boss-pick .nm { font-family: var(--font-display); font-weight: 800; font-size: 22px; text-transform: uppercase; letter-spacing: 0.04em; }
@@ -623,3 +623,204 @@ footer.legal { color: var(--mute); font-size: 12px; text-align: center; margin-t
 .memory-pad.lit { background: var(--pad); box-shadow: inset 0 0 0 3px #fff, 0 0 22px var(--pad); }
 .memory-pad:disabled:not(.lit) { opacity: 0.75; }
 .reduce-motion .slide-tile, .reduce-motion .memory-pad { transition: none; }
+
+/* ======================================================= boss rig: body, moving parts, red eyes */
+.rig { position: relative; display: inline-block; isolation: isolate; }
+.rig > img.rig-body, .rig.plain > img { display: block; position: relative; z-index: 0; image-rendering: pixelated; transform-origin: 50% 100%; animation: rig-breathe 4.6s ease-in-out infinite; }
+@keyframes rig-breathe { 0%, 100% { transform: scale(1, 1); } 50% { transform: scale(1.012, 1.022); } }
+.part { position: absolute; will-change: transform; animation-duration: var(--dur, 3s); animation-delay: var(--delay, 0s); animation-iteration-count: infinite; animation-timing-function: ease-in-out; }
+.part img { display: block; width: 100%; height: 100%; image-rendering: pixelated; }
+.part.flip img { scale: -1 1; }
+.a-swing { animation-name: p-swing; }
+.a-conduct { animation-name: p-conduct; }
+.a-wiggle { animation-name: p-wiggle; }
+.a-orbit { animation-name: p-orbit; animation-timing-function: linear; }
+.a-spin { animation-name: p-spin; animation-timing-function: steps(10, end); }
+.a-spin.rev { animation-direction: reverse; }
+.a-flap { animation-name: p-flap; }
+.a-gnash { animation-name: p-gnash; animation-timing-function: steps(3, end); }
+.a-float { animation-name: p-float; }
+.a-halo { animation-name: p-halo; }
+.a-drift { animation-name: p-drift; }
+.a-horn { animation-name: p-horn; }
+.a-jaw { animation-name: p-jaw; animation-timing-function: cubic-bezier(.5, 0, .3, 1); }
+@keyframes p-swing { 0%, 100% { transform: rotate(calc(var(--amp) * -1 * var(--dir, 1))); } 50% { transform: rotate(calc(var(--amp) * var(--dir, 1))); } }
+@keyframes p-conduct { 0% { transform: rotate(calc(var(--amp) * -1 * var(--dir, 1))); } 30% { transform: rotate(calc(var(--amp) * var(--dir, 1))); } 55% { transform: rotate(calc(var(--amp) * -0.3 * var(--dir, 1))); } 75% { transform: rotate(calc(var(--amp) * 0.6 * var(--dir, 1))); } 100% { transform: rotate(calc(var(--amp) * -1 * var(--dir, 1))); } }
+@keyframes p-wiggle { 0%, 100% { transform: rotate(calc(var(--amp) * -1 * var(--dir, 1))) skewX(-3deg); } 33% { transform: rotate(calc(var(--amp) * 0.5 * var(--dir, 1))) skewX(4deg); } 66% { transform: rotate(calc(var(--amp) * -0.6 * var(--dir, 1))); } }
+@keyframes p-orbit { 0% { transform: translate(0, 0); } 25% { transform: translate(calc(var(--k) * 3), calc(var(--k) * -4)); } 50% { transform: translate(0, calc(var(--k) * -7)); } 75% { transform: translate(calc(var(--k) * -3), calc(var(--k) * -3)); } 100% { transform: translate(0, 0); } }
+@keyframes p-spin { to { transform: rotate(360deg); } }
+@keyframes p-flap { 0%, 35%, 100% { transform: rotate(0); } 50% { transform: rotate(calc(var(--amp) * var(--dir, 1))); } 62% { transform: rotate(calc(var(--amp) * 0.2 * var(--dir, 1))); } 78% { transform: rotate(calc(var(--amp) * 0.8 * var(--dir, 1))); } }
+@keyframes p-gnash { 0%, 100% { transform: scaleY(1) translateY(0); } 33% { transform: scaleY(1.5) translateY(calc(var(--k) * 0.5)); } 66% { transform: scaleY(0.8); } }
+@keyframes p-float { 0%, 100% { transform: translate(0, 0) rotate(-3deg); } 50% { transform: translate(0, calc(var(--ampk) * -1)) rotate(4deg); } }
+@keyframes p-halo { 0%, 100% { transform: translate(0, 0) rotate(-6deg); } 50% { transform: translate(calc(var(--k) * 1), calc(var(--ampk) * -1)) rotate(-2deg); } }
+@keyframes p-drift { 0%, 100% { transform: translate(0, 0) rotate(-2deg); } 50% { transform: translate(calc(var(--k) * 1.5), calc(var(--k) * -2)) rotate(2deg); } }
+@keyframes p-horn { 0%, 100% { transform: rotate(calc(var(--amp) * -0.6 * var(--dir, 1))); } 50% { transform: rotate(calc(var(--amp) * var(--dir, 1))); } }
+@keyframes p-jaw { 0%, 100% { transform: translateY(0); } 18% { transform: translateY(calc(var(--k) * 2.8)); } 28% { transform: translateY(calc(var(--k) * 0.4)); } 48% { transform: translateY(calc(var(--k) * 3.6)); } 60% { transform: translateY(calc(var(--k) * 1)); } 80% { transform: translateY(calc(var(--k) * 2.4)); } }
+.part.ring img { animation: bell-ring 0.7s ease-out; transform-origin: 20% 40%; }
+@keyframes bell-ring { 0% { transform: rotate(0); } 15% { transform: rotate(14deg); } 30% { transform: rotate(-12deg); } 50% { transform: rotate(8deg); } 70% { transform: rotate(-4deg); } 100% { transform: rotate(0); } }
+/* angry and hurt bosses flail faster */
+.stage.enraged .part, .boss.hit .part, .boss.rage .part { animation-duration: calc(var(--dur, 3s) * 0.4); }
+
+/* the eyes: slit, red, glowing, blinking, drifting */
+.eye { position: absolute; z-index: 6; pointer-events: none; animation: eye-look 9s steps(1, end) infinite; animation-delay: var(--look-delay, 0s); }
+.eye::before { content: ''; position: absolute; inset: -70% -90%; background: radial-gradient(closest-side, rgba(255, 40, 20, 0.32), transparent 72%); mix-blend-mode: screen; animation: eye-glow 2.6s ease-in-out infinite; }
+.eye img { position: relative; display: block; width: 100%; height: 100%; image-rendering: pixelated; filter: drop-shadow(0 0 2px #ff2a1f) drop-shadow(0 0 5px rgba(255, 30, 20, 0.6)); animation: eye-blink 6.5s infinite; }
+@keyframes eye-look { 0% { translate: 0 0; } 20% { translate: calc(var(--k) * -1) 0; } 40% { translate: calc(var(--k) * 1) calc(var(--k) * 0.5); } 55% { translate: 0 0; } 70% { translate: calc(var(--k) * 0.5) calc(var(--k) * -1); } 100% { translate: 0 0; } }
+@keyframes eye-blink { 0%, 92%, 100% { transform: scaleY(1); } 94%, 96% { transform: scaleY(0.08); } }
+@keyframes eye-glow { 50% { opacity: 0.5; transform: scale(1.25); } }
+.rig.enraged .eye::before { inset: -110% -130%; background: radial-gradient(closest-side, rgba(255, 30, 10, 0.85), transparent 72%); animation-duration: 0.6s; }
+.rig.enraged .eye img { filter: drop-shadow(0 0 5px #ff1a0a) drop-shadow(0 0 14px #ff1a0a) brightness(1.3); }
+.rig.dread .eye::before { inset: -100% -120%; animation: eye-glow 1.25s ease-in-out infinite; }
+.rig.dread > img.rig-body { animation: rig-breathe 1.25s ease-in-out infinite; }
+.rig-arrive { animation: rig-arrive 0.9s steps(9, end); }
+@keyframes rig-arrive { 0% { opacity: 0; transform: scale(0.7) translateY(18px); filter: brightness(4); } 60% { opacity: 1; filter: brightness(2); } 100% { transform: none; filter: none; } }
+.smoke { position: absolute; z-index: 0; width: calc(var(--k) * 3); height: calc(var(--k) * 2); pointer-events: none; }
+.smoke i { position: absolute; left: 0; bottom: 0; width: calc(var(--k) * 2); height: calc(var(--k) * 2); background: #8e949a; opacity: 0; animation: smoke-rise 4.4s linear infinite; }
+@keyframes smoke-rise { 0% { transform: translate(0, 0) scale(0.6); opacity: 0; } 15% { opacity: 0.55; } 100% { transform: translate(calc(var(--k) * 4), calc(var(--k) * -12)) scale(1.9); opacity: 0; } }
+/* a slow glitch every so often: the picture stutters and tints */
+.boss > .rig { animation: rig-glitch 11s steps(1, end) infinite; }
+@keyframes rig-glitch { 0%, 91%, 94%, 100% { translate: 0 0; } 92% { translate: calc(var(--k) * 1) 0; } 93% { translate: calc(var(--k) * -1.5) 0; } }
+
+/* the boss rises out of the dark */
+.boss.enter > .rig { animation: boss-enter 1.4s steps(14, end) both; }
+@keyframes boss-enter { 0% { opacity: 0; transform: translateY(26px) scale(0.85); filter: brightness(0); } 30% { opacity: 1; filter: brightness(0); } 45% { filter: brightness(2.4); } 60% { filter: brightness(0.2); } 80% { filter: brightness(1.6); } 100% { transform: none; filter: none; } }
+.boss.spin > .rig { animation: boss-spin 0.8s ease-in-out; }
+@keyframes boss-spin { 0% { transform: rotate(0); } 100% { transform: rotate(360deg); } }
+
+/* what the boss is about to do shows in its stance */
+.boss.i-strike > .rig { animation: stance-lean 1.8s ease-in-out infinite; }
+.boss.i-surge > .rig { animation: stance-jitter 0.18s steps(2) infinite; }
+.boss.i-accel > .rig { animation: stance-tick 1s steps(2) infinite; }
+.boss.i-ink > .rig { animation: stance-gloom 2.2s ease-in-out infinite; }
+.boss.i-goo > .rig { animation: stance-gloop 1.6s ease-in-out infinite; }
+.boss.i-quake > .rig { animation: stance-rumble 0.35s linear infinite; }
+.boss.i-blur > .rig { animation: stance-haze 2.4s ease-in-out infinite; }
+.boss.i-flip > .rig { animation: stance-tilt 2.2s ease-in-out infinite; }
+.boss.i-guard > .rig { animation: stance-guard 2s ease-in-out infinite; }
+.boss.i-mend > .rig, .boss.i-regrow > .rig { animation: stance-heal 2s ease-in-out infinite; }
+.boss.i-leech > .rig { animation: stance-gloom 1.6s ease-in-out infinite; }
+.boss.i-twin > .rig { animation: stance-twin 1.4s ease-in-out infinite; }
+@keyframes stance-lean { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(3px) rotate(-3deg) scale(1.03); } }
+@keyframes stance-jitter { 0% { translate: 1px 0; } 100% { translate: -1px 1px; } }
+@keyframes stance-tick { 0% { transform: scale(1); } 100% { transform: scale(1.04); } }
+@keyframes stance-gloom { 0%, 100% { filter: brightness(1); } 50% { filter: brightness(0.65) contrast(1.2) drop-shadow(0 0 12px #3a2a4a); } }
+@keyframes stance-gloop { 0%, 100% { transform: scale(1, 1); } 50% { transform: scale(1.05, 0.95); } }
+@keyframes stance-rumble { 0% { translate: 2px 0; } 50% { translate: -2px 1px; } 100% { translate: 2px -1px; } }
+@keyframes stance-haze { 0%, 100% { filter: blur(0); opacity: 1; } 50% { filter: blur(1.4px); opacity: 0.8; } }
+@keyframes stance-tilt { 0%, 100% { transform: rotate(-4deg); } 50% { transform: rotate(4deg); } }
+@keyframes stance-guard { 0%, 100% { filter: brightness(1); } 50% { filter: brightness(1.35) drop-shadow(0 0 10px #cfd6dc); } }
+@keyframes stance-heal { 0%, 100% { filter: brightness(1); } 50% { filter: brightness(1.2) drop-shadow(0 0 12px #6fa86b); } }
+@keyframes stance-twin { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-3px); } 75% { transform: translateX(3px); } }
+
+/* the stage embers and effect overlays */
+.stage-bg .ember { position: absolute; bottom: -8px; width: 4px; height: 4px; background: var(--boss); opacity: 0; box-shadow: 0 0 6px var(--boss); animation: ember-rise 5s linear infinite; }
+@keyframes ember-rise { 0% { transform: translate(0, 0); opacity: 0; } 12% { opacity: 0.9; } 100% { transform: translate(16px, -230px); opacity: 0; } }
+.stage > .fx { position: absolute; pointer-events: none; z-index: 5; }
+.fx.slash { left: -10%; right: -10%; top: 36%; height: 8px; background: #fff; box-shadow: 0 0 14px #fff, 0 0 30px var(--boss); transform: rotate(var(--r, -24deg)) scaleX(0); animation: fx-slash 0.5s ease-out forwards; }
+@keyframes fx-slash { 0% { transform: rotate(var(--r)) scaleX(0); opacity: 1; } 40% { transform: rotate(var(--r)) scaleX(1); opacity: 1; } 100% { transform: rotate(var(--r)) scaleX(1); opacity: 0; } }
+.fx.player-strike { left: -10%; right: -10%; top: 40%; height: 5px; background: #fff7d6; box-shadow: 0 0 12px #ffd24a; transform: rotate(var(--r, 0deg)) scaleX(0); animation: fx-slash 0.42s ease-out forwards; }
+.fx.zap { top: 8%; width: 5px; height: 70%; background: #fff; box-shadow: 0 0 12px currentColor, 0 0 24px var(--boss); transform: rotate(var(--r, 0deg)); animation: fx-zap 0.36s steps(3) forwards; clip-path: polygon(0 0, 100% 8%, 30% 30%, 100% 44%, 10% 64%, 90% 82%, 40% 100%, 0 80%, 60% 60%, 0 42%, 70% 24%); }
+@keyframes fx-zap { 0% { opacity: 0; } 20% { opacity: 1; } 60% { opacity: 1; } 100% { opacity: 0; } }
+.fx.crack { left: 10%; right: 10%; top: 30%; height: 50%; background: linear-gradient(100deg, transparent 47%, #0b0c0d 47% 53%, transparent 53%); clip-path: polygon(48% 0, 54% 20%, 46% 36%, 56% 52%, 44% 70%, 52% 100%, 46% 100%, 40% 70%, 52% 52%, 42% 36%, 50% 20%, 44% 0); animation: fx-fade 0.9s ease-out forwards; background-color: #0b0c0d; }
+.fx.ripple { left: 50%; top: 45%; width: 20px; height: 20px; margin: -10px 0 0 -10px; border: 3px solid var(--boss); border-radius: 50%; animation: fx-ripple 0.9s ease-out forwards; }
+@keyframes fx-ripple { 0% { transform: scale(1); opacity: 0.9; } 100% { transform: scale(14); opacity: 0; } }
+@keyframes fx-fade { 0% { opacity: 1; } 100% { opacity: 0; } }
+.fly-glyph { position: absolute; top: 20px; font-family: var(--font-mono); font-size: 26px; font-weight: 700; text-shadow: 0 0 8px currentColor; animation: fly-glyph 1s ease-in forwards; }
+@keyframes fly-glyph { 0% { transform: translate(0, 0) scale(0.6); opacity: 0; } 20% { opacity: 1; } 100% { transform: translate(var(--sway, 0), 180px) scale(1.4); opacity: 0; } }
+.stage.phase-shift { animation: phase-quake 0.5s linear infinite; }
+@keyframes phase-quake { 0% { translate: 0 0; } 25% { translate: -3px 2px; } 50% { translate: 3px -2px; } 75% { translate: -2px -1px; } 100% { translate: 0 0; } }
+.hpbar .notch { left: 0; width: 2px; background: rgba(255, 210, 74, 0.7); z-index: 2; }
+.stage.dying .part { animation: part-fall 1.2s ease-in forwards; }
+@keyframes part-fall { to { transform: translate(calc(var(--dir, 1) * 18px), 90px) rotate(calc(var(--dir, 1) * 60deg)); opacity: 0; } }
+.stage.dying .eye { animation: eye-out 0.9s steps(5) forwards; }
+@keyframes eye-out { 50% { opacity: 0.2; } 100% { opacity: 0; } }
+
+/* the HUD: your string of bulbs */
+.life-hud { position: relative; display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 14px 10px 6px; background: linear-gradient(180deg, rgba(8, 9, 10, 0.85), rgba(22, 24, 27, 0.85)); box-shadow: inset 0 0 0 2px var(--edge); }
+.life-hud::before { content: ''; position: absolute; left: 6px; right: 6px; top: 6px; height: 2px; background: #3b3e42; box-shadow: 0 1px 0 #000; }
+.lights-label { position: absolute; left: 10px; top: -1px; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bone-dim); background: #14171a; padding: 0 4px; }
+.life-hud .lives { gap: 8px; }
+.life-hud .life::before { content: ''; position: absolute; left: 50%; top: -9px; width: 2px; height: 9px; margin-left: -1px; background: #3b3e42; }
+.life.on img { filter: drop-shadow(0 0 5px #e8a33d) drop-shadow(0 0 12px rgba(255, 217, 138, 0.6)); }
+.life.off img { opacity: 0.5; }
+.last-tag { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; color: #ff6b61; text-shadow: 0 0 8px #b3261e; animation: blink 0.9s steps(2) infinite; white-space: nowrap; }
+.life .spark { position: absolute; width: 3px; height: 3px; background: #fff7d6; box-shadow: 0 0 6px #ffd24a, 0 0 10px #ff9a3c; animation: spark-fly 0.7s ease-out forwards; pointer-events: none; z-index: 3; }
+@keyframes spark-fly { 0% { transform: translate(0, 0); opacity: 1; } 100% { transform: translate(var(--dx), var(--dy)); opacity: 0; } }
+
+/* one bulb left: the room closes in, the bulb stutters and everything gets darker */
+.stage .veil { position: absolute; inset: 0; z-index: 7; pointer-events: none; opacity: 0; background: radial-gradient(closest-side at 50% 45%, transparent 32%, rgba(0, 0, 0, 0.88) 100%), rgba(0, 0, 0, 0.34); }
+.stage.last-bulb .veil { opacity: 1; animation: veil-flicker 3.7s steps(1, end) infinite; }
+@keyframes veil-flicker { 0% { opacity: 1; } 31% { opacity: 1; } 32% { opacity: 0.4; } 33% { opacity: 1; } 34% { opacity: 0.55; } 35% { opacity: 1; } 71% { opacity: 1; } 72% { opacity: 0.25; } 74% { opacity: 1; } 75% { opacity: 0.7; } 76% { opacity: 1; } 90% { opacity: 0.85; } 91% { opacity: 1; } }
+.stage.last-bulb { box-shadow: inset 0 0 0 3px #4a1311, inset 0 0 40px rgba(179, 38, 30, 0.35); }
+.stage.last-bulb .life.on img { animation: bulb-dying 2.3s steps(1, end) infinite; }
+@keyframes bulb-dying { 0% { opacity: 1; } 8% { opacity: 0.35; } 10% { opacity: 1; } 22% { opacity: 0.5; } 24% { opacity: 0.9; } 26% { opacity: 0.2; } 29% { opacity: 1; } 60% { opacity: 1; } 62% { opacity: 0.3; } 64% { opacity: 1; } 66% { opacity: 0.4; } 69% { opacity: 1; } 100% { opacity: 1; } }
+.stage.last-bulb .stage-bg { filter: brightness(0.55); }
+/* the whole screen leans in too */
+.light-pressure { position: fixed; inset: 0; z-index: 3; pointer-events: none; opacity: 0; background: radial-gradient(ellipse at 50% 40%, transparent 30%, rgba(40, 0, 0, 0.55) 80%, rgba(0, 0, 0, 0.8)); transition: opacity 0.6s; }
+html.pressure .light-pressure { opacity: 1; animation: pressure-breathe 1.25s ease-in-out infinite; }
+@keyframes pressure-breathe { 0%, 100% { opacity: 0.75; } 50% { opacity: 1; } }
+.reduce-motion .stage.last-bulb .veil { animation: none; }
+.reduce-motion .light-pressure { animation: none !important; }
+.reduce-motion .stage.last-bulb .life.on img { animation: none; }
+.reduce-motion .last-tag { animation: none; }
+
+.pick-rig { position: relative; padding-top: 24px; filter: drop-shadow(0 0 8px color-mix(in srgb, var(--boss) 60%, transparent)); }
+.boss-pick { overflow: visible; }
+
+.life-hud .lives { gap: 4px; }
+.life-hud .life img { width: 28px; height: 28px; }
+.life-hud .heat i { width: 5px; }
+.life-hud { gap: 8px; }
+.life-hud .heat-wrap { gap: 3px; }
+
+/* ======================================================= pack opening: the bulb */
+.rite { background: radial-gradient(60% 50% at 50% 38%, color-mix(in srgb, var(--c) calc(8% + var(--lvl) * 9%), transparent), transparent 75%), rgba(5, 6, 7, 0.97); transition: background 0.4s; }
+.rite-name { font-family: var(--font-display); font-weight: 800; font-size: 34px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--c); text-shadow: 0 0 calc(4px + var(--lvl) * 8px) var(--c); margin: 0; }
+.rite-bulb { appearance: none; border: 0; background: none; cursor: pointer; display: flex; flex-direction: column; align-items: center; padding: 0 40px 16px; transform-origin: 50% 0; animation: sway 5s ease-in-out infinite; -webkit-tap-highlight-color: transparent; }
+.rite-bulb .cord { width: 3px; height: 64px; background: var(--edge); box-shadow: 1px 0 0 #3b3e42; }
+.rite-bulb .shell { position: relative; width: 144px; height: 144px; margin-top: -4px; filter: drop-shadow(0 0 calc(6px + var(--lvl) * 16px) var(--c)) drop-shadow(0 0 calc(var(--lvl) * 34px) var(--c)); }
+.rite-bulb .shell img { width: 100%; height: 100%; image-rendering: pixelated; filter: grayscale(1) brightness(calc(0.4 + var(--lvl) * 0.14)); }
+.rite-bulb .tint { position: absolute; inset: 0; background: var(--c); mix-blend-mode: color; mask-size: 100% 100%; -webkit-mask-size: 100% 100%; mask-repeat: no-repeat; -webkit-mask-repeat: no-repeat; image-rendering: pixelated; opacity: calc(0.25 + var(--lvl) * 0.25); }
+.rite-bulb:active .shell { transform: scale(0.97); }
+.rite-pips { display: flex; gap: 10px; }
+.rite-pips i { width: 14px; height: 14px; background: var(--steel2); box-shadow: inset 0 0 0 2px var(--edge); transition: background 0.2s, box-shadow 0.2s; }
+.rite-pips i.on { background: var(--c); box-shadow: 0 0 10px var(--c); }
+.rite-hint { margin: 4px 0 0; min-height: 22px; font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.04em; color: var(--c); animation: blink 1.6s ease-in-out infinite; }
+.rite-flash { position: fixed; inset: 0; z-index: 85; pointer-events: none; opacity: 0; mix-blend-mode: screen; }
+.reduce-motion .rite-bulb, .reduce-motion .rite-hint { animation: none; }
+
+/* ======================================================= the title bulb is a toy */
+.bulb-btn { appearance: none; background: none; border: 0; padding: 0 28px 14px; cursor: pointer; -webkit-tap-highlight-color: transparent; position: relative; transform-origin: 50% 0; color: var(--bone-dim); }
+.bulb-btn .bulb-wrap { position: relative; width: 64px; height: 64px; margin-top: -4px; transform-origin: 50% 0; transition: transform 0.55s cubic-bezier(.3, 1.6, .5, 1); }
+.bulb-btn .bulb-wrap img { position: absolute; inset: 0; width: 64px; height: 64px; margin: 0; }
+.bulb-btn .b-off { opacity: 0; filter: none; animation: none; }
+.bulb-btn .cord { transform-origin: 50% 0; transition: transform 0.5s ease; }
+.bulb-btn.broken .b-on { opacity: 0; animation: none; }
+.bulb-btn.broken .b-off { opacity: 1; filter: brightness(0.7) drop-shadow(0 0 0 transparent); }
+.bulb-btn.broken .bulb-wrap { transform: rotate(74deg) translate(0, 6px); }
+.bulb-btn.broken .cord { transform: scaleY(0.62); }
+.bulb-btn.broken.repairing .b-on { animation: bulb-repair 0.5s steps(1, end) forwards; }
+.bulb-btn.broken.repairing .b-off { opacity: 0; }
+@keyframes bulb-repair { 0% { opacity: 0.2; } 25% { opacity: 0.9; } 40% { opacity: 0.1; } 60% { opacity: 1; } 75% { opacity: 0.3; } 100% { opacity: 1; } }
+.bulb-hint { position: absolute; left: 50%; bottom: -4px; transform: translateX(-50%); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0; white-space: nowrap; pointer-events: none; }
+.bulb-btn.hint-on .bulb-hint { animation: hint-fade 4.6s ease-in-out; }
+@keyframes hint-fade { 0%, 100% { opacity: 0; } 25%, 70% { opacity: 0.7; } }
+/* the opening: the bulb itself fights to light up while the room is still dark */
+.bulb-btn.intro .b-on { animation: bulb-intro 3s steps(1, end) both; }
+@keyframes bulb-intro { 0%, 15% { opacity: 0; } 17% { opacity: 0.5; } 19% { opacity: 0; } 28% { opacity: 0.7; } 30% { opacity: 0; } 32% { opacity: 0.4; } 47% { opacity: 1; } 49% { opacity: 0; } 51% { opacity: 1; } 61% { opacity: 0.2; } 63% { opacity: 0.9; } 71% { opacity: 0; } 74% { opacity: 1; } 84% { opacity: 0.3; } 86%, 100% { opacity: 1; } }
+.title-stage.intro .logo, .title-stage.intro .tagline { animation: logo-in 1.4s ease-out 2.1s both; }
+@keyframes logo-in { from { opacity: 0; filter: blur(4px); } to { opacity: 1; filter: none; } }
+.reduce-motion .title-stage.intro .logo, .reduce-motion .title-stage.intro .tagline, .reduce-motion .bulb-btn.intro .b-on, .reduce-motion .bulb-btn.hint-on .bulb-hint { animation: none; }
+.reduce-motion .bulb-btn .bulb-wrap, .reduce-motion .bulb-btn .cord { transition: none; }
+
+/* ======================================================= Fog: pull focus */
+.fog-wrap { position: relative; }
+.fog-ui { position: absolute; inset: 0; z-index: 4; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; pointer-events: none; transition: opacity 0.6s; }
+.fog-ui.done { opacity: 0; }
+.fog-note { pointer-events: none; padding: 5px 10px; background: rgba(0, 0, 0, 0.7); box-shadow: inset 0 0 0 2px var(--blue, #4a7bb0); font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; text-align: center; max-width: 92%; }
+.fog-note b { color: #9cc2ee; margin-right: 6px; letter-spacing: 0.14em; }
+.fog-dial { pointer-events: auto; appearance: none; border: 0; padding: 0; width: 112px; height: 112px; border-radius: 50%; position: relative; touch-action: none; cursor: grab; color: var(--bone); background: radial-gradient(closest-side, rgba(10, 14, 20, 0.85) 62%, rgba(10, 14, 20, 0.6)); box-shadow: 0 0 0 3px #0b0c0d, 0 0 22px rgba(156, 194, 238, 0.35); -webkit-tap-highlight-color: transparent; user-select: none; }
+.fog-ring { position: absolute; inset: 6px; border-radius: 50%; background: conic-gradient(#9cc2ee calc(var(--p, 0) * 360deg), rgba(156, 194, 238, 0.18) 0); -webkit-mask: radial-gradient(closest-side, transparent 72%, #000 74%); mask: radial-gradient(closest-side, transparent 72%, #000 74%); }
+.fog-knob { position: absolute; left: 50%; top: 50%; width: 14px; height: 14px; margin: -7px; background: #fff; box-shadow: 0 0 10px #9cc2ee; }
+.fog-pct { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--font-mono); font-size: 18px; }
+.fog-dial:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }

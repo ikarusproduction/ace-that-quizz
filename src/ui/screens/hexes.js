@@ -8,30 +8,25 @@ import { CARD_IDS } from '../../engine/cards.js';
 import { metaOf } from '../../storage/meta.js';
 import { sfx, unlockAudio } from '../audio.js';
 import { cardReveal, rarityFx } from '../rarityfx.js';
+import { createBulbRite, PACK_LIGHT } from '../bulbrite.js';
 
 const TABS = [['deck', 'Deck'], ['book', 'Collection'], ['packs', 'Packs'], ['forge', 'Forge']];
 const byRarity = (a, b) => HEX_RARITY_ORDER.indexOf(HEXES[a].rarity) - HEX_RARITY_ORDER.indexOf(HEXES[b].rarity);
 
-/** The pack-opening ritual: shake, tear, then reveal each card from the weakest to the best. */
+/** The pack-opening ritual: tap the bulb three times, it overloads in the colour of the best card, then each card is revealed. */
 export async function openPackRitual(app, playerId, pack) {
   unlockAudio();
-  const sealed = h('button.pack-sealed', { type: 'button', class: pack.type, 'aria-label': `Open ${PACKS[pack.type].name}` },
-    h('div.pack-name', {}, PACKS[pack.type].name), sprite('key', 48), h('div.tiny', {}, 'Tap to tear it open'));
-  const ov = h('div.reveal-overlay', {}, h('div.reveal-box', {}, h('div.tiny.dim', {}, pack.from || 'New pack'), sealed));
-  document.body.append(ov);
-  await new Promise((res) => {
-    let taps = 0;
-    sealed.addEventListener('click', () => {
-      taps += 1;
-      sfx.packShake();
-      sealed.classList.remove('shake'); void sealed.offsetWidth; sealed.classList.add('shake');
-      if (taps >= 2) res();
-    });
-  });
-  sfx.packTear();
-  ov.remove();
+  const rite = createBulbRite({ name: PACKS[pack.type].name, from: pack.from, light: PACK_LIGHT[pack.type] ?? '#ffd24a' });
+  document.body.append(rite.el);
+  await rite.nextTap();
+  await rite.nextTap();
+  const third = rite.nextTap();
+  await third;
   let result;
-  try { result = await app.repo.openPack(playerId, pack.id); } catch (e) { toast(e.message, 'err'); return null; }
+  try { result = await app.repo.openPack(playerId, pack.id); } catch (e) { rite.close(); toast(e.message, 'err'); return null; }
+  const best = result.cards.map((c) => HEXES[c.id]?.rarity ?? 'common').sort((a, b) => HEX_RARITY_ORDER.indexOf(b) - HEX_RARITY_ORDER.indexOf(a))[0] ?? 'common';
+  await rite.overload(best);
+  rite.close();
   for (let i = 0; i < result.cards.length; i++) {
     const c = result.cards[i];
     await cardReveal(c.id, { title: `${PACKS[result.type].name} · ${i + 1}/${result.cards.length}`, sub: c.dup ? `Duplicate: +${c.dust} dust` : 'New hex for your collection!' });

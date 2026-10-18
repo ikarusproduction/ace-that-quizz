@@ -1,6 +1,7 @@
 // Boss Rush: choose which boss to duel.
 import { h, mount } from '../dom.js';
 import { sprite } from '../pixel.js';
+import { createRig } from '../bossrig.js';
 import { go, goBack } from '../app.js';
 import { setMood } from '../lighting.js';
 import { screenHeader, categoryTag } from '../components.js';
@@ -23,7 +24,7 @@ export async function bossesScreen(app, params) {
       h('p.small.dim', {}, 'One duel, no safety net. Each boss has a specialty subject, a health bar and a pattern it repeats. Harder bosses ask harder questions.'),
       h('div.boss-grid', {}, bosses.map((b) => {
         const el = h('button.boss-pick', { type: 'button', 'aria-pressed': String(picked === b.id), onclick: () => { picked = b.id; sfx.select(); paint(); } },
-          sprite(b.sprite, 80),
+          h('div.pick-rig', {}, createRig(b.sprite, 96, b.name).el),
           h('div', {},
             h('div.nm', {}, b.name),
             h('div.tiny.dim', {}, b.title),

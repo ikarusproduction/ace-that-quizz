@@ -18,7 +18,7 @@ import { checkPuzzle, PUZZLE_RULES } from './minigame.js';
 import { HEXES, STARTER_HEXES, HEX_NUMBERS, tierForStreak, drawHex, usableHexes, missionsFor } from './hexes.js';
 import {
   DUEL, INTENTS, BOSS_ROSTER, BOSS_IDS, TIER_DIFFICULTY, DEALS, DEAL_IDS, DUEL_SHOP_ITEMS,
-  makeEncounter, intentIdFor, timerMultFor, duelDamage, bulbsLostOnMiss, heatCostOf, startHeat, duelCategory, buildMap, availableNodes, isEnraged,
+  makeEncounter, intentIdFor, advancePhase, timerMultFor, duelDamage, bulbsLostOnMiss, heatCostOf, startHeat, duelCategory, buildMap, availableNodes, isEnraged,
 } from './duel.js';
 import { pickQuestion } from './rounds.js';
 
@@ -925,7 +925,7 @@ function applyDuel(s, p, qp, q, { correct, elapsedMs, out }) {
   const stake = qp.stake ?? 1;
   const res = {
     intent: intentId, enraged: Boolean(s.q.enraged), hpBefore: enc.hp, hpAfter: enc.hp, maxHp: enc.maxHp, dmg: 0, crit: false, guarded: false,
-    curseThrough: false, heal: 0, healNow: s.q.healedNow ?? 0, bulbsLost: 0, misses: enc.misses, heatSpent: qp.heatSpent ?? 0, heatGain: 0, leech: 0, over: null, stake, twin: Boolean(it.twin),
+    phaseFrom: enc.phase ?? 0, phaseTo: enc.phase ?? 0, curseThrough: false, heal: 0, healNow: s.q.healedNow ?? 0, bulbsLost: 0, misses: enc.misses, heatSpent: qp.heatSpent ?? 0, heatGain: 0, leech: 0, over: null, stake, twin: Boolean(it.twin),
   };
   enc.qCount += 1;
   if (correct) {
@@ -962,6 +962,7 @@ function applyDuel(s, p, qp, q, { correct, elapsedMs, out }) {
     }
   }
   if (s.config.strikes && p.strikes <= 0) p.defeated = true;
+  { const ph = advancePhase(enc); res.phaseFrom = ph.from; res.phaseTo = ph.to; }
   if (enc.hp <= 0) enc.over = 'won';
   else if (p.defeated) enc.over = 'lost';
   else if (enc.kind === 'minion' && enc.misses >= DUEL.minionMisses) enc.over = 'beaten';
