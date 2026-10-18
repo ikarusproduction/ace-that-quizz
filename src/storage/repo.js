@@ -9,7 +9,8 @@
 //  * Writing the same result twice is harmless: result ids are deterministic.
 import { isLanguage, DEFAULT_LANGUAGE } from '../i18n/languages.js';
 import { SCHEMA_VERSION, DATA_STORES } from './schema.js';
-import { metaOf, mergeMeta, daysBetween } from './meta.js';
+import { metaOf, mergeMeta, daysBetween, cleanFriends, MAX_FRIENDS } from './meta.js';
+import { newFriendCode, newFriendSecret, normalizeFriendCode, FRIEND_CODE_RE, buildCard, cleanCard } from '../stats/card.js';
 import { HEXES, PACKS, openPack, FORGE_COST, HEX_NUMBERS } from '../engine/hexes.js';
 import { Rng } from '../engine/rng.js';
 import { runMigrations, migrateSnapshot, SchemaError, MIGRATIONS } from './migrations.js';
@@ -77,6 +78,7 @@ export function sessionRecord(state) {
     schema: SCHEMA_VERSION,
     sessionId: state.sessionId,
     mode: state.mode,
+    variant: state.config.variant ?? null,
     seed: state.seed,
     startedAt: state.startedAt,
     endedAt: state.endedAt,
@@ -231,6 +233,61 @@ export async function createRepo(storage, { now = Date.now, uuid = defaultUuid, 
 
     async getMeta(id) {
       return metaOf(await requireProfile(id));
+    },
+
+    /* ---------------- friends (the list lives inside the profile, so it follows exports and cloud saves) ---------------- */
+
+    /** The code you give to friends, and the secret that proves a card is yours. Created on first use. */
+    async friendIdentity(id) {
+      const profile = await requireProfile(id);
+      if (!profile.friendCode || !profile.friendSecret) {
+        const used = new Set((await getProfiles()).map((p) => p.friendCode));
+        let code = newFriendCode();
+        while (used.has(code)) code = newFriendCode();
+        profile.friendCode = code;
+        profile.friendSecret = newFriendSecret();
+        profile.updatedAt = now();
+        await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
+      }
+      return { code: profile.friendCode, secret: profile.friendSecret };
+    },
+
+    async listFriends(id) {
+      return metaOf(await requireProfile(id)).friends;
+    },
+
+    /** Add (or refresh) a friend from a card the server returned. */
+    async saveFriend(id, { code, card }) {
+      const profile = await requireProfile(id);
+      const c = normalizeFriendCode(code);
+      if (!FRIEND_CODE_RE.test(c)) throw new RepoError('BAD_CODE', 'That friend code is not valid. It looks like K7QD-4MXP.');
+      if (profile.friendCode === c) throw new RepoError('OWN_CODE', 'That is your own code.');
+      const clean = cleanCard(card);
+      if (!clean) throw new RepoError('BAD_CARD', 'No card for that code.');
+      const friends = metaOf(profile).friends;
+      const at = friends.findIndex((f) => f.code === c);
+      const entry = { code: c, name: clean.name, avatar: clean.avatar, card: clean, fetchedAt: now() };
+      if (at >= 0) friends[at] = entry;
+      else if (friends.length >= MAX_FRIENDS) throw new RepoError('TOO_MANY', `You can have up to ${MAX_FRIENDS} friends.`);
+      else friends.push(entry);
+      profile.friends = cleanFriends(friends);
+      profile.updatedAt = now();
+      await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
+      return { added: at < 0, friends: profile.friends };
+    },
+
+    async removeFriend(id, code) {
+      const profile = await requireProfile(id);
+      profile.friends = metaOf(profile).friends.filter((f) => f.code !== code);
+      profile.updatedAt = now();
+      await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
+      return profile.friends;
+    },
+
+    /** My own card, from local results. */
+    async friendCard(id) {
+      const profile = await requireProfile(id);
+      return buildCard({ profile, results: await storage.getAllByIndex('results', 'playerId', id), sessions: await storage.getAll('sessions') });
     },
 
     async setHexDeck(id, deck) {

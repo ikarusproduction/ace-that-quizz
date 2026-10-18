@@ -117,6 +117,46 @@ export const sfx = {
   splat: () => { noise({ dur: 0.22, gain: 0.14, low: 900 }); tone({ f: 220, f2: 70, dur: 0.18, gain: 0.12, type: 'sine' }); },
   steal: () => { tone({ f: 1318, dur: 0.05, gain: 0.07 }); tone({ f: 988, dur: 0.05, gain: 0.07, delay: 0.05 }); tone({ f: 740, dur: 0.1, gain: 0.07, delay: 0.1 }); },
   shield: () => { tone({ f: 400, f2: 800, dur: 0.12, gain: 0.09, type: 'triangle' }); tone({ f: 1200, dur: 0.1, gain: 0.06, delay: 0.1 }); },
+  // --- duels: hits, hurt, glass, bosses ---
+  hit: (power = 1) => {
+    noise({ dur: 0.12, gain: 0.16 + 0.03 * Math.min(power, 5), low: 1400 });
+    tone({ f: 190 - 14 * Math.min(power, 5), f2: 60, dur: 0.16, gain: 0.2, type: 'sine' });
+    tone({ f: 420 + 90 * Math.min(power, 5), f2: 220, dur: 0.07, gain: 0.06, type: 'square', delay: 0.01 });
+  },
+  crit: () => {
+    noise({ dur: 0.18, gain: 0.2, low: 2600 });
+    tone({ f: 120, f2: 45, dur: 0.26, gain: 0.26, type: 'sine' });
+    [1318, 1760, 2349].forEach((f, i) => tone({ f, dur: 0.1, gain: 0.07, type: 'triangle', delay: 0.04 + i * 0.05 }));
+  },
+  clang: () => {
+    tone({ f: 880, dur: 0.2, gain: 0.1, type: 'triangle' });
+    tone({ f: 1330, dur: 0.16, gain: 0.07, type: 'triangle', delay: 0.01 });
+    noise({ dur: 0.06, gain: 0.1, low: 6000 });
+  },
+  hurt: () => {
+    tone({ f: 130, f2: 55, dur: 0.45, gain: 0.2, type: 'sawtooth' });
+    noise({ dur: 0.3, gain: 0.14, low: 500 });
+    tone({ f: 70, dur: 0.5, gain: 0.18, type: 'sine', delay: 0.05 });
+  },
+  glass: () => {
+    for (let i = 0; i < 6; i++) noise({ dur: 0.05 + Math.random() * 0.05, gain: 0.1, low: 5000 + Math.random() * 2500, delay: i * 0.035 });
+    [3136, 2637, 2093, 1760].forEach((f, i) => tone({ f, f2: f * 0.7, dur: 0.12, gain: 0.05, type: 'triangle', delay: 0.02 + i * 0.045 }));
+  },
+  bossDown: () => {
+    noise({ dur: 0.9, gain: 0.22, low: 900 });
+    tone({ f: 110, f2: 28, dur: 0.9, gain: 0.26, type: 'sawtooth' });
+    [392, 523, 659, 784, 1047].forEach((f, i) => tone({ f, dur: 0.22, gain: 0.1, type: 'triangle', delay: 0.5 + i * 0.1 }));
+  },
+  roar: () => {
+    tone({ f: 64, f2: 40, dur: 0.9, gain: 0.26, type: 'sawtooth' });
+    tone({ f: 67, f2: 42, dur: 0.9, gain: 0.2, type: 'sawtooth', delay: 0.03 });
+    noise({ dur: 0.7, gain: 0.14, low: 700 });
+  },
+  heal: () => [523, 659, 784, 1047].forEach((f, i) => tone({ f, dur: 0.14, gain: 0.07, type: 'triangle', delay: i * 0.06 })),
+  heat: () => { noise({ dur: 0.1, gain: 0.07, low: 3500 }); tone({ f: 440, f2: 880, dur: 0.12, gain: 0.06, type: 'triangle' }); },
+  telegraph: () => { tone({ f: 98, dur: 0.18, gain: 0.12, type: 'sawtooth' }); tone({ f: 131, dur: 0.22, gain: 0.1, type: 'sawtooth', delay: 0.14 }); },
+  node: () => { tone({ f: 330, f2: 392, dur: 0.08, gain: 0.08 }); tone({ f: 494, dur: 0.1, gain: 0.07, delay: 0.07 }); },
+  rest: () => [392, 330, 392, 523].forEach((f, i) => tone({ f, dur: 0.2, gain: 0.06, type: 'sine', delay: i * 0.14 })),
   // --- goofy / casino extras ---
   spin: () => tone({ f: 1100 + Math.random() * 300, dur: 0.025, gain: 0.05, type: 'square' }),
   reelStop: () => {

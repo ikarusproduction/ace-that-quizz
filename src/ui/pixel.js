@@ -201,6 +201,13 @@ const SPRITES = {
     '......', '...ka.', '...ka.', '..kaaa', 'kkkaaa', '.kayaa', '..kyyy', '..kayy', '.kaakk', '.kak..', '......', '......' ] },
 };
 
+/** Extra art registered by other modules (the boss roster). Extra palette letters are allowed. */
+export function registerSprites(defs, palette = {}) {
+  Object.assign(PALETTE, palette);
+  Object.assign(SPRITES, defs);
+  cache.clear();
+}
+
 const cache = new Map();
 
 function expand(def) {
@@ -238,7 +245,7 @@ export function spriteUrl(name) {
 }
 
 export const hasSprite = (name) => name in SPRITES;
-export const SPRITE_NAMES = Object.keys(SPRITES);
+export const spriteNames = () => Object.keys(SPRITES);
 
 /** An <img> showing a sprite at an integer pixel size. */
 export function sprite(name, px = 32, alt = '') {

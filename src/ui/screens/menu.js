@@ -29,8 +29,9 @@ export async function menuScreen(app) {
     rewards.length ? h('button.btn.good.block', { type: 'button', onclick: () => go('rewards') }, sprite('key', 28), `${rewards.length} card reward${rewards.length > 1 ? 's' : ''} waiting`) : null,
     packsWaiting ? h('button.btn.good.block', { type: 'button', onclick: () => go('hexes', { tab: 'packs' }) }, sprite('ink', 28), `${packsWaiting} hex pack${packsWaiting > 1 ? 's' : ''} to open`) : dailyReady && profiles.length ? h('button.btn.block', { type: 'button', onclick: () => go('hexes') }, sprite('flame', 28), 'Daily pack ready') : null,
     h('div.menu', {},
-      menuBtn('primary', 'star', 'Play', profiles.length ? 'solo · versus · daily' : 'start here', () => go('setup')),
+      menuBtn('primary', 'star', 'Play', profiles.length ? 'boss rush · map · versus · daily' : 'start here', () => go('setup')),
       menuBtn('', 'radio', 'Online', 'friends on their own phones', () => go('online')),
+      app.cloud ? menuBtn('', 'owl', 'Friends', 'codes · compare stats', () => go('friends')) : null,
       menuBtn('', 'gasmask', 'Players', `${profiles.length} on this device`, () => go('profiles')),
       menuBtn('', 'key', 'Cards', 'bonus collection', () => go('cards')),
       menuBtn('', 'ink', 'Hexes', 'deck · packs · daily', () => go('hexes')),
@@ -57,7 +58,7 @@ function menuBtn(kind, icon, label, sub, onclick) {
 
 function resumeCard(app, state) {
   const names = state.players.map((p) => p.name).join(', ');
-  const modeName = { solo: 'Solo run', versus: 'Versus', daily: 'Daily' }[state.mode] ?? state.mode;
+  const modeName = state.config?.variant ? { rush: 'Boss Rush', map: 'Map run' }[state.config.variant] : ({ solo: 'Solo run', versus: 'Versus', daily: 'Daily' }[state.mode] ?? state.mode);
   const abandon = async () => {
     const ok = await confirmDialog({
       title: 'Abandon this game?',
@@ -74,7 +75,7 @@ function resumeCard(app, state) {
   return h('div.panel', {},
     h('div.tiny.amber', {}, 'Game in progress'),
     h('h3', {}, `${modeName} · ${names}`),
-    h('p.small.dim', {}, `Round ${state.roundIndex + 1}, question ${Math.min(5, state.qIndex + 1)} of 5.`),
+    h('p.small.dim', {}, state.enc ? `${state.enc.name}, question ${state.qIndex + 1}.` : `Round ${state.roundIndex + 1}, question ${Math.min(5, state.qIndex + 1)} of 5.`),
     h('div.row', {},
       h('button.btn.primary.grow', { type: 'button', onclick: () => go('game', { resume: true }) }, 'Resume'),
       h('button.btn.ghost', { type: 'button', onclick: abandon }, 'Abandon'),

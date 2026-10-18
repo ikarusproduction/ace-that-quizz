@@ -8,7 +8,7 @@ Zero dependencies, no build step. Everything is stored on the device (IndexedDB)
 ```
 npm start          # http://localhost:5173 (use your LAN address on a phone)
 ```
-Modes: **Solo run** (3 acts), **Quick run** (1 act), **Versus** (2–4 players, one phone, pass-the-phone gates, attack cards), **Daily** (fixed seed, no cards).
+Modes: **Boss Rush** (pick one of eight themed bosses and duel it: health bar, telegraphed moves, heat budget for stakes), **Map run** (a five-layer branching map: contestants, champion, boss, shops, rests, deals, then The House), **Versus** (2–4 players, one phone, pass-the-phone gates, attack cards), **Daily** (fixed seed, no cards).
 
 ## Themes, variety, languages
 - **Theme picker:** before a game, fill 5 slots from 12 themes (science, music, cinema, pop culture, manga, cooking, finance, business, sports, F1, hockey, current affairs) or hit **Random**. Each round draws one question per slot.
@@ -50,3 +50,10 @@ Push to GitHub, enable Pages → "GitHub Actions". `.github/workflows/deploy.yml
 - **Name That Tune is empty.** Lyrics and recordings are copyrighted: add entries to `data/questions/tunes.json` (see its `_readme`) with licensed `audio` files. Until then that slot uses music questions.
 - News questions are dated (`asOf`) and will age.
 - Data does not sync across devices; use Settings → Export/Import.
+
+
+## Solo duels, friends and puzzles (latest)
+- Duel engine: `src/engine/duel.js` (bosses, intents, heat, map, deals) with tests in `tests/duel.test.js`; the animated stage is `src/ui/stage.js`, boss art `src/ui/art_bosses.js`.
+- Friends: a friend code per profile, a public stat card on the PHP relay (`/api/friend`, secret-protected), the list stored inside the profile (`friends`). Needs the PHP relay.
+- Waiting-room puzzles now include sliding tiles, odd-one-out, shape counting, patterns, light memory and riddles (`src/engine/minigame.js`, `src/ui/waitgame.js`).
+- E2E: `tests/e2e/duel.py`, `tests/e2e/friends.py` (plus the existing suites).

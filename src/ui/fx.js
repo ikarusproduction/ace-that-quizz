@@ -63,6 +63,29 @@ export function confetti({ count = 60, duration = 1800 } = {}) {
   }
 }
 
+/** Pixel particles bursting out of a point (hits, shards, explosions). */
+export function burstAt(x, y, { colors = COLORS, count = 18, spread = 140, gravity = 120, size = [4, 9], duration = [500, 900], up = 0 } = {}) {
+  if (reduce) return;
+  const l = fxLayer();
+  for (let i = 0; i < count; i++) {
+    const a = Math.random() * Math.PI * 2;
+    const sp = spread * (0.4 + Math.random() * 0.8);
+    const sz = size[0] + Math.floor(Math.random() * (size[1] - size[0] + 1));
+    const p = h('i.confetti', { style: { left: `${x}px`, top: `${y}px`, width: `${sz}px`, height: `${sz}px`, marginLeft: `${-sz / 2}px`, marginTop: `${-sz / 2}px`, background: colors[i % colors.length] } });
+    l.append(p);
+    const dx = Math.cos(a) * sp;
+    const dy = Math.sin(a) * sp - up;
+    p.animate(
+      [
+        { transform: 'translate(0,0) rotate(0deg)', opacity: 1 },
+        { transform: `translate(${dx}px, ${dy}px) rotate(${Math.random() * 360}deg)`, opacity: 1, offset: 0.55 },
+        { transform: `translate(${dx * 1.15}px, ${dy + gravity}px) rotate(${Math.random() * 540}deg)`, opacity: 0 },
+      ],
+      { duration: duration[0] + Math.random() * (duration[1] - duration[0]), easing: 'cubic-bezier(.1,.7,.4,1)' },
+    ).finished.then(() => p.remove()).catch(() => p.remove());
+  }
+}
+
 /** Coins that burst upward from an element and fall back. */
 export function coinBurst(anchor, n = 10) {
   if (reduce) return;

@@ -9,13 +9,13 @@ import { profileEditor } from './profiles.js';
 import { localDateKey } from '../dom.js';
 
 const MODES = [
-  { id: 'solo', icon: 'star', name: 'Solo run', sub: '3 acts · 9 rounds · bosses', min: 1, max: 1, text: 'Climb through three acts. Bank your chips at the crossroads, survive the bosses, keep your bulbs lit.' },
-  { id: 'quick', icon: 'bulb_on', name: 'Quick run', sub: '1 act · 3 rounds', min: 1, max: 1, text: 'One act and its boss. About ten minutes.' },
+  { id: 'rush', icon: 'skull', name: 'Boss Rush', sub: 'pick a boss · one duel · ~5 min', min: 1, max: 1, text: 'Pick one boss and fight it alone. Right answers hit, wrong answers crack your bulbs. Read its moves, spend your heat wisely.' },
+  { id: 'map', icon: 'swords', name: 'Map run', sub: 'five rooms deep · ~10 min', min: 1, max: 1, text: 'Climb a branching map: contestants, a champion, a boss, shops, rests and shady deals, then The House. Every path is your call.' },
   { id: 'versus', icon: 'jammer', name: 'Versus', sub: '2–4 players · one phone', min: 2, max: 4, text: 'Pass the phone. Three rounds, most chips wins. Attack cards are live.' },
   { id: 'daily', icon: 'hourglass', name: 'Daily', sub: 'same seed for everyone', min: 1, max: 1, text: "Today's fixed run: the same questions in the same order for everyone. No cards." },
 ];
 
-let lastMode = 'solo';
+let lastMode = 'map';
 let chosen = [];
 
 export async function setupScreen(app, params) {
@@ -25,6 +25,7 @@ export async function setupScreen(app, params) {
   const sessions = await app.repo.listSessions();
   const hasTunes = app.bank.questions.some((q) => q.category === 'tunes');
   let mode = params.mode ?? lastMode;
+  if (mode === 'solo' || mode === 'quick' || !['rush', 'map', 'versus', 'daily'].includes(mode)) mode = 'map';
   chosen = chosen.filter((id) => profiles.some((p) => p.id === id));
   if (!chosen.length && recent.ids.length) chosen = [recent.ids[0]];
 
@@ -42,7 +43,7 @@ export async function setupScreen(app, params) {
       ? sessions.find((s) => s.seed === today && s.status === 'completed' && s.players.some((p) => p.playerId === chosen[0]))
       : null;
     const ready = chosen.length >= m.min && chosen.length <= m.max;
-    const lastGroup = recent.lastGroup && (recent.lastGroup.mode === mode || (mode === 'quick' && recent.lastGroup.mode === 'solo')) ? recent.lastGroup : null;
+    const lastGroup = recent.lastGroup && (recent.lastGroup.mode === mode || (['rush', 'map'].includes(mode) && recent.lastGroup.mode === 'solo')) ? recent.lastGroup : null;
 
     mount(root, 
       screenHeader('New game', () => goBack('menu')),
@@ -92,6 +93,7 @@ async function start(app, mode, playerIds) {
     const res = dispatch(active, { type: 'ABANDON' }, app.ctx);
     await app.repo.finalizeSession(res.state);
   }
-  // Daily is a fixed shared run, so it has no theme choice.
-  go(mode === 'daily' ? 'game' : 'themes', { mode, playerIds });
+  // Daily is a fixed shared run and the solo duels pick their own questions, so none of them has a theme choice.
+  if (mode === 'rush') return go('bosses', { mode, playerIds });
+  go(mode === 'daily' || mode === 'map' ? 'game' : 'themes', { mode, playerIds });
 }

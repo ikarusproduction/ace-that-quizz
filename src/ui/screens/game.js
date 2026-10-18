@@ -22,9 +22,13 @@ import { createTranslator, applyTranslation } from '../../i18n/translate.js';
 import { recentlySeenIds, seenCounts } from '../../stats/stats.js';
 import { CARDS as ALL_CARDS } from '../../engine/cards.js';
 import { STARTER_CARDS } from '../../engine/cards.js';
+import { DUEL, INTENTS, NODE_KINDS, DEALS, DUEL_SHOP_ITEMS, BOSS_ROSTER, availableNodes, startHeat } from '../../engine/duel.js';
+import { createStage, stageFor } from '../stage.js';
+import '../art_bosses.js';
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
-const MODE_NAME = { solo: 'Solo run', quick: 'Quick run', versus: 'Versus', daily: 'Daily' };
+const chipsText = (n) => `${n >= 0 ? '+' : '−'}${Math.abs(n)} chips`;
+const MODE_NAME = { solo: 'Solo run', quick: 'Quick run', versus: 'Versus', daily: 'Daily', rush: 'Boss Rush', map: 'Map run' };
 
 export async function gameScreen(app, params) {
   const ctl = new GameController(app);
@@ -268,7 +272,7 @@ class GameController {
       }
       this.state = state;
       this.persisted = state.log.length;
-      this.label = state.mode;
+      this.label = state.config?.variant ?? state.mode;
       // Leaving mid-question must not be a free retry of the clock.
       if (state.phase === 'question') {
         const p = state.players[state.turn];
@@ -283,7 +287,8 @@ class GameController {
       const ids = params.playerIds ?? [];
       const players = ids.map((id) => this.profiles.get(id)).filter(Boolean);
       if (!players.length) return false;
-      const mode = params.mode === 'quick' ? 'solo' : params.mode;
+      const duelVariant = params.mode === 'rush' || params.mode === 'map' ? params.mode : null;
+      const mode = params.mode === 'quick' || duelVariant ? 'solo' : params.mode;
       this.label = params.mode;
       const results = await app.repo.storage.getAll('results');
       const avoidIds = mode === 'daily' ? [] : recentlySeenIds(results, ids);
@@ -292,7 +297,7 @@ class GameController {
         players: players.map((p) => ({ id: p.id, name: p.name, ownedCards: p.ownedCards, ownedHexes: metaOf(p).hexes.owned, hexDeck: metaOf(p).hexes.deck })),
         ctx: app.ctx,
         seed: mode === 'daily' ? `daily-${localDateKey()}` : undefined,
-        overrides: { ...(params.mode === 'quick' ? { acts: 1 } : {}), ...(params.themes && mode !== 'daily' ? { themes: params.themes } : {}) },
+        overrides: { ...(params.mode === 'quick' ? { acts: 1 } : {}), ...(duelVariant ? { variant: duelVariant, bossId: params.bossId ?? null } : {}), ...(params.themes && mode !== 'daily' && !duelVariant ? { themes: params.themes } : {}) },
         avoidIds,
         seenCounts: mode === 'daily' ? {} : seenCounts(results, ids),
       });
@@ -394,6 +399,9 @@ class GameController {
         const list = packsEarned(s, p.playerId).map((type, i) => ({ id: `${s.sessionId}:${p.playerId}:g${i}`, type, from: i === 0 ? 'Game pack' : i === 1 ? 'Great game' : 'Streak master' }));
         for (const m of evaluateMissions(s, p.playerId, p.missions ?? []).filter((x) => x.done)) list.push({ id: `${s.sessionId}:${p.playerId}:m:${m.id}`, type: 'bronze', from: `Mission: ${m.text}` });
         await this.app.repo.addPacks(p.playerId, list);
+        // A player who has shared a friend code keeps their public card fresh.
+        const prof = await this.app.repo.getProfile(p.playerId);
+        if (prof?.friendCode && this.app.cloud) this.app.cloud.publishFriendCard(p.playerId).catch(() => {});
       }
     } catch (e) {
       this.reportSaveError(e);
@@ -427,10 +435,14 @@ class GameController {
       'round-summary': () => this.viewSummary(),
       crossroads: () => this.viewCrossroads(),
       shop: () => this.viewShop(),
+      map: () => this.viewMap(),
+      rest: () => this.viewRest(),
+      event: () => this.viewEvent(),
       finished: () => this.viewFinished(),
     }[phase]();
     mount(this.root, body);
     if (phase !== 'question') window.scrollTo(0, 0);
+    this.runStagePlay();
     const notes = this.notes.splice(0);
     notes.forEach((n) => toast(n));
   }
@@ -456,6 +468,13 @@ class GameController {
         if (hx.blocked || hex.kind === 'defense') sfx.shield?.(); else if (iAt && !iBy) { sfx.splat?.(); haptic('warn'); } else if (hx.stolen) sfx.steal?.();
       }
     }
+    const dl = s.lastDeal;
+    if (this.seenDealSeq === undefined) this.seenDealSeq = dl?.seq ?? 0;
+    else if (dl && dl.seq > this.seenDealSeq) {
+      this.seenDealSeq = dl.seq;
+      if (dl.id === 'gamble') { this.notes.push(dl.won ? 'Heads. +70 chips.' : 'Tails. −35 chips.'); dl.won ? sfx.coin?.() : sfx.wrong?.(); }
+      else { this.notes.push('Deal done.'); sfx.coin?.(); }
+    }
     // Hexes earned by a streak or by puzzles: a reveal, shown only to the player who earned it.
     const ea = s.lastEarn;
     if (this.seenEarnSeq === undefined) { this.seenEarnSeq = ea?.seq ?? 0; return; }
@@ -463,7 +482,7 @@ class GameController {
       this.seenEarnSeq = ea.seq;
       if (!this.net || this.myIds.includes(ea.playerId)) {
         const who = s.players.find((x) => x.playerId === ea.playerId)?.name;
-        const show = () => cardReveal(ea.hexId, { title: ea.from === 'puzzles' ? 'Prank earned' : `Streak! ${HEXES[ea.hexId].rarity} hex`, sub: `${this.net || !this.passPhone ? '' : `${who}: `}Added to your hand. Play it before a stake${this.net ? ', or prank the answerer while you wait' : ''}.` });
+        const show = () => cardReveal(ea.hexId, { title: ea.from === 'puzzles' ? 'Prank earned' : ea.from === 'fight' ? `Spoils: ${HEXES[ea.hexId].rarity} hex` : ea.from === 'deal' ? 'A stranger\'s hex' : `Streak! ${HEXES[ea.hexId].rarity} hex`, sub: `${this.net || !this.passPhone ? '' : `${who}: `}Added to your hand. Play it before a stake${this.net ? ', or prank the answerer while you wait' : ''}.` });
         if (this.passPhone) {
           // One shared phone: never show a hex to the next player. It is revealed when its owner's turn comes back.
           (this.earnQueue ??= {})[ea.playerId] = [...((this.earnQueue ??= {})[ea.playerId] ?? []), show];
@@ -579,6 +598,12 @@ class GameController {
   setMoodForState() {
     const s = this.s;
     if (s.phase === 'finished') return setMood(s.players.some((p) => p.result === 'won') ? 'win' : 'out');
+    if (s.enc && ['map', 'rest', 'event', 'shop'].includes(s.phase)) return setMood('calm');
+    if (s.enc && s.round) {
+      if (s.enc.kind !== 'minion' && s.enc.hp <= s.enc.maxHp * DUEL.enrageAt) return setMood('boss');
+      if (s.players.some((p) => p.strikes <= 1 && !p.defeated)) return setMood('danger');
+      return setMood(s.enc.kind === 'minion' ? 'tense' : 'boss');
+    }
     if (s.round?.isBoss) return setMood('boss');
     if (s.config.strikes && s.players.some((p) => p.strikes === 1 && !p.defeated)) return setMood('danger');
     if (s.round && s.round.hazardId !== 'none') return setMood('tense');
@@ -587,6 +612,7 @@ class GameController {
 
   roundTitle() {
     const s = this.s;
+    if (s.enc) return s.config.variant === 'rush' ? `Boss Rush · ${s.enc.name}` : `${s.enc.kind === 'minion' ? 'Fight' : s.enc.kind === 'elite' ? 'Champion' : s.enc.kind === 'final' ? 'The last room' : 'Boss'} · ${s.enc.name}`;
     const info = roundInfo(s.roundIndex, s.config);
     if (s.config.noBoss) return `Round ${s.roundIndex + 1} of ${info.totalRounds}`;
     return info.isBoss ? `Act ${info.act + 1} · Boss` : `Act ${info.act + 1} · Round ${info.inAct + 1}`;
@@ -601,7 +627,7 @@ class GameController {
       h('span.pill', { title: 'Chips on the table' }, sprite('chip', 16), p.chips),
       p.vault > 0 ? h('span.pill', { title: 'Banked chips (safe)' }, sprite('vault', 16), p.vault) : null,
       p.streak > 0 ? h('span.pill', { title: 'Streak' }, sprite('flame', 16), p.streak) : null,
-      s.config.strikes ? h('span.bulbs', { style: { marginLeft: 'auto' } }, bulbs(p.strikes)) : h('span', { style: { marginLeft: 'auto' } }),
+      s.config.strikes && !(s.enc && ['stake', 'question', 'reveal'].includes(s.phase)) ? h('span.bulbs', { style: { marginLeft: 'auto' } }, bulbs(p.strikes, DUEL.startLives)) : h('span', { style: { marginLeft: 'auto' } }),
       menu ? h('button.btn.small.icon.ghost', { type: 'button', 'aria-label': 'Menu', onclick: () => this.openPause() }, '☰') : null,
     );
   }
@@ -703,11 +729,12 @@ class GameController {
     const round = s.round;
     const boss = round.bossId ? BOSSES[round.bossId] : null;
     const hazard = HAZARDS[round.hazardId];
-    const cats = roundCategories(round, this.ctx.byId);
+    const cats = s.enc ? [] : roundCategories(round, this.ctx.byId);
     const tab = this.net ? s.players.indexOf(this.myPlayer) : Math.min(this.loadoutTab, s.players.length - 1);
     const p = s.players[tab];
     const owned = equippableCards(p.owned, s.mode);
     const locked = !s.config.cardsEnabled || Boolean(boss?.cardsLocked);
+    const duel = Boolean(s.enc);
     const hand = owned.filter((id) => !p.loadout.includes(id));
 
     const setLoadout = (cards) => this.act({ type: 'SET_LOADOUT', playerId: p.playerId, cards }, { silent: false });
@@ -726,13 +753,13 @@ class GameController {
 
     return [
       this.hud(this.s.players[0], { menu: true }),
-      h('div.panel.banner', { class: boss ? 'boss' : '' },
+      duel ? this.enemyCard(p) : h('div.panel.banner', { class: boss ? 'boss' : '' },
         h('div.tiny.dim', {}, this.roundTitle()),
         h('h3', {}, boss ? boss.name : hazard.name),
         h('p.small', {}, boss ? boss.text : hazard.text),
         boss && round.hazardId !== 'none' ? h('p.small', {}, hazard.text) : null,
       ),
-      h('div.row.wrap', { style: { justifyContent: 'center', gap: '6px' } }, [...new Set(cats)].map((c) => categoryTag(c))),
+      duel ? null : h('div.row.wrap', { style: { justifyContent: 'center', gap: '6px' } }, [...new Set(cats)].map((c) => categoryTag(c))),
       round.markedSlot != null ? h('p.small.amber.center', {}, '★ One question this round is marked. You will see which when it comes up.') : null,
       s.players.some((x) => x.comeback) ? h('p.small.green.center', {}, `Comeback charge: ${s.players.filter((x) => x.comeback).map((x) => x.name).join(', ')} get an extra use of each equipped card.`) : null,
       s.config.cardsEnabled
@@ -750,7 +777,7 @@ class GameController {
       s.config.cardsEnabled ? this.missionsPanel(p) : null,
       this.net && !this.net.isHost
         ? h('div.stick-bottom', {}, h('p.small.dim.center', {}, 'Equip your cards. The host starts the round.'))
-        : h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', onclick: () => { unlockAudio(); sfx.stake(); if (round.isBoss) sfx.boss(); this.gateKey = null; this.act({ type: 'START_ROUND' }); if (round.isBoss || round.hazardId === 'cold_table') lightsOn({ sound: false }); } }, round.isBoss ? 'Face the boss' : 'Start round')),
+        : h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', onclick: () => { unlockAudio(); sfx.stake(); if (round.isBoss) sfx.boss(); this.gateKey = null; this.act({ type: 'START_ROUND' }); if (round.isBoss || round.hazardId === 'cold_table') lightsOn({ sound: false }); } }, duel ? (s.enc.kind === 'minion' ? 'Start the fight' : `Face ${s.enc.name}`) : round.isBoss ? 'Face the boss' : 'Start round')),
     ];
   }
 
@@ -794,24 +821,27 @@ class GameController {
     return [
       this.hud(p),
       h('div.row.between', {}, h('span.tiny.dim', {}, this.roundTitle()), s.round.markedSlot === s.qIndex ? h('span.tag.amber', {}, `★ Marked: ${HAZARDS[s.round.hazardId].slotLossMult ? 'pays ×2, misses cost ×2' : 'pays ×2'}`) : null),
-      this.slotDots(),
+      s.enc ? stageFor(s, p, { compact: true }).el : this.slotDots(),
       h('div.cat-line', {}, categoryIcon(view.category, 20), CATEGORIES[view.category]?.label ?? view.category, h('span', { style: { marginLeft: 'auto' } }, diffPips(view.difficulty))),
       this.questionCard(view, { hidden: view.text == null, tune: view.type === 'tune' }),
       this.cardsBar('pre-stake'),
       this.hexBar('stake'),
       h('div.row.between', {}, h('h3', {}, boss?.lockStake ? 'Stake locked' : 'Choose your stake'), h('span.tiny.dim', {}, `${p.chips} chips`)),
+      s.enc ? h('div.heat-bar-line', {}, h('span.small', {}, `Heat ${p.heat}: a ×2 stake burns 1, a ×3 burns 2. Fast answers and streaks refund it.`)) : null,
       p.chips <= 0 ? h('p.small.green', {}, 'You are out of chips, so this one is played for free. A correct answer still pays.') : null,
       h('div.stakes', {}, options.map((o) => h('button.stake', {
-        type: 'button', 'aria-pressed': String(o.stake === this.stakeSel), disabled: options.length === 1,
+        type: 'button', 'aria-pressed': String(o.stake === this.stakeSel), disabled: options.length === 1 || Boolean(o.locked), class: o.locked ? 'locked' : '',
         onclick: () => { this.stakeSel = o.stake; sfx.select(); this.render(); },
       },
       h('span.mult', {}, `${o.stake}×`),
       h('span.nums', {}, h('span.w', {}, `Win +${o.win}`), h('span.l', {}, `Lose −${o.lose}`)),
-      h('span.note', {}, o.broke ? 'Free play' : `Risk ${Math.min(p.chips, o.stake * RULES.baseWager)} chips · up to +${o.winFast} if you answer in the first ${Math.round(RULES.speedThreshold * 100)}% of the clock`),
+      s.enc
+        ? h('span.note', {}, h('span.dmg', {}, `Hit ${o.dmg}${o.dmgFast > o.dmg ? `–${o.dmgFast} fast` : ''}`), ' · ', h('span.heat-cost', {}, o.heatCost ? `Heat −${o.heatCost}${o.locked ? ' (not enough)' : ''}` : 'Free'), o.broke ? ' · free play' : ` · risk ${Math.min(p.chips, o.stake * RULES.baseWager)} chips`)
+        : h('span.note', {}, o.broke ? 'Free play' : `Risk ${Math.min(p.chips, o.stake * RULES.baseWager)} chips · up to +${o.winFast} if you answer in the first ${Math.round(RULES.speedThreshold * 100)}% of the clock`),
       ))),
       qp.usedCards.length ? h('p.tiny.amber', {}, `Armed: ${qp.usedCards.map((c) => CARDS[c].name).join(', ')}`) : null,
       h('div.stick-bottom', {}, h('button.btn.primary.block', {
-        type: 'button', disabled: !sel,
+        type: 'button', disabled: !sel || Boolean(sel.locked),
         onclick: async (e) => { sfx.stake(); if (sel.stake >= 3) { sfx.drumroll(); haptic('big'); } e.currentTarget.disabled = true; await Promise.race([this.ensureTranslation(p.playerId), new Promise((r) => setTimeout(r, 3500))]); this.act({ type: 'CONFIRM_STAKE', playerId: p.playerId, stake: sel.stake }); },
       }, sel ? `Lock in ${sel.stake}× · start the clock` : 'Pick a stake')),
     ];
@@ -850,7 +880,7 @@ class GameController {
       else if (!here) why = timing === 'pre-stake' ? 'During question' : 'Before staking';
       else if ((id === 'scalpel' || id === 'rewind') && !mcq4) why = 'Needs 4 options';
       else if (id === 'ghost_note' && q.type === 'tf') why = 'Needs choices';
-      else if (id === 'skeleton_key' && boss) why = 'Not vs bosses';
+      else if (id === 'skeleton_key' && (boss || (s.enc && s.enc.kind !== 'minion'))) why = 'Not vs bosses';
       const armed = qp.usedCards.includes(id);
       return h('button.card-mini', {
         type: 'button', class: armed ? 'armed' : '', disabled: Boolean(why), title: `${c.text} Drawback: ${c.drawback}`,
@@ -914,7 +944,7 @@ class GameController {
     return [
       this.hud(p),
       h('div.row.between', {}, h('span.tiny.dim', {}, this.roundTitle()), s.round.markedSlot === s.qIndex ? h('span.tag.amber', {}, '★ Marked question') : null),
-      this.slotDots(),
+      s.enc ? stageFor(s, p, { compact: true, showPattern: false }).el : this.slotDots(),
       h('div.cat-line', {}, categoryIcon(view.category, 20), CATEGORIES[view.category]?.label ?? view.category, h('span', { style: { marginLeft: 'auto' } }, diffPips(view.difficulty))),
       hexes.length ? h('p.tiny.amber.center.hex-tag', {}, `Hexed: ${hexes.join(', ')}`) : null,
       h('div', { class: hexes.includes('flip') ? 'hex-flip' : '' }, this.questionCard(view, { tune: view.type === 'tune', dir: view.translated ? (languageOf(this.langOf(p.playerId)).rtl ? 'rtl' : null) : null })),
@@ -1018,13 +1048,13 @@ class GameController {
     } else {
       rec.outcome === 'timeout' ? sfx.timeout() : sfx.wrong();
       pulse('bad');
-      shake(this.root);
+      if (!rec.duel) shake(this.root);
       haptic(rec.outcome === 'timeout' ? 'timeout' : 'wrong');
       if ((rec.stake ?? 1) >= 3) { sfx.sadTrombone(); stamp('OUCH!', { kind: 'bad' }); }
       else if (rec.outcome !== 'timeout') sfx.boing();
     }
     floatText(`${rec.delta > 0 ? '+' : rec.delta < 0 ? '−' : ''}${Math.abs(rec.delta)}`, rec.delta >= 0 ? 'up' : 'down');
-    if (rec.strikeLost) blackout();
+    if (rec.strikeLost && !rec.duel) blackout();
   }
 
   /* ----------------------------------------------------------- reveal */
@@ -1062,7 +1092,7 @@ class GameController {
 
     const solo = !this.multi;
     const r0 = s.q.byPlayer[s.players[0].playerId].result;
-    const banner = solo
+    const banner = s.enc && r0.duel ? this.duelBanner(r0) : solo
       ? h('div.panel.reveal-banner.pop', { class: r0.correct ? 'good' : 'bad', role: 'status' },
           h('h2', {}, r0.correct ? 'Correct' : r0.outcome === 'timeout' ? "Time's up" : 'Wrong'),
           h('p.small.dim', {}, `${r0.delta >= 0 ? 'Won' : 'Lost'} ${Math.abs(r0.delta)} chips${r0.streakAfter > 1 ? ` · streak ${r0.streakAfter}` : ''}${r0.usedCards.length ? ` · ${r0.usedCards.map((c) => CARDS[c].name).join(', ')}` : ''}`),
@@ -1072,6 +1102,7 @@ class GameController {
     const audio = v.audio;
     return [
       this.hud(solo ? s.players[0] : this.turnPlayer),
+      s.enc && r0.duel ? this.revealStage(r0, key) : null,
       banner,
       solo ? this.recapChoices(v, r0) : null,
       h('div.panel.paper', {},
@@ -1087,7 +1118,7 @@ class GameController {
           : null,
       ),
       !solo ? h('div.panel.inset.tight', {}, s.players.map((p) => h('div.kv', {}, h('span', {}, p.name), h('b', {}, `${p.chips} chips`)))) : null,
-      h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', onclick: () => { stopClip(); sfx.tap(); this.act({ type: 'NEXT' }); } }, last ? 'Round results' : 'Next question')),
+      h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', onclick: () => { stopClip(); sfx.tap(); this.act({ type: 'NEXT' }); } }, s.enc ? (s.enc.over ? (s.enc.over === 'won' ? 'Claim the win' : 'Continue') : 'Next question') : last ? 'Round results' : 'Next question')),
     ];
   }
 
@@ -1099,6 +1130,7 @@ class GameController {
 
   viewSummary() {
     const s = this.s;
+    if (s.enc) return this.duelSummary();
     const last = s.roundLog[s.roundLog.length - 1];
     const boss = last.bossId ? BOSSES[last.bossId] : null;
     const threshold = boss?.passThreshold ?? RULES.passThreshold;
@@ -1153,24 +1185,226 @@ class GameController {
   viewShop() {
     const s = this.s;
     const p = s.players[0];
-    const act = s.round.act;
+    const act = s.config.duel ? `n${s.map?.at ?? 0}` : s.round.act;
     const buy = (item) => { if (this.act({ type: 'BUY', playerId: p.playerId, item })) sfx.coin(); };
     const state = (id) => {
-      const it = SHOP_ITEMS[id];
+      const it = SHOP_ITEMS[id] ?? DUEL_SHOP_ITEMS[id];
       if (p.chips < it.cost) return 'Not enough chips';
       if (id === 'spare_bulb') return p.strikes >= RULES.maxStrikes ? 'Bulbs full' : p.shopBought[`bulb${act}`] ? 'Bought this act' : null;
       if (id === 'spare_battery') return p.bonusCharges ? 'Already bought' : null;
       if (id === 'slow_clock') return p.slowClock ? 'Already bought' : null;
+      if (id === 'ice_pack') return p.shopBought[`ice${act}`] ? 'Bought here' : null;
+      if (id === 'whetstone') return (p.edge ?? 0) >= 2 ? 'Sharp enough' : null;
       return null;
     };
     return [
       this.hud(p, {}),
       h('div.panel.banner', {}, h('div.tiny.dim', {}, 'The shop'), h('h2', {}, 'Spend or save')),
-      ...Object.values(SHOP_ITEMS).map((it) => {
+      ...[...Object.values(SHOP_ITEMS), ...(s.config.duel ? Object.values(DUEL_SHOP_ITEMS) : [])].map((it) => {
         const why = state(it.id);
-        return h('div.panel.shop-item', {}, sprite(it.id === 'spare_bulb' ? 'bulb_on' : it.id === 'spare_battery' ? 'key' : 'hourglass', 40), h('div.grow', {}, h('b', {}, it.name), h('p.small.dim', { style: { margin: 0 } }, it.text)), h('button.btn.small', { class: why ? '' : 'primary', type: 'button', disabled: Boolean(why), onclick: () => buy(it.id) }, why ?? it.cost));
+        return h('div.panel.shop-item', {}, sprite(it.id === 'spare_bulb' ? 'bulb_on' : it.id === 'spare_battery' ? 'key' : it.id === 'ice_pack' ? 'blur' : it.id === 'whetstone' ? 'swords' : 'hourglass', 40), h('div.grow', {}, h('b', {}, it.name), h('p.small.dim', { style: { margin: 0 } }, it.text)), h('button.btn.small', { class: why ? '' : 'primary', type: 'button', disabled: Boolean(why), onclick: () => buy(it.id) }, why ?? it.cost));
       }),
-      h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', onclick: () => { sfx.tap(); this.act({ type: 'LEAVE_SHOP' }); } }, 'Next round')),
+      h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', onclick: () => { sfx.tap(); this.act({ type: 'LEAVE_SHOP' }); } }, s.config.duel ? 'Back to the map' : 'Next round')),
+    ];
+  }
+
+  /* ------------------------------------------------------------ duels */
+
+  /** The enemy before the fight: portrait, health, what it does and what it pays. */
+  enemyCard(p) {
+    const enc = this.s.enc;
+    const roster = BOSS_ROSTER[enc.id];
+    const heat = startHeat(enc.kind, p.heatBonus ?? 0);
+    const uniq = (list) => [...new Set(list ?? [])];
+    const moveRow = (id) => { const it = INTENTS[id]; return h('div.row', { style: { gap: '8px', alignItems: 'flex-start' } }, sprite(it.icon, 24), h('div', {}, h('b.small', {}, it.label), h('div.tiny.dim', {}, it.text))); };
+    const rw = DUEL.rewards[enc.kind] ?? DUEL.rewards.minion;
+    const extra = uniq(enc.enraged).filter((id) => !enc.intents.includes(id));
+    return h('div.panel.enemy-card', {},
+      h('div.tiny.dim', {}, this.roundTitle()),
+      createStage({ enc, hp: enc.hp, lives: p.strikes, heat, showPattern: false }).el,
+      h('p.small', {}, roster?.blurb ?? 'A rival with a point to prove.'),
+      h('div.row.wrap', { style: { gap: '6px' } }, enc.cat !== 'any' ? categoryTag(enc.cat) : h('span.tag', {}, 'Every subject'), h('span.tag', {}, `Health ${enc.maxHp}`), h('span.tag.amber', {}, `Heat ${heat}`)),
+      enc.kind === 'minion'
+        ? h('p.small.dim', {}, `Three misses and ${enc.name.split(',')[0]} beats you: you lose one bulb and the run goes on. A right answer hits for 1 to 3.`)
+        : [h('div.tiny.dim', {}, 'What it does'), h('div.pattern-list', {}, uniq(enc.intents).map(moveRow)), extra.length ? [h('div.tiny.red', {}, 'When hurt (under 40% health) it also uses'), h('div.pattern-list', {}, extra.map(moveRow))] : null],
+      h('p.tiny.dim', {}, `Win: ${rw.chips} chips${rw.hex ? ', an uncommon hex' : ''}${rw.heal ? ', and a bulb back' : ''}. ${enc.kind === 'minion' ? '' : 'A wrong answer costs a bulb. Run out and the run is over.'}`),
+    );
+  }
+
+  duelBanner(r) {
+    const d = r.duel;
+    const enc = this.s.enc;
+    const bits = [];
+    if (r.correct) {
+      if (d.crit) bits.push('fast');
+      if (d.streakHit || d.streak) bits.push('streak');
+      if (d.curseThrough) bits.push('through the curse');
+      if (d.guarded) bits.push('half: armor held');
+      return h('div.panel.reveal-banner.pop.good', { role: 'status' },
+        h('h2', {}, d.guarded ? 'Blocked, half damage' : d.crit ? 'Critical hit!' : 'Hit!'),
+        h('p.small.dim', {}, `−${d.dmg} to ${enc.name.split(',')[0]}${bits.length ? ` · ${bits.join(' · ')}` : ''} · ${chipsText(r.delta)}${r.streakAfter > 1 ? ` · streak ${r.streakAfter}` : ''}`),
+        d.heatGain ? h('p.tiny.amber', {}, `+${d.heatGain} heat back`) : null,
+      );
+    }
+    const lines = [];
+    if (d.bulbsLost) lines.push(d.bulbsLost > 1 ? `Two bulbs crack.` : 'A bulb cracks.');
+    else if (enc.kind === 'minion') lines.push(`Miss ${d.misses} of ${DUEL.minionMisses}.`);
+    if (d.heal) lines.push(`It heals ${d.heal}.`);
+    if (d.leech) lines.push(`It takes ${d.leech} chips.`);
+    return h('div.panel.reveal-banner.pop.bad', { role: 'status' },
+      h('h2', {}, r.outcome === 'timeout' ? "Time's up" : 'Wrong'),
+      h('p.small.dim', {}, `${lines.join(' ')} ${chipsText(r.delta)}`),
+    );
+  }
+
+  /** The stage on the reveal screen: it shows the health before the answer, then plays what happened. */
+  revealStage(r, key) {
+    const s = this.s;
+    const p = s.players[0];
+    const d = r.duel;
+    const enc = s.enc;
+    const played = this.stagePlayed === key;
+    const hp = played ? d.hpAfter : d.hpBefore;
+    const livesAfter = p.strikes;
+    const livesBefore = livesAfter + d.bulbsLost;
+    const enraged = Boolean(enc.enraged) && hp > 0 && hp <= enc.maxHp * DUEL.enrageAt;
+    const missesBefore = enc.kind === 'minion' ? d.misses - (r.correct ? 0 : 1) : 0;
+    const stage = createStage({ enc, hp, lives: played ? livesAfter : livesBefore, heat: p.heat ?? 0, qIndex: s.qIndex, intent: null, enraged, misses: played ? d.misses : missesBefore, showPattern: false });
+    if (played && d.over === 'won') stage.boss.classList.add('gone');
+    if (!played) this.pendingPlay = { stage, d, key, ctx: { livesBefore, livesAfter, heatAfter: p.heat ?? 0 } };
+    return stage.el;
+  }
+
+  runStagePlay() {
+    const pp = this.pendingPlay;
+    if (!pp) return;
+    this.pendingPlay = null;
+    this.stagePlayed = pp.key;
+    setTimeout(() => { if (!this.disposed) pp.stage.play(pp.d, pp.ctx); }, 140);
+  }
+
+  duelSummary() {
+    const s = this.s;
+    const p = s.players[0];
+    const enc = s.enc;
+    const last = s.roundLog[s.roundLog.length - 1];
+    const r = last.players[p.playerId];
+    const won = last.result === 'won';
+    const big = enc.kind !== 'minion';
+    if (this.summaryKey !== s.roundIndex) {
+      this.summaryKey = s.roundIndex;
+      if (won) { sfx.win(); haptic('big'); confetti({ count: big ? 90 : 40 }); if (big) { sfx.jackpot(); stamp(enc.kind === 'elite' ? 'CHAMPION DOWN!' : 'BOSS DOWN!', { kind: 'jackpot' }); } }
+      else { sfx.wrong(); haptic('warn'); blackout(); }
+    }
+    const stage = createStage({ enc, hp: enc.hp, lives: p.strikes, heat: p.heat ?? 0, showPattern: false, misses: enc.misses ?? 0 });
+    if (won) stage.boss.classList.add('gone');
+    const hexName = r.hex ? HEXES[r.hex]?.name : null;
+    const finalFight = s.config.variant === 'rush' || enc.kind === 'final';
+    return [
+      this.hud(p, {}),
+      h('div.panel.banner', { class: won ? '' : 'boss' }, h('div.tiny.dim', {}, this.roundTitle()), h('h2', {}, won ? (enc.kind === 'minion' ? `${enc.name.split(',')[0]} is beaten` : `${enc.name} is down`) : last.result === 'beaten' ? `${enc.name.split(',')[0]} got you this time` : 'The lights go out')),
+      stage.el,
+      h('div.panel', {},
+        h('div.kv', {}, h('span', {}, 'Questions'), h('b', {}, enc.qCount)),
+        h('div.kv', {}, h('span', {}, 'Hits landed'), h('b', {}, enc.hits)),
+        won ? h('div.kv', {}, h('span', {}, 'Reward'), h('b.amber', {}, `+${r.bonus} chips`)) : null,
+        r.healed ? h('p.small.green', {}, 'A bulb comes back on.') : null,
+        hexName ? h('p.small.amber', {}, `Spoils: ${hexName} added to your hex hand.`) : null,
+        last.result === 'beaten' ? h('p.small.red', {}, 'You lose a bulb. The run goes on.') : null,
+        p.defeated ? h('p.small.red', {}, 'Out of bulbs. The run ends here.') : null,
+        h('div.row', {}, chipsLine(p.chips), bulbs(p.strikes, DUEL.startLives)),
+      ),
+      h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', onclick: () => { sfx.tap(); this.act({ type: 'CONTINUE' }); } }, p.defeated || (finalFight && won) ? 'See results' : finalFight ? 'See results' : 'Back to the map')),
+    ];
+  }
+
+  /* -------------------------------------------------------------- map */
+
+  viewMap() {
+    const s = this.s;
+    const p = s.players[0];
+    const map = s.map;
+    const avail = availableNodes(map);
+    const isAvail = (l, i) => avail.some((n) => n.layer === l && n.index === i);
+    const total = map.layers.length;
+    const ROW = 96;
+    const pos = (l, i) => ({ x: ((i + 1) / (map.layers[l].length + 1)) * 100, y: (total - 1 - l) * ROW + ROW / 2 });
+    if (this.mapKey !== map.at) { this.mapKey = map.at; this.mapSel = null; }
+    const sel = this.mapSel && isAvail(this.mapSel.layer, this.mapSel.index) ? this.mapSel : null;
+
+    const svgNS = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(svgNS, 'svg');
+    svg.setAttribute('viewBox', `0 0 100 ${total * ROW}`);
+    svg.setAttribute('preserveAspectRatio', 'none');
+    svg.setAttribute('class', 'map-lines');
+    map.layers.forEach((layer, l) => layer.forEach((node, i) => node.next.forEach((j) => {
+      const a = pos(l, i); const b = pos(l + 1, j);
+      const line = document.createElementNS(svgNS, 'line');
+      line.setAttribute('x1', a.x); line.setAttribute('y1', a.y); line.setAttribute('x2', b.x); line.setAttribute('y2', b.y);
+      const walked = map.trail[l] === i && map.trail[l + 1] === j;
+      const live = map.at === l - 0 && map.pick === i && l === map.at;
+      const fromStart = map.at < 0 && l === 0;
+      line.setAttribute('class', walked ? 'walked' : live ? 'live' : fromStart ? 'live' : '');
+      svg.append(line);
+    })));
+
+    const nodes = map.layers.flatMap((layer, l) => layer.map((node, i) => {
+      const k = NODE_KINDS[node.kind];
+      const here = map.trail[l] === i && l <= map.at;
+      const done = l < map.at ? map.trail[l] === i : l === map.at && map.trail[l] === i;
+      const can = isAvail(l, i);
+      const { x, y } = pos(l, i);
+      const icon = node.kind === 'final' ? 'crown' : k.icon;
+      const b = h('button.map-node', {
+        type: 'button', class: `${node.kind} ${can ? 'avail' : ''} ${done ? 'done' : ''} ${sel && sel.layer === l && sel.index === i ? 'sel' : ''} ${here && l === map.at ? 'here' : ''}`,
+        disabled: !can, 'aria-label': `${k.label}${can ? ', reachable' : ''}`, title: k.text,
+        onclick: () => { this.mapSel = { layer: l, index: i }; sfx.node?.(); this.render(); },
+      }, sprite(icon, 36));
+      b.style.left = `${x}%`;
+      b.style.top = `${y}px`;
+      return b;
+    }));
+
+    const selNode = sel ? map.layers[sel.layer][sel.index] : null;
+    const go = () => { sfx.select(); this.act({ type: 'MAP_PICK', layer: sel.layer, index: sel.index }); };
+    return [
+      this.hud(p),
+      h('div.panel.banner', {}, h('div.tiny.dim', {}, 'The map'), h('h2', {}, map.at < 0 ? 'Choose your first fight' : map.at === total - 2 ? 'The House is waiting' : 'Choose your next room'), h('p.small.dim', {}, 'Climb to the top. Every room is a choice: fights pay chips, champions pay hexes, rests and deals shape the run.')),
+      h('div.map-wrap', { style: { height: `${total * ROW}px` } }, svg, nodes),
+      h('div.row.wrap', { style: { gap: '6px', justifyContent: 'center' } }, Object.entries({ fight: 'Contestant', elite: 'Champion', boss: 'Boss', shop: 'Shop', rest: 'Rest', event: 'Deal' }).map(([k, label]) => h('span.tag', {}, sprite(NODE_KINDS[k].icon, 16), label))),
+      p.hexHand?.length ? h('p.tiny.dim.center', {}, `Hex hand: ${p.hexHand.map((id) => HEXES[id].name).join(', ')}`) : null,
+      h('div.stick-bottom', {}, selNode
+        ? h('div.col.gap-s', {}, h('div.panel.tight', {}, h('b', {}, NODE_KINDS[selNode.kind].label), h('div.small.dim', {}, NODE_KINDS[selNode.kind].text)), h('button.btn.primary.block', { type: 'button', onclick: go }, selNode.kind === 'fight' || selNode.kind === 'elite' || selNode.kind === 'boss' || selNode.kind === 'final' ? 'Enter the fight' : 'Go in'))
+        : h('p.small.dim.center', {}, 'Tap a glowing room.')),
+    ];
+  }
+
+  viewRest() {
+    const s = this.s;
+    const p = s.players[0];
+    const full = p.strikes >= DUEL.maxLives;
+    const pick = (choice) => { if (this.act({ type: 'REST', choice })) { sfx.rest?.(); if (choice === 'heal') { sfx.heal?.(); this.notes.push('A bulb flickers back on.'); } else this.notes.push(`+${DUEL.restChips} chips and +1 heat for the next fight.`); } };
+    return [
+      this.hud(p, {}),
+      h('div.panel.banner', {}, h('div.tiny.dim', {}, 'Rest'), h('h2', {}, 'A quiet room'), h('p.small.dim', {}, 'A chair, a kettle, a dead telephone. You get one thing.')),
+      h('div.col', {},
+        h('button.crossroads-opt', { type: 'button', disabled: full, onclick: () => pick('heal') }, sprite('bulb_on', 48), h('div', {}, h('b', {}, full ? 'Bulbs are full' : 'Heal a bulb'), h('span.small.dim', {}, 'Screw a fresh bulb in. You have ' + p.strikes + ' of ' + DUEL.maxLives + '.'))),
+        h('button.crossroads-opt', { type: 'button', onclick: () => pick('train') }, sprite('flame', 48), h('div', {}, h('b', {}, 'Train'), h('span.small.dim', {}, `+${DUEL.restChips} chips now and +1 heat in the next fight.`))),
+      ),
+    ];
+  }
+
+  viewEvent() {
+    const s = this.s;
+    const p = s.players[0];
+    const pick = (choice) => { sfx.select(); this.act({ type: 'EVENT', choice }); };
+    return [
+      this.hud(p, {}),
+      h('div.panel.banner', {}, h('div.tiny.dim', {}, 'A deal'), h('h2', {}, 'A stranger in the doorway'), h('p.small.dim', {}, 'Two offers. One handshake. Or you can walk away.')),
+      h('div.col', {},
+        s.event.deals.map((id) => { const d = DEALS[id]; const ok = d.ok(p); return h('button.crossroads-opt', { type: 'button', disabled: !ok, onclick: () => pick(id) }, sprite(id === 'gamble' ? 'dice' : id === 'sell_bulb' || id === 'buy_bulb' ? 'bulb_on' : id === 'free_hex' ? 'key' : id === 'sharpen' ? 'swords' : 'flame', 48), h('div', {}, h('b', {}, d.text), h('span.small.dim', {}, ok ? d.detail : `${d.detail} (you cannot right now)`))); }),
+        h('button.btn.ghost.block', { type: 'button', onclick: () => pick('walk') }, 'Walk away'),
+      ),
     ];
   }
 
@@ -1185,7 +1419,7 @@ class GameController {
       else if (done) { sfx.sadTrombone(); haptic('wrong'); }
     }
     const solo = s.mode !== 'versus';
-    const title = !done ? 'Game abandoned' : solo ? (s.players[0].result === 'won' ? 'You beat the house' : 'The house wins') : 'Final standings';
+    const title = !done ? 'Game abandoned' : s.config.duel ? (s.players[0].result === 'won' ? (s.config.variant === 'rush' ? `${s.enc.name} falls` : 'You beat the House') : 'The lights go out') : solo ? (s.players[0].result === 'won' ? 'You beat the house' : 'The house wins') : 'Final standings';
     const players = [...s.players].sort((a, b) => (a.placement ?? 9) - (b.placement ?? 9));
 
     return [
@@ -1199,9 +1433,9 @@ class GameController {
           h('div.kv', {}, h('span', {}, 'Answered correctly'), h('b', {}, `${right} of ${mine.length}`)),
           h('div.kv', {}, h('span', {}, 'Longest streak'), h('b', {}, p.longestStreak)),
           solo && done ? [
-            h('div.kv', {}, h('span', {}, 'Rounds cleared'), h('b', {}, p.roundsCleared)),
-            h('div.kv', {}, h('span', {}, 'Bosses cleared'), h('b', {}, p.bossesCleared)),
-            h('div.kv', {}, h('span', {}, 'Banked chips'), h('b', {}, p.vault)),
+            h('div.kv', {}, h('span', {}, s.config.duel ? 'Fights won' : 'Rounds cleared'), h('b', {}, p.roundsCleared)),
+            h('div.kv', {}, h('span', {}, s.config.duel ? 'Bosses and champions beaten' : 'Bosses cleared'), h('b', {}, p.bossesCleared)),
+            s.config.duel ? h('div.kv', {}, h('span', {}, 'Bulbs left'), h('b', {}, p.strikes)) : h('div.kv', {}, h('span', {}, 'Banked chips'), h('b', {}, p.vault)),
             p.result === 'won' ? h('div.kv', {}, h('span', {}, 'Chips kept'), h('b', {}, p.chips)) : h('div.kv', {}, h('span', {}, 'Chips lost with the run'), h('b', {}, p.chips)),
           ] : null,
           !solo && done ? h('div.kv', {}, h('span', {}, 'Chips'), h('b', {}, p.chips)) : null,

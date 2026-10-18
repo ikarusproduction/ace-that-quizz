@@ -182,6 +182,54 @@ if ($what === 'save') {
     }
     reply(405, ['error' => 'method']);
 }
+/* ---------- friends: a small public stat card per friend code. Publishing needs the secret that goes with the code. ---------- */
+if ($what === 'friend') {
+    $b = $method === 'POST' ? body(16384) : [];
+    [$ok, $st, $err] = access_ok($method === 'POST' ? ($b['access'] ?? '') : ($_GET['access'] ?? ''));
+    if (!$ok) reply($st, ['error' => $err]);
+    $code = strtoupper($method === 'POST' ? (string) ($b['code'] ?? '') : (string) ($_GET['code'] ?? ''));
+    if (!preg_match('/^[A-Z0-9]{4}-[A-Z0-9]{4}$/', $code)) reply(400, ['error' => 'that friend code is not valid']);
+    $file = $DATA . '/friend-' . hash('sha256', $code) . '.json';
+    if ($method === 'GET') {
+        if (!is_file($file)) reply(404, ['error' => 'nobody has that friend code yet']);
+        $j = json_decode((string) file_get_contents($file), true);
+        if (!is_array($j) || !is_array($j['card'] ?? null)) reply(500, ['error' => 'the card is damaged']);
+        reply(200, ['code' => $code, 'card' => $j['card'], 'updatedAt' => (int) ($j['updatedAt'] ?? 0)]);
+    }
+    if ($method === 'POST') {
+        $secret = (string) ($b['secret'] ?? '');
+        if (strlen($secret) < 16 || strlen($secret) > 80) reply(400, ['error' => 'missing secret']);
+        $in = $b['card'] ?? null;
+        if (!is_array($in)) reply(400, ['error' => 'missing card']);
+        $num = fn($v, int $max = 1000000000) => max(0, min($max, (int) $v));
+        $cats = [];
+        foreach ((is_array($in['cats'] ?? null) ? $in['cats'] : []) as $k => $v) {
+            if (count($cats) >= 24 || !is_string($k) || !preg_match('/^[a-z]{2,16}$/', $k) || !is_array($v)) continue;
+            $n = $num($v[0] ?? 0, 100000); $c = min($n, $num($v[1] ?? 0, 100000));
+            $cats[$k] = [$n, $c];
+        }
+        $card = [
+            'v' => 1,
+            'name' => clean($in['name'] ?? '', 20) ?: 'Player',
+            'avatar' => clean($in['avatar'] ?? '', 16),
+            'games' => $num($in['games'] ?? 0), 'wins' => $num($in['wins'] ?? 0), 'best' => $num($in['best'] ?? 0),
+            'streak' => $num($in['streak'] ?? 0, 100000), 'answered' => $num($in['answered'] ?? 0), 'correct' => $num($in['correct'] ?? 0),
+            'bosses' => $num($in['bosses'] ?? 0), 'rush' => $num($in['rush'] ?? 0), 'maps' => $num($in['maps'] ?? 0),
+            'hexes' => $num($in['hexes'] ?? 0, 500), 'cards' => $num($in['cards'] ?? 0, 500), 'cats' => $cats,
+        ];
+        $hash = hash('sha256', $secret);
+        $h = @fopen($file, 'c+');
+        if (!$h) reply(500, ['error' => 'could not save the card']);
+        flock($h, LOCK_EX);
+        $cur = json_decode((string) stream_get_contents($h), true);
+        if (is_array($cur) && !hash_equals((string) ($cur['hash'] ?? ''), $hash)) { flock($h, LOCK_UN); fclose($h); reply(403, ['error' => 'that friend code belongs to someone else']); }
+        rewind($h); ftruncate($h, 0);
+        fwrite($h, json_encode(['hash' => $hash, 'card' => $card, 'updatedAt' => time() * 1000], JSON_UNESCAPED_UNICODE));
+        fflush($h); flock($h, LOCK_UN); fclose($h);
+        reply(200, ['ok' => true, 'code' => $code]);
+    }
+    reply(405, ['error' => 'method']);
+}
 if ($what !== 'rooms') reply(404, ['error' => 'not found']);
 
 /* create */

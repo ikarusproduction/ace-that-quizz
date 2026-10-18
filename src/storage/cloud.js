@@ -117,6 +117,18 @@ export function createCloud({ repo, base, getAccess = () => '', fetchImpl = glob
       } catch { return null; }
     },
 
+    /** Friends: publish my public card under my friend code, and look other people's cards up. */
+    async publishFriendCard(profileId) {
+      const { code, secret } = await repo.friendIdentity(profileId);
+      const card = await repo.friendCard(profileId);
+      await call('/api/friend', { method: 'POST', body: { code, secret, card } });
+      return { code, card };
+    },
+    async lookupFriend(rawCode) {
+      const code = String(rawCode ?? '').toUpperCase().replace(/[^A-Z0-9]/g, '').replace(/^(.{4})(.+)$/, '$1-$2');
+      return call('/api/friend', { query: { code } });
+    },
+
     /** Start background syncing: on a timer, when the tab is hidden, and shortly after any change. */
     start() {
       if (timer) return;

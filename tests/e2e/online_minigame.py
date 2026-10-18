@@ -75,7 +75,7 @@ try:
             for n in waiters:
                 if phones[n].locator('.reveal-overlay .btn').count(): phones[n].locator('.reveal-overlay .btn').click(no_wait_after=True); time.sleep(.3)
             for n in waiters:
-                phones[n].evaluate("() => { const w = document.querySelector('.waitgame').__wg; document.querySelectorAll('.waitgame .col.gap-s .btn')[w.cur.answerIndex].click(); }")
+                phones[n].evaluate("() => { const w = document.querySelector('.waitgame').__wg; w.cur.solve(); }")
             for n in waiters:
                 try: phones[n].wait_for_selector('.waitgame .big', timeout=15000)
                 except Exception:

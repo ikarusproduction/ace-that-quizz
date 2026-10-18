@@ -1,6 +1,24 @@
 // Per-profile extras that grow with play: the hex collection and deck, dust, unopened packs, and the daily streak.
 // Everything is optional on old profiles; `metaOf` fills in safe defaults and drops anything invalid.
 import { HEXES, STARTER_HEXES, PACKS, HEX_NUMBERS } from '../engine/hexes.js';
+import { FRIEND_CODE_RE, cleanCard } from '../stats/card.js';
+
+export const MAX_FRIENDS = 50;
+
+/** Friends live inside the profile: [{ code, name, avatar, card, fetchedAt }]. */
+export function cleanFriends(list) {
+  const seen = new Set();
+  const out = [];
+  for (const f of Array.isArray(list) ? list : []) {
+    const code = String(f?.code ?? '').toUpperCase();
+    if (!FRIEND_CODE_RE.test(code) || seen.has(code)) continue;
+    seen.add(code);
+    const card = cleanCard(f.card);
+    out.push({ code, name: String(f.name ?? card?.name ?? 'Friend').replace(/[\u0000-\u001f<>]/g, '').slice(0, 20) || 'Friend', avatar: String(f.avatar ?? card?.avatar ?? '').slice(0, 16), card, fetchedAt: Number.isFinite(f.fetchedAt) ? f.fetchedAt : 0 });
+    if (out.length >= MAX_FRIENDS) break;
+  }
+  return out;
+}
 
 export function metaOf(p) {
   const raw = p?.hexes ?? {};
@@ -10,7 +28,9 @@ export function metaOf(p) {
   const packs = (Array.isArray(p?.packs) ? p.packs : []).filter((k) => k && typeof k.id === 'string' && PACKS[k.type]).map((k) => ({ id: k.id, type: k.type, from: typeof k.from === 'string' ? k.from.slice(0, 60) : '' }));
   const d = p?.daily ?? {};
   const daily = { lastDay: typeof d.lastDay === 'string' ? d.lastDay : '', streak: Number.isFinite(d.streak) ? Math.max(0, Math.floor(d.streak)) : 0 };
-  return { hexes: { owned, deck, dust }, packs, daily };
+  const friendCode = FRIEND_CODE_RE.test(String(p?.friendCode ?? '')) ? String(p.friendCode) : '';
+  const friendSecret = typeof p?.friendSecret === 'string' && p.friendSecret.length >= 16 && p.friendSecret.length <= 80 ? p.friendSecret : '';
+  return { hexes: { owned, deck, dust }, packs, daily, friendCode, friendSecret, friends: cleanFriends(p?.friends) };
 }
 
 /** Day keys look like "2026-10-17" (local date). */
@@ -30,5 +50,8 @@ export function mergeMeta(mine, theirs, theirsIsNewer) {
     },
     packs: [...a.packs, ...b.packs.filter((k) => !ids.has(k.id))],
     daily: a.daily.lastDay >= b.daily.lastDay ? a.daily : b.daily,
+    friendCode: a.friendCode || b.friendCode,
+    friendSecret: a.friendCode ? a.friendSecret : b.friendSecret,
+    friends: cleanFriends([...[...a.friends, ...b.friends].reduce((m, f) => (m.get(f.code) && m.get(f.code).fetchedAt >= f.fetchedAt ? m : m.set(f.code, f)), new Map()).values()]),
   };
 }

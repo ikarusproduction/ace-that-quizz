@@ -16,6 +16,11 @@ import { buildRound, roundInfo, roundCategories } from './rounds.js';
 import { statCategory } from './bank.js';
 import { checkPuzzle, PUZZLE_RULES } from './minigame.js';
 import { HEXES, STARTER_HEXES, HEX_NUMBERS, tierForStreak, drawHex, usableHexes, missionsFor } from './hexes.js';
+import {
+  DUEL, INTENTS, BOSS_ROSTER, BOSS_IDS, TIER_DIFFICULTY, DEALS, DEAL_IDS, DUEL_SHOP_ITEMS,
+  makeEncounter, intentIdFor, timerMultFor, duelDamage, bulbsLostOnMiss, heatCostOf, startHeat, duelCategory, buildMap, availableNodes, isEnraged,
+} from './duel.js';
+import { pickQuestion } from './rounds.js';
 
 export const STATE_VERSION = 1;
 
@@ -40,6 +45,9 @@ export function buildConfig(mode, overrides = {}) {
   }
   if (mode === 'daily') {
     return { acts: 1, roundsPerAct: RULES.roundsPerAct, noBoss: false, cardsEnabled: false, shop: false, crossroads: true, strikes: true };
+  }
+  if (['rush', 'map'].includes(overrides.variant)) {
+    return { variant: overrides.variant, duel: true, heat: true, acts: 1, roundsPerAct: 0, noBoss: false, cardsEnabled: true, shop: overrides.variant === 'map', crossroads: false, strikes: true, startStrikes: DUEL.startLives, bossId: overrides.bossId ?? null };
   }
   const acts = Math.max(1, Math.min(3, overrides.acts ?? RULES.acts));
   return { acts, roundsPerAct: RULES.roundsPerAct, noBoss: false, cardsEnabled: true, shop: true, crossroads: true, strikes: true, ...(overrides.themes ? { themes: overrides.themes } : {}) };
@@ -109,7 +117,11 @@ export function createGame({ mode, players, ctx, seed, sessionId, overrides = {}
         name: p.name,
         chips: RULES.startChips,
         vault: 0,
-        strikes: config.strikes ? RULES.startStrikes : 0,
+        strikes: config.strikes ? (config.startStrikes ?? RULES.startStrikes) : 0,
+        heat: 0,
+        heatBonus: 0,
+        edge: 0,
+        edgeNow: 0,
         streak: 0,
         longestStreak: 0,
         owned,
@@ -144,7 +156,19 @@ export function createGame({ mode, players, ctx, seed, sessionId, overrides = {}
     log: [],
     roundLog: [],
   };
-  prepareRound(s, ctx);
+  s.enc = null;
+  s.map = null;
+  s.victory = false;
+  if (config.duel) {
+    if (config.variant === 'map') {
+      s.map = withRng(s, (rng) => buildMap(rng));
+      s.round = null;
+      s.phase = 'map';
+    } else {
+      const wanted = BOSS_ROSTER[config.bossId] ? config.bossId : withRng(s, (rng) => rng.pick(BOSS_IDS.filter((id) => !BOSS_ROSTER[id].final)));
+      prepareEncounter(s, ctx, { kind: 'boss', enemyId: wanted });
+    }
+  } else prepareRound(s, ctx);
   return s;
 }
 
@@ -195,6 +219,109 @@ function prepareRound(s, ctx) {
   }
 }
 
+/* ------------------------------------------------------------------ */
+/* Duels (the solo game)                                               */
+/* ------------------------------------------------------------------ */
+
+function statCategories(ctx) {
+  if (!ctx._duelCats) {
+    const have = new Set(ctx.questions.map(statCategory));
+    ctx._duelCats = ['science', 'symbols', 'news', 'history', 'geography', 'nature', 'arts', 'phobia'].filter((c) => have.has(c));
+  }
+  return ctx._duelCats;
+}
+
+function prepareEncounter(s, ctx, { kind, enemyId = null, depth = 0 }) {
+  s.roundIndex += 1;
+  s.crossroadsDone = false;
+  s.enc = withRng(s, (rng) => makeEncounter({ kind, enemyId, rng, depth }));
+  if (s.enc.kind !== 'minion') s.usedBosses.push(s.enc.id);
+  s.round = { index: s.roundIndex, act: 0, isBoss: s.enc.kind === 'boss' || s.enc.kind === 'final', bossId: null, hazardId: 'none', markedSlot: null, slots: [], kind: s.enc.kind, comeback: [] };
+  s.qIndex = 0;
+  s.turn = 0;
+  s.q = null;
+  s.phase = 'loadout';
+  for (const p of s.players) {
+    p.comeback = false;
+    p.roundStats = { answered: 0, correct: 0, wrong: 0 };
+    p.loadout = p.loadout.map((c) => (c && equippableCards(p.owned, s.mode).includes(c) ? c : null));
+  }
+}
+
+/** Pick the next question of a fight: the enemy's specialty most of the time, at the difficulty its tier asks for. */
+function addDuelSlot(s, ctx) {
+  const enc = s.enc;
+  const slot = withRng(s, (rng) => {
+    const cats = statCategories(ctx);
+    const category = duelCategory(rng, enc, cats);
+    const difficulty = Number(rng.weighted(TIER_DIFFICULTY[enc.tier] ?? TIER_DIFFICULTY[1]));
+    const pool = ctx.questions.filter((q) => statCategory(q) === category);
+    const q = pickQuestion({ pool: pool.length ? pool : ctx.questions, rng, difficulty, usedIds: new Set(s.usedIds), avoidIds: new Set(s.avoidIds), seen: s.seenCounts ?? null, fallbackPool: ctx.questions });
+    return { category: statCategory(q), theme: null, difficulty: q.difficulty, questionId: q.id, slot: s.round.slots.length };
+  });
+  s.round.slots.push(slot);
+  s.usedIds.push(slot.questionId);
+}
+
+function chooseEnemy(s, kind) {
+  return withRng(s, (rng) => {
+    const pool = BOSS_IDS.filter((id) => !BOSS_ROSTER[id].final && !s.usedBosses.includes(id) && (kind === 'boss' ? BOSS_ROSTER[id].tier <= 2 : BOSS_ROSTER[id].tier <= 3));
+    return rng.pick(pool.length ? pool : BOSS_IDS.filter((id) => !BOSS_ROSTER[id].final));
+  });
+}
+
+function enterNode(s, ctx, kind, layer) {
+  if (kind === 'fight') prepareEncounter(s, ctx, { kind: 'minion', depth: layer });
+  else if (kind === 'elite') prepareEncounter(s, ctx, { kind: 'elite', enemyId: chooseEnemy(s, 'elite') });
+  else if (kind === 'boss') prepareEncounter(s, ctx, { kind: 'boss', enemyId: chooseEnemy(s, 'boss') });
+  else if (kind === 'final') prepareEncounter(s, ctx, { kind: 'boss', enemyId: 'house' });
+  else if (kind === 'shop') s.phase = 'shop';
+  else if (kind === 'rest') s.phase = 'rest';
+  else if (kind === 'event') {
+    s.event = { deals: withRng(s, (rng) => rng.shuffle(DEAL_IDS).slice(0, 2)) };
+    s.phase = 'event';
+  }
+}
+
+function endEncounter(s) {
+  const enc = s.enc;
+  const p = s.players[0];
+  const rw = DUEL.rewards[enc.kind] ?? DUEL.rewards.minion;
+  const won = enc.over === 'won';
+  let healed = 0;
+  let hex = null;
+  let bulbLost = 0;
+  if (won) {
+    p.chips += rw.chips;
+    p.roundsCleared += 1;
+    if (s.round.isBoss) p.bossesCleared += 1;
+    if (rw.heal && p.strikes < DUEL.maxLives) { p.strikes += rw.heal; healed = rw.heal; }
+    if (rw.hex && s.config.cardsEnabled && p.hexHand.length < HEX_NUMBERS.handMax) {
+      const id = drawHex(Rng.fromSeed(`${s.sessionId}:${p.playerId}:hex:${(s.earnSeq ?? 0) + 1}`), p.hexDeck, 'uncommon', s.mode);
+      if (id) { p.hexHand.push(id); hex = id; s.lastEarn = { seq: (s.earnSeq = (s.earnSeq ?? 0) + 1), playerId: p.playerId, hexId: id, tier: 'uncommon', from: 'fight' }; }
+    }
+  } else if (enc.over === 'beaten') {
+    p.strikes = Math.max(0, p.strikes - 1);
+    bulbLost = 1;
+  }
+  if (s.config.strikes && p.strikes <= 0) p.defeated = true;
+  p.edgeNow = 0;
+  p.pushed = false;
+  p.slowClock = false;
+  p.bonusCharges = false;
+  s.roundLog.push({
+    roundIndex: s.roundIndex, isBoss: s.round.isBoss, bossId: null, hazardId: 'none', result: enc.over,
+    enemy: { id: enc.id, name: enc.name, kind: enc.kind, sprite: enc.sprite, color: enc.color, maxHp: enc.maxHp },
+    players: { [p.playerId]: { correct: p.roundStats.correct, cleared: won, strikesLost: (enc.bulbsLost ?? 0) + bulbLost, bonus: won ? rw.chips : 0, chips: p.chips, strikes: p.strikes, healed, hex, hits: enc.hits } },
+  });
+  s.phase = 'round-summary';
+}
+
+function duelScore(p, won) {
+  const e = DUEL.endScore;
+  return (won ? p.chips : Math.floor(p.chips / 2)) + p.roundsCleared * e.clearBonus + p.bossesCleared * e.bossBonus + (won ? p.strikes * e.lifeBonus : 0);
+}
+
 function startRound(s, ctx) {
   const boss = s.round.bossId ? BOSSES[s.round.bossId] : null;
   for (const p of s.players) {
@@ -204,11 +331,20 @@ function startRound(s, ctx) {
       p.charges[cardId] = CARDS[cardId].uses + (p.bonusCharges ? 1 : 0) + (p.comeback ? 1 : 0);
     }
   }
+  if (s.enc) {
+    for (const p of s.players) {
+      p.heat = startHeat(s.enc.kind, p.heatBonus);
+      p.heatBonus = 0;
+      p.edgeNow = p.edge ?? 0;
+      p.edge = 0;
+    }
+  }
   s.cardsLockedThisRound = Boolean(boss?.cardsLocked) || !s.config.cardsEnabled;
   openQuestion(s, ctx);
 }
 
 function openQuestion(s, ctx) {
+  if (s.enc && s.qIndex >= s.round.slots.length) addDuelSlot(s, ctx);
   const slot = s.round.slots[s.qIndex];
   const q = ctx.byId.get(slot.questionId);
   const order = q.type === 'tf'
@@ -236,6 +372,21 @@ function openQuestion(s, ctx) {
   s.turn = 0;
   s.q.byPlayer[s.players[0].playerId].phase = 'stake';
   s.phase = 'stake';
+  if (s.enc) {
+    const intentId = intentIdFor(s.enc, s.qIndex);
+    const it = INTENTS[intentId];
+    s.q.intent = intentId;
+    s.q.enraged = isEnraged(s.enc);
+    s.q.timerMult = timerMultFor(s.enc, intentId, s.qIndex);
+    s.q.healedNow = 0;
+    if (it.healNow && s.enc.hp < s.enc.maxHp) {
+      const before = s.enc.hp;
+      s.enc.hp = Math.min(s.enc.maxHp, s.enc.hp + it.healNow);
+      s.q.healedNow = s.enc.hp - before;
+      s.enc.healed += s.q.healedNow;
+    }
+    if (it.curse) for (const p of s.players) p.pendingHexes.push({ fx: it.curse, by: 'boss' });
+  }
 }
 
 function endRound(s, ctx) {
@@ -291,6 +442,12 @@ function finish(s, ctx, { abandoned = false } = {}) {
     });
   } else {
     for (const p of s.players) {
+      if (s.config.duel) {
+        const won = Boolean(s.victory) && !p.defeated;
+        p.result = won ? 'won' : 'lost';
+        p.finalScore = duelScore(p, won);
+        continue;
+      }
       const won = !p.defeated && s.roundIndex + 1 >= roundInfo(0, s.config).totalRounds;
       p.result = won ? 'won' : 'lost';
       p.finalScore = runScore({ vault: p.vault, chips: p.chips, won, roundsCleared: p.roundsCleared, bossesCleared: p.bossesCleared });
@@ -399,7 +556,7 @@ const HANDLERS = {
         break;
       }
       case 'skeleton_key': {
-        if (boss) return { ok: false, reason: 'the Skeleton Key does nothing against bosses' };
+        if (boss || (s.enc && s.enc.kind !== 'minion')) return { ok: false, reason: 'the Skeleton Key does nothing against bosses' };
         qp.used.skeleton = true;
         qp.usedCards.push(card.id);
         p.runCharges[card.id] -= 1;
@@ -558,8 +715,15 @@ const HANDLERS = {
     let stake = boss?.lockStake ?? a.stake;
     if (p.chips <= 0) stake = 1;
     if (!RULES.stakes.includes(stake)) return { ok: false, reason: 'invalid stake' };
+    if (s.config.heat) {
+      const cost = heatCostOf(stake);
+      if ((p.heat ?? 0) < cost) return { ok: false, reason: `not enough heat for a ${stake}× stake` };
+      p.heat -= cost;
+      qp.heatSpent = cost;
+    }
     qp.stake = stake;
     qp.timerMs = timerFor({ type: q.type, hazard, boss, slowClock: p.slowClock, jammed: p.jammed });
+    if (s.q.timerMult && s.q.timerMult !== 1) qp.timerMs = Math.max(RULES.minTimerMs, Math.round(qp.timerMs * s.q.timerMult));
     p.jammed = false;
     if (p.pendingHexes?.length) { qp.hexes.push(...p.pendingHexes); p.pendingHexes = []; }
     qp.startedAt = ctx.now();
@@ -599,6 +763,12 @@ const HANDLERS = {
 
   NEXT(s, a, ctx) {
     if (s.phase !== 'reveal') return { ok: false, reason: 'nothing to advance' };
+    if (s.enc) {
+      if (s.enc.over) return endEncounter(s);
+      s.qIndex += 1;
+      openQuestion(s, ctx);
+      return;
+    }
     const defeated = s.config.strikes && s.players.every((p) => p.defeated);
     s.qIndex += 1;
     if (defeated || s.qIndex >= RULES.questionsPerRound) {
@@ -610,6 +780,13 @@ const HANDLERS = {
 
   CONTINUE(s, a, ctx) {
     if (s.phase !== 'round-summary') return { ok: false, reason: 'not in round summary' };
+    if (s.config.duel) {
+      const me = s.players[0];
+      if (me.defeated) { s.victory = false; return finish(s, ctx); }
+      if (s.config.variant === 'rush' || s.round.kind === 'final') { s.victory = s.enc.over === 'won'; return finish(s, ctx); }
+      s.phase = 'map';
+      return;
+    }
     const total = roundInfo(0, s.config).totalRounds;
     const lost = s.config.strikes && s.players.every((p) => p.defeated);
     if (lost || s.roundIndex + 1 >= total) return finish(s, ctx);
@@ -640,10 +817,10 @@ const HANDLERS = {
   BUY(s, a) {
     if (s.phase !== 'shop') return { ok: false, reason: 'the shop is closed' };
     const p = playerOf(s, a.playerId);
-    const item = SHOP_ITEMS[a.item];
+    const item = SHOP_ITEMS[a.item] ?? (s.config.duel ? DUEL_SHOP_ITEMS[a.item] : null);
     if (!p || !item) return { ok: false, reason: 'unknown item' };
     if (p.chips < item.cost) return { ok: false, reason: 'not enough chips' };
-    const act = s.round.act;
+    const act = s.config.duel ? `n${s.map?.at ?? 0}` : s.round.act;
     if (a.item === 'spare_bulb') {
       if (p.strikes >= RULES.maxStrikes) return { ok: false, reason: 'already at maximum strikes' };
       if (p.shopBought[`bulb${act}`]) return { ok: false, reason: 'already bought this act' };
@@ -655,13 +832,83 @@ const HANDLERS = {
     } else if (a.item === 'slow_clock') {
       if (p.slowClock) return { ok: false, reason: 'already bought' };
       p.slowClock = true;
+    } else if (a.item === 'ice_pack') {
+      if (p.shopBought[`ice${act}`]) return { ok: false, reason: 'already bought here' };
+      p.shopBought[`ice${act}`] = true;
+      p.heatBonus = (p.heatBonus ?? 0) + 2;
+    } else if (a.item === 'whetstone') {
+      if ((p.edge ?? 0) >= 2) return { ok: false, reason: 'your edge is already sharp' };
+      p.edge = (p.edge ?? 0) + 1;
     }
     p.chips -= item.cost;
   },
 
   LEAVE_SHOP(s, a, ctx) {
     if (s.phase !== 'shop') return { ok: false, reason: 'the shop is closed' };
+    if (s.config.duel) { s.phase = 'map'; return; }
     prepareRound(s, ctx);
+  },
+
+  /** Walk to a room on the map. */
+  MAP_PICK(s, a, ctx) {
+    if (s.phase !== 'map' || !s.map) return { ok: false, reason: 'not on the map' };
+    const node = availableNodes(s.map).find((n) => n.layer === a.layer && n.index === a.index);
+    if (!node) return { ok: false, reason: 'that room is not reachable' };
+    s.map.at = node.layer;
+    s.map.pick = node.index;
+    s.map.trail.push(node.index);
+    enterNode(s, ctx, node.kind, node.layer);
+  },
+
+  /** The Rest room: heal a bulb, or train for the next fight. */
+  REST(s, a) {
+    if (s.phase !== 'rest') return { ok: false, reason: 'there is no fire here' };
+    const p = s.players[0];
+    if (a.choice === 'heal') {
+      if (p.strikes >= DUEL.maxLives) return { ok: false, reason: 'your bulbs are already full' };
+      p.strikes += 1;
+    } else if (a.choice === 'train') {
+      p.chips += DUEL.restChips;
+      p.heatBonus = (p.heatBonus ?? 0) + 1;
+    } else return { ok: false, reason: 'choose to heal or train' };
+    s.restSeq = (s.restSeq ?? 0) + 1;
+    s.phase = 'map';
+  },
+
+  /** A Deal room: take one of two offers, or walk away. */
+  EVENT(s, a) {
+    if (s.phase !== 'event' || !s.event) return { ok: false, reason: 'nobody is offering anything' };
+    const p = s.players[0];
+    if (a.choice !== 'walk') {
+      if (!s.event.deals.includes(a.choice)) return { ok: false, reason: 'that deal is not on the table' };
+      const deal = DEALS[a.choice];
+      if (!deal.ok(p)) return { ok: false, reason: 'you cannot afford that deal' };
+      let won = null;
+      switch (deal.id) {
+        case 'sell_bulb': p.strikes -= 1; p.chips += 90; break;
+        case 'buy_bulb': p.chips -= 60; p.strikes = Math.min(DUEL.maxLives, p.strikes + 1); break;
+        case 'hot_hand': p.chips -= 20; p.heatBonus = (p.heatBonus ?? 0) + 3; break;
+        case 'sharpen': p.chips -= 40; p.edge = Math.min(2, (p.edge ?? 0) + 1); break;
+        case 'free_hex': {
+          if (p.hexHand.length >= HEX_NUMBERS.handMax) return { ok: false, reason: 'your hex hand is full' };
+          const id = drawHex(Rng.fromSeed(`${s.sessionId}:${p.playerId}:hex:${(s.earnSeq ?? 0) + 1}`), p.hexDeck, 'common', s.mode);
+          if (!id) return { ok: false, reason: 'your hex deck is empty' };
+          p.chips -= 25;
+          p.hexHand.push(id);
+          s.lastEarn = { seq: (s.earnSeq = (s.earnSeq ?? 0) + 1), playerId: p.playerId, hexId: id, tier: 'common', from: 'deal' };
+          break;
+        }
+        case 'gamble': {
+          won = withRng(s, (rng) => rng.chance(0.5));
+          p.chips = won ? p.chips + 70 : Math.max(0, p.chips - 35);
+          break;
+        }
+        default: return { ok: false, reason: 'unknown deal' };
+      }
+      s.lastDeal = { seq: (s.lastDeal?.seq ?? 0) + 1, id: deal.id, won };
+    }
+    s.event = null;
+    s.phase = 'map';
   },
 
   ABANDON(s, a, ctx) {
@@ -669,6 +916,62 @@ const HANDLERS = {
     finish(s, ctx, { abandoned: true });
   },
 };
+
+/** Apply one answer to the enemy: damage, healing, bulbs, heat, and whether the fight is over. Returns what happened for the UI. */
+function applyDuel(s, p, qp, q, { correct, elapsedMs, out }) {
+  const enc = s.enc;
+  const intentId = s.q.intent ?? 'strike';
+  const it = INTENTS[intentId] ?? INTENTS.strike;
+  const stake = qp.stake ?? 1;
+  const res = {
+    intent: intentId, enraged: Boolean(s.q.enraged), hpBefore: enc.hp, hpAfter: enc.hp, maxHp: enc.maxHp, dmg: 0, crit: false, guarded: false,
+    curseThrough: false, heal: 0, healNow: s.q.healedNow ?? 0, bulbsLost: 0, misses: enc.misses, heatSpent: qp.heatSpent ?? 0, heatGain: 0, leech: 0, over: null, stake, twin: Boolean(it.twin),
+  };
+  enc.qCount += 1;
+  if (correct) {
+    const inWindow = elapsedMs <= DUEL.guardWindow * qp.timerMs;
+    const curseThrough = (qp.hexes ?? []).some((x) => x.by === 'boss');
+    const dmg = duelDamage({ difficulty: q.difficulty, stake, fast: out.fast, inGuardWindow: inWindow, streak: p.streak, intentId, curseThrough, dmgBonus: p.edgeNow ?? 0 });
+    enc.hp = Math.max(0, enc.hp - dmg);
+    enc.hits += 1;
+    Object.assign(res, { dmg, crit: out.fast, guarded: Boolean(it.guard && !inWindow), curseThrough });
+    if (s.config.heat) {
+      let gain = 0;
+      if (out.fast) gain += DUEL.heatOnFast;
+      if (p.streak === DUEL.heatOnStreak) gain += 1;
+      p.heat = Math.min(DUEL.heatCap, (p.heat ?? 0) + gain);
+      res.heatGain = gain;
+    }
+  } else {
+    if (enc.kind === 'minion') enc.misses += 1;
+    const lost = bulbsLostOnMiss(enc, intentId);
+    if (lost) {
+      p.strikes = Math.max(0, p.strikes - lost);
+      enc.bulbsLost = (enc.bulbsLost ?? 0) + lost;
+      res.bulbsLost = lost;
+    }
+    if (it.mend && enc.hp < enc.maxHp) {
+      const heal = Math.min(it.mend, enc.maxHp - enc.hp);
+      enc.hp += heal;
+      enc.healed += heal;
+      res.heal = heal;
+    }
+    if (it.leech) {
+      res.leech = Math.min(it.leech, p.chips);
+      p.chips -= res.leech;
+    }
+  }
+  if (s.config.strikes && p.strikes <= 0) p.defeated = true;
+  if (enc.hp <= 0) enc.over = 'won';
+  else if (p.defeated) enc.over = 'lost';
+  else if (enc.kind === 'minion' && enc.misses >= DUEL.minionMisses) enc.over = 'beaten';
+  else if (enc.qCount >= DUEL.questionCap) enc.over = enc.kind === 'minion' ? 'beaten' : 'lost';
+  if (enc.over === 'lost' && enc.kind !== 'minion') p.defeated = true;
+  res.hpAfter = enc.hp;
+  res.misses = enc.misses;
+  res.over = enc.over;
+  return res;
+}
 
 function resolveAnswer(s, ctx, p, { correct, timeout, elapsedMs, choice = null }) {
   const q = ctx.byId.get(s.q.questionId);
@@ -706,7 +1009,7 @@ function resolveAnswer(s, ctx, p, { correct, timeout, elapsedMs, choice = null }
   if (correct && qp.hexes?.length) {
     // Hexes on your own question are a dare (+20%); hexes from a rival cost you 15% of the win. One bonus, one penalty at most.
     const mine = qp.hexes.some((x) => x.by === p.playerId);
-    const theirs = qp.hexes.some((x) => x.by !== p.playerId);
+    const theirs = qp.hexes.some((x) => x.by !== p.playerId && x.by !== 'boss');
     let factor = 1;
     if (mine) factor *= CARD_NUMBERS.hexSelfBonus;
     if (theirs) factor *= CARD_NUMBERS.hexVictimFactor;
@@ -739,6 +1042,12 @@ function resolveAnswer(s, ctx, p, { correct, timeout, elapsedMs, choice = null }
     p.strikes = Math.max(0, p.strikes - 1);
     strikeLost = true;
     if (p.strikes <= 0) p.defeated = true;
+  }
+
+  let duel = null;
+  if (s.enc && !s.enc.over) {
+    duel = applyDuel(s, p, qp, q, { correct, elapsedMs, out });
+    if (duel.bulbsLost) strikeLost = true;
   }
 
   p.roundStats.answered += 1;
@@ -779,6 +1088,8 @@ function resolveAnswer(s, ctx, p, { correct, timeout, elapsedMs, choice = null }
     streakBefore,
     streakAfter: p.streak,
     strikeLost,
+    duel,
+    enemyId: s.enc?.id ?? null,
     mode: s.mode,
     roundIndex: s.roundIndex,
     slot: s.qIndex,
@@ -835,6 +1146,7 @@ export function getQuestionView(s, ctx, playerId) {
     qIndex: s.qIndex,
     markedSlot: s.round.markedSlot === s.qIndex,
     result: qp?.result ?? null,
+    intent: s.q.intent ?? null,
   };
 }
 
@@ -846,8 +1158,11 @@ export function getStakeOptions(s, ctx, playerId) {
   const hazard = HAZARDS[s.round.hazardId];
   const boss = s.round.bossId ? BOSSES[s.round.bossId] : null;
   const timerMs = timerFor({ type: q.type, hazard, boss, slowClock: p.slowClock, jammed: p.jammed });
-  const options = (boss?.lockStake ? [boss.lockStake] : p.chips <= 0 ? [1] : RULES.stakes).map((stake) =>
-    previewStake({
+  const mult = s.q.timerMult ?? 1;
+  const intentId = s.q.intent ?? 'strike';
+  const curse = Boolean(INTENTS[intentId]?.curse);
+  const options = (boss?.lockStake ? [boss.lockStake] : p.chips <= 0 ? [1] : RULES.stakes).map((stake) => ({
+    ...previewStake({
       stake,
       chips: p.chips,
       difficulty: q.difficulty,
@@ -856,14 +1171,20 @@ export function getStakeOptions(s, ctx, playerId) {
       boss,
       markedSlot: s.round.markedSlot === s.qIndex,
       pushed: p.pushed,
-      timerMs,
+      timerMs: Math.round(timerMs * mult),
       cards: {
         safetyNet: qp.armed.safetyNet,
         peek: qp.armed.peek,
         doubleOrNothing: qp.armed.doubleOrNothing,
       },
     }),
-  );
+    heatCost: s.config.heat ? heatCostOf(stake) : 0,
+    locked: Boolean(s.config.heat && heatCostOf(stake) > (p.heat ?? 0)),
+    ...(s.enc ? {
+      dmg: duelDamage({ difficulty: q.difficulty, stake, fast: false, streak: p.streak + 1, intentId, curseThrough: curse, dmgBonus: p.edgeNow ?? 0 }),
+      dmgFast: duelDamage({ difficulty: q.difficulty, stake, fast: true, streak: p.streak + 1, intentId, curseThrough: curse, dmgBonus: p.edgeNow ?? 0 }),
+    } : {}),
+  }));
   return options;
 }
 
