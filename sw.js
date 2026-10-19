@@ -1,6 +1,6 @@
 // Offline cache. Network first so a new deploy is picked up on the next load;
 // the cache is only the fallback when the player is offline.
-const CACHE = 'the-house-knows-v15';
+const CACHE = 'the-house-knows-v16';
 
 self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', (event) => {
