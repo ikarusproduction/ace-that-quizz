@@ -2,6 +2,7 @@
 // What is asked comes from the learning engine; the answers go back into the player's learning record on this device.
 import { h, mount } from '../dom.js';
 import { sprite } from '../pixel.js';
+import '../art_icons.js';
 import { go, goBack, setMood } from '../app.js';
 import { screenHeader, avatar } from '../components.js';
 import { sfx, unlockAudio } from '../audio.js';
@@ -18,7 +19,7 @@ import { THEMES, THEME_IDS } from '../../engine/themes.js';
 import { MODES, MIN_FOR, conceptsFor, buildTraining, buildExpedition, EXPEDITION_HEARTS } from '../../engine/train.js';
 
 const MODE_SCENE = { daily: 'bench', focus: 'greenhouse', weak: 'fearlab', mastery: 'observatory', expedition: 'reactor' };
-const MODE_ICON = { daily: 'flame', focus: 'science', weak: 'bulb_on', mastery: 'key', expedition: 'owl' };
+const MODE_ICON = { daily: 'ic_sun', focus: 'ic_target', weak: 'ic_magnifier', mastery: 'ic_trophy', expedition: 'ic_flag' };
 const STATE_LABEL = { new: 'New', learning: 'Learning', relearning: 'Relearning', review: 'Review', mastered: 'Provisionally mastered' };
 
 export async function trainScreen(app, params = {}) {
@@ -123,7 +124,7 @@ export async function trainScreen(app, params = {}) {
     view(screenHeader(`${MODES[mode].name} done`, () => hub()),
       h('div.panel.center', {}, h('div.big-score', {}, `${right}/${total}`), h('p.small', {}, `${indep} recalled without help`),
         h('p', {}, h('b.amber', {}, `+${xp.gained} XP`)),
-        pack ? h('p.good', {}, `A ${PACKS[pack].name} is waiting in Hexes. One per day.`) : null,
+        pack ? h('p.good', {}, `A ${PACKS[pack].name} is waiting in your Inventory. One per day.`) : null,
         mode === 'mastery' ? h('p.tiny.dim', {}, 'This is how you did today. It does not certify mastery: that needs recalls spread over days.') : null),
       learningSummary(run, learn, now), rememberPanel(app, run),
       h('div.panel.tight', {}, h('b', {}, 'Why come back'), h('p.small', {}, nd ? `Your next review is due ${whenText(nd, now)}. Reviewing at the right moment is what makes it stick.` : 'Train again tomorrow to start building your schedule.'),
@@ -177,7 +178,7 @@ export async function trainScreen(app, params = {}) {
       const fake = { answers, queue: encounters.flatMap((e) => e.questions).slice(0, answers.length).map((q) => ({ ...q })), thrown, deflected };
       view(screenHeader(won ? 'Expedition complete' : lost ? 'Expedition over' : 'Expedition left early', () => hub()),
         h('div.panel.center', { class: won ? '' : 'warn' }, h('div.big-stars', {}, won ? '★'.repeat(Math.max(1, hearts)) + '☆'.repeat(3 - Math.max(1, hearts)) : ''), h('p.small', {}, `${answers.filter((a) => a.correct).length} of ${answers.length} right · ${hearts} heart${hearts === 1 ? '' : 's'} left`),
-          h('p', {}, h('b.amber', {}, `+${xp.gained} XP`)), pack ? h('p.good', {}, `A ${PACKS[pack].name} is waiting in Hexes. One per day.`) : null,
+          h('p', {}, h('b.amber', {}, `+${xp.gained} XP`)), pack ? h('p.good', {}, `A ${PACKS[pack].name} is waiting in your Inventory. One per day.`) : null,
           thrown ? h('p.tiny.dim', {}, `Hex cards: ${deflected} deflected, ${thrown - deflected} landed.`) : null),
         learningSummary(fake, learn, now2), rememberPanel(app, fake),
         h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', onclick: () => expedition() }, 'Another expedition'), h('button.btn.block', { type: 'button', onclick: () => hub() }, 'Back')));

@@ -13,9 +13,9 @@ import { levelOf, cleanWardrobe, buyCheck, COSMETICS } from '../engine/cosmetics
 import { applyAnswers } from '../engine/learning.js';
 import { metaOf, mergeMeta, daysBetween, cleanFriends, MAX_FRIENDS } from './meta.js';
 import { newFriendCode, newFriendSecret, normalizeFriendCode, FRIEND_CODE_RE, buildCard, cleanCard } from '../stats/card.js';
-import { HEXES, PACKS, openPack, FORGE_COST, HEX_NUMBERS } from '../engine/hexes.js';
+import { HEXES, PACKS, openPack, openPackStyle, FORGE_COST, HEX_NUMBERS } from '../engine/hexes.js';
 import { Rng } from '../engine/rng.js';
-import { ADVENTURES, packForStep, xpForStep } from '../engine/adventure.js';
+import { ADVENTURES, packForStep, xpForStep, totals } from '../engine/adventure.js';
 import { runMigrations, migrateSnapshot, SchemaError, MIGRATIONS } from './migrations.js';
 import { STARTER_CARDS, CARDS } from '../engine/cards.js';
 
@@ -326,13 +326,15 @@ export async function createRepo(storage, { now = Date.now, uuid = defaultUuid, 
       if (!pack) throw new RepoError('NO_PACK', 'That pack has already been opened.');
       const cards = openPack(Rng.fromSeed(`pack:${pack.id}`), pack.type, m.hexes.owned);
       const owned = [...new Set([...m.hexes.owned, ...cards.map((c) => c.id)])];
-      const dust = m.hexes.dust + cards.reduce((n, c) => n + c.dust, 0);
+      const style = openPackStyle(Rng.fromSeed(`packstyle:${pack.id}`), pack.type, m.cos.owned);
+      const dust = m.hexes.dust + cards.reduce((n, c) => n + c.dust, 0) + (style?.dust ?? 0);
       profile.hexes = { ...m.hexes, owned, dust };
+      if (style && !style.dup) profile.cos = { owned: [...m.cos.owned, style.id], equipped: m.cos.equipped };
       profile.packs = m.packs.filter((k) => k.id !== packId);
       profile.daily = m.daily;
       profile.updatedAt = now();
       await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
-      return { type: pack.type, cards };
+      return { type: pack.type, cards, style };
     },
 
     /** Add XP (and dust) for a finished game once; the session id is remembered. Returns { xp, before, after, gained, dust }. */
@@ -396,7 +398,7 @@ export async function createRepo(storage, { now = Date.now, uuid = defaultUuid, 
     async buyCosmetic(id, itemId) {
       const profile = await requireProfile(id);
       const m = metaOf(profile);
-      const why = buyCheck(m.cos, itemId, m.hexes.dust);
+      const why = buyCheck(m.cos, itemId, m.hexes.dust, { level: levelOf(m.xp).level, steps: totals(m.adv.science ?? { done: {} }).steps });
       if (why) throw new RepoError('NO_BUY', why);
       profile.hexes = { ...m.hexes, dust: m.hexes.dust - COSMETICS[itemId].cost };
       profile.cos = { owned: [...m.cos.owned, itemId], equipped: { ...m.cos.equipped, [COSMETICS[itemId].slot]: itemId } };

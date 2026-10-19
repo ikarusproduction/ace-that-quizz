@@ -196,7 +196,7 @@ export async function adventureScreen(app, params = {}) {
       h('div.panel.center', {}, h('div.big-stars', {}, '★'.repeat(run.stars) + '☆'.repeat(3 - run.stars)),
         h('p.small', {}, `${run.right} right, ${run.wrong} wrong · ${run.hearts} heart${run.hearts === 1 ? '' : 's'} left`),
         res.first ? h('p', {}, h('b.amber', {}, `+${res.xp.gained} XP`), res.xp.after > res.xp.before ? ` · level ${res.xp.after}!` : '') : h('p.small.dim', {}, 'Already cleared: XP is paid once, stars keep your best.'),
-        res.pack ? h('p.good', {}, `A ${PACKS[res.pack].name} is waiting in Hexes.`) : null,
+        res.pack ? h('p.good', {}, `A ${PACKS[res.pack].name} is waiting in your Inventory.`) : null,
         level.step === STEPS ? h('p.amber', {}, `${ADVENTURES[advId].name} is complete.`) : null, deflectLine),
       summary, remember,
       h('div.stick-bottom', {}, nextStep ? h('button.btn.primary.block', { type: 'button', onclick: () => { chapter = chapterOf(nextStep); const roads = roadsAt(nextStep); if (roads.length > 1) map(); else begin(nextStep, roads[0].id); } }, 'Next step') : null,

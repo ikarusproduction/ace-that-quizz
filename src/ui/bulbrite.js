@@ -8,6 +8,7 @@ import { sfx } from './audio.js';
 import { burstAt, haptic, buzz, motionReduced } from './fx.js';
 import { rarityFx } from './rarityfx.js';
 import { HEXES } from '../engine/hexes.js';
+import { COSMETICS } from '../engine/cosmetics.js';
 
 export const PACK_LIGHT = { bronze: '#e0883c', silver: '#d6dde4', gold: '#ffd24a' };
 export const RARITY_LIGHT = { common: '#e8e2d0', uncommon: '#7bd06a', rare: '#4f9bff', legendary: '#ffd24a' };
@@ -125,20 +126,21 @@ export function createBulbRite({ name, from, light, count = 0 }) {
   };
 }
 
-const rar = (id) => HEXES[id]?.rarity ?? 'common';
+const rar = (id) => HEXES[id]?.rarity ?? COSMETICS[id]?.pack ?? 'common';
+const SLOT_ICON = { frame: 'ic_cards', bg: 'ic_compass', room: 'ic_chest', fx: 'star', tint: 'ink', hat: 'crown' };
 
 /**
  * The reward page. `results` is a list of { type?, cards: [{id, dup, dust}] }. Cards sit side by side; Next turns the next one
  * face up, OK leaves. With `instant` every card is already face up and nothing animates.
  */
 export function showCardsPage({ title, results, instant = false }) {
-  const all = results.flatMap((r) => r.cards);
+  const all = results.flatMap((r) => [...r.cards, ...(r.style ? [r.style] : [])]);
   const reduce = motionReduced();
   const instantNow = instant;
   let shown = instantNow ? all.length : 0;
   const cardEls = all.map((c) => {
-    const hx = HEXES[c.id];
-    const front = h('div.pc-front', { class: rar(c.id) }, sprite(hx?.icon ?? 'key', 36), h('div.pc-nm', {}, hx?.name ?? c.id), h('div.pc-rar', { class: rar(c.id) }, rar(c.id)), h('div.pc-note', {}, c.dup ? `+${c.dust} dust` : 'NEW'));
+    const hx = c.cos ? { name: COSMETICS[c.id].name, icon: SLOT_ICON[COSMETICS[c.id].slot] ?? 'star' } : HEXES[c.id];
+    const front = h('div.pc-front', { class: rar(c.id) }, sprite(hx?.icon ?? 'key', 36), h('div.pc-nm', {}, hx?.name ?? c.id), h('div.pc-rar', { class: rar(c.id) }, rar(c.id)), h('div.pc-note', {}, c.cos ? (c.dup ? `Style · +${c.dust} dust` : 'NEW STYLE') : c.dup ? `+${c.dust} dust` : 'NEW'));
     const back = h('div.pc-back');
     return h('div.pc', { class: instantNow ? 'up' : '' }, h('div.pc-in', {}, back, front));
   });
@@ -146,7 +148,7 @@ export function showCardsPage({ title, results, instant = false }) {
   const summary = h('p.small.dim.pc-sum', {});
   const btn = h('button.btn.primary.block', { type: 'button' }, 'Next');
   const allBtn = h('button.btn.ghost.small', { type: 'button' }, 'Reveal all');
-  const ov = h('div.reveal-overlay.rite.pc-page', { role: 'dialog', 'aria-label': title }, h('div.reveal-box.wide', {}, h('div.tiny.dim', {}, title), h('h2.rite-name', {}, all.length === 1 ? '1 hex' : `${all.length} hexes`), grid, summary, h('div.pc-actions', {}, btn, allBtn)));
+  const ov = h('div.reveal-overlay.rite.pc-page', { role: 'dialog', 'aria-label': title }, h('div.reveal-box.wide', {}, h('div.tiny.dim', {}, title), h('h2.rite-name', {}, all.length === 1 ? '1 card' : `${all.length} cards`), grid, summary, h('div.pc-actions', {}, btn, allBtn)));
   const best = all.map((c) => rar(c.id)).sort((a, b) => ['common', 'uncommon', 'rare', 'legendary'].indexOf(b) - ['common', 'uncommon', 'rare', 'legendary'].indexOf(a))[0] ?? 'common';
   ov.style.setProperty('--c', RARITY_LIGHT[best]);
   ov.style.setProperty('--lvl', '0.6');
@@ -157,8 +159,9 @@ export function showCardsPage({ title, results, instant = false }) {
     allBtn.hidden = finished || all.length < 2;
     const seen = all.slice(0, shown);
     const dust = seen.reduce((n, c) => n + (c.dup ? c.dust : 0), 0);
-    const fresh = seen.filter((c) => !c.dup).length;
-    summary.textContent = finished ? `${fresh} new hex${fresh === 1 ? '' : 'es'}${dust ? ` · +${dust} dust` : ''}` : `${shown} / ${all.length} turned`;
+    const fresh = seen.filter((c) => !c.dup && !c.cos).length;
+    const styled = seen.filter((c) => c.cos && !c.dup).length;
+    summary.textContent = finished ? `${fresh} new hex${fresh === 1 ? '' : 'es'}${styled ? ` · ${styled} new style piece${styled > 1 ? 's' : ''} (see Inventory > Style)` : ''}${dust ? ` · +${dust} dust` : ''}` : `${shown} / ${all.length} turned`;
   };
   const flip = (i, quiet) => {
     const el = cardEls[i];

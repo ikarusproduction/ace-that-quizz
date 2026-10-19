@@ -1,6 +1,7 @@
 // Hexes: the dirty-trick deck. It is separate from the bonus cards. You earn hex charges in a game by
 // answering in a row (streak 2 / 4 / 6 / 8), and you unlock new hexes by opening packs after games.
 import { RARITY_WEIGHT } from './cards.js';
+import { PACK_COSMETICS, DUST_FOR_DUPLICATE_STYLE } from './cosmetics.js';
 
 /**
  * kind:  'visual' (screen effect on the target's question), 'steal' (chips move now), 'defense' (armed shield),
@@ -106,6 +107,21 @@ export function openPack(rng, packType, owned) {
     cards.push({ id, dup, dust: dup ? DUST_FOR_DUPLICATE[HEXES[id].rarity] : 0 });
   }
   return cards.sort((a, b) => HEX_RARITY_ORDER.indexOf(HEXES[a.id].rarity) - HEX_RARITY_ORDER.indexOf(HEXES[b.id].rarity));
+}
+
+/** Chance that a pack also holds a bonus piece of style that cannot be bought. */
+export const STYLE_CHANCE = { bronze: 0.08, silver: 0.18, gold: 0.35 };
+
+/**
+ * The bonus style piece of a pack, or null. Rolled from its own seed so the hex cards of a pack never change.
+ * A piece you already own turns into dust.
+ */
+export function openPackStyle(rng, packType, ownedStyle) {
+  if (rng.next() >= (STYLE_CHANCE[packType] ?? 0)) return null;
+  const weights = Object.fromEntries(PACK_COSMETICS.map((c) => [c.id, RARITY_WEIGHT[c.rarity]]));
+  const id = rng.weighted(weights);
+  const dup = ownedStyle.includes(id);
+  return { id, dup, dust: dup ? DUST_FOR_DUPLICATE_STYLE[PACK_COSMETICS.find((c) => c.id === id).rarity] : 0, cos: true };
 }
 
 /** Packs a finished game earns one player. */

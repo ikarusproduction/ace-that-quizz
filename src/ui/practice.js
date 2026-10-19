@@ -103,17 +103,18 @@ export async function playRun({ app, view, scene = null, run, lang = 'en', color
     const hex = HEXES[id]; if (!hex || !strip) return;
     const from = bossEl ? centre(bossEl, air) : { x: air.clientWidth / 2, y: -20 };
     const to = centre(meEl, air);
-    const el = h('button.hexcard', { type: 'button', class: hex.rarity, 'aria-label': `Deflect ${hex.name}` }, sprite(hex.icon, 28), h('span.hx-name', {}, hex.name));
+    const kind = hex.fx?.[0] ?? 'ink';
+    const el = h('button.hexcard', { type: 'button', class: `${hex.rarity} fxk-${kind}`, 'aria-label': `Deflect ${hex.name}` }, h('span.hx-trail', { 'aria-hidden': 'true' }), h('span.hx-orb', {}, sprite(hex.icon, 52)), h('span.hx-name', {}, hex.name));
     const f = { id, el, from, anim: null };
     air.append(el);
     flights.push(f);
     el.addEventListener('pointerdown', (e) => { e.preventDefault(); deflect(f); });
-    if (motionReduced()) { setTimeout(() => { if (flights.includes(f)) impact(f); }, 700); el.style.transform = `translate(${to.x - 40}px, ${to.y - 30}px)`; return; }
-    const sx = from.x - 40; const sy = from.y - 30;
+    if (motionReduced()) { setTimeout(() => { if (flights.includes(f)) impact(f); }, 700); el.style.transform = `translate(${to.x - 36}px, ${to.y - 36}px)`; return; }
+    const sx = from.x - 36; const sy = from.y - 36;
     f.anim = el.animate([
       { transform: `translate(${sx}px, ${sy}px) scale(.3) rotate(-30deg)`, opacity: 0 },
       { transform: `translate(${sx + (to.x - from.x) * 0.25}px, ${sy + (to.y - from.y) * 0.25 - 16}px) scale(.8) rotate(-8deg)`, opacity: 1, offset: 0.2 },
-      { transform: `translate(${to.x - 40}px, ${to.y - 30}px) scale(1) rotate(10deg)`, opacity: 1 },
+      { transform: `translate(${to.x - 36}px, ${to.y - 36}px) scale(1) rotate(10deg)`, opacity: 1 },
     ], { duration: dur, easing: 'cubic-bezier(.35,.05,.7,.95)', fill: 'forwards' });
     f.anim.finished.then(() => { if (flights.includes(f)) impact(f); }).catch(() => {});
     sfx.card?.();

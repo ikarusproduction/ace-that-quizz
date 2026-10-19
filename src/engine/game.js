@@ -369,7 +369,8 @@ function openQuestion(s, ctx) {
   const order = q.type === 'tf'
     ? q.choices.map((_, i) => i)
     : withRng(s, (rng) => rng.shuffle(q.choices.map((_, i) => i)));
-  s.q = { questionId: q.id, order, byPlayer: {}, hexBy: [] };
+  // baseId/baseOrder: the question as drawn. Every player stakes on this one and then gets the level their own stake asks for.
+  s.q = { questionId: q.id, order, baseId: q.id, baseOrder: order, byPlayer: {}, hexBy: [] };
   for (const p of s.players) {
     s.q.byPlayer[p.playerId] = {
       phase: 'waiting',
@@ -1095,6 +1096,10 @@ function resolveAnswer(s, ctx, p, { correct, timeout, elapsedMs, choice = null }
     correct,
     outcome: correct ? 'correct' : timeout ? 'timeout' : 'wrong',
     choice,
+    askedId: q.id,
+    askedOrder: [...s.q.order],
+    pickedText: choice == null ? null : (q.choices[s.q.order[choice]] ?? null),
+    rightText: q.choices[q.answer],
     responseMs: Math.round(elapsedMs),
     timerMs: qp.timerMs,
     timeLeftMs: Math.max(0, qp.timerMs - Math.round(elapsedMs)),
@@ -1129,6 +1134,8 @@ function resolveAnswer(s, ctx, p, { correct, timeout, elapsedMs, choice = null }
   // Pass the turn, or reveal once everyone has answered.
   s.turn += 1;
   if (s.turn < s.players.length) {
+    // The next player stakes on the question as drawn, then gets the level their own stake asks for (as in solo).
+    if (s.q.baseId) { s.q.questionId = s.q.baseId; s.q.order = s.q.baseOrder; }
     s.q.byPlayer[s.players[s.turn].playerId].phase = 'stake';
     s.phase = 'stake';
   } else {

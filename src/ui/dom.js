@@ -30,9 +30,16 @@ export function append(el, children) {
   return el;
 }
 
+/**
+ * Replace a screen's content. The scroll position is kept: emptying the page makes the browser clamp it to the top, which
+ * used to throw every player back to the top whenever another player's move rebuilt the screen. Screens that really
+ * change call scrollTo(0, 0) themselves afterwards.
+ */
 export function mount(root, ...nodes) {
+  const y = typeof window !== 'undefined' ? window.scrollY : 0;
   root.replaceChildren();
   append(root, nodes);
+  if (y > 0 && window.scrollY !== y) window.scrollTo(0, y);
 }
 
 export const $ = (sel, root = document) => root.querySelector(sel);

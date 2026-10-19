@@ -63,7 +63,7 @@ try:
         # Hexes page
         pg.evaluate("()=>window.__app && 0")
         pg.goto('http://localhost:5197/'); pg.wait_for_selector('.menu')
-        pg.click('.menu button:has-text("Hexes")', no_wait_after=True); pg.wait_for_selector('text=Hex book', timeout=3000) if False else time.sleep(.6)
+        pg.click('.menu button:has-text("Inventory")', no_wait_after=True); pg.wait_for_selector('text=Hex book', timeout=3000) if False else time.sleep(.6)
         time.sleep(.6); pg.screenshot(path='/tmp/hex-page.png')
         pg.click('button:has-text("Claim today")', no_wait_after=True); time.sleep(.6)
         pg.click('.tab:has-text("Packs")', no_wait_after=True); time.sleep(.4)

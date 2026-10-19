@@ -21,7 +21,7 @@ Modes: **Boss Rush** (pick one of eight themed bosses and duel it: health bar, t
 GitHub Pages alone cannot link phones; run `node server/relay.js` somewhere (see `docs/ONLINE.md`). Create a room, share the 4-letter code or link.
 
 ## Level, XP and the wardrobe
-Every finished game gives XP (more for correct answers, wins, bosses and streaks). Levels run to 50 and unlock titles (free) and wardrobe items. Dust buys portrait frames, backgrounds, colour dyes and costume pieces on the Style tab of the Hexes page. Logic in `src/engine/cosmetics.js`, tests in `tests/cosmetics.test.js`, `tests/e2e/style.py`.
+Every finished game gives XP (more for correct answers, wins, bosses and streaks). Levels run to 50 and unlock titles (free) and wardrobe items. Dust buys portrait frames, backgrounds, colour dyes and costume pieces on the Style tab of the Inventory page. Logic in `src/engine/cosmetics.js`, tests in `tests/cosmetics.test.js`, `tests/e2e/style.py`.
 
 ## Adventure
 
@@ -46,7 +46,7 @@ Every question that is not live news or a tune has three versions: level 1 (coar
 Ladders live in `data/questions/variants/<category>.json` and are listed under `variantFiles` in `data/questions/index.json`. Each file is a list of families `{ id, ask: {1,2,3}, variants: [{ level, question, choices, answer, explanation }] }`; the original question keeps its own level and the other two are generated as `<id>~<level>`. Only the originals are drawn into rounds. Check a file with `node scripts/check-variants.mjs data/questions/variants/<category>.json`. All variants are hand-written and marked `unreviewed`.
 
 ## Hexes, packs and the waiting game
-- **Hexes are their own deck**, separate from the bonus cards (Hexes page: Deck, Collection, Packs, Forge). Pick up to 4 for your deck. In a game a streak of 2 earns a common hex drawn from your deck, 4 an uncommon, 6 a rare, 8 a legendary (then every extra even streak). Hold up to 3. Play one per question: before staking on yourself (a dare, +20% if you still answer right) or on a rival (−15% on their win), or steal chips (Pickpocket, Heist, The Kraken, Versus). Shields (Sponge, Wet Cloth, Mirror) catch the next hex played on you. No hexes in the Daily.
+- **Hexes are their own deck**, separate from the bonus cards (Inventory page: Deck, Collection, Packs, Forge). Pick up to 4 for your deck. In a game a streak of 2 earns a common hex drawn from your deck, 4 an uncommon, 6 a rare, 8 a legendary (then every extra even streak). Hold up to 3. Play one per question: before staking on yourself (a dare, +20% if you still answer right) or on a rival (−15% on their win), or steal chips (Pickpocket, Heist, The Kraken, Versus). Shields (Sponge, Wet Cloth, Mirror) catch the next hex played on you. No hexes in the Daily.
 - **Starter hexes:** Ink Blast, Goo Splat, Pickpocket, Sponge. The rest unlock from packs, the daily pack, missions, or the Forge (dust from duplicates).
 - **Packs:** every finished game earns a Bronze, plus a Silver (win or streak 5) and a Gold (streak 8). Each finished mission (3 per game) is one more Bronze. A free daily pack with a day streak (day 3 silver, day 7 gold). Opening a pack is one page: press and hold the bulb while the phone buzzes harder and harder until it blows, then the cards are dealt side by side (Next turns one, OK leaves). "Open instantly" skips the show, and "Open all" opens every waiting pack on one page. Online, every guest has to tap Ready before the host can start.
 - **While you wait (online):** a player who is not on turn solves puzzles for 2–5 bonus chips (max 10 per round, 40 per game). Every 3 right answers fill the prank meter and earn a hex to play live on the player who is answering. The host regenerates every puzzle from its seed and judges every hex, so a phone cannot award itself anything.
@@ -83,3 +83,9 @@ Push to GitHub, enable Pages → "GitHub Actions". `.github/workflows/deploy.yml
 - Friends: a friend code per profile, a public stat card on the PHP relay (`/api/friend`, secret-protected), the list stored inside the profile (`friends`). Needs the PHP relay.
 - Waiting-room puzzles now include sliding tiles, odd-one-out, shape counting, patterns, light memory and riddles (`src/engine/minigame.js`, `src/ui/waitgame.js`).
 - E2E: `tests/e2e/duel.py`, `tests/e2e/friends.py` (plus the existing suites).
+
+## Style, prestige and pack-only pieces
+
+Dust prices are steep on purpose (a frame costs 120 to 2,400 dust). A few of the best pieces also need prestige: a level (House Seal 35, Little Crown 20, Ghost 15, The House room 30) or the Science Adventure (Wisps at step 50; The Void and the Orbit room when it is finished). Other pieces cannot be bought at all: Hexed, Hex Field, Hex Dust, Hologram, Gilded and the Hex Field room only drop from hex packs (a bonus card rolled from its own seed, so a pack's hex cards never change; a duplicate turns into dust).
+
+The new **Menu rooms** slot is an animated backdrop for the main menu (pure CSS, honours reduce-motion). The menu also plays a short music-box lullaby (`startMusic('menu')`) once the browser allows sound; it stops when you leave the menu. Boss hexes in the Adventure fly at you as effect emblems (ink blob, goo, quake, blur, flip) that you tap to deflect. A lost bulb is the cracked one, and the one that just broke throws sparks.

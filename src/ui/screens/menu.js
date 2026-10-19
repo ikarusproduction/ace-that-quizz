@@ -1,14 +1,15 @@
 import { h } from '../dom.js';
+import '../art_icons.js';
 import { sprite } from '../pixel.js';
 import { go } from '../app.js';
 import { openingLights, setMood } from '../lighting.js';
 import { interactiveBulb } from '../bulb.js';
-import { sfx, unlockAudio } from '../audio.js';
+import { sfx, unlockAudio, audioRunning, startMusic } from '../audio.js';
 import { confirmDialog, toast } from '../components.js';
 import { dispatch } from '../../engine/game.js';
 import { metaOf } from '../../storage/meta.js';
 import { avatar } from '../components.js';
-import { bestTitle, titleById, levelOf } from '../../engine/cosmetics.js';
+import { COSMETICS, bestTitle, titleById, levelOf } from '../../engine/cosmetics.js';
 import { localDateKey } from '../dom.js';
 
 let introPlayed = false;
@@ -25,7 +26,9 @@ export async function menuScreen(app) {
   const hero = profiles.find((p) => p.id === recent.ids?.[0]) ?? profiles[0] ?? null;
   const heroMeta = hero ? metaOf(hero) : null;
 
-  const el = h('div.screen', {},
+  const room = heroMeta?.cos.equipped.room && COSMETICS[heroMeta.cos.equipped.room] ? heroMeta.cos.equipped.room.slice(3) : '';
+  const el = h('div.screen', { class: room ? 'has-room' : '' },
+    room ? h('div', { class: `menu-room room-${room}`, 'aria-hidden': 'true' }) : null,
     h('div.title-stage', { class: `${introPlayed ? '' : 'intro'} ${hero ? 'has-hero' : ''}` },
       hero ? heroPortrait(hero, heroMeta) : null,
       interactiveBulb({ intro: !introPlayed }),
@@ -34,22 +37,26 @@ export async function menuScreen(app) {
     ),
     active ? resumeCard(app, active) : null,
     rewards.length ? h('button.btn.good.block', { type: 'button', onclick: () => go('rewards') }, sprite('key', 28), `${rewards.length} card reward${rewards.length > 1 ? 's' : ''} waiting`) : null,
-    packsWaiting ? h('button.btn.good.block', { type: 'button', onclick: () => go('hexes', { tab: 'packs' }) }, sprite('ink', 28), `${packsWaiting} hex pack${packsWaiting > 1 ? 's' : ''} to open`) : dailyReady && profiles.length ? h('button.btn.block', { type: 'button', onclick: () => go('hexes') }, sprite('flame', 28), 'Daily pack ready') : null,
+    packsWaiting ? h('button.btn.good.block', { type: 'button', onclick: () => go('hexes', { tab: 'packs' }) }, sprite('ink', 28), `${packsWaiting} hex pack${packsWaiting > 1 ? 's' : ''} to open`) : dailyReady && profiles.length ? h('button.btn.block', { type: 'button', onclick: () => go('hexes') }, sprite('ic_gift', 28), 'Daily pack ready') : null,
     h('div.menu', {},
       menuBtn('primary', 'star', 'Play', profiles.length ? 'boss rush · map · versus · daily' : 'start here', () => go('setup')),
-      menuBtn('', 'owl', 'Adventure', profiles.length ? 'The Lab · 100 steps · bosses' : 'create a player first', () => go('adventure')),
-      menuBtn('', 'flame', 'Train', profiles.length ? 'daily · focus · weak spots · expedition' : 'create a player first', () => go('train')),
+      menuBtn('', 'ic_compass', 'Adventure', profiles.length ? 'The Lab · 100 steps · bosses' : 'create a player first', () => go('adventure')),
+      menuBtn('', 'ic_book', 'Train', profiles.length ? 'daily · focus · weak spots · expedition' : 'create a player first', () => go('train')),
       menuBtn('', 'radio', 'Online', 'friends on their own phones', () => go('online')),
-      app.cloud ? menuBtn('', 'owl', 'Friends', 'codes · compare stats', () => go('friends')) : null,
+      app.cloud ? menuBtn('', 'ic_people', 'Friends', 'codes · compare stats', () => go('friends')) : null,
       menuBtn('', 'gasmask', 'Players', `${profiles.length} on this device`, () => go('profiles')),
-      menuBtn('', 'key', 'Cards', 'bonus collection', () => go('cards')),
-      menuBtn('', 'ink', 'Hexes', 'deck · packs · daily', () => go('hexes')),
-      menuBtn('', 'science', 'Stats', 'strengths & weaknesses', () => go('stats')),
-      menuBtn('', 'lock', 'Settings', 'sound · data · about', () => go('settings')),
+      menuBtn('', 'ic_cards', 'Cards', 'bonus collection', () => go('cards')),
+      menuBtn('', 'ic_chest', 'Inventory', 'hexes · packs · style', () => go('hexes')),
+      menuBtn('', 'ic_chart', 'Stats', 'strengths & weaknesses', () => go('stats')),
+      menuBtn('', 'ic_gear', 'Settings', 'sound · data · about', () => go('settings')),
     ),
     app.storageWarning ? h('div.panel.warn.tight.notice', {}, sprite('cross', 20), h('div', {}, h('b', {}, 'Progress will not be saved. '), 'This browser blocked local storage (private mode?), so profiles and stats last only until you close the tab. Export your data from Settings before leaving.')) : null,
     h('footer.legal', {}, 'Questions are unreviewed drafts. Every answer shows an explanation so you can check it yourself.'),
   );
+
+  // the menu has a little tune: straight away when the browser already allows sound, otherwise on the first tap
+  if (audioRunning()) startMusic('menu');
+  else el.addEventListener('pointerdown', () => { unlockAudio(); startMusic('menu'); }, { once: true });
 
   if (!introPlayed) {
     introPlayed = true;

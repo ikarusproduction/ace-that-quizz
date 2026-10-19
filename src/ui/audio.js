@@ -29,6 +29,8 @@ function ac() {
 
 /** Call from a user gesture so mobile browsers allow sound. */
 export const unlockAudio = () => void ac();
+/** True once a user gesture has let the browser play sound (and sound is on). */
+export const audioRunning = () => enabled && ctx?.state === 'running';
 
 function tone({ f = 440, f2 = null, dur = 0.12, type = 'square', gain = 0.12, delay = 0 }) {
   const c = ac();
@@ -241,6 +243,7 @@ export const sfx = {
 /* ------------------------------------------------------------------ music
  * Two looping tracks, played by a small step sequencer on WebAudio (no audio files):
  *   'boss'  a driving minor-key pulse for every boss and champion
+ *   'menu'  a slow music-box lullaby for the main menu, quiet enough to sit under the UI
  *   'house' a warped music-box waltz for the last room, that grows teeth as the house breaks apart
  * They stop on their own when sound is turned off and fade out on request.
  */
@@ -285,6 +288,30 @@ const TRACKS = {
       if (s === 0 && bar === 0 && Math.floor(k / 64) % 2 === 1) mNote(m, { f: F('A4'), f2: F('Bb4'), t, dur: 0.9, type: 'triangle', gain: 0.04 });
     },
   },
+  menu: {
+    // a slow, warm music-box lullaby in A minor, 4/4, eight bars: lamp-lit and a little uneasy
+    steps: 128,
+    stepDur: () => 60 / 72 / 4,
+    play(m, k, t) {
+      const bar = Math.floor(k / 16) % 8; const s = k % 16;
+      const chord = [['A3', 'C4', 'E4'], ['F3', 'A3', 'C4'], ['C4', 'E4', 'G4'], ['G3', 'B3', 'D4'], ['A3', 'C4', 'E4'], ['D3', 'F3', 'A3'], ['E3', 'G#3', 'B3'], ['A3', 'C4', 'E4']][bar];
+      const rootN = ['A2', 'F2', 'C2', 'G2', 'A2', 'D2', 'E2', 'A2'][bar];
+      const tune = [
+        { 0: 'E5', 6: 'C5', 8: 'D5', 12: 'E5' }, { 0: 'F5', 4: 'E5', 8: 'C5', 12: 'A4' }, { 0: 'G5', 6: 'E5', 8: 'G5', 12: 'C6' }, { 0: 'B5', 4: 'A5', 8: 'G5', 12: 'D5' },
+        { 0: 'E5', 6: 'C5', 8: 'D5', 12: 'E5' }, { 0: 'F5', 6: 'A5', 8: 'F5', 12: 'D5' }, { 0: 'E5', 4: 'G#5', 8: 'B5', 12: 'G#5' }, { 0: 'A5', 12: 'A4' },
+      ][bar];
+      if (s === 0) mNote(m, { f: F(rootN), t, dur: 1.4, type: 'triangle', gain: 0.12 });
+      if (s % 4 === 0) mNote(m, { f: F(chord[(s / 4) % 3]) * 2, t, dur: 0.5, type: 'sine', gain: 0.03 });
+      if (s === 8) chord.forEach((n) => mNote(m, { f: F(n), t, dur: 0.9, type: 'triangle', gain: 0.022 }));
+      if (tune[s]) {
+        const f = F(tune[s]);
+        mNote(m, { f, t, dur: 0.85, type: 'sine', gain: 0.07 });
+        mNote(m, { f: f * 3, t, dur: 0.08, type: 'sine', gain: 0.016 });
+        mNote(m, { f: f * 2.003, t, dur: 0.4, type: 'sine', gain: 0.012 });
+      }
+      if (s === 14 && bar % 2) mNoise(m, { t, dur: 0.05, gain: 0.008, hp: 8000 });
+    },
+  },
   house: {
     steps: 96,
     stepDur: (m) => 60 / [92, 104, 132][m.intensity] / 4,
@@ -323,7 +350,7 @@ export function startMusic(kind = 'boss', { intensity = 0 } = {}) {
   const track = TRACKS[kind];
   if (!c || !track) return;
   const bus = c.createGain(); bus.gain.value = 0.0001; bus.connect(c.destination);
-  const lp = c.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = kind === 'house' ? 3600 : 2400; lp.connect(bus);
+  const lp = c.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = kind === 'house' ? 3600 : kind === 'menu' ? 3000 : 2400; lp.connect(bus);
   const m = { kind, c, bus, lp, intensity, k: 0, next: c.currentTime + 0.08, track, timer: null };
   bus.gain.setTargetAtTime(MUSIC_LEVEL * volume, c.currentTime, 0.4);
   m.timer = setInterval(() => {

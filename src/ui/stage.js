@@ -25,7 +25,7 @@ const rect = (el) => {
 function livesRow(count, max) {
   const shown = Math.max(max, count);
   const row = h('span.lives', { role: 'img', 'aria-label': `${count} bulbs` });
-  for (let i = 0; i < shown; i++) row.append(h('span.life', { class: i < count ? 'on' : 'off' }, sprite(i < count ? 'bulb_on' : 'bulb_off', 32)));
+  for (let i = 0; i < shown; i++) row.append(h('span.life', { class: i < count ? 'on' : 'off' }, sprite(i < count ? 'bulb_on' : 'bulb_broken', 32)));
   return row;
 }
 
@@ -199,7 +199,7 @@ export function createStage({ enc, hp, lives, maxLives = DUEL.maxLives, heat = 0
     kids.forEach((k, i) => {
       const on = i < n;
       k.className = `life ${on ? 'on' : 'off'}`;
-      k.replaceChildren(sprite(on ? 'bulb_on' : 'bulb_off', 32));
+      k.replaceChildren(sprite(on ? 'bulb_on' : 'bulb_broken', 32));
     });
     const last = n === 1;
     root.classList.toggle('last-bulb', last);
@@ -235,8 +235,8 @@ export function createStage({ enc, hp, lives, maxLives = DUEL.maxLives, heat = 0
       const r = rect(k);
       sfx.glass?.();
       burstAt(r.x, r.y, { colors: ['#fff2c4', '#ffd98a', '#e8a33d', '#cfd6dc'], count: 16, spread: 90, gravity: 160, size: [3, 7] });
-      k.className = 'life off shattered';
-      k.replaceChildren(sprite('bulb_off', 32));
+      k.className = 'life off shattered snap';
+      k.replaceChildren(sprite('bulb_broken', 32));
       await sleep(motionReduced() ? 0 : 180);
     }
     // all that is left is one flickering bulb: the room closes in

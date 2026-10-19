@@ -5,7 +5,7 @@ import { createMemoryStorage } from '../storage/memory.js';
 import { openIdbStorage } from '../storage/idb.js';
 import { createRepo } from '../storage/repo.js';
 import { h, mount } from './dom.js';
-import { configureAudio } from './audio.js';
+import { configureAudio, musicKind, stopMusic } from './audio.js';
 import { configureFx } from './fx.js';
 import { configureHexFx } from './hexfx.js';
 import { setReducedMotion, installLighting, setMood } from './lighting.js';
@@ -86,6 +86,7 @@ export async function boot(root) {
 async function render(name, params, { first = false } = {}) {
   const screen = app.screens[name] ?? app.screens.menu;
   app.current?.dispose?.();
+  if (name !== 'menu' && musicKind() === 'menu') stopMusic(0.6);
   app.current = { name, params, dispose: null };
   const myToken = (app.token = (app.token ?? 0) + 1);
   let out;

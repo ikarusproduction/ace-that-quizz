@@ -64,3 +64,28 @@ test('confirming a stake swaps in the variant for that level and keeps answering
     assert.equal(t.log.at(-1).correct ?? true, true);
   }
 });
+
+test('versus: every player stakes on the question as drawn and is asked the level their own stake chose', async () => {
+  const bank = await realBank();
+  let t = 1_700_000_000_000;
+  const ctx = makeContext([...bank.questions, ...bank.variants], () => (t += 1000));
+  const s = createGame({ mode: 'versus', players: [{ id: 'a', name: 'A', ownedCards: [] }, { id: 'b', name: 'B', ownedCards: [] }], ctx, seed: 'mp', sessionId: 'mp1' });
+  must(dispatch(s, { type: 'START_ROUND' }, ctx));
+  for (let guard = 0; guard < 40 && s.phase !== 'round-summary'; guard++) {
+    if (s.phase === 'stake') {
+      const p = s.players[s.turn];
+      const base = s.q.baseId;
+      assert.equal(s.q.questionId, base, 'the next player sees the question as drawn, not the previous player\'s level');
+      const fam = ctx.families.get(ctx.byId.get(base).family);
+      const stake = s.turn === 0 ? 3 : 1;
+      must(dispatch(s, { type: 'CONFIRM_STAKE', playerId: p.playerId, stake }, ctx));
+      if (fam) assert.equal(ctx.byId.get(s.q.questionId).level, stake, `stake ${stake} asks level ${stake}`);
+    } else if (s.phase === 'question') {
+      must(dispatch(s, { type: 'ANSWER', playerId: s.players[s.turn].playerId, choice: 0, elapsedMs: 1000 }, ctx));
+    } else if (s.phase === 'reveal') {
+      const [ra, rb] = s.players.map((p) => s.q.byPlayer[p.playerId].result);
+      if (ctx.families.get(ctx.byId.get(s.q.baseId).family)) { assert.equal(ra.level, 3); assert.equal(rb.level, 1); assert.ok(ra.pickedText && ra.rightText); }
+      must(dispatch(s, { type: 'NEXT' }, ctx));
+    }
+  }
+});

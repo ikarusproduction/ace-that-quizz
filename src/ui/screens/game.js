@@ -655,7 +655,7 @@ class GameController {
       h('span.pill', { title: 'Chips on the table' }, sprite('chip', 16), p.chips),
       p.vault > 0 ? h('span.pill', { title: 'Banked chips (safe)' }, sprite('vault', 16), p.vault) : null,
       p.streak > 0 ? h('span.pill', { title: 'Streak' }, sprite('flame', 16), p.streak) : null,
-      s.config.strikes && !(s.enc && ['stake', 'question', 'reveal'].includes(s.phase)) ? h('span.bulbs', { style: { marginLeft: 'auto' } }, bulbs(p.strikes, DUEL.startLives)) : h('span', { style: { marginLeft: 'auto' } }),
+      s.config.strikes && !(s.enc && ['stake', 'question', 'reveal'].includes(s.phase)) ? h('span.bulbs', { style: { marginLeft: 'auto' } }, bulbs(p.strikes, DUEL.startLives, { broke: s.phase === 'reveal' && Boolean(s.q?.byPlayer?.[p.playerId]?.result?.strikeLost) })) : h('span', { style: { marginLeft: 'auto' } }),
       menu ? h('button.btn.small.icon.ghost', { type: 'button', 'aria-label': 'Menu', onclick: () => this.openPause() }, '☰') : null,
     );
   }
@@ -1090,9 +1090,17 @@ class GameController {
 
   viewReveal() {
     const s = this.s;
-    const q = this.ctx.byId.get(s.q.questionId);
+    // Everyone staked on the same question but was asked the level their own stake chose: show each player the one they got.
+    const mineRes = this.net ? s.q.byPlayer[this.myPlayerId]?.result : null;
+    const own = mineRes?.askedId && mineRes.askedOrder && mineRes.askedId !== s.q.questionId ? mineRes : null;
+    const q = this.ctx.byId.get(own ? own.askedId : s.q.questionId);
     const langs = new Set(s.players.map((x) => this.langOf(x.playerId)));
-    const v = this.net ? this.view(this.myPlayerId) : langs.size === 1 ? this.view(s.players[0].playerId) : getQuestionView(s, this.ctx, s.players[0].playerId);
+    let v;
+    if (own) {
+      const saved = this.s;
+      this.s = { ...saved, q: { ...saved.q, questionId: own.askedId, order: own.askedOrder } };
+      try { v = this.view(this.myPlayerId); } finally { this.s = saved; }
+    } else v = this.net ? this.view(this.myPlayerId) : langs.size === 1 ? this.view(s.players[0].playerId) : getQuestionView(s, this.ctx, s.players[0].playerId);
     const rightText = v.choices.find((c) => c.correct).text;
     const last = s.qIndex + 1 >= RULES.questionsPerRound;
     const key = `${s.roundIndex}:${s.qIndex}`;
@@ -1111,7 +1119,7 @@ class GameController {
 
     const resultLine = (p) => {
       const r = s.q.byPlayer[p.playerId].result;
-      const picked = r.choice == null ? (r.usedCards.includes('skeleton_key') ? 'Skeleton Key' : 'No answer') : v.choices[r.choice]?.text;
+      const picked = r.choice == null ? (r.usedCards.includes('skeleton_key') ? 'Skeleton Key' : 'No answer') : (r.pickedText ?? v.choices[r.choice]?.text);
       return h('div.result-line', {},
         avatar(this.profileOf(p.playerId), 16),
         h('div.grow', {}, h('b', {}, p.name), h('div.small.dim', {}, r.outcome === 'timeout' ? 'Out of time' : `Answered: ${picked}`)),

@@ -7,7 +7,7 @@ import { CATEGORIES, DIFFICULTIES } from '../engine/bank.js';
 import { sfx } from './audio.js';
 import { HEXES } from '../engine/hexes.js';
 
-const FX_COUNT = { bubbles: 7, embers: 9, snow: 9, sparkle: 8, static: 6, confetti: 10, ghosts: 5 };
+const FX_COUNT = { hexes: 8, bubbles: 7, embers: 9, snow: 9, sparkle: 8, static: 6, confetti: 10, ghosts: 5 };
 
 /**
  * A portrait. With a profile it wears the wardrobe: a frame that lights the face, an animated background, a hat that
@@ -54,9 +54,15 @@ export function chipsLine(n, { sign = false, cls = '' } = {}) {
   return h('span.chips-line', { class: cls }, sprite('chip', 16), txt);
 }
 
-export function bulbs(strikes, max = 3) {
+/**
+ * The bulbs you have left. A lost bulb is the cracked one; the one that has just broken (`broke`) hangs askew and throws sparks.
+ */
+export function bulbs(strikes, max = 3, { broke = false } = {}) {
   const shown = Math.max(max, strikes);
-  return h('span.bulbs', { 'aria-label': `${strikes} bulbs left` }, Array.from({ length: shown }, (_, i) => sprite(i < strikes ? 'bulb_on' : 'bulb_off', 24)));
+  return h('span.bulbs', { 'aria-label': `${strikes} bulbs left` }, Array.from({ length: shown }, (_, i) => {
+    const on = i < strikes;
+    return h('span.bulb-slot', { class: on ? 'on' : `off${broke && i === strikes ? ' snap' : ''}` }, sprite(on ? 'bulb_on' : 'bulb_broken', 24));
+  }));
 }
 
 const RARITY_LABEL = { common: 'Common', uncommon: 'Uncommon', rare: 'Rare', legendary: 'Legendary' };

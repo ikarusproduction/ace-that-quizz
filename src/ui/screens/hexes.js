@@ -5,7 +5,8 @@ import { setMood } from '../lighting.js';
 import { cardTile, screenHeader, rarityLabel, avatar, toast } from '../components.js';
 import { HEXES, HEX_IDS, HEX_RARITY_ORDER, HEX_NUMBERS, PACKS, FORGE_COST, STREAK_TIERS } from '../../engine/hexes.js';
 import { CARD_IDS } from '../../engine/cards.js';
-import { levelOf, TITLES, titleById, bestTitle, unlockedTitles, SLOTS, cosmeticsIn, COSMETICS, MAX_LEVEL } from '../../engine/cosmetics.js';
+import { levelOf, TITLES, titleById, bestTitle, unlockedTitles, SLOTS, cosmeticsIn, COSMETICS, MAX_LEVEL, gateOpen, gateText } from '../../engine/cosmetics.js';
+import { totals } from '../../engine/adventure.js';
 import { metaOf } from '../../storage/meta.js';
 import { sfx, unlockAudio } from '../audio.js';
 import { cardReveal, rarityFx } from '../rarityfx.js';
@@ -53,7 +54,7 @@ export async function hexesScreen(app, params) {
   const paint = async () => {
     const p = profiles.find((x) => x.id === pid);
     if (!p) {
-      mount(root, screenHeader('Hexes', () => goBack('menu')), h('div.panel.inset.empty-state', {}, 'Create a player to start a hex deck.'), h('button.btn.primary.block', { type: 'button', onclick: () => go('profiles') }, 'Players'));
+      mount(root, screenHeader('Inventory', () => goBack('menu')), h('div.panel.inset.empty-state', {}, 'Create a player to open an inventory.'), h('button.btn.primary.block', { type: 'button', onclick: () => go('profiles') }, 'Players'));
       return;
     }
     const fresh = await app.repo.getProfile(p.id);
@@ -102,19 +103,23 @@ export async function hexesScreen(app, params) {
       style: () => {
         const lv = levelOf(m.xp).level;
         const eq = m.cos.equipped;
+        const prog = { level: lv, steps: totals(m.adv.science).steps };
         const act = async (fn) => { try { await fn(); await paint(); } catch (e) { toast(e.message, 'err'); } };
         const titleBtns = TITLES.map((t) => h('button.ward', { type: 'button', 'aria-pressed': String((eq.title ?? bestTitle(lv).id) === t.id), class: t.level > lv ? 'locked' : '', disabled: t.level > lv, onclick: () => { sfx.select(); act(() => app.repo.equipCosmetic(pid, 'title', t.id)); } }, h('div', {}, h('b', {}, t.name), h('small', {}, t.level > lv ? `Level ${t.level}` : 'Unlocked'))));
         const section = ([slot, label]) => {
           const items = cosmeticsIn(slot);
-          const none = h('button.ward', { type: 'button', 'aria-pressed': String(!eq[slot]), onclick: () => { sfx.select(); act(() => app.repo.equipCosmetic(pid, slot, null)); } }, avatar({ ...fresh, cos: { equipped: {} } }, 44), h('div', {}, h('b', {}, 'None'), h('small', {}, 'Plain')));
+          const none = h('button.ward', { type: 'button', 'aria-pressed': String(!eq[slot]), onclick: () => { sfx.select(); act(() => app.repo.equipCosmetic(pid, slot, null)); } }, slot === 'room' ? h('span.room-chip') : avatar({ ...fresh, cos: { equipped: {} } }, 44), h('div', {}, h('b', {}, 'None'), h('small', {}, 'Plain')));
           return [h('h3', {}, label), h('div.wardrobe-grid', {}, none, ...items.map((c) => {
             const own = m.cos.owned.includes(c.id);
-            const sub = own ? (eq[slot] === c.id ? 'Worn' : 'Owned') : `✦ ${c.cost} dust`;
-            return h('button.ward', { type: 'button', 'aria-pressed': String(eq[slot] === c.id), disabled: !own && m.hexes.dust < c.cost, onclick: () => { sfx.select(); act(async () => { if (own) await app.repo.equipCosmetic(pid, slot, c.id); else { await app.repo.buyCosmetic(pid, c.id); sfx.cash?.(); toast(`${c.name} is yours`); } }); } }, avatar({ ...fresh, cos: { equipped: { [slot]: c.id } } }, 44), h('div', {}, h('b', {}, c.name), h('small', {}, sub)));
+            const open = gateOpen(c, prog);
+            const sub = own ? (eq[slot] === c.id ? 'Worn' : 'Owned') : c.pack ? `Hex packs only · ${c.pack}` : !open ? gateText(c) : `✦ ${c.cost} dust`;
+            const locked = !own && (c.pack || !open || m.hexes.dust < c.cost);
+            const prev = slot === 'room' ? h('span', { class: `room-chip room-${c.id.slice(3)}` }) : avatar({ ...fresh, cos: { equipped: { [slot]: c.id } } }, 44);
+            return h('button.ward', { type: 'button', class: !own && (c.pack || !open) ? 'locked' : '', 'aria-pressed': String(eq[slot] === c.id), disabled: locked, onclick: () => { sfx.select(); act(async () => { if (own) await app.repo.equipCosmetic(pid, slot, c.id); else { await app.repo.buyCosmetic(pid, c.id); sfx.cash?.(); toast(`${c.name} is yours`); } }); } }, prev, h('div', {}, h('b', {}, c.name), h('small', {}, sub)));
           }))];
         };
         return [
-          h('p.small.dim', {}, 'Dust buys looks for your portrait: frames that light it, moving backgrounds, particle effects, colours and costume pieces. Duplicate cards, finished games and Adventure clears all pay dust. Titles come with your level.'),
+          h('p.small.dim', {}, 'Dust buys looks: an animated room behind the main menu, and for your portrait frames that light it, moving backgrounds, particle effects, colours and costume pieces. Prices are steep on purpose. A few of the best pieces also ask for a high level or a finished Adventure, and some can only be found in hex packs. Duplicate cards, finished games and Adventure clears pay dust. Titles come with your level.'),
           h('h3', {}, 'Title'), h('div.wardrobe-grid', {}, titleBtns),
           ...SLOTS.flatMap(section),
         ];
@@ -133,7 +138,7 @@ export async function hexesScreen(app, params) {
     }[tab]();
 
     mount(root,
-      screenHeader('Hexes', () => goBack('menu')),
+      screenHeader('Inventory', () => goBack('menu')),
       profiles.length > 1 ? h('div.tabs', {}, profiles.map((x) => h('button.tab', { type: 'button', role: 'tab', 'aria-selected': String(x.id === pid), onclick: () => { pid = x.id; sfx.select(); paint(); } }, x.name))) : null,
       h('div.row.between', {}, h('div.lvl-card', {}, avatar(fresh, 32), h('div', {}, h('h3', {}, fresh.name), h('div.tiny.dim', {}, (titleById(m.cos.equipped.title) ?? bestTitle(lvl.level)).name))), h('span.pill', { title: 'Dust' }, `✦ ${m.hexes.dust}`)),
       h('div.panel.tight', {}, h('div.row.between', {}, h('b', {}, `Level ${lvl.level}`), h('span.tiny.dim', {}, lvl.need ? `${lvl.into} / ${lvl.need} XP` : 'Max level')), h('div.progress', {}, h('i', { style: { width: `${lvl.pct * 100}%` } }))),

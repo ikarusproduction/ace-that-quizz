@@ -15,12 +15,12 @@ try:
         r = pg.evaluate("""async () => {
           const a = window.__app; const p = await a.repo.createProfile({ name: 'Ana' });
           const x = await a.repo.addXp(p.id, 's1', 500); const again = await a.repo.addXp(p.id, 's1', 500);
-          const prof = await a.repo.getProfile(p.id); prof.hexes = { ...prof.hexes, dust: 400 };
+          const prof = await a.repo.getProfile(p.id); prof.hexes = { ...prof.hexes, dust: 1800 };
           await a.repo.storage.transact([{ op: 'put', store: 'profiles', value: prof }]);
           return { x, again: again.gained };
         }""")
         print(r); assert r['x']['after'] >= 3 and r['again'] == 0
-        pg.click('.menu button:has-text("Hexes")', no_wait_after=True); time.sleep(.6)
+        pg.click('.menu button:has-text("Inventory")', no_wait_after=True); time.sleep(.6)
         pg.click('.tab:has-text("Style")', no_wait_after=True); time.sleep(.4)
         pg.screenshot(path='/tmp/style-tab.png')
         pg.locator('.ward:has-text("Amber Glow")').click(no_wait_after=True); time.sleep(.5)
@@ -28,12 +28,24 @@ try:
         pg.locator('.ward:has-text("Flat Cap")').click(no_wait_after=True); time.sleep(.5)
         pg.locator('.ward:has-text("Embers")').click(no_wait_after=True); time.sleep(.5)
         assert pg.locator('.lvl-card .av-wrap.fr-amber.bg-spot .av-hat').count() == 1
-        # dust is the only gate: Gold Leaf (280) was buyable at level 5, but after spending only 90 dust is left
+        # prices are steep: after 1320 dust of purchases Gold Leaf (1200) is out of reach
         assert pg.locator('.ward:has-text("Gold Leaf")').first.is_disabled(), 'not enough dust left'
-        assert pg.locator('.ward:has-text("House Seal")').first.is_disabled(), 'too expensive for the dust left'
+        # the best pieces are gated, and some can only be found in packs
+        hs = pg.locator('.ward:has-text("House Seal")').first
+        assert hs.is_disabled() and 'Level 35' in hs.inner_text(), hs.inner_text()
+        assert 'Finish the Science Adventure' in pg.locator('.ward:has-text("The Void")').first.inner_text()
+        hf = pg.locator('.ward:has-text("Hex Field")').first
+        assert hf.is_disabled() and 'Hex packs only' in hf.inner_text()
+        # a menu room is bought here and shows behind the main menu
+        pg.locator('.ward:has-text("Lamplight")').click(no_wait_after=True); time.sleep(.5)
+        pg.click('.topbar .back', no_wait_after=True); time.sleep(.8)
+        assert pg.locator('.menu-room.room-lamp').count() == 1, 'room shows on the menu'
+        pg.screenshot(path='/tmp/menu-room.png')
+        pg.click('.menu button:has-text("Inventory")', no_wait_after=True); time.sleep(.6)
+        pg.click('.tab:has-text("Style")', no_wait_after=True); time.sleep(.4)
         pg.evaluate('window.scrollTo(0,0)'); pg.screenshot(path='/tmp/style-top.png')
         d = pg.evaluate("async()=>{const a=window.__app; const ps=await a.repo.listProfiles(); const m=await a.repo.getMeta(ps[0].id); return [m.hexes.dust, m.cos.owned.length]}")
-        print('dust/owned', d); assert d[0] < 400 and d[1] == 4
+        print('dust/owned', d); assert d[0] < 400 and d[1] == 5
         assert not errors, errors
         print('OK'); b.close()
 finally:
