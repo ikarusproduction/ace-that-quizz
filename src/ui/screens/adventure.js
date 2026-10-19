@@ -60,7 +60,7 @@ export async function adventureScreen(app, params = {}) {
   const profiles = await app.repo.listProfiles();
   const recent = await app.repo.getRecent();
   let pid = params.playerId ?? recent.ids[0] ?? profiles[0]?.id;
-  const advId = OPEN_ADVENTURE_IDS.includes(params.adv) ? params.adv : OPEN_ADVENTURE_IDS[0];
+  let advId = OPEN_ADVENTURE_IDS.includes(params.adv) ? params.adv : (OPEN_ADVENTURE_IDS.length > 1 ? null : OPEN_ADVENTURE_IDS[0]);
   let chapter = params.chapter ?? null;
   let lastFamilies = [];
   const attempts = {};
@@ -75,8 +75,25 @@ export async function adventureScreen(app, params = {}) {
     ? h('div.row.gap-s', { style: { flexWrap: 'wrap' } }, profiles.map((p) => h('button.btn.icon.ghost', { type: 'button', 'aria-pressed': String(p.id === pid), class: p.id === pid ? 'on' : '', 'aria-label': p.name, onclick: () => { pid = p.id; map(); } }, avatar(p, 32))))
     : null;
 
+  /* ------------------------------------------------------------ choose an adventure */
+  async function choose() {
+    scene.el.classList.remove('arena'); scene.set('bench', 0.3);
+    const p = profiles.find((x) => x.id === pid) ? await profile() : null;
+    const m = p ? metaOf(p) : null;
+    view(screenHeader('Adventure', () => goBack('menu')),
+      !p ? h('div.panel.inset.empty-state', {}, 'Create a player to start an adventure.') : null,
+      p ? playerBar() : null,
+      ...OPEN_ADVENTURE_IDS.map((id) => {
+        const a = ADVENTURES[id]; const t = totals(m?.adv[id] ?? { done: {}, road: {} });
+        return h('button.panel.mode-card', { type: 'button', style: { '--adv': a.color }, onclick: () => { unlockAudio(); sfx.tap(); advId = id; chapter = null; map(); } },
+          sprite(a.bossSprite, 40), h('div.grow', {}, h('b', {}, `${a.name} · ${a.title}`), h('div.tiny.dim', {}, a.blurb)), h('span.tag', {}, p ? `${t.steps}/${STEPS}` : '100 steps'));
+      }),
+      !p ? h('button.btn.primary.block', { type: 'button', onclick: () => go('profiles') }, 'Players') : null);
+  }
+
   /* ------------------------------------------------------------ map */
   async function map() {
+    if (!advId) return choose();
     scene.el.classList.remove('arena');
     if (!profiles.find((p) => p.id === pid)) {
       scene.set('bench', 0.3);
@@ -107,7 +124,7 @@ export async function adventureScreen(app, params = {}) {
       const kind = stepKind(step);
       return h('button.adv-node', {
         type: 'button', disabled: !open, class: `${kind} ${done ? 'done' : ''} ${step === front ? 'now' : ''}`, style: { '--adv': a.color },
-        'aria-label': `Step ${step}${label ? `, ${label}` : ''}${kind === 'event' ? ', lab accident' : ''}${done ? `, ${done} stars` : ''}`,
+        'aria-label': `Step ${step}${label ? `, ${label}` : ''}${kind === 'event' ? `, ${(a.eventName ?? 'Lab accident').toLowerCase()}` : ''}${done ? `, ${done} stars` : ''}`,
         onclick: () => { unlockAudio(); sfx.tap(); begin(step, road); },
       }, kind === 'boss' ? sprite(step === STEPS ? 'boss_house' : a.bossSprite, 44) : h('span.num', {}, String(step)),
         kind === 'event' ? h('span.badge', {}, sprite('goo', 16)) : null,
@@ -122,18 +139,18 @@ export async function adventureScreen(app, params = {}) {
         roads.length > 1 ? h('div.tiny.dim.center', {}, 'The road forks') : null,
         h('div.adv-nodes', {}, roads.map((r) => h('div.adv-slot', { class: prog.road[step] && prog.road[step] !== r.id ? 'other' : '' },
           nodeBtn(step, r.id, roads.length > 1 ? r.label : stepKind(step) === 'boss' ? a.bossNames[chapterOf(step) - 1] : null),
-          roads.length > 1 ? h('div.tiny.dim', {}, r.hint) : stepKind(step) === 'event' ? h('div.tiny.dim', {}, 'Lab accident') : null)))));
+          roads.length > 1 ? h('div.tiny.dim', {}, r.hint) : stepKind(step) === 'event' ? h('div.tiny.dim', {}, a.eventName ?? 'Lab accident') : null)))));
     }
 
     view(
-      screenHeader(a.name, () => goBack('menu')),
+      screenHeader(a.name, () => (OPEN_ADVENTURE_IDS.length > 1 ? (advId = null, chapter = null, choose()) : goBack('menu'))),
       h('div.row.between', {}, h('span.small.dim', {}, `${a.title} · ${t.steps}/${STEPS} steps · ★ ${t.stars}`), playerBar()),
       h('div.chapter-banner', {}, h('span.tiny.dim', {}, `Chapter ${chapter}${info.subject ? ` · ${info.subject}` : ''}`), h('b', {}, info.name),
         info.aspects ? h('span.tiny.dim', {}, info.aspects.map((x) => x.name).join(' · ')) : null),
       tabs,
       sum.due > 0 ? h('button.panel.tight.due-chip', { type: 'button', onclick: () => go('train', { playerId: pid, mode: 'daily' }) }, h('b', {}, `${sum.due} review${sum.due > 1 ? 's' : ''} due`), h('span.tiny.dim', {}, 'They come back inside your steps. Or train them now.')) : null,
       h('div.adv-path', { style: { '--adv': a.color } }, rows),
-      h('p.tiny.dim.center', {}, 'More adventures are on the way. Science is the first.'));
+      h('p.tiny.dim.center', {}, OPEN_ADVENTURE_IDS.length > 1 ? 'More adventures are on the way.' : 'More adventures are on the way. Science is the first.'));
   }
 
   /* ------------------------------------------------------------ a step */
@@ -162,7 +179,7 @@ export async function adventureScreen(app, params = {}) {
     const run = startRun(level, app.ctx);
     await playRun({
       app, view, scene, run, lang, color: ADVENTURES[advId].color, player: p, localize, learnItems: m.learn.items,
-      boss: level.boss, event: level.kind === 'event',
+      boss: level.boss, event: level.kind === 'event', eventName: ADVENTURES[advId].eventName,
       label: (it, r) => (level.kind === 'boss' ? `${level.boss.name} · ${it.retry ? 'another angle' : `${Math.min(level.questions.length, r.idx + 1)} of ${level.questions.length}`}` : `Step ${level.step} · ${level.aspect ?? chapterInfo(advId, level.step).name}${it.retry ? ' · another angle' : ''}`),
       onExit: () => { setMood('calm'); map(); },
       onEnd: (done) => finish(level, done),

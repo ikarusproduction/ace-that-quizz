@@ -43,8 +43,8 @@ export function pickQuestion({ pool, rng, difficulty, usedIds, avoidIds = new Se
     (!fresh || !avoidIds.has(q.id));
   const tiers = [
     { fresh: true, exact: true },
+    { fresh: true, exact: false }, // a question rested for 48 hours is worth more than the exact difficulty
     { fresh: false, exact: true },
-    { fresh: true, exact: false },
     { fresh: false, exact: false },
   ];
   for (const tier of tiers) {

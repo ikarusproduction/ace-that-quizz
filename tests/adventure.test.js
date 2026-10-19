@@ -33,7 +33,7 @@ test('steps: a boss every tenth, a lab accident every fifth, forks at the third 
 });
 
 test('only the Science adventure is open for now', () => {
-  assert.deepEqual(OPEN_ADVENTURE_IDS, ['science']);
+  assert.deepEqual(OPEN_ADVENTURE_IDS, ['science', 'geography']);
 });
 
 test('every adventure has enough questions with full ladders; Science builds all 100 steps with no lesson cards', async () => {

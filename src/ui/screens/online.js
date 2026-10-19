@@ -45,7 +45,7 @@ export async function onlineScreen(app, params) {
     if (!s) return;
     const me = profiles.find((p) => p.id === s.me.profileId);
     const results = await app.repo.storage.getAll('results');
-    const info = { ownedCards: me?.ownedCards ?? [], ownedHexes: metaOf(me ?? {}).hexes.owned, hexDeck: metaOf(me ?? {}).hexes.deck, seen: seenCounts(results, [s.me.profileId]), recent: recentlySeenIds(results, [s.me.profileId]) };
+    const info = { ownedCards: me?.ownedCards ?? [], ownedHexes: metaOf(me ?? {}).hexes.owned, hexDeck: metaOf(me ?? {}).hexes.deck, seen: seenCounts(results, [s.me.profileId]), recent: recentlySeenIds(results, [s.me.profileId], { learns: me ? [metaOf(me).learn] : [] }) };
     s.infos.set(s.me.id, info);
     if (!s.isHost) s.sendInfo(info);
   }

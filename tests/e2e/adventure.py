@@ -42,7 +42,7 @@ try:
         pg.goto('http://localhost:5195/'); pg.wait_for_selector('.menu')
         pg.evaluate("async()=>{await window.__app.repo.createProfile({name:'Ana'});}")
         pg.reload(); pg.wait_for_selector('.menu')
-        pg.click('.menu button:has-text("Adventure")', no_wait_after=True); pg.wait_for_selector('.adv-node')
+        pg.click('.menu button:has-text("Adventure")', no_wait_after=True); pg.wait_for_selector('.mode-card:has-text("The Lab")'); pg.click('.mode-card:has-text("The Lab")', no_wait_after=True); pg.wait_for_selector('.adv-node')
         assert pg.locator('.adv-card').count() == 0, 'no theme hub: only Science is open'
         assert pg.locator('.scene.sc-bench').count() == 1, 'chapter 1 has the bench scene'
         assert pg.locator('.adv-node:not([disabled])').count() == 1, 'only step 1 should be open'
@@ -65,7 +65,7 @@ try:
         # the lab accident (step 5): jump to it
         pg.evaluate("async()=>{const a=window.__app; const [p]=await a.repo.listProfiles(); for (let s=2;s<=4;s++) await a.repo.completeAdventureStep(p.id,'science',s,s===3?'safe':'main',3);}")
         pg.reload(); pg.wait_for_selector('.menu')
-        pg.click('.menu button:has-text("Adventure")', no_wait_after=True); pg.wait_for_selector('.adv-node')
+        pg.click('.menu button:has-text("Adventure")', no_wait_after=True); pg.wait_for_selector('.mode-card:has-text("The Lab")'); pg.click('.mode-card:has-text("The Lab")', no_wait_after=True); pg.wait_for_selector('.adv-node')
         pg.locator('.adv-node.event').click(no_wait_after=True, force=True); pg.wait_for_selector('.arena-strip.event')
         saw_card = False
         for _ in range(60):
@@ -81,7 +81,7 @@ try:
         # jump to the first boss
         pg.evaluate("async()=>{const a=window.__app; const [p]=await a.repo.listProfiles(); for (let s=4;s<=9;s++) await a.repo.completeAdventureStep(p.id,'science',s,s===6?'safe':'main',3);}")
         pg.reload(); pg.wait_for_selector('.menu')
-        pg.click('.menu button:has-text("Adventure")', no_wait_after=True); pg.wait_for_selector('.adv-node')
+        pg.click('.menu button:has-text("Adventure")', no_wait_after=True); pg.wait_for_selector('.mode-card:has-text("The Lab")'); pg.click('.mode-card:has-text("The Lab")', no_wait_after=True); pg.wait_for_selector('.adv-node')
         pg.screenshot(path='/tmp/adv-fork.png', full_page=True)
         assert pg.locator('.adv-row.fork').count() == 2
         boss = pg.locator('.adv-node.boss:not([disabled])'); assert boss.count() == 1

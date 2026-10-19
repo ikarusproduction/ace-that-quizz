@@ -218,6 +218,57 @@
    "explanation": "The Sahara covers about 9 million square kilometres. Antarctica is the largest desert overall."
   },
   {
+   "id": "atl-018",
+   "subcategory": "lakes-falls",
+   "difficulty": 1,
+   "question": "How many Great Lakes are there in North America?",
+   "choices": [
+    "Five",
+    "Four",
+    "Three",
+    "Seven"
+   ],
+   "answer": 0,
+   "explanation": "Superior, Michigan, Huron, Erie and Ontario make five.",
+   "tags": [
+    "lakes-falls"
+   ]
+  },
+  {
+   "id": "atl-019",
+   "subcategory": "lakes-falls",
+   "difficulty": 1,
+   "question": "Which African waterfall, called \"the smoke that thunders\", lies on the Zambezi River?",
+   "choices": [
+    "Angel Falls",
+    "Niagara Falls",
+    "Victoria Falls",
+    "Iguazu Falls"
+   ],
+   "answer": 2,
+   "explanation": "The local name Mosi-oa-Tunya means \"the smoke that thunders\".",
+   "tags": [
+    "lakes-falls"
+   ]
+  },
+  {
+   "id": "atl-024",
+   "subcategory": "lakes-falls",
+   "difficulty": 1,
+   "question": "Niagara Falls lies on the border between the United States and which country?",
+   "choices": [
+    "Mexico",
+    "Brazil",
+    "Canada",
+    "The Bahamas"
+   ],
+   "answer": 2,
+   "explanation": "Niagara Falls is on the border between Ontario, in Canada, and New York State.",
+   "tags": [
+    "lakes-falls"
+   ]
+  },
+  {
    "id": "geo2-022",
    "subcategory": "mountains",
    "difficulty": 1,
@@ -348,6 +399,125 @@
    ]
   },
   {
+   "id": "atl-009",
+   "subcategory": "rivers-countries",
+   "difficulty": 1,
+   "question": "Which river flows through or along Laos, Thailand, Cambodia and Vietnam?",
+   "choices": [
+    "The Irrawaddy",
+    "The Yangtze",
+    "The Ganges",
+    "The Mekong"
+   ],
+   "answer": 3,
+   "explanation": "The Mekong is the great river of mainland Southeast Asia.",
+   "tags": [
+    "rivers-countries"
+   ]
+  },
+  {
+   "id": "atl-011",
+   "subcategory": "rivers-countries",
+   "difficulty": 1,
+   "question": "Which great river runs through the desert from south to north and is the main source of water for Egypt?",
+   "choices": [
+    "The Congo",
+    "The Euphrates",
+    "The Nile",
+    "The Niger"
+   ],
+   "answer": 2,
+   "explanation": "Almost all of Egypt's people live along the Nile and its delta.",
+   "tags": [
+    "rivers-countries"
+   ]
+  },
+  {
+   "id": "atl-001",
+   "subcategory": "rivers-longest",
+   "difficulty": 1,
+   "question": "Which river is the longest in Asia?",
+   "choices": [
+    "The Yangtze",
+    "The Indus",
+    "The Mekong",
+    "The Ganges"
+   ],
+   "answer": 0,
+   "explanation": "The Yangtze, in China, is the longest river in Asia and the third longest in the world.",
+   "tags": [
+    "rivers-longest"
+   ]
+  },
+  {
+   "id": "atl-003",
+   "subcategory": "rivers-longest",
+   "difficulty": 1,
+   "question": "Which river, Africa's second longest, flows through the Congo rainforest?",
+   "choices": [
+    "The Zambezi",
+    "The Congo",
+    "The Limpopo",
+    "The Niger"
+   ],
+   "answer": 1,
+   "explanation": "The Congo is about 4,700 km long and drains the world's second largest rainforest.",
+   "tags": [
+    "rivers-longest"
+   ]
+  },
+  {
+   "id": "atl-005",
+   "subcategory": "rivers-longest",
+   "difficulty": 1,
+   "question": "Into which body of water does the Volga flow?",
+   "choices": [
+    "The Baltic Sea",
+    "The Black Sea",
+    "The Caspian Sea",
+    "The White Sea"
+   ],
+   "answer": 2,
+   "explanation": "The Volga, Europe's longest river, empties into the Caspian Sea.",
+   "tags": [
+    "rivers-longest"
+   ]
+  },
+  {
+   "id": "atl-006",
+   "subcategory": "rivers-longest",
+   "difficulty": 1,
+   "question": "Which river is the main river of West Africa, flowing through Mali, Niger and Nigeria?",
+   "choices": [
+    "The Zambezi",
+    "The Senegal",
+    "The Orange",
+    "The Niger"
+   ],
+   "answer": 3,
+   "explanation": "The Niger is West Africa's great river and gave its name to two countries.",
+   "tags": [
+    "rivers-longest"
+   ]
+  },
+  {
+   "id": "atl-007",
+   "subcategory": "rivers-longest",
+   "difficulty": 1,
+   "question": "Which is the longest river in Australia?",
+   "choices": [
+    "The Yarra",
+    "The Swan",
+    "The Brisbane",
+    "The Murray"
+   ],
+   "answer": 3,
+   "explanation": "The Murray is Australia's longest river, at about 2,500 km.",
+   "tags": [
+    "rivers-longest"
+   ]
+  },
+  {
    "id": "geo2-007",
    "subcategory": "seas",
    "difficulty": 1,
@@ -362,6 +532,91 @@
    "explanation": "It is linked to the Atlantic by the Strait of Gibraltar.",
    "tags": [
     "medit"
+   ]
+  },
+  {
+   "id": "atl-252",
+   "subcategory": "africa-americas",
+   "difficulty": 2,
+   "question": "Mexico City stands at about what altitude above sea level?",
+   "choices": [
+    "About 2,240 m",
+    "About 1,240 m",
+    "About 240 m",
+    "About 3,740 m"
+   ],
+   "answer": 0,
+   "explanation": "Mexico City lies on a high plateau, about 2,240 metres above sea level.",
+   "tags": [
+    "africa-americas"
+   ]
+  },
+  {
+   "id": "atl-089",
+   "subcategory": "area-size",
+   "difficulty": 2,
+   "question": "About what share of Earth's land area does Russia cover?",
+   "choices": [
+    "About 1%",
+    "About 25%",
+    "About 5%",
+    "About 11%"
+   ],
+   "answer": 3,
+   "explanation": "Russia covers about 17 million km² of Earth's roughly 149 million km² of land.",
+   "tags": [
+    "largest-countries"
+   ]
+  },
+  {
+   "id": "atl-091",
+   "subcategory": "area-size",
+   "difficulty": 2,
+   "question": "Which country has 11 time zones on its mainland, the most on a single landmass?",
+   "choices": [
+    "Canada",
+    "China",
+    "The United States",
+    "Russia"
+   ],
+   "answer": 3,
+   "explanation": "Russia spans 11 time zones, from Kaliningrad to Kamchatka.",
+   "tags": [
+    "time-zones"
+   ]
+  },
+  {
+   "id": "atl-093",
+   "subcategory": "area-size",
+   "difficulty": 2,
+   "question": "Which continent is the fifth largest by area, bigger than Europe?",
+   "choices": [
+    "Antarctica",
+    "South America",
+    "Africa",
+    "Oceania"
+   ],
+   "answer": 0,
+   "explanation": "Antarctica covers about 14 million km² and Europe about 10 million km².",
+   "tags": [
+    "continents-area"
+   ]
+  },
+  {
+   "id": "atl-094",
+   "subcategory": "area-size",
+   "difficulty": 2,
+   "question": "About how big is Rhode Island?",
+   "choices": [
+    "About 4,000 km²",
+    "About 40,000 km²",
+    "About 400 km²",
+    "About 400,000 km²"
+   ],
+   "answer": 0,
+   "explanation": "Rhode Island covers about 4,000 km², water included.",
+   "tags": [
+    "us-states"
    ]
   },
   {
@@ -449,6 +704,244 @@
    "explanation": "Istanbul straddles the Bosphorus strait, so part of it lies in each continent."
   },
   {
+   "id": "atl-105",
+   "subcategory": "city-sites",
+   "difficulty": 2,
+   "question": "Venice is built across a lagoon of roughly how many small islands?",
+   "choices": [
+    "About 120",
+    "About 2,500",
+    "About 600",
+    "About 12"
+   ],
+   "answer": 0,
+   "explanation": "Venice stands on about 118 small islands, separated by canals.",
+   "tags": [
+    "city-sites"
+   ]
+  },
+  {
+   "id": "atl-106",
+   "subcategory": "city-sites",
+   "difficulty": 2,
+   "question": "About what share of the Netherlands lies below sea level?",
+   "choices": [
+    "About a quarter",
+    "About half",
+    "About 1%",
+    "About 90%"
+   ],
+   "answer": 0,
+   "explanation": "Roughly a quarter of the country is below sea level, protected by dikes, dunes and pumps.",
+   "tags": [
+    "city-sites"
+   ]
+  },
+  {
+   "id": "atl-108",
+   "subcategory": "city-sites",
+   "difficulty": 2,
+   "question": "Which is the busiest seaport in Europe by cargo handled?",
+   "choices": [
+    "Marseille",
+    "Hamburg",
+    "Antwerp",
+    "Rotterdam"
+   ],
+   "answer": 3,
+   "explanation": "Rotterdam has led Europe's ports in cargo for decades, ahead of Antwerp-Bruges.",
+   "tags": [
+    "city-sites"
+   ]
+  },
+  {
+   "id": "atl-109",
+   "subcategory": "city-sites",
+   "difficulty": 2,
+   "question": "Which city has the world's busiest container port?",
+   "choices": [
+    "Rotterdam",
+    "Shanghai",
+    "Hong Kong",
+    "Los Angeles"
+   ],
+   "answer": 1,
+   "explanation": "Shanghai has handled more containers than any other port for over a decade, around 49 million in 2023.",
+   "tags": [
+    "city-sites"
+   ]
+  },
+  {
+   "id": "atl-111",
+   "subcategory": "city-sites",
+   "difficulty": 2,
+   "question": "Which strait, about 3 km wide at its narrowest, separates Sicily from mainland Italy?",
+   "choices": [
+    "The Strait of Otranto",
+    "The Strait of Gibraltar",
+    "The Strait of Bonifacio",
+    "The Strait of Messina"
+   ],
+   "answer": 3,
+   "explanation": "The Strait of Messina is about 3 kilometres wide at its narrowest point.",
+   "tags": [
+    "city-sites"
+   ]
+  },
+  {
+   "id": "atl-097",
+   "subcategory": "city-size",
+   "difficulty": 2,
+   "question": "Which is the largest city in Canada by population?",
+   "choices": [
+    "Toronto",
+    "Montreal",
+    "Calgary",
+    "Vancouver"
+   ],
+   "answer": 0,
+   "explanation": "Toronto is Canada's largest city. Ottawa, the capital, is much smaller.",
+   "tags": [
+    "city-size"
+   ]
+  },
+  {
+   "id": "atl-098",
+   "subcategory": "city-size",
+   "difficulty": 2,
+   "question": "Which is the largest city in Brazil by population?",
+   "choices": [
+    "Salvador",
+    "Rio de Janeiro",
+    "São Paulo",
+    "Brasília"
+   ],
+   "answer": 2,
+   "explanation": "São Paulo is by far Brazil's largest city. The capital, Brasília, is a planned city and much smaller.",
+   "tags": [
+    "city-size"
+   ]
+  },
+  {
+   "id": "atl-099",
+   "subcategory": "city-size",
+   "difficulty": 2,
+   "question": "Which is the largest city in the United States by population?",
+   "choices": [
+    "Houston",
+    "Chicago",
+    "New York City",
+    "Los Angeles"
+   ],
+   "answer": 2,
+   "explanation": "New York City, with more than eight million people, is far ahead of Los Angeles, which has about four million.",
+   "tags": [
+    "city-size"
+   ]
+  },
+  {
+   "id": "atl-100",
+   "subcategory": "city-size",
+   "difficulty": 2,
+   "question": "Which is the largest city in Nigeria by population?",
+   "choices": [
+    "Port Harcourt",
+    "Abuja",
+    "Kano",
+    "Lagos"
+   ],
+   "answer": 3,
+   "explanation": "Lagos is Nigeria's biggest city and its main port. Abuja, the capital, has been the seat of government since 1991.",
+   "tags": [
+    "city-size"
+   ]
+  },
+  {
+   "id": "atl-101",
+   "subcategory": "city-size",
+   "difficulty": 2,
+   "question": "Roughly how many megacities, cities of 10 million people or more, exist in the world today?",
+   "choices": [
+    "About 5",
+    "About 30",
+    "About 300",
+    "About 100"
+   ],
+   "answer": 1,
+   "explanation": "The United Nations counts around thirty megacities, and most of them are in Asia.",
+   "tags": [
+    "city-size"
+   ]
+  },
+  {
+   "id": "atl-102",
+   "subcategory": "city-size",
+   "difficulty": 2,
+   "question": "Which is the largest city in New Zealand by population?",
+   "choices": [
+    "Christchurch",
+    "Auckland",
+    "Wellington",
+    "Dunedin"
+   ],
+   "answer": 1,
+   "explanation": "Auckland has about 1.7 million people, far more than any other New Zealand city.",
+   "tags": [
+    "city-size"
+   ]
+  },
+  {
+   "id": "atl-104",
+   "subcategory": "city-size",
+   "difficulty": 2,
+   "question": "Which of these cities has the most inhabitants in its urban area?",
+   "choices": [
+    "Sydney",
+    "Madrid",
+    "Tokyo",
+    "Paris"
+   ],
+   "answer": 2,
+   "explanation": "Greater Tokyo is far larger than the other three, with more than 30 million people.",
+   "tags": [
+    "city-size"
+   ]
+  },
+  {
+   "id": "atl-155",
+   "subcategory": "climate-extremes",
+   "difficulty": 2,
+   "question": "Mawsynram in India is among the wettest places on Earth. About how much rain does it get in an average year?",
+   "choices": [
+    "About 30 metres",
+    "About 1.2 metres",
+    "About 4 metres",
+    "About 12 metres"
+   ],
+   "answer": 3,
+   "explanation": "Mawsynram averages roughly 11 to 12 metres of rain a year, almost all of it in the monsoon.",
+   "tags": [
+    "climate-extremes"
+   ]
+  },
+  {
+   "id": "atl-247",
+   "subcategory": "continents",
+   "difficulty": 2,
+   "question": "How many sovereign countries are there in Africa?",
+   "choices": [
+    "44",
+    "34",
+    "54",
+    "64"
+   ],
+   "answer": 2,
+   "explanation": "Africa has 54 countries recognised by the United Nations, more than any other continent.",
+   "tags": [
+    "continents"
+   ]
+  },
+  {
    "id": "geo-016",
    "subcategory": "continents",
    "difficulty": 2,
@@ -523,6 +1016,57 @@
    ]
   },
   {
+   "id": "atl-145",
+   "subcategory": "deserts",
+   "difficulty": 2,
+   "question": "About how large is the Sahara?",
+   "choices": [
+    "About 20 million km²",
+    "About 9 million km²",
+    "About 4 million km²",
+    "About 2 million km²"
+   ],
+   "answer": 1,
+   "explanation": "The Sahara covers roughly 9 million square kilometres, an area comparable to China or the United States.",
+   "tags": [
+    "deserts"
+   ]
+  },
+  {
+   "id": "atl-146",
+   "subcategory": "deserts",
+   "difficulty": 2,
+   "question": "A desert is usually defined as getting less than about how much precipitation a year?",
+   "choices": [
+    "250 mm (10 inches)",
+    "1,000 mm (40 inches)",
+    "50 mm (2 inches)",
+    "2,500 mm (100 inches)"
+   ],
+   "answer": 0,
+   "explanation": "Deserts get under about 250 mm of rain or snow a year, whatever their temperature.",
+   "tags": [
+    "deserts"
+   ]
+  },
+  {
+   "id": "atl-150",
+   "subcategory": "deserts",
+   "difficulty": 2,
+   "question": "Which mountain range blocks moisture and helps keep the Atacama Desert so dry?",
+   "choices": [
+    "The Rockies",
+    "The Alps",
+    "The Andes",
+    "The Himalayas"
+   ],
+   "answer": 2,
+   "explanation": "The Andes wall off moist air from the east, and a cold current cools the coast, so rain almost never falls.",
+   "tags": [
+    "deserts"
+   ]
+  },
+  {
    "id": "geo2-021",
    "subcategory": "deserts",
    "difficulty": 2,
@@ -540,6 +1084,159 @@
    ]
   },
   {
+   "id": "atl-042",
+   "subcategory": "extreme-points",
+   "difficulty": 2,
+   "question": "About how far below sea level is Badwater Basin in Death Valley?",
+   "choices": [
+    "About 86 metres",
+    "About 8 metres",
+    "About 1,000 metres",
+    "About 300 metres"
+   ],
+   "answer": 0,
+   "explanation": "Badwater Basin lies about 86 metres below sea level.",
+   "tags": [
+    "extreme-points"
+   ]
+  },
+  {
+   "id": "atl-044",
+   "subcategory": "extreme-points",
+   "difficulty": 2,
+   "question": "About how high above sea level is La Paz, the world's highest capital city?",
+   "choices": [
+    "About 1,500 metres",
+    "About 5,000 metres",
+    "About 2,200 metres",
+    "About 3,640 metres"
+   ],
+   "answer": 3,
+   "explanation": "La Paz stands at about 3,640 metres.",
+   "tags": [
+    "extreme-points"
+   ]
+  },
+  {
+   "id": "atl-045",
+   "subcategory": "extreme-points",
+   "difficulty": 2,
+   "question": "About how high above sea level is the average ground in the Maldives?",
+   "choices": [
+    "About 1.5 metres",
+    "About 500 metres",
+    "About 15 metres",
+    "About 150 metres"
+   ],
+   "answer": 0,
+   "explanation": "The average ground level in the Maldives is only about 1.5 metres.",
+   "tags": [
+    "extreme-points"
+   ]
+  },
+  {
+   "id": "atl-047",
+   "subcategory": "extreme-points",
+   "difficulty": 2,
+   "question": "About how high is Antarctica on average?",
+   "choices": [
+    "About 450 metres",
+    "About 3,800 metres",
+    "About 900 metres",
+    "About 2,300 metres"
+   ],
+   "answer": 3,
+   "explanation": "Counting its ice, Antarctica averages about 2,300 metres above sea level.",
+   "tags": [
+    "extreme-points"
+   ]
+  },
+  {
+   "id": "atl-065",
+   "subcategory": "islands",
+   "difficulty": 2,
+   "question": "Borneo is shared by how many countries?",
+   "choices": [
+    "Two",
+    "One",
+    "Four",
+    "Three"
+   ],
+   "answer": 3,
+   "explanation": "Indonesia, Malaysia and Brunei share Borneo.",
+   "tags": [
+    "new-guinea"
+   ]
+  },
+  {
+   "id": "atl-066",
+   "subcategory": "islands",
+   "difficulty": 2,
+   "question": "Which channel separates Madagascar from mainland Africa?",
+   "choices": [
+    "The Strait of Gibraltar",
+    "The Bab-el-Mandeb Strait",
+    "The Mozambique Channel",
+    "The Strait of Hormuz"
+   ],
+   "answer": 2,
+   "explanation": "The Mozambique Channel is more than 400 km wide at its narrowest.",
+   "tags": [
+    "madagascar"
+   ]
+  },
+  {
+   "id": "atl-068",
+   "subcategory": "islands",
+   "difficulty": 2,
+   "question": "About how many islands make up the Philippines?",
+   "choices": [
+    "About 17,000",
+    "About 7,600",
+    "About 76,000",
+    "About 760"
+   ],
+   "answer": 1,
+   "explanation": "The Philippines counts roughly 7,600 islands, while neighbouring Indonesia has more than 17,000.",
+   "tags": [
+    "philippines"
+   ]
+  },
+  {
+   "id": "atl-070",
+   "subcategory": "islands",
+   "difficulty": 2,
+   "question": "Which is the second-largest island in Europe?",
+   "choices": [
+    "Sardinia",
+    "Ireland",
+    "Sicily",
+    "Iceland"
+   ],
+   "answer": 3,
+   "explanation": "Great Britain is first, Iceland second with about 103,000 km², and Ireland third with about 84,000 km².",
+   "tags": [
+    "europe-islands"
+   ]
+  },
+  {
+   "id": "atl-072",
+   "subcategory": "islands",
+   "difficulty": 2,
+   "question": "Which is the smallest island nation in the world by area?",
+   "choices": [
+    "Nauru",
+    "Tuvalu",
+    "The Maldives",
+    "Malta"
+   ],
+   "answer": 0,
+   "explanation": "Nauru covers about 21 km².",
+   "tags": [
+    "island-nations"
+   ]
+  },
+  {
    "id": "geo-019",
    "subcategory": "islands",
    "difficulty": 2,
@@ -552,6 +1249,159 @@
    ],
    "answer": 0,
    "explanation": "Greenland covers about 2.17 million square kilometres. Australia is counted as a continent."
+  },
+  {
+   "id": "atl-017",
+   "subcategory": "lakes-falls",
+   "difficulty": 2,
+   "question": "About how high above sea level is Lake Titicaca?",
+   "choices": [
+    "About 2,000 metres",
+    "About 3,800 metres",
+    "About 1,200 metres",
+    "About 5,500 metres"
+   ],
+   "answer": 1,
+   "explanation": "Lake Titicaca lies at about 3,800 metres.",
+   "tags": [
+    "lakes-falls"
+   ]
+  },
+  {
+   "id": "atl-020",
+   "subcategory": "lakes-falls",
+   "difficulty": 2,
+   "question": "The Iguazu River, which makes the falls, is a tributary of which major river?",
+   "choices": [
+    "The Amazon",
+    "The Orinoco",
+    "The Parana",
+    "The Uruguay"
+   ],
+   "answer": 2,
+   "explanation": "The Iguazu River flows into the Parana.",
+   "tags": [
+    "lakes-falls"
+   ]
+  },
+  {
+   "id": "atl-021",
+   "subcategory": "lakes-falls",
+   "difficulty": 2,
+   "question": "In which country is Lake Ladoga?",
+   "choices": [
+    "Finland",
+    "Sweden",
+    "Estonia",
+    "Russia"
+   ],
+   "answer": 3,
+   "explanation": "Ladoga lies in north-western Russia.",
+   "tags": [
+    "lakes-falls"
+   ]
+  },
+  {
+   "id": "atl-023",
+   "subcategory": "lakes-falls",
+   "difficulty": 2,
+   "question": "Why is the Great Salt Lake so salty?",
+   "choices": [
+    "Seawater flows in from the Pacific",
+    "Water leaves it only by evaporation",
+    "Volcanic vents under the lake",
+    "People pour salt into it"
+   ],
+   "answer": 1,
+   "explanation": "It has no outlet, so water leaves only by evaporation and the salt stays behind.",
+   "tags": [
+    "lakes-falls"
+   ]
+  },
+  {
+   "id": "atl-073",
+   "subcategory": "landlocked-enclaves",
+   "difficulty": 2,
+   "question": "Which continent has the most landlocked countries?",
+   "choices": [
+    "South America",
+    "Europe",
+    "Africa",
+    "Asia"
+   ],
+   "answer": 2,
+   "explanation": "Africa has 16 landlocked countries, Europe about 14 and Asia about 12.",
+   "tags": [
+    "landlocked"
+   ]
+  },
+  {
+   "id": "atl-075",
+   "subcategory": "landlocked-enclaves",
+   "difficulty": 2,
+   "question": "How many countries are completely surrounded by Italy?",
+   "choices": [
+    "Two",
+    "One",
+    "Five",
+    "Three"
+   ],
+   "answer": 0,
+   "explanation": "San Marino and Vatican City are both enclaves inside Italy.",
+   "tags": [
+    "italy-enclaves"
+   ]
+  },
+  {
+   "id": "atl-077",
+   "subcategory": "landlocked-enclaves",
+   "difficulty": 2,
+   "question": "Alaska is about how many times bigger than Texas?",
+   "choices": [
+    "About 2.5 times",
+    "About the same size",
+    "About 5 times",
+    "About 10 times"
+   ],
+   "answer": 0,
+   "explanation": "Alaska covers about 1.7 million km² and Texas about 0.7 million km².",
+   "tags": [
+    "alaska"
+   ]
+  },
+  {
+   "id": "atl-161",
+   "subcategory": "lines-zones",
+   "difficulty": 2,
+   "question": "Which of these countries is crossed by the Tropic of Capricorn?",
+   "choices": [
+    "Egypt",
+    "Nigeria",
+    "Kenya",
+    "Botswana"
+   ],
+   "answer": 3,
+   "explanation": "The Tropic of Capricorn, at about 23.4° south, crosses Botswana, Namibia, South Africa and others.",
+   "tags": [
+    "lines-zones"
+   ]
+  },
+  {
+   "id": "atl-163",
+   "subcategory": "lines-zones",
+   "difficulty": 2,
+   "question": "In the ideal system, how wide in longitude is each time zone?",
+   "choices": [
+    "15 degrees",
+    "30 degrees",
+    "10 degrees",
+    "5 degrees"
+   ],
+   "answer": 0,
+   "explanation": "The Earth turns 360 degrees in 24 hours, so each hour of time equals 15 degrees of longitude.",
+   "tags": [
+    "lines-zones"
+   ]
   },
   {
    "id": "geo-008",
@@ -580,6 +1430,227 @@
    ],
    "answer": 3,
    "explanation": "Kilimanjaro, Africa's highest peak at 5,895 m, stands in northeastern Tanzania."
+  },
+  {
+   "id": "atl-081",
+   "subcategory": "neighbours-borders",
+   "difficulty": 2,
+   "question": "China and which other country each border 14 countries, the most in the world?",
+   "choices": [
+    "Brazil",
+    "The United States",
+    "Russia",
+    "India"
+   ],
+   "answer": 2,
+   "explanation": "Both China and Russia have 14 land neighbours.",
+   "tags": [
+    "most-neighbours"
+   ]
+  },
+  {
+   "id": "atl-082",
+   "subcategory": "neighbours-borders",
+   "difficulty": 2,
+   "question": "Which tiny principality shares a land border only with France?",
+   "choices": [
+    "Andorra",
+    "Liechtenstein",
+    "San Marino",
+    "Monaco"
+   ],
+   "answer": 3,
+   "explanation": "Monaco is surrounded by France on land. Andorra borders both France and Spain.",
+   "tags": [
+    "france-borders"
+   ]
+  },
+  {
+   "id": "atl-084",
+   "subcategory": "neighbours-borders",
+   "difficulty": 2,
+   "question": "How many member states does the United Nations have?",
+   "choices": [
+    "183",
+    "201",
+    "193",
+    "195"
+   ],
+   "answer": 2,
+   "explanation": "The United Nations has 193 member states. The Holy See and Palestine are observers.",
+   "tags": [
+    "country-count"
+   ]
+  },
+  {
+   "id": "atl-085",
+   "subcategory": "neighbours-borders",
+   "difficulty": 2,
+   "question": "Which has more sovereign countries: South America or Oceania?",
+   "choices": [
+    "Oceania, with 14 against 12",
+    "Both have 12",
+    "South America, with 14 against 12",
+    "Both have 14"
+   ],
+   "answer": 0,
+   "explanation": "Oceania has 14 sovereign countries and South America has 12.",
+   "tags": [
+    "continent-counts"
+   ]
+  },
+  {
+   "id": "atl-087",
+   "subcategory": "neighbours-borders",
+   "difficulty": 2,
+   "question": "Brazil borders how many countries?",
+   "choices": [
+    "Ten",
+    "Eight",
+    "Six",
+    "Twelve"
+   ],
+   "answer": 0,
+   "explanation": "It borders every South American country except Chile and Ecuador.",
+   "tags": [
+    "brazil"
+   ]
+  },
+  {
+   "id": "atl-049",
+   "subcategory": "ocean-depths",
+   "difficulty": 2,
+   "question": "Roughly what share of all the water on Earth is held in the oceans, rather than in ice, lakes, rivers or groundwater?",
+   "choices": [
+    "About 85%",
+    "About 50%",
+    "About 70%",
+    "About 97%"
+   ],
+   "answer": 3,
+   "explanation": "Salt water in the oceans makes up about 97% of Earth's water. Fresh water is only about 3%.",
+   "tags": [
+    "water-share"
+   ]
+  },
+  {
+   "id": "atl-051",
+   "subcategory": "ocean-depths",
+   "difficulty": 2,
+   "question": "Which trench is the deepest part of the Atlantic Ocean?",
+   "choices": [
+    "The Puerto Rico Trench",
+    "The Kermadec Trench",
+    "The Peru-Chile Trench",
+    "The Java Trench"
+   ],
+   "answer": 0,
+   "explanation": "The Puerto Rico Trench, north of the island, reaches about 8.4 km at its deepest point, the Milwaukee Deep.",
+   "tags": [
+    "atlantic-depth"
+   ]
+  },
+  {
+   "id": "atl-053",
+   "subcategory": "ocean-depths",
+   "difficulty": 2,
+   "question": "The Pacific Ocean covers about what share of Earth's surface?",
+   "choices": [
+    "About two thirds",
+    "About one tenth",
+    "About one third",
+    "About one half"
+   ],
+   "answer": 2,
+   "explanation": "At about 165 million km², the Pacific covers roughly a third of the planet, more than all the land put together.",
+   "tags": [
+    "ocean-areas"
+   ]
+  },
+  {
+   "id": "atl-056",
+   "subcategory": "ocean-depths",
+   "difficulty": 2,
+   "question": "Water pressure rises by about one atmosphere for every how many metres of seawater?",
+   "choices": [
+    "About 100 m",
+    "About 1 m",
+    "About 10 m",
+    "About 1,000 m"
+   ],
+   "answer": 2,
+   "explanation": "Every 10 m of seawater adds roughly one atmosphere of pressure.",
+   "tags": [
+    "pressure"
+   ]
+  },
+  {
+   "id": "atl-026",
+   "subcategory": "peaks-highest",
+   "difficulty": 2,
+   "question": "In which US state is North America's highest mountain?",
+   "choices": [
+    "Colorado",
+    "Washington",
+    "California",
+    "Alaska"
+   ],
+   "answer": 3,
+   "explanation": "The highest peak in North America is in the Alaska Range.",
+   "tags": [
+    "peaks-highest"
+   ]
+  },
+  {
+   "id": "atl-028",
+   "subcategory": "peaks-highest",
+   "difficulty": 2,
+   "question": "About how high is the highest mountain on mainland Australia?",
+   "choices": [
+    "About 4,000 metres",
+    "About 1,000 metres",
+    "About 3,000 metres",
+    "About 2,200 metres"
+   ],
+   "answer": 3,
+   "explanation": "Mount Kosciuszko rises to about 2,230 metres.",
+   "tags": [
+    "peaks-highest"
+   ]
+  },
+  {
+   "id": "atl-030",
+   "subcategory": "peaks-highest",
+   "difficulty": 2,
+   "question": "About how high is Mount Fuji?",
+   "choices": [
+    "About 4,900 metres",
+    "About 5,400 metres",
+    "About 3,780 metres",
+    "About 2,100 metres"
+   ],
+   "answer": 2,
+   "explanation": "Mount Fuji is 3,776 metres high.",
+   "tags": [
+    "peaks-highest"
+   ]
+  },
+  {
+   "id": "atl-032",
+   "subcategory": "peaks-highest",
+   "difficulty": 2,
+   "question": "About how high is the Matterhorn?",
+   "choices": [
+    "About 2,500 metres",
+    "About 4,480 metres",
+    "About 5,300 metres",
+    "About 3,200 metres"
+   ],
+   "answer": 1,
+   "explanation": "The Matterhorn is 4,478 metres high.",
+   "tags": [
+    "peaks-highest"
+   ]
   },
   {
    "id": "geo2-006",
@@ -678,6 +1749,142 @@
    ]
   },
   {
+   "id": "atl-010",
+   "subcategory": "rivers-countries",
+   "difficulty": 2,
+   "question": "For part of its course the Rhine forms the border between which two countries?",
+   "choices": [
+    "Germany and Poland",
+    "Spain and France",
+    "Austria and Italy",
+    "France and Germany"
+   ],
+   "answer": 3,
+   "explanation": "Between Basel and Karlsruhe the Rhine marks the French-German border.",
+   "tags": [
+    "rivers-countries"
+   ]
+  },
+  {
+   "id": "atl-012",
+   "subcategory": "rivers-countries",
+   "difficulty": 2,
+   "question": "The Rio Grande flows into which body of water?",
+   "choices": [
+    "The Gulf of California",
+    "The Caribbean Sea",
+    "The Pacific Ocean",
+    "The Gulf of Mexico"
+   ],
+   "answer": 3,
+   "explanation": "The Rio Grande ends in the Gulf of Mexico.",
+   "tags": [
+    "rivers-countries"
+   ]
+  },
+  {
+   "id": "atl-013",
+   "subcategory": "rivers-countries",
+   "difficulty": 2,
+   "question": "Through how many countries does the Euphrates flow?",
+   "choices": [
+    "Two",
+    "Five",
+    "Three",
+    "Six"
+   ],
+   "answer": 2,
+   "explanation": "The Euphrates flows through Turkey, Syria and Iraq.",
+   "tags": [
+    "rivers-countries"
+   ]
+  },
+  {
+   "id": "atl-014",
+   "subcategory": "rivers-countries",
+   "difficulty": 2,
+   "question": "Into which ocean does the Orange River flow?",
+   "choices": [
+    "The Atlantic Ocean",
+    "The Southern Ocean",
+    "The Pacific Ocean",
+    "The Indian Ocean"
+   ],
+   "answer": 0,
+   "explanation": "Unlike many South African rivers, the Orange flows west into the Atlantic.",
+   "tags": [
+    "rivers-countries"
+   ]
+  },
+  {
+   "id": "atl-015",
+   "subcategory": "rivers-countries",
+   "difficulty": 2,
+   "question": "Which is the longest river on the Iberian Peninsula?",
+   "choices": [
+    "The Guadiana",
+    "The Douro",
+    "The Tagus",
+    "The Ebro"
+   ],
+   "answer": 2,
+   "explanation": "The Tagus is about 1,000 km long, the longest river of the Iberian Peninsula.",
+   "tags": [
+    "rivers-countries"
+   ]
+  },
+  {
+   "id": "atl-016",
+   "subcategory": "rivers-countries",
+   "difficulty": 2,
+   "question": "The Colorado River basin covers parts of how many US states?",
+   "choices": [
+    "Three",
+    "Seven",
+    "Twelve",
+    "Five"
+   ],
+   "answer": 1,
+   "explanation": "The basin covers parts of Wyoming, Colorado, Utah, New Mexico, Nevada, Arizona and California.",
+   "tags": [
+    "rivers-countries"
+   ]
+  },
+  {
+   "id": "atl-002",
+   "subcategory": "rivers-longest",
+   "difficulty": 2,
+   "question": "Which river is the longest tributary of the Mississippi?",
+   "choices": [
+    "The Missouri",
+    "The Arkansas",
+    "The Colorado",
+    "The Ohio"
+   ],
+   "answer": 0,
+   "explanation": "The Missouri is the longest tributary, while the Ohio carries more water.",
+   "tags": [
+    "rivers-longest"
+   ]
+  },
+  {
+   "id": "atl-008",
+   "subcategory": "rivers-longest",
+   "difficulty": 2,
+   "question": "The Yellow River gets its colour from what?",
+   "choices": [
+    "Copper minerals",
+    "Fine yellow silt called loess",
+    "Volcanic ash",
+    "Yellow algae"
+   ],
+   "answer": 1,
+   "explanation": "The river carries huge amounts of loess, a fine yellow-brown silt, which colours the water.",
+   "tags": [
+    "rivers-longest"
+   ]
+  },
+  {
    "id": "geo-013",
    "subcategory": "seas",
    "difficulty": 2,
@@ -723,6 +1930,516 @@
    ]
   },
   {
+   "id": "atl-057",
+   "subcategory": "seas-straits",
+   "difficulty": 2,
+   "question": "About how long is the Suez Canal?",
+   "choices": [
+    "About 1,000 km",
+    "About 50 km",
+    "About 190 km",
+    "About 450 km"
+   ],
+   "answer": 2,
+   "explanation": "The canal runs about 193 km between Port Said and Suez.",
+   "tags": [
+    "suez-canal"
+   ]
+  },
+  {
+   "id": "atl-061",
+   "subcategory": "seas-straits",
+   "difficulty": 2,
+   "question": "About how big is the Mediterranean Sea?",
+   "choices": [
+    "About 25 million km²",
+    "About 250,000 km²",
+    "About 12 million km²",
+    "About 2.5 million km²"
+   ],
+   "answer": 3,
+   "explanation": "The Mediterranean covers about 2.5 million km².",
+   "tags": [
+    "mediterranean"
+   ]
+  },
+  {
+   "id": "atl-063",
+   "subcategory": "seas-straits",
+   "difficulty": 2,
+   "question": "The narrowest part of the English Channel, between Dover and Calais, is about how wide?",
+   "choices": [
+    "About 33 km",
+    "About 130 km",
+    "About 330 km",
+    "About 3 km"
+   ],
+   "answer": 0,
+   "explanation": "The Strait of Dover is about 33 km across.",
+   "tags": [
+    "english-channel"
+   ]
+  },
+  {
+   "id": "atl-120",
+   "subcategory": "urban-records",
+   "difficulty": 2,
+   "question": "In which city did the world's first underground railway open, in 1863?",
+   "choices": [
+    "Paris",
+    "London",
+    "New York",
+    "Berlin"
+   ],
+   "answer": 1,
+   "explanation": "The Metropolitan Railway opened in London in January 1863.",
+   "tags": [
+    "urban-records"
+   ]
+  },
+  {
+   "id": "atl-293",
+   "subcategory": "us-nature",
+   "difficulty": 2,
+   "question": "Which Great Lake lies entirely inside the United States?",
+   "choices": [
+    "Lake Michigan",
+    "Lake Huron",
+    "Lake Erie",
+    "Lake Ontario"
+   ],
+   "answer": 0,
+   "explanation": "Lake Michigan is the only Great Lake wholly within US borders; the other four are shared with Canada.",
+   "tags": [
+    "us-nature"
+   ]
+  },
+  {
+   "id": "atl-136",
+   "subcategory": "us-states",
+   "difficulty": 2,
+   "question": "How many US states border Mexico?",
+   "choices": [
+    "Four",
+    "Eight",
+    "Six",
+    "Two"
+   ],
+   "answer": 0,
+   "explanation": "California, Arizona, New Mexico and Texas border Mexico.",
+   "tags": [
+    "us-states"
+   ]
+  },
+  {
+   "id": "atl-245",
+   "subcategory": "us-states",
+   "difficulty": 2,
+   "question": "Which US state shares a land border with exactly one other US state?",
+   "choices": [
+    "Maine",
+    "Rhode Island",
+    "Delaware",
+    "Vermont"
+   ],
+   "answer": 0,
+   "explanation": "Maine borders only New Hampshire; Vermont has three neighbouring states, Rhode Island two and Delaware three.",
+   "tags": [
+    "us-states"
+   ]
+  },
+  {
+   "id": "atl-033",
+   "subcategory": "volcanoes-ranges",
+   "difficulty": 2,
+   "question": "Vesuvius overlooks which Italian bay?",
+   "choices": [
+    "The Gulf of Taranto",
+    "The Gulf of Genoa",
+    "The Bay of Biscay",
+    "The Bay of Naples"
+   ],
+   "answer": 3,
+   "explanation": "Vesuvius rises above the Bay of Naples.",
+   "tags": [
+    "volcanoes-ranges"
+   ]
+  },
+  {
+   "id": "atl-035",
+   "subcategory": "volcanoes-ranges",
+   "difficulty": 2,
+   "question": "About how many people died in the 1980 eruption of Mount St. Helens?",
+   "choices": [
+    "About 7",
+    "About 1,200",
+    "About 57",
+    "About 180"
+   ],
+   "answer": 2,
+   "explanation": "The eruption killed 57 people.",
+   "tags": [
+    "volcanoes-ranges"
+   ]
+  },
+  {
+   "id": "atl-038",
+   "subcategory": "volcanoes-ranges",
+   "difficulty": 2,
+   "question": "About how long are the Ural Mountains?",
+   "choices": [
+    "About 5,000 kilometres",
+    "About 800 kilometres",
+    "About 2,500 kilometres",
+    "About 1,200 kilometres"
+   ],
+   "answer": 2,
+   "explanation": "The Urals stretch about 2,500 kilometres from north to south.",
+   "tags": [
+    "volcanoes-ranges"
+   ]
+  },
+  {
+   "id": "atl-039",
+   "subcategory": "volcanoes-ranges",
+   "difficulty": 2,
+   "question": "About how long are the Rocky Mountains?",
+   "choices": [
+    "About 9,000 kilometres",
+    "About 2,500 kilometres",
+    "About 4,800 kilometres",
+    "About 1,500 kilometres"
+   ],
+   "answer": 2,
+   "explanation": "The Rockies stretch about 4,800 kilometres.",
+   "tags": [
+    "volcanoes-ranges"
+   ]
+  },
+  {
+   "id": "atl-253",
+   "subcategory": "wonders-records",
+   "difficulty": 2,
+   "question": "About how tall is the Burj Khalifa, the tallest building in the world?",
+   "choices": [
+    "About 1,028 m",
+    "About 828 m",
+    "About 628 m",
+    "About 428 m"
+   ],
+   "answer": 1,
+   "explanation": "The Burj Khalifa in Dubai stands about 828 metres tall.",
+   "tags": [
+    "wonders-records"
+   ]
+  },
+  {
+   "id": "atl-210",
+   "subcategory": "africa-americas",
+   "difficulty": 3,
+   "question": "The Congo is the world's deepest river, reaching about how deep?",
+   "choices": [
+    "About 220 m",
+    "About 600 m",
+    "About 70 m",
+    "About 20 m"
+   ],
+   "answer": 0,
+   "explanation": "Parts of the Congo are more than 220 m deep.",
+   "tags": [
+    "africa-americas"
+   ]
+  },
+  {
+   "id": "atl-212",
+   "subcategory": "africa-americas",
+   "difficulty": 3,
+   "question": "The Great Rift Valley stretches about how far, from Jordan to Mozambique?",
+   "choices": [
+    "About 2,500 km",
+    "About 12,000 km",
+    "About 1,000 km",
+    "About 6,000 km"
+   ],
+   "answer": 3,
+   "explanation": "The Rift system runs for roughly 6,000 km.",
+   "tags": [
+    "africa-americas"
+   ]
+  },
+  {
+   "id": "atl-213",
+   "subcategory": "africa-americas",
+   "difficulty": 3,
+   "question": "About how large is the Amazon basin?",
+   "choices": [
+    "About 3 million km²",
+    "About 15 million km²",
+    "About 1 million km²",
+    "About 7 million km²"
+   ],
+   "answer": 3,
+   "explanation": "The Amazon drains about 7 million km², nearly the size of Australia.",
+   "tags": [
+    "africa-americas"
+   ]
+  },
+  {
+   "id": "atl-215",
+   "subcategory": "africa-americas",
+   "difficulty": 3,
+   "question": "At about what altitude does Lake Titicaca lie?",
+   "choices": [
+    "About 3,800 m",
+    "About 5,200 m",
+    "About 1,200 m",
+    "About 2,400 m"
+   ],
+   "answer": 0,
+   "explanation": "The surface of Lake Titicaca is at about 3,812 m.",
+   "tags": [
+    "africa-americas"
+   ]
+  },
+  {
+   "id": "atl-249",
+   "subcategory": "africa-americas",
+   "difficulty": 3,
+   "question": "About how high is Kilimanjaro, Africa's highest mountain?",
+   "choices": [
+    "About 5,895 m",
+    "About 3,895 m",
+    "About 6,895 m",
+    "About 4,895 m"
+   ],
+   "answer": 0,
+   "explanation": "Kilimanjaro's Uhuru Peak stands at about 5,895 metres.",
+   "tags": [
+    "africa-americas"
+   ]
+  },
+  {
+   "id": "atl-250",
+   "subcategory": "africa-americas",
+   "difficulty": 3,
+   "question": "How many countries and territories share the Amazon rainforest?",
+   "choices": [
+    "Twelve",
+    "Nine",
+    "Four",
+    "Six"
+   ],
+   "answer": 1,
+   "explanation": "Brazil, Peru, Colombia, Bolivia, Ecuador, Venezuela, Guyana, Suriname and French Guiana share it.",
+   "tags": [
+    "africa-americas"
+   ]
+  },
+  {
+   "id": "atl-251",
+   "subcategory": "africa-americas",
+   "difficulty": 3,
+   "question": "About how deep is the deepest part of the Congo River?",
+   "choices": [
+    "About 220 m",
+    "About 80 m",
+    "About 2,200 m",
+    "About 22 m"
+   ],
+   "answer": 0,
+   "explanation": "The Congo is the deepest river on record, at more than 220 metres in places.",
+   "tags": [
+    "africa-americas"
+   ]
+  },
+  {
+   "id": "atl-090",
+   "subcategory": "area-size",
+   "difficulty": 3,
+   "question": "Which is the smallest country in Africa by area?",
+   "choices": [
+    "Seychelles",
+    "Mauritius",
+    "Comoros",
+    "The Gambia"
+   ],
+   "answer": 0,
+   "explanation": "Seychelles covers about 450 km².",
+   "tags": [
+    "smallest-countries"
+   ]
+  },
+  {
+   "id": "atl-092",
+   "subcategory": "area-size",
+   "difficulty": 3,
+   "question": "About how big is the Sahara Desert?",
+   "choices": [
+    "About 90 million km²",
+    "About 9 million km²",
+    "About 4.5 million km²",
+    "About 900,000 km²"
+   ],
+   "answer": 1,
+   "explanation": "The Sahara covers about 9 million km², close to the size of the United States.",
+   "tags": [
+    "size-comparisons"
+   ]
+  },
+  {
+   "id": "atl-095",
+   "subcategory": "area-size",
+   "difficulty": 3,
+   "question": "Which African country ranks second by area, just behind Algeria?",
+   "choices": [
+    "Sudan",
+    "Libya",
+    "Chad",
+    "DR Congo"
+   ],
+   "answer": 3,
+   "explanation": "The DR Congo covers about 2.34 million km², a little less than Algeria's 2.38 million.",
+   "tags": [
+    "african-giants"
+   ]
+  },
+  {
+   "id": "atl-201",
+   "subcategory": "asia-oceania",
+   "difficulty": 3,
+   "question": "The Mekong flows through or along the borders of how many countries?",
+   "choices": [
+    "Three",
+    "Six",
+    "Nine",
+    "Four"
+   ],
+   "answer": 1,
+   "explanation": "China, Myanmar, Laos, Thailand, Cambodia and Vietnam.",
+   "tags": [
+    "asia-oceania"
+   ]
+  },
+  {
+   "id": "atl-202",
+   "subcategory": "asia-oceania",
+   "difficulty": 3,
+   "question": "About how long is the Yangtze, Asia's longest river?",
+   "choices": [
+    "About 9,200 km",
+    "About 6,300 km",
+    "About 4,100 km",
+    "About 3,400 km"
+   ],
+   "answer": 1,
+   "explanation": "The Yangtze is roughly 6,300 km long.",
+   "tags": [
+    "asia-oceania"
+   ]
+  },
+  {
+   "id": "atl-203",
+   "subcategory": "asia-oceania",
+   "difficulty": 3,
+   "question": "The Ganges and the Brahmaputra build the world's largest delta, shared by which two countries?",
+   "choices": [
+    "India and Pakistan",
+    "Bangladesh and Myanmar",
+    "India and Nepal",
+    "India and Bangladesh"
+   ],
+   "answer": 3,
+   "explanation": "Their delta, with the Sundarbans, spreads over India and Bangladesh.",
+   "tags": [
+    "asia-oceania"
+   ]
+  },
+  {
+   "id": "atl-204",
+   "subcategory": "asia-oceania",
+   "difficulty": 3,
+   "question": "How many mountains on Earth rise above 8,000 metres?",
+   "choices": [
+    "Twenty",
+    "Eight",
+    "Fourteen",
+    "Thirty"
+   ],
+   "answer": 2,
+   "explanation": "There are 14 eight-thousanders, all in Asia.",
+   "tags": [
+    "asia-oceania"
+   ]
+  },
+  {
+   "id": "atl-205",
+   "subcategory": "asia-oceania",
+   "difficulty": 3,
+   "question": "Japan is made up of about how many islands?",
+   "choices": [
+    "About 6,800",
+    "About 17,000",
+    "About 1,200",
+    "About 400"
+   ],
+   "answer": 0,
+   "explanation": "Japan counts more than 6,800 islands, most of them tiny.",
+   "tags": [
+    "asia-oceania"
+   ]
+  },
+  {
+   "id": "atl-206",
+   "subcategory": "asia-oceania",
+   "difficulty": 3,
+   "question": "Indonesia stretches about how far from west to east?",
+   "choices": [
+    "About 9,000 km",
+    "About 5,100 km",
+    "About 1,000 km",
+    "About 2,500 km"
+   ],
+   "answer": 1,
+   "explanation": "The archipelago spans roughly 5,100 km.",
+   "tags": [
+    "asia-oceania"
+   ]
+  },
+  {
+   "id": "atl-207",
+   "subcategory": "asia-oceania",
+   "difficulty": 3,
+   "question": "About how high does Uluru rise above the surrounding plain?",
+   "choices": [
+    "About 350 m",
+    "About 700 m",
+    "About 1,000 m",
+    "About 100 m"
+   ],
+   "answer": 0,
+   "explanation": "Uluru stands about 348 m above the plain.",
+   "tags": [
+    "asia-oceania"
+   ]
+  },
+  {
+   "id": "atl-208",
+   "subcategory": "asia-oceania",
+   "difficulty": 3,
+   "question": "About how wide is the Cook Strait at its narrowest, between New Zealand's two main islands?",
+   "choices": [
+    "About 80 km",
+    "About 22 km",
+    "About 5 km",
+    "About 200 km"
+   ],
+   "answer": 1,
+   "explanation": "At its narrowest the Cook Strait is about 22 km wide.",
+   "tags": [
+    "asia-oceania"
+   ]
+  },
+  {
    "id": "geo-017",
    "subcategory": "capitals",
    "difficulty": 3,
@@ -751,6 +2468,278 @@
    "explanation": "Timbuktu, a medieval centre of trade and learning, lies in Mali."
   },
   {
+   "id": "atl-107",
+   "subcategory": "city-sites",
+   "difficulty": 3,
+   "question": "About how high above sea level does the city centre of La Paz stand?",
+   "choices": [
+    "About 5,200 m",
+    "About 1,800 m",
+    "About 600 m",
+    "About 3,600 m"
+   ],
+   "answer": 3,
+   "explanation": "La Paz sits at about 3,600 metres in the Andes, higher than any other large capital.",
+   "tags": [
+    "city-sites"
+   ]
+  },
+  {
+   "id": "atl-110",
+   "subcategory": "city-sites",
+   "difficulty": 3,
+   "question": "The fixed link between Copenhagen and Malmö, the Øresund bridge and tunnel, is roughly how long?",
+   "choices": [
+    "About 50 km",
+    "About 2 km",
+    "About 100 km",
+    "About 16 km"
+   ],
+   "answer": 3,
+   "explanation": "The Øresund fixed link is about 16 kilometres, partly bridge, partly an artificial island and partly a tunnel.",
+   "tags": [
+    "city-sites"
+   ]
+  },
+  {
+   "id": "atl-112",
+   "subcategory": "city-sites",
+   "difficulty": 3,
+   "question": "Which national capital lies about 28 m below sea level, the lowest-lying in the world?",
+   "choices": [
+    "Amsterdam",
+    "Baku",
+    "Tehran",
+    "Cairo"
+   ],
+   "answer": 1,
+   "explanation": "Baku stands on the Caspian shore, which is itself about 28 metres below sea level.",
+   "tags": [
+    "city-sites"
+   ]
+  },
+  {
+   "id": "atl-103",
+   "subcategory": "city-size",
+   "difficulty": 3,
+   "question": "Counting only the city proper, which is the most populous city in the European Union?",
+   "choices": [
+    "Madrid",
+    "Rome",
+    "Paris",
+    "Berlin"
+   ],
+   "answer": 3,
+   "explanation": "Within its city limits Berlin has about 3.7 million people, ahead of Madrid, Rome and Paris. Paris has the biggest metropolitan area of those.",
+   "tags": [
+    "city-size"
+   ]
+  },
+  {
+   "id": "atl-153",
+   "subcategory": "climate-extremes",
+   "difficulty": 3,
+   "question": "What is the officially recognised record for Earth's hottest air temperature?",
+   "choices": [
+    "About 51 °C (124 °F)",
+    "About 62 °C (144 °F)",
+    "About 57 °C (134 °F)",
+    "About 70 °C (158 °F)"
+   ],
+   "answer": 2,
+   "explanation": "The World Meteorological Organization recognises 56.7 °C at Furnace Creek in Death Valley, recorded in July 1913.",
+   "tags": [
+    "climate-extremes"
+   ]
+  },
+  {
+   "id": "atl-154",
+   "subcategory": "climate-extremes",
+   "difficulty": 3,
+   "question": "What is the lowest air temperature ever recorded on Earth?",
+   "choices": [
+    "About 89 degrees below zero Celsius",
+    "About 100 degrees below zero Celsius",
+    "About 70 degrees below zero Celsius",
+    "About 60 degrees below zero Celsius"
+   ],
+   "answer": 0,
+   "explanation": "Vostok Station in Antarctica recorded about 89 degrees below zero Celsius on 21 July 1983.",
+   "tags": [
+    "climate-extremes"
+   ]
+  },
+  {
+   "id": "atl-156",
+   "subcategory": "climate-extremes",
+   "difficulty": 3,
+   "question": "How many main climate groups does the Köppen system use?",
+   "choices": [
+    "Three",
+    "Five",
+    "Ten",
+    "Seven"
+   ],
+   "answer": 1,
+   "explanation": "The five Köppen groups are A (tropical), B (dry), C (temperate), D (continental) and E (polar).",
+   "tags": [
+    "climate-extremes"
+   ]
+  },
+  {
+   "id": "atl-157",
+   "subcategory": "climate-extremes",
+   "difficulty": 3,
+   "question": "The trade winds of the northern tropics blow mainly from which direction?",
+   "choices": [
+    "The north-east",
+    "The north-west",
+    "The south-east",
+    "The south-west"
+   ],
+   "answer": 0,
+   "explanation": "In the northern tropics the trade winds blow from the north-east, and from the south-east south of the Equator.",
+   "tags": [
+    "climate-extremes"
+   ]
+  },
+  {
+   "id": "atl-158",
+   "subcategory": "climate-extremes",
+   "difficulty": 3,
+   "question": "Between roughly which latitudes do the Roaring Forties blow?",
+   "choices": [
+    "40° to 50° north",
+    "60° to 70° south",
+    "40° to 50° south",
+    "0° to 10° south"
+   ],
+   "answer": 2,
+   "explanation": "They are strong westerly winds over the southern oceans, between about 40° and 50° south.",
+   "tags": [
+    "climate-extremes"
+   ]
+  },
+  {
+   "id": "atl-159",
+   "subcategory": "climate-extremes",
+   "difficulty": 3,
+   "question": "Oymyakon in Siberia recorded about what temperature in 1933, the lowest for a permanently inhabited place?",
+   "choices": [
+    "About 28 degrees below zero Celsius",
+    "About 68 degrees below zero Celsius",
+    "About 88 degrees below zero Celsius",
+    "About 48 degrees below zero Celsius"
+   ],
+   "answer": 1,
+   "explanation": "The official record of about 68 degrees below zero Celsius was set at Oymyakon in 1933.",
+   "tags": [
+    "climate-extremes"
+   ]
+  },
+  {
+   "id": "atl-169",
+   "subcategory": "continents",
+   "difficulty": 3,
+   "question": "Which continent ranks fifth in area, ahead of Europe and Oceania?",
+   "choices": [
+    "South America",
+    "Antarctica",
+    "Europe",
+    "Africa"
+   ],
+   "answer": 1,
+   "explanation": "By area the order is Asia, Africa, North America, South America, Antarctica, Europe and Oceania.",
+   "tags": [
+    "continents"
+   ]
+  },
+  {
+   "id": "atl-170",
+   "subcategory": "continents",
+   "difficulty": 3,
+   "question": "Africa covers about what share of Earth's land area?",
+   "choices": [
+    "About 40%",
+    "About 10%",
+    "About 20%",
+    "About 30%"
+   ],
+   "answer": 2,
+   "explanation": "Africa's roughly 30 million km² is about a fifth of the world's land.",
+   "tags": [
+    "continents"
+   ]
+  },
+  {
+   "id": "atl-171",
+   "subcategory": "continents",
+   "difficulty": 3,
+   "question": "How many sovereign countries are in South America?",
+   "choices": [
+    "16",
+    "12",
+    "10",
+    "14"
+   ],
+   "answer": 1,
+   "explanation": "The twelve are Argentina, Bolivia, Brazil, Chile, Colombia, Ecuador, Guyana, Paraguay, Peru, Suriname, Uruguay and Venezuela.",
+   "tags": [
+    "continents"
+   ]
+  },
+  {
+   "id": "atl-172",
+   "subcategory": "continents",
+   "difficulty": 3,
+   "question": "Which of these countries lies partly in Africa and partly in Asia?",
+   "choices": [
+    "Saudi Arabia",
+    "Egypt",
+    "Ethiopia",
+    "Libya"
+   ],
+   "answer": 1,
+   "explanation": "Egypt's Sinai Peninsula is in Asia, while the rest of the country is in Africa.",
+   "tags": [
+    "continents"
+   ]
+  },
+  {
+   "id": "atl-174",
+   "subcategory": "continents",
+   "difficulty": 3,
+   "question": "Which large Pacific island is divided between Indonesia and Papua New Guinea?",
+   "choices": [
+    "New Guinea",
+    "Sumatra",
+    "Borneo",
+    "Java"
+   ],
+   "answer": 0,
+   "explanation": "The western half is Indonesian and the eastern half is the country of Papua New Guinea.",
+   "tags": [
+    "continents"
+   ]
+  },
+  {
+   "id": "atl-175",
+   "subcategory": "continents",
+   "difficulty": 3,
+   "question": "About how high is Aconcagua, the highest mountain outside Asia?",
+   "choices": [
+    "About 4,900 m",
+    "About 6,960 m",
+    "About 8,100 m",
+    "About 5,900 m"
+   ],
+   "answer": 1,
+   "explanation": "Aconcagua in Argentina rises to about 6,960 metres.",
+   "tags": [
+    "continents"
+   ]
+  },
+  {
    "id": "geo-018",
    "subcategory": "countries",
    "difficulty": 3,
@@ -763,6 +2752,414 @@
    ],
    "answer": 1,
    "explanation": "The Canada–US border runs for roughly 8,900 km including the Alaska segment."
+  },
+  {
+   "id": "atl-147",
+   "subcategory": "deserts",
+   "difficulty": 3,
+   "question": "The tallest dunes of the Namib Desert reach about how high?",
+   "choices": [
+    "About 100 m",
+    "About 30 m",
+    "About 300 m",
+    "About 800 m"
+   ],
+   "answer": 2,
+   "explanation": "The huge red dunes of Sossusvlei in the Namib rise to roughly 300 metres, among the tallest on Earth.",
+   "tags": [
+    "deserts"
+   ]
+  },
+  {
+   "id": "atl-148",
+   "subcategory": "deserts",
+   "difficulty": 3,
+   "question": "The Rub' al Khali, the world's largest continuous sand desert, covers about how much?",
+   "choices": [
+    "About 65,000 km²",
+    "About 650,000 km²",
+    "About 3 million km²",
+    "About 6.5 million km²"
+   ],
+   "answer": 1,
+   "explanation": "The Rub' al Khali covers roughly 650,000 km², an area larger than France.",
+   "tags": [
+    "deserts"
+   ]
+  },
+  {
+   "id": "atl-149",
+   "subcategory": "deserts",
+   "difficulty": 3,
+   "question": "The Gobi Desert covers roughly how much area?",
+   "choices": [
+    "About 130,000 km²",
+    "About 1.3 million km²",
+    "About 3.5 million km²",
+    "About 6 million km²"
+   ],
+   "answer": 1,
+   "explanation": "The Gobi covers about 1.3 million km² of Mongolia and northern China.",
+   "tags": [
+    "deserts"
+   ]
+  },
+  {
+   "id": "atl-151",
+   "subcategory": "deserts",
+   "difficulty": 3,
+   "question": "About what share of Australia is arid or semi-arid?",
+   "choices": [
+    "About 40%",
+    "About 70%",
+    "About 95%",
+    "About 20%"
+   ],
+   "answer": 1,
+   "explanation": "Roughly 70% of Australia gets little rain, which is why most people live near the coast.",
+   "tags": [
+    "deserts"
+   ]
+  },
+  {
+   "id": "atl-152",
+   "subcategory": "deserts",
+   "difficulty": 3,
+   "question": "Antarctica, the world's largest desert, covers about how much?",
+   "choices": [
+    "About 5 million km²",
+    "About 14 million km²",
+    "About 30 million km²",
+    "About 9 million km²"
+   ],
+   "answer": 1,
+   "explanation": "Antarctica covers roughly 14 million km² and is extremely dry as well as cold.",
+   "tags": [
+    "deserts"
+   ]
+  },
+  {
+   "id": "atl-185",
+   "subcategory": "earth-numbers",
+   "difficulty": 3,
+   "question": "Roughly what share of Earth's water is fresh rather than salt?",
+   "choices": [
+    "About 25%",
+    "About 10%",
+    "About 0.25%",
+    "About 2.5%"
+   ],
+   "answer": 3,
+   "explanation": "About 97.5% of the water is salty, and most fresh water is locked in ice.",
+   "tags": [
+    "earth-numbers"
+   ]
+  },
+  {
+   "id": "atl-186",
+   "subcategory": "earth-numbers",
+   "difficulty": 3,
+   "question": "Earth's mean radius is closest to which value?",
+   "choices": [
+    "5,371 km",
+    "4,371 km",
+    "7,371 km",
+    "6,371 km"
+   ],
+   "answer": 3,
+   "explanation": "The average radius of the Earth is about 6,371 kilometres.",
+   "tags": [
+    "earth-numbers"
+   ]
+  },
+  {
+   "id": "atl-187",
+   "subcategory": "earth-numbers",
+   "difficulty": 3,
+   "question": "Which is the largest tectonic plate?",
+   "choices": [
+    "The North American Plate",
+    "The Eurasian Plate",
+    "The African Plate",
+    "The Pacific Plate"
+   ],
+   "answer": 3,
+   "explanation": "The Pacific Plate covers about 100 million km².",
+   "tags": [
+    "earth-numbers"
+   ]
+  },
+  {
+   "id": "atl-190",
+   "subcategory": "earth-numbers",
+   "difficulty": 3,
+   "question": "If Mount Everest were placed in the Challenger Deep, its summit would lie about how far below the surface?",
+   "choices": [
+    "About 200 m",
+    "About 6 km",
+    "About 2 km",
+    "It would stick out above the water"
+   ],
+   "answer": 2,
+   "explanation": "Challenger Deep is about 10,900 metres deep and Everest about 8,850 metres high, leaving roughly 2 kilometres of water above the summit.",
+   "tags": [
+    "earth-numbers"
+   ]
+  },
+  {
+   "id": "atl-192",
+   "subcategory": "earth-numbers",
+   "difficulty": 3,
+   "question": "Pangaea began to break apart about how long ago?",
+   "choices": [
+    "About 200 million years ago",
+    "About 2 billion years ago",
+    "About 2 million years ago",
+    "About 20 million years ago"
+   ],
+   "answer": 0,
+   "explanation": "The supercontinent started to split in the early Jurassic, around 200 million years ago.",
+   "tags": [
+    "earth-numbers"
+   ]
+  },
+  {
+   "id": "atl-193",
+   "subcategory": "europe-numbers",
+   "difficulty": 3,
+   "question": "About how long is the Danube, Europe's second-longest river?",
+   "choices": [
+    "About 4,100 km",
+    "About 2,850 km",
+    "About 3,530 km",
+    "About 1,230 km"
+   ],
+   "answer": 1,
+   "explanation": "The Danube is roughly 2,850 km long, after the Volga.",
+   "tags": [
+    "europe-numbers"
+   ]
+  },
+  {
+   "id": "atl-194",
+   "subcategory": "europe-numbers",
+   "difficulty": 3,
+   "question": "The Alps stretch across how many countries?",
+   "choices": [
+    "Ten",
+    "Eight",
+    "Five",
+    "Six"
+   ],
+   "answer": 1,
+   "explanation": "Austria, France, Germany, Italy, Liechtenstein, Monaco, Slovenia and Switzerland share the Alps.",
+   "tags": [
+    "europe-numbers"
+   ]
+  },
+  {
+   "id": "atl-195",
+   "subcategory": "europe-numbers",
+   "difficulty": 3,
+   "question": "About how high is Aneto, the highest peak of the Pyrenees?",
+   "choices": [
+    "About 3,400 m",
+    "About 4,800 m",
+    "About 1,900 m",
+    "About 2,400 m"
+   ],
+   "answer": 0,
+   "explanation": "Aneto reaches 3,404 m, far below Mont Blanc in the Alps.",
+   "tags": [
+    "europe-numbers"
+   ]
+  },
+  {
+   "id": "atl-196",
+   "subcategory": "europe-numbers",
+   "difficulty": 3,
+   "question": "About how deep is the Baltic Sea on average?",
+   "choices": [
+    "About 55 m",
+    "About 4,000 m",
+    "About 500 m",
+    "About 1,500 m"
+   ],
+   "answer": 0,
+   "explanation": "The Baltic is one of the shallowest seas: its average depth is about 55 m.",
+   "tags": [
+    "europe-numbers"
+   ]
+  },
+  {
+   "id": "atl-197",
+   "subcategory": "europe-numbers",
+   "difficulty": 3,
+   "question": "About how large is the Mediterranean Sea?",
+   "choices": [
+    "About 2.5 million km²",
+    "About 0.5 million km²",
+    "About 25 million km²",
+    "About 10 million km²"
+   ],
+   "answer": 0,
+   "explanation": "The Mediterranean covers roughly 2.5 million km².",
+   "tags": [
+    "europe-numbers"
+   ]
+  },
+  {
+   "id": "atl-198",
+   "subcategory": "europe-numbers",
+   "difficulty": 3,
+   "question": "About how large is Monaco, the second-smallest country in the world?",
+   "choices": [
+    "About 0.2 km²",
+    "About 200 km²",
+    "About 20 km²",
+    "About 2 km²"
+   ],
+   "answer": 3,
+   "explanation": "Monaco covers about 2 km²; only Vatican City is smaller.",
+   "tags": [
+    "europe-numbers"
+   ]
+  },
+  {
+   "id": "atl-200",
+   "subcategory": "europe-numbers",
+   "difficulty": 3,
+   "question": "About how long is the coastline of Greece, islands included?",
+   "choices": [
+    "About 7,000 km",
+    "About 3,000 km",
+    "About 25,000 km",
+    "About 13,700 km"
+   ],
+   "answer": 3,
+   "explanation": "Thousands of islands give Greece a coastline of roughly 13,700 km.",
+   "tags": [
+    "europe-numbers"
+   ]
+  },
+  {
+   "id": "atl-248",
+   "subcategory": "europe-numbers",
+   "difficulty": 3,
+   "question": "About what share of Iceland is covered by glaciers?",
+   "choices": [
+    "About 30%",
+    "About 11%",
+    "About 50%",
+    "About 1%"
+   ],
+   "answer": 1,
+   "explanation": "Glaciers cover roughly a ninth of Iceland, around 11% of the island.",
+   "tags": [
+    "europe-numbers"
+   ]
+  },
+  {
+   "id": "atl-041",
+   "subcategory": "extreme-points",
+   "difficulty": 3,
+   "question": "The Qattara Depression, the lowest point of Egypt, lies about how far below sea level?",
+   "choices": [
+    "About 650 metres",
+    "About 300 metres",
+    "About 133 metres",
+    "About 33 metres"
+   ],
+   "answer": 2,
+   "explanation": "The Qattara Depression reaches about 133 metres below sea level.",
+   "tags": [
+    "extreme-points"
+   ]
+  },
+  {
+   "id": "atl-043",
+   "subcategory": "extreme-points",
+   "difficulty": 3,
+   "question": "About how often does Lake Eyre fill completely?",
+   "choices": [
+    "Every month",
+    "Every year",
+    "Only a few times a century",
+    "Never"
+   ],
+   "answer": 2,
+   "explanation": "Lake Eyre is usually a dry salt pan and fills completely only a few times a century.",
+   "tags": [
+    "extreme-points"
+   ]
+  },
+  {
+   "id": "atl-046",
+   "subcategory": "extreme-points",
+   "difficulty": 3,
+   "question": "Like Kilimanjaro, Puncak Jaya has what, despite lying close to the Equator?",
+   "choices": [
+    "A lava lake",
+    "Glaciers",
+    "A permanent lake",
+    "A ring of geysers"
+   ],
+   "answer": 1,
+   "explanation": "Puncak Jaya is one of the few tropical mountains with glaciers, though they are shrinking fast.",
+   "tags": [
+    "extreme-points"
+   ]
+  },
+  {
+   "id": "atl-067",
+   "subcategory": "islands",
+   "difficulty": 3,
+   "question": "About how big is Manitoulin Island?",
+   "choices": [
+    "About 280 km²",
+    "About 280,000 km²",
+    "About 28,000 km²",
+    "About 2,800 km²"
+   ],
+   "answer": 3,
+   "explanation": "Manitoulin Island covers about 2,800 km² in Lake Huron.",
+   "tags": [
+    "manitoulin"
+   ]
+  },
+  {
+   "id": "atl-069",
+   "subcategory": "islands",
+   "difficulty": 3,
+   "question": "Honshu holds about what share of Japan's land area?",
+   "choices": [
+    "About 25%",
+    "About 40%",
+    "About 60%",
+    "About 85%"
+   ],
+   "answer": 2,
+   "explanation": "Honshu covers about 228,000 km² of Japan's roughly 378,000 km².",
+   "tags": [
+    "japan"
+   ]
+  },
+  {
+   "id": "atl-071",
+   "subcategory": "islands",
+   "difficulty": 3,
+   "question": "About how many islands are there in the Pacific Ocean?",
+   "choices": [
+    "About 2,500",
+    "About 250",
+    "About 25,000",
+    "About 250,000"
+   ],
+   "answer": 2,
+   "explanation": "The Pacific has roughly 25,000 islands, more than all the other oceans combined.",
+   "tags": [
+    "pacific-islands"
+   ]
   },
   {
    "id": "geo-014",
@@ -796,6 +3193,244 @@
    ]
   },
   {
+   "id": "atl-022",
+   "subcategory": "lakes-falls",
+   "difficulty": 3,
+   "question": "About how long is Lake Malawi?",
+   "choices": [
+    "About 580 kilometres",
+    "About 150 kilometres",
+    "About 300 kilometres",
+    "About 1,200 kilometres"
+   ],
+   "answer": 0,
+   "explanation": "Lake Malawi stretches about 580 km from north to south.",
+   "tags": [
+    "lakes-falls"
+   ]
+  },
+  {
+   "id": "atl-074",
+   "subcategory": "landlocked-enclaves",
+   "difficulty": 3,
+   "question": "Lesotho's lowest point is about how high above sea level, the highest lowest point of any country?",
+   "choices": [
+    "About 140 m",
+    "About 400 m",
+    "About 2,800 m",
+    "About 1,400 m"
+   ],
+   "answer": 3,
+   "explanation": "Lesotho's lowest point, about 1,400 m, is higher than the lowest point of any other country.",
+   "tags": [
+    "lesotho"
+   ]
+  },
+  {
+   "id": "atl-078",
+   "subcategory": "landlocked-enclaves",
+   "difficulty": 3,
+   "question": "Ceuta and Melilla give the European Union its only land border with which continent?",
+   "choices": [
+    "Africa",
+    "Asia",
+    "North America",
+    "South America"
+   ],
+   "answer": 0,
+   "explanation": "Both Spanish cities sit on the Moroccan coast, which gives the European Union its only land border with Africa.",
+   "tags": [
+    "ceuta-melilla"
+   ]
+  },
+  {
+   "id": "atl-080",
+   "subcategory": "landlocked-enclaves",
+   "difficulty": 3,
+   "question": "Cabinda lies just north of the mouth of which river?",
+   "choices": [
+    "The Nile",
+    "The Zambezi",
+    "The Niger",
+    "The Congo River"
+   ],
+   "answer": 3,
+   "explanation": "Cabinda is north of the Congo River's mouth, cut off from Angola by a strip of DR Congo.",
+   "tags": [
+    "cabinda"
+   ]
+  },
+  {
+   "id": "atl-162",
+   "subcategory": "lines-zones",
+   "difficulty": 3,
+   "question": "Which of these African countries does the Equator cross?",
+   "choices": [
+    "Tanzania",
+    "Ghana",
+    "Gabon",
+    "Angola"
+   ],
+   "answer": 2,
+   "explanation": "The Equator crosses Gabon, the Republic of the Congo, the DR Congo, Uganda, Kenya and Somalia.",
+   "tags": [
+    "lines-zones"
+   ]
+  },
+  {
+   "id": "atl-164",
+   "subcategory": "lines-zones",
+   "difficulty": 3,
+   "question": "You cross the International Date Line heading west. What happens to the calendar date?",
+   "choices": [
+    "It moves forward one hour",
+    "It moves forward one day",
+    "It stays the same",
+    "It moves back one day"
+   ],
+   "answer": 1,
+   "explanation": "Going west across the line you skip ahead a calendar day; going east you repeat a day.",
+   "tags": [
+    "lines-zones"
+   ]
+  },
+  {
+   "id": "atl-165",
+   "subcategory": "lines-zones",
+   "difficulty": 3,
+   "question": "Which city hosted the 1884 conference that chose Greenwich as the world's prime meridian?",
+   "choices": [
+    "London",
+    "Berlin",
+    "Washington, D.C.",
+    "Paris"
+   ],
+   "answer": 2,
+   "explanation": "The International Meridian Conference met in Washington, D.C. and chose Greenwich.",
+   "tags": [
+    "lines-zones"
+   ]
+  },
+  {
+   "id": "atl-166",
+   "subcategory": "lines-zones",
+   "difficulty": 3,
+   "question": "At the North Pole, the Sun stays above the horizon for about how long each year?",
+   "choices": [
+    "About six months",
+    "About a year",
+    "About six weeks",
+    "About three months"
+   ],
+   "answer": 0,
+   "explanation": "The Sun rises once, around the March equinox, and sets around the September equinox.",
+   "tags": [
+    "lines-zones"
+   ]
+  },
+  {
+   "id": "atl-167",
+   "subcategory": "lines-zones",
+   "difficulty": 3,
+   "question": "About what share of Earth's land lies in the Northern Hemisphere?",
+   "choices": [
+    "About 78%",
+    "About 68%",
+    "About 88%",
+    "About 58%"
+   ],
+   "answer": 1,
+   "explanation": "The Northern Hemisphere holds roughly two thirds of the world's land.",
+   "tags": [
+    "lines-zones"
+   ]
+  },
+  {
+   "id": "atl-168",
+   "subcategory": "lines-zones",
+   "difficulty": 3,
+   "question": "One degree of latitude spans about how far on the ground?",
+   "choices": [
+    "About 111 km",
+    "About 1,100 km",
+    "About 55 km",
+    "About 11 km"
+   ],
+   "answer": 0,
+   "explanation": "Earth's circumference is about 40,000 km, so one degree out of 360 is roughly 111 km.",
+   "tags": [
+    "lines-zones"
+   ]
+  },
+  {
+   "id": "atl-235",
+   "subcategory": "maps-measures",
+   "difficulty": 3,
+   "question": "Each standard time zone covers about how many degrees of longitude?",
+   "choices": [
+    "24",
+    "30",
+    "15",
+    "10"
+   ],
+   "answer": 2,
+   "explanation": "360 degrees divided by 24 hours gives 15 degrees per hour.",
+   "tags": [
+    "maps-measures"
+   ]
+  },
+  {
+   "id": "atl-236",
+   "subcategory": "maps-measures",
+   "difficulty": 3,
+   "question": "Contour lines are drawn every 20 m. A hiker climbs from the 400 m line to the 560 m line. How many lines does she cross after the 400 m one, up to and including the 560 m one?",
+   "choices": [
+    "Nine",
+    "Eight",
+    "Seven",
+    "Sixteen"
+   ],
+   "answer": 1,
+   "explanation": "From 420 to 560 in steps of 20 there are eight lines.",
+   "tags": [
+    "maps-measures"
+   ]
+  },
+  {
+   "id": "atl-237",
+   "subcategory": "maps-measures",
+   "difficulty": 3,
+   "question": "On a map at 1:50,000, how many kilometres do 4 cm on the map stand for?",
+   "choices": [
+    "20 km",
+    "200 km",
+    "2 km",
+    "0.2 km"
+   ],
+   "answer": 2,
+   "explanation": "4 cm times 50,000 is 200,000 cm, which is 2 km.",
+   "tags": [
+    "maps-measures"
+   ]
+  },
+  {
+   "id": "atl-240",
+   "subcategory": "maps-measures",
+   "difficulty": 3,
+   "question": "About how long is the Earth's mean radius?",
+   "choices": [
+    "About 6,371 km",
+    "About 12,742 km",
+    "About 40,075 km",
+    "About 637 km"
+   ],
+   "answer": 0,
+   "explanation": "The mean radius is about 6,371 km.",
+   "tags": [
+    "maps-measures"
+   ]
+  },
+  {
    "id": "geo2-003",
    "subcategory": "mountains",
    "difficulty": 3,
@@ -810,6 +3445,108 @@
    "explanation": "K2 rises to about 8,611 metres on the border of Pakistan and China.",
    "tags": [
     "himalaya"
+   ]
+  },
+  {
+   "id": "atl-088",
+   "subcategory": "neighbours-borders",
+   "difficulty": 3,
+   "question": "About how long is Monaco's land border with France?",
+   "choices": [
+    "About 44 km",
+    "About 440 km",
+    "About 0.4 km",
+    "About 4.4 km"
+   ],
+   "answer": 3,
+   "explanation": "Monaco's whole land border is about 4.4 km.",
+   "tags": [
+    "monaco"
+   ]
+  },
+  {
+   "id": "atl-246",
+   "subcategory": "neighbours-borders",
+   "difficulty": 3,
+   "question": "Which two countries share the record for the most land neighbours, with 14 each?",
+   "choices": [
+    "China and India",
+    "Germany and Russia",
+    "Russia and Brazil",
+    "China and Russia"
+   ],
+   "answer": 3,
+   "explanation": "China and Russia each border 14 countries; Brazil borders 10 and Germany 9.",
+   "tags": [
+    "neighbours-borders"
+   ]
+  },
+  {
+   "id": "atl-050",
+   "subcategory": "ocean-depths",
+   "difficulty": 3,
+   "question": "The Challenger Deep, at about 10.9 km, is roughly how many times deeper than the average ocean depth of about 3.7 km?",
+   "choices": [
+    "About 3 times",
+    "About 6 times",
+    "About 1.5 times",
+    "About 10 times"
+   ],
+   "answer": 0,
+   "explanation": "Dividing 10.9 by 3.7 gives about 3: the deepest point is roughly three times the average depth.",
+   "tags": [
+    "average-depth"
+   ]
+  },
+  {
+   "id": "atl-052",
+   "subcategory": "ocean-depths",
+   "difficulty": 3,
+   "question": "About how deep is the Tonga Trench at its deepest point?",
+   "choices": [
+    "About 10,800 m",
+    "About 12,500 m",
+    "About 7,500 m",
+    "About 9,000 m"
+   ],
+   "answer": 0,
+   "explanation": "The Horizon Deep in the Tonga Trench reaches about 10,800 m, the deepest point in the Southern Hemisphere.",
+   "tags": [
+    "tonga-trench"
+   ]
+  },
+  {
+   "id": "atl-054",
+   "subcategory": "ocean-depths",
+   "difficulty": 3,
+   "question": "About how much water do all the world's oceans hold?",
+   "choices": [
+    "About 130 million km³",
+    "About 13 million km³",
+    "About 1.3 billion km³",
+    "About 13 billion km³"
+   ],
+   "answer": 2,
+   "explanation": "The oceans hold about 1.3 billion cubic kilometres of water.",
+   "tags": [
+    "ocean-volume"
+   ]
+  },
+  {
+   "id": "atl-055",
+   "subcategory": "ocean-depths",
+   "difficulty": 3,
+   "question": "The Antarctic Circumpolar Current carries roughly how much water every second?",
+   "choices": [
+    "About 100 to 150 million cubic metres",
+    "About 1 to 2 million cubic metres",
+    "About 10 to 15 million cubic metres",
+    "About 1,000 to 1,500 million cubic metres"
+   ],
+   "answer": 0,
+   "explanation": "Its flow of roughly 100 to 150 million cubic metres per second is several times that of the Gulf Stream.",
+   "tags": [
+    "southern-ocean"
    ]
   },
   {
@@ -830,6 +3567,142 @@
    ]
   },
   {
+   "id": "atl-025",
+   "subcategory": "peaks-highest",
+   "difficulty": 3,
+   "question": "About how high is Aconcagua?",
+   "choices": [
+    "About 5,400 metres",
+    "About 8,200 metres",
+    "About 6,960 metres",
+    "About 7,800 metres"
+   ],
+   "answer": 2,
+   "explanation": "Aconcagua rises to about 6,960 metres.",
+   "tags": [
+    "peaks-highest"
+   ]
+  },
+  {
+   "id": "atl-027",
+   "subcategory": "peaks-highest",
+   "difficulty": 3,
+   "question": "About how high is Mount Elbrus?",
+   "choices": [
+    "About 6,200 metres",
+    "About 3,900 metres",
+    "About 5,640 metres",
+    "About 4,810 metres"
+   ],
+   "answer": 2,
+   "explanation": "Elbrus rises to about 5,640 metres, well above Mont Blanc at about 4,810 metres.",
+   "tags": [
+    "peaks-highest"
+   ]
+  },
+  {
+   "id": "atl-029",
+   "subcategory": "peaks-highest",
+   "difficulty": 3,
+   "question": "Vinson Massif is part of which mountain range?",
+   "choices": [
+    "The Andes",
+    "The Gamburtsev Mountains",
+    "The Transantarctic Mountains",
+    "The Ellsworth Mountains"
+   ],
+   "answer": 3,
+   "explanation": "Vinson Massif is in the Sentinel Range of the Ellsworth Mountains.",
+   "tags": [
+    "peaks-highest"
+   ]
+  },
+  {
+   "id": "atl-226",
+   "subcategory": "people-places",
+   "difficulty": 3,
+   "question": "What share of the world's people live in cities today?",
+   "choices": [
+    "About 15%",
+    "A bit more than half",
+    "About 30%",
+    "About 75%"
+   ],
+   "answer": 1,
+   "explanation": "About 57% of the world's population is urban.",
+   "tags": [
+    "people-places"
+   ]
+  },
+  {
+   "id": "atl-227",
+   "subcategory": "people-places",
+   "difficulty": 3,
+   "question": "About how many languages are spoken in the world today?",
+   "choices": [
+    "About 700",
+    "About 7,000",
+    "About 2,500",
+    "About 20,000"
+   ],
+   "answer": 1,
+   "explanation": "Linguists count roughly 7,000 living languages.",
+   "tags": [
+    "people-places"
+   ]
+  },
+  {
+   "id": "atl-230",
+   "subcategory": "people-places",
+   "difficulty": 3,
+   "question": "About what is the median age of the world's population?",
+   "choices": [
+    "About 52 years",
+    "About 41 years",
+    "About 18 years",
+    "About 30 years"
+   ],
+   "answer": 3,
+   "explanation": "Half of humanity is younger than about 30.",
+   "tags": [
+    "people-places"
+   ]
+  },
+  {
+   "id": "atl-231",
+   "subcategory": "people-places",
+   "difficulty": 3,
+   "question": "Greater Tokyo is home to roughly how many people?",
+   "choices": [
+    "More than 30 million",
+    "About 15 million",
+    "About 8 million",
+    "About 3 million"
+   ],
+   "answer": 0,
+   "explanation": "The Tokyo area has more than 30 million inhabitants.",
+   "tags": [
+    "people-places"
+   ]
+  },
+  {
+   "id": "atl-232",
+   "subcategory": "people-places",
+   "difficulty": 3,
+   "question": "About what share of the Earth's land does Asia cover?",
+   "choices": [
+    "About 60%",
+    "About 15%",
+    "About 30%",
+    "About 45%"
+   ],
+   "answer": 2,
+   "explanation": "Asia covers roughly 30% of the world's land.",
+   "tags": [
+    "people-places"
+   ]
+  },
+  {
    "id": "geo2-012",
    "subcategory": "physical",
    "difficulty": 3,
@@ -847,6 +3720,737 @@
    ]
   },
   {
+   "id": "atl-177",
+   "subcategory": "polar",
+   "difficulty": 3,
+   "question": "The Antarctic ice sheet is on average about how thick?",
+   "choices": [
+    "About 200 m",
+    "About 500 m",
+    "About 10 km",
+    "About 2 km"
+   ],
+   "answer": 3,
+   "explanation": "The ice averages about 2 kilometres thick and is over 4 kilometres thick in places.",
+   "tags": [
+    "polar"
+   ]
+  },
+  {
+   "id": "atl-178",
+   "subcategory": "polar",
+   "difficulty": 3,
+   "question": "If the whole Greenland ice sheet melted, sea level would rise by about how much?",
+   "choices": [
+    "About 2 m",
+    "About 0.7 m",
+    "About 70 m",
+    "About 7 m"
+   ],
+   "answer": 3,
+   "explanation": "The Greenland ice sheet holds enough water to raise global sea level by roughly 7 metres.",
+   "tags": [
+    "polar"
+   ]
+  },
+  {
+   "id": "atl-180",
+   "subcategory": "polar",
+   "difficulty": 3,
+   "question": "Between roughly which latitudes does the Svalbard archipelago lie?",
+   "choices": [
+    "74° to 81° north",
+    "54° to 61° north",
+    "84° to 90° north",
+    "64° to 71° north"
+   ],
+   "answer": 0,
+   "explanation": "Svalbard lies far north of the Arctic Circle, between about 74° and 81° north.",
+   "tags": [
+    "polar"
+   ]
+  },
+  {
+   "id": "atl-181",
+   "subcategory": "polar",
+   "difficulty": 3,
+   "question": "Magnetic declination is the angle between which two directions?",
+   "choices": [
+    "Magnetic north and true north",
+    "True north and the Equator",
+    "Magnetic north and magnetic south",
+    "True north and east"
+   ],
+   "answer": 0,
+   "explanation": "Declination tells you how far a compass needle points away from true north.",
+   "tags": [
+    "polar"
+   ]
+  },
+  {
+   "id": "atl-182",
+   "subcategory": "polar",
+   "difficulty": 3,
+   "question": "About what fraction of an iceberg's volume lies below the water?",
+   "choices": [
+    "About a third",
+    "About a tenth",
+    "About nine tenths",
+    "About half"
+   ],
+   "answer": 2,
+   "explanation": "Ice is only slightly lighter than seawater, so roughly 90% of an iceberg is submerged.",
+   "tags": [
+    "polar"
+   ]
+  },
+  {
+   "id": "atl-183",
+   "subcategory": "polar",
+   "difficulty": 3,
+   "question": "About how many people are in Antarctica at the busiest time of the summer?",
+   "choices": [
+    "About 5,000",
+    "About 500,000",
+    "About 50,000",
+    "About 500"
+   ],
+   "answer": 0,
+   "explanation": "Around 5,000 researchers and staff are there in summer, and about 1,000 in winter.",
+   "tags": [
+    "polar"
+   ]
+  },
+  {
+   "id": "atl-004",
+   "subcategory": "rivers-longest",
+   "difficulty": 3,
+   "question": "About how much water does the Amazon discharge into the Atlantic every second?",
+   "choices": [
+    "About 500,000 cubic metres",
+    "About 70,000 cubic metres",
+    "About 21,000 cubic metres",
+    "About 210,000 cubic metres"
+   ],
+   "answer": 3,
+   "explanation": "Its average discharge is about 209,000 cubic metres per second.",
+   "tags": [
+    "rivers-longest"
+   ]
+  },
+  {
+   "id": "atl-058",
+   "subcategory": "seas-straits",
+   "difficulty": 3,
+   "question": "Ships in the Panama Canal are lifted by locks up to Gatún Lake. About how high above sea level is the lake?",
+   "choices": [
+    "About 60 m",
+    "About 120 m",
+    "About 26 m",
+    "About 6 m"
+   ],
+   "answer": 2,
+   "explanation": "Gatún Lake sits about 26 m above sea level, so ships climb up and down through locks.",
+   "tags": [
+    "panama-canal"
+   ]
+  },
+  {
+   "id": "atl-059",
+   "subcategory": "seas-straits",
+   "difficulty": 3,
+   "question": "At its narrowest the Bosphorus is about how wide?",
+   "choices": [
+    "About 700 m",
+    "About 7 km",
+    "About 70 m",
+    "About 25 km"
+   ],
+   "answer": 0,
+   "explanation": "The strait narrows to roughly 700 m, which is why bridges can span it.",
+   "tags": [
+    "bosphorus"
+   ]
+  },
+  {
+   "id": "atl-060",
+   "subcategory": "seas-straits",
+   "difficulty": 3,
+   "question": "About how long is the Strait of Malacca?",
+   "choices": [
+    "About 2,500 km",
+    "About 8,000 km",
+    "About 80 km",
+    "About 800 km"
+   ],
+   "answer": 3,
+   "explanation": "It stretches roughly 800 km between the island of Sumatra and the Malay Peninsula.",
+   "tags": [
+    "malacca"
+   ]
+  },
+  {
+   "id": "atl-062",
+   "subcategory": "seas-straits",
+   "difficulty": 3,
+   "question": "About how big is the Gulf of Mexico?",
+   "choices": [
+    "About 5.5 million km²",
+    "About 155,000 km²",
+    "About 1.55 million km²",
+    "About 15 million km²"
+   ],
+   "answer": 2,
+   "explanation": "The Gulf of Mexico covers about 1.55 million km² and is the largest gulf in the world.",
+   "tags": [
+    "gulfs-bays"
+   ]
+  },
+  {
+   "id": "atl-064",
+   "subcategory": "seas-straits",
+   "difficulty": 3,
+   "question": "Big Diomede and Little Diomede, two islands in the Bering Strait, lie about how far apart?",
+   "choices": [
+    "About 400 m",
+    "About 4 km",
+    "About 400 km",
+    "About 40 km"
+   ],
+   "answer": 1,
+   "explanation": "The islands are about 3.8 km apart. Big Diomede is Russian, Little Diomede is American, and the international date line runs between them.",
+   "tags": [
+    "bering-strait"
+   ]
+  },
+  {
+   "id": "atl-113",
+   "subcategory": "urban-records",
+   "difficulty": 3,
+   "question": "Which French-born engineer drew the plan of Washington, D.C. in 1791?",
+   "choices": [
+    "Le Corbusier",
+    "Georges Haussmann",
+    "Marquis de Vauban",
+    "Pierre L'Enfant"
+   ],
+   "answer": 3,
+   "explanation": "Pierre Charles L'Enfant laid out the broad avenues and squares of the new federal city.",
+   "tags": [
+    "urban-records"
+   ]
+  },
+  {
+   "id": "atl-114",
+   "subcategory": "urban-records",
+   "difficulty": 3,
+   "question": "Canberra's plan came from an international design competition won in which year?",
+   "choices": [
+    "1788",
+    "1851",
+    "1950",
+    "1912"
+   ],
+   "answer": 3,
+   "explanation": "The American architect Walter Burley Griffin won the Canberra design competition in 1912.",
+   "tags": [
+    "urban-records"
+   ]
+  },
+  {
+   "id": "atl-115",
+   "subcategory": "urban-records",
+   "difficulty": 3,
+   "question": "How many Indian states have Chandigarh as their capital?",
+   "choices": [
+    "Three",
+    "Four",
+    "Two",
+    "One"
+   ],
+   "answer": 2,
+   "explanation": "Chandigarh is the shared capital of Punjab and Haryana.",
+   "tags": [
+    "urban-records"
+   ]
+  },
+  {
+   "id": "atl-116",
+   "subcategory": "urban-records",
+   "difficulty": 3,
+   "question": "Jericho has been settled for roughly how long, making it one of the oldest cities in the world?",
+   "choices": [
+    "More than 10,000 years",
+    "About 50,000 years",
+    "About 500 years",
+    "About 2,000 years"
+   ],
+   "answer": 0,
+   "explanation": "Jericho has traces of settlement from around 9000 BC, more than 11,000 years ago.",
+   "tags": [
+    "urban-records"
+   ]
+  },
+  {
+   "id": "atl-117",
+   "subcategory": "urban-records",
+   "difficulty": 3,
+   "question": "Which is the largest city in the world north of the Arctic Circle?",
+   "choices": [
+    "Arkhangelsk",
+    "Novosibirsk",
+    "Yakutsk",
+    "Murmansk"
+   ],
+   "answer": 3,
+   "explanation": "Murmansk, a Russian port that stays ice-free, has around 270,000 inhabitants.",
+   "tags": [
+    "urban-records"
+   ]
+  },
+  {
+   "id": "atl-118",
+   "subcategory": "urban-records",
+   "difficulty": 3,
+   "question": "Which Argentine city on Tierra del Fuego is often called the southernmost city in the world?",
+   "choices": [
+    "Punta Arenas",
+    "Bariloche",
+    "Río Gallegos",
+    "Ushuaia"
+   ],
+   "answer": 3,
+   "explanation": "Ushuaia, at about 55 degrees south, is the usual answer, though some count Puerto Williams in Chile.",
+   "tags": [
+    "urban-records"
+   ]
+  },
+  {
+   "id": "atl-119",
+   "subcategory": "urban-records",
+   "difficulty": 3,
+   "question": "About how many kilometres of canals does Amsterdam have?",
+   "choices": [
+    "About 100 km",
+    "About 1,000 km",
+    "About 10 km",
+    "About 5,000 km"
+   ],
+   "answer": 0,
+   "explanation": "Amsterdam's network of canals totals roughly 100 kilometres.",
+   "tags": [
+    "urban-records"
+   ]
+  },
+  {
+   "id": "atl-121",
+   "subcategory": "us-extremes",
+   "difficulty": 3,
+   "question": "About how high is Denali, the highest peak in North America?",
+   "choices": [
+    "About 4,421 m",
+    "About 6,190 m",
+    "About 3,000 m",
+    "About 8,848 m"
+   ],
+   "answer": 1,
+   "explanation": "Denali rises to about 6,190 metres (20,310 feet) in Alaska.",
+   "tags": [
+    "us-extremes"
+   ]
+  },
+  {
+   "id": "atl-122",
+   "subcategory": "us-extremes",
+   "difficulty": 3,
+   "question": "Which US state contains both the highest point (Mount Whitney) and the lowest point (Badwater Basin) of the contiguous United States?",
+   "choices": [
+    "Colorado",
+    "Arizona",
+    "California",
+    "Nevada"
+   ],
+   "answer": 2,
+   "explanation": "Mount Whitney and Death Valley's Badwater Basin are in California, only about 135 km apart.",
+   "tags": [
+    "us-extremes"
+   ]
+  },
+  {
+   "id": "atl-123",
+   "subcategory": "us-extremes",
+   "difficulty": 3,
+   "question": "The lowest point in North America, Badwater Basin, lies about how far below sea level?",
+   "choices": [
+    "About 86 m",
+    "About 860 m",
+    "About 286 m",
+    "About 8.6 m"
+   ],
+   "answer": 0,
+   "explanation": "Badwater Basin is 282 feet, about 86 metres, below sea level.",
+   "tags": [
+    "us-extremes"
+   ]
+  },
+  {
+   "id": "atl-125",
+   "subcategory": "us-extremes",
+   "difficulty": 3,
+   "question": "Which US state has the highest average elevation?",
+   "choices": [
+    "Montana",
+    "Idaho",
+    "Colorado",
+    "Alaska"
+   ],
+   "answer": 2,
+   "explanation": "Colorado's average elevation is about 2,070 metres. Alaska has the highest peak but much lower land on average.",
+   "tags": [
+    "us-extremes"
+   ]
+  },
+  {
+   "id": "atl-126",
+   "subcategory": "us-extremes",
+   "difficulty": 3,
+   "question": "About how high above sea level is Mauna Kea, the highest point in Hawaii?",
+   "choices": [
+    "About 2,100 m",
+    "About 8,400 m",
+    "About 6,200 m",
+    "About 4,200 m"
+   ],
+   "answer": 3,
+   "explanation": "Mauna Kea's summit is 4,207 metres above sea level.",
+   "tags": [
+    "us-extremes"
+   ]
+  },
+  {
+   "id": "atl-128",
+   "subcategory": "us-extremes",
+   "difficulty": 3,
+   "question": "About how high is Guadalupe Peak, the highest point in Texas?",
+   "choices": [
+    "About 4,000 m",
+    "About 800 m",
+    "About 1,300 m",
+    "About 2,700 m"
+   ],
+   "answer": 3,
+   "explanation": "Guadalupe Peak rises to 8,751 feet, about 2,667 metres.",
+   "tags": [
+    "us-extremes"
+   ]
+  },
+  {
+   "id": "atl-137",
+   "subcategory": "us-nature",
+   "difficulty": 3,
+   "question": "About what share of the world's surface fresh water do the Great Lakes hold?",
+   "choices": [
+    "About 50%",
+    "About 20%",
+    "About 2%",
+    "About 80%"
+   ],
+   "answer": 1,
+   "explanation": "The Great Lakes hold roughly a fifth of the world's surface fresh water.",
+   "tags": [
+    "us-nature"
+   ]
+  },
+  {
+   "id": "atl-139",
+   "subcategory": "us-nature",
+   "difficulty": 3,
+   "question": "About how long is the Rio Grande, which forms much of the border between Texas and Mexico?",
+   "choices": [
+    "About 6,000 km",
+    "About 3,000 km",
+    "About 1,000 km",
+    "About 300 km"
+   ],
+   "answer": 1,
+   "explanation": "The Rio Grande is about 3,000 kilometres long, among the longest rivers of North America.",
+   "tags": [
+    "us-nature"
+   ]
+  },
+  {
+   "id": "atl-140",
+   "subcategory": "us-nature",
+   "difficulty": 3,
+   "question": "In which year did Yellowstone become the world's first national park?",
+   "choices": [
+    "1872",
+    "1903",
+    "1850",
+    "1916"
+   ],
+   "answer": 0,
+   "explanation": "The US Congress protected Yellowstone in 1872.",
+   "tags": [
+    "us-nature"
+   ]
+  },
+  {
+   "id": "atl-142",
+   "subcategory": "us-nature",
+   "difficulty": 3,
+   "question": "Everglades National Park covers about how large an area?",
+   "choices": [
+    "About 600 km2",
+    "About 6,000 km2",
+    "About 60,000 km2",
+    "About 600,000 km2"
+   ],
+   "answer": 1,
+   "explanation": "The park covers about 6,100 square kilometres, 1.5 million acres.",
+   "tags": [
+    "us-nature"
+   ]
+  },
+  {
+   "id": "atl-143",
+   "subcategory": "us-nature",
+   "difficulty": 3,
+   "question": "About how tall is each face carved into Mount Rushmore?",
+   "choices": [
+    "About 18 m",
+    "About 180 m",
+    "About 2 m",
+    "About 60 m"
+   ],
+   "answer": 0,
+   "explanation": "Each head is about 60 feet, roughly 18 metres, tall.",
+   "tags": [
+    "us-nature"
+   ]
+  },
+  {
+   "id": "atl-242",
+   "subcategory": "us-nature",
+   "difficulty": 3,
+   "question": "About how deep is Crater Lake, the deepest lake in the United States?",
+   "choices": [
+    "About 294 m",
+    "About 94 m",
+    "About 1,094 m",
+    "About 594 m"
+   ],
+   "answer": 3,
+   "explanation": "Crater Lake in Oregon, formed in a collapsed volcano, is about 594 metres (1,943 feet) deep.",
+   "tags": [
+    "us-nature"
+   ]
+  },
+  {
+   "id": "atl-243",
+   "subcategory": "us-nature",
+   "difficulty": 3,
+   "question": "Which is the largest national park in the United States by area?",
+   "choices": [
+    "Yellowstone",
+    "Denali",
+    "Wrangell–St. Elias",
+    "Death Valley"
+   ],
+   "answer": 2,
+   "explanation": "Wrangell–St. Elias, in Alaska, covers more than 53,000 km².",
+   "tags": [
+    "us-nature"
+   ]
+  },
+  {
+   "id": "atl-244",
+   "subcategory": "us-nature",
+   "difficulty": 3,
+   "question": "The United States has how many national parks, as of 2024?",
+   "choices": [
+    "103",
+    "43",
+    "63",
+    "83"
+   ],
+   "answer": 2,
+   "explanation": "The National Park Service manages 63 national parks, among more than 400 protected areas.",
+   "tags": [
+    "us-nature"
+   ]
+  },
+  {
+   "id": "atl-291",
+   "subcategory": "us-nature",
+   "difficulty": 3,
+   "question": "About how long is the mapped part of Mammoth Cave, the longest known cave system in the world?",
+   "choices": [
+    "About 200 km",
+    "About 68 km",
+    "About 680 km",
+    "About 1,500 km"
+   ],
+   "answer": 2,
+   "explanation": "Mammoth Cave in Kentucky has more than 680 kilometres (over 420 miles) of surveyed passages.",
+   "tags": [
+    "us-nature"
+   ]
+  },
+  {
+   "id": "atl-292",
+   "subcategory": "us-nature",
+   "difficulty": 3,
+   "question": "About how tall is General Sherman, the largest tree on Earth by volume?",
+   "choices": [
+    "About 50 m",
+    "About 130 m",
+    "About 25 m",
+    "About 84 m"
+   ],
+   "answer": 3,
+   "explanation": "General Sherman, a giant sequoia, stands about 84 metres (275 feet) tall.",
+   "tags": [
+    "us-nature"
+   ]
+  },
+  {
+   "id": "atl-129",
+   "subcategory": "us-states",
+   "difficulty": 3,
+   "question": "At the Four Corners point, which four US states meet?",
+   "choices": [
+    "Nevada, Utah, Arizona and California",
+    "Colorado, Utah, Arizona and New Mexico",
+    "Texas, Oklahoma, New Mexico and Colorado",
+    "Wyoming, Utah, Colorado and Idaho"
+   ],
+   "answer": 1,
+   "explanation": "The Four Corners is the only point in the United States where four states meet: Colorado, Utah, Arizona and New Mexico.",
+   "tags": [
+    "us-states"
+   ]
+  },
+  {
+   "id": "atl-132",
+   "subcategory": "us-states",
+   "difficulty": 3,
+   "question": "How many US states border the Great Lakes?",
+   "choices": [
+    "Eleven",
+    "Five",
+    "Three",
+    "Eight"
+   ],
+   "answer": 3,
+   "explanation": "Minnesota, Wisconsin, Illinois, Indiana, Michigan, Ohio, Pennsylvania and New York all have Great Lakes shores.",
+   "tags": [
+    "us-states"
+   ]
+  },
+  {
+   "id": "atl-133",
+   "subcategory": "us-states",
+   "difficulty": 3,
+   "question": "How many US states does the Mississippi River border or flow through?",
+   "choices": [
+    "Five",
+    "Ten",
+    "Seven",
+    "Fourteen"
+   ],
+   "answer": 1,
+   "explanation": "The Mississippi touches Minnesota, Wisconsin, Iowa, Illinois, Missouri, Kentucky, Tennessee, Arkansas, Mississippi and Louisiana.",
+   "tags": [
+    "us-states"
+   ]
+  },
+  {
+   "id": "atl-134",
+   "subcategory": "us-states",
+   "difficulty": 3,
+   "question": "About how many times larger is Alaska than Texas by area?",
+   "choices": [
+    "About 5 times",
+    "About 2.5 times",
+    "About 10 times",
+    "About 1.2 times"
+   ],
+   "answer": 1,
+   "explanation": "Alaska covers about 1.7 million square kilometres, about two and a half times Texas.",
+   "tags": [
+    "us-states"
+   ]
+  },
+  {
+   "id": "atl-135",
+   "subcategory": "us-states",
+   "difficulty": 3,
+   "question": "Which two US states have borders made up only of straight lines of latitude and longitude, like rectangles?",
+   "choices": [
+    "Utah and Nevada",
+    "Colorado and Wyoming",
+    "Kansas and Nebraska",
+    "Montana and Idaho"
+   ],
+   "answer": 1,
+   "explanation": "Colorado and Wyoming are the only two states whose borders are all straight lines.",
+   "tags": [
+    "us-states"
+   ]
+  },
+  {
+   "id": "atl-034",
+   "subcategory": "volcanoes-ranges",
+   "difficulty": 3,
+   "question": "The 1815 eruption of which Indonesian volcano caused \"the year without a summer\" in 1816?",
+   "choices": [
+    "Merapi",
+    "Agung",
+    "Tambora",
+    "Krakatoa"
+   ],
+   "answer": 2,
+   "explanation": "Tambora's ash and gas cooled the climate and caused crop failures across the world in 1816.",
+   "tags": [
+    "volcanoes-ranges"
+   ]
+  },
+  {
+   "id": "atl-036",
+   "subcategory": "volcanoes-ranges",
+   "difficulty": 3,
+   "question": "About how high is Mauna Loa above sea level?",
+   "choices": [
+    "About 2,000 metres",
+    "About 5,500 metres",
+    "About 3,300 metres",
+    "About 4,170 metres"
+   ],
+   "answer": 3,
+   "explanation": "Mauna Loa rises about 4,170 metres above sea level.",
+   "tags": [
+    "volcanoes-ranges"
+   ]
+  },
+  {
+   "id": "atl-040",
+   "subcategory": "volcanoes-ranges",
+   "difficulty": 3,
+   "question": "When did Yellowstone's most recent giant caldera eruption happen?",
+   "choices": [
+    "About 6,400 years ago",
+    "About 640,000 years ago",
+    "About 64,000 years ago",
+    "About 64 million years ago"
+   ],
+   "answer": 1,
+   "explanation": "The last giant eruption of the Yellowstone caldera was about 640,000 years ago.",
+   "tags": [
+    "volcanoes-ranges"
+   ]
+  },
+  {
    "id": "geo-022",
    "subcategory": "waterfalls",
    "difficulty": 3,
@@ -861,6 +4465,125 @@
    "explanation": "Angel Falls drops 979 metres in Venezuela's Canaima National Park."
   },
   {
+   "id": "atl-219",
+   "subcategory": "wonders-records",
+   "difficulty": 3,
+   "question": "About how much of the Channel Tunnel's length runs under the sea?",
+   "choices": [
+    "About 15 km",
+    "About 50 km",
+    "About 38 km",
+    "About 8 km"
+   ],
+   "answer": 2,
+   "explanation": "About 38 km of its 50 km are under the Channel.",
+   "tags": [
+    "wonders-records"
+   ]
+  },
+  {
+   "id": "atl-223",
+   "subcategory": "wonders-records",
+   "difficulty": 3,
+   "question": "The Burj Khalifa, completed in 2010, is about how tall?",
+   "choices": [
+    "About 830 m",
+    "About 440 m",
+    "About 600 m",
+    "About 1,300 m"
+   ],
+   "answer": 0,
+   "explanation": "The Burj Khalifa is 828 m tall.",
+   "tags": [
+    "wonders-records"
+   ]
+  },
+  {
+   "id": "atl-224",
+   "subcategory": "wonders-records",
+   "difficulty": 3,
+   "question": "About how long is the Great Barrier Reef?",
+   "choices": [
+    "About 5,000 km",
+    "About 900 km",
+    "About 500 km",
+    "About 2,300 km"
+   ],
+   "answer": 3,
+   "explanation": "The Great Barrier Reef stretches about 2,300 km.",
+   "tags": [
+    "wonders-records"
+   ]
+  },
+  {
+   "id": "atl-254",
+   "subcategory": "wonders-records",
+   "difficulty": 3,
+   "question": "About how long are all the sections of the Great Wall of China together?",
+   "choices": [
+    "About 21,000 km",
+    "About 40,000 km",
+    "About 6,000 km",
+    "About 2,100 km"
+   ],
+   "answer": 0,
+   "explanation": "A survey found its walls, trenches and natural barriers total about 21,000 km.",
+   "tags": [
+    "wonders-records"
+   ]
+  },
+  {
+   "id": "atl-096",
+   "subcategory": "area-size",
+   "difficulty": 4,
+   "question": "Among countries lying wholly in Europe, which is the largest landlocked one?",
+   "choices": [
+    "Serbia",
+    "Belarus",
+    "Hungary",
+    "Czechia"
+   ],
+   "answer": 1,
+   "explanation": "Belarus covers about 208,000 km². Kazakhstan is larger but lies mostly in Asia.",
+   "tags": [
+    "landlocked-giants"
+   ]
+  },
+  {
+   "id": "atl-160",
+   "subcategory": "climate-extremes",
+   "difficulty": 4,
+   "question": "What is Europe's officially recognised record high temperature, set in 2021?",
+   "choices": [
+    "48.8 °C",
+    "52.8 °C",
+    "45.8 °C",
+    "50.8 °C"
+   ],
+   "answer": 0,
+   "explanation": "The World Meteorological Organization recognised 48.8 °C in Sicily on 11 August 2021 as the European record.",
+   "tags": [
+    "climate-extremes"
+   ]
+  },
+  {
+   "id": "atl-173",
+   "subcategory": "continents",
+   "difficulty": 4,
+   "question": "How wide is the Bering Strait at its narrowest?",
+   "choices": [
+    "About 8 km",
+    "About 200 km",
+    "About 80 km",
+    "About 800 km"
+   ],
+   "answer": 2,
+   "explanation": "The strait between Russia and Alaska is about 80 km wide at its narrowest.",
+   "tags": [
+    "continents"
+   ]
+  },
+  {
    "id": "geo-011",
    "subcategory": "countries",
    "difficulty": 4,
@@ -873,6 +4596,176 @@
    ],
    "answer": 2,
    "explanation": "France spans about 12 or 13 time zones because of its overseas territories."
+  },
+  {
+   "id": "atl-188",
+   "subcategory": "earth-numbers",
+   "difficulty": 4,
+   "question": "The continental crust is on average about how thick?",
+   "choices": [
+    "About 1,000 km",
+    "About 3.5 km",
+    "About 350 km",
+    "About 35 km"
+   ],
+   "answer": 3,
+   "explanation": "Continental crust averages roughly 30 to 40 kilometres, and is thickest under big mountain ranges.",
+   "tags": [
+    "earth-numbers"
+   ]
+  },
+  {
+   "id": "atl-189",
+   "subcategory": "earth-numbers",
+   "difficulty": 4,
+   "question": "About how thick is Earth's mantle?",
+   "choices": [
+    "About 2,200 km",
+    "About 2,900 km",
+    "About 5,100 km",
+    "About 1,220 km"
+   ],
+   "answer": 1,
+   "explanation": "The mantle extends from the crust down to about 2,900 kilometres deep.",
+   "tags": [
+    "earth-numbers"
+   ]
+  },
+  {
+   "id": "atl-191",
+   "subcategory": "earth-numbers",
+   "difficulty": 4,
+   "question": "At the Equator, how fast does Earth's surface move because of its rotation?",
+   "choices": [
+    "About 167 km/h",
+    "About 670 km/h",
+    "About 1,670 km/h",
+    "About 16,700 km/h"
+   ],
+   "answer": 2,
+   "explanation": "Going round the roughly 40,000 km Equator in about 24 hours means about 1,670 kilometres per hour.",
+   "tags": [
+    "earth-numbers"
+   ]
+  },
+  {
+   "id": "atl-048",
+   "subcategory": "extreme-points",
+   "difficulty": 4,
+   "question": "By about how much is the Dead Sea shoreline dropping each year?",
+   "choices": [
+    "About 10 centimetres",
+    "About 10 metres",
+    "About 1 centimetre",
+    "About 1 metre"
+   ],
+   "answer": 3,
+   "explanation": "The Dead Sea level has been falling by roughly a metre a year.",
+   "tags": [
+    "extreme-points"
+   ]
+  },
+  {
+   "id": "atl-076",
+   "subcategory": "landlocked-enclaves",
+   "difficulty": 4,
+   "question": "Which two countries border Russia's Kaliningrad region by land?",
+   "choices": [
+    "Latvia and Estonia",
+    "Germany and Poland",
+    "Poland and Lithuania",
+    "Belarus and Lithuania"
+   ],
+   "answer": 2,
+   "explanation": "The region is squeezed between Poland to the south and Lithuania to the north and east.",
+   "tags": [
+    "kaliningrad"
+   ]
+  },
+  {
+   "id": "atl-079",
+   "subcategory": "landlocked-enclaves",
+   "difficulty": 4,
+   "question": "Baarle-Hertog, the Belgian part of the town of Baarle, is made up of about how many separate pieces of land?",
+   "choices": [
+    "About 4",
+    "About 60",
+    "About 12",
+    "About 24"
+   ],
+   "answer": 3,
+   "explanation": "Baarle-Hertog consists of about two dozen separate parcels, most of them enclaves inside the Netherlands.",
+   "tags": [
+    "baarle"
+   ]
+  },
+  {
+   "id": "atl-233",
+   "subcategory": "maps-measures",
+   "difficulty": 4,
+   "question": "One degree of latitude is about how many kilometres?",
+   "choices": [
+    "About 111 km",
+    "About 40 km",
+    "About 200 km",
+    "About 60 km"
+   ],
+   "answer": 0,
+   "explanation": "One degree of latitude spans about 111 km everywhere on Earth.",
+   "tags": [
+    "maps-measures"
+   ]
+  },
+  {
+   "id": "atl-234",
+   "subcategory": "maps-measures",
+   "difficulty": 4,
+   "question": "One nautical mile equals exactly how many metres?",
+   "choices": [
+    "1,609 m",
+    "1,852 m",
+    "2,000 m",
+    "1,000 m"
+   ],
+   "answer": 1,
+   "explanation": "A nautical mile is defined as 1,852 m.",
+   "tags": [
+    "maps-measures"
+   ]
+  },
+  {
+   "id": "atl-238",
+   "subcategory": "maps-measures",
+   "difficulty": 4,
+   "question": "The shortest flight path from London to New York, along a great circle, is about how long?",
+   "choices": [
+    "About 11,000 km",
+    "About 8,500 km",
+    "About 3,000 km",
+    "About 5,600 km"
+   ],
+   "answer": 3,
+   "explanation": "The great-circle distance is roughly 5,570 km.",
+   "tags": [
+    "maps-measures"
+   ]
+  },
+  {
+   "id": "atl-239",
+   "subcategory": "maps-measures",
+   "difficulty": 4,
+   "question": "GPS satellites orbit at about what altitude?",
+   "choices": [
+    "About 400 km",
+    "About 2,000 km",
+    "About 20,200 km",
+    "About 36,000 km"
+   ],
+   "answer": 2,
+   "explanation": "GPS satellites circle at about 20,200 km.",
+   "tags": [
+    "maps-measures"
+   ]
   },
   {
    "id": "trk-006",
@@ -894,6 +4787,125 @@
    "misconception": "Many people think Mount Everest is the tallest and the farthest-from-Earth's-centre mountain in every sense."
   },
   {
+   "id": "atl-086",
+   "subcategory": "neighbours-borders",
+   "difficulty": 4,
+   "question": "About how long is the border between Chile and Argentina?",
+   "choices": [
+    "About 12,000 km",
+    "About 2,500 km",
+    "About 670 km",
+    "About 6,700 km"
+   ],
+   "answer": 3,
+   "explanation": "The border follows the crest of the Andes for about 6,700 km.",
+   "tags": [
+    "chile"
+   ]
+  },
+  {
+   "id": "atl-031",
+   "subcategory": "peaks-highest",
+   "difficulty": 4,
+   "question": "How many mountains on Earth are higher than 8,000 metres?",
+   "choices": [
+    "Fourteen",
+    "Over one hundred",
+    "Thirty",
+    "Five"
+   ],
+   "answer": 0,
+   "explanation": "There are fourteen \"eight-thousanders\", all in the Himalaya and the Karakoram.",
+   "tags": [
+    "peaks-highest"
+   ]
+  },
+  {
+   "id": "atl-225",
+   "subcategory": "people-places",
+   "difficulty": 4,
+   "question": "Roughly how many people per km² live in Monaco, the world's most densely populated country?",
+   "choices": [
+    "About 1,900",
+    "About 19,000",
+    "About 190,000",
+    "About 190"
+   ],
+   "answer": 1,
+   "explanation": "Some 38,000 people live in about 2 km².",
+   "tags": [
+    "people-places"
+   ]
+  },
+  {
+   "id": "atl-228",
+   "subcategory": "people-places",
+   "difficulty": 4,
+   "question": "As of 2023, how many official languages does South Africa recognise?",
+   "choices": [
+    "Twenty",
+    "Seven",
+    "Twelve",
+    "Four"
+   ],
+   "answer": 2,
+   "explanation": "South Africa has 12 official languages, including South African Sign Language since 2023.",
+   "tags": [
+    "people-places"
+   ]
+  },
+  {
+   "id": "atl-229",
+   "subcategory": "people-places",
+   "difficulty": 4,
+   "question": "Which country has the fourth-largest population in the world?",
+   "choices": [
+    "Brazil",
+    "Nigeria",
+    "Indonesia",
+    "Pakistan"
+   ],
+   "answer": 2,
+   "explanation": "After India, China and the United States, Indonesia comes fourth.",
+   "tags": [
+    "people-places"
+   ]
+  },
+  {
+   "id": "atl-179",
+   "subcategory": "polar",
+   "difficulty": 4,
+   "question": "What is the average elevation of Antarctica, the highest continent?",
+   "choices": [
+    "About 2,500 m",
+    "About 250 m",
+    "About 800 m",
+    "About 5,000 m"
+   ],
+   "answer": 0,
+   "explanation": "Thick ice on a land mass makes Antarctica the highest continent on average, at roughly 2,500 metres.",
+   "tags": [
+    "polar"
+   ]
+  },
+  {
+   "id": "atl-184",
+   "subcategory": "polar",
+   "difficulty": 4,
+   "question": "The Ross Ice Shelf, Antarctica's largest, is about as big as which country?",
+   "choices": [
+    "Japan",
+    "Mexico",
+    "France",
+    "Ireland"
+   ],
+   "answer": 2,
+   "explanation": "It covers roughly 490,000 km², comparable to France.",
+   "tags": [
+    "polar"
+   ]
+  },
+  {
    "id": "geo-028",
    "subcategory": "rivers",
    "difficulty": 4,
@@ -906,6 +4918,125 @@
    ],
    "answer": 1,
    "explanation": "The Danube flows through ten countries, from Germany to the Black Sea."
+  },
+  {
+   "id": "atl-124",
+   "subcategory": "us-extremes",
+   "difficulty": 4,
+   "question": "Which US state has the lowest high point of all, only about 105 m above sea level?",
+   "choices": [
+    "Mississippi",
+    "Louisiana",
+    "Florida",
+    "Delaware"
+   ],
+   "answer": 2,
+   "explanation": "Britton Hill in Florida rises to 345 feet, about 105 metres, the lowest highest point of any state.",
+   "tags": [
+    "us-extremes"
+   ]
+  },
+  {
+   "id": "atl-127",
+   "subcategory": "us-extremes",
+   "difficulty": 4,
+   "question": "Which is the highest peak in the United States east of the Mississippi River?",
+   "choices": [
+    "Mount Mitchell",
+    "Clingmans Dome",
+    "Mount Marcy",
+    "Mount Washington"
+   ],
+   "answer": 0,
+   "explanation": "Mount Mitchell in North Carolina, at 2,037 metres, edges out Clingmans Dome by only about 12 metres.",
+   "tags": [
+    "us-extremes"
+   ]
+  },
+  {
+   "id": "atl-131",
+   "subcategory": "us-states",
+   "difficulty": 4,
+   "question": "Which two US states each border eight other states, more than any others?",
+   "choices": [
+    "Colorado and Nebraska",
+    "Kentucky and Virginia",
+    "Tennessee and Missouri",
+    "Texas and California"
+   ],
+   "answer": 2,
+   "explanation": "Tennessee and Missouri each border eight states.",
+   "tags": [
+    "us-states"
+   ]
+  },
+  {
+   "id": "atl-037",
+   "subcategory": "volcanoes-ranges",
+   "difficulty": 4,
+   "question": "About how long is the global mid-ocean ridge system?",
+   "choices": [
+    "About 8,000 kilometres",
+    "About 150,000 kilometres",
+    "About 20,000 kilometres",
+    "About 65,000 kilometres"
+   ],
+   "answer": 3,
+   "explanation": "The mid-ocean ridge system is about 65,000 km long, the longest mountain chain on Earth.",
+   "tags": [
+    "volcanoes-ranges"
+   ]
+  },
+  {
+   "id": "atl-220",
+   "subcategory": "wonders-records",
+   "difficulty": 4,
+   "question": "The Gotthard Base Tunnel, the world's longest railway tunnel, is about how long?",
+   "choices": [
+    "About 30 km",
+    "About 57 km",
+    "About 100 km",
+    "About 12 km"
+   ],
+   "answer": 1,
+   "explanation": "The Gotthard Base Tunnel is about 57 km long.",
+   "tags": [
+    "wonders-records"
+   ]
+  },
+  {
+   "id": "atl-221",
+   "subcategory": "wonders-records",
+   "difficulty": 4,
+   "question": "The surveyed total length of all sections of the Great Wall of China is about...",
+   "choices": [
+    "About 3,500 km",
+    "About 40,000 km",
+    "About 21,000 km",
+    "About 2,000 km"
+   ],
+   "answer": 2,
+   "explanation": "A 2012 Chinese survey of all walls from every dynasty gave about 21,000 km.",
+   "tags": [
+    "wonders-records"
+   ]
+  },
+  {
+   "id": "atl-222",
+   "subcategory": "wonders-records",
+   "difficulty": 4,
+   "question": "The power capacity of the Three Gorges Dam is about...",
+   "choices": [
+    "About 2,200 MW",
+    "About 22,500 MW",
+    "About 90,000 MW",
+    "About 9,000 MW"
+   ],
+   "answer": 1,
+   "explanation": "Its turbines can produce about 22.5 gigawatts.",
+   "tags": [
+    "wonders-records"
+   ]
   }
  ]
 }

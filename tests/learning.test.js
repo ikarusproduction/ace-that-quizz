@@ -268,3 +268,26 @@ test('profile meta carries a safe learn record and merges two devices', async ()
   const m = mergeMeta(a, b, true);
   assert.deepEqual(Object.keys(m.learn.items).sort(), ['a', 'b']);
 });
+
+test('a concept answered right rests for 48 hours; a missed one is not held back; a thin pool relaxes the rule', async () => {
+  const { selectSession, applyAnswers, emptyLearn, coolingDown, COOLDOWN_MS, DAY } = await import('../src/engine/learning.js');
+  const T = Date.UTC(2026, 9, 19, 12);
+  const pool = Array.from({ length: 12 }, (_, i) => ({ id: `c${i}`, category: i % 2 ? 'science' : 'history' }));
+  let learn = emptyLearn();
+  learn = applyAnswers(learn, pool.slice(0, 4).map((c) => ({ id: c.id, correct: true, hints: 0, level: 1 })), T);
+  learn = applyAnswers(learn, [{ id: 'c4', correct: false, hints: 0, level: 1 }], T);
+  assert.ok(coolingDown(learn.items.c0, T + 3_600_000));
+  assert.ok(!coolingDown(learn.items.c0, T + COOLDOWN_MS + 1), 'free after 48 hours');
+  assert.ok(!coolingDown(learn.items.c4, T + 3_600_000), 'a miss is open for reinforcement');
+  assert.ok(!coolingDown(undefined, T) && !coolingDown({ state: 'new', last: 0, recent: [] }, T));
+  const now = T + 6 * 3_600_000;
+  for (let i = 0; i < 20; i++) {
+    const got = selectSession({ items: learn.items, pool, now, seed: `s${i}`, size: 5 }).map((x) => x.id);
+    assert.ok(!got.some((id) => ['c0', 'c1', 'c2', 'c3'].includes(id)), `${got} asked something that rested`);
+  }
+  const reinforced = selectSession({ items: learn.items, pool, now, seed: 'r', size: 12 }).map((x) => x.id);
+  assert.ok(reinforced.includes('c4'), 'the missed concept returns');
+  assert.equal(reinforced.length, 12, 'a pool too thin to avoid the resting ones still gives a full session');
+  const later = selectSession({ items: learn.items, pool, now: T + 2 * DAY + 1, seed: 'l', size: 12 }).map((x) => x.id);
+  assert.ok(later.includes('c0'), 'back after 48 hours');
+});

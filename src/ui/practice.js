@@ -38,7 +38,7 @@ export function makeLocalizer(app) {
  *   localize(qid, lang), learnItems ({ conceptId: item }) for misconception notes, boss ({ name, sprite }) or event (true),
  *   label(it, run) -> small text above the question, onExit(), onEnd(run).
  */
-export async function playRun({ app, view, scene = null, run, lang = 'en', color = '#6fd1ff', player = null, localize, learnItems = {}, boss = null, event = false, label = null, timer = null, onExit, onEnd }) {
+export async function playRun({ app, view, scene = null, run, lang = 'en', color = '#6fd1ff', player = null, localize, learnItems = {}, boss = null, event = false, eventName = 'Lab accident', label = null, timer = null, onExit, onEnd }) {
   let r = run;
   let q = null; // the localized current question
   let fx = { blur: false, flip: false };
@@ -52,7 +52,7 @@ export async function playRun({ app, view, scene = null, run, lang = 'en', color
   const bossEl = boss ? h('div.arena-boss', {}, rig.el, h('div.progress.boss-hp', { 'aria-label': 'Boss health' }, hpFill)) : null;
   const meEl = h('div.arena-me', {}, player ? avatar(player, 48) : sprite('gasmask', 48));
   const air = h('div.arena-air');
-  const strip = arena ? h('div.arena-strip', { class: boss ? 'boss' : 'event' }, bossEl ?? h('div.arena-hazard', {}, sprite('goo', 28), h('span.tiny', {}, 'Lab accident')), meEl, air) : null;
+  const strip = arena ? h('div.arena-strip', { class: boss ? 'boss' : 'event' }, bossEl ?? h('div.arena-hazard', {}, sprite('goo', 28), h('span.tiny', {}, eventName)), meEl, air) : null;
   const rtlOf = () => (q?.translated && languageOf(lang).rtl ? 'rtl' : null);
 
   const cancelFlights = () => { token++; for (const f of flights) { try { f.anim?.cancel(); } catch { /* already finished */ } f.el.remove(); } flights = []; };

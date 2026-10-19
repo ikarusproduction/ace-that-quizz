@@ -308,8 +308,20 @@ test('missedQuestions is newest first, de-duplicated and per player', () => {
   assert.deepEqual(missedQuestions(rs, 'a').map((m) => m.questionId), ['x', 'y']);
 });
 
-test('recentlySeenIds spans a group of players, newest first', () => {
-  const rs = [row({ questionId: 'a1', timestamp: 1 }), row({ questionId: 'b1', playerId: 'b', timestamp: 2 }), row({ questionId: 'c1', playerId: 'c', timestamp: 3 })];
-  assert.deepEqual(recentlySeenIds(rs, ['a', 'b']), ['b1', 'a1']);
-  assert.equal(recentlySeenIds(rs, ['a'], { limit: 0 }).length, 0);
+test('recentlySeenIds: right answers rest for 48 hours, wrong ones may come back, other players and old answers do not count', () => {
+  const H = 3_600_000; const now = 100 * 24 * H;
+  const rs = [
+    row({ questionId: 'a1', timestamp: now - 3 * H, correct: true }),                      // right 3 hours ago: rests
+    row({ questionId: 'a2', timestamp: now - 3 * H, correct: false }),                     // wrong: free for reinforcement
+    row({ questionId: 'a3', timestamp: now - 49 * H, correct: true }),                     // right 49 hours ago: free again
+    row({ questionId: 'a4', timestamp: now - 80 * H, correct: true }), row({ questionId: 'a4', timestamp: now - 2 * H, correct: false }), // wrong most recently
+    row({ questionId: 'a5~2', timestamp: now - H, correct: true }),                        // a variant is the same question
+    row({ questionId: 'b1', playerId: 'b', timestamp: now - H, correct: true }),
+    row({ questionId: 'c1', playerId: 'c', timestamp: now - H, correct: true }),
+  ];
+  assert.deepEqual(recentlySeenIds(rs, ['a'], { now }).sort(), ['a1', 'a5']);
+  assert.deepEqual(recentlySeenIds(rs, ['a', 'b'], { now }).sort(), ['a1', 'a5', 'b1'], 'a group avoids what any member just got right');
+  assert.deepEqual(recentlySeenIds(rs, ['a'], { now: now + 60 * H }), [], 'everything is free again after 48 hours');
+  const learn = { items: { 'sci-1': { state: 'review', last: now - H, recent: [0, 1] }, 'sci-2': { state: 'relearning', last: now - H, recent: [1] }, 'sci-3': { state: 'review', last: now - H, recent: [1, 0] } } };
+  assert.deepEqual(recentlySeenIds([], ['a'], { now, learns: [learn] }), ['sci-1'], 'the learning record counts too, but not a missed or relearning concept');
 });

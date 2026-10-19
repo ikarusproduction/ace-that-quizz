@@ -62,9 +62,41 @@ export const ADVENTURES = {
     bossNames: ['The Letter', 'The Element', 'The Acronym', 'The Flag', 'The Sign', 'The Code', 'The Formula', 'The Glyph', 'The Cipher', 'The Keymaster'],
   },
   geography: {
-    id: 'geography', name: 'The Atlas', title: 'Geography', cats: ['geography'], color: '#d9a441', icon: 'radio', bossSprite: 'boss_cartographer',
-    blurb: 'Capitals, rivers, borders and the odd island.',
-    bossNames: ['The Compass', 'The Capital', 'The River', 'The Peak', 'The Desert', 'The Strait', 'The Archipelago', 'The Pole', 'The Meridian', 'The Cartographer'],
+    id: 'geography', name: 'The Atlas', title: 'Geography', cats: ['geography'], color: '#d9a441', icon: 'radio', bossSprite: 'boss_cartographer', open: true,
+    blurb: 'Rivers, peaks, depths, borders, cities and records, all in numbers.',
+    eventName: 'Storm',
+    bossNames: ['The Delta', 'The Summit', 'The Trench', 'The Frontier', 'The Metropolis', 'The Union', 'The Mirage', 'The Pole', 'The Meridian', 'The Cartographer'],
+    // Countries, capitals and flags belong to the "while you wait" geography game, so they are not drawn here: this adventure is
+    // about measures, records and counts (lengths, depths, heights, areas, borders, cities, the United States' extremes, climate, maps).
+    subs: ['geography/rivers-longest', 'geography/rivers-countries', 'geography/lakes-falls', 'geography/peaks-highest', 'geography/volcanoes-ranges', 'geography/extreme-points',
+      'geography/ocean-depths', 'geography/seas-straits', 'geography/islands', 'geography/landlocked-enclaves', 'geography/neighbours-borders', 'geography/area-size',
+      'geography/city-size', 'geography/city-sites', 'geography/urban-records', 'geography/us-extremes', 'geography/us-states', 'geography/us-nature',
+      'geography/deserts', 'geography/climate-extremes', 'geography/lines-zones', 'geography/continents', 'geography/polar', 'geography/earth-numbers',
+      'geography/europe-numbers', 'geography/asia-oceania', 'geography/africa-americas', 'geography/wonders-records', 'geography/people-places', 'geography/maps-measures',
+      'geography/rivers', 'geography/mountains', 'geography/seas', 'geography/oceans', 'geography/lakes', 'geography/waterfalls', 'geography/physical', 'geography/climate',
+      'geography/poles', 'geography/population', 'geography/cities', 'geography/regions', 'geography/borders', 'geography/basics'],
+    chapters: [
+      { scene: 'greenhouse', name: 'The Rivers', subject: 'Rivers and lakes', aspects: [
+        { name: 'The longest rivers', focus: ['geography/rivers-longest', 'geography/rivers'] }, { name: 'Rivers and countries', focus: ['geography/rivers-countries'] }, { name: 'Lakes and waterfalls', focus: ['geography/lakes-falls', 'geography/lakes', 'geography/waterfalls'] }] },
+      { scene: 'observatory', name: 'The Peaks', subject: 'Mountains and extremes', aspects: [
+        { name: 'The highest mountains', focus: ['geography/peaks-highest', 'geography/mountains'] }, { name: 'Volcanoes and ranges', focus: ['geography/volcanoes-ranges'] }, { name: 'Highest and lowest points', focus: ['geography/extreme-points'] }] },
+      { scene: 'deep', name: 'The Deep', subject: 'Oceans, seas and islands', aspects: [
+        { name: 'Ocean depths', focus: ['geography/ocean-depths', 'geography/oceans'] }, { name: 'Seas and straits', focus: ['geography/seas-straits', 'geography/seas'] }, { name: 'Islands', focus: ['geography/islands'] }] },
+      { scene: 'workshop', name: 'The Frontier', subject: 'Borders and size', aspects: [
+        { name: 'Landlocked and enclaved', focus: ['geography/landlocked-enclaves'] }, { name: 'Neighbours and borders', focus: ['geography/neighbours-borders', 'geography/borders'] }, { name: 'Area and size', focus: ['geography/area-size', 'geography/basics'] }] },
+      { scene: 'bench', name: 'The Metropolis', subject: 'Cities', aspects: [
+        { name: 'The biggest cities', focus: ['geography/city-size', 'geography/cities'] }, { name: 'Where cities stand', focus: ['geography/city-sites'] }, { name: 'Urban records', focus: ['geography/urban-records'] }] },
+      { scene: 'clinic', name: 'The Union', subject: 'The United States', aspects: [
+        { name: 'High and low points', focus: ['geography/us-extremes'] }, { name: 'States by the numbers', focus: ['geography/us-states'] }, { name: 'American nature', focus: ['geography/us-nature'] }] },
+      { scene: 'reactor', name: 'The Heat', subject: 'Deserts, climate and lines', aspects: [
+        { name: 'Deserts', focus: ['geography/deserts'] }, { name: 'Climate extremes', focus: ['geography/climate-extremes', 'geography/climate'] }, { name: 'Lines and zones', focus: ['geography/lines-zones'] }] },
+      { scene: 'orbit', name: 'The Planet', subject: 'Continents, poles and Earth', aspects: [
+        { name: 'The continents', focus: ['geography/continents'] }, { name: 'The poles', focus: ['geography/polar', 'geography/poles'] }, { name: 'Earth in numbers', focus: ['geography/earth-numbers', 'geography/physical'] }] },
+      { scene: 'fearlab', name: 'The Regions', subject: 'Regions of the world', aspects: [
+        { name: 'Europe in numbers', focus: ['geography/europe-numbers', 'geography/regions'] }, { name: 'Asia and Oceania', focus: ['geography/asia-oceania'] }, { name: 'Africa and the Americas', focus: ['geography/africa-americas', 'geography/continents'] }] },
+      { scene: 'paradox', name: 'The Records', subject: 'Records, people and maps', aspects: [
+        { name: 'Wonders and records', focus: ['geography/wonders-records'] }, { name: 'People and places', focus: ['geography/people-places', 'geography/population'] }, { name: 'Maps and measures', focus: ['geography/maps-measures'] }] },
+    ].map((c) => ({ ...c, focus: c.aspects.flatMap((a) => a.focus) })),
   },
   nature: {
     id: 'nature', name: 'The Wild', title: 'Nature', cats: ['nature'], color: '#7ddc7a', icon: 'owl', bossSprite: 'boss_overgrowth',

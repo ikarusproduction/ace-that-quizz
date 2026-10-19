@@ -137,7 +137,7 @@ class GameController {
         const pid = net.playerIdOf(m);
         const info = infos.get(m.id);
         for (const [id, n] of Object.entries(info?.seen ?? {})) if (typeof n === 'number' && this.ctx.byId.has(id)) seen[id] = (seen[id] ?? 0) + Math.min(n, 50);
-        for (const id of (info?.recent ?? []).slice(0, 150)) avoid.add(id);
+        for (const id of (info?.recent ?? []).slice(0, 2000)) avoid.add(id);
         return { id: pid, name: m.name, ownedCards: valid(info?.ownedCards), ownedHexes: info?.ownedHexes, hexDeck: info?.hexDeck };
       });
       this.state = createGame({
@@ -179,15 +179,38 @@ class GameController {
     this.lastProgress = Date.now();
     this.save();
     if (state.phase === 'finished') this.onFinished();
-    if (!calm) this.render();
+    if (calm === 'waiting') this.patchWaiting();
+    else if (!calm) this.render();
   }
 
-  /** True when only another player's puzzle changed the state and I am the one answering: do not rebuild my screen under my finger. */
+  /**
+   * When only a puzzle changed the state, nothing on screen needs rebuilding, so nobody's page moves:
+   *   'answering'  I am the one answering: leave my screen completely alone.
+   *   'waiting'    I am waiting: patch only the small parts that can change (chips, hexes, standings), never the whole page.
+   * Anything else that changed at the same time (a hex played, a deal, a new turn) is a real change and renders normally.
+   */
   puzzleOnly(prev, next) {
     if (!prev || !this.net || !next) return false;
-    const same = prev.phase === next.phase && prev.turn === next.turn && prev.qIndex === next.qIndex && prev.roundIndex === next.roundIndex;
-    const mine = next.players?.[next.turn]?.playerId === this.myPlayerId && (next.phase === 'stake' || next.phase === 'question');
-    return same && mine && (next.puzzleSeq ?? 0) !== (prev.puzzleSeq ?? 0);
+    const same = prev.phase === next.phase && prev.turn === next.turn && prev.qIndex === next.qIndex && prev.roundIndex === next.roundIndex
+      && (next.lastHex?.seq ?? 0) === (prev.lastHex?.seq ?? 0) && (next.lastDeal?.seq ?? 0) === (prev.lastDeal?.seq ?? 0);
+    if (!same || (next.puzzleSeq ?? 0) === (prev.puzzleSeq ?? 0) || !(next.phase === 'stake' || next.phase === 'question')) return false;
+    return next.players?.[next.turn]?.playerId === this.myPlayerId ? 'answering' : (this.waitRefs ? 'waiting' : false);
+  }
+
+  /** Update the parts of the waiting screen that a puzzle can change, in place. The puzzle panel, its keyboard and the scroll are untouched. */
+  patchWaiting() {
+    if (this.disposed || !this.waitRefs) return;
+    this.noticeHex();
+    const r = this.waitRefs;
+    r.hud.replaceChildren(...[this.hud()].flat());
+    r.hex.replaceChildren(...[this.hexBar('waiting')].flat().filter(Boolean));
+    r.standings.replaceChildren(...this.standingsRows());
+    this.waitGame?.refresh();
+  }
+
+  standingsRows() {
+    const s = this.s; const p = this.turnPlayer;
+    return [...s.players].sort((a, b) => b.chips + b.vault - (a.chips + a.vault)).map((pl) => h('div.panel.tight.row', { class: pl.playerId === p.playerId ? 'now' : '' }, avatar(this.profileOf(pl.playerId), 16), h('b.grow', {}, pl.name), h('span.pill', {}, sprite('chip', 16), pl.chips)));
   }
 
   /** A thin bar at the top while this phone is not connected; no re-render, so a question in progress is untouched. */
@@ -293,7 +316,7 @@ class GameController {
       const mode = params.mode === 'quick' || duelVariant ? 'solo' : params.mode;
       this.label = params.mode;
       const results = await app.repo.storage.getAll('results');
-      const avoidIds = mode === 'daily' ? [] : recentlySeenIds(results, ids);
+      const avoidIds = mode === 'daily' ? [] : recentlySeenIds(results, ids, { learns: players.map((p) => metaOf(p).learn) });
       this.state = createGame({
         mode,
         players: players.map((p) => ({ id: p.id, name: p.name, ownedCards: p.ownedCards, ownedHexes: metaOf(p).hexes.owned, hexDeck: metaOf(p).hexes.deck })),
@@ -380,6 +403,7 @@ class GameController {
       return false;
     }
     const calm = action.type === 'PUZZLE' && this.isMyTurn;
+    const calmWait = action.type === 'PUZZLE' && !calm && Boolean(this.waitRefs) && this.net && (this.s.phase === 'stake' || this.s.phase === 'question');
     this.state = res.state;
     if (action.type !== 'PUZZLE') this.lastProgress = Date.now(); // puzzles must not keep an idle turn alive
     if (this.net?.isHost) {
@@ -388,7 +412,8 @@ class GameController {
     }
     this.save();
     if (this.s.phase === 'finished') this.onFinished();
-    if (!calm) this.render();
+    if (calmWait) this.patchWaiting();
+    else if (!calm) this.render();
     return true;
   }
 
@@ -436,6 +461,7 @@ class GameController {
       this.topIfNew('wait:' + phase + ':' + (this.s.turn ?? ''));
       return;
     }
+    this.waitRefs = null;
     const body = {
       loadout: () => this.viewLoadout(),
       stake: () => this.viewStake(),
@@ -735,8 +761,10 @@ class GameController {
     const p = this.turnPlayer;
     const member = this.net.memberByPlayerId(p.playerId);
     const doing = s.phase === 'stake' ? 'is choosing a stake' : 'is answering';
+    const slot = (name, nodes) => (this.waitRefs[name] = h('div', { style: { display: 'contents' } }, nodes));
+    this.waitRefs = {};
     return [
-      this.hud(),
+      slot('hud', this.hud()),
       h('div.row.between', {}, h('span.tiny.dim', {}, this.roundTitle()), h('span.tiny.dim', {}, `Question ${s.qIndex + 1} of 5`)),
       h('div.panel.waiting-card', {},
         avatar(this.profileOf(p.playerId), 48),
@@ -744,9 +772,9 @@ class GameController {
         h('p.dim', {}, member && !member.connected ? 'lost connection… waiting for them to come back (the game moves on after a minute)' : `${doing}…`),
         h('div.tiny.mute', {}, 'The question stays hidden until everyone has answered.'),
       ),
-      this.hexBar('waiting'),
+      slot('hex', this.hexBar('waiting')),
       this.waitGameEl(),
-      h('div.standings', {}, [...s.players].sort((a, b) => b.chips + b.vault - (a.chips + a.vault)).map((pl) => h('div.panel.tight.row', { class: pl.playerId === p.playerId ? 'now' : '' }, avatar(this.profileOf(pl.playerId), 16), h('b.grow', {}, pl.name), h('span.pill', {}, sprite('chip', 16), pl.chips)))),
+      (this.waitRefs.standings = h('div.standings', {}, this.standingsRows())),
     ];
   }
 

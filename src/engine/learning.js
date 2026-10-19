@@ -141,6 +141,14 @@ export const misconception = (item) => Object.entries(item.wrongs).filter(([, n]
 
 /* ---------------------------------------------------------------- selection */
 
+/** A concept answered right does not come back for this long (a miss may: that is reinforcement). */
+export const COOLDOWN_MS = 48 * 3_600_000;
+/**
+ * True while a concept is resting: its last answer was right and it was given less than 48 hours ago. A concept that was missed
+ * (or is being relearned) is never resting, so reinforcement can return it straight away. Never true for a concept not yet asked.
+ */
+export const coolingDown = (it, now, ms = COOLDOWN_MS) => Boolean(it && it.state !== 'new' && it.state !== 'relearning' && it.last > 0 && it.recent?.at(-1) === 1 && now - it.last < ms);
+
 export const SESSION = {
   size: 5,
   newRatio: 0.4,            // share of new concepts when there are both new and due ones
@@ -160,7 +168,14 @@ export const SESSION = {
 export function selectSession({ items, pool, now, seed = 'seed', target = 1, mode = 'daily', size = SESSION.size, cfg = SESSION, exclude = [] }) {
   const rng = Rng.fromSeed(`${seed}:${mode}`);
   const ban = new Set(exclude);
-  const cand = pool.filter((c) => !ban.has(c.id)).map((c) => ({ c, it: items[c.id] ?? newItem(c.id, now) }));
+  let cand = pool.filter((c) => !ban.has(c.id)).map((c) => ({ c, it: items[c.id] ?? newItem(c.id, now) }));
+  // Variety: what was answered right in the last 48 hours rests, so a heavy player meets many different subjects.
+  // Only when too little else is left does the least recently asked of the resting ones fill the gap.
+  const resting = cand.filter((x) => coolingDown(x.it, now, cfg.cooldownMs ?? COOLDOWN_MS));
+  if (resting.length) {
+    const awake = cand.filter((x) => !resting.includes(x));
+    cand = awake.length >= size ? awake : [...awake, ...resting.sort((a, b) => a.it.last - b.it.last || (a.c.id < b.c.id ? -1 : 1)).slice(0, size - awake.length)];
+  }
   const buckets = { relearn: [], due: [], fragile: [], fresh: [], maintain: [], rest: [] };
   for (const x of cand) {
     const { it } = x;

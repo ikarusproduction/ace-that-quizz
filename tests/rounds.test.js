@@ -156,3 +156,15 @@ test('the same seed always builds the same round', async () => {
 test('a bank with an empty category fails loudly rather than producing a broken round', () => {
   assert.throws(() => build([], 'empty', 0), /no questions|empty/i);
 });
+
+test('pickQuestion prefers a rested question of a nearby difficulty over repeating one of the exact difficulty', async () => {
+  const { pickQuestion } = await import('../src/engine/rounds.js');
+  const { Rng } = await import('../src/engine/rng.js');
+  const pool = [{ id: 'q1', difficulty: 2 }, { id: 'q2', difficulty: 2 }, { id: 'q3', difficulty: 3 }];
+  for (let i = 0; i < 20; i++) {
+    const q = pickQuestion({ pool, rng: Rng.fromSeed(`p${i}`), difficulty: 2, usedIds: new Set(), avoidIds: new Set(['q1', 'q2']) });
+    assert.equal(q.id, 'q3');
+  }
+  const none = pickQuestion({ pool, rng: Rng.fromSeed('x'), difficulty: 2, usedIds: new Set(), avoidIds: new Set(['q1', 'q2', 'q3']) });
+  assert.ok(none, 'when everything rests, a question is still asked');
+});

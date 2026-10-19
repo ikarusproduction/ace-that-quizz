@@ -354,18 +354,32 @@ export function missedQuestions(results, playerId, { limit = 30 } = {}) {
   return out;
 }
 
-/** Question ids a set of players has seen recently, newest first, used to avoid repeats. */
-export function recentlySeenIds(results, playerIds, { limit = 150 } = {}) {
+/** A question answered right is not asked again for this long. */
+export const COOLDOWN_MS = 48 * 3_600_000;
+const baseId = (id) => String(id).split('~')[0]; // a variant "sci-004~2" is the same question as "sci-004"
+
+/**
+ * Question ids that should rest: the latest answer of one of these players is right and less than 48 hours old, in the classic game
+ * (`results`) or in the learning record (`learns`: adventure, Train, Academy). A question that was last answered wrong is NOT here:
+ * it may come back for reinforcement. The caller treats the list as "avoid when you can", so a small category never runs dry.
+ */
+export function recentlySeenIds(results, playerIds, { now = Date.now(), windowMs = COOLDOWN_MS, learns = [] } = {}) {
   const ids = new Set(playerIds);
-  const seen = [];
-  const set = new Set();
-  for (const r of results.filter((x) => ids.has(x.playerId)).sort(byTime).reverse()) {
-    if (seen.length >= limit) break;
-    if (set.has(r.questionId)) continue;
-    set.add(r.questionId);
-    seen.push(r.questionId);
+  const latest = new Map(); // `${player}|${question}` -> the newest result
+  for (const r of results) {
+    if (!ids.has(r.playerId) || !(r.timestamp > 0)) continue;
+    const k = `${r.playerId}|${baseId(r.questionId)}`;
+    const old = latest.get(k);
+    if (!old || byTime(old, r) < 0) latest.set(k, r);
   }
-  return seen;
+  const out = new Set();
+  for (const r of latest.values()) if (r.correct && now - r.timestamp < windowMs) out.add(baseId(r.questionId));
+  for (const learn of learns) {
+    for (const [family, it] of Object.entries(learn?.items ?? {})) {
+      if (it && it.state !== 'new' && it.state !== 'relearning' && it.last > 0 && it.recent?.at(-1) === 1 && now - it.last < windowMs) out.add(baseId(family));
+    }
+  }
+  return [...out];
 }
 
 /** How many times each question was answered by these players (for least-seen picking). */

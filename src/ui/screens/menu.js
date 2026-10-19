@@ -40,7 +40,7 @@ export async function menuScreen(app) {
     packsWaiting ? h('button.btn.good.block', { type: 'button', onclick: () => go('hexes', { tab: 'packs' }) }, sprite('ink', 28), `${packsWaiting} hex pack${packsWaiting > 1 ? 's' : ''} to open`) : dailyReady && profiles.length ? h('button.btn.block', { type: 'button', onclick: () => go('hexes') }, sprite('ic_gift', 28), 'Daily pack ready') : null,
     h('div.menu', {},
       menuBtn('primary', 'star', 'Play', profiles.length ? 'boss rush · map · versus · daily' : 'start here', () => go('setup')),
-      menuBtn('', 'ic_compass', 'Adventure', profiles.length ? 'The Lab · 100 steps · bosses' : 'create a player first', () => go('adventure')),
+      menuBtn('', 'ic_compass', 'Adventure', profiles.length ? 'The Lab · The Atlas · 100 steps each' : 'create a player first', () => go('adventure')),
       menuBtn('', 'ic_book', 'Train', profiles.length ? 'daily · focus · weak spots · expedition' : 'create a player first', () => go('train')),
       menuBtn('', 'ic_trophy', "Champion's Academy", profiles.length ? 'rapid fire · clues · exam · the Champion' : 'create a player first', () => go('academy')),
       menuBtn('', 'radio', 'Online', 'friends on their own phones', () => go('online')),

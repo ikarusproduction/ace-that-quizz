@@ -37,9 +37,17 @@ export function append(el, children) {
  */
 export function mount(root, ...nodes) {
   const y = typeof window !== 'undefined' ? window.scrollY : 0;
+  // Hold the old height while the content is swapped, so the page can never shrink under the scroll position (which would clamp it),
+  // then let it go once the new content has laid out. Each player's scroll is their own: nothing another player does can move it.
+  const held = y > 0 && root.offsetHeight > 0 ? root.offsetHeight : 0;
+  if (held) root.style.minHeight = `${held}px`;
   root.replaceChildren();
   append(root, nodes);
   if (y > 0 && window.scrollY !== y) window.scrollTo(0, y);
+  if (held) {
+    const release = () => { root.style.minHeight = ''; if (y > 0 && Math.abs(window.scrollY - y) > 1 && document.documentElement.scrollHeight >= y + window.innerHeight) window.scrollTo(0, y); };
+    if (typeof requestAnimationFrame === 'function') requestAnimationFrame(() => requestAnimationFrame(release)); else release();
+  }
 }
 
 export const $ = (sel, root = document) => root.querySelector(sel);
