@@ -17,6 +17,10 @@ export function isFreshNews(q, now = Date.now()) {
 export const THEMES = {
   science: { label: 'Science', short: 'Science', sprite: 'science', group: 'Brain', match: (q) => q.category === 'science' },
   medicine: { label: 'Medicine & Health', short: 'Medicine', sprite: 'medicine', group: 'Brain', match: (q) => q.category === 'medicine' },
+  literature: { label: 'Literature & Language', short: 'Literature', sprite: 'arts', group: 'Brain', match: (q) => q.category === 'literature' },
+  mythology: { label: 'Mythology & Religions', short: 'Myth', sprite: 'history', group: 'Brain', match: (q) => q.category === 'mythology' },
+  philosophy: { label: 'Philosophy & Ideas', short: 'Philosophy', sprite: 'science', group: 'Brain', match: (q) => q.category === 'philosophy' },
+  politics: { label: 'Politics, Institutions & Economics', short: 'Politics', sprite: 'finance', group: 'Brain', match: (q) => q.category === 'politics' },
   history: { label: 'History', short: 'History', sprite: 'history', group: 'Brain', match: (q) => q.category === 'history' },
   geography: { label: 'Geography', short: 'Geo', sprite: 'geography', group: 'Brain', match: (q) => q.category === 'geography' },
   nature: { label: 'Nature & Animals', short: 'Nature', sprite: 'nature', group: 'Brain', match: (q) => q.category === 'nature' },

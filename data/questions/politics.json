@@ -1,0 +1,244 @@
+{
+ "category": "politics",
+ "review": "unreviewed",
+ "questions": [
+  {
+   "id": "pol-006",
+   "subcategory": "economics",
+   "difficulty": 1,
+   "question": "What does inflation measure?",
+   "choices": [
+    "The national debt",
+    "A general rise in prices",
+    "The exchange rate",
+    "The number of jobs"
+   ],
+   "answer": 1,
+   "explanation": "Inflation is the rate at which the general price level rises.",
+   "tags": [
+    "inflation"
+   ]
+  },
+  {
+   "id": "pol-003",
+   "subcategory": "eu-un",
+   "difficulty": 1,
+   "question": "Which currency is shared by many countries of the European Union?",
+   "choices": [
+    "The pound",
+    "The franc",
+    "The euro",
+    "The mark"
+   ],
+   "answer": 2,
+   "explanation": "Twenty EU countries use the euro as of 2023.",
+   "tags": [
+    "euro"
+   ]
+  },
+  {
+   "id": "pol-001",
+   "subcategory": "institutions",
+   "difficulty": 1,
+   "question": "Who is the head of state of France?",
+   "choices": [
+    "The Prime Minister",
+    "The Speaker of the National Assembly",
+    "The Mayor of Paris",
+    "The President of the Republic"
+   ],
+   "answer": 3,
+   "explanation": "The president is elected by direct universal suffrage.",
+   "tags": [
+    "fifth"
+   ]
+  },
+  {
+   "id": "pol-007",
+   "subcategory": "economics",
+   "difficulty": 2,
+   "question": "What does GDP measure?",
+   "choices": [
+    "The total value of its exports",
+    "The government's yearly budget",
+    "The total value of goods and services produced in a country",
+    "The savings of its citizens"
+   ],
+   "answer": 2,
+   "explanation": "GDP is the standard measure of the size of an economy.",
+   "tags": [
+    "gdp"
+   ]
+  },
+  {
+   "id": "pol-009",
+   "subcategory": "elections",
+   "difficulty": 2,
+   "question": "At what age can French citizens vote?",
+   "choices": [
+    "21",
+    "16",
+    "18",
+    "25"
+   ],
+   "answer": 2,
+   "explanation": "The voting age in France has been 18 since 1974.",
+   "tags": [
+    "voting"
+   ]
+  },
+  {
+   "id": "pol-004",
+   "subcategory": "eu-un",
+   "difficulty": 2,
+   "question": "How many permanent members does the UN Security Council have?",
+   "choices": [
+    "Five",
+    "Fifteen",
+    "Seven",
+    "Ten"
+   ],
+   "answer": 0,
+   "explanation": "The five are China, France, Russia, the United Kingdom and the United States.",
+   "tags": [
+    "un"
+   ]
+  },
+  {
+   "id": "pol-002",
+   "subcategory": "institutions",
+   "difficulty": 2,
+   "question": "What are the two chambers of the French Parliament?",
+   "choices": [
+    "The House of Commons and the House of Lords",
+    "The Chamber of Deputies and the Council",
+    "The National Assembly and the Senate",
+    "The Bundestag and the Bundesrat"
+   ],
+   "answer": 2,
+   "explanation": "The deputies sit in the National Assembly and the senators in the Senate.",
+   "tags": [
+    "parliament"
+   ]
+  },
+  {
+   "id": "pol-011",
+   "subcategory": "law",
+   "difficulty": 2,
+   "question": "Which legal code, enacted in 1804, shaped civil law in France and in many other countries?",
+   "choices": [
+    "The Code of Justinian",
+    "The Code of Hammurabi",
+    "Magna Carta",
+    "The Napoleonic Code"
+   ],
+   "answer": 3,
+   "explanation": "The Napoleonic Code is also called the Code civil des Français.",
+   "tags": [
+    "code"
+   ]
+  },
+  {
+   "id": "pol-008",
+   "subcategory": "economics",
+   "difficulty": 3,
+   "question": "Which Scottish economist wrote The Wealth of Nations and described the invisible hand?",
+   "choices": [
+    "John Maynard Keynes",
+    "David Ricardo",
+    "Karl Marx",
+    "Adam Smith"
+   ],
+   "answer": 3,
+   "explanation": "Smith argued that individuals pursuing their own interest can benefit society.",
+   "tags": [
+    "smith"
+   ]
+  },
+  {
+   "id": "pol-010",
+   "subcategory": "elections",
+   "difficulty": 3,
+   "question": "Which voting system, used for UK general elections, gives the seat to the candidate with the most votes in a constituency?",
+   "choices": [
+    "The single transferable vote",
+    "Proportional representation",
+    "The two-round system",
+    "First-past-the-post"
+   ],
+   "answer": 3,
+   "explanation": "The winner needs only the most votes, not a majority.",
+   "tags": [
+    "systems"
+   ]
+  },
+  {
+   "id": "pol-005",
+   "subcategory": "eu-un",
+   "difficulty": 3,
+   "question": "In which year was the Treaty of Rome, founding the European Economic Community, signed?",
+   "choices": [
+    "1973",
+    "1965",
+    "1957",
+    "1951"
+   ],
+   "answer": 2,
+   "explanation": "The treaty was signed on 25 March 1957 and took effect in 1958.",
+   "tags": [
+    "rome"
+   ]
+  },
+  {
+   "id": "pol-013",
+   "subcategory": "institutions",
+   "difficulty": 3,
+   "question": "Which court, sitting in Strasbourg, rules on cases under the European Convention on Human Rights?",
+   "choices": [
+    "The International Criminal Court",
+    "The Court of Justice of the European Union",
+    "The European Court of Human Rights",
+    "The International Court of Justice"
+   ],
+   "answer": 2,
+   "explanation": "The ECHR belongs to the Council of Europe, not the EU.",
+   "tags": [
+    "courts"
+   ]
+  },
+  {
+   "id": "pol-012",
+   "subcategory": "law",
+   "difficulty": 3,
+   "question": "In which year did the UN General Assembly adopt the Universal Declaration of Human Rights?",
+   "choices": [
+    "1950",
+    "1948",
+    "1966",
+    "1945"
+   ],
+   "answer": 1,
+   "explanation": "It was adopted on 10 December 1948.",
+   "tags": [
+    "rights"
+   ]
+  },
+  {
+   "id": "pol-014",
+   "subcategory": "economics",
+   "difficulty": 4,
+   "question": "Which economist's 1936 General Theory argued that governments should boost demand during a slump?",
+   "choices": [
+    "Friedrich Hayek",
+    "Milton Friedman",
+    "Adam Smith",
+    "John Maynard Keynes"
+   ],
+   "answer": 3,
+   "explanation": "Keynes argued that public spending can offset a fall in private demand.",
+   "tags": [
+    "keynes"
+   ]
+  }
+ ]
+}

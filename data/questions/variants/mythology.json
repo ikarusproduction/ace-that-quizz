@@ -1,0 +1,483 @@
+{
+ "category": "mythology",
+ "review": "unreviewed",
+ "note": "Difficulty ladders: unreviewed.",
+ "families": [
+  {
+   "id": "myth-006",
+   "ask": {
+    "1": "Purpose",
+    "2": "The builder",
+    "3": "The period"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which pharaoh built the Great Pyramid of Giza?",
+     "choices": [
+      "Tutankhamun",
+      "Akhenaten",
+      "Ramses II",
+      "Khufu"
+     ],
+     "answer": 3,
+     "explanation": "Khufu reigned in the Fourth Dynasty."
+    },
+    {
+     "level": 3,
+     "question": "In which period of Egyptian history were the Giza pyramids built?",
+     "choices": [
+      "The Ptolemaic period",
+      "The Middle Kingdom",
+      "The Old Kingdom",
+      "The New Kingdom"
+     ],
+     "answer": 2,
+     "explanation": "The Giza pyramids date from about 2600 to 2500 BC."
+    }
+   ]
+  },
+  {
+   "id": "myth-001",
+   "ask": {
+    "1": "The king",
+    "2": "The home",
+    "3": "The Roman name"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "On which mountain did the twelve Olympian gods live?",
+     "choices": [
+      "Mount Olympus",
+      "Mount Athos",
+      "Mount Etna",
+      "Mount Parnassus"
+     ],
+     "answer": 0,
+     "explanation": "Mount Olympus is the highest mountain in Greece."
+    },
+    {
+     "level": 3,
+     "question": "What is the Roman name for Zeus?",
+     "choices": [
+      "Mars",
+      "Neptune",
+      "Jupiter",
+      "Saturn"
+     ],
+     "answer": 2,
+     "explanation": "The Romans identified Zeus with Jupiter, Poseidon with Neptune and Hades with Pluto."
+    }
+   ]
+  },
+  {
+   "id": "myth-003",
+   "ask": {
+    "1": "The beast",
+    "2": "The hero",
+    "3": "The builder"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Who killed the Minotaur in the labyrinth?",
+     "choices": [
+      "Jason",
+      "Heracles",
+      "Theseus",
+      "Perseus"
+     ],
+     "answer": 2,
+     "explanation": "Theseus found his way out with the help of Ariadne's thread."
+    },
+    {
+     "level": 3,
+     "question": "Who built the labyrinth that held the Minotaur?",
+     "choices": [
+      "Hephaestus",
+      "Daedalus",
+      "Icarus",
+      "Minos"
+     ],
+     "answer": 1,
+     "explanation": "Daedalus built it for King Minos of Crete."
+    }
+   ]
+  },
+  {
+   "id": "myth-004",
+   "ask": {
+    "1": "The hammer",
+    "2": "The chief",
+    "3": "The world tree"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Who is the chief of the Norse gods and ruler of Asgard?",
+     "choices": [
+      "Odin",
+      "Heimdall",
+      "Freyr",
+      "Tyr"
+     ],
+     "answer": 0,
+     "explanation": "Odin is the Allfather."
+    },
+    {
+     "level": 3,
+     "question": "Which great tree connects the Nine Worlds in Norse cosmology?",
+     "choices": [
+      "Ragnarök",
+      "Asgard",
+      "Bifröst",
+      "Yggdrasil"
+     ],
+     "answer": 3,
+     "explanation": "Bifröst is the rainbow bridge, while Yggdrasil is the world tree."
+    }
+   ]
+  },
+  {
+   "id": "myth-007",
+   "ask": {
+    "1": "The god",
+    "2": "The jackal",
+    "3": "The wife"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Egyptian god has the head of a jackal and is linked to mummification?",
+     "choices": [
+      "Anubis",
+      "Horus",
+      "Bastet",
+      "Sobek"
+     ],
+     "answer": 0,
+     "explanation": "Anubis oversaw embalming and guided the dead."
+    },
+    {
+     "level": 3,
+     "question": "Which Egyptian goddess, wife of Osiris, restored him and gave birth to Horus?",
+     "choices": [
+      "Isis",
+      "Hathor",
+      "Sekhmet",
+      "Nut"
+     ],
+     "answer": 0,
+     "explanation": "Isis gathered the pieces of Osiris and revived him long enough to conceive Horus."
+    }
+   ]
+  },
+  {
+   "id": "myth-011",
+   "ask": {
+    "1": "Perrault",
+    "2": "Red Riding Hood",
+    "3": "Grimm"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which tale features a girl in a red cloak and a wolf?",
+     "choices": [
+      "Little Red Riding Hood",
+      "Rapunzel",
+      "Hansel and Gretel",
+      "Snow White"
+     ],
+     "answer": 0,
+     "explanation": "Perrault and the Grimms both told the story."
+    },
+    {
+     "level": 3,
+     "question": "Which two brothers collected German folk tales published from 1812?",
+     "choices": [
+      "The Brothers Humboldt",
+      "The Brothers Mann",
+      "The Brothers Schlegel",
+      "The Brothers Grimm"
+     ],
+     "answer": 3,
+     "explanation": "Jacob and Wilhelm Grimm published Children's and Household Tales."
+    }
+   ]
+  },
+  {
+   "id": "myth-002",
+   "ask": {
+    "1": "The horse",
+    "2": "The devisor",
+    "3": "The warning"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In the myth, what was hidden inside the giant wooden horse?",
+     "choices": [
+      "Greek soldiers",
+      "Trojan spies",
+      "Weapons only",
+      "Treasure"
+     ],
+     "answer": 0,
+     "explanation": "Greek warriors waited inside until night and opened the gates of Troy."
+    },
+    {
+     "level": 3,
+     "question": "Which Trojan priest warned against taking the horse into the city and was killed by sea serpents?",
+     "choices": [
+      "Aeneas",
+      "Priam",
+      "Hector",
+      "Laocoön"
+     ],
+     "answer": 3,
+     "explanation": "Virgil's Aeneid tells that Laocoön warned the Trojans and was then killed with his sons."
+    }
+   ]
+  },
+  {
+   "id": "myth-008",
+   "ask": {
+    "1": "The texts",
+    "2": "The gods",
+    "3": "The language"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which religion has Brahma, Vishnu and Shiva among its major deities?",
+     "choices": [
+      "Buddhism",
+      "Taoism",
+      "Hinduism",
+      "Shinto"
+     ],
+     "answer": 2,
+     "explanation": "Brahma, Vishnu and Shiva are the Hindu trimurti."
+    },
+    {
+     "level": 3,
+     "question": "In which ancient language were the Vedas composed?",
+     "choices": [
+      "Tamil",
+      "Vedic Sanskrit",
+      "Avestan",
+      "Pali"
+     ],
+     "answer": 1,
+     "explanation": "The Vedas were composed in an early form of Sanskrit."
+    }
+   ]
+  },
+  {
+   "id": "myth-010",
+   "ask": {
+    "1": "The Quran",
+    "2": "The Torah",
+    "3": "The Gospels"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What is the holy book of Islam?",
+     "choices": [
+      "The Quran",
+      "The Tripitaka",
+      "The Torah",
+      "The Vedas"
+     ],
+     "answer": 0,
+     "explanation": "Muslims believe the Quran was revealed to the Prophet Muhammad."
+    },
+    {
+     "level": 3,
+     "question": "Which part of the Christian Bible contains the four Gospels?",
+     "choices": [
+      "The New Testament",
+      "The Old Testament",
+      "The Apocrypha",
+      "The Pentateuch"
+     ],
+     "answer": 0,
+     "explanation": "Matthew, Mark, Luke and John open the New Testament."
+    }
+   ]
+  },
+  {
+   "id": "myth-012",
+   "ask": {
+    "1": "Prague",
+    "2": "The material",
+    "3": "The rabbi"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In Jewish folklore, a golem is a figure made of what?",
+     "choices": [
+      "Glass",
+      "Clay",
+      "Wax",
+      "Feathers"
+     ],
+     "answer": 1,
+     "explanation": "The golem is an artificial being shaped from clay or mud."
+    },
+    {
+     "level": 2,
+     "question": "With which city is the legend of the golem most associated?",
+     "choices": [
+      "Vienna",
+      "Prague",
+      "Budapest",
+      "Kraków"
+     ],
+     "answer": 1,
+     "explanation": "The tale is linked to the Jewish quarter of Prague."
+    }
+   ]
+  },
+  {
+   "id": "myth-013",
+   "ask": {
+    "1": "The hero",
+    "2": "The monster",
+    "3": "The last labour"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which hero is known for performing twelve labours?",
+     "choices": [
+      "Perseus",
+      "Heracles",
+      "Odysseus",
+      "Achilles"
+     ],
+     "answer": 1,
+     "explanation": "The Romans called him Hercules."
+    },
+    {
+     "level": 2,
+     "question": "Which many-headed monster did Heracles slay in the second labour?",
+     "choices": [
+      "Scylla",
+      "Medusa",
+      "The Lernaean Hydra",
+      "The Chimera"
+     ],
+     "answer": 2,
+     "explanation": "The Hydra grew new heads when one was cut off."
+    }
+   ]
+  },
+  {
+   "id": "myth-014",
+   "ask": {
+    "1": "Atlas",
+    "2": "Fire",
+    "3": "Father of Zeus"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Titan stole fire for humanity?",
+     "choices": [
+      "Cronus",
+      "Prometheus",
+      "Atlas",
+      "Epimetheus"
+     ],
+     "answer": 1,
+     "explanation": "Zeus chained Prometheus to a rock as punishment."
+    },
+    {
+     "level": 2,
+     "question": "Which Titan was the father of Zeus and ruled before him?",
+     "choices": [
+      "Hyperion",
+      "Uranus",
+      "Atlas",
+      "Cronus"
+     ],
+     "answer": 3,
+     "explanation": "Cronus overthrew Uranus and was in turn overthrown by Zeus."
+    }
+   ]
+  },
+  {
+   "id": "myth-005",
+   "ask": {
+    "1": "The wolf",
+    "2": "The name",
+    "3": "The serpent"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What name is given to the foretold battle and destruction of the gods in Norse mythology?",
+     "choices": [
+      "Bifröst",
+      "Ragnarök",
+      "Valhalla",
+      "Niflheim"
+     ],
+     "answer": 1,
+     "explanation": "Ragnarök means fate of the gods."
+    },
+    {
+     "level": 2,
+     "question": "Which serpent encircling the world fights Thor at Ragnarök?",
+     "choices": [
+      "Jörmungandr",
+      "Fenrir",
+      "Níðhöggr",
+      "Fafnir"
+     ],
+     "answer": 0,
+     "explanation": "Thor kills Jörmungandr but dies from its venom."
+    }
+   ]
+  },
+  {
+   "id": "myth-009",
+   "ask": {
+    "1": "The title",
+    "2": "The founder",
+    "3": "The birthplace"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Who founded Buddhism?",
+     "choices": [
+      "Laozi",
+      "Confucius",
+      "Siddhartha Gautama",
+      "Muhammad"
+     ],
+     "answer": 2,
+     "explanation": "He lived in northern India roughly 2,500 years ago."
+    },
+    {
+     "level": 2,
+     "question": "In which modern country is Lumbini, the traditional birthplace of the Buddha?",
+     "choices": [
+      "Thailand",
+      "Nepal",
+      "Sri Lanka",
+      "India"
+     ],
+     "answer": 1,
+     "explanation": "Lumbini lies in southern Nepal."
+    }
+   ]
+  }
+ ]
+}

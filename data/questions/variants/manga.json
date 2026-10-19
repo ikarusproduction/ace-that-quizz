@@ -4,36 +4,70 @@
  "note": "Difficulty ladders: the original question keeps its own level, these are the other levels. Unreviewed.",
  "families": [
   {
-   "id": "man-001",
+   "id": "man-004",
    "ask": {
-    "1": "Hero",
-    "2": "Straw Hat",
-    "3": "Dream"
+    "1": "Partner",
+    "2": "Pikachu",
+    "3": "Type"
    },
    "variants": [
     {
      "level": 2,
-     "question": "What is Luffy's dream in One Piece?",
+     "question": "What type is Pikachu?",
      "choices": [
-      "To be the strongest swordsman",
-      "To become the Hokage",
-      "To become the Pirate King",
-      "To find the Dragon Balls"
+      "Fire",
+      "Grass",
+      "Water",
+      "Electric"
      ],
-     "answer": 2,
-     "explanation": "Luffy wants to be the Pirate King."
+     "answer": 3,
+     "explanation": "Pikachu is an Electric type."
     },
     {
      "level": 3,
-     "question": "Which manga artist created One Piece?",
+     "question": "Which Pokemon does Pikachu evolve into?",
      "choices": [
-      "Masashi Kishimoto",
-      "Tite Kubo",
-      "Akira Toriyama",
-      "Eiichiro Oda"
+      "Plusle",
+      "Raichu",
+      "Jolteon",
+      "Pichu"
      ],
-     "answer": 3,
-     "explanation": "Eiichiro Oda started One Piece in 1997."
+     "answer": 1,
+     "explanation": "Pikachu evolves into Raichu."
+    }
+   ]
+  },
+  {
+   "id": "man-007",
+   "ask": {
+    "1": "Studio",
+    "2": "Spirited Away",
+    "3": "Founder"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which Studio Ghibli co-founder directed Spirited Away?",
+     "choices": [
+      "Mamoru Hosoda",
+      "Hayao Miyazaki",
+      "Makoto Shinkai",
+      "Isao Takahata"
+     ],
+     "answer": 1,
+     "explanation": "Miyazaki directed it."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Spirited Away win the Oscar for Best Animated Feature?",
+     "choices": [
+      "2003",
+      "2007",
+      "2010",
+      "1999"
+     ],
+     "answer": 0,
+     "explanation": "It won at the 2003 ceremony."
     }
    ]
   },
@@ -72,6 +106,40 @@
    ]
   },
   {
+   "id": "man-001",
+   "ask": {
+    "1": "Hero",
+    "2": "Straw Hat",
+    "3": "Dream"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is Luffy's dream in One Piece?",
+     "choices": [
+      "To be the strongest swordsman",
+      "To become the Hokage",
+      "To become the Pirate King",
+      "To find the Dragon Balls"
+     ],
+     "answer": 2,
+     "explanation": "Luffy wants to be the Pirate King."
+    },
+    {
+     "level": 3,
+     "question": "Which manga artist created One Piece?",
+     "choices": [
+      "Masashi Kishimoto",
+      "Tite Kubo",
+      "Akira Toriyama",
+      "Eiichiro Oda"
+     ],
+     "answer": 3,
+     "explanation": "Eiichiro Oda started One Piece in 1997."
+    }
+   ]
+  },
+  {
    "id": "man-003",
    "ask": {
     "1": "Goku",
@@ -102,40 +170,6 @@
      ],
      "answer": 2,
      "explanation": "Goku's Saiyan name is Kakarot."
-    }
-   ]
-  },
-  {
-   "id": "man-004",
-   "ask": {
-    "1": "Partner",
-    "2": "Pikachu",
-    "3": "Type"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "What type is Pikachu?",
-     "choices": [
-      "Fire",
-      "Grass",
-      "Water",
-      "Electric"
-     ],
-     "answer": 3,
-     "explanation": "Pikachu is an Electric type."
-    },
-    {
-     "level": 3,
-     "question": "Which Pokemon does Pikachu evolve into?",
-     "choices": [
-      "Plusle",
-      "Raichu",
-      "Jolteon",
-      "Pichu"
-     ],
-     "answer": 1,
-     "explanation": "Pikachu evolves into Raichu."
     }
    ]
   },
@@ -208,40 +242,6 @@
    ]
   },
   {
-   "id": "man-007",
-   "ask": {
-    "1": "Studio",
-    "2": "Spirited Away",
-    "3": "Founder"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "Which Studio Ghibli co-founder directed Spirited Away?",
-     "choices": [
-      "Mamoru Hosoda",
-      "Hayao Miyazaki",
-      "Makoto Shinkai",
-      "Isao Takahata"
-     ],
-     "answer": 1,
-     "explanation": "Miyazaki directed it."
-    },
-    {
-     "level": 3,
-     "question": "In which year did Spirited Away win the Oscar for Best Animated Feature?",
-     "choices": [
-      "2003",
-      "2007",
-      "2010",
-      "1999"
-     ],
-     "answer": 0,
-     "explanation": "It won at the 2003 ceremony."
-    }
-   ]
-  },
-  {
    "id": "man-008",
    "ask": {
     "1": "Punches",
@@ -272,6 +272,142 @@
      ],
      "answer": 1,
      "explanation": "Genos becomes his disciple."
+    }
+   ]
+  },
+  {
+   "id": "man-013",
+   "ask": {
+    "1": "Cat bus",
+    "2": "Totoro",
+    "3": "Studio"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Ghibli film features a large fluffy forest spirit?",
+     "choices": [
+      "Arrietty",
+      "My Neighbor Totoro",
+      "Porco Rosso",
+      "Ponyo"
+     ],
+     "answer": 1,
+     "explanation": "Totoro is the forest spirit."
+    },
+    {
+     "level": 3,
+     "question": "In which year was My Neighbor Totoro released in Japan?",
+     "choices": [
+      "1988",
+      "2005",
+      "1979",
+      "1997"
+     ],
+     "answer": 0,
+     "explanation": "It was released in April 1988."
+    }
+   ]
+  },
+  {
+   "id": "man-021",
+   "ask": {
+    "1": "Pokedex",
+    "2": "First generation",
+    "3": "Number"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Pokemon is number 25 in the Pokedex?",
+     "choices": [
+      "Pikachu",
+      "Bulbasaur",
+      "Charmander",
+      "Squirtle"
+     ],
+     "answer": 0,
+     "explanation": "Pikachu is number 25."
+    },
+    {
+     "level": 3,
+     "question": "Which Pokemon is number 151, the last of generation one?",
+     "choices": [
+      "Ditto",
+      "Mewtwo",
+      "Mew",
+      "Eevee"
+     ],
+     "answer": 2,
+     "explanation": "Mew is number 151."
+    }
+   ]
+  },
+  {
+   "id": "man-014",
+   "ask": {
+    "1": "Fan term",
+    "2": "Otaku",
+    "3": "Meaning"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What does 'manga' mean in the sense of Japanese comics?",
+     "choices": [
+      "Costumes",
+      "Comics",
+      "Songs",
+      "Cartoons for kids only"
+     ],
+     "answer": 1,
+     "explanation": "Manga means Japanese comics."
+    },
+    {
+     "level": 3,
+     "question": "What do you call the practice of dressing as an anime character?",
+     "choices": [
+      "Cosplay",
+      "Kabuki",
+      "Ikebana",
+      "Karaoke"
+     ],
+     "answer": 0,
+     "explanation": "Cosplay is costume play."
+    }
+   ]
+  },
+  {
+   "id": "man-022",
+   "ask": {
+    "1": "Word",
+    "2": "Cute",
+    "3": "Meaning"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What does 'sensei' mean in Japanese?",
+     "choices": [
+      "Student",
+      "Teacher",
+      "Enemy",
+      "Friend"
+     ],
+     "answer": 1,
+     "explanation": "Sensei means teacher."
+    },
+    {
+     "level": 3,
+     "question": "What does 'senpai' mean in Japanese?",
+     "choices": [
+      "A neighbour",
+      "An upperclassman or senior",
+      "A rival",
+      "A younger student"
+     ],
+     "answer": 1,
+     "explanation": "Senpai is a senior."
     }
    ]
   },
@@ -412,74 +548,6 @@
    ]
   },
   {
-   "id": "man-013",
-   "ask": {
-    "1": "Cat bus",
-    "2": "Totoro",
-    "3": "Studio"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which Ghibli film features a large fluffy forest spirit?",
-     "choices": [
-      "Arrietty",
-      "My Neighbor Totoro",
-      "Porco Rosso",
-      "Ponyo"
-     ],
-     "answer": 1,
-     "explanation": "Totoro is the forest spirit."
-    },
-    {
-     "level": 3,
-     "question": "In which year was My Neighbor Totoro released in Japan?",
-     "choices": [
-      "1988",
-      "2005",
-      "1979",
-      "1997"
-     ],
-     "answer": 0,
-     "explanation": "It was released in April 1988."
-    }
-   ]
-  },
-  {
-   "id": "man-014",
-   "ask": {
-    "1": "Fan term",
-    "2": "Otaku",
-    "3": "Meaning"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "What does 'manga' mean in the sense of Japanese comics?",
-     "choices": [
-      "Costumes",
-      "Comics",
-      "Songs",
-      "Cartoons for kids only"
-     ],
-     "answer": 1,
-     "explanation": "Manga means Japanese comics."
-    },
-    {
-     "level": 3,
-     "question": "What do you call the practice of dressing as an anime character?",
-     "choices": [
-      "Cosplay",
-      "Kabuki",
-      "Ikebana",
-      "Karaoke"
-     ],
-     "answer": 0,
-     "explanation": "Cosplay is costume play."
-    }
-   ]
-  },
-  {
    "id": "man-015",
    "ask": {
     "1": "Brothers",
@@ -544,74 +612,6 @@
      ],
      "answer": 3,
      "explanation": "He swallows Sukuna's finger."
-    }
-   ]
-  },
-  {
-   "id": "man-017",
-   "ask": {
-    "1": "Sport",
-    "2": "Haikyu",
-    "3": "Team"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "In which sport do players hit a ball over a net with their hands in a team of six?",
-     "choices": [
-      "Tennis",
-      "Volleyball",
-      "Baseball",
-      "Handball"
-     ],
-     "answer": 1,
-     "explanation": "Volleyball is played with six per side."
-    },
-    {
-     "level": 3,
-     "question": "Which high school does Hinata play for in Haikyu!!?",
-     "choices": [
-      "Nekoma",
-      "Aoba Johsai",
-      "Karasuno",
-      "Shiratorizawa"
-     ],
-     "answer": 2,
-     "explanation": "Hinata joins Karasuno."
-    }
-   ]
-  },
-  {
-   "id": "man-018",
-   "ask": {
-    "1": "Sport",
-    "2": "Slam Dunk",
-    "3": "Hero"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which sport features hoops and dunks?",
-     "choices": [
-      "Football",
-      "Tennis",
-      "Basketball",
-      "Baseball"
-     ],
-     "answer": 2,
-     "explanation": "Basketball uses hoops."
-    },
-    {
-     "level": 3,
-     "question": "Who is the red-haired rookie in Slam Dunk?",
-     "choices": [
-      "Hisashi Mitsui",
-      "Hanamichi Sakuragi",
-      "Ryota Miyagi",
-      "Kaede Rukawa"
-     ],
-     "answer": 1,
-     "explanation": "Sakuragi is the red-haired lead."
     }
    ]
   },
@@ -684,74 +684,6 @@
    ]
   },
   {
-   "id": "man-021",
-   "ask": {
-    "1": "Pokedex",
-    "2": "First generation",
-    "3": "Number"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which Pokemon is number 25 in the Pokedex?",
-     "choices": [
-      "Pikachu",
-      "Bulbasaur",
-      "Charmander",
-      "Squirtle"
-     ],
-     "answer": 0,
-     "explanation": "Pikachu is number 25."
-    },
-    {
-     "level": 3,
-     "question": "Which Pokemon is number 151, the last of generation one?",
-     "choices": [
-      "Ditto",
-      "Mewtwo",
-      "Mew",
-      "Eevee"
-     ],
-     "answer": 2,
-     "explanation": "Mew is number 151."
-    }
-   ]
-  },
-  {
-   "id": "man-022",
-   "ask": {
-    "1": "Word",
-    "2": "Cute",
-    "3": "Meaning"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "What does 'sensei' mean in Japanese?",
-     "choices": [
-      "Student",
-      "Teacher",
-      "Enemy",
-      "Friend"
-     ],
-     "answer": 1,
-     "explanation": "Sensei means teacher."
-    },
-    {
-     "level": 3,
-     "question": "What does 'senpai' mean in Japanese?",
-     "choices": [
-      "A neighbour",
-      "An upperclassman or senior",
-      "A rival",
-      "A younger student"
-     ],
-     "answer": 1,
-     "explanation": "Senpai is a senior."
-    }
-   ]
-  },
-  {
    "id": "man-023",
    "ask": {
     "1": "Goku",
@@ -786,138 +718,70 @@
    ]
   },
   {
-   "id": "man-024",
+   "id": "man-017",
    "ask": {
-    "1": "Best-seller",
-    "2": "One Piece",
-    "3": "Sales"
+    "1": "Sport",
+    "2": "Haikyu",
+    "3": "Team"
    },
    "variants": [
     {
      "level": 1,
-     "question": "Which manga is about a rubber-bodied pirate named Luffy?",
+     "question": "In which sport do players hit a ball over a net with their hands in a team of six?",
      "choices": [
-      "Bleach",
-      "Naruto",
-      "One Piece",
-      "Fairy Tail"
+      "Tennis",
+      "Volleyball",
+      "Baseball",
+      "Handball"
      ],
-     "answer": 2,
-     "explanation": "It is One Piece."
+     "answer": 1,
+     "explanation": "Volleyball is played with six per side."
     },
     {
-     "level": 2,
-     "question": "About how many copies has One Piece sold worldwide?",
+     "level": 3,
+     "question": "Which high school does Hinata play for in Haikyu!!?",
      "choices": [
-      "About 100 million",
-      "About 10 million",
-      "More than 500 million",
-      "About 50 million"
+      "Nekoma",
+      "Aoba Johsai",
+      "Karasuno",
+      "Shiratorizawa"
      ],
      "answer": 2,
-     "explanation": "It has passed 500 million copies."
+     "explanation": "Hinata joins Karasuno."
     }
    ]
   },
   {
-   "id": "man-025",
+   "id": "man-018",
    "ask": {
-    "1": "Korean comics",
-    "2": "Manhwa",
-    "3": "Chinese comics"
+    "1": "Sport",
+    "2": "Slam Dunk",
+    "3": "Hero"
    },
    "variants": [
     {
      "level": 1,
-     "question": "What do you call Japanese comics?",
+     "question": "Which sport features hoops and dunks?",
      "choices": [
-      "Webtoon",
-      "Manhwa",
-      "Manga",
-      "Manhua"
+      "Football",
+      "Tennis",
+      "Basketball",
+      "Baseball"
      ],
      "answer": 2,
-     "explanation": "Japanese comics are manga."
+     "explanation": "Basketball uses hoops."
     },
     {
-     "level": 2,
-     "question": "What do you call Chinese comics?",
+     "level": 3,
+     "question": "Who is the red-haired rookie in Slam Dunk?",
      "choices": [
-      "Manhwa",
-      "Anime",
-      "Manhua",
-      "Manga"
+      "Hisashi Mitsui",
+      "Hanamichi Sakuragi",
+      "Ryota Miyagi",
+      "Kaede Rukawa"
      ],
-     "answer": 2,
-     "explanation": "Manhua are Chinese comics."
-    }
-   ]
-  },
-  {
-   "id": "man-026",
-   "ask": {
-    "1": "Creator",
-    "2": "Astro Boy",
-    "3": "Title"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which robot boy is the hero of a classic manga by Osamu Tezuka?",
-     "choices": [
-      "Doraemon",
-      "Mazinger Z",
-      "Gundam",
-      "Astro Boy"
-     ],
-     "answer": 3,
-     "explanation": "Astro Boy is Tezuka's hero."
-    },
-    {
-     "level": 2,
-     "question": "In which decade did Astro Boy first appear?",
-     "choices": [
-      "The 1970s",
-      "The 1930s",
-      "The 1950s",
-      "The 1990s"
-     ],
-     "answer": 2,
-     "explanation": "Astro Boy began in 1952."
-    }
-   ]
-  },
-  {
-   "id": "man-027",
-   "ask": {
-    "1": "Magazine",
-    "2": "Shonen Jump",
-    "3": "Publisher"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which magazine published Dragon Ball?",
-     "choices": [
-      "Nakayoshi",
-      "Ribon",
-      "Weekly Shonen Magazine",
-      "Weekly Shonen Jump"
-     ],
-     "answer": 3,
-     "explanation": "Dragon Ball ran in Weekly Shonen Jump."
-    },
-    {
-     "level": 2,
-     "question": "Which publisher owns Weekly Shonen Jump?",
-     "choices": [
-      "Shueisha",
-      "Kadokawa",
-      "Shogakukan",
-      "Kodansha"
-     ],
-     "answer": 0,
-     "explanation": "Shueisha publishes it."
+     "answer": 1,
+     "explanation": "Sakuragi is the red-haired lead."
     }
    ]
   },
@@ -990,40 +854,6 @@
    ]
   },
   {
-   "id": "man-030",
-   "ask": {
-    "1": "Protagonist",
-    "2": "Chainsaw Man",
-    "3": "Devil"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "In Chainsaw Man, what does Denji transform into?",
-     "choices": [
-      "A dragon",
-      "A giant fox",
-      "A robot",
-      "A chainsaw devil hybrid"
-     ],
-     "answer": 3,
-     "explanation": "Denji merges with Pochita."
-    },
-    {
-     "level": 2,
-     "question": "What is the name of the chainsaw devil that merges with Denji?",
-     "choices": [
-      "Aki",
-      "Makima",
-      "Pochita",
-      "Power"
-     ],
-     "answer": 2,
-     "explanation": "Pochita is the devil."
-    }
-   ]
-  },
-  {
    "id": "man-031",
    "ask": {
     "1": "Anime",
@@ -1092,6 +922,142 @@
    ]
   },
   {
+   "id": "man-025",
+   "ask": {
+    "1": "Korean comics",
+    "2": "Manhwa",
+    "3": "Chinese comics"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What do you call Japanese comics?",
+     "choices": [
+      "Webtoon",
+      "Manhwa",
+      "Manga",
+      "Manhua"
+     ],
+     "answer": 2,
+     "explanation": "Japanese comics are manga."
+    },
+    {
+     "level": 2,
+     "question": "What do you call Chinese comics?",
+     "choices": [
+      "Manhwa",
+      "Anime",
+      "Manhua",
+      "Manga"
+     ],
+     "answer": 2,
+     "explanation": "Manhua are Chinese comics."
+    }
+   ]
+  },
+  {
+   "id": "man-026",
+   "ask": {
+    "1": "Creator",
+    "2": "Astro Boy",
+    "3": "Title"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which robot boy is the hero of a classic manga by Osamu Tezuka?",
+     "choices": [
+      "Doraemon",
+      "Mazinger Z",
+      "Gundam",
+      "Astro Boy"
+     ],
+     "answer": 3,
+     "explanation": "Astro Boy is Tezuka's hero."
+    },
+    {
+     "level": 2,
+     "question": "In which decade did Astro Boy first appear?",
+     "choices": [
+      "The 1970s",
+      "The 1930s",
+      "The 1950s",
+      "The 1990s"
+     ],
+     "answer": 2,
+     "explanation": "Astro Boy began in 1952."
+    }
+   ]
+  },
+  {
+   "id": "man-024",
+   "ask": {
+    "1": "Best-seller",
+    "2": "One Piece",
+    "3": "Sales"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which manga is about a rubber-bodied pirate named Luffy?",
+     "choices": [
+      "Bleach",
+      "Naruto",
+      "One Piece",
+      "Fairy Tail"
+     ],
+     "answer": 2,
+     "explanation": "It is One Piece."
+    },
+    {
+     "level": 2,
+     "question": "About how many copies has One Piece sold worldwide?",
+     "choices": [
+      "About 100 million",
+      "About 10 million",
+      "More than 500 million",
+      "About 50 million"
+     ],
+     "answer": 2,
+     "explanation": "It has passed 500 million copies."
+    }
+   ]
+  },
+  {
+   "id": "man-027",
+   "ask": {
+    "1": "Magazine",
+    "2": "Shonen Jump",
+    "3": "Publisher"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which magazine published Dragon Ball?",
+     "choices": [
+      "Nakayoshi",
+      "Ribon",
+      "Weekly Shonen Magazine",
+      "Weekly Shonen Jump"
+     ],
+     "answer": 3,
+     "explanation": "Dragon Ball ran in Weekly Shonen Jump."
+    },
+    {
+     "level": 2,
+     "question": "Which publisher owns Weekly Shonen Jump?",
+     "choices": [
+      "Shueisha",
+      "Kadokawa",
+      "Shogakukan",
+      "Kodansha"
+     ],
+     "answer": 0,
+     "explanation": "Shueisha publishes it."
+    }
+   ]
+  },
+  {
    "id": "man-033",
    "ask": {
     "1": "Creator",
@@ -1122,6 +1088,40 @@
      ],
      "answer": 2,
      "explanation": "It was released in 1988."
+    }
+   ]
+  },
+  {
+   "id": "man-030",
+   "ask": {
+    "1": "Protagonist",
+    "2": "Chainsaw Man",
+    "3": "Devil"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In Chainsaw Man, what does Denji transform into?",
+     "choices": [
+      "A dragon",
+      "A giant fox",
+      "A robot",
+      "A chainsaw devil hybrid"
+     ],
+     "answer": 3,
+     "explanation": "Denji merges with Pochita."
+    },
+    {
+     "level": 2,
+     "question": "What is the name of the chainsaw devil that merges with Denji?",
+     "choices": [
+      "Aki",
+      "Makima",
+      "Pochita",
+      "Power"
+     ],
+     "answer": 2,
+     "explanation": "Pochita is the devil."
     }
    ]
   },
@@ -1228,40 +1228,6 @@
    ]
   },
   {
-   "id": "man-037",
-   "ask": {
-    "1": "Gon's father",
-    "2": "Hunter x Hunter",
-    "3": "Exam"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "In Hunter x Hunter, what is the hero's name?",
-     "choices": [
-      "Gon Freecss",
-      "Ichigo",
-      "Luffy",
-      "Naruto Uzumaki"
-     ],
-     "answer": 0,
-     "explanation": "Gon is the hero."
-    },
-    {
-     "level": 2,
-     "question": "What do Gon and his friends take at the start of Hunter x Hunter to become licensed adventurers?",
-     "choices": [
-      "The Chunin Exam",
-      "The Pirate Test",
-      "The Hunter Exam",
-      "The Soul Reaper Trial"
-     ],
-     "answer": 2,
-     "explanation": "They take the Hunter Exam."
-    }
-   ]
-  },
-  {
    "id": "man-038",
    "ask": {
     "1": "Creator",
@@ -1326,6 +1292,40 @@
      ],
      "answer": 1,
      "explanation": "The film by Mamoru Oshii came out in 1995."
+    }
+   ]
+  },
+  {
+   "id": "man-037",
+   "ask": {
+    "1": "Gon's father",
+    "2": "Hunter x Hunter",
+    "3": "Exam"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In Hunter x Hunter, what is the hero's name?",
+     "choices": [
+      "Gon Freecss",
+      "Ichigo",
+      "Luffy",
+      "Naruto Uzumaki"
+     ],
+     "answer": 0,
+     "explanation": "Gon is the hero."
+    },
+    {
+     "level": 2,
+     "question": "What do Gon and his friends take at the start of Hunter x Hunter to become licensed adventurers?",
+     "choices": [
+      "The Chunin Exam",
+      "The Pirate Test",
+      "The Hunter Exam",
+      "The Soul Reaper Trial"
+     ],
+     "answer": 2,
+     "explanation": "They take the Hunter Exam."
     }
    ]
   }

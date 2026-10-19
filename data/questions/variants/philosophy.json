@@ -1,0 +1,483 @@
+{
+ "category": "philosophy",
+ "review": "unreviewed",
+ "note": "Difficulty ladders: unreviewed.",
+ "families": [
+  {
+   "id": "phil-001",
+   "ask": {
+    "1": "Plato's teacher",
+    "2": "The death",
+    "3": "The method"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Socrates was sentenced to death in 399 BC by drinking what?",
+     "choices": [
+      "Wine",
+      "Opium",
+      "Hemlock",
+      "Mercury"
+     ],
+     "answer": 2,
+     "explanation": "The Athenian court condemned him for impiety and corrupting the young, and he drank hemlock."
+    },
+    {
+     "level": 3,
+     "question": "What is the Socratic method?",
+     "choices": [
+      "Proving theorems from axioms",
+      "Giving long lectures to students",
+      "Testing ideas by experiment",
+      "Asking probing questions to examine a person's beliefs"
+     ],
+     "answer": 3,
+     "explanation": "It is a way of exposing contradictions through dialogue."
+    }
+   ]
+  },
+  {
+   "id": "phil-011",
+   "ask": {
+    "1": "The movement",
+    "2": "The Encyclopédie",
+    "3": "Candide"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which Enlightenment writer edited the Encyclopédie with d'Alembert?",
+     "choices": [
+      "Jean-Jacques Rousseau",
+      "Marquis de Condorcet",
+      "Voltaire",
+      "Denis Diderot"
+     ],
+     "answer": 3,
+     "explanation": "The Encyclopédie was published between 1751 and 1772."
+    },
+    {
+     "level": 3,
+     "question": "Which Enlightenment writer wrote the satirical tale Candide in 1759?",
+     "choices": [
+      "Voltaire",
+      "Montesquieu",
+      "Denis Diderot",
+      "Jean-Jacques Rousseau"
+     ],
+     "answer": 0,
+     "explanation": "Candide mocks naive optimism."
+    }
+   ]
+  },
+  {
+   "id": "phil-002",
+   "ask": {
+    "1": "The tutor",
+    "2": "The student",
+    "3": "The school"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which student of Plato wrote the Nicomachean Ethics?",
+     "choices": [
+      "Epicurus",
+      "Zeno",
+      "Thales",
+      "Aristotle"
+     ],
+     "answer": 3,
+     "explanation": "The Nicomachean Ethics is Aristotle's main work on virtue and happiness."
+    },
+    {
+     "level": 3,
+     "question": "Which school did Aristotle found in Athens around 335 BC?",
+     "choices": [
+      "The Academy",
+      "The Lyceum",
+      "The Stoa",
+      "The Garden"
+     ],
+     "answer": 1,
+     "explanation": "Plato founded the Academy, Zeno the Stoa and Epicurus the Garden."
+    }
+   ]
+  },
+  {
+   "id": "phil-007",
+   "ask": {
+    "1": "The theory",
+    "2": "Bentham",
+    "3": "Mill"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which English thinker is regarded as the founder of utilitarianism?",
+     "choices": [
+      "John Locke",
+      "Thomas Hobbes",
+      "David Hume",
+      "Jeremy Bentham"
+     ],
+     "answer": 3,
+     "explanation": "Bentham set out the principle of utility in 1789."
+    },
+    {
+     "level": 3,
+     "question": "Which philosopher wrote the essay Utilitarianism, published in 1861?",
+     "choices": [
+      "John Stuart Mill",
+      "Peter Singer",
+      "Jeremy Bentham",
+      "Henry Sidgwick"
+     ],
+     "answer": 0,
+     "explanation": "Mill refined Bentham's theory by distinguishing higher and lower pleasures."
+    }
+   ]
+  },
+  {
+   "id": "phil-013",
+   "ask": {
+    "1": "The emperor",
+    "2": "The idea",
+    "3": "The slave"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which philosophy teaches calm acceptance of what we cannot control?",
+     "choices": [
+      "Scepticism",
+      "Hedonism",
+      "Cynicism",
+      "Stoicism"
+     ],
+     "answer": 3,
+     "explanation": "Stoics focus on what is in their power: their judgments and actions."
+    },
+    {
+     "level": 3,
+     "question": "Which former slave and Stoic teacher's Discourses were recorded by his student Arrian?",
+     "choices": [
+      "Epictetus",
+      "Plotinus",
+      "Zeno of Citium",
+      "Seneca"
+     ],
+     "answer": 0,
+     "explanation": "Epictetus taught in Nicopolis and left no writings of his own."
+    }
+   ]
+  },
+  {
+   "id": "phil-004",
+   "ask": {
+    "1": "The phrase",
+    "2": "Cartesian",
+    "3": "The book"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The adjective Cartesian refers to which philosopher?",
+     "choices": [
+      "René Descartes",
+      "John Locke",
+      "Georg Hegel",
+      "Immanuel Kant"
+     ],
+     "answer": 0,
+     "explanation": "Cartesian comes from Cartesius, the Latinised form of Descartes."
+    },
+    {
+     "level": 3,
+     "question": "In which 1637 work did Descartes first state Je pense, donc je suis?",
+     "choices": [
+      "Principles of Philosophy",
+      "Meditations on First Philosophy",
+      "The Passions of the Soul",
+      "Discourse on the Method"
+     ],
+     "answer": 3,
+     "explanation": "He wrote the Discourse in French and later put the idea in Latin."
+    }
+   ]
+  },
+  {
+   "id": "phil-006",
+   "ask": {
+    "1": "Zarathustra",
+    "2": "God is dead",
+    "3": "Superman"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which philosopher wrote that God is dead?",
+     "choices": [
+      "Friedrich Nietzsche",
+      "Charles Darwin",
+      "Karl Marx",
+      "Sigmund Freud"
+     ],
+     "answer": 0,
+     "explanation": "The phrase appears in The Gay Science and in Zarathustra."
+    },
+    {
+     "level": 3,
+     "question": "Which term in Nietzsche's work names a being who surpasses humanity by creating its own values?",
+     "choices": [
+      "The Zeitgeist",
+      "The Übermensch",
+      "The categorical imperative",
+      "Dasein"
+     ],
+     "answer": 1,
+     "explanation": "Übermensch is usually translated as overman or superman."
+    }
+   ]
+  },
+  {
+   "id": "phil-009",
+   "ask": {
+    "1": "The book",
+    "2": "The idea",
+    "3": "Locke"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The idea that government rests on an agreement among the governed is called what?",
+     "choices": [
+      "Separation of powers",
+      "Natural selection",
+      "The social contract",
+      "Divine right"
+     ],
+     "answer": 2,
+     "explanation": "Hobbes, Locke and Rousseau all developed social contract theories."
+    },
+    {
+     "level": 3,
+     "question": "Which English philosopher argued in his Two Treatises of Government (1689) for natural rights to life, liberty and property?",
+     "choices": [
+      "John Stuart Mill",
+      "Thomas Hobbes",
+      "John Locke",
+      "Edmund Burke"
+     ],
+     "answer": 2,
+     "explanation": "Locke's ideas influenced the American Declaration of Independence."
+    }
+   ]
+  },
+  {
+   "id": "phil-003",
+   "ask": {
+    "1": "The cave",
+    "2": "The academy",
+    "3": "The Republic"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which philosopher founded the Academy in Athens?",
+     "choices": [
+      "Aristotle",
+      "Zeno",
+      "Epicurus",
+      "Plato"
+     ],
+     "answer": 3,
+     "explanation": "Plato founded it around 387 BC."
+    },
+    {
+     "level": 2,
+     "question": "Which work by Plato describes an ideal city ruled by philosopher-kings?",
+     "choices": [
+      "Utopia",
+      "The Republic",
+      "The Politics",
+      "Leviathan"
+     ],
+     "answer": 1,
+     "explanation": "The Republic argues that the wisest should rule."
+    }
+   ]
+  },
+  {
+   "id": "phil-008",
+   "ask": {
+    "1": "The theory",
+    "2": "Kant",
+    "3": "The trolley"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Kant's ethics is an example of what kind of theory?",
+     "choices": [
+      "Utilitarian",
+      "Epicurean",
+      "Hedonistic",
+      "Deontological"
+     ],
+     "answer": 3,
+     "explanation": "Kant ties morality to duty and universal rules."
+    },
+    {
+     "level": 2,
+     "question": "The trolley problem is often used to contrast which two approaches?",
+     "choices": [
+      "Law versus custom",
+      "Consequences versus moral rules",
+      "Free will versus fate",
+      "Reason versus faith"
+     ],
+     "answer": 1,
+     "explanation": "Pulling the lever saves more lives, but doing harm may break a rule."
+    }
+   ]
+  },
+  {
+   "id": "phil-012",
+   "ask": {
+    "1": "Sartre",
+    "2": "Nobel",
+    "3": "The motto"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which French philosopher refused the Nobel Prize in Literature in 1964?",
+     "choices": [
+      "Maurice Merleau-Ponty",
+      "Albert Camus",
+      "Jean-Paul Sartre",
+      "Simone de Beauvoir"
+     ],
+     "answer": 2,
+     "explanation": "Sartre declined it, saying he did not want to be turned into an institution."
+    },
+    {
+     "level": 2,
+     "question": "Which phrase sums up Sartre's existentialism?",
+     "choices": [
+      "God is dead",
+      "Existence precedes essence",
+      "Know thyself",
+      "I think, therefore I am"
+     ],
+     "answer": 1,
+     "explanation": "Sartre argued that we first exist and then define ourselves through our choices."
+    }
+   ]
+  },
+  {
+   "id": "phil-005",
+   "ask": {
+    "1": "The duty",
+    "2": "The Critique",
+    "3": "The city"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which German philosopher wrote the Critique of Pure Reason?",
+     "choices": [
+      "Friedrich Nietzsche",
+      "Immanuel Kant",
+      "Karl Marx",
+      "Georg Hegel"
+     ],
+     "answer": 1,
+     "explanation": "The first Critique appeared in 1781."
+    },
+    {
+     "level": 2,
+     "question": "In which city did Kant spend nearly his whole life?",
+     "choices": [
+      "Weimar",
+      "Königsberg",
+      "Vienna",
+      "Berlin"
+     ],
+     "answer": 1,
+     "explanation": "Königsberg was then in East Prussia and is now Kaliningrad."
+    }
+   ]
+  },
+  {
+   "id": "phil-010",
+   "ask": {
+    "1": "The book",
+    "2": "Three powers",
+    "3": "The branches"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Into how many branches does the classic separation of powers divide government?",
+     "choices": [
+      "Four",
+      "Two",
+      "Five",
+      "Three"
+     ],
+     "answer": 3,
+     "explanation": "The classic model has three branches."
+    },
+    {
+     "level": 2,
+     "question": "The classic three powers are legislative, executive and what?",
+     "choices": [
+      "Judicial",
+      "Military",
+      "Fiscal",
+      "Electoral"
+     ],
+     "answer": 0,
+     "explanation": "Judicial power applies the laws through the courts."
+    }
+   ]
+  },
+  {
+   "id": "phil-014",
+   "ask": {
+    "1": "Induction",
+    "2": "The Treatise",
+    "3": "Empiricism"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Scottish philosopher wrote A Treatise of Human Nature?",
+     "choices": [
+      "David Hume",
+      "Adam Smith",
+      "Thomas Reid",
+      "Francis Hutcheson"
+     ],
+     "answer": 0,
+     "explanation": "Hume published the Treatise in 1739 and 1740."
+    },
+    {
+     "level": 2,
+     "question": "Empiricism holds that knowledge comes mainly from what?",
+     "choices": [
+      "Pure reason",
+      "Divine revelation",
+      "Sensory experience",
+      "Innate ideas"
+     ],
+     "answer": 2,
+     "explanation": "Locke, Berkeley and Hume are the classic British empiricists."
+    }
+   ]
+  }
+ ]
+}

@@ -12,6 +12,7 @@ import { rewardsScreen } from './ui/screens/rewards.js';
 import { hexesScreen } from './ui/screens/hexes.js';
 import { adventureScreen } from './ui/screens/adventure.js';
 import { trainScreen } from './ui/screens/train.js';
+import { academyScreen } from './ui/screens/academy.js';
 import { statsScreen } from './ui/screens/stats.js';
 import { settingsScreen } from './ui/screens/settings.js';
 import { loadConfig, ensureAccess, ACCESS_KEY } from './ui/gate.js';
@@ -32,6 +33,7 @@ register('rewards', rewardsScreen);
 register('hexes', hexesScreen);
 register('adventure', adventureScreen);
 register('train', trainScreen);
+register('academy', academyScreen);
 register('stats', statsScreen);
 register('settings', settingsScreen);
 

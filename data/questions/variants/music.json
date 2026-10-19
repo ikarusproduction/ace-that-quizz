@@ -4,40 +4,6 @@
  "note": "Difficulty ladders: the original question keeps its own level, these are the other levels. Unreviewed.",
  "families": [
   {
-   "id": "mus-001",
-   "ask": {
-    "1": "Band",
-    "2": "Song",
-    "3": "Singer"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "Who was the lead singer of Queen?",
-     "choices": [
-      "Robert Plant",
-      "Mick Jagger",
-      "Freddie Mercury",
-      "David Bowie"
-     ],
-     "answer": 2,
-     "explanation": "Freddie Mercury fronted Queen."
-    },
-    {
-     "level": 3,
-     "question": "On which 1975 album does 'Bohemian Rhapsody' appear?",
-     "choices": [
-      "News of the World",
-      "Sheer Heart Attack",
-      "A Night at the Opera",
-      "Jazz"
-     ],
-     "answer": 2,
-     "explanation": "It is on A Night at the Opera."
-    }
-   ]
-  },
-  {
    "id": "mus-002",
    "ask": {
     "1": "Guitar",
@@ -68,74 +34,6 @@
      ],
      "answer": 1,
      "explanation": "The low string is E."
-    }
-   ]
-  },
-  {
-   "id": "mus-003",
-   "ask": {
-    "1": "Queen of Pop",
-    "2": "Singer",
-    "3": "Madonna"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "Which Madonna hit begins with the words 'Like a' and ends in 'Virgin'?",
-     "choices": [
-      "Frozen",
-      "Vogue",
-      "Like a Virgin",
-      "Holiday"
-     ],
-     "answer": 2,
-     "explanation": "Like a Virgin is her 1984 hit."
-    },
-    {
-     "level": 3,
-     "question": "In which decade did Madonna release her debut album?",
-     "choices": [
-      "The 1990s",
-      "The 1960s",
-      "The 1980s",
-      "The 2000s"
-     ],
-     "answer": 2,
-     "explanation": "Her debut came out in 1983."
-    }
-   ]
-  },
-  {
-   "id": "mus-004",
-   "ask": {
-    "1": "Band",
-    "2": "Hey Jude",
-    "3": "Liverpool"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "In which English city did The Beatles form?",
-     "choices": [
-      "London",
-      "Birmingham",
-      "Liverpool",
-      "Manchester"
-     ],
-     "answer": 2,
-     "explanation": "The Beatles formed in Liverpool."
-    },
-    {
-     "level": 3,
-     "question": "Who wrote Hey Jude mainly, as a song for Julian Lennon?",
-     "choices": [
-      "Ringo Starr",
-      "John Lennon",
-      "Paul McCartney",
-      "George Harrison"
-     ],
-     "answer": 2,
-     "explanation": "McCartney wrote it."
     }
    ]
   },
@@ -174,6 +72,40 @@
    ]
   },
   {
+   "id": "mus-003",
+   "ask": {
+    "1": "Queen of Pop",
+    "2": "Singer",
+    "3": "Madonna"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which Madonna hit begins with the words 'Like a' and ends in 'Virgin'?",
+     "choices": [
+      "Frozen",
+      "Vogue",
+      "Like a Virgin",
+      "Holiday"
+     ],
+     "answer": 2,
+     "explanation": "Like a Virgin is her 1984 hit."
+    },
+    {
+     "level": 3,
+     "question": "In which decade did Madonna release her debut album?",
+     "choices": [
+      "The 1990s",
+      "The 1960s",
+      "The 1980s",
+      "The 2000s"
+     ],
+     "answer": 2,
+     "explanation": "Her debut came out in 1983."
+    }
+   ]
+  },
+  {
    "id": "mus-006",
    "ask": {
     "1": "Thriller",
@@ -204,6 +136,74 @@
      ],
      "answer": 3,
      "explanation": "He is the King of Pop."
+    }
+   ]
+  },
+  {
+   "id": "mus-001",
+   "ask": {
+    "1": "Band",
+    "2": "Song",
+    "3": "Singer"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Who was the lead singer of Queen?",
+     "choices": [
+      "Robert Plant",
+      "Mick Jagger",
+      "Freddie Mercury",
+      "David Bowie"
+     ],
+     "answer": 2,
+     "explanation": "Freddie Mercury fronted Queen."
+    },
+    {
+     "level": 3,
+     "question": "On which 1975 album does 'Bohemian Rhapsody' appear?",
+     "choices": [
+      "News of the World",
+      "Sheer Heart Attack",
+      "A Night at the Opera",
+      "Jazz"
+     ],
+     "answer": 2,
+     "explanation": "It is on A Night at the Opera."
+    }
+   ]
+  },
+  {
+   "id": "mus-004",
+   "ask": {
+    "1": "Band",
+    "2": "Hey Jude",
+    "3": "Liverpool"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "In which English city did The Beatles form?",
+     "choices": [
+      "London",
+      "Birmingham",
+      "Liverpool",
+      "Manchester"
+     ],
+     "answer": 2,
+     "explanation": "The Beatles formed in Liverpool."
+    },
+    {
+     "level": 3,
+     "question": "Who wrote Hey Jude mainly, as a song for Julian Lennon?",
+     "choices": [
+      "Ringo Starr",
+      "John Lennon",
+      "Paul McCartney",
+      "George Harrison"
+     ],
+     "answer": 2,
+     "explanation": "McCartney wrote it."
     }
    ]
   },
@@ -310,70 +310,36 @@
    ]
   },
   {
-   "id": "mus-010",
+   "id": "mus-013",
    "ask": {
-    "1": "Rapper",
-    "2": "Lose Yourself",
-    "3": "Film"
+    "1": "Cello",
+    "2": "Yo-Yo Ma",
+    "3": "Strings"
    },
    "variants": [
     {
      "level": 1,
-     "question": "Which rapper starred in the film 8 Mile?",
+     "question": "Is a cello bigger or smaller than a violin?",
      "choices": [
-      "Eminem",
-      "Jay-Z",
-      "Kanye West",
-      "Drake"
+      "Same size",
+      "Smaller",
+      "Bigger",
+      "Tiny"
      ],
-     "answer": 0,
-     "explanation": "Eminem starred in 8 Mile."
+     "answer": 2,
+     "explanation": "A cello is much bigger."
     },
     {
      "level": 3,
-     "question": "Which award did Lose Yourself win in 2003?",
+     "question": "How many strings does a cello have?",
      "choices": [
-      "Best Picture",
-      "Best Actor",
-      "Best Director",
-      "Academy Award for Best Original Song"
+      "3",
+      "4",
+      "8",
+      "6"
      ],
-     "answer": 3,
-     "explanation": "It won the Oscar for Best Original Song."
-    }
-   ]
-  },
-  {
-   "id": "mus-011",
-   "ask": {
-    "1": "Singer",
-    "2": "Back to Black",
-    "3": "British"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which British singer is known for Rehab and a beehive hairstyle?",
-     "choices": [
-      "Amy Winehouse",
-      "Adele",
-      "Dua Lipa",
-      "Kate Bush"
-     ],
-     "answer": 0,
-     "explanation": "Amy Winehouse sang Rehab."
-    },
-    {
-     "level": 3,
-     "question": "In which year did Amy Winehouse win five Grammys?",
-     "choices": [
-      "2008",
-      "2003",
-      "2012",
-      "2016"
-     ],
-     "answer": 0,
-     "explanation": "She won five Grammys in 2008."
+     "answer": 1,
+     "explanation": "A cello has four."
     }
    ]
   },
@@ -412,36 +378,138 @@
    ]
   },
   {
-   "id": "mus-013",
+   "id": "mus-010",
    "ask": {
-    "1": "Cello",
-    "2": "Yo-Yo Ma",
-    "3": "Strings"
+    "1": "Rapper",
+    "2": "Lose Yourself",
+    "3": "Film"
    },
    "variants": [
     {
      "level": 1,
-     "question": "Is a cello bigger or smaller than a violin?",
+     "question": "Which rapper starred in the film 8 Mile?",
      "choices": [
-      "Same size",
-      "Smaller",
-      "Bigger",
-      "Tiny"
+      "Eminem",
+      "Jay-Z",
+      "Kanye West",
+      "Drake"
      ],
-     "answer": 2,
-     "explanation": "A cello is much bigger."
+     "answer": 0,
+     "explanation": "Eminem starred in 8 Mile."
     },
     {
      "level": 3,
-     "question": "How many strings does a cello have?",
+     "question": "Which award did Lose Yourself win in 2003?",
      "choices": [
-      "3",
-      "4",
-      "8",
-      "6"
+      "Best Picture",
+      "Best Actor",
+      "Best Director",
+      "Academy Award for Best Original Song"
      ],
-     "answer": 1,
-     "explanation": "A cello has four."
+     "answer": 3,
+     "explanation": "It won the Oscar for Best Original Song."
+    }
+   ]
+  },
+  {
+   "id": "mus-033",
+   "ask": {
+    "1": "Spotify",
+    "2": "Sweden",
+    "3": "Streaming"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What do you use Spotify to do?",
+     "choices": [
+      "Edit photos",
+      "Book flights",
+      "Stream music",
+      "Send emails"
+     ],
+     "answer": 2,
+     "explanation": "Spotify streams music."
+    },
+    {
+     "level": 3,
+     "question": "In which Swedish city is Spotify headquartered?",
+     "choices": [
+      "Uppsala",
+      "Malmo",
+      "Gothenburg",
+      "Stockholm"
+     ],
+     "answer": 3,
+     "explanation": "Spotify is in Stockholm."
+    }
+   ]
+  },
+  {
+   "id": "mus-011",
+   "ask": {
+    "1": "Singer",
+    "2": "Back to Black",
+    "3": "British"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which British singer is known for Rehab and a beehive hairstyle?",
+     "choices": [
+      "Amy Winehouse",
+      "Adele",
+      "Dua Lipa",
+      "Kate Bush"
+     ],
+     "answer": 0,
+     "explanation": "Amy Winehouse sang Rehab."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Amy Winehouse win five Grammys?",
+     "choices": [
+      "2008",
+      "2003",
+      "2012",
+      "2016"
+     ],
+     "answer": 0,
+     "explanation": "She won five Grammys in 2008."
+    }
+   ]
+  },
+  {
+   "id": "mus-034",
+   "ask": {
+    "1": "Girl group",
+    "2": "Wannabe",
+    "3": "British"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which British girl group was known as Posh, Baby, Sporty, Scary and Ginger?",
+     "choices": [
+      "Girls Aloud",
+      "Little Mix",
+      "Spice Girls",
+      "Sugababes"
+     ],
+     "answer": 2,
+     "explanation": "Those are the Spice Girls."
+    },
+    {
+     "level": 3,
+     "question": "In which year did the Spice Girls release Wannabe?",
+     "choices": [
+      "1996",
+      "1990",
+      "2005",
+      "2001"
+     ],
+     "answer": 0,
+     "explanation": "Wannabe came out in 1996."
     }
    ]
   },
@@ -514,70 +582,36 @@
    ]
   },
   {
-   "id": "mus-018",
+   "id": "mus-025",
    "ask": {
-    "1": "Genre",
-    "2": "New Orleans",
-    "3": "Birth"
+    "1": "Beethoven",
+    "2": "Symphonies",
+    "3": "Count"
    },
    "variants": [
     {
      "level": 1,
-     "question": "In which country did jazz originate?",
+     "question": "Beethoven wrote a famous ninth what?",
      "choices": [
-      "Brazil",
-      "France",
-      "Japan",
-      "The United States"
-     ],
-     "answer": 3,
-     "explanation": "Jazz began in the US."
-    },
-    {
-     "level": 2,
-     "question": "In which Louisiana city did jazz begin?",
-     "choices": [
-      "New Orleans",
-      "Memphis",
-      "Baton Rouge",
-      "Nashville"
-     ],
-     "answer": 0,
-     "explanation": "Jazz grew in New Orleans."
-    }
-   ]
-  },
-  {
-   "id": "mus-019",
-   "ask": {
-    "1": "Elvis",
-    "2": "King",
-    "3": "Rock"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which singer was nicknamed The King of Rock and Roll?",
-     "choices": [
-      "Frank Sinatra",
-      "Johnny Cash",
-      "Elvis Presley",
-      "Bing Crosby"
+      "Concert",
+      "Poem",
+      "Symphony",
+      "Opera"
      ],
      "answer": 2,
-     "explanation": "Elvis Presley."
+     "explanation": "His Ninth Symphony."
     },
     {
      "level": 2,
-     "question": "In which US city was Elvis's home, Graceland?",
+     "question": "Which Beethoven symphony begins with the famous four-note motif?",
      "choices": [
-      "Atlanta",
-      "Memphis",
-      "Dallas",
-      "Nashville"
+      "The First",
+      "The Ninth",
+      "The Fifth",
+      "The Third"
      ],
-     "answer": 1,
-     "explanation": "Graceland is in Memphis."
+     "answer": 2,
+     "explanation": "The Fifth begins with da-da-da-dum."
     }
    ]
   },
@@ -616,70 +650,70 @@
    ]
   },
   {
-   "id": "mus-021",
+   "id": "mus-024",
    "ask": {
-    "1": "Pink Floyd",
-    "2": "Prism",
-    "3": "Album"
+    "1": "Rapper",
+    "2": "Hov",
+    "3": "Brooklyn"
    },
    "variants": [
     {
      "level": 1,
-     "question": "Which British band made the prism album cover Dark Side of the Moon?",
+     "question": "Which rapper is married to Beyoncé?",
      "choices": [
-      "Pink Floyd",
-      "Coldplay",
-      "Queen",
-      "Oasis"
+      "Snoop Dogg",
+      "Jay-Z",
+      "Drake",
+      "Eminem"
      ],
-     "answer": 0,
-     "explanation": "Pink Floyd made it."
+     "answer": 1,
+     "explanation": "Jay-Z is her husband."
     },
     {
      "level": 2,
-     "question": "In which year was Dark Side of the Moon released?",
+     "question": "Which New York borough is Jay-Z from?",
      "choices": [
-      "1965",
-      "1973",
-      "1995",
-      "1985"
+      "Brooklyn",
+      "Queens",
+      "Manhattan",
+      "The Bronx"
      ],
-     "answer": 1,
-     "explanation": "It came out in 1973."
+     "answer": 0,
+     "explanation": "Jay-Z is from Brooklyn."
     }
    ]
   },
   {
-   "id": "mus-022",
+   "id": "mus-018",
    "ask": {
-    "1": "Tempo",
-    "2": "Speed",
-    "3": "Term"
+    "1": "Genre",
+    "2": "New Orleans",
+    "3": "Birth"
    },
    "variants": [
     {
      "level": 1,
-     "question": "What do we call how fast or slow music is?",
+     "question": "In which country did jazz originate?",
      "choices": [
-      "Lyrics",
-      "Tempo",
-      "Colour",
-      "Volume"
+      "Brazil",
+      "France",
+      "Japan",
+      "The United States"
      ],
-     "answer": 1,
-     "explanation": "That is tempo."
+     "answer": 3,
+     "explanation": "Jazz began in the US."
     },
     {
      "level": 2,
-     "question": "In what unit is tempo commonly measured?",
+     "question": "In which Louisiana city did jazz begin?",
      "choices": [
-      "Watts",
-      "Beats per minute",
-      "Decibels",
-      "Hertz"
+      "New Orleans",
+      "Memphis",
+      "Baton Rouge",
+      "Nashville"
      ],
-     "answer": 1,
-     "explanation": "BPM measures tempo."
+     "answer": 0,
+     "explanation": "Jazz grew in New Orleans."
     }
    ]
   },
@@ -718,70 +752,36 @@
    ]
   },
   {
-   "id": "mus-024",
+   "id": "mus-035",
    "ask": {
-    "1": "Rapper",
-    "2": "Hov",
-    "3": "Brooklyn"
+    "1": "Shakira",
+    "2": "Colombia",
+    "3": "Song"
    },
    "variants": [
     {
      "level": 1,
-     "question": "Which rapper is married to Beyoncé?",
+     "question": "Which country is Shakira from?",
      "choices": [
-      "Snoop Dogg",
-      "Jay-Z",
-      "Drake",
-      "Eminem"
+      "Brazil",
+      "Mexico",
+      "Colombia",
+      "Spain"
      ],
-     "answer": 1,
-     "explanation": "Jay-Z is her husband."
+     "answer": 2,
+     "explanation": "Shakira is Colombian."
     },
     {
      "level": 2,
-     "question": "Which New York borough is Jay-Z from?",
+     "question": "Which song did Shakira perform for the 2010 World Cup?",
      "choices": [
-      "Brooklyn",
-      "Queens",
-      "Manhattan",
-      "The Bronx"
+      "Waka Waka",
+      "Loca",
+      "Whenever, Wherever",
+      "Hips Don't Lie"
      ],
      "answer": 0,
-     "explanation": "Jay-Z is from Brooklyn."
-    }
-   ]
-  },
-  {
-   "id": "mus-025",
-   "ask": {
-    "1": "Beethoven",
-    "2": "Symphonies",
-    "3": "Count"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Beethoven wrote a famous ninth what?",
-     "choices": [
-      "Concert",
-      "Poem",
-      "Symphony",
-      "Opera"
-     ],
-     "answer": 2,
-     "explanation": "His Ninth Symphony."
-    },
-    {
-     "level": 2,
-     "question": "Which Beethoven symphony begins with the famous four-note motif?",
-     "choices": [
-      "The First",
-      "The Ninth",
-      "The Fifth",
-      "The Third"
-     ],
-     "answer": 2,
-     "explanation": "The Fifth begins with da-da-da-dum."
+     "explanation": "Waka Waka was the 2010 anthem."
     }
    ]
   },
@@ -820,6 +820,74 @@
    ]
   },
   {
+   "id": "mus-019",
+   "ask": {
+    "1": "Elvis",
+    "2": "King",
+    "3": "Rock"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which singer was nicknamed The King of Rock and Roll?",
+     "choices": [
+      "Frank Sinatra",
+      "Johnny Cash",
+      "Elvis Presley",
+      "Bing Crosby"
+     ],
+     "answer": 2,
+     "explanation": "Elvis Presley."
+    },
+    {
+     "level": 2,
+     "question": "In which US city was Elvis's home, Graceland?",
+     "choices": [
+      "Atlanta",
+      "Memphis",
+      "Dallas",
+      "Nashville"
+     ],
+     "answer": 1,
+     "explanation": "Graceland is in Memphis."
+    }
+   ]
+  },
+  {
+   "id": "mus-021",
+   "ask": {
+    "1": "Pink Floyd",
+    "2": "Prism",
+    "3": "Album"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which British band made the prism album cover Dark Side of the Moon?",
+     "choices": [
+      "Pink Floyd",
+      "Coldplay",
+      "Queen",
+      "Oasis"
+     ],
+     "answer": 0,
+     "explanation": "Pink Floyd made it."
+    },
+    {
+     "level": 2,
+     "question": "In which year was Dark Side of the Moon released?",
+     "choices": [
+      "1965",
+      "1973",
+      "1995",
+      "1985"
+     ],
+     "answer": 1,
+     "explanation": "It came out in 1973."
+    }
+   ]
+  },
+  {
    "id": "mus-027",
    "ask": {
     "1": "Nirvana",
@@ -854,36 +922,104 @@
    ]
   },
   {
-   "id": "mus-028",
+   "id": "mus-036",
    "ask": {
-    "1": "Scale",
-    "2": "Key",
-    "3": "Notes"
+    "1": "Beatles",
+    "2": "Sgt Pepper",
+    "3": "Album"
    },
    "variants": [
     {
      "level": 1,
-     "question": "Which keys of a piano are used for the scale of C major?",
+     "question": "Which band came from Liverpool and had four members: John, Paul, George and Ringo?",
      "choices": [
-      "All keys",
-      "Only two keys",
-      "The black keys",
-      "The white keys"
+      "Oasis",
+      "The Who",
+      "The Kinks",
+      "The Beatles"
      ],
      "answer": 3,
-     "explanation": "C major uses white keys only."
+     "explanation": "The Fab Four."
     },
     {
      "level": 2,
-     "question": "How many notes are in a major scale, not counting the repeated octave?",
+     "question": "In which year was Sgt. Pepper's released?",
      "choices": [
-      "12",
-      "7",
-      "5",
-      "8"
+      "1957",
+      "1967",
+      "1987",
+      "1977"
      ],
      "answer": 1,
-     "explanation": "A major scale has seven notes."
+     "explanation": "It was released in 1967."
+    }
+   ]
+  },
+  {
+   "id": "mus-022",
+   "ask": {
+    "1": "Tempo",
+    "2": "Speed",
+    "3": "Term"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What do we call how fast or slow music is?",
+     "choices": [
+      "Lyrics",
+      "Tempo",
+      "Colour",
+      "Volume"
+     ],
+     "answer": 1,
+     "explanation": "That is tempo."
+    },
+    {
+     "level": 2,
+     "question": "In what unit is tempo commonly measured?",
+     "choices": [
+      "Watts",
+      "Beats per minute",
+      "Decibels",
+      "Hertz"
+     ],
+     "answer": 1,
+     "explanation": "BPM measures tempo."
+    }
+   ]
+  },
+  {
+   "id": "mus-032",
+   "ask": {
+    "1": "Forte",
+    "2": "Dynamics",
+    "3": "Loud"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Does a musician play louder or softer when the score says forte?",
+     "choices": [
+      "Slower",
+      "Faster",
+      "Louder",
+      "Softer"
+     ],
+     "answer": 2,
+     "explanation": "Forte means loud."
+    },
+    {
+     "level": 2,
+     "question": "What does 'piano' mean as a dynamic marking?",
+     "choices": [
+      "Fast",
+      "Soft",
+      "Slow",
+      "Loud"
+     ],
+     "answer": 1,
+     "explanation": "Piano means soft."
     }
    ]
   },
@@ -990,172 +1126,36 @@
    ]
   },
   {
-   "id": "mus-032",
+   "id": "mus-028",
    "ask": {
-    "1": "Forte",
-    "2": "Dynamics",
-    "3": "Loud"
+    "1": "Scale",
+    "2": "Key",
+    "3": "Notes"
    },
    "variants": [
     {
      "level": 1,
-     "question": "Does a musician play louder or softer when the score says forte?",
+     "question": "Which keys of a piano are used for the scale of C major?",
      "choices": [
-      "Slower",
-      "Faster",
-      "Louder",
-      "Softer"
-     ],
-     "answer": 2,
-     "explanation": "Forte means loud."
-    },
-    {
-     "level": 2,
-     "question": "What does 'piano' mean as a dynamic marking?",
-     "choices": [
-      "Fast",
-      "Soft",
-      "Slow",
-      "Loud"
-     ],
-     "answer": 1,
-     "explanation": "Piano means soft."
-    }
-   ]
-  },
-  {
-   "id": "mus-033",
-   "ask": {
-    "1": "Spotify",
-    "2": "Sweden",
-    "3": "Streaming"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "What do you use Spotify to do?",
-     "choices": [
-      "Edit photos",
-      "Book flights",
-      "Stream music",
-      "Send emails"
-     ],
-     "answer": 2,
-     "explanation": "Spotify streams music."
-    },
-    {
-     "level": 3,
-     "question": "In which Swedish city is Spotify headquartered?",
-     "choices": [
-      "Uppsala",
-      "Malmo",
-      "Gothenburg",
-      "Stockholm"
+      "All keys",
+      "Only two keys",
+      "The black keys",
+      "The white keys"
      ],
      "answer": 3,
-     "explanation": "Spotify is in Stockholm."
-    }
-   ]
-  },
-  {
-   "id": "mus-034",
-   "ask": {
-    "1": "Girl group",
-    "2": "Wannabe",
-    "3": "British"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which British girl group was known as Posh, Baby, Sporty, Scary and Ginger?",
-     "choices": [
-      "Girls Aloud",
-      "Little Mix",
-      "Spice Girls",
-      "Sugababes"
-     ],
-     "answer": 2,
-     "explanation": "Those are the Spice Girls."
-    },
-    {
-     "level": 3,
-     "question": "In which year did the Spice Girls release Wannabe?",
-     "choices": [
-      "1996",
-      "1990",
-      "2005",
-      "2001"
-     ],
-     "answer": 0,
-     "explanation": "Wannabe came out in 1996."
-    }
-   ]
-  },
-  {
-   "id": "mus-035",
-   "ask": {
-    "1": "Shakira",
-    "2": "Colombia",
-    "3": "Song"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which country is Shakira from?",
-     "choices": [
-      "Brazil",
-      "Mexico",
-      "Colombia",
-      "Spain"
-     ],
-     "answer": 2,
-     "explanation": "Shakira is Colombian."
+     "explanation": "C major uses white keys only."
     },
     {
      "level": 2,
-     "question": "Which song did Shakira perform for the 2010 World Cup?",
+     "question": "How many notes are in a major scale, not counting the repeated octave?",
      "choices": [
-      "Waka Waka",
-      "Loca",
-      "Whenever, Wherever",
-      "Hips Don't Lie"
-     ],
-     "answer": 0,
-     "explanation": "Waka Waka was the 2010 anthem."
-    }
-   ]
-  },
-  {
-   "id": "mus-036",
-   "ask": {
-    "1": "Beatles",
-    "2": "Sgt Pepper",
-    "3": "Album"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which band came from Liverpool and had four members: John, Paul, George and Ringo?",
-     "choices": [
-      "Oasis",
-      "The Who",
-      "The Kinks",
-      "The Beatles"
-     ],
-     "answer": 3,
-     "explanation": "The Fab Four."
-    },
-    {
-     "level": 2,
-     "question": "In which year was Sgt. Pepper's released?",
-     "choices": [
-      "1957",
-      "1967",
-      "1987",
-      "1977"
+      "12",
+      "7",
+      "5",
+      "8"
      ],
      "answer": 1,
-     "explanation": "It was released in 1967."
+     "explanation": "A major scale has seven notes."
     }
    ]
   }

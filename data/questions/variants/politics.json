@@ -1,0 +1,483 @@
+{
+ "category": "politics",
+ "review": "unreviewed",
+ "note": "Difficulty ladders: unreviewed.",
+ "families": [
+  {
+   "id": "pol-006",
+   "ask": {
+    "1": "Meaning",
+    "2": "Deflation",
+    "3": "The index"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is deflation?",
+     "choices": [
+      "A rise in wages",
+      "A rise in exports",
+      "A sustained fall in the general price level",
+      "A fall in unemployment"
+     ],
+     "answer": 2,
+     "explanation": "Deflation is the opposite of inflation."
+    },
+    {
+     "level": 3,
+     "question": "Which index is most commonly used to measure consumer price inflation?",
+     "choices": [
+      "The consumer price index",
+      "The purchasing managers' index",
+      "The Human Development Index",
+      "The Gini coefficient"
+     ],
+     "answer": 0,
+     "explanation": "The consumer price index tracks the cost of a basket of goods and services."
+    }
+   ]
+  },
+  {
+   "id": "pol-003",
+   "ask": {
+    "1": "The currency",
+    "2": "The treaty",
+    "3": "The coins"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which treaty, signed in 1992, created the European Union?",
+     "choices": [
+      "The Treaty of Lisbon",
+      "The Treaty of Rome",
+      "The Schengen Agreement",
+      "The Maastricht Treaty"
+     ],
+     "answer": 3,
+     "explanation": "The Treaty on European Union took effect in 1993."
+    },
+    {
+     "level": 3,
+     "question": "In which year did euro banknotes and coins enter circulation?",
+     "choices": [
+      "1992",
+      "2002",
+      "1999",
+      "2004"
+     ],
+     "answer": 1,
+     "explanation": "The euro existed as an accounting currency from 1999 and as cash from 2002."
+    }
+   ]
+  },
+  {
+   "id": "pol-001",
+   "ask": {
+    "1": "Head of state",
+    "2": "Term",
+    "3": "The Republic"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "How long is the term of the President of the French Republic?",
+     "choices": [
+      "Seven years",
+      "Six years",
+      "Four years",
+      "Five years"
+     ],
+     "answer": 3,
+     "explanation": "The term was cut from seven to five years by a 2000 referendum."
+    },
+    {
+     "level": 3,
+     "question": "Under which republic, founded in 1958, does France currently operate?",
+     "choices": [
+      "The Second Republic",
+      "The Fifth Republic",
+      "The Fourth Republic",
+      "The Third Republic"
+     ],
+     "answer": 1,
+     "explanation": "The Fifth Republic's constitution was drafted under Charles de Gaulle."
+    }
+   ]
+  },
+  {
+   "id": "pol-007",
+   "ask": {
+    "1": "The name",
+    "2": "The meaning",
+    "3": "Per capita"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What does the abbreviation GDP stand for?",
+     "choices": [
+      "Gross domestic product",
+      "General domestic profit",
+      "Global dollar price",
+      "Gross debt payment"
+     ],
+     "answer": 0,
+     "explanation": "GDP means gross domestic product."
+    },
+    {
+     "level": 3,
+     "question": "GDP per capita is GDP divided by what?",
+     "choices": [
+      "The population",
+      "The land area",
+      "The average wage",
+      "Total employment"
+     ],
+     "answer": 0,
+     "explanation": "It gives the average output per person."
+    }
+   ]
+  },
+  {
+   "id": "pol-009",
+   "ask": {
+    "1": "Suffrage",
+    "2": "The age",
+    "3": "The rounds"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What is the right to vote called?",
+     "choices": [
+      "Quorum",
+      "Veto",
+      "Mandate",
+      "Suffrage"
+     ],
+     "answer": 3,
+     "explanation": "Universal suffrage means every adult citizen may vote."
+    },
+    {
+     "level": 3,
+     "question": "How many rounds does a French presidential election have at most?",
+     "choices": [
+      "Three",
+      "Four",
+      "Two",
+      "One"
+     ],
+     "answer": 2,
+     "explanation": "If no candidate wins an absolute majority in the first round, the top two meet in a second round."
+    }
+   ]
+  },
+  {
+   "id": "pol-004",
+   "ask": {
+    "1": "The council",
+    "2": "The headquarters",
+    "3": "The members"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which city is the headquarters of the United Nations?",
+     "choices": [
+      "New York",
+      "Geneva",
+      "Paris",
+      "Washington"
+     ],
+     "answer": 0,
+     "explanation": "The UN headquarters stands in Manhattan."
+    },
+    {
+     "level": 3,
+     "question": "Which of these countries is NOT a permanent member of the UN Security Council?",
+     "choices": [
+      "China",
+      "Germany",
+      "Russia",
+      "France"
+     ],
+     "answer": 1,
+     "explanation": "Germany sits on the Council only when elected as a non-permanent member."
+    }
+   ]
+  },
+  {
+   "id": "pol-002",
+   "ask": {
+    "1": "Two chambers",
+    "2": "The seat",
+    "3": "The review"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which city does the French National Assembly sit?",
+     "choices": [
+      "Versailles",
+      "Paris",
+      "Lyon",
+      "Strasbourg"
+     ],
+     "answer": 1,
+     "explanation": "The deputies meet at the Palais Bourbon in Paris."
+    },
+    {
+     "level": 3,
+     "question": "Which body reviews whether French laws conform to the Constitution?",
+     "choices": [
+      "The Cour des comptes",
+      "The Cour de cassation",
+      "The Conseil constitutionnel",
+      "The Conseil d'État"
+     ],
+     "answer": 2,
+     "explanation": "The Conseil constitutionnel is the French constitutional authority."
+    }
+   ]
+  },
+  {
+   "id": "pol-011",
+   "ask": {
+    "1": "The code",
+    "2": "The namesake",
+    "3": "The principle"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "After whom is the Napoleonic Code named?",
+     "choices": [
+      "Napoleon Bonaparte",
+      "Louis XIV",
+      "Charlemagne",
+      "Robespierre"
+     ],
+     "answer": 0,
+     "explanation": "Napoleon pushed through the codification as First Consul."
+    },
+    {
+     "level": 3,
+     "question": "Which principle did the 1804 Code civil affirm?",
+     "choices": [
+      "The divine right of kings",
+      "Equality before the law and the protection of property",
+      "Hereditary privileges for nobles",
+      "Torture as evidence"
+     ],
+     "answer": 1,
+     "explanation": "The Code ended feudal privileges and confirmed property rights."
+    }
+   ]
+  },
+  {
+   "id": "pol-008",
+   "ask": {
+    "1": "The book",
+    "2": "The year",
+    "3": "The field"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Adam Smith is considered a founder of which field?",
+     "choices": [
+      "Psychology",
+      "Chemistry",
+      "Sociology",
+      "Economics"
+     ],
+     "answer": 3,
+     "explanation": "He is often called the father of modern economics."
+    },
+    {
+     "level": 2,
+     "question": "In which year was The Wealth of Nations published?",
+     "choices": [
+      "1689",
+      "1848",
+      "1776",
+      "1936"
+     ],
+     "answer": 2,
+     "explanation": "It appeared in 1776, the year of the American Declaration of Independence."
+    }
+   ]
+  },
+  {
+   "id": "pol-010",
+   "ask": {
+    "1": "First past the post",
+    "2": "Proportional",
+    "3": "The rule"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In a first-past-the-post election, who wins the seat?",
+     "choices": [
+      "The party with the most seats overall",
+      "The candidate chosen by the Speaker",
+      "The candidate with over half the votes",
+      "The candidate with the most votes"
+     ],
+     "answer": 3,
+     "explanation": "A plurality is enough."
+    },
+    {
+     "level": 2,
+     "question": "Which system gives parties seats in proportion to the votes they receive?",
+     "choices": [
+      "The two-round system",
+      "Plurality voting",
+      "Proportional representation",
+      "First-past-the-post"
+     ],
+     "answer": 2,
+     "explanation": "Proportional systems try to match seats to vote share."
+    }
+   ]
+  },
+  {
+   "id": "pol-005",
+   "ask": {
+    "1": "The founders",
+    "2": "The sixth",
+    "3": "The year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which of these countries was one of the six founding members of the European Economic Community?",
+     "choices": [
+      "Spain",
+      "France",
+      "Ireland",
+      "Denmark"
+     ],
+     "answer": 1,
+     "explanation": "Spain joined in 1986, Denmark and Ireland in 1973."
+    },
+    {
+     "level": 2,
+     "question": "The six founders were France, West Germany, Italy, Belgium, the Netherlands and which other country?",
+     "choices": [
+      "Austria",
+      "Spain",
+      "Switzerland",
+      "Luxembourg"
+     ],
+     "answer": 3,
+     "explanation": "Luxembourg completed the Inner Six."
+    }
+   ]
+  },
+  {
+   "id": "pol-013",
+   "ask": {
+    "1": "Strasbourg",
+    "2": "The Hague",
+    "3": "Luxembourg"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which court, seated in The Hague, is the main judicial body of the United Nations?",
+     "choices": [
+      "The European Court of Human Rights",
+      "The International Criminal Court",
+      "The World Trade Organization panel",
+      "The International Court of Justice"
+     ],
+     "answer": 3,
+     "explanation": "The ICJ settles disputes between states."
+    },
+    {
+     "level": 2,
+     "question": "Which court, sitting in Luxembourg, interprets European Union law?",
+     "choices": [
+      "The Conseil d'État",
+      "The European Court of Human Rights",
+      "The Court of Justice of the European Union",
+      "The International Court of Justice"
+     ],
+     "answer": 2,
+     "explanation": "It ensures that EU law is applied the same way in every member state."
+    }
+   ]
+  },
+  {
+   "id": "pol-012",
+   "ask": {
+    "1": "The year",
+    "2": "The 1789 text",
+    "3": "The city"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which French document of 1789 proclaimed the rights of man and of the citizen?",
+     "choices": [
+      "The Declaration of the Rights of Man and of the Citizen",
+      "Magna Carta",
+      "The Charter of the United Nations",
+      "The Napoleonic Code"
+     ],
+     "answer": 0,
+     "explanation": "It was adopted by the National Constituent Assembly in August 1789."
+    },
+    {
+     "level": 2,
+     "question": "In which city was the Universal Declaration of Human Rights adopted in 1948?",
+     "choices": [
+      "Paris",
+      "Geneva",
+      "New York",
+      "London"
+     ],
+     "answer": 0,
+     "explanation": "The General Assembly met at the Palais de Chaillot in Paris."
+    }
+   ]
+  },
+  {
+   "id": "pol-014",
+   "ask": {
+    "1": "The economist",
+    "2": "Recession",
+    "3": "The Depression"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In economics, what is a recession?",
+     "choices": [
+      "A significant fall in economic activity",
+      "A tax cut",
+      "A rise in prices",
+      "A trade surplus"
+     ],
+     "answer": 0,
+     "explanation": "It is often defined as two consecutive quarters of falling GDP."
+    },
+    {
+     "level": 2,
+     "question": "What is the name of the severe global downturn that began in 1929?",
+     "choices": [
+      "The Great Depression",
+      "The oil crisis",
+      "The Great Recession",
+      "The Long Depression"
+     ],
+     "answer": 0,
+     "explanation": "The Great Depression lasted through the 1930s."
+    }
+   ]
+  }
+ ]
+}

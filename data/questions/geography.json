@@ -1,36 +1,911 @@
 {
-  "category": "geography",
-  "review": "unreviewed",
-  "questions": [
-    {"id":"geo-001","subcategory":"capitals","difficulty":1,"question":"What is the capital of France?","choices":["Lyon","Marseille","Paris","Nice"],"answer":2,"explanation":"Paris has been the capital of France for centuries and sits on the river Seine."},
-    {"id":"geo-002","subcategory":"oceans","difficulty":1,"question":"Which is the largest ocean on Earth?","choices":["Atlantic","Indian","Arctic","Pacific"],"answer":3,"explanation":"The Pacific covers about a third of the planet's surface."},
-    {"id":"geo-003","subcategory":"rivers","difficulty":2,"question":"Which river is traditionally considered the longest in Africa?","choices":["Congo","Niger","Nile","Zambezi"],"answer":2,"explanation":"The Nile, at roughly 6,650 km, is traditionally cited as the longest river in the world."},
-    {"id":"geo-004","subcategory":"capitals","difficulty":2,"question":"What is the capital of Australia?","choices":["Sydney","Melbourne","Canberra","Perth"],"answer":2,"explanation":"Canberra was purpose-built as the capital as a compromise between Sydney and Melbourne."},
-    {"id":"geo-005","subcategory":"capitals","difficulty":2,"question":"What is the capital of Canada?","choices":["Toronto","Ottawa","Montreal","Vancouver"],"answer":1,"explanation":"Ottawa, in Ontario, has been Canada's capital since 1866."},
-    {"id":"geo-006","subcategory":"capitals","difficulty":2,"question":"What is the capital of Brazil?","choices":["Rio de Janeiro","São Paulo","Salvador","Brasília"],"answer":3,"explanation":"Brasília was inaugurated as the capital in 1960, replacing Rio de Janeiro."},
-    {"id":"geo-007","subcategory":"countries","difficulty":2,"question":"According to United Nations estimates since 2023, which country has the largest population?","choices":["China","India","United States","Indonesia"],"answer":1,"explanation":"UN estimates indicated that India overtook China in 2023.","asOf":"2023-04"},
-    {"id":"geo-008","subcategory":"mountains","difficulty":2,"question":"Mount Everest lies on the border of Nepal and which other country?","choices":["India","Bhutan","China","Pakistan"],"answer":2,"explanation":"The summit sits on the border between Nepal and the Tibet Autonomous Region of China."},
-    {"id":"geo-009","subcategory":"countries","difficulty":2,"question":"Which is the smallest country in the world by area?","choices":["Monaco","Vatican City","San Marino","Liechtenstein"],"answer":1,"explanation":"Vatican City covers only about 0.44 square kilometres."},
-    {"id":"geo-010","subcategory":"deserts","difficulty":1,"question":"Which is the largest hot desert in the world?","choices":["Gobi","Kalahari","Arabian","Sahara"],"answer":3,"explanation":"The Sahara covers about 9 million square kilometres. Antarctica is the largest desert overall."},
-    {"id":"geo-011","subcategory":"countries","difficulty":4,"question":"Which country has the most time zones, counting its overseas territories?","choices":["Russia","United States","France","China"],"answer":2,"explanation":"France spans about 12 or 13 time zones because of its overseas territories."},
-    {"id":"geo-012","subcategory":"rivers","difficulty":1,"question":"Which river flows through the centre of Paris?","choices":["Loire","Seine","Rhône","Garonne"],"answer":1,"explanation":"The Seine runs through Paris on its way to the English Channel."},
-    {"id":"geo-013","subcategory":"seas","difficulty":2,"question":"Which strait separates Spain from Morocco at the entrance to the Mediterranean?","choices":["Bosphorus","Strait of Gibraltar","Strait of Hormuz","Dardanelles"],"answer":1,"explanation":"At its narrowest the Strait of Gibraltar is about 14 km wide."},
-    {"id":"geo-014","subcategory":"lakes","difficulty":3,"question":"Which is the deepest lake in the world?","choices":["Lake Superior","Lake Tanganyika","Lake Baikal","Lake Victoria"],"answer":2,"explanation":"Lake Baikal in Russia reaches about 1,642 metres deep."},
-    {"id":"geo-015","subcategory":"capitals","difficulty":2,"question":"What is the capital of Turkey?","choices":["Istanbul","Ankara","Izmir","Bursa"],"answer":1,"explanation":"Ankara became the capital in 1923. Istanbul is Turkey's largest city."},
-    {"id":"geo-016","subcategory":"continents","difficulty":2,"question":"Which continent has the most countries?","choices":["Asia","Europe","Africa","South America"],"answer":2,"explanation":"Africa has 54 recognised sovereign states."},
-    {"id":"geo-017","subcategory":"capitals","difficulty":3,"question":"What is the capital of Kazakhstan?","choices":["Almaty","Astana","Tashkent","Bishkek"],"answer":1,"explanation":"The capital was renamed Nur-Sultan in 2019 and returned to the name Astana in 2022."},
-    {"id":"geo-018","subcategory":"countries","difficulty":3,"question":"Which two countries share the longest international land border in the world?","choices":["Russia and China","Canada and the United States","Argentina and Chile","India and Pakistan"],"answer":1,"explanation":"The Canada–US border runs for roughly 8,900 km including the Alaska segment."},
-    {"id":"geo-019","subcategory":"islands","difficulty":2,"question":"Which is the largest island in the world?","choices":["Greenland","Borneo","Madagascar","New Guinea"],"answer":0,"explanation":"Greenland covers about 2.17 million square kilometres. Australia is counted as a continent."},
-    {"id":"geo-020","subcategory":"mountains","difficulty":2,"question":"In which country is Mount Kilimanjaro?","choices":["Kenya","Ethiopia","Uganda","Tanzania"],"answer":3,"explanation":"Kilimanjaro, Africa's highest peak at 5,895 m, stands in northeastern Tanzania."},
-    {"id":"geo-021","subcategory":"seas","difficulty":2,"question":"The Panama Canal connects which two oceans?","choices":["Atlantic and Indian","Atlantic and Pacific","Pacific and Arctic","Pacific and Indian"],"answer":1,"explanation":"The canal opened in 1914 and shortcuts the long route around South America."},
-    {"id":"geo-022","subcategory":"waterfalls","difficulty":3,"question":"Angel Falls, the world's tallest uninterrupted waterfall, is in which country?","choices":["Brazil","Venezuela","Peru","Colombia"],"answer":1,"explanation":"Angel Falls drops 979 metres in Venezuela's Canaima National Park."},
-    {"id":"geo-023","subcategory":"capitals","difficulty":2,"question":"What is the capital of New Zealand?","choices":["Auckland","Christchurch","Dunedin","Wellington"],"answer":3,"explanation":"Wellington, at the southern tip of the North Island, is the capital. Auckland is the largest city."},
-    {"id":"geo-024","subcategory":"cities","difficulty":2,"question":"Which major city is located on both sides of the Bosphorus, in Europe and in Asia?","choices":["Istanbul","Athens","Cairo","Baku"],"answer":0,"explanation":"Istanbul straddles the Bosphorus strait, so part of it lies in each continent."},
-    {"id":"geo-025","subcategory":"rivers","difficulty":2,"question":"Which river is the longest in South America?","choices":["Orinoco","Paraná","Amazon","Madeira"],"answer":2,"explanation":"The Amazon is about 6,400 km long and carries more water than any other river."},
-    {"id":"geo-026","subcategory":"cities","difficulty":3,"question":"In which country is the historic city of Timbuktu?","choices":["Niger","Mali","Morocco","Sudan"],"answer":1,"explanation":"Timbuktu, a medieval centre of trade and learning, lies in Mali."},
-    {"id":"geo-027","subcategory":"countries","difficulty":1,"question":"Which is the largest US state by area?","choices":["Texas","California","Montana","Alaska"],"answer":3,"explanation":"Alaska covers about 1.7 million square kilometres, more than twice the size of Texas."},
-    {"id":"geo-028","subcategory":"rivers","difficulty":4,"question":"Which river flows through more countries than any other in the world?","choices":["Rhine","Danube","Nile","Mekong"],"answer":1,"explanation":"The Danube flows through ten countries, from Germany to the Black Sea."},
-    {"id":"geo-029","subcategory":"basics","difficulty":1,"question":"What is the line of latitude at 0° called?","choices":["Prime Meridian","Tropic of Cancer","Equator","Arctic Circle"],"answer":2,"explanation":"The Equator divides the Earth into the Northern and Southern Hemispheres."},
-    {"id":"geo-030","subcategory":"continents","difficulty":2,"question":"Which is the smallest continent by land area?","choices":["Europe","Antarctica","South America","Australia/Oceania"],"answer":3,"explanation":"Australia/Oceania is the smallest, at about 8.5 million square kilometres."}
-  ]
+ "category": "geography",
+ "review": "unreviewed",
+ "questions": [
+  {
+   "id": "geo-029",
+   "subcategory": "basics",
+   "difficulty": 1,
+   "question": "What is the line of latitude at 0° called?",
+   "choices": [
+    "Prime Meridian",
+    "Tropic of Cancer",
+    "Equator",
+    "Arctic Circle"
+   ],
+   "answer": 2,
+   "explanation": "The Equator divides the Earth into the Northern and Southern Hemispheres."
+  },
+  {
+   "id": "geo2-011",
+   "subcategory": "borders",
+   "difficulty": 1,
+   "question": "Which mountain range separates France from Spain?",
+   "choices": [
+    "The Pyrenees",
+    "The Carpathians",
+    "The Apennines",
+    "The Alps"
+   ],
+   "answer": 0,
+   "explanation": "The Pyrenees form much of the border.",
+   "tags": [
+    "pyrenees"
+   ]
+  },
+  {
+   "id": "geo-001",
+   "subcategory": "capitals",
+   "difficulty": 1,
+   "question": "What is the capital of France?",
+   "choices": [
+    "Lyon",
+    "Marseille",
+    "Paris",
+    "Nice"
+   ],
+   "answer": 2,
+   "explanation": "Paris has been the capital of France for centuries and sits on the river Seine."
+  },
+  {
+   "id": "geo2-004",
+   "subcategory": "climate",
+   "difficulty": 1,
+   "question": "Which semi-arid belt lies just south of the Sahara and stretches across Africa?",
+   "choices": [
+    "The Maghreb",
+    "The Serengeti",
+    "The Sahel",
+    "The Kalahari"
+   ],
+   "answer": 2,
+   "explanation": "The Sahel is a transition zone between desert and savanna.",
+   "tags": [
+    "sahel"
+   ]
+  },
+  {
+   "id": "geo2-005",
+   "subcategory": "climate",
+   "difficulty": 1,
+   "question": "Which seasonal wind pattern brings heavy summer rains to South Asia?",
+   "choices": [
+    "The jet stream",
+    "The trade winds",
+    "The chinook",
+    "The monsoon"
+   ],
+   "answer": 3,
+   "explanation": "The monsoon reverses direction between summer and winter.",
+   "tags": [
+    "monsoon"
+   ]
+  },
+  {
+   "id": "geo2-015",
+   "subcategory": "climate",
+   "difficulty": 1,
+   "question": "Which climate zone is warm and wet all year, found near the Equator?",
+   "choices": [
+    "Tropical rainforest",
+    "Tundra",
+    "Desert",
+    "Mediterranean"
+   ],
+   "answer": 0,
+   "explanation": "Rain falls nearly every day in places like the Amazon and Congo basins.",
+   "tags": [
+    "zones"
+   ]
+  },
+  {
+   "id": "trk-008",
+   "subcategory": "continents",
+   "difficulty": 1,
+   "question": "On a standard Mercator world map Greenland looks about as big as Africa. About how many times larger is Africa in reality?",
+   "choices": [
+    "About 14 times",
+    "About 50 times",
+    "About 5 times",
+    "About 2 times"
+   ],
+   "answer": 0,
+   "explanation": "Africa is about 30.4 million square km and Greenland about 2.2 million.",
+   "tags": [
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think Greenland is as large as Africa because it looks so on many maps."
+  },
+  {
+   "id": "geo-027",
+   "subcategory": "countries",
+   "difficulty": 1,
+   "question": "Which is the largest US state by area?",
+   "choices": [
+    "Texas",
+    "California",
+    "Montana",
+    "Alaska"
+   ],
+   "answer": 3,
+   "explanation": "Alaska covers about 1.7 million square kilometres, more than twice the size of Texas."
+  },
+  {
+   "id": "geo2-013",
+   "subcategory": "countries",
+   "difficulty": 1,
+   "question": "Which country is made up of more than 17,000 islands?",
+   "choices": [
+    "The Philippines",
+    "Japan",
+    "The Maldives",
+    "Indonesia"
+   ],
+   "answer": 3,
+   "explanation": "It is the world's largest archipelagic state.",
+   "tags": [
+    "indonesia"
+   ]
+  },
+  {
+   "id": "geo2-023",
+   "subcategory": "countries",
+   "difficulty": 1,
+   "question": "Which is the largest country in Oceania by area?",
+   "choices": [
+    "Fiji",
+    "Australia",
+    "Papua New Guinea",
+    "New Zealand"
+   ],
+   "answer": 1,
+   "explanation": "Australia covers about 7.7 million square kilometres.",
+   "tags": [
+    "oceania"
+   ]
+  },
+  {
+   "id": "trk-005",
+   "subcategory": "countries",
+   "difficulty": 1,
+   "question": "Which of these countries has a capital that is NOT its largest city?",
+   "choices": [
+    "Turkey",
+    "France",
+    "Thailand",
+    "Japan"
+   ],
+   "answer": 0,
+   "explanation": "Turkey's capital is Ankara, but Istanbul is larger. Paris, Tokyo and Bangkok are both capital and largest city.",
+   "tags": [
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think a country's capital is always its largest city."
+  },
+  {
+   "id": "trk-007",
+   "subcategory": "countries",
+   "difficulty": 1,
+   "question": "Which of these countries is NOT landlocked?",
+   "choices": [
+    "Mongolia",
+    "Austria",
+    "Portugal",
+    "Bolivia"
+   ],
+   "answer": 2,
+   "explanation": "Portugal has an Atlantic coast; the other three have no sea coast.",
+   "tags": [
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think any country far from the sea is as landlocked as any other."
+  },
+  {
+   "id": "geo-010",
+   "subcategory": "deserts",
+   "difficulty": 1,
+   "question": "Which is the largest hot desert in the world?",
+   "choices": [
+    "Gobi",
+    "Kalahari",
+    "Arabian",
+    "Sahara"
+   ],
+   "answer": 3,
+   "explanation": "The Sahara covers about 9 million square kilometres. Antarctica is the largest desert overall."
+  },
+  {
+   "id": "geo2-022",
+   "subcategory": "mountains",
+   "difficulty": 1,
+   "question": "Which is the highest mountain in the Alps?",
+   "choices": [
+    "The Matterhorn",
+    "The Eiger",
+    "Mont Blanc",
+    "Monte Rosa"
+   ],
+   "answer": 2,
+   "explanation": "Mont Blanc is about 4,806 metres high.",
+   "tags": [
+    "alps"
+   ]
+  },
+  {
+   "id": "geo-002",
+   "subcategory": "oceans",
+   "difficulty": 1,
+   "question": "Which is the largest ocean on Earth?",
+   "choices": [
+    "Atlantic",
+    "Indian",
+    "Arctic",
+    "Pacific"
+   ],
+   "answer": 3,
+   "explanation": "The Pacific covers about a third of the planet's surface."
+  },
+  {
+   "id": "geo2-009",
+   "subcategory": "physical",
+   "difficulty": 1,
+   "question": "Which line of latitude lies at about 23.5° north?",
+   "choices": [
+    "The Tropic of Cancer",
+    "The Equator",
+    "The Tropic of Capricorn",
+    "The Arctic Circle"
+   ],
+   "answer": 0,
+   "explanation": "It marks the northernmost latitude where the Sun can be directly overhead.",
+   "tags": [
+    "latitude"
+   ]
+  },
+  {
+   "id": "geo2-017",
+   "subcategory": "poles",
+   "difficulty": 1,
+   "question": "Which continent is almost entirely covered by ice?",
+   "choices": [
+    "Antarctica",
+    "Australia",
+    "Africa",
+    "Asia"
+   ],
+   "answer": 0,
+   "explanation": "Its ice sheet averages more than two kilometres thick.",
+   "tags": [
+    "antarctica"
+   ]
+  },
+  {
+   "id": "geo2-024",
+   "subcategory": "regions",
+   "difficulty": 1,
+   "question": "Which two rivers gave Mesopotamia its name, 'the land between the rivers'?",
+   "choices": [
+    "The Nile and the Jordan",
+    "The Oxus and the Jaxartes",
+    "The Tigris and the Euphrates",
+    "The Indus and the Ganges"
+   ],
+   "answer": 2,
+   "explanation": "Both rise in the highlands of Turkey.",
+   "tags": [
+    "mesopotamia"
+   ]
+  },
+  {
+   "id": "geo-012",
+   "subcategory": "rivers",
+   "difficulty": 1,
+   "question": "Which river flows through the centre of Paris?",
+   "choices": [
+    "Loire",
+    "Seine",
+    "Rhône",
+    "Garonne"
+   ],
+   "answer": 1,
+   "explanation": "The Seine runs through Paris on its way to the English Channel."
+  },
+  {
+   "id": "geo2-001",
+   "subcategory": "rivers",
+   "difficulty": 1,
+   "question": "The Nile flows north into which sea?",
+   "choices": [
+    "The Black Sea",
+    "The Red Sea",
+    "The Mediterranean Sea",
+    "The Arabian Sea"
+   ],
+   "answer": 2,
+   "explanation": "The river forms a large delta before reaching the Mediterranean.",
+   "tags": [
+    "nile"
+   ]
+  },
+  {
+   "id": "geo2-020",
+   "subcategory": "rivers",
+   "difficulty": 1,
+   "question": "Which river flows through Vienna, Budapest and Belgrade?",
+   "choices": [
+    "The Volga",
+    "The Elbe",
+    "The Danube",
+    "The Rhine"
+   ],
+   "answer": 2,
+   "explanation": "It crosses or borders ten countries.",
+   "tags": [
+    "danube"
+   ]
+  },
+  {
+   "id": "geo2-007",
+   "subcategory": "seas",
+   "difficulty": 1,
+   "question": "Which sea lies between southern Europe and North Africa?",
+   "choices": [
+    "The Baltic Sea",
+    "The Caspian Sea",
+    "The Black Sea",
+    "The Mediterranean Sea"
+   ],
+   "answer": 3,
+   "explanation": "It is linked to the Atlantic by the Strait of Gibraltar.",
+   "tags": [
+    "medit"
+   ]
+  },
+  {
+   "id": "geo-004",
+   "subcategory": "capitals",
+   "difficulty": 2,
+   "question": "What is the capital of Australia?",
+   "choices": [
+    "Sydney",
+    "Melbourne",
+    "Canberra",
+    "Perth"
+   ],
+   "answer": 2,
+   "explanation": "Canberra was purpose-built as the capital as a compromise between Sydney and Melbourne."
+  },
+  {
+   "id": "geo-005",
+   "subcategory": "capitals",
+   "difficulty": 2,
+   "question": "What is the capital of Canada?",
+   "choices": [
+    "Toronto",
+    "Ottawa",
+    "Montreal",
+    "Vancouver"
+   ],
+   "answer": 1,
+   "explanation": "Ottawa, in Ontario, has been Canada's capital since 1866."
+  },
+  {
+   "id": "geo-006",
+   "subcategory": "capitals",
+   "difficulty": 2,
+   "question": "What is the capital of Brazil?",
+   "choices": [
+    "Rio de Janeiro",
+    "São Paulo",
+    "Salvador",
+    "Brasília"
+   ],
+   "answer": 3,
+   "explanation": "Brasília was inaugurated as the capital in 1960, replacing Rio de Janeiro."
+  },
+  {
+   "id": "geo-015",
+   "subcategory": "capitals",
+   "difficulty": 2,
+   "question": "What is the capital of Turkey?",
+   "choices": [
+    "Istanbul",
+    "Ankara",
+    "Izmir",
+    "Bursa"
+   ],
+   "answer": 1,
+   "explanation": "Ankara became the capital in 1923. Istanbul is Turkey's largest city."
+  },
+  {
+   "id": "geo-023",
+   "subcategory": "capitals",
+   "difficulty": 2,
+   "question": "What is the capital of New Zealand?",
+   "choices": [
+    "Auckland",
+    "Christchurch",
+    "Dunedin",
+    "Wellington"
+   ],
+   "answer": 3,
+   "explanation": "Wellington, at the southern tip of the North Island, is the capital. Auckland is the largest city."
+  },
+  {
+   "id": "geo-024",
+   "subcategory": "cities",
+   "difficulty": 2,
+   "question": "Which major city is located on both sides of the Bosphorus, in Europe and in Asia?",
+   "choices": [
+    "Istanbul",
+    "Athens",
+    "Cairo",
+    "Baku"
+   ],
+   "answer": 0,
+   "explanation": "Istanbul straddles the Bosphorus strait, so part of it lies in each continent."
+  },
+  {
+   "id": "geo-016",
+   "subcategory": "continents",
+   "difficulty": 2,
+   "question": "Which continent has the most countries?",
+   "choices": [
+    "Asia",
+    "Europe",
+    "Africa",
+    "South America"
+   ],
+   "answer": 2,
+   "explanation": "Africa has 54 recognised sovereign states."
+  },
+  {
+   "id": "geo-030",
+   "subcategory": "continents",
+   "difficulty": 2,
+   "question": "Which is the smallest continent by land area?",
+   "choices": [
+    "Europe",
+    "Antarctica",
+    "South America",
+    "Australia/Oceania"
+   ],
+   "answer": 3,
+   "explanation": "Australia/Oceania is the smallest, at about 8.5 million square kilometres."
+  },
+  {
+   "id": "geo-007",
+   "subcategory": "countries",
+   "difficulty": 2,
+   "question": "According to United Nations estimates since 2023, which country has the largest population?",
+   "choices": [
+    "China",
+    "India",
+    "United States",
+    "Indonesia"
+   ],
+   "answer": 1,
+   "explanation": "UN estimates indicated that India overtook China in 2023.",
+   "asOf": "2023-04"
+  },
+  {
+   "id": "geo-009",
+   "subcategory": "countries",
+   "difficulty": 2,
+   "question": "Which is the smallest country in the world by area?",
+   "choices": [
+    "Monaco",
+    "Vatican City",
+    "San Marino",
+    "Liechtenstein"
+   ],
+   "answer": 1,
+   "explanation": "Vatican City covers only about 0.44 square kilometres."
+  },
+  {
+   "id": "geo2-010",
+   "subcategory": "countries",
+   "difficulty": 2,
+   "question": "Which two South American countries are landlocked?",
+   "choices": [
+    "Ecuador and Colombia",
+    "Peru and Chile",
+    "Bolivia and Paraguay",
+    "Uruguay and Guyana"
+   ],
+   "answer": 2,
+   "explanation": "Both lie inland.",
+   "tags": [
+    "samerica"
+   ]
+  },
+  {
+   "id": "geo2-021",
+   "subcategory": "deserts",
+   "difficulty": 2,
+   "question": "Which South American desert is the driest non-polar desert on Earth?",
+   "choices": [
+    "The Atacama Desert",
+    "The Monte Desert",
+    "The Sechura Desert",
+    "The Patagonian Desert"
+   ],
+   "answer": 0,
+   "explanation": "Some weather stations there have never recorded rain.",
+   "tags": [
+    "deserts"
+   ]
+  },
+  {
+   "id": "geo-019",
+   "subcategory": "islands",
+   "difficulty": 2,
+   "question": "Which is the largest island in the world?",
+   "choices": [
+    "Greenland",
+    "Borneo",
+    "Madagascar",
+    "New Guinea"
+   ],
+   "answer": 0,
+   "explanation": "Greenland covers about 2.17 million square kilometres. Australia is counted as a continent."
+  },
+  {
+   "id": "geo-008",
+   "subcategory": "mountains",
+   "difficulty": 2,
+   "question": "Mount Everest lies on the border of Nepal and which other country?",
+   "choices": [
+    "India",
+    "Bhutan",
+    "China",
+    "Pakistan"
+   ],
+   "answer": 2,
+   "explanation": "The summit sits on the border between Nepal and the Tibet Autonomous Region of China."
+  },
+  {
+   "id": "geo-020",
+   "subcategory": "mountains",
+   "difficulty": 2,
+   "question": "In which country is Mount Kilimanjaro?",
+   "choices": [
+    "Kenya",
+    "Ethiopia",
+    "Uganda",
+    "Tanzania"
+   ],
+   "answer": 3,
+   "explanation": "Kilimanjaro, Africa's highest peak at 5,895 m, stands in northeastern Tanzania."
+  },
+  {
+   "id": "geo2-006",
+   "subcategory": "physical",
+   "difficulty": 2,
+   "question": "Most Ring of Fire volcanoes form at which kind of plate boundary?",
+   "choices": [
+    "Subduction zones",
+    "Glacial valleys",
+    "Mid-ocean spreading ridges",
+    "Hot spots inside plates"
+   ],
+   "answer": 0,
+   "explanation": "One plate sinks beneath another, melting rock that feeds volcanoes.",
+   "tags": [
+    "ringfire"
+   ]
+  },
+  {
+   "id": "geo2-014",
+   "subcategory": "population",
+   "difficulty": 2,
+   "question": "Which two countries each have more than a billion inhabitants?",
+   "choices": [
+    "India and China",
+    "China and the United States",
+    "Brazil and India",
+    "India and Indonesia"
+   ],
+   "answer": 0,
+   "explanation": "Both exceed 1.4 billion.",
+   "tags": [
+    "population"
+   ]
+  },
+  {
+   "id": "geo2-018",
+   "subcategory": "regions",
+   "difficulty": 2,
+   "question": "Which peninsula includes Norway and Sweden?",
+   "choices": [
+    "The Kola Peninsula",
+    "The Iberian Peninsula",
+    "The Jutland Peninsula",
+    "The Scandinavian Peninsula"
+   ],
+   "answer": 3,
+   "explanation": "It is the largest peninsula in Europe.",
+   "tags": [
+    "peninsulas"
+   ]
+  },
+  {
+   "id": "geo-003",
+   "subcategory": "rivers",
+   "difficulty": 2,
+   "question": "Which river is traditionally considered the longest in Africa?",
+   "choices": [
+    "Congo",
+    "Niger",
+    "Nile",
+    "Zambezi"
+   ],
+   "answer": 2,
+   "explanation": "The Nile, at roughly 6,650 km, is traditionally cited as the longest river in the world."
+  },
+  {
+   "id": "geo-025",
+   "subcategory": "rivers",
+   "difficulty": 2,
+   "question": "Which river is the longest in South America?",
+   "choices": [
+    "Orinoco",
+    "Paraná",
+    "Amazon",
+    "Madeira"
+   ],
+   "answer": 2,
+   "explanation": "The Amazon is about 6,400 km long and carries more water than any other river."
+  },
+  {
+   "id": "geo2-002",
+   "subcategory": "rivers",
+   "difficulty": 2,
+   "question": "Which country contains the largest share of the Amazon rainforest?",
+   "choices": [
+    "Peru",
+    "Bolivia",
+    "Brazil",
+    "Colombia"
+   ],
+   "answer": 2,
+   "explanation": "About 60 percent of the forest lies in Brazil.",
+   "tags": [
+    "amazon"
+   ]
+  },
+  {
+   "id": "geo-013",
+   "subcategory": "seas",
+   "difficulty": 2,
+   "question": "Which strait separates Spain from Morocco at the entrance to the Mediterranean?",
+   "choices": [
+    "Bosphorus",
+    "Strait of Gibraltar",
+    "Strait of Hormuz",
+    "Dardanelles"
+   ],
+   "answer": 1,
+   "explanation": "At its narrowest the Strait of Gibraltar is about 14 km wide."
+  },
+  {
+   "id": "geo-021",
+   "subcategory": "seas",
+   "difficulty": 2,
+   "question": "The Panama Canal connects which two oceans?",
+   "choices": [
+    "Atlantic and Indian",
+    "Atlantic and Pacific",
+    "Pacific and Arctic",
+    "Pacific and Indian"
+   ],
+   "answer": 1,
+   "explanation": "The canal opened in 1914 and shortcuts the long route around South America."
+  },
+  {
+   "id": "geo2-008",
+   "subcategory": "seas",
+   "difficulty": 2,
+   "question": "Which of these countries has a coast on the Caspian Sea?",
+   "choices": [
+    "Georgia",
+    "Uzbekistan",
+    "Turkmenistan",
+    "Armenia"
+   ],
+   "answer": 2,
+   "explanation": "Uzbekistan lies inland, near the Aral Sea.",
+   "tags": [
+    "caspian"
+   ]
+  },
+  {
+   "id": "geo-017",
+   "subcategory": "capitals",
+   "difficulty": 3,
+   "question": "What is the capital of Kazakhstan?",
+   "choices": [
+    "Almaty",
+    "Astana",
+    "Tashkent",
+    "Bishkek"
+   ],
+   "answer": 1,
+   "explanation": "The capital was renamed Nur-Sultan in 2019 and returned to the name Astana in 2022."
+  },
+  {
+   "id": "geo-026",
+   "subcategory": "cities",
+   "difficulty": 3,
+   "question": "In which country is the historic city of Timbuktu?",
+   "choices": [
+    "Niger",
+    "Mali",
+    "Morocco",
+    "Sudan"
+   ],
+   "answer": 1,
+   "explanation": "Timbuktu, a medieval centre of trade and learning, lies in Mali."
+  },
+  {
+   "id": "geo-018",
+   "subcategory": "countries",
+   "difficulty": 3,
+   "question": "Which two countries share the longest international land border in the world?",
+   "choices": [
+    "Russia and China",
+    "Canada and the United States",
+    "Argentina and Chile",
+    "India and Pakistan"
+   ],
+   "answer": 1,
+   "explanation": "The Canada–US border runs for roughly 8,900 km including the Alaska segment."
+  },
+  {
+   "id": "geo-014",
+   "subcategory": "lakes",
+   "difficulty": 3,
+   "question": "Which is the deepest lake in the world?",
+   "choices": [
+    "Lake Superior",
+    "Lake Tanganyika",
+    "Lake Baikal",
+    "Lake Victoria"
+   ],
+   "answer": 2,
+   "explanation": "Lake Baikal in Russia reaches about 1,642 metres deep."
+  },
+  {
+   "id": "geo2-019",
+   "subcategory": "lakes",
+   "difficulty": 3,
+   "question": "Which Great Lake lies entirely within the United States?",
+   "choices": [
+    "Lake Superior",
+    "Lake Erie",
+    "Lake Huron",
+    "Lake Michigan"
+   ],
+   "answer": 3,
+   "explanation": "The others are shared with Canada.",
+   "tags": [
+    "greatlakes"
+   ]
+  },
+  {
+   "id": "geo2-003",
+   "subcategory": "mountains",
+   "difficulty": 3,
+   "question": "Which is the second-highest mountain on Earth?",
+   "choices": [
+    "Lhotse",
+    "Kangchenjunga",
+    "K2",
+    "Makalu"
+   ],
+   "answer": 2,
+   "explanation": "K2 rises to about 8,611 metres on the border of Pakistan and China.",
+   "tags": [
+    "himalaya"
+   ]
+  },
+  {
+   "id": "geo2-016",
+   "subcategory": "oceans",
+   "difficulty": 3,
+   "question": "El Niño is a periodic warming of surface waters in which ocean?",
+   "choices": [
+    "The Indian Ocean",
+    "The Pacific Ocean",
+    "The Arctic Ocean",
+    "The Atlantic Ocean"
+   ],
+   "answer": 1,
+   "explanation": "It occurs in the equatorial Pacific and affects weather worldwide.",
+   "tags": [
+    "currents"
+   ]
+  },
+  {
+   "id": "geo2-012",
+   "subcategory": "physical",
+   "difficulty": 3,
+   "question": "Which is the deepest lake in Africa?",
+   "choices": [
+    "Lake Turkana",
+    "Lake Tanganyika",
+    "Lake Malawi",
+    "Lake Victoria"
+   ],
+   "answer": 1,
+   "explanation": "Lake Tanganyika is about 1,470 metres deep.",
+   "tags": [
+    "rift"
+   ]
+  },
+  {
+   "id": "geo-022",
+   "subcategory": "waterfalls",
+   "difficulty": 3,
+   "question": "Angel Falls, the world's tallest uninterrupted waterfall, is in which country?",
+   "choices": [
+    "Brazil",
+    "Venezuela",
+    "Peru",
+    "Colombia"
+   ],
+   "answer": 1,
+   "explanation": "Angel Falls drops 979 metres in Venezuela's Canaima National Park."
+  },
+  {
+   "id": "geo-011",
+   "subcategory": "countries",
+   "difficulty": 4,
+   "question": "Which country has the most time zones, counting its overseas territories?",
+   "choices": [
+    "Russia",
+    "United States",
+    "France",
+    "China"
+   ],
+   "answer": 2,
+   "explanation": "France spans about 12 or 13 time zones because of its overseas territories."
+  },
+  {
+   "id": "trk-006",
+   "subcategory": "mountains",
+   "difficulty": 4,
+   "question": "Which mountain's summit is the farthest from the centre of the Earth?",
+   "choices": [
+    "Mount Everest",
+    "Chimborazo",
+    "Mauna Kea",
+    "Aconcagua"
+   ],
+   "answer": 1,
+   "explanation": "Earth bulges at the equator, so the summit of Chimborazo in Ecuador is farthest from the centre, though Everest is highest above sea level.",
+   "tags": [
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think Mount Everest is the tallest and the farthest-from-Earth's-centre mountain in every sense."
+  },
+  {
+   "id": "geo-028",
+   "subcategory": "rivers",
+   "difficulty": 4,
+   "question": "Which river flows through more countries than any other in the world?",
+   "choices": [
+    "Rhine",
+    "Danube",
+    "Nile",
+    "Mekong"
+   ],
+   "answer": 1,
+   "explanation": "The Danube flows through ten countries, from Germany to the Black Sea."
+  }
+ ]
 }

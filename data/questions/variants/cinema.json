@@ -4,70 +4,36 @@
  "note": "Difficulty ladders: the original question keeps its own level, these are the other levels. Unreviewed.",
  "families": [
   {
-   "id": "cin-001",
+   "id": "cin-008",
    "ask": {
-    "1": "Name the film",
-    "2": "Ship film",
+    "1": "Actor",
+    "2": "Terminator",
     "3": "Director"
    },
    "variants": [
     {
      "level": 2,
-     "question": "Which 1997 romantic disaster film stars Leonardo DiCaprio and Kate Winslet aboard a doomed ocean liner?",
+     "question": "Who directed 'The Terminator' (1984)?",
      "choices": [
-      "The Abyss",
-      "Poseidon",
-      "Titanic",
-      "Pearl Harbor"
+      "Ridley Scott",
+      "James Cameron",
+      "Steven Spielberg",
+      "John McTiernan"
      ],
-     "answer": 2,
-     "explanation": "Titanic is the 1997 James Cameron film."
+     "answer": 1,
+     "explanation": "James Cameron directed it."
     },
     {
      "level": 3,
-     "question": "How many Academy Awards did 'Titanic' win in 1998, tying the record?",
+     "question": "Which 1991 sequel, also directed by James Cameron, features the liquid-metal T-1000?",
      "choices": [
-      "8",
-      "11",
-      "14",
-      "5"
-     ],
-     "answer": 1,
-     "explanation": "Titanic won 11 Oscars, equalling Ben-Hur."
-    }
-   ]
-  },
-  {
-   "id": "cin-002",
-   "ask": {
-    "1": "Director",
-    "2": "Jurassic Park",
-    "3": "Author"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "Which author wrote the 1990 novel that 'Jurassic Park' is based on?",
-     "choices": [
-      "Arthur C. Clarke",
-      "Isaac Asimov",
-      "Michael Crichton",
-      "Stephen King"
+      "Terminator 3",
+      "Aliens",
+      "Terminator 2: Judgment Day",
+      "Total Recall"
      ],
      "answer": 2,
-     "explanation": "Michael Crichton wrote the novel."
-    },
-    {
-     "level": 3,
-     "question": "Which paleontologist character is played by Sam Neill in 'Jurassic Park'?",
-     "choices": [
-      "Ian Malcolm",
-      "Alan Grant",
-      "John Hammond",
-      "Owen Grady"
-     ],
-     "answer": 1,
-     "explanation": "Sam Neill plays Dr Alan Grant."
+     "explanation": "T2 features the T-1000."
     }
    ]
   },
@@ -174,40 +140,6 @@
    ]
   },
   {
-   "id": "cin-006",
-   "ask": {
-    "1": "Wizard film",
-    "2": "Harry Potter",
-    "3": "Author"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "Who wrote the Harry Potter novels?",
-     "choices": [
-      "Philip Pullman",
-      "C. S. Lewis",
-      "Roald Dahl",
-      "J. K. Rowling"
-     ],
-     "answer": 3,
-     "explanation": "J. K. Rowling wrote them."
-    },
-    {
-     "level": 3,
-     "question": "In the first Harry Potter book, which house is Harry sorted into at Hogwarts?",
-     "choices": [
-      "Gryffindor",
-      "Hufflepuff",
-      "Ravenclaw",
-      "Slytherin"
-     ],
-     "answer": 0,
-     "explanation": "Harry is sorted into Gryffindor."
-    }
-   ]
-  },
-  {
    "id": "cin-007",
    "ask": {
     "1": "Film",
@@ -238,40 +170,6 @@
      ],
      "answer": 1,
      "explanation": "Finding Nemo came out in 2003."
-    }
-   ]
-  },
-  {
-   "id": "cin-008",
-   "ask": {
-    "1": "Actor",
-    "2": "Terminator",
-    "3": "Director"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "Who directed 'The Terminator' (1984)?",
-     "choices": [
-      "Ridley Scott",
-      "James Cameron",
-      "Steven Spielberg",
-      "John McTiernan"
-     ],
-     "answer": 1,
-     "explanation": "James Cameron directed it."
-    },
-    {
-     "level": 3,
-     "question": "Which 1991 sequel, also directed by James Cameron, features the liquid-metal T-1000?",
-     "choices": [
-      "Terminator 3",
-      "Aliens",
-      "Terminator 2: Judgment Day",
-      "Total Recall"
-     ],
-     "answer": 2,
-     "explanation": "T2 features the T-1000."
     }
    ]
   },
@@ -310,6 +208,108 @@
    ]
   },
   {
+   "id": "cin-002",
+   "ask": {
+    "1": "Director",
+    "2": "Jurassic Park",
+    "3": "Author"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which author wrote the 1990 novel that 'Jurassic Park' is based on?",
+     "choices": [
+      "Arthur C. Clarke",
+      "Isaac Asimov",
+      "Michael Crichton",
+      "Stephen King"
+     ],
+     "answer": 2,
+     "explanation": "Michael Crichton wrote the novel."
+    },
+    {
+     "level": 3,
+     "question": "Which paleontologist character is played by Sam Neill in 'Jurassic Park'?",
+     "choices": [
+      "Ian Malcolm",
+      "Alan Grant",
+      "John Hammond",
+      "Owen Grady"
+     ],
+     "answer": 1,
+     "explanation": "Sam Neill plays Dr Alan Grant."
+    }
+   ]
+  },
+  {
+   "id": "cin-001",
+   "ask": {
+    "1": "Name the film",
+    "2": "Ship film",
+    "3": "Director"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which 1997 romantic disaster film stars Leonardo DiCaprio and Kate Winslet aboard a doomed ocean liner?",
+     "choices": [
+      "The Abyss",
+      "Poseidon",
+      "Titanic",
+      "Pearl Harbor"
+     ],
+     "answer": 2,
+     "explanation": "Titanic is the 1997 James Cameron film."
+    },
+    {
+     "level": 3,
+     "question": "How many Academy Awards did 'Titanic' win in 1998, tying the record?",
+     "choices": [
+      "8",
+      "11",
+      "14",
+      "5"
+     ],
+     "answer": 1,
+     "explanation": "Titanic won 11 Oscars, equalling Ben-Hur."
+    }
+   ]
+  },
+  {
+   "id": "cin-006",
+   "ask": {
+    "1": "Wizard film",
+    "2": "Harry Potter",
+    "3": "Author"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Who wrote the Harry Potter novels?",
+     "choices": [
+      "Philip Pullman",
+      "C. S. Lewis",
+      "Roald Dahl",
+      "J. K. Rowling"
+     ],
+     "answer": 3,
+     "explanation": "J. K. Rowling wrote them."
+    },
+    {
+     "level": 3,
+     "question": "In the first Harry Potter book, which house is Harry sorted into at Hogwarts?",
+     "choices": [
+      "Gryffindor",
+      "Hufflepuff",
+      "Ravenclaw",
+      "Slytherin"
+     ],
+     "answer": 0,
+     "explanation": "Harry is sorted into Gryffindor."
+    }
+   ]
+  },
+  {
    "id": "cin-011",
    "ask": {
     "1": "Pirate film",
@@ -340,108 +340,6 @@
      ],
      "answer": 2,
      "explanation": "The 2003 film was inspired by the Disney ride."
-    }
-   ]
-  },
-  {
-   "id": "cin-012",
-   "ask": {
-    "1": "Film",
-    "2": "Wakanda",
-    "3": "Actor"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which Marvel hero wears a black suit and is king of Wakanda?",
-     "choices": [
-      "Thor",
-      "Iron Man",
-      "Hulk",
-      "Black Panther"
-     ],
-     "answer": 3,
-     "explanation": "Black Panther is T'Challa, king of Wakanda."
-    },
-    {
-     "level": 3,
-     "question": "Who played T'Challa in Black Panther?",
-     "choices": [
-      "Michael B. Jordan",
-      "Chadwick Boseman",
-      "Idris Elba",
-      "Anthony Mackie"
-     ],
-     "answer": 1,
-     "explanation": "Chadwick Boseman played the king."
-    }
-   ]
-  },
-  {
-   "id": "cin-013",
-   "ask": {
-    "1": "Director",
-    "2": "The Godfather",
-    "3": "Actor"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which 1972 gangster film stars Marlon Brando as Vito Corleone?",
-     "choices": [
-      "Casino",
-      "Goodfellas",
-      "The Godfather",
-      "Scarface"
-     ],
-     "answer": 2,
-     "explanation": "Brando played Vito Corleone."
-    },
-    {
-     "level": 3,
-     "question": "Which Italian composer wrote the music of The Godfather?",
-     "choices": [
-      "Giorgio Moroder",
-      "Nino Rota",
-      "Ennio Morricone",
-      "Hans Zimmer"
-     ],
-     "answer": 1,
-     "explanation": "Nino Rota wrote the score."
-    }
-   ]
-  },
-  {
-   "id": "cin-014",
-   "ask": {
-    "1": "Film",
-    "2": "Matrix",
-    "3": "Choice"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which 1999 sci-fi film features a hacker named Neo?",
-     "choices": [
-      "Tron",
-      "The Matrix",
-      "Blade Runner",
-      "Minority Report"
-     ],
-     "answer": 1,
-     "explanation": "Neo is the hero of The Matrix."
-    },
-    {
-     "level": 3,
-     "question": "Who plays Neo in The Matrix?",
-     "choices": [
-      "Tom Cruise",
-      "Will Smith",
-      "Brad Pitt",
-      "Keanu Reeves"
-     ],
-     "answer": 3,
-     "explanation": "Keanu Reeves plays Neo."
     }
    ]
   },
@@ -480,104 +378,36 @@
    ]
   },
   {
-   "id": "cin-016",
+   "id": "cin-021",
    "ask": {
-    "1": "Time travel",
-    "2": "DeLorean",
-    "3": "Speed"
+    "1": "Actress",
+    "2": "Hunger Games",
+    "3": "Role"
    },
    "variants": [
     {
      "level": 1,
-     "question": "Which 1985 film features a time-travelling car?",
+     "question": "Which film series features a girl volunteering for a deadly competition called the Games?",
      "choices": [
-      "Terminator",
-      "Back to the Future",
-      "E.T.",
-      "Jumanji"
+      "Twilight",
+      "Divergent",
+      "Maze Runner",
+      "The Hunger Games"
+     ],
+     "answer": 3,
+     "explanation": "Katniss volunteers for her sister."
+    },
+    {
+     "level": 3,
+     "question": "In The Hunger Games, which district does Katniss come from?",
+     "choices": [
+      "District 1",
+      "District 12",
+      "District 13",
+      "District 7"
      ],
      "answer": 1,
-     "explanation": "Marty McFly uses a DeLorean time machine."
-    },
-    {
-     "level": 3,
-     "question": "Which actor plays Marty McFly in Back to the Future?",
-     "choices": [
-      "Charlie Sheen",
-      "Tom Cruise",
-      "Matthew Broderick",
-      "Michael J. Fox"
-     ],
-     "answer": 3,
-     "explanation": "Michael J. Fox played Marty McFly."
-    }
-   ]
-  },
-  {
-   "id": "cin-017",
-   "ask": {
-    "1": "Director",
-    "2": "Inception",
-    "3": "Plot"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "In which film do thieves enter people's dreams?",
-     "choices": [
-      "Tenet",
-      "Interstellar",
-      "Memento",
-      "Inception"
-     ],
-     "answer": 3,
-     "explanation": "Inception is about shared dreaming."
-    },
-    {
-     "level": 3,
-     "question": "Which actor leads the team in Inception as Dom Cobb?",
-     "choices": [
-      "Cillian Murphy",
-      "Brad Pitt",
-      "Tom Hardy",
-      "Leonardo DiCaprio"
-     ],
-     "answer": 3,
-     "explanation": "Leonardo DiCaprio plays Dom Cobb."
-    }
-   ]
-  },
-  {
-   "id": "cin-018",
-   "ask": {
-    "1": "Best Picture",
-    "2": "Oppenheimer",
-    "3": "Awards"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which 2023 film about the atomic bomb won Best Picture?",
-     "choices": [
-      "Barbie",
-      "Maestro",
-      "Poor Things",
-      "Oppenheimer"
-     ],
-     "answer": 3,
-     "explanation": "Oppenheimer won Best Picture in 2024."
-    },
-    {
-     "level": 3,
-     "question": "How many Oscars did Oppenheimer win in 2024?",
-     "choices": [
-      "7",
-      "11",
-      "5",
-      "3"
-     ],
-     "answer": 0,
-     "explanation": "Oppenheimer won seven Oscars."
+     "explanation": "Katniss lives in District 12."
     }
    ]
   },
@@ -616,6 +446,74 @@
    ]
   },
   {
+   "id": "cin-041",
+   "ask": {
+    "1": "Film",
+    "2": "Toy cowboy",
+    "3": "Studio"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which animated film features toys that come alive when people are not looking?",
+     "choices": [
+      "Shrek",
+      "Cars",
+      "Toy Story",
+      "Up"
+     ],
+     "answer": 2,
+     "explanation": "Toy Story features toys that come alive."
+    },
+    {
+     "level": 3,
+     "question": "Who voices Woody in the original Toy Story?",
+     "choices": [
+      "Billy Crystal",
+      "Robin Williams",
+      "Tim Allen",
+      "Tom Hanks"
+     ],
+     "answer": 3,
+     "explanation": "Tom Hanks voices Woody."
+    }
+   ]
+  },
+  {
+   "id": "cin-018",
+   "ask": {
+    "1": "Best Picture",
+    "2": "Oppenheimer",
+    "3": "Awards"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which 2023 film about the atomic bomb won Best Picture?",
+     "choices": [
+      "Barbie",
+      "Maestro",
+      "Poor Things",
+      "Oppenheimer"
+     ],
+     "answer": 3,
+     "explanation": "Oppenheimer won Best Picture in 2024."
+    },
+    {
+     "level": 3,
+     "question": "How many Oscars did Oppenheimer win in 2024?",
+     "choices": [
+      "7",
+      "11",
+      "5",
+      "3"
+     ],
+     "answer": 0,
+     "explanation": "Oppenheimer won seven Oscars."
+    }
+   ]
+  },
+  {
    "id": "cin-020",
    "ask": {
     "1": "Festival",
@@ -650,36 +548,172 @@
    ]
   },
   {
-   "id": "cin-021",
+   "id": "cin-013",
    "ask": {
-    "1": "Actress",
-    "2": "Hunger Games",
-    "3": "Role"
+    "1": "Director",
+    "2": "The Godfather",
+    "3": "Actor"
    },
    "variants": [
     {
      "level": 1,
-     "question": "Which film series features a girl volunteering for a deadly competition called the Games?",
+     "question": "Which 1972 gangster film stars Marlon Brando as Vito Corleone?",
      "choices": [
-      "Twilight",
-      "Divergent",
-      "Maze Runner",
-      "The Hunger Games"
+      "Casino",
+      "Goodfellas",
+      "The Godfather",
+      "Scarface"
      ],
-     "answer": 3,
-     "explanation": "Katniss volunteers for her sister."
+     "answer": 2,
+     "explanation": "Brando played Vito Corleone."
     },
     {
      "level": 3,
-     "question": "In The Hunger Games, which district does Katniss come from?",
+     "question": "Which Italian composer wrote the music of The Godfather?",
      "choices": [
-      "District 1",
-      "District 12",
-      "District 13",
-      "District 7"
+      "Giorgio Moroder",
+      "Nino Rota",
+      "Ennio Morricone",
+      "Hans Zimmer"
      ],
      "answer": 1,
-     "explanation": "Katniss lives in District 12."
+     "explanation": "Nino Rota wrote the score."
+    }
+   ]
+  },
+  {
+   "id": "cin-017",
+   "ask": {
+    "1": "Director",
+    "2": "Inception",
+    "3": "Plot"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which film do thieves enter people's dreams?",
+     "choices": [
+      "Tenet",
+      "Interstellar",
+      "Memento",
+      "Inception"
+     ],
+     "answer": 3,
+     "explanation": "Inception is about shared dreaming."
+    },
+    {
+     "level": 3,
+     "question": "Which actor leads the team in Inception as Dom Cobb?",
+     "choices": [
+      "Cillian Murphy",
+      "Brad Pitt",
+      "Tom Hardy",
+      "Leonardo DiCaprio"
+     ],
+     "answer": 3,
+     "explanation": "Leonardo DiCaprio plays Dom Cobb."
+    }
+   ]
+  },
+  {
+   "id": "cin-012",
+   "ask": {
+    "1": "Film",
+    "2": "Wakanda",
+    "3": "Actor"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Marvel hero wears a black suit and is king of Wakanda?",
+     "choices": [
+      "Thor",
+      "Iron Man",
+      "Hulk",
+      "Black Panther"
+     ],
+     "answer": 3,
+     "explanation": "Black Panther is T'Challa, king of Wakanda."
+    },
+    {
+     "level": 3,
+     "question": "Who played T'Challa in Black Panther?",
+     "choices": [
+      "Michael B. Jordan",
+      "Chadwick Boseman",
+      "Idris Elba",
+      "Anthony Mackie"
+     ],
+     "answer": 1,
+     "explanation": "Chadwick Boseman played the king."
+    }
+   ]
+  },
+  {
+   "id": "cin-014",
+   "ask": {
+    "1": "Film",
+    "2": "Matrix",
+    "3": "Choice"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which 1999 sci-fi film features a hacker named Neo?",
+     "choices": [
+      "Tron",
+      "The Matrix",
+      "Blade Runner",
+      "Minority Report"
+     ],
+     "answer": 1,
+     "explanation": "Neo is the hero of The Matrix."
+    },
+    {
+     "level": 3,
+     "question": "Who plays Neo in The Matrix?",
+     "choices": [
+      "Tom Cruise",
+      "Will Smith",
+      "Brad Pitt",
+      "Keanu Reeves"
+     ],
+     "answer": 3,
+     "explanation": "Keanu Reeves plays Neo."
+    }
+   ]
+  },
+  {
+   "id": "cin-016",
+   "ask": {
+    "1": "Time travel",
+    "2": "DeLorean",
+    "3": "Speed"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which 1985 film features a time-travelling car?",
+     "choices": [
+      "Terminator",
+      "Back to the Future",
+      "E.T.",
+      "Jumanji"
+     ],
+     "answer": 1,
+     "explanation": "Marty McFly uses a DeLorean time machine."
+    },
+    {
+     "level": 3,
+     "question": "Which actor plays Marty McFly in Back to the Future?",
+     "choices": [
+      "Charlie Sheen",
+      "Tom Cruise",
+      "Matthew Broderick",
+      "Michael J. Fox"
+     ],
+     "answer": 3,
+     "explanation": "Michael J. Fox played Marty McFly."
     }
    ]
   },
@@ -714,6 +748,108 @@
      ],
      "answer": 3,
      "explanation": "David Prowse wore the costume; James Earl Jones was the voice."
+    }
+   ]
+  },
+  {
+   "id": "cin-029",
+   "ask": {
+    "1": "Actor",
+    "2": "Joker",
+    "3": "Award"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which 2008 Batman film features the Joker as its villain?",
+     "choices": [
+      "Batman Begins",
+      "The Dark Knight",
+      "Batman Returns",
+      "The Dark Knight Rises"
+     ],
+     "answer": 1,
+     "explanation": "The Dark Knight has the Joker."
+    },
+    {
+     "level": 2,
+     "question": "Who directed The Dark Knight?",
+     "choices": [
+      "Joel Schumacher",
+      "Christopher Nolan",
+      "Tim Burton",
+      "Zack Snyder"
+     ],
+     "answer": 1,
+     "explanation": "Christopher Nolan directed it."
+    }
+   ]
+  },
+  {
+   "id": "cin-039",
+   "ask": {
+    "1": "Actor",
+    "2": "Gladiator",
+    "3": "Character"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which actor plays Maximus in Gladiator?",
+     "choices": [
+      "Russell Crowe",
+      "Brad Pitt",
+      "Mel Gibson",
+      "Tom Cruise"
+     ],
+     "answer": 0,
+     "explanation": "Russell Crowe won Best Actor."
+    },
+    {
+     "level": 2,
+     "question": "Who played the emperor Commodus in Gladiator?",
+     "choices": [
+      "Joaquin Phoenix",
+      "Richard Harris",
+      "Djimon Hounsou",
+      "Oliver Reed"
+     ],
+     "answer": 0,
+     "explanation": "Joaquin Phoenix played Commodus."
+    }
+   ]
+  },
+  {
+   "id": "cin-032",
+   "ask": {
+    "1": "Pixar",
+    "2": "Ratatouille",
+    "3": "Character"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which Pixar film does a rat cook food in a Paris restaurant?",
+     "choices": [
+      "Ratatouille",
+      "Cars",
+      "WALL-E",
+      "Up"
+     ],
+     "answer": 0,
+     "explanation": "Ratatouille is about Remy."
+    },
+    {
+     "level": 2,
+     "question": "What is the name of the rat who dreams of being a chef in Ratatouille?",
+     "choices": [
+      "Remy",
+      "Linguini",
+      "Emile",
+      "Gusteau"
+     ],
+     "answer": 0,
+     "explanation": "Remy is the rat."
     }
    ]
   },
@@ -786,40 +922,6 @@
    ]
   },
   {
-   "id": "cin-025",
-   "ask": {
-    "1": "Director",
-    "2": "2001",
-    "3": "Computer"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "In which 1968 film does a computer named HAL 9000 go wrong?",
-     "choices": [
-      "Blade Runner",
-      "2001: A Space Odyssey",
-      "Alien",
-      "Star Wars"
-     ],
-     "answer": 1,
-     "explanation": "HAL appears in 2001."
-    },
-    {
-     "level": 2,
-     "question": "Which author wrote the story that inspired 2001: A Space Odyssey?",
-     "choices": [
-      "Isaac Asimov",
-      "Ray Bradbury",
-      "Philip K. Dick",
-      "Arthur C. Clarke"
-     ],
-     "answer": 3,
-     "explanation": "Arthur C. Clarke co-wrote it with Kubrick."
-    }
-   ]
-  },
-  {
    "id": "cin-026",
    "ask": {
     "1": "Actress",
@@ -850,6 +952,40 @@
      ],
      "answer": 3,
      "explanation": "Jodie Foster won for playing Clarice Starling."
+    }
+   ]
+  },
+  {
+   "id": "cin-025",
+   "ask": {
+    "1": "Director",
+    "2": "2001",
+    "3": "Computer"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which 1968 film does a computer named HAL 9000 go wrong?",
+     "choices": [
+      "Blade Runner",
+      "2001: A Space Odyssey",
+      "Alien",
+      "Star Wars"
+     ],
+     "answer": 1,
+     "explanation": "HAL appears in 2001."
+    },
+    {
+     "level": 2,
+     "question": "Which author wrote the story that inspired 2001: A Space Odyssey?",
+     "choices": [
+      "Isaac Asimov",
+      "Ray Bradbury",
+      "Philip K. Dick",
+      "Arthur C. Clarke"
+     ],
+     "answer": 3,
+     "explanation": "Arthur C. Clarke co-wrote it with Kubrick."
     }
    ]
   },
@@ -888,70 +1024,36 @@
    ]
   },
   {
-   "id": "cin-028",
+   "id": "cin-031",
    "ask": {
-    "1": "Composer",
-    "2": "Star Wars",
-    "3": "Orchestra"
+    "1": "Director",
+    "2": "Seven Samurai",
+    "3": "Country"
    },
    "variants": [
     {
      "level": 1,
-     "question": "Who composed the Indiana Jones theme and Jaws theme?",
+     "question": "In which country was Seven Samurai made?",
      "choices": [
-      "Hans Zimmer",
-      "Danny Elfman",
-      "Ennio Morricone",
-      "John Williams"
+      "Japan",
+      "Korea",
+      "China",
+      "Thailand"
      ],
-     "answer": 3,
-     "explanation": "John Williams wrote them."
+     "answer": 0,
+     "explanation": "It was made in Japan."
     },
     {
      "level": 2,
-     "question": "Which orchestra recorded the original Star Wars score in 1977?",
+     "question": "Which actor stars as the lead samurai Kambei in Seven Samurai?",
      "choices": [
-      "The Berlin Philharmonic",
-      "The London Symphony Orchestra",
-      "The Vienna Philharmonic",
-      "The New York Philharmonic"
+      "Ken Takakura",
+      "Takashi Shimura",
+      "Toshiro Mifune",
+      "Tatsuya Nakadai"
      ],
      "answer": 1,
-     "explanation": "The LSO recorded it."
-    }
-   ]
-  },
-  {
-   "id": "cin-029",
-   "ask": {
-    "1": "Actor",
-    "2": "Joker",
-    "3": "Award"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which 2008 Batman film features the Joker as its villain?",
-     "choices": [
-      "Batman Begins",
-      "The Dark Knight",
-      "Batman Returns",
-      "The Dark Knight Rises"
-     ],
-     "answer": 1,
-     "explanation": "The Dark Knight has the Joker."
-    },
-    {
-     "level": 2,
-     "question": "Who directed The Dark Knight?",
-     "choices": [
-      "Joel Schumacher",
-      "Christopher Nolan",
-      "Tim Burton",
-      "Zack Snyder"
-     ],
-     "answer": 1,
-     "explanation": "Christopher Nolan directed it."
+     "explanation": "Takashi Shimura played Kambei; Toshiro Mifune played Kikuchiyo."
     }
    ]
   },
@@ -990,104 +1092,138 @@
    ]
   },
   {
-   "id": "cin-031",
+   "id": "cin-040",
    "ask": {
-    "1": "Director",
-    "2": "Seven Samurai",
-    "3": "Country"
+    "1": "Trilogy",
+    "2": "LOTR",
+    "3": "Author"
    },
    "variants": [
     {
      "level": 1,
-     "question": "In which country was Seven Samurai made?",
+     "question": "Which fantasy trilogy features Frodo and the One Ring?",
      "choices": [
-      "Japan",
-      "Korea",
-      "China",
-      "Thailand"
+      "Harry Potter",
+      "The Hobbit",
+      "Narnia",
+      "The Lord of the Rings"
      ],
-     "answer": 0,
-     "explanation": "It was made in Japan."
+     "answer": 3,
+     "explanation": "Frodo carries the ring."
     },
     {
      "level": 2,
-     "question": "Which actor stars as the lead samurai Kambei in Seven Samurai?",
+     "question": "Who wrote The Lord of the Rings?",
      "choices": [
-      "Ken Takakura",
-      "Takashi Shimura",
-      "Toshiro Mifune",
-      "Tatsuya Nakadai"
+      "Terry Pratchett",
+      "C. S. Lewis",
+      "J. R. R. Tolkien",
+      "George R. R. Martin"
+     ],
+     "answer": 2,
+     "explanation": "Tolkien wrote it."
+    }
+   ]
+  },
+  {
+   "id": "cin-028",
+   "ask": {
+    "1": "Composer",
+    "2": "Star Wars",
+    "3": "Orchestra"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Who composed the Indiana Jones theme and Jaws theme?",
+     "choices": [
+      "Hans Zimmer",
+      "Danny Elfman",
+      "Ennio Morricone",
+      "John Williams"
+     ],
+     "answer": 3,
+     "explanation": "John Williams wrote them."
+    },
+    {
+     "level": 2,
+     "question": "Which orchestra recorded the original Star Wars score in 1977?",
+     "choices": [
+      "The Berlin Philharmonic",
+      "The London Symphony Orchestra",
+      "The Vienna Philharmonic",
+      "The New York Philharmonic"
      ],
      "answer": 1,
-     "explanation": "Takashi Shimura played Kambei; Toshiro Mifune played Kikuchiyo."
+     "explanation": "The LSO recorded it."
     }
    ]
   },
   {
-   "id": "cin-032",
+   "id": "cin-036",
    "ask": {
-    "1": "Pixar",
-    "2": "Ratatouille",
-    "3": "Character"
+    "1": "Director",
+    "2": "Lawrence",
+    "3": "Actor"
    },
    "variants": [
     {
      "level": 1,
-     "question": "In which Pixar film does a rat cook food in a Paris restaurant?",
+     "question": "Which 1962 epic film is about a British officer in the Arabian desert?",
      "choices": [
-      "Ratatouille",
-      "Cars",
-      "WALL-E",
-      "Up"
+      "Doctor Zhivago",
+      "Zulu",
+      "Lawrence of Arabia",
+      "Ben-Hur"
      ],
-     "answer": 0,
-     "explanation": "Ratatouille is about Remy."
+     "answer": 2,
+     "explanation": "It is Lawrence of Arabia."
     },
     {
      "level": 2,
-     "question": "What is the name of the rat who dreams of being a chef in Ratatouille?",
+     "question": "Which actor played T. E. Lawrence in Lawrence of Arabia?",
      "choices": [
-      "Remy",
-      "Linguini",
-      "Emile",
-      "Gusteau"
+      "Alec Guinness",
+      "Omar Sharif",
+      "Peter O'Toole",
+      "Anthony Quinn"
      ],
-     "answer": 0,
-     "explanation": "Remy is the rat."
+     "answer": 2,
+     "explanation": "Peter O'Toole starred."
     }
    ]
   },
   {
-   "id": "cin-033",
+   "id": "cin-038",
    "ask": {
-    "1": "Film",
-    "2": "First CGI feature",
-    "3": "Studio"
+    "1": "Director",
+    "2": "Blade Runner",
+    "3": "Actor"
    },
    "variants": [
     {
      "level": 1,
-     "question": "Which animated film features Woody and Buzz Lightyear?",
+     "question": "Which 1982 science-fiction film features replicants and Harrison Ford?",
      "choices": [
-      "Up",
-      "Cars",
-      "Shrek",
-      "Toy Story"
+      "Alien",
+      "Blade Runner",
+      "Total Recall",
+      "Star Wars"
      ],
-     "answer": 3,
-     "explanation": "Toy Story has Woody and Buzz."
+     "answer": 1,
+     "explanation": "Blade Runner features Ford as Deckard."
     },
     {
      "level": 2,
-     "question": "In which year was Toy Story released?",
+     "question": "Which writer's novel is the basis for Blade Runner?",
      "choices": [
-      "1991",
-      "1999",
-      "2001",
-      "1995"
+      "Isaac Asimov",
+      "Arthur C. Clarke",
+      "Philip K. Dick",
+      "Ray Bradbury"
      ],
-     "answer": 3,
-     "explanation": "Toy Story came out in 1995."
+     "answer": 2,
+     "explanation": "It is based on Do Androids Dream of Electric Sheep?"
     }
    ]
   },
@@ -1160,36 +1296,36 @@
    ]
   },
   {
-   "id": "cin-036",
+   "id": "cin-033",
    "ask": {
-    "1": "Director",
-    "2": "Lawrence",
-    "3": "Actor"
+    "1": "Film",
+    "2": "First CGI feature",
+    "3": "Studio"
    },
    "variants": [
     {
      "level": 1,
-     "question": "Which 1962 epic film is about a British officer in the Arabian desert?",
+     "question": "Which animated film features Woody and Buzz Lightyear?",
      "choices": [
-      "Doctor Zhivago",
-      "Zulu",
-      "Lawrence of Arabia",
-      "Ben-Hur"
+      "Up",
+      "Cars",
+      "Shrek",
+      "Toy Story"
      ],
-     "answer": 2,
-     "explanation": "It is Lawrence of Arabia."
+     "answer": 3,
+     "explanation": "Toy Story has Woody and Buzz."
     },
     {
      "level": 2,
-     "question": "Which actor played T. E. Lawrence in Lawrence of Arabia?",
+     "question": "In which year was Toy Story released?",
      "choices": [
-      "Alec Guinness",
-      "Omar Sharif",
-      "Peter O'Toole",
-      "Anthony Quinn"
+      "1991",
+      "1999",
+      "2001",
+      "1995"
      ],
-     "answer": 2,
-     "explanation": "Peter O'Toole starred."
+     "answer": 3,
+     "explanation": "Toy Story came out in 1995."
     }
    ]
   },
@@ -1224,142 +1360,6 @@
      ],
      "answer": 3,
      "explanation": "Mary Shelley wrote it in 1818."
-    }
-   ]
-  },
-  {
-   "id": "cin-038",
-   "ask": {
-    "1": "Director",
-    "2": "Blade Runner",
-    "3": "Actor"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which 1982 science-fiction film features replicants and Harrison Ford?",
-     "choices": [
-      "Alien",
-      "Blade Runner",
-      "Total Recall",
-      "Star Wars"
-     ],
-     "answer": 1,
-     "explanation": "Blade Runner features Ford as Deckard."
-    },
-    {
-     "level": 2,
-     "question": "Which writer's novel is the basis for Blade Runner?",
-     "choices": [
-      "Isaac Asimov",
-      "Arthur C. Clarke",
-      "Philip K. Dick",
-      "Ray Bradbury"
-     ],
-     "answer": 2,
-     "explanation": "It is based on Do Androids Dream of Electric Sheep?"
-    }
-   ]
-  },
-  {
-   "id": "cin-039",
-   "ask": {
-    "1": "Actor",
-    "2": "Gladiator",
-    "3": "Character"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which actor plays Maximus in Gladiator?",
-     "choices": [
-      "Russell Crowe",
-      "Brad Pitt",
-      "Mel Gibson",
-      "Tom Cruise"
-     ],
-     "answer": 0,
-     "explanation": "Russell Crowe won Best Actor."
-    },
-    {
-     "level": 2,
-     "question": "Who played the emperor Commodus in Gladiator?",
-     "choices": [
-      "Joaquin Phoenix",
-      "Richard Harris",
-      "Djimon Hounsou",
-      "Oliver Reed"
-     ],
-     "answer": 0,
-     "explanation": "Joaquin Phoenix played Commodus."
-    }
-   ]
-  },
-  {
-   "id": "cin-040",
-   "ask": {
-    "1": "Trilogy",
-    "2": "LOTR",
-    "3": "Author"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which fantasy trilogy features Frodo and the One Ring?",
-     "choices": [
-      "Harry Potter",
-      "The Hobbit",
-      "Narnia",
-      "The Lord of the Rings"
-     ],
-     "answer": 3,
-     "explanation": "Frodo carries the ring."
-    },
-    {
-     "level": 2,
-     "question": "Who wrote The Lord of the Rings?",
-     "choices": [
-      "Terry Pratchett",
-      "C. S. Lewis",
-      "J. R. R. Tolkien",
-      "George R. R. Martin"
-     ],
-     "answer": 2,
-     "explanation": "Tolkien wrote it."
-    }
-   ]
-  },
-  {
-   "id": "cin-041",
-   "ask": {
-    "1": "Film",
-    "2": "Toy cowboy",
-    "3": "Studio"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which animated film features toys that come alive when people are not looking?",
-     "choices": [
-      "Shrek",
-      "Cars",
-      "Toy Story",
-      "Up"
-     ],
-     "answer": 2,
-     "explanation": "Toy Story features toys that come alive."
-    },
-    {
-     "level": 3,
-     "question": "Who voices Woody in the original Toy Story?",
-     "choices": [
-      "Billy Crystal",
-      "Robin Williams",
-      "Tim Allen",
-      "Tom Hanks"
-     ],
-     "answer": 3,
-     "explanation": "Tom Hanks voices Woody."
     }
    ]
   }

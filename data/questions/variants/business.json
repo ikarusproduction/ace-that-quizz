@@ -4,36 +4,36 @@
  "note": "Difficulty ladders: the original question keeps its own level, these are the other levels. Unreviewed.",
  "families": [
   {
-   "id": "biz-001",
+   "id": "biz-005",
    "ask": {
-    "1": "Product",
-    "2": "Company",
-    "3": "Founder"
+    "1": "Title",
+    "2": "Letters",
+    "3": "Boss"
    },
    "variants": [
     {
      "level": 2,
-     "question": "Which Apple co-founder introduced the first iPhone in 2007?",
+     "question": "What does 'CFO' stand for?",
      "choices": [
-      "Steve Jobs",
-      "Jeff Bezos",
-      "Bill Gates",
-      "Larry Page"
+      "Chief Factory Operator",
+      "Chief Financial Officer",
+      "Central Funding Office",
+      "Company Finance Owner"
      ],
-     "answer": 0,
-     "explanation": "Steve Jobs presented it."
+     "answer": 1,
+     "explanation": "CFO is chief financial officer."
     },
     {
      "level": 3,
-     "question": "In which California city is Apple's headquarters?",
+     "question": "What does 'COO' stand for?",
      "choices": [
-      "San Diego",
-      "Palo Alto",
-      "Sacramento",
-      "Cupertino"
+      "Central Output Office",
+      "Company Owner Operator",
+      "Chief Online Officer",
+      "Chief Operating Officer"
      ],
      "answer": 3,
-     "explanation": "Apple Park is in Cupertino."
+     "explanation": "COO is chief operating officer."
     }
    ]
   },
@@ -68,6 +68,74 @@
      ],
      "answer": 1,
      "explanation": "The brand is named after Nike, goddess of victory."
+    }
+   ]
+  },
+  {
+   "id": "biz-007",
+   "ask": {
+    "1": "Fast food",
+    "2": "Logo",
+    "3": "Chain"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which mascot is associated with McDonald's?",
+     "choices": [
+      "Ronald McDonald",
+      "Wendy",
+      "The King",
+      "Colonel Sanders"
+     ],
+     "answer": 0,
+     "explanation": "Ronald McDonald is the clown."
+    },
+    {
+     "level": 3,
+     "question": "In which year did the first McDonald's franchise restaurant open under Ray Kroc?",
+     "choices": [
+      "1985",
+      "1970",
+      "1940",
+      "1955"
+     ],
+     "answer": 3,
+     "explanation": "Ray Kroc opened in Des Plaines in 1955."
+    }
+   ]
+  },
+  {
+   "id": "biz-001",
+   "ask": {
+    "1": "Product",
+    "2": "Company",
+    "3": "Founder"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which Apple co-founder introduced the first iPhone in 2007?",
+     "choices": [
+      "Steve Jobs",
+      "Jeff Bezos",
+      "Bill Gates",
+      "Larry Page"
+     ],
+     "answer": 0,
+     "explanation": "Steve Jobs presented it."
+    },
+    {
+     "level": 3,
+     "question": "In which California city is Apple's headquarters?",
+     "choices": [
+      "San Diego",
+      "Palo Alto",
+      "Sacramento",
+      "Cupertino"
+     ],
+     "answer": 3,
+     "explanation": "Apple Park is in Cupertino."
     }
    ]
   },
@@ -140,40 +208,6 @@
    ]
   },
   {
-   "id": "biz-005",
-   "ask": {
-    "1": "Title",
-    "2": "Letters",
-    "3": "Boss"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "What does 'CFO' stand for?",
-     "choices": [
-      "Chief Factory Operator",
-      "Chief Financial Officer",
-      "Central Funding Office",
-      "Company Finance Owner"
-     ],
-     "answer": 1,
-     "explanation": "CFO is chief financial officer."
-    },
-    {
-     "level": 3,
-     "question": "What does 'COO' stand for?",
-     "choices": [
-      "Central Output Office",
-      "Company Owner Operator",
-      "Chief Online Officer",
-      "Chief Operating Officer"
-     ],
-     "answer": 3,
-     "explanation": "COO is chief operating officer."
-    }
-   ]
-  },
-  {
    "id": "biz-006",
    "ask": {
     "1": "Social media",
@@ -204,40 +238,6 @@
      ],
      "answer": 2,
      "explanation": "Zuckerberg founded Facebook."
-    }
-   ]
-  },
-  {
-   "id": "biz-007",
-   "ask": {
-    "1": "Fast food",
-    "2": "Logo",
-    "3": "Chain"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "Which mascot is associated with McDonald's?",
-     "choices": [
-      "Ronald McDonald",
-      "Wendy",
-      "The King",
-      "Colonel Sanders"
-     ],
-     "answer": 0,
-     "explanation": "Ronald McDonald is the clown."
-    },
-    {
-     "level": 3,
-     "question": "In which year did the first McDonald's franchise restaurant open under Ray Kroc?",
-     "choices": [
-      "1985",
-      "1970",
-      "1940",
-      "1955"
-     ],
-     "answer": 3,
-     "explanation": "Ray Kroc opened in Des Plaines in 1955."
     }
    ]
   },
@@ -276,108 +276,6 @@
    ]
   },
   {
-   "id": "biz-009",
-   "ask": {
-    "1": "OS",
-    "2": "Phone",
-    "3": "Owner"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which company runs the Google search engine?",
-     "choices": [
-      "Apple",
-      "Netflix",
-      "Google",
-      "Amazon"
-     ],
-     "answer": 2,
-     "explanation": "Google runs the search engine."
-    },
-    {
-     "level": 3,
-     "question": "Which company bought Android in 2005?",
-     "choices": [
-      "Samsung",
-      "Google",
-      "Microsoft",
-      "Nokia"
-     ],
-     "answer": 1,
-     "explanation": "Google acquired Android Inc. in 2005."
-    }
-   ]
-  },
-  {
-   "id": "biz-010",
-   "ask": {
-    "1": "Startup",
-    "2": "Valuation",
-    "3": "Animal"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "What mythical animal is used for startups worth billions?",
-     "choices": [
-      "Unicorn",
-      "Phoenix",
-      "Griffin",
-      "Dragon"
-     ],
-     "answer": 0,
-     "explanation": "The term is unicorn."
-    },
-    {
-     "level": 3,
-     "question": "Who coined the term 'unicorn' for startups worth over a billion in 2013?",
-     "choices": [
-      "Jack Ma",
-      "Aileen Lee",
-      "Elon Musk",
-      "Mark Cuban"
-     ],
-     "answer": 1,
-     "explanation": "Aileen Lee coined it."
-    }
-   ]
-  },
-  {
-   "id": "biz-011",
-   "ask": {
-    "1": "Founder",
-    "2": "Software",
-    "3": "Windows"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which company makes Windows?",
-     "choices": [
-      "Microsoft",
-      "IBM",
-      "Google",
-      "Apple"
-     ],
-     "answer": 0,
-     "explanation": "Microsoft makes Windows."
-    },
-    {
-     "level": 3,
-     "question": "In which year was Microsoft founded?",
-     "choices": [
-      "1965",
-      "1985",
-      "1995",
-      "1975"
-     ],
-     "answer": 3,
-     "explanation": "Founded in April 1975."
-    }
-   ]
-  },
-  {
    "id": "biz-012",
    "ask": {
     "1": "Metrics",
@@ -408,6 +306,108 @@
      ],
      "answer": 2,
      "explanation": "OKRs set goals and results."
+    }
+   ]
+  },
+  {
+   "id": "biz-031",
+   "ask": {
+    "1": "Bill",
+    "2": "Payment",
+    "3": "Invoice"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What do you get when a supplier asks you to pay for goods?",
+     "choices": [
+      "An invoice",
+      "A ticket",
+      "A diploma",
+      "A trophy"
+     ],
+     "answer": 0,
+     "explanation": "An invoice requests payment."
+    },
+    {
+     "level": 3,
+     "question": "What does 'net 30' mean on an invoice?",
+     "choices": [
+      "A 30 dollar fee",
+      "A 30 percent discount",
+      "Payment due in 30 days",
+      "30 items"
+     ],
+     "answer": 2,
+     "explanation": "Net 30 means payment within 30 days."
+    }
+   ]
+  },
+  {
+   "id": "biz-032",
+   "ask": {
+    "1": "Franchise",
+    "2": "Brand",
+    "3": "Restaurant"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which restaurant chain sells franchises to owners all over the world?",
+     "choices": [
+      "McDonald's",
+      "A school canteen",
+      "A village bakery",
+      "A family kitchen"
+     ],
+     "answer": 0,
+     "explanation": "McDonald's is a big franchise."
+    },
+    {
+     "level": 3,
+     "question": "What fee does a franchisee typically pay to the franchisor?",
+     "choices": [
+      "Tuition",
+      "Dividends",
+      "Tips",
+      "Royalties"
+     ],
+     "answer": 3,
+     "explanation": "Franchisees pay royalties."
+    }
+   ]
+  },
+  {
+   "id": "biz-035",
+   "ask": {
+    "1": "Staff",
+    "2": "Department",
+    "3": "Jobs"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which department recruits new employees?",
+     "choices": [
+      "Repairs",
+      "Shipping",
+      "Human resources",
+      "Catering"
+     ],
+     "answer": 2,
+     "explanation": "HR recruits staff."
+    },
+    {
+     "level": 3,
+     "question": "What do you call the document that outlines an employee's pay and terms?",
+     "choices": [
+      "Brochure",
+      "Employment contract",
+      "Invoice",
+      "Receipt"
+     ],
+     "answer": 1,
+     "explanation": "The contract sets terms."
     }
    ]
   },
@@ -446,6 +446,40 @@
    ]
   },
   {
+   "id": "biz-015",
+   "ask": {
+    "1": "Furniture",
+    "2": "Sweden",
+    "3": "Company"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country is IKEA from?",
+     "choices": [
+      "Denmark",
+      "Sweden",
+      "Finland",
+      "Norway"
+     ],
+     "answer": 1,
+     "explanation": "IKEA is Swedish."
+    },
+    {
+     "level": 3,
+     "question": "Who founded IKEA in 1943?",
+     "choices": [
+      "Stefan Persson",
+      "Ingvar Kamprad",
+      "Ingvar Persson",
+      "Lars Rebien"
+     ],
+     "answer": 1,
+     "explanation": "Ingvar Kamprad founded IKEA."
+    }
+   ]
+  },
+  {
    "id": "biz-014",
    "ask": {
     "1": "Brand",
@@ -480,36 +514,36 @@
    ]
   },
   {
-   "id": "biz-015",
+   "id": "biz-010",
    "ask": {
-    "1": "Furniture",
-    "2": "Sweden",
-    "3": "Company"
+    "1": "Startup",
+    "2": "Valuation",
+    "3": "Animal"
    },
    "variants": [
     {
      "level": 1,
-     "question": "Which country is IKEA from?",
+     "question": "What mythical animal is used for startups worth billions?",
      "choices": [
-      "Denmark",
-      "Sweden",
-      "Finland",
-      "Norway"
+      "Unicorn",
+      "Phoenix",
+      "Griffin",
+      "Dragon"
      ],
-     "answer": 1,
-     "explanation": "IKEA is Swedish."
+     "answer": 0,
+     "explanation": "The term is unicorn."
     },
     {
      "level": 3,
-     "question": "Who founded IKEA in 1943?",
+     "question": "Who coined the term 'unicorn' for startups worth over a billion in 2013?",
      "choices": [
-      "Stefan Persson",
-      "Ingvar Kamprad",
-      "Ingvar Persson",
-      "Lars Rebien"
+      "Jack Ma",
+      "Aileen Lee",
+      "Elon Musk",
+      "Mark Cuban"
      ],
      "answer": 1,
-     "explanation": "Ingvar Kamprad founded IKEA."
+     "explanation": "Aileen Lee coined it."
     }
    ]
   },
@@ -548,70 +582,138 @@
    ]
   },
   {
-   "id": "biz-017",
+   "id": "biz-009",
    "ask": {
-    "1": "Value",
-    "2": "Trillion",
-    "3": "Company"
+    "1": "OS",
+    "2": "Phone",
+    "3": "Owner"
    },
    "variants": [
     {
      "level": 1,
-     "question": "Which company makes the iPhone and was the first worth $1 trillion?",
+     "question": "Which company runs the Google search engine?",
      "choices": [
-      "Nokia",
-      "Dell",
       "Apple",
-      "Sony"
+      "Netflix",
+      "Google",
+      "Amazon"
      ],
      "answer": 2,
-     "explanation": "Apple reached $1 trillion first."
+     "explanation": "Google runs the search engine."
     },
     {
-     "level": 2,
-     "question": "In which year did Apple first reach a $1 trillion market value?",
+     "level": 3,
+     "question": "Which company bought Android in 2005?",
      "choices": [
-      "2010",
-      "2022",
-      "2005",
-      "2018"
+      "Samsung",
+      "Google",
+      "Microsoft",
+      "Nokia"
      ],
-     "answer": 3,
-     "explanation": "Apple hit $1 trillion in August 2018."
+     "answer": 1,
+     "explanation": "Google acquired Android Inc. in 2005."
     }
    ]
   },
   {
-   "id": "biz-018",
+   "id": "biz-011",
    "ask": {
-    "1": "Analysis",
-    "2": "Acronym",
-    "3": "Tool"
+    "1": "Founder",
+    "2": "Software",
+    "3": "Windows"
    },
    "variants": [
     {
      "level": 1,
-     "question": "What do companies analyse in a SWOT table?",
+     "question": "Which company makes Windows?",
      "choices": [
-      "Taxes only",
-      "Weather",
-      "Strengths and weaknesses",
-      "Salaries only"
+      "Microsoft",
+      "IBM",
+      "Google",
+      "Apple"
+     ],
+     "answer": 0,
+     "explanation": "Microsoft makes Windows."
+    },
+    {
+     "level": 3,
+     "question": "In which year was Microsoft founded?",
+     "choices": [
+      "1965",
+      "1985",
+      "1995",
+      "1975"
+     ],
+     "answer": 3,
+     "explanation": "Founded in April 1975."
+    }
+   ]
+  },
+  {
+   "id": "biz-033",
+   "ask": {
+    "1": "One-click",
+    "2": "Shop",
+    "3": "Patent"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which online retailer is known for fast delivery with Prime?",
+     "choices": [
+      "Netflix",
+      "Amazon",
+      "Uber",
+      "Spotify"
+     ],
+     "answer": 1,
+     "explanation": "Amazon runs Prime."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Amazon launch its Prime subscription?",
+     "choices": [
+      "2018",
+      "2005",
+      "2012",
+      "1995"
+     ],
+     "answer": 1,
+     "explanation": "Amazon Prime began in 2005."
+    }
+   ]
+  },
+  {
+   "id": "biz-025",
+   "ask": {
+    "1": "Deals",
+    "2": "Company",
+    "3": "Merge"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "When two companies combine into one, it is called a what?",
+     "choices": [
+      "Refund",
+      "Audit",
+      "Merger",
+      "Split"
      ],
      "answer": 2,
-     "explanation": "SWOT lists strengths and weaknesses."
+     "explanation": "A merger combines firms."
     },
     {
      "level": 2,
-     "question": "In a SWOT analysis, which letters describe internal factors?",
+     "question": "What do you call it when one company buys another?",
      "choices": [
-      "S and W",
-      "O and T",
-      "S and O",
-      "W and T"
+      "A subsidy",
+      "A refund",
+      "A strike",
+      "An acquisition"
      ],
-     "answer": 0,
-     "explanation": "Strengths and weaknesses are internal."
+     "answer": 3,
+     "explanation": "An acquisition is a purchase."
     }
    ]
   },
@@ -650,36 +752,36 @@
    ]
   },
   {
-   "id": "biz-020",
+   "id": "biz-034",
    "ask": {
-    "1": "Method",
-    "2": "Toyota",
-    "3": "Stock"
+    "1": "Luxury",
+    "2": "Group",
+    "3": "Brands"
    },
    "variants": [
     {
      "level": 1,
-     "question": "Which Japanese carmaker makes the Corolla?",
+     "question": "Which luxury brand is known for its monogram bags?",
      "choices": [
-      "Toyota",
-      "Nissan",
-      "Honda",
-      "Mazda"
+      "Zara",
+      "Levi's",
+      "Louis Vuitton",
+      "Nike"
      ],
-     "answer": 0,
-     "explanation": "Toyota makes the Corolla."
+     "answer": 2,
+     "explanation": "Louis Vuitton uses monograms."
     },
     {
      "level": 2,
-     "question": "What is the Toyota system built on 'just-in-time' and waste reduction called?",
+     "question": "In which country is LVMH headquartered?",
      "choices": [
-      "The Toyota Production System",
-      "Agile",
-      "Scrum",
-      "Six Sigma"
+      "Switzerland",
+      "United Kingdom",
+      "France",
+      "Italy"
      ],
-     "answer": 0,
-     "explanation": "TPS popularised just-in-time."
+     "answer": 2,
+     "explanation": "LVMH is based in Paris."
     }
    ]
   },
@@ -752,6 +854,108 @@
    ]
   },
   {
+   "id": "biz-018",
+   "ask": {
+    "1": "Analysis",
+    "2": "Acronym",
+    "3": "Tool"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What do companies analyse in a SWOT table?",
+     "choices": [
+      "Taxes only",
+      "Weather",
+      "Strengths and weaknesses",
+      "Salaries only"
+     ],
+     "answer": 2,
+     "explanation": "SWOT lists strengths and weaknesses."
+    },
+    {
+     "level": 2,
+     "question": "In a SWOT analysis, which letters describe internal factors?",
+     "choices": [
+      "S and W",
+      "O and T",
+      "S and O",
+      "W and T"
+     ],
+     "answer": 0,
+     "explanation": "Strengths and weaknesses are internal."
+    }
+   ]
+  },
+  {
+   "id": "biz-020",
+   "ask": {
+    "1": "Method",
+    "2": "Toyota",
+    "3": "Stock"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Japanese carmaker makes the Corolla?",
+     "choices": [
+      "Toyota",
+      "Nissan",
+      "Honda",
+      "Mazda"
+     ],
+     "answer": 0,
+     "explanation": "Toyota makes the Corolla."
+    },
+    {
+     "level": 2,
+     "question": "What is the Toyota system built on 'just-in-time' and waste reduction called?",
+     "choices": [
+      "The Toyota Production System",
+      "Agile",
+      "Scrum",
+      "Six Sigma"
+     ],
+     "answer": 0,
+     "explanation": "TPS popularised just-in-time."
+    }
+   ]
+  },
+  {
+   "id": "biz-017",
+   "ask": {
+    "1": "Value",
+    "2": "Trillion",
+    "3": "Company"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which company makes the iPhone and was the first worth $1 trillion?",
+     "choices": [
+      "Nokia",
+      "Dell",
+      "Apple",
+      "Sony"
+     ],
+     "answer": 2,
+     "explanation": "Apple reached $1 trillion first."
+    },
+    {
+     "level": 2,
+     "question": "In which year did Apple first reach a $1 trillion market value?",
+     "choices": [
+      "2010",
+      "2022",
+      "2005",
+      "2018"
+     ],
+     "answer": 3,
+     "explanation": "Apple hit $1 trillion in August 2018."
+    }
+   ]
+  },
+  {
    "id": "biz-023",
    "ask": {
     "1": "Headquarters",
@@ -816,40 +1020,6 @@
      ],
      "answer": 0,
      "explanation": "Founded in 1997."
-    }
-   ]
-  },
-  {
-   "id": "biz-025",
-   "ask": {
-    "1": "Deals",
-    "2": "Company",
-    "3": "Merge"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "When two companies combine into one, it is called a what?",
-     "choices": [
-      "Refund",
-      "Audit",
-      "Merger",
-      "Split"
-     ],
-     "answer": 2,
-     "explanation": "A merger combines firms."
-    },
-    {
-     "level": 2,
-     "question": "What do you call it when one company buys another?",
-     "choices": [
-      "A subsidy",
-      "A refund",
-      "A strike",
-      "An acquisition"
-     ],
-     "answer": 3,
-     "explanation": "An acquisition is a purchase."
     }
    ]
   },
@@ -1020,176 +1190,6 @@
      ],
      "answer": 1,
      "explanation": "They studied at Stanford."
-    }
-   ]
-  },
-  {
-   "id": "biz-031",
-   "ask": {
-    "1": "Bill",
-    "2": "Payment",
-    "3": "Invoice"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "What do you get when a supplier asks you to pay for goods?",
-     "choices": [
-      "An invoice",
-      "A ticket",
-      "A diploma",
-      "A trophy"
-     ],
-     "answer": 0,
-     "explanation": "An invoice requests payment."
-    },
-    {
-     "level": 3,
-     "question": "What does 'net 30' mean on an invoice?",
-     "choices": [
-      "A 30 dollar fee",
-      "A 30 percent discount",
-      "Payment due in 30 days",
-      "30 items"
-     ],
-     "answer": 2,
-     "explanation": "Net 30 means payment within 30 days."
-    }
-   ]
-  },
-  {
-   "id": "biz-032",
-   "ask": {
-    "1": "Franchise",
-    "2": "Brand",
-    "3": "Restaurant"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which restaurant chain sells franchises to owners all over the world?",
-     "choices": [
-      "McDonald's",
-      "A school canteen",
-      "A village bakery",
-      "A family kitchen"
-     ],
-     "answer": 0,
-     "explanation": "McDonald's is a big franchise."
-    },
-    {
-     "level": 3,
-     "question": "What fee does a franchisee typically pay to the franchisor?",
-     "choices": [
-      "Tuition",
-      "Dividends",
-      "Tips",
-      "Royalties"
-     ],
-     "answer": 3,
-     "explanation": "Franchisees pay royalties."
-    }
-   ]
-  },
-  {
-   "id": "biz-033",
-   "ask": {
-    "1": "One-click",
-    "2": "Shop",
-    "3": "Patent"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which online retailer is known for fast delivery with Prime?",
-     "choices": [
-      "Netflix",
-      "Amazon",
-      "Uber",
-      "Spotify"
-     ],
-     "answer": 1,
-     "explanation": "Amazon runs Prime."
-    },
-    {
-     "level": 3,
-     "question": "In which year did Amazon launch its Prime subscription?",
-     "choices": [
-      "2018",
-      "2005",
-      "2012",
-      "1995"
-     ],
-     "answer": 1,
-     "explanation": "Amazon Prime began in 2005."
-    }
-   ]
-  },
-  {
-   "id": "biz-034",
-   "ask": {
-    "1": "Luxury",
-    "2": "Group",
-    "3": "Brands"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which luxury brand is known for its monogram bags?",
-     "choices": [
-      "Zara",
-      "Levi's",
-      "Louis Vuitton",
-      "Nike"
-     ],
-     "answer": 2,
-     "explanation": "Louis Vuitton uses monograms."
-    },
-    {
-     "level": 2,
-     "question": "In which country is LVMH headquartered?",
-     "choices": [
-      "Switzerland",
-      "United Kingdom",
-      "France",
-      "Italy"
-     ],
-     "answer": 2,
-     "explanation": "LVMH is based in Paris."
-    }
-   ]
-  },
-  {
-   "id": "biz-035",
-   "ask": {
-    "1": "Staff",
-    "2": "Department",
-    "3": "Jobs"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which department recruits new employees?",
-     "choices": [
-      "Repairs",
-      "Shipping",
-      "Human resources",
-      "Catering"
-     ],
-     "answer": 2,
-     "explanation": "HR recruits staff."
-    },
-    {
-     "level": 3,
-     "question": "What do you call the document that outlines an employee's pay and terms?",
-     "choices": [
-      "Brochure",
-      "Employment contract",
-      "Invoice",
-      "Receipt"
-     ],
-     "answer": 1,
-     "explanation": "The contract sets terms."
     }
    ]
   }

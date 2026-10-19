@@ -1670,5 +1670,6 @@ export const RIGS = {
 
 registerSprites(BOSSES, PALETTE);
 import './art_medicine.js';
+import './art_champion.js';
 
 export const BOSS_SPRITE_NAMES = Object.keys(BOSSES).filter((n) => n.startsWith('boss_'));

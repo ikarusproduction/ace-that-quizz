@@ -85,7 +85,7 @@ export function createTranslator({ fetchJson, timeoutMs = 3500 } = {}) {
       const dict = await loadBundle(lang, fetchJson);
       const hit = dict?.[question.id];
       if (hit?.q && Array.isArray(hit.c) && hit.c.length === question.choices.length) {
-        const r = { q: hit.q, c: hit.c, e: hit.e ?? null, via: 'bundled' };
+        const r = { q: hit.q, c: hit.c, e: hit.e ?? null, m: hit.m ?? null, via: 'bundled' };
         MEM.set(memKey, r);
         return r;
       }
@@ -114,6 +114,7 @@ export function applyTranslation(view, tr) {
     text: view.text == null ? null : tr.q,
     choices: view.choices.map((c) => ({ ...c, text: tr.c && tr.c[c.orig] != null ? tr.c[c.orig] : c.text })),
     explanation: view.explanation == null ? null : tr.e ?? view.explanation,
+    misconception: view.misconception == null ? null : tr.m ?? view.misconception,
     translated: tr.via,
   };
 }

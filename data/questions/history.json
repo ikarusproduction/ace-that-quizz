@@ -1,34 +1,882 @@
 {
-  "category": "history",
-  "review": "unreviewed",
-  "questions": [
-    {"id":"his-001","subcategory":"modern","difficulty":1,"question":"In which year did World War II end?","choices":["1943","1944","1945","1946"],"answer":2,"explanation":"The war in Europe ended in May 1945 and the war in the Pacific in September 1945."},
-    {"id":"his-002","subcategory":"people","difficulty":1,"question":"Who was the first President of the United States?","choices":["Thomas Jefferson","George Washington","John Adams","Abraham Lincoln"],"answer":1,"explanation":"George Washington served as president from 1789 to 1797."},
-    {"id":"his-003","subcategory":"ancient","difficulty":1,"question":"Which ancient civilization built the pyramids of Giza?","choices":["The Romans","The Greeks","The Egyptians","The Aztecs"],"answer":2,"explanation":"The Giza pyramids were built by ancient Egyptians as royal tombs, around 2600–2500 BC."},
-    {"id":"his-004","subcategory":"modern","difficulty":2,"question":"In which year did the Berlin Wall fall?","choices":["1985","1987","1989","1991"],"answer":2,"explanation":"The wall was opened on 9 November 1989, and Germany reunified in 1990."},
-    {"id":"his-005","subcategory":"ancient","difficulty":1,"question":"Which empire built the Colosseum in Rome?","choices":["Byzantine","Roman","Ottoman","Persian"],"answer":1,"explanation":"The Colosseum was completed under the Roman Empire in AD 80."},
-    {"id":"his-006","subcategory":"modern","difficulty":2,"question":"In which year did the French Revolution begin?","choices":["1689","1776","1789","1815"],"answer":2,"explanation":"The Revolution began in 1789, famously with the storming of the Bastille on 14 July."},
-    {"id":"his-007","subcategory":"ancient","difficulty":3,"question":"Who was the first emperor of a unified China, founding the Qin dynasty?","choices":["Han Wudi","Qin Shi Huang","Kublai Khan","Confucius"],"answer":1,"explanation":"Qin Shi Huang unified China in 221 BC and took the title of first emperor."},
-    {"id":"his-008","subcategory":"medieval","difficulty":3,"question":"In which year was Magna Carta sealed by King John of England?","choices":["1066","1215","1348","1415"],"answer":1,"explanation":"Magna Carta was sealed at Runnymede in 1215, limiting the king's powers."},
-    {"id":"his-009","subcategory":"ancient","difficulty":2,"question":"Which civilization built Machu Picchu?","choices":["Maya","Aztec","Inca","Olmec"],"answer":2,"explanation":"Machu Picchu was built by the Inca in the 15th century, high in the Peruvian Andes."},
-    {"id":"his-010","subcategory":"modern","difficulty":2,"question":"The Treaty of Versailles formally ended which war?","choices":["World War I","World War II","The Franco-Prussian War","The Crimean War"],"answer":0,"explanation":"The Treaty of Versailles was signed in 1919 and formally ended World War I with Germany."},
-    {"id":"his-011","subcategory":"medieval","difficulty":2,"question":"Who founded the Mongol Empire in 1206?","choices":["Attila","Genghis Khan","Tamerlane","Kublai Khan"],"answer":1,"explanation":"Temüjin was proclaimed Genghis Khan in 1206 after uniting the Mongol tribes."},
-    {"id":"his-012","subcategory":"early-modern","difficulty":2,"question":"Which ship carried the Pilgrims from England to America in 1620?","choices":["Santa Maria","Mayflower","Endeavour","Golden Hind"],"answer":1,"explanation":"The Mayflower landed at Cape Cod in November 1620, with about 100 passengers."},
-    {"id":"his-013","subcategory":"modern","difficulty":2,"question":"In which country did the Industrial Revolution begin?","choices":["France","Germany","Great Britain","The United States"],"answer":2,"explanation":"It began in Britain in the 18th century, driven by textiles, coal and steam power."},
-    {"id":"his-014","subcategory":"early-modern","difficulty":2,"question":"In which country did the Renaissance begin?","choices":["France","Spain","England","Italy"],"answer":3,"explanation":"The Renaissance began in 14th-century Italy, notably in Florence."},
-    {"id":"his-015","subcategory":"ancient","difficulty":3,"question":"Which Carthaginian general famously crossed the Alps with elephants to attack Rome?","choices":["Hannibal","Hamilcar","Scipio","Pyrrhus"],"answer":0,"explanation":"Hannibal made the crossing in 218 BC during the Second Punic War."},
-    {"id":"his-016","subcategory":"modern","difficulty":1,"question":"In which year did humans first land on the Moon?","choices":["1959","1965","1969","1975"],"answer":2,"explanation":"Apollo 11 landed on 20 July 1969, and Neil Armstrong and Buzz Aldrin walked on the surface."},
-    {"id":"his-017","subcategory":"medieval","difficulty":3,"question":"The Hundred Years' War was fought mainly between which two kingdoms?","choices":["England and France","Spain and Portugal","France and Germany","England and Scotland"],"answer":0,"explanation":"It lasted from 1337 to 1453, with periods of truce, between England and France."},
-    {"id":"his-018","subcategory":"modern","difficulty":3,"question":"In which year did the Cuban Missile Crisis take place?","choices":["1956","1962","1968","1973"],"answer":1,"explanation":"The crisis lasted thirteen days in October 1962 and brought the US and USSR close to nuclear war."},
-    {"id":"his-019","subcategory":"people","difficulty":2,"question":"Who was the first woman to win a Nobel Prize?","choices":["Mother Teresa","Marie Curie","Florence Nightingale","Rosalind Franklin"],"answer":1,"explanation":"Marie Curie shared the 1903 Nobel Prize in Physics and later won a second in Chemistry in 1911."},
-    {"id":"his-020","subcategory":"ancient","difficulty":3,"question":"The Rosetta Stone helped scholars decipher which writing system?","choices":["Cuneiform","Maya glyphs","Egyptian hieroglyphs","Linear B"],"answer":2,"explanation":"Its text appears in hieroglyphic, Demotic and Greek, which let Champollion crack hieroglyphs in the 1820s."},
-    {"id":"his-021","subcategory":"ancient","difficulty":4,"question":"In which year is the fall of the Western Roman Empire traditionally dated?","choices":["395","410","476","527"],"answer":2,"explanation":"In 476 the last Western emperor, Romulus Augustulus, was deposed by Odoacer."},
-    {"id":"his-022","subcategory":"medieval","difficulty":2,"question":"In which year was the Battle of Hastings fought?","choices":["1066","1215","1314","1453"],"answer":0,"explanation":"William of Normandy defeated King Harold at Hastings in 1066."},
-    {"id":"his-023","subcategory":"people","difficulty":2,"question":"Who was Prime Minister of the United Kingdom for most of World War II?","choices":["Neville Chamberlain","Clement Attlee","Winston Churchill","Anthony Eden"],"answer":2,"explanation":"Churchill led the wartime government from May 1940 to July 1945."},
-    {"id":"his-024","subcategory":"early-modern","difficulty":3,"question":"Whose expedition completed the first circumnavigation of the globe between 1519 and 1522?","choices":["Christopher Columbus","Vasco da Gama","Ferdinand Magellan","James Cook"],"answer":2,"explanation":"Magellan was killed in the Philippines in 1521. Juan Sebastián Elcano led the surviving ship home."},
-    {"id":"his-025","subcategory":"early-modern","difficulty":3,"question":"Which empire was ruled by Suleiman the Magnificent?","choices":["Ottoman Empire","Mughal Empire","Safavid Empire","Byzantine Empire"],"answer":0,"explanation":"Suleiman ruled the Ottoman Empire from 1520 to 1566, at its height of power."},
-    {"id":"his-026","subcategory":"modern","difficulty":2,"question":"In which year did the Titanic sink?","choices":["1905","1912","1918","1923"],"answer":1,"explanation":"The Titanic struck an iceberg and sank on 15 April 1912."},
-    {"id":"his-027","subcategory":"ancient","difficulty":3,"question":"Which Roman emperor ordered the construction of a wall across northern Britain in AD 122?","choices":["Augustus","Hadrian","Nero","Constantine"],"answer":1,"explanation":"Hadrian's Wall marked the northern frontier of Roman Britain."},
-    {"id":"his-028","subcategory":"modern","difficulty":2,"question":"Who became the first person in space in 1961?","choices":["Neil Armstrong","Alan Shepard","Yuri Gagarin","John Glenn"],"answer":2,"explanation":"Soviet cosmonaut Yuri Gagarin orbited Earth in Vostok 1 on 12 April 1961."}
-  ]
+ "category": "history",
+ "review": "unreviewed",
+ "questions": [
+  {
+   "id": "his-003",
+   "subcategory": "ancient",
+   "difficulty": 1,
+   "question": "Which ancient civilization built the pyramids of Giza?",
+   "choices": [
+    "The Romans",
+    "The Greeks",
+    "The Egyptians",
+    "The Aztecs"
+   ],
+   "answer": 2,
+   "explanation": "The Giza pyramids were built by ancient Egyptians as royal tombs, around 2600–2500 BC."
+  },
+  {
+   "id": "his-005",
+   "subcategory": "ancient",
+   "difficulty": 1,
+   "question": "Which empire built the Colosseum in Rome?",
+   "choices": [
+    "Byzantine",
+    "Roman",
+    "Ottoman",
+    "Persian"
+   ],
+   "answer": 1,
+   "explanation": "The Colosseum was completed under the Roman Empire in AD 80."
+  },
+  {
+   "id": "his2-023",
+   "subcategory": "ancient",
+   "difficulty": 1,
+   "question": "Which ancient empire did Cyrus the Great found in the 6th century BC?",
+   "choices": [
+    "The Kingdom of Kush",
+    "The Achaemenid Persian Empire",
+    "The Assyrian Empire",
+    "The Hittite Empire"
+   ],
+   "answer": 1,
+   "explanation": "Cyrus united Medes and Persians.",
+   "tags": [
+    "persia"
+   ]
+  },
+  {
+   "id": "his2-014",
+   "subcategory": "early-modern",
+   "difficulty": 1,
+   "question": "Which English king broke with the Roman Catholic Church and founded the Church of England?",
+   "choices": [
+    "Charles I",
+    "Edward VI",
+    "Henry V",
+    "Henry VIII"
+   ],
+   "answer": 3,
+   "explanation": "The break came in the 1530s.",
+   "tags": [
+    "tudor"
+   ]
+  },
+  {
+   "id": "his2-016",
+   "subcategory": "early-modern",
+   "difficulty": 1,
+   "question": "Which European country ruled Haiti as the colony of Saint-Domingue?",
+   "choices": [
+    "Portugal",
+    "Spain",
+    "Britain",
+    "France"
+   ],
+   "answer": 3,
+   "explanation": "Saint-Domingue was France's richest colony.",
+   "tags": [
+    "haiti"
+   ]
+  },
+  {
+   "id": "trk-003",
+   "subcategory": "early-modern",
+   "difficulty": 1,
+   "question": "How many prisoners were held in the Bastille when it was stormed on 14 July 1789?",
+   "choices": [
+    "Seven",
+    "Exactly one",
+    "About 700",
+    "About 70"
+   ],
+   "answer": 0,
+   "explanation": "Only seven prisoners were inside: four forgers, two men judged insane and one nobleman.",
+   "tags": [
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think the Bastille was full of political prisoners when it was stormed."
+  },
+  {
+   "id": "his2-011",
+   "subcategory": "medieval",
+   "difficulty": 1,
+   "question": "Which pandemic killed a huge share of Europe's population in the 1340s and 1350s?",
+   "choices": [
+    "The Spanish flu",
+    "Cholera",
+    "The Black Death",
+    "Smallpox"
+   ],
+   "answer": 2,
+   "explanation": "It is estimated to have killed tens of millions across Eurasia.",
+   "tags": [
+    "plague"
+   ]
+  },
+  {
+   "id": "his2-012",
+   "subcategory": "medieval",
+   "difficulty": 1,
+   "question": "Who was crowned Emperor of the Romans by Pope Leo III on Christmas Day 800?",
+   "choices": [
+    "Clovis",
+    "Charles Martel",
+    "Charlemagne",
+    "Otto I"
+   ],
+   "answer": 2,
+   "explanation": "The coronation took place in Rome.",
+   "tags": [
+    "charlemagne"
+   ]
+  },
+  {
+   "id": "his-001",
+   "subcategory": "modern",
+   "difficulty": 1,
+   "question": "In which year did World War II end?",
+   "choices": [
+    "1943",
+    "1944",
+    "1945",
+    "1946"
+   ],
+   "answer": 2,
+   "explanation": "The war in Europe ended in May 1945 and the war in the Pacific in September 1945."
+  },
+  {
+   "id": "his-016",
+   "subcategory": "modern",
+   "difficulty": 1,
+   "question": "In which year did humans first land on the Moon?",
+   "choices": [
+    "1959",
+    "1965",
+    "1969",
+    "1975"
+   ],
+   "answer": 2,
+   "explanation": "Apollo 11 landed on 20 July 1969, and Neil Armstrong and Buzz Aldrin walked on the surface."
+  },
+  {
+   "id": "his2-019",
+   "subcategory": "modern",
+   "difficulty": 1,
+   "question": "Whose assassination in Sarajevo in 1914 set off the First World War?",
+   "choices": [
+    "Otto von Bismarck",
+    "Archduke Franz Ferdinand",
+    "Kaiser Wilhelm II",
+    "Tsar Nicholas II"
+   ],
+   "answer": 1,
+   "explanation": "The assassination of 28 June 1914 led to Austria-Hungary's ultimatum to Serbia.",
+   "tags": [
+    "sarajevo"
+   ]
+  },
+  {
+   "id": "his2-021",
+   "subcategory": "modern",
+   "difficulty": 1,
+   "question": "Which leader is best known for non-violent resistance in India's independence movement?",
+   "choices": [
+    "Muhammad Ali Jinnah",
+    "Subhas Chandra Bose",
+    "Mahatma Gandhi",
+    "Jawaharlal Nehru"
+   ],
+   "answer": 2,
+   "explanation": "Gandhi's methods included boycotts and mass marches.",
+   "tags": [
+    "india"
+   ]
+  },
+  {
+   "id": "his2-022",
+   "subcategory": "modern",
+   "difficulty": 1,
+   "question": "Which system of legal racial segregation did South Africa's National Party formalise from 1948?",
+   "choices": [
+    "Colonial federation",
+    "Apartheid",
+    "Jim Crow",
+    "Indirect rule"
+   ],
+   "answer": 1,
+   "explanation": "Apartheid classified people by race and separated them by law.",
+   "tags": [
+    "apartheid"
+   ]
+  },
+  {
+   "id": "trk-001",
+   "subcategory": "modern",
+   "difficulty": 1,
+   "question": "How did Napoleon Bonaparte's height compare with that of an average Frenchman of his day?",
+   "choices": [
+    "Well below average, under 1.55 m",
+    "Taller than almost everyone",
+    "About average",
+    "He was a dwarf"
+   ],
+   "answer": 2,
+   "explanation": "He was about 5 pieds 2 pouces in French units, roughly 1.69 m, which was average or slightly above for his time.",
+   "tags": [
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think Napoleon was unusually short."
+  },
+  {
+   "id": "his-002",
+   "subcategory": "people",
+   "difficulty": 1,
+   "question": "Who was the first President of the United States?",
+   "choices": [
+    "Thomas Jefferson",
+    "George Washington",
+    "John Adams",
+    "Abraham Lincoln"
+   ],
+   "answer": 1,
+   "explanation": "George Washington served as president from 1789 to 1797."
+  },
+  {
+   "id": "his2-001",
+   "subcategory": "world",
+   "difficulty": 1,
+   "question": "Which West African ruler of the Mali Empire made a famously lavish pilgrimage to Mecca in 1324?",
+   "choices": [
+    "Askia Muhammad",
+    "Mansa Musa",
+    "Sundiata Keita",
+    "Shaka Zulu"
+   ],
+   "answer": 1,
+   "explanation": "Mansa Musa's pilgrimage spread so much gold that it was said to have lowered its value in Cairo.",
+   "tags": [
+    "mali"
+   ]
+  },
+  {
+   "id": "his2-005",
+   "subcategory": "world",
+   "difficulty": 1,
+   "question": "Which Chinese admiral led great treasure fleets across the Indian Ocean in the early 1400s?",
+   "choices": [
+    "Zheng He",
+    "Confucius",
+    "Sun Tzu",
+    "Kublai Khan"
+   ],
+   "answer": 0,
+   "explanation": "Zheng He commanded seven voyages between 1405 and 1433.",
+   "tags": [
+    "zhenghe"
+   ]
+  },
+  {
+   "id": "his2-007",
+   "subcategory": "world",
+   "difficulty": 1,
+   "question": "Which Spanish conquistador captured the Inca emperor Atahualpa in 1532?",
+   "choices": [
+    "Francisco Pizarro",
+    "Hernán Cortés",
+    "Ferdinand Magellan",
+    "Christopher Columbus"
+   ],
+   "answer": 0,
+   "explanation": "Pizarro seized Atahualpa at Cajamarca.",
+   "tags": [
+    "inca"
+   ]
+  },
+  {
+   "id": "his2-009",
+   "subcategory": "world",
+   "difficulty": 1,
+   "question": "In which city was the House of Wisdom, a great centre of learning under the Abbasid caliphs?",
+   "choices": [
+    "Córdoba",
+    "Damascus",
+    "Baghdad",
+    "Cairo"
+   ],
+   "answer": 2,
+   "explanation": "Baghdad was the Abbasid capital and a hub of translation and science.",
+   "tags": [
+    "baghdad"
+   ]
+  },
+  {
+   "id": "his2-010",
+   "subcategory": "world",
+   "difficulty": 1,
+   "question": "Which Muslim ruler recaptured Jerusalem from the Crusaders in 1187?",
+   "choices": [
+    "Saladin",
+    "Baibars",
+    "Mehmed II",
+    "Suleiman"
+   ],
+   "answer": 0,
+   "explanation": "Saladin took Jerusalem in October 1187.",
+   "tags": [
+    "saladin"
+   ]
+  },
+  {
+   "id": "his-009",
+   "subcategory": "ancient",
+   "difficulty": 2,
+   "question": "Which civilization built Machu Picchu?",
+   "choices": [
+    "Maya",
+    "Aztec",
+    "Inca",
+    "Olmec"
+   ],
+   "answer": 2,
+   "explanation": "Machu Picchu was built by the Inca in the 15th century, high in the Peruvian Andes."
+  },
+  {
+   "id": "his-012",
+   "subcategory": "early-modern",
+   "difficulty": 2,
+   "question": "Which ship carried the Pilgrims from England to America in 1620?",
+   "choices": [
+    "Santa Maria",
+    "Mayflower",
+    "Endeavour",
+    "Golden Hind"
+   ],
+   "answer": 1,
+   "explanation": "The Mayflower landed at Cape Cod in November 1620, with about 100 passengers."
+  },
+  {
+   "id": "his-014",
+   "subcategory": "early-modern",
+   "difficulty": 2,
+   "question": "In which country did the Renaissance begin?",
+   "choices": [
+    "France",
+    "Spain",
+    "England",
+    "Italy"
+   ],
+   "answer": 3,
+   "explanation": "The Renaissance began in 14th-century Italy, notably in Florence."
+  },
+  {
+   "id": "his-011",
+   "subcategory": "medieval",
+   "difficulty": 2,
+   "question": "Who founded the Mongol Empire in 1206?",
+   "choices": [
+    "Attila",
+    "Genghis Khan",
+    "Tamerlane",
+    "Kublai Khan"
+   ],
+   "answer": 1,
+   "explanation": "Temüjin was proclaimed Genghis Khan in 1206 after uniting the Mongol tribes."
+  },
+  {
+   "id": "his-022",
+   "subcategory": "medieval",
+   "difficulty": 2,
+   "question": "In which year was the Battle of Hastings fought?",
+   "choices": [
+    "1066",
+    "1215",
+    "1314",
+    "1453"
+   ],
+   "answer": 0,
+   "explanation": "William of Normandy defeated King Harold at Hastings in 1066."
+  },
+  {
+   "id": "his-004",
+   "subcategory": "modern",
+   "difficulty": 2,
+   "question": "In which year did the Berlin Wall fall?",
+   "choices": [
+    "1985",
+    "1987",
+    "1989",
+    "1991"
+   ],
+   "answer": 2,
+   "explanation": "The wall was opened on 9 November 1989, and Germany reunified in 1990."
+  },
+  {
+   "id": "his-006",
+   "subcategory": "modern",
+   "difficulty": 2,
+   "question": "In which year did the French Revolution begin?",
+   "choices": [
+    "1689",
+    "1776",
+    "1789",
+    "1815"
+   ],
+   "answer": 2,
+   "explanation": "The Revolution began in 1789, famously with the storming of the Bastille on 14 July."
+  },
+  {
+   "id": "his-010",
+   "subcategory": "modern",
+   "difficulty": 2,
+   "question": "The Treaty of Versailles formally ended which war?",
+   "choices": [
+    "World War I",
+    "World War II",
+    "The Franco-Prussian War",
+    "The Crimean War"
+   ],
+   "answer": 0,
+   "explanation": "The Treaty of Versailles was signed in 1919 and formally ended World War I with Germany."
+  },
+  {
+   "id": "his-013",
+   "subcategory": "modern",
+   "difficulty": 2,
+   "question": "In which country did the Industrial Revolution begin?",
+   "choices": [
+    "France",
+    "Germany",
+    "Great Britain",
+    "The United States"
+   ],
+   "answer": 2,
+   "explanation": "It began in Britain in the 18th century, driven by textiles, coal and steam power."
+  },
+  {
+   "id": "his-026",
+   "subcategory": "modern",
+   "difficulty": 2,
+   "question": "In which year did the Titanic sink?",
+   "choices": [
+    "1905",
+    "1912",
+    "1918",
+    "1923"
+   ],
+   "answer": 1,
+   "explanation": "The Titanic struck an iceberg and sank on 15 April 1912."
+  },
+  {
+   "id": "his-028",
+   "subcategory": "modern",
+   "difficulty": 2,
+   "question": "Who became the first person in space in 1961?",
+   "choices": [
+    "Neil Armstrong",
+    "Alan Shepard",
+    "Yuri Gagarin",
+    "John Glenn"
+   ],
+   "answer": 2,
+   "explanation": "Soviet cosmonaut Yuri Gagarin orbited Earth in Vostok 1 on 12 April 1961."
+  },
+  {
+   "id": "his2-017",
+   "subcategory": "modern",
+   "difficulty": 2,
+   "question": "The Meiji Restoration ended the rule of shoguns from which family?",
+   "choices": [
+    "The Ashikaga",
+    "The Tokugawa",
+    "The Minamoto",
+    "The Oda"
+   ],
+   "answer": 1,
+   "explanation": "The Tokugawa shogunate had ruled since 1603.",
+   "tags": [
+    "meiji"
+   ]
+  },
+  {
+   "id": "his2-020",
+   "subcategory": "modern",
+   "difficulty": 2,
+   "question": "In which city did the Bolsheviks seize power in October 1917?",
+   "choices": [
+    "Petrograd",
+    "Moscow",
+    "Kiev",
+    "Vladivostok"
+   ],
+   "answer": 0,
+   "explanation": "Petrograd was the name of Saint Petersburg at the time.",
+   "tags": [
+    "october"
+   ]
+  },
+  {
+   "id": "his-019",
+   "subcategory": "people",
+   "difficulty": 2,
+   "question": "Who was the first woman to win a Nobel Prize?",
+   "choices": [
+    "Mother Teresa",
+    "Marie Curie",
+    "Florence Nightingale",
+    "Rosalind Franklin"
+   ],
+   "answer": 1,
+   "explanation": "Marie Curie shared the 1903 Nobel Prize in Physics and later won a second in Chemistry in 1911."
+  },
+  {
+   "id": "his-023",
+   "subcategory": "people",
+   "difficulty": 2,
+   "question": "Who was Prime Minister of the United Kingdom for most of World War II?",
+   "choices": [
+    "Neville Chamberlain",
+    "Clement Attlee",
+    "Winston Churchill",
+    "Anthony Eden"
+   ],
+   "answer": 2,
+   "explanation": "Churchill led the wartime government from May 1940 to July 1945."
+  },
+  {
+   "id": "his2-002",
+   "subcategory": "world",
+   "difficulty": 2,
+   "question": "The name 'Zimbabwe' is generally traced to a Shona phrase meaning roughly what?",
+   "choices": [
+    "Houses of stone",
+    "Golden kingdom",
+    "River of kings",
+    "Land of the sun"
+   ],
+   "answer": 0,
+   "explanation": "It comes from dzimba dza mabwe, 'houses of stone'.",
+   "tags": [
+    "zimbabwe"
+   ]
+  },
+  {
+   "id": "his2-006",
+   "subcategory": "world",
+   "difficulty": 2,
+   "question": "Which Spanish conquistador led the conquest of the Aztec Empire?",
+   "choices": [
+    "Vasco Núñez de Balboa",
+    "Juan Ponce de León",
+    "Francisco Pizarro",
+    "Hernán Cortés"
+   ],
+   "answer": 3,
+   "explanation": "Cortés landed in 1519 and allied with peoples hostile to the Aztecs.",
+   "tags": [
+    "aztec"
+   ]
+  },
+  {
+   "id": "his-007",
+   "subcategory": "ancient",
+   "difficulty": 3,
+   "question": "Who was the first emperor of a unified China, founding the Qin dynasty?",
+   "choices": [
+    "Han Wudi",
+    "Qin Shi Huang",
+    "Kublai Khan",
+    "Confucius"
+   ],
+   "answer": 1,
+   "explanation": "Qin Shi Huang unified China in 221 BC and took the title of first emperor."
+  },
+  {
+   "id": "his-015",
+   "subcategory": "ancient",
+   "difficulty": 3,
+   "question": "Which Carthaginian general famously crossed the Alps with elephants to attack Rome?",
+   "choices": [
+    "Hannibal",
+    "Hamilcar",
+    "Scipio",
+    "Pyrrhus"
+   ],
+   "answer": 0,
+   "explanation": "Hannibal made the crossing in 218 BC during the Second Punic War."
+  },
+  {
+   "id": "his-020",
+   "subcategory": "ancient",
+   "difficulty": 3,
+   "question": "The Rosetta Stone helped scholars decipher which writing system?",
+   "choices": [
+    "Cuneiform",
+    "Maya glyphs",
+    "Egyptian hieroglyphs",
+    "Linear B"
+   ],
+   "answer": 2,
+   "explanation": "Its text appears in hieroglyphic, Demotic and Greek, which let Champollion crack hieroglyphs in the 1820s."
+  },
+  {
+   "id": "his-027",
+   "subcategory": "ancient",
+   "difficulty": 3,
+   "question": "Which Roman emperor ordered the construction of a wall across northern Britain in AD 122?",
+   "choices": [
+    "Augustus",
+    "Hadrian",
+    "Nero",
+    "Constantine"
+   ],
+   "answer": 1,
+   "explanation": "Hadrian's Wall marked the northern frontier of Roman Britain."
+  },
+  {
+   "id": "his2-024",
+   "subcategory": "ancient",
+   "difficulty": 3,
+   "question": "Which war, fought from 431 to 404 BC, pitted Athens against Sparta and their allies?",
+   "choices": [
+    "The Trojan War",
+    "The Persian Wars",
+    "The Peloponnesian War",
+    "The Punic Wars"
+   ],
+   "answer": 2,
+   "explanation": "Sparta won, ending Athenian dominance.",
+   "tags": [
+    "greece"
+   ]
+  },
+  {
+   "id": "trk-004",
+   "subcategory": "ancient",
+   "difficulty": 3,
+   "question": "Which of these gaps in time is the LONGEST?",
+   "choices": [
+    "From Cleopatra VII to the fall of Constantinople in 1453",
+    "From the fall of Constantinople to the Moon landing",
+    "From Cleopatra VII to the Moon landing",
+    "From the Great Pyramid of Giza to Cleopatra VII"
+   ],
+   "answer": 3,
+   "explanation": "The Great Pyramid (about 2560 BC) is about 2,500 years before Cleopatra; the other gaps are about 2,000, 1,480 and 520 years.",
+   "tags": [
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think Cleopatra lived about when the Great Pyramid was built."
+  },
+  {
+   "id": "his-024",
+   "subcategory": "early-modern",
+   "difficulty": 3,
+   "question": "Whose expedition completed the first circumnavigation of the globe between 1519 and 1522?",
+   "choices": [
+    "Christopher Columbus",
+    "Vasco da Gama",
+    "Ferdinand Magellan",
+    "James Cook"
+   ],
+   "answer": 2,
+   "explanation": "Magellan was killed in the Philippines in 1521. Juan Sebastián Elcano led the surviving ship home."
+  },
+  {
+   "id": "his-025",
+   "subcategory": "early-modern",
+   "difficulty": 3,
+   "question": "Which empire was ruled by Suleiman the Magnificent?",
+   "choices": [
+    "Ottoman Empire",
+    "Mughal Empire",
+    "Safavid Empire",
+    "Byzantine Empire"
+   ],
+   "answer": 0,
+   "explanation": "Suleiman ruled the Ottoman Empire from 1520 to 1566, at its height of power."
+  },
+  {
+   "id": "his2-013",
+   "subcategory": "early-modern",
+   "difficulty": 3,
+   "question": "In which German city did Gutenberg set up his printing workshop?",
+   "choices": [
+    "Mainz",
+    "Munich",
+    "Berlin",
+    "Hamburg"
+   ],
+   "answer": 0,
+   "explanation": "Mainz on the Rhine was his home town and workplace.",
+   "tags": [
+    "gutenberg"
+   ]
+  },
+  {
+   "id": "his-008",
+   "subcategory": "medieval",
+   "difficulty": 3,
+   "question": "In which year was Magna Carta sealed by King John of England?",
+   "choices": [
+    "1066",
+    "1215",
+    "1348",
+    "1415"
+   ],
+   "answer": 1,
+   "explanation": "Magna Carta was sealed at Runnymede in 1215, limiting the king's powers."
+  },
+  {
+   "id": "his-017",
+   "subcategory": "medieval",
+   "difficulty": 3,
+   "question": "The Hundred Years' War was fought mainly between which two kingdoms?",
+   "choices": [
+    "England and France",
+    "Spain and Portugal",
+    "France and Germany",
+    "England and Scotland"
+   ],
+   "answer": 0,
+   "explanation": "It lasted from 1337 to 1453, with periods of truce, between England and France."
+  },
+  {
+   "id": "trk-002",
+   "subcategory": "medieval",
+   "difficulty": 3,
+   "question": "Only one reasonably complete Viking-age helmet has been found in Scandinavia. Which find is it?",
+   "choices": [
+    "The Gjermundbu helmet, Norway",
+    "The Hedeby helmet, Germany",
+    "The Birka helmet, Sweden",
+    "The Sutton Hoo helmet, England"
+   ],
+   "answer": 0,
+   "explanation": "The Gjermundbu helmet (10th century) is a rounded cap with a face guard and has no horns. Sutton Hoo is Anglo-Saxon.",
+   "tags": [
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think Viking warriors wore horned helmets in battle."
+  },
+  {
+   "id": "his-018",
+   "subcategory": "modern",
+   "difficulty": 3,
+   "question": "In which year did the Cuban Missile Crisis take place?",
+   "choices": [
+    "1956",
+    "1962",
+    "1968",
+    "1973"
+   ],
+   "answer": 1,
+   "explanation": "The crisis lasted thirteen days in October 1962 and brought the US and USSR close to nuclear war."
+  },
+  {
+   "id": "his2-018",
+   "subcategory": "modern",
+   "difficulty": 3,
+   "question": "Which Belgian king held the Congo Free State as a personal possession?",
+   "choices": [
+    "Baudouin",
+    "Albert I",
+    "Leopold I",
+    "Leopold II"
+   ],
+   "answer": 3,
+   "explanation": "The Congo Free State was Leopold's private colony until 1908.",
+   "tags": [
+    "berlin1884"
+   ]
+  },
+  {
+   "id": "his2-003",
+   "subcategory": "world",
+   "difficulty": 3,
+   "question": "In which century BC did Ashoka's reign begin?",
+   "choices": [
+    "The 2nd century BC",
+    "The 1st century BC",
+    "The 5th century BC",
+    "The 3rd century BC"
+   ],
+   "answer": 3,
+   "explanation": "He ruled from about 268 BC.",
+   "tags": [
+    "ashoka"
+   ]
+  },
+  {
+   "id": "his2-008",
+   "subcategory": "world",
+   "difficulty": 3,
+   "question": "Where was the Olmec heartland?",
+   "choices": [
+    "The Gulf Coast lowlands of Mexico",
+    "The Yucatán Peninsula",
+    "The Great Plains",
+    "The Andes of Peru"
+   ],
+   "answer": 0,
+   "explanation": "It lay in the present-day Mexican states of Veracruz and Tabasco.",
+   "tags": [
+    "olmec"
+   ]
+  },
+  {
+   "id": "his-021",
+   "subcategory": "ancient",
+   "difficulty": 4,
+   "question": "In which year is the fall of the Western Roman Empire traditionally dated?",
+   "choices": [
+    "395",
+    "410",
+    "476",
+    "527"
+   ],
+   "answer": 2,
+   "explanation": "In 476 the last Western emperor, Romulus Augustulus, was deposed by Odoacer."
+  },
+  {
+   "id": "his2-015",
+   "subcategory": "early-modern",
+   "difficulty": 4,
+   "question": "Which Mughal emperor, ruling from 1556 to 1605, is known for his policy of religious tolerance?",
+   "choices": [
+    "Humayun",
+    "Shah Jahan",
+    "Jahangir",
+    "Akbar"
+   ],
+   "answer": 3,
+   "explanation": "Akbar abolished the tax on non-Muslims and welcomed scholars of many faiths.",
+   "tags": [
+    "mughal"
+   ]
+  },
+  {
+   "id": "his2-004",
+   "subcategory": "world",
+   "difficulty": 4,
+   "question": "Which German geographer coined the term 'Silk Road' in 1877?",
+   "choices": [
+    "Carl Ritter",
+    "Heinrich Schliemann",
+    "Alexander von Humboldt",
+    "Ferdinand von Richthofen"
+   ],
+   "answer": 3,
+   "explanation": "The name is modern: Richthofen used Seidenstrasse for these trade routes.",
+   "tags": [
+    "silkroad"
+   ]
+  }
+ ]
 }

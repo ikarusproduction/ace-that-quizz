@@ -245,7 +245,7 @@ function prepareRound(s, ctx) {
 function statCategories(ctx) {
   if (!ctx._duelCats) {
     const have = new Set(ctx.questions.map(statCategory));
-    ctx._duelCats = ['science', 'symbols', 'news', 'history', 'geography', 'nature', 'arts', 'phobia', 'medicine'].filter((c) => have.has(c));
+    ctx._duelCats = ['science', 'symbols', 'news', 'history', 'geography', 'nature', 'arts', 'phobia', 'medicine', 'literature', 'mythology', 'philosophy', 'politics'].filter((c) => have.has(c));
   }
   return ctx._duelCats;
 }

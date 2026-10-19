@@ -1,0 +1,244 @@
+{
+ "category": "mythology",
+ "review": "unreviewed",
+ "questions": [
+  {
+   "id": "myth-006",
+   "subcategory": "egyptian",
+   "difficulty": 1,
+   "question": "What were the great pyramids of Giza built as?",
+   "choices": [
+    "Temples to the sun only",
+    "Palaces",
+    "Royal tombs",
+    "Granaries"
+   ],
+   "answer": 2,
+   "explanation": "They housed the burials of pharaohs.",
+   "tags": [
+    "pyramids"
+   ]
+  },
+  {
+   "id": "myth-001",
+   "subcategory": "greek",
+   "difficulty": 1,
+   "question": "Who is the king of the gods in Greek mythology?",
+   "choices": [
+    "Poseidon",
+    "Zeus",
+    "Apollo",
+    "Hades"
+   ],
+   "answer": 1,
+   "explanation": "Zeus rules the Olympians from the sky.",
+   "tags": [
+    "zeus"
+   ]
+  },
+  {
+   "id": "myth-003",
+   "subcategory": "greek",
+   "difficulty": 1,
+   "question": "What creature is half man and half bull in Greek myth?",
+   "choices": [
+    "The Satyr",
+    "The Cyclops",
+    "The Minotaur",
+    "The Centaur"
+   ],
+   "answer": 2,
+   "explanation": "The Minotaur had a bull's head on a man's body.",
+   "tags": [
+    "minotaur"
+   ]
+  },
+  {
+   "id": "myth-004",
+   "subcategory": "norse",
+   "difficulty": 1,
+   "question": "Which Norse god wields the hammer Mjölnir?",
+   "choices": [
+    "Thor",
+    "Baldr",
+    "Loki",
+    "Odin"
+   ],
+   "answer": 0,
+   "explanation": "Thor is the god of thunder.",
+   "tags": [
+    "thor"
+   ]
+  },
+  {
+   "id": "myth-007",
+   "subcategory": "egyptian",
+   "difficulty": 2,
+   "question": "Which Egyptian god of the afterlife was killed by his brother Set?",
+   "choices": [
+    "Ra",
+    "Osiris",
+    "Anubis",
+    "Thoth"
+   ],
+   "answer": 1,
+   "explanation": "Osiris became ruler of the dead.",
+   "tags": [
+    "osiris"
+   ]
+  },
+  {
+   "id": "myth-011",
+   "subcategory": "folklore",
+   "difficulty": 2,
+   "question": "Which French author published Cinderella, Puss in Boots and Sleeping Beauty in his 1697 collection of tales?",
+   "choices": [
+    "Charles Perrault",
+    "Jean de La Fontaine",
+    "The Brothers Grimm",
+    "Hans Christian Andersen"
+   ],
+   "answer": 0,
+   "explanation": "Perrault's Histoires ou contes du temps passé appeared in 1697 with the subtitle Mother Goose Tales.",
+   "tags": [
+    "tales"
+   ]
+  },
+  {
+   "id": "myth-002",
+   "subcategory": "greek",
+   "difficulty": 2,
+   "question": "According to Homeric tradition, who devised the wooden horse used to enter Troy?",
+   "choices": [
+    "Achilles",
+    "Agamemnon",
+    "Hector",
+    "Odysseus"
+   ],
+   "answer": 3,
+   "explanation": "The Odyssey credits Odysseus with the trick.",
+   "tags": [
+    "troy"
+   ]
+  },
+  {
+   "id": "myth-008",
+   "subcategory": "religions",
+   "difficulty": 2,
+   "question": "Which religion's oldest sacred texts are the Vedas?",
+   "choices": [
+    "Sikhism",
+    "Jainism",
+    "Hinduism",
+    "Buddhism"
+   ],
+   "answer": 2,
+   "explanation": "The Vedas are the oldest scriptures of Hinduism.",
+   "tags": [
+    "vedas"
+   ]
+  },
+  {
+   "id": "myth-010",
+   "subcategory": "religions",
+   "difficulty": 2,
+   "question": "Which sacred text of Judaism is also the first five books of the Hebrew Bible?",
+   "choices": [
+    "The Gospels",
+    "The Quran",
+    "The Avesta",
+    "The Torah"
+   ],
+   "answer": 3,
+   "explanation": "The Torah, also called the Pentateuch, contains the first five books.",
+   "tags": [
+    "books"
+   ]
+  },
+  {
+   "id": "myth-012",
+   "subcategory": "folklore",
+   "difficulty": 3,
+   "question": "In the Prague legend, which rabbi is said to have created the golem?",
+   "choices": [
+    "Baal Shem Tov",
+    "Judah Loew ben Bezalel",
+    "Rashi",
+    "Maimonides"
+   ],
+   "answer": 1,
+   "explanation": "The Maharal of Prague is the rabbi of the legend.",
+   "tags": [
+    "golem"
+   ]
+  },
+  {
+   "id": "myth-013",
+   "subcategory": "greek",
+   "difficulty": 3,
+   "question": "Which was the last of the twelve labours of Heracles in the standard ordering?",
+   "choices": [
+    "Cleaning the Augean stables",
+    "Slaying the Hydra",
+    "Capturing Cerberus",
+    "Killing the Nemean lion"
+   ],
+   "answer": 2,
+   "explanation": "The twelfth labour took him to the underworld to bring back its guard dog.",
+   "tags": [
+    "heracles"
+   ]
+  },
+  {
+   "id": "myth-014",
+   "subcategory": "greek",
+   "difficulty": 3,
+   "question": "Which Titan was condemned to hold up the sky?",
+   "choices": [
+    "Oceanus",
+    "Hyperion",
+    "Prometheus",
+    "Atlas"
+   ],
+   "answer": 3,
+   "explanation": "Atlas was punished by Zeus after the Titans lost their war.",
+   "tags": [
+    "titans"
+   ]
+  },
+  {
+   "id": "myth-005",
+   "subcategory": "norse",
+   "difficulty": 3,
+   "question": "Which giant wolf is foretold to kill Odin at Ragnarök?",
+   "choices": [
+    "Sköll",
+    "Garm",
+    "Jörmungandr",
+    "Fenrir"
+   ],
+   "answer": 3,
+   "explanation": "Fenrir swallows Odin and is then killed by his son Víðarr.",
+   "tags": [
+    "ragnarok"
+   ]
+  },
+  {
+   "id": "myth-009",
+   "subcategory": "religions",
+   "difficulty": 3,
+   "question": "Which title, meaning the awakened one, is given to Siddhartha Gautama?",
+   "choices": [
+    "Bodhisattva",
+    "The Buddha",
+    "Dalai Lama",
+    "Arhat"
+   ],
+   "answer": 1,
+   "explanation": "Buddha comes from the Sanskrit for awakened.",
+   "tags": [
+    "buddha"
+   ]
+  }
+ ]
+}

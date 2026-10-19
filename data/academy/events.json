@@ -1,0 +1,837 @@
+{
+ "note": "Unreviewed drafts. Years are the conventional dates; source/verified stay null until a human checks.",
+ "events": [
+  {
+   "id": "ev-001",
+   "name": {
+    "en": "First recorded ancient Olympic Games",
+    "fr": "Premiers Jeux olympiques antiques attestés"
+   },
+   "year": -776,
+   "category": "sports",
+   "expl": {
+    "en": "Traditionally dated to 776 BC at Olympia.",
+    "fr": "Date traditionnelle : 776 av. J.-C. à Olympie."
+   }
+  },
+  {
+   "id": "ev-002",
+   "name": {
+    "en": "Battle of Marathon",
+    "fr": "Bataille de Marathon"
+   },
+   "year": -490,
+   "category": "history",
+   "expl": {
+    "en": "Athens defeated a Persian invasion force in 490 BC.",
+    "fr": "Athènes a vaincu un corps expéditionnaire perse en 490 av. J.-C."
+   }
+  },
+  {
+   "id": "ev-003",
+   "name": {
+    "en": "Assassination of Julius Caesar",
+    "fr": "Assassinat de Jules César"
+   },
+   "year": -44,
+   "category": "history",
+   "expl": {
+    "en": "He was killed on the Ides of March, 44 BC.",
+    "fr": "Il a été tué aux ides de mars 44 av. J.-C."
+   }
+  },
+  {
+   "id": "ev-004",
+   "name": {
+    "en": "Augustus becomes the first Roman emperor",
+    "fr": "Auguste devient le premier empereur romain"
+   },
+   "year": -27,
+   "category": "history",
+   "expl": {
+    "en": "The Senate granted him the title Augustus in 27 BC.",
+    "fr": "Le Sénat lui a conféré le titre d'Auguste en 27 av. J.-C."
+   }
+  },
+  {
+   "id": "ev-005",
+   "name": {
+    "en": "Eruption of Vesuvius buries Pompeii",
+    "fr": "Éruption du Vésuve qui ensevelit Pompéi"
+   },
+   "year": 79,
+   "category": "history",
+   "expl": {
+    "en": "The eruption took place in AD 79.",
+    "fr": "L'éruption a eu lieu en 79 apr. J.-C."
+   }
+  },
+  {
+   "id": "ev-006",
+   "name": {
+    "en": "Fall of the Western Roman Empire",
+    "fr": "Chute de l'Empire romain d'Occident"
+   },
+   "year": 476,
+   "category": "history",
+   "expl": {
+    "en": "Traditionally dated to 476, when Romulus Augustulus was deposed.",
+    "fr": "Date traditionnelle : 476, déposition de Romulus Augustule."
+   }
+  },
+  {
+   "id": "ev-007",
+   "name": {
+    "en": "The Hijra: Muhammad's journey from Mecca to Medina",
+    "fr": "L'Hégire : le voyage de Mahomet de La Mecque à Médine"
+   },
+   "year": 622,
+   "category": "history",
+   "expl": {
+    "en": "It marks year 1 of the Islamic calendar.",
+    "fr": "Elle marque l'an 1 du calendrier musulman."
+   }
+  },
+  {
+   "id": "ev-008",
+   "name": {
+    "en": "Charlemagne is crowned emperor",
+    "fr": "Couronnement de Charlemagne comme empereur"
+   },
+   "year": 800,
+   "category": "history",
+   "expl": {
+    "en": "The pope crowned him in Rome on Christmas Day 800.",
+    "fr": "Le pape l'a couronné à Rome le jour de Noël 800."
+   }
+  },
+  {
+   "id": "ev-009",
+   "name": {
+    "en": "Battle of Hastings and the Norman conquest of England",
+    "fr": "Bataille d'Hastings et conquête normande de l'Angleterre"
+   },
+   "year": 1066,
+   "category": "history",
+   "expl": {
+    "en": "William of Normandy defeated Harold in 1066.",
+    "fr": "Guillaume de Normandie a battu Harold en 1066."
+   }
+  },
+  {
+   "id": "ev-010",
+   "name": {
+    "en": "Crusaders capture Jerusalem",
+    "fr": "Prise de Jérusalem par les croisés"
+   },
+   "year": 1099,
+   "category": "history",
+   "expl": {
+    "en": "The First Crusade took the city in July 1099.",
+    "fr": "La première croisade a pris la ville en juillet 1099."
+   }
+  },
+  {
+   "id": "ev-011",
+   "name": {
+    "en": "Magna Carta is sealed",
+    "fr": "Scellement de la Grande Charte"
+   },
+   "year": 1215,
+   "category": "politics",
+   "expl": {
+    "en": "King John accepted it at Runnymede in 1215.",
+    "fr": "Le roi Jean l'a acceptée à Runnymede en 1215."
+   }
+  },
+  {
+   "id": "ev-012",
+   "name": {
+    "en": "The Black Death reaches Europe",
+    "fr": "La Peste noire atteint l'Europe"
+   },
+   "year": 1347,
+   "category": "history",
+   "expl": {
+    "en": "Ships brought plague to Sicily in 1347.",
+    "fr": "Des navires ont apporté la peste en Sicile en 1347."
+   }
+  },
+  {
+   "id": "ev-013",
+   "name": {
+    "en": "Battle of Agincourt",
+    "fr": "Bataille d'Azincourt"
+   },
+   "year": 1415,
+   "category": "history",
+   "expl": {
+    "en": "Henry V of England defeated a larger French army in 1415.",
+    "fr": "Henri V d'Angleterre a battu une armée française plus nombreuse en 1415."
+   }
+  },
+  {
+   "id": "ev-014",
+   "name": {
+    "en": "Joan of Arc is executed in Rouen",
+    "fr": "Exécution de Jeanne d'Arc à Rouen"
+   },
+   "year": 1431,
+   "category": "history",
+   "expl": {
+    "en": "She was burned at the stake on 30 May 1431.",
+    "fr": "Elle a été brûlée vive le 30 mai 1431."
+   }
+  },
+  {
+   "id": "ev-015",
+   "name": {
+    "en": "Fall of Constantinople",
+    "fr": "Chute de Constantinople"
+   },
+   "year": 1453,
+   "category": "history",
+   "expl": {
+    "en": "The Ottomans took the city in 1453, ending the Byzantine Empire.",
+    "fr": "Les Ottomans ont pris la ville en 1453, mettant fin à l'Empire byzantin."
+   }
+  },
+  {
+   "id": "ev-016",
+   "name": {
+    "en": "Columbus's first voyage reaches the Americas",
+    "fr": "Le premier voyage de Colomb atteint les Amériques"
+   },
+   "year": 1492,
+   "category": "geography",
+   "expl": {
+    "en": "He landed in the Caribbean in October 1492.",
+    "fr": "Il a touché terre aux Caraïbes en octobre 1492."
+   }
+  },
+  {
+   "id": "ev-017",
+   "name": {
+    "en": "Luther publishes his Ninety-five Theses",
+    "fr": "Luther publie ses quatre-vingt-quinze thèses"
+   },
+   "year": 1517,
+   "category": "history",
+   "expl": {
+    "en": "It is traditionally seen as the start of the Reformation.",
+    "fr": "On y voit traditionnellement le début de la Réforme."
+   }
+  },
+  {
+   "id": "ev-018",
+   "name": {
+    "en": "The Magellan expedition completes the first circumnavigation",
+    "fr": "L'expédition de Magellan achève le premier tour du monde"
+   },
+   "year": 1522,
+   "category": "geography",
+   "expl": {
+    "en": "The surviving ship returned to Spain in 1522 under Elcano.",
+    "fr": "Le navire survivant est revenu en Espagne en 1522 sous le commandement d'Elcano."
+   }
+  },
+  {
+   "id": "ev-019",
+   "name": {
+    "en": "Copernicus publishes On the Revolutions of the Heavenly Spheres",
+    "fr": "Copernic publie Des révolutions des sphères célestes"
+   },
+   "year": 1543,
+   "category": "science",
+   "expl": {
+    "en": "The book put the Sun at the centre of the planetary system.",
+    "fr": "Le livre place le Soleil au centre du système planétaire."
+   }
+  },
+  {
+   "id": "ev-020",
+   "name": {
+    "en": "Galileo discovers the moons of Jupiter",
+    "fr": "Galilée découvre les lunes de Jupiter"
+   },
+   "year": 1610,
+   "category": "science",
+   "expl": {
+    "en": "He reported them in Sidereus Nuncius in 1610.",
+    "fr": "Il les a décrites dans le Sidereus Nuncius en 1610."
+   }
+  },
+  {
+   "id": "ev-021",
+   "name": {
+    "en": "Peace of Westphalia ends the Thirty Years' War",
+    "fr": "Les traités de Westphalie mettent fin à la guerre de Trente Ans"
+   },
+   "year": 1648,
+   "category": "politics",
+   "expl": {
+    "en": "The treaties were signed in 1648.",
+    "fr": "Les traités ont été signés en 1648."
+   }
+  },
+  {
+   "id": "ev-022",
+   "name": {
+    "en": "Great Fire of London",
+    "fr": "Grand incendie de Londres"
+   },
+   "year": 1666,
+   "category": "history",
+   "expl": {
+    "en": "The fire burned for four days in September 1666.",
+    "fr": "L'incendie a duré quatre jours en septembre 1666."
+   }
+  },
+  {
+   "id": "ev-023",
+   "name": {
+    "en": "Newton publishes the Principia",
+    "fr": "Newton publie les Principia"
+   },
+   "year": 1687,
+   "category": "science",
+   "expl": {
+    "en": "It set out the laws of motion and universal gravitation.",
+    "fr": "Il expose les lois du mouvement et la gravitation universelle."
+   }
+  },
+  {
+   "id": "ev-024",
+   "name": {
+    "en": "Act of Union joins England and Scotland as Great Britain",
+    "fr": "L'Acte d'Union réunit l'Angleterre et l'Écosse en Grande-Bretagne"
+   },
+   "year": 1707,
+   "category": "politics",
+   "expl": {
+    "en": "The Acts took effect in 1707.",
+    "fr": "Les actes sont entrés en vigueur en 1707."
+   }
+  },
+  {
+   "id": "ev-025",
+   "name": {
+    "en": "United States Declaration of Independence",
+    "fr": "Déclaration d'indépendance des États-Unis"
+   },
+   "year": 1776,
+   "category": "politics",
+   "expl": {
+    "en": "It was adopted on 4 July 1776.",
+    "fr": "Elle a été adoptée le 4 juillet 1776."
+   }
+  },
+  {
+   "id": "ev-026",
+   "name": {
+    "en": "First crewed balloon flight",
+    "fr": "Premier vol d'un ballon avec équipage"
+   },
+   "year": 1783,
+   "category": "science",
+   "expl": {
+    "en": "Pilâtre de Rozier and the Marquis d'Arlandes flew in Paris in November 1783.",
+    "fr": "Pilâtre de Rozier et le marquis d'Arlandes ont volé à Paris en novembre 1783."
+   }
+  },
+  {
+   "id": "ev-027",
+   "name": {
+    "en": "Storming of the Bastille",
+    "fr": "Prise de la Bastille"
+   },
+   "year": 1789,
+   "category": "history",
+   "expl": {
+    "en": "It took place on 14 July 1789 and symbolises the start of the French Revolution.",
+    "fr": "Elle a eu lieu le 14 juillet 1789 et symbolise le début de la Révolution française."
+   }
+  },
+  {
+   "id": "ev-028",
+   "name": {
+    "en": "Napoleon is crowned Emperor of the French",
+    "fr": "Napoléon est sacré empereur des Français"
+   },
+   "year": 1804,
+   "category": "history",
+   "expl": {
+    "en": "The ceremony took place at Notre-Dame in December 1804.",
+    "fr": "La cérémonie a eu lieu à Notre-Dame en décembre 1804."
+   }
+  },
+  {
+   "id": "ev-029",
+   "name": {
+    "en": "Battle of Waterloo",
+    "fr": "Bataille de Waterloo"
+   },
+   "year": 1815,
+   "category": "history",
+   "expl": {
+    "en": "Napoleon was defeated on 18 June 1815.",
+    "fr": "Napoléon a été vaincu le 18 juin 1815."
+   }
+  },
+  {
+   "id": "ev-030",
+   "name": {
+    "en": "Revolutions sweep across Europe",
+    "fr": "Les révolutions gagnent toute l'Europe"
+   },
+   "year": 1848,
+   "category": "politics",
+   "expl": {
+    "en": "Uprisings broke out in France, the German states, Austria and Italy in 1848.",
+    "fr": "Des soulèvements ont éclaté en France, dans les États allemands, en Autriche et en Italie en 1848."
+   }
+  },
+  {
+   "id": "ev-031",
+   "name": {
+    "en": "Darwin publishes On the Origin of Species",
+    "fr": "Darwin publie L'Origine des espèces"
+   },
+   "year": 1859,
+   "category": "science",
+   "expl": {
+    "en": "It appeared in November 1859.",
+    "fr": "Il est paru en novembre 1859."
+   }
+  },
+  {
+   "id": "ev-032",
+   "name": {
+    "en": "Abraham Lincoln is assassinated",
+    "fr": "Assassinat d'Abraham Lincoln"
+   },
+   "year": 1865,
+   "category": "history",
+   "expl": {
+    "en": "He was shot in April 1865, days after the Civil War effectively ended.",
+    "fr": "Il a été abattu en avril 1865, quelques jours après la fin effective de la guerre de Sécession."
+   }
+  },
+  {
+   "id": "ev-033",
+   "name": {
+    "en": "The Suez Canal opens",
+    "fr": "Ouverture du canal de Suez"
+   },
+   "year": 1869,
+   "category": "geography",
+   "expl": {
+    "en": "The canal linked the Mediterranean and the Red Sea in 1869.",
+    "fr": "Le canal a relié la Méditerranée et la mer Rouge en 1869."
+   }
+  },
+  {
+   "id": "ev-034",
+   "name": {
+    "en": "Alexander Graham Bell patents the telephone",
+    "fr": "Alexander Graham Bell brevette le téléphone"
+   },
+   "year": 1876,
+   "category": "science",
+   "expl": {
+    "en": "The US patent was granted in 1876.",
+    "fr": "Le brevet américain a été accordé en 1876."
+   }
+  },
+  {
+   "id": "ev-035",
+   "name": {
+    "en": "The Eiffel Tower is completed",
+    "fr": "Achèvement de la tour Eiffel"
+   },
+   "year": 1889,
+   "category": "arts",
+   "expl": {
+    "en": "It opened for the 1889 Exposition Universelle.",
+    "fr": "Elle a ouvert pour l'Exposition universelle de 1889."
+   }
+  },
+  {
+   "id": "ev-036",
+   "name": {
+    "en": "First modern Olympic Games in Athens",
+    "fr": "Premiers Jeux olympiques modernes à Athènes"
+   },
+   "year": 1896,
+   "category": "sports",
+   "expl": {
+    "en": "They were held in April 1896.",
+    "fr": "Ils ont eu lieu en avril 1896."
+   }
+  },
+  {
+   "id": "ev-037",
+   "name": {
+    "en": "The Wright brothers make the first powered flight",
+    "fr": "Les frères Wright réalisent le premier vol motorisé"
+   },
+   "year": 1903,
+   "category": "science",
+   "expl": {
+    "en": "They flew at Kitty Hawk on 17 December 1903.",
+    "fr": "Ils ont volé à Kitty Hawk le 17 décembre 1903."
+   }
+  },
+  {
+   "id": "ev-038",
+   "name": {
+    "en": "Einstein publishes special relativity",
+    "fr": "Einstein publie la relativité restreinte"
+   },
+   "year": 1905,
+   "category": "science",
+   "expl": {
+    "en": "It was one of four papers of his 'miracle year'.",
+    "fr": "C'était l'un des quatre articles de son « année miraculeuse »."
+   }
+  },
+  {
+   "id": "ev-039",
+   "name": {
+    "en": "The Titanic sinks",
+    "fr": "Naufrage du Titanic"
+   },
+   "year": 1912,
+   "category": "history",
+   "expl": {
+    "en": "It struck an iceberg on 14 to 15 April 1912.",
+    "fr": "Il a heurté un iceberg dans la nuit du 14 au 15 avril 1912."
+   }
+  },
+  {
+   "id": "ev-040",
+   "name": {
+    "en": "World War I begins",
+    "fr": "Début de la Première Guerre mondiale"
+   },
+   "year": 1914,
+   "category": "history",
+   "expl": {
+    "en": "It began in the summer of 1914.",
+    "fr": "Elle a commencé à l'été 1914."
+   }
+  },
+  {
+   "id": "ev-041",
+   "name": {
+    "en": "The Russian Revolution",
+    "fr": "La révolution russe"
+   },
+   "year": 1917,
+   "category": "politics",
+   "expl": {
+    "en": "The Bolsheviks seized power in October 1917.",
+    "fr": "Les bolcheviks ont pris le pouvoir en octobre 1917."
+   }
+  },
+  {
+   "id": "ev-042",
+   "name": {
+    "en": "Fleming notices penicillin",
+    "fr": "Fleming remarque la pénicilline"
+   },
+   "year": 1928,
+   "category": "science",
+   "expl": {
+    "en": "He observed the mould's antibacterial effect in September 1928.",
+    "fr": "Il a observé l'effet antibactérien de la moisissure en septembre 1928."
+   }
+  },
+  {
+   "id": "ev-043",
+   "name": {
+    "en": "The Wall Street Crash",
+    "fr": "Le krach de Wall Street"
+   },
+   "year": 1929,
+   "category": "politics",
+   "expl": {
+    "en": "The stock market collapsed in October 1929.",
+    "fr": "La Bourse s'est effondrée en octobre 1929."
+   }
+  },
+  {
+   "id": "ev-044",
+   "name": {
+    "en": "Summer Olympics in Berlin",
+    "fr": "Jeux olympiques d'été de Berlin"
+   },
+   "year": 1936,
+   "category": "sports",
+   "expl": {
+    "en": "The Games were held in August 1936.",
+    "fr": "Les Jeux se sont tenus en août 1936."
+   }
+  },
+  {
+   "id": "ev-045",
+   "name": {
+    "en": "World War II begins in Europe",
+    "fr": "Début de la Seconde Guerre mondiale en Europe"
+   },
+   "year": 1939,
+   "category": "history",
+   "expl": {
+    "en": "Germany invaded Poland on 1 September 1939.",
+    "fr": "L'Allemagne a envahi la Pologne le 1er septembre 1939."
+   }
+  },
+  {
+   "id": "ev-046",
+   "name": {
+    "en": "World War II ends",
+    "fr": "Fin de la Seconde Guerre mondiale"
+   },
+   "year": 1945,
+   "category": "history",
+   "expl": {
+    "en": "Germany surrendered in May and Japan in August/September 1945.",
+    "fr": "L'Allemagne a capitulé en mai et le Japon en août-septembre 1945."
+   }
+  },
+  {
+   "id": "ev-047",
+   "name": {
+    "en": "Universal Declaration of Human Rights",
+    "fr": "Déclaration universelle des droits de l'homme"
+   },
+   "year": 1948,
+   "category": "politics",
+   "expl": {
+    "en": "The UN General Assembly adopted it in Paris in December 1948.",
+    "fr": "L'Assemblée générale de l'ONU l'a adoptée à Paris en décembre 1948."
+   }
+  },
+  {
+   "id": "ev-048",
+   "name": {
+    "en": "Watson and Crick publish the structure of DNA",
+    "fr": "Watson et Crick publient la structure de l'ADN"
+   },
+   "year": 1953,
+   "category": "science",
+   "expl": {
+    "en": "Their double-helix paper appeared in 1953.",
+    "fr": "Leur article sur la double hélice est paru en 1953."
+   }
+  },
+  {
+   "id": "ev-049",
+   "name": {
+    "en": "Sputnik 1 is launched",
+    "fr": "Lancement de Spoutnik 1"
+   },
+   "year": 1957,
+   "category": "science",
+   "expl": {
+    "en": "It was the first artificial satellite, launched in October 1957.",
+    "fr": "C'était le premier satellite artificiel, lancé en octobre 1957."
+   }
+  },
+  {
+   "id": "ev-050",
+   "name": {
+    "en": "Yuri Gagarin becomes the first human in space",
+    "fr": "Iouri Gagarine devient le premier humain dans l'espace"
+   },
+   "year": 1961,
+   "category": "science",
+   "expl": {
+    "en": "He orbited Earth on 12 April 1961.",
+    "fr": "Il a fait le tour de la Terre le 12 avril 1961."
+   }
+  },
+  {
+   "id": "ev-051",
+   "name": {
+    "en": "England wins the FIFA World Cup",
+    "fr": "L'Angleterre remporte la Coupe du monde de la FIFA"
+   },
+   "year": 1966,
+   "category": "sports",
+   "expl": {
+    "en": "England beat West Germany 4-2 after extra time in 1966.",
+    "fr": "L'Angleterre a battu l'Allemagne de l'Ouest 4-2 après prolongation en 1966."
+   }
+  },
+  {
+   "id": "ev-052",
+   "name": {
+    "en": "Apollo 11 lands humans on the Moon",
+    "fr": "Apollo 11 pose des humains sur la Lune"
+   },
+   "year": 1969,
+   "category": "science",
+   "expl": {
+    "en": "Armstrong and Aldrin landed in July 1969.",
+    "fr": "Armstrong et Aldrin se sont posés en juillet 1969."
+   }
+  },
+  {
+   "id": "ev-053",
+   "name": {
+    "en": "Smallpox is declared eradicated",
+    "fr": "La variole est déclarée éradiquée"
+   },
+   "year": 1980,
+   "category": "science",
+   "expl": {
+    "en": "The World Health Organization made the declaration in 1980.",
+    "fr": "L'Organisation mondiale de la santé l'a déclarée en 1980."
+   }
+  },
+  {
+   "id": "ev-054",
+   "name": {
+    "en": "Fall of the Berlin Wall",
+    "fr": "Chute du mur de Berlin"
+   },
+   "year": 1989,
+   "category": "politics",
+   "expl": {
+    "en": "The wall opened on 9 November 1989.",
+    "fr": "Le mur s'est ouvert le 9 novembre 1989."
+   }
+  },
+  {
+   "id": "ev-055",
+   "name": {
+    "en": "Dissolution of the Soviet Union",
+    "fr": "Dissolution de l'Union soviétique"
+   },
+   "year": 1991,
+   "category": "politics",
+   "expl": {
+    "en": "The USSR ceased to exist in December 1991.",
+    "fr": "L'URSS a cessé d'exister en décembre 1991."
+   }
+  },
+  {
+   "id": "ev-056",
+   "name": {
+    "en": "Nelson Mandela is elected president of South Africa",
+    "fr": "Nelson Mandela est élu président de l'Afrique du Sud"
+   },
+   "year": 1994,
+   "category": "politics",
+   "expl": {
+    "en": "The first multiracial election took place in April 1994.",
+    "fr": "La première élection multiraciale a eu lieu en avril 1994."
+   }
+  },
+  {
+   "id": "ev-057",
+   "name": {
+    "en": "Hong Kong is handed over to China",
+    "fr": "Rétrocession de Hong Kong à la Chine"
+   },
+   "year": 1997,
+   "category": "politics",
+   "expl": {
+    "en": "The United Kingdom returned it on 1 July 1997.",
+    "fr": "Le Royaume-Uni l'a restitué le 1er juillet 1997."
+   }
+  },
+  {
+   "id": "ev-058",
+   "name": {
+    "en": "France wins the FIFA World Cup",
+    "fr": "La France remporte la Coupe du monde de la FIFA"
+   },
+   "year": 1998,
+   "category": "sports",
+   "expl": {
+    "en": "France beat Brazil 3-0 in the final in Paris in 1998.",
+    "fr": "La France a battu le Brésil 3-0 en finale à Paris en 1998."
+   }
+  },
+  {
+   "id": "ev-059",
+   "name": {
+    "en": "The September 11 attacks",
+    "fr": "Les attentats du 11 septembre"
+   },
+   "year": 2001,
+   "category": "history",
+   "expl": {
+    "en": "They took place on 11 September 2001.",
+    "fr": "Ils ont eu lieu le 11 septembre 2001."
+   }
+  },
+  {
+   "id": "ev-060",
+   "name": {
+    "en": "The Human Genome Project is completed",
+    "fr": "Achèvement du Projet génome humain"
+   },
+   "year": 2003,
+   "category": "science",
+   "expl": {
+    "en": "The sequencing was declared complete in April 2003.",
+    "fr": "Le séquençage a été déclaré achevé en avril 2003."
+   }
+  },
+  {
+   "id": "ev-061",
+   "name": {
+    "en": "The global financial crisis deepens after Lehman Brothers collapses",
+    "fr": "La crise financière mondiale s'aggrave après la faillite de Lehman Brothers"
+   },
+   "year": 2008,
+   "category": "politics",
+   "expl": {
+    "en": "Lehman filed for bankruptcy in September 2008.",
+    "fr": "Lehman a fait faillite en septembre 2008."
+   }
+  },
+  {
+   "id": "ev-062",
+   "name": {
+    "en": "CERN announces the discovery of a Higgs-like boson",
+    "fr": "Le CERN annonce la découverte d'un boson de type Higgs"
+   },
+   "year": 2012,
+   "category": "science",
+   "expl": {
+    "en": "The announcement was made in July 2012.",
+    "fr": "L'annonce a été faite en juillet 2012."
+   }
+  },
+  {
+   "id": "ev-063",
+   "name": {
+    "en": "The Paris Agreement on climate change is adopted",
+    "fr": "Adoption de l'Accord de Paris sur le climat"
+   },
+   "year": 2015,
+   "category": "politics",
+   "expl": {
+    "en": "Countries adopted it in December 2015.",
+    "fr": "Les pays l'ont adopté en décembre 2015."
+   }
+  },
+  {
+   "id": "ev-064",
+   "name": {
+    "en": "The WHO declares COVID-19 a pandemic",
+    "fr": "L'OMS déclare la COVID-19 pandémique"
+   },
+   "year": 2020,
+   "category": "science",
+   "expl": {
+    "en": "The declaration came on 11 March 2020.",
+    "fr": "La déclaration est intervenue le 11 mars 2020."
+   }
+  }
+ ]
+}

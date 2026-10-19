@@ -3,32 +3,18 @@
  "review": "unreviewed",
  "questions": [
   {
-   "id": "cin-001",
-   "subcategory": "films",
+   "id": "cin-008",
+   "subcategory": "actors",
    "difficulty": 1,
-   "question": "Which 1997 film features the line 'I'm the king of the world!'?",
+   "question": "Who says 'I'll be back' in 'The Terminator' (1984)?",
    "choices": [
-    "Avatar",
-    "Braveheart",
-    "Titanic",
-    "Jaws"
+    "Jean-Claude Van Damme",
+    "Arnold Schwarzenegger",
+    "Sylvester Stallone",
+    "Bruce Willis"
    ],
-   "answer": 2,
-   "explanation": "Jack Dawson shouts it at the bow of the ship in James Cameron's Titanic."
-  },
-  {
-   "id": "cin-002",
-   "subcategory": "directors",
-   "difficulty": 1,
-   "question": "Who directed the 1993 film 'Jurassic Park'?",
-   "choices": [
-    "Steven Spielberg",
-    "Ridley Scott",
-    "James Cameron",
-    "George Lucas"
-   ],
-   "answer": 0,
-   "explanation": "Spielberg directed Jurassic Park, adapted from Michael Crichton's novel."
+   "answer": 1,
+   "explanation": "Schwarzenegger played the T-800 and the line became his trademark."
   },
   {
    "id": "cin-003",
@@ -73,20 +59,6 @@
    "explanation": "Toy Story was Pixar's first feature film, produced with Disney."
   },
   {
-   "id": "cin-006",
-   "subcategory": "films",
-   "difficulty": 1,
-   "question": "Which film series features a school called Hogwarts?",
-   "choices": [
-    "Narnia",
-    "The Hunger Games",
-    "Percy Jackson",
-    "Harry Potter"
-   ],
-   "answer": 3,
-   "explanation": "Hogwarts School of Witchcraft and Wizardry is Harry Potter's school."
-  },
-  {
    "id": "cin-007",
    "subcategory": "animation",
    "difficulty": 1,
@@ -99,20 +71,6 @@
    ],
    "answer": 1,
    "explanation": "Marlin searches the ocean for his son Nemo in Pixar's Finding Nemo (2003)."
-  },
-  {
-   "id": "cin-008",
-   "subcategory": "actors",
-   "difficulty": 1,
-   "question": "Who says 'I'll be back' in 'The Terminator' (1984)?",
-   "choices": [
-    "Jean-Claude Van Damme",
-    "Arnold Schwarzenegger",
-    "Sylvester Stallone",
-    "Bruce Willis"
-   ],
-   "answer": 1,
-   "explanation": "Schwarzenegger played the T-800 and the line became his trademark."
   },
   {
    "id": "cin-009",
@@ -129,6 +87,48 @@
    "explanation": "Shrek (2001) was made by DreamWorks Animation."
   },
   {
+   "id": "cin-002",
+   "subcategory": "directors",
+   "difficulty": 1,
+   "question": "Who directed the 1993 film 'Jurassic Park'?",
+   "choices": [
+    "Steven Spielberg",
+    "Ridley Scott",
+    "James Cameron",
+    "George Lucas"
+   ],
+   "answer": 0,
+   "explanation": "Spielberg directed Jurassic Park, adapted from Michael Crichton's novel."
+  },
+  {
+   "id": "cin-001",
+   "subcategory": "films",
+   "difficulty": 1,
+   "question": "Which 1997 film features the line 'I'm the king of the world!'?",
+   "choices": [
+    "Avatar",
+    "Braveheart",
+    "Titanic",
+    "Jaws"
+   ],
+   "answer": 2,
+   "explanation": "Jack Dawson shouts it at the bow of the ship in James Cameron's Titanic."
+  },
+  {
+   "id": "cin-006",
+   "subcategory": "films",
+   "difficulty": 1,
+   "question": "Which film series features a school called Hogwarts?",
+   "choices": [
+    "Narnia",
+    "The Hunger Games",
+    "Percy Jackson",
+    "Harry Potter"
+   ],
+   "answer": 3,
+   "explanation": "Hogwarts School of Witchcraft and Wizardry is Harry Potter's school."
+  },
+  {
    "id": "cin-011",
    "subcategory": "actors",
    "difficulty": 2,
@@ -141,48 +141,6 @@
    ],
    "answer": 2,
    "explanation": "Depp earned an Oscar nomination for the first film in 2003."
-  },
-  {
-   "id": "cin-012",
-   "subcategory": "films",
-   "difficulty": 2,
-   "question": "Which 2018 Marvel film is set mostly in the fictional nation of Wakanda?",
-   "choices": [
-    "Thor: Ragnarok",
-    "Black Panther",
-    "Ant-Man",
-    "Doctor Strange"
-   ],
-   "answer": 1,
-   "explanation": "Black Panther was directed by Ryan Coogler."
-  },
-  {
-   "id": "cin-013",
-   "subcategory": "directors",
-   "difficulty": 2,
-   "question": "Who directed 'The Godfather' (1972)?",
-   "choices": [
-    "Brian De Palma",
-    "Sidney Lumet",
-    "Martin Scorsese",
-    "Francis Ford Coppola"
-   ],
-   "answer": 3,
-   "explanation": "Coppola co-wrote the film with Mario Puzo, who wrote the novel."
-  },
-  {
-   "id": "cin-014",
-   "subcategory": "films",
-   "difficulty": 2,
-   "question": "In the 1999 film 'The Matrix', which pill does Neo take to learn the truth?",
-   "choices": [
-    "The red pill",
-    "The blue pill",
-    "The green pill",
-    "The white pill"
-   ],
-   "answer": 0,
-   "explanation": "Morpheus offers Neo a choice between a blue and a red pill."
   },
   {
    "id": "cin-015",
@@ -199,46 +157,18 @@
    "explanation": "Hanks won the Best Actor Oscar for Forrest Gump (1994)."
   },
   {
-   "id": "cin-016",
-   "subcategory": "films",
+   "id": "cin-021",
+   "subcategory": "actors",
    "difficulty": 2,
-   "question": "In 'Back to the Future', what speed must the DeLorean reach to time travel?",
+   "question": "Which actress played Katniss Everdeen in 'The Hunger Games' films?",
    "choices": [
-    "99 miles per hour",
-    "100 miles per hour",
-    "88 miles per hour",
-    "66 miles per hour"
+    "Kristen Stewart",
+    "Jennifer Lawrence",
+    "Shailene Woodley",
+    "Emma Watson"
    ],
-   "answer": 2,
-   "explanation": "Doc Brown's time machine needs 88 mph and 1.21 gigawatts."
-  },
-  {
-   "id": "cin-017",
-   "subcategory": "directors",
-   "difficulty": 2,
-   "question": "Who directed 'Inception' (2010)?",
-   "choices": [
-    "Denis Villeneuve",
-    "J. J. Abrams",
-    "Ridley Scott",
-    "Christopher Nolan"
-   ],
-   "answer": 3,
-   "explanation": "Nolan also directed The Dark Knight trilogy and Oppenheimer."
-  },
-  {
-   "id": "cin-018",
-   "subcategory": "awards",
-   "difficulty": 2,
-   "question": "Which film won the Academy Award for Best Picture for 2023 (awarded in March 2024)?",
-   "choices": [
-    "Barbie",
-    "Poor Things",
-    "Oppenheimer",
-    "Killers of the Flower Moon"
-   ],
-   "answer": 2,
-   "explanation": "Oppenheimer won seven Oscars including Best Picture and Best Director."
+   "answer": 1,
+   "explanation": "The first film came out in 2012."
   },
   {
    "id": "cin-019",
@@ -255,6 +185,34 @@
    "explanation": "Studio Ghibli was co-founded by Hayao Miyazaki and Isao Takahata."
   },
   {
+   "id": "cin-041",
+   "subcategory": "animation",
+   "difficulty": 2,
+   "question": "Which film features a toy cowboy named Woody?",
+   "choices": [
+    "Up",
+    "Toy Story",
+    "Cars",
+    "Monsters, Inc."
+   ],
+   "answer": 1,
+   "explanation": "Woody is voiced by Tom Hanks in the Toy Story films."
+  },
+  {
+   "id": "cin-018",
+   "subcategory": "awards",
+   "difficulty": 2,
+   "question": "Which film won the Academy Award for Best Picture for 2023 (awarded in March 2024)?",
+   "choices": [
+    "Barbie",
+    "Poor Things",
+    "Oppenheimer",
+    "Killers of the Flower Moon"
+   ],
+   "answer": 2,
+   "explanation": "Oppenheimer won seven Oscars including Best Picture and Best Director."
+  },
+  {
    "id": "cin-020",
    "subcategory": "awards",
    "difficulty": 2,
@@ -269,18 +227,74 @@
    "explanation": "The Palme d'Or is the top prize of the Cannes Film Festival in France."
   },
   {
-   "id": "cin-021",
-   "subcategory": "actors",
+   "id": "cin-013",
+   "subcategory": "directors",
    "difficulty": 2,
-   "question": "Which actress played Katniss Everdeen in 'The Hunger Games' films?",
+   "question": "Who directed 'The Godfather' (1972)?",
    "choices": [
-    "Kristen Stewart",
-    "Jennifer Lawrence",
-    "Shailene Woodley",
-    "Emma Watson"
+    "Brian De Palma",
+    "Sidney Lumet",
+    "Martin Scorsese",
+    "Francis Ford Coppola"
+   ],
+   "answer": 3,
+   "explanation": "Coppola co-wrote the film with Mario Puzo, who wrote the novel."
+  },
+  {
+   "id": "cin-017",
+   "subcategory": "directors",
+   "difficulty": 2,
+   "question": "Who directed 'Inception' (2010)?",
+   "choices": [
+    "Denis Villeneuve",
+    "J. J. Abrams",
+    "Ridley Scott",
+    "Christopher Nolan"
+   ],
+   "answer": 3,
+   "explanation": "Nolan also directed The Dark Knight trilogy and Oppenheimer."
+  },
+  {
+   "id": "cin-012",
+   "subcategory": "films",
+   "difficulty": 2,
+   "question": "Which 2018 Marvel film is set mostly in the fictional nation of Wakanda?",
+   "choices": [
+    "Thor: Ragnarok",
+    "Black Panther",
+    "Ant-Man",
+    "Doctor Strange"
    ],
    "answer": 1,
-   "explanation": "The first film came out in 2012."
+   "explanation": "Black Panther was directed by Ryan Coogler."
+  },
+  {
+   "id": "cin-014",
+   "subcategory": "films",
+   "difficulty": 2,
+   "question": "In the 1999 film 'The Matrix', which pill does Neo take to learn the truth?",
+   "choices": [
+    "The red pill",
+    "The blue pill",
+    "The green pill",
+    "The white pill"
+   ],
+   "answer": 0,
+   "explanation": "Morpheus offers Neo a choice between a blue and a red pill."
+  },
+  {
+   "id": "cin-016",
+   "subcategory": "films",
+   "difficulty": 2,
+   "question": "In 'Back to the Future', what speed must the DeLorean reach to time travel?",
+   "choices": [
+    "99 miles per hour",
+    "100 miles per hour",
+    "88 miles per hour",
+    "66 miles per hour"
+   ],
+   "answer": 2,
+   "explanation": "Doc Brown's time machine needs 88 mph and 1.21 gigawatts."
   },
   {
    "id": "cin-022",
@@ -295,6 +309,48 @@
    ],
    "answer": 3,
    "explanation": "George Lucas's Star Wars was released in May 1977."
+  },
+  {
+   "id": "cin-029",
+   "subcategory": "actors",
+   "difficulty": 3,
+   "question": "Who played the Joker in 'The Dark Knight' (2008)?",
+   "choices": [
+    "Joaquin Phoenix",
+    "Jared Leto",
+    "Heath Ledger",
+    "Jack Nicholson"
+   ],
+   "answer": 2,
+   "explanation": "Ledger won a posthumous Oscar for the role."
+  },
+  {
+   "id": "cin-039",
+   "subcategory": "actors",
+   "difficulty": 3,
+   "question": "Which actor starred in 'Gladiator' (2000) as Maximus?",
+   "choices": [
+    "Joaquin Phoenix",
+    "Russell Crowe",
+    "Brad Pitt",
+    "Mel Gibson"
+   ],
+   "answer": 1,
+   "explanation": "Crowe won the Best Actor Oscar for Gladiator."
+  },
+  {
+   "id": "cin-032",
+   "subcategory": "animation",
+   "difficulty": 3,
+   "question": "Which 2000s Pixar film features a rat who wants to become a chef in Paris?",
+   "choices": [
+    "Cars",
+    "Up",
+    "Ratatouille",
+    "WALL-E"
+   ],
+   "answer": 2,
+   "explanation": "Remy the rat cooks with the help of Linguini in Ratatouille (2007)."
   },
   {
    "id": "cin-023",
@@ -325,20 +381,6 @@
    "explanation": "Parasite also won the Palme d'Or in 2019."
   },
   {
-   "id": "cin-025",
-   "subcategory": "directors",
-   "difficulty": 3,
-   "question": "Who directed '2001: A Space Odyssey' (1968)?",
-   "choices": [
-    "Ridley Scott",
-    "Steven Spielberg",
-    "Andrei Tarkovsky",
-    "Stanley Kubrick"
-   ],
-   "answer": 3,
-   "explanation": "Kubrick co-wrote the screenplay with Arthur C. Clarke."
-  },
-  {
    "id": "cin-026",
    "subcategory": "awards",
    "difficulty": 3,
@@ -351,6 +393,20 @@
    ],
    "answer": 2,
    "explanation": "Hepburn won four Best Actress Oscars; Streep has three."
+  },
+  {
+   "id": "cin-025",
+   "subcategory": "directors",
+   "difficulty": 3,
+   "question": "Who directed '2001: A Space Odyssey' (1968)?",
+   "choices": [
+    "Ridley Scott",
+    "Steven Spielberg",
+    "Andrei Tarkovsky",
+    "Stanley Kubrick"
+   ],
+   "answer": 3,
+   "explanation": "Kubrick co-wrote the screenplay with Arthur C. Clarke."
   },
   {
    "id": "cin-027",
@@ -367,32 +423,18 @@
    "explanation": "Psycho was released in 1960 with Anthony Perkins as Norman Bates."
   },
   {
-   "id": "cin-028",
-   "subcategory": "music",
+   "id": "cin-031",
+   "subcategory": "directors",
    "difficulty": 3,
-   "question": "Who composed the music for the original 'Star Wars' (1977)?",
+   "question": "Which Japanese director made 'Seven Samurai' (1954)?",
    "choices": [
-    "Ennio Morricone",
-    "Hans Zimmer",
-    "Danny Elfman",
-    "John Williams"
+    "Akira Kurosawa",
+    "Yasujiro Ozu",
+    "Hayao Miyazaki",
+    "Takeshi Kitano"
    ],
-   "answer": 3,
-   "explanation": "Williams also scored Jaws, E.T. and Indiana Jones."
-  },
-  {
-   "id": "cin-029",
-   "subcategory": "actors",
-   "difficulty": 3,
-   "question": "Who played the Joker in 'The Dark Knight' (2008)?",
-   "choices": [
-    "Joaquin Phoenix",
-    "Jared Leto",
-    "Heath Ledger",
-    "Jack Nicholson"
-   ],
-   "answer": 2,
-   "explanation": "Ledger won a posthumous Oscar for the role."
+   "answer": 0,
+   "explanation": "Seven Samurai inspired the Hollywood western The Magnificent Seven."
   },
   {
    "id": "cin-030",
@@ -409,46 +451,60 @@
    "explanation": "Orson Welles directed, co-wrote and starred in Citizen Kane."
   },
   {
-   "id": "cin-031",
-   "subcategory": "directors",
+   "id": "cin-040",
+   "subcategory": "films",
    "difficulty": 3,
-   "question": "Which Japanese director made 'Seven Samurai' (1954)?",
+   "question": "Which trilogy by Peter Jackson is based on novels by J. R. R. Tolkien?",
    "choices": [
-    "Akira Kurosawa",
-    "Yasujiro Ozu",
-    "Hayao Miyazaki",
-    "Takeshi Kitano"
-   ],
-   "answer": 0,
-   "explanation": "Seven Samurai inspired the Hollywood western The Magnificent Seven."
-  },
-  {
-   "id": "cin-032",
-   "subcategory": "animation",
-   "difficulty": 3,
-   "question": "Which 2000s Pixar film features a rat who wants to become a chef in Paris?",
-   "choices": [
-    "Cars",
-    "Up",
-    "Ratatouille",
-    "WALL-E"
+    "The Wheel of Time",
+    "The Chronicles of Narnia",
+    "The Lord of the Rings",
+    "His Dark Materials"
    ],
    "answer": 2,
-   "explanation": "Remy the rat cooks with the help of Linguini in Ratatouille (2007)."
+   "explanation": "The films came out between 2001 and 2003."
   },
   {
-   "id": "cin-033",
-   "subcategory": "history",
-   "difficulty": 4,
-   "question": "Which was the first feature-length film made entirely with computer animation?",
+   "id": "cin-028",
+   "subcategory": "music",
+   "difficulty": 3,
+   "question": "Who composed the music for the original 'Star Wars' (1977)?",
    "choices": [
-    "Shrek",
-    "A Bug's Life",
-    "Tron",
-    "Toy Story"
+    "Ennio Morricone",
+    "Hans Zimmer",
+    "Danny Elfman",
+    "John Williams"
    ],
    "answer": 3,
-   "explanation": "Toy Story (1995) was the first fully CGI feature film."
+   "explanation": "Williams also scored Jaws, E.T. and Indiana Jones."
+  },
+  {
+   "id": "cin-036",
+   "subcategory": "directors",
+   "difficulty": 4,
+   "question": "Who directed 'Lawrence of Arabia' (1962)?",
+   "choices": [
+    "Carol Reed",
+    "John Ford",
+    "David Lean",
+    "Alfred Hitchcock"
+   ],
+   "answer": 2,
+   "explanation": "Lean also directed The Bridge on the River Kwai and Doctor Zhivago."
+  },
+  {
+   "id": "cin-038",
+   "subcategory": "directors",
+   "difficulty": 4,
+   "question": "Which director made the 1982 science-fiction noir 'Blade Runner'?",
+   "choices": [
+    "John Carpenter",
+    "Paul Verhoeven",
+    "James Cameron",
+    "Ridley Scott"
+   ],
+   "answer": 3,
+   "explanation": "Blade Runner is based on Philip K. Dick's novel 'Do Androids Dream of Electric Sheep?'."
   },
   {
    "id": "cin-034",
@@ -479,18 +535,18 @@
    "explanation": "Humphrey Bogart says it to Ingrid Bergman in Casablanca (1942)."
   },
   {
-   "id": "cin-036",
-   "subcategory": "directors",
+   "id": "cin-033",
+   "subcategory": "history",
    "difficulty": 4,
-   "question": "Who directed 'Lawrence of Arabia' (1962)?",
+   "question": "Which was the first feature-length film made entirely with computer animation?",
    "choices": [
-    "Carol Reed",
-    "John Ford",
-    "David Lean",
-    "Alfred Hitchcock"
+    "Shrek",
+    "A Bug's Life",
+    "Tron",
+    "Toy Story"
    ],
-   "answer": 2,
-   "explanation": "Lean also directed The Bridge on the River Kwai and Doctor Zhivago."
+   "answer": 3,
+   "explanation": "Toy Story (1995) was the first fully CGI feature film."
   },
   {
    "id": "cin-037",
@@ -505,62 +561,6 @@
    ],
    "answer": 1,
    "explanation": "James Whale directed Frankenstein for Universal Pictures."
-  },
-  {
-   "id": "cin-038",
-   "subcategory": "directors",
-   "difficulty": 4,
-   "question": "Which director made the 1982 science-fiction noir 'Blade Runner'?",
-   "choices": [
-    "John Carpenter",
-    "Paul Verhoeven",
-    "James Cameron",
-    "Ridley Scott"
-   ],
-   "answer": 3,
-   "explanation": "Blade Runner is based on Philip K. Dick's novel 'Do Androids Dream of Electric Sheep?'."
-  },
-  {
-   "id": "cin-039",
-   "subcategory": "actors",
-   "difficulty": 3,
-   "question": "Which actor starred in 'Gladiator' (2000) as Maximus?",
-   "choices": [
-    "Joaquin Phoenix",
-    "Russell Crowe",
-    "Brad Pitt",
-    "Mel Gibson"
-   ],
-   "answer": 1,
-   "explanation": "Crowe won the Best Actor Oscar for Gladiator."
-  },
-  {
-   "id": "cin-040",
-   "subcategory": "films",
-   "difficulty": 3,
-   "question": "Which trilogy by Peter Jackson is based on novels by J. R. R. Tolkien?",
-   "choices": [
-    "The Wheel of Time",
-    "The Chronicles of Narnia",
-    "The Lord of the Rings",
-    "His Dark Materials"
-   ],
-   "answer": 2,
-   "explanation": "The films came out between 2001 and 2003."
-  },
-  {
-   "id": "cin-041",
-   "subcategory": "animation",
-   "difficulty": 2,
-   "question": "Which film features a toy cowboy named Woody?",
-   "choices": [
-    "Up",
-    "Toy Story",
-    "Cars",
-    "Monsters, Inc."
-   ],
-   "answer": 1,
-   "explanation": "Woody is voiced by Tom Hanks in the Toy Story films."
   }
  ]
 }

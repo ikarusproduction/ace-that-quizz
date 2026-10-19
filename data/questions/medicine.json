@@ -37,23 +37,6 @@
    ]
   },
   {
-   "id": "med-003",
-   "subcategory": "anatomy",
-   "difficulty": 4,
-   "question": "Damage to which area, usually in the left hemisphere, can leave a person understanding speech but unable to produce fluent words?",
-   "choices": [
-    "Wernicke's area",
-    "Broca's area",
-    "Occipital lobe",
-    "Pons"
-   ],
-   "answer": 1,
-   "explanation": "Broca's area is linked to speech production; damage causes a non-fluent aphasia.",
-   "tags": [
-    "brain"
-   ]
-  },
-  {
    "id": "med-004",
    "subcategory": "anatomy",
    "difficulty": 1,
@@ -105,23 +88,6 @@
    ]
   },
   {
-   "id": "med-007",
-   "subcategory": "anatomy",
-   "difficulty": 2,
-   "question": "About how many bones does an adult human have?",
-   "choices": [
-    "106",
-    "206",
-    "306",
-    "412"
-   ],
-   "answer": 1,
-   "explanation": "Babies have more, but many bones fuse as we grow, leaving 206 in most adults.",
-   "tags": [
-    "bones"
-   ]
-  },
-  {
    "id": "med-008",
    "subcategory": "anatomy",
    "difficulty": 1,
@@ -139,21 +105,23 @@
    ]
   },
   {
-   "id": "med-009",
-   "subcategory": "disease",
-   "difficulty": 3,
-   "question": "Why do antibiotics not work against influenza?",
+   "id": "trk-018",
+   "subcategory": "anatomy",
+   "difficulty": 1,
+   "question": "Which parts of the tongue can detect sweet tastes?",
    "choices": [
-    "Antibiotics only work on adults",
-    "Flu is caused by fungi",
-    "Viruses lack the cell structures that antibiotics attack",
-    "Flu germs are too large"
+    "Only the sides",
+    "Only the back",
+    "Only the tip",
+    "Any area with taste buds"
    ],
-   "answer": 2,
-   "explanation": "Antibiotics target bacterial features such as cell walls; viruses have none of those and live inside our cells.",
+   "answer": 3,
+   "explanation": "Taste buds all over the tongue can detect all the basic tastes.",
    "tags": [
-    "germs"
-   ]
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think different tastes are sensed only in separate zones of the tongue."
   },
   {
    "id": "med-010",
@@ -170,23 +138,6 @@
    "explanation": "In diabetes the body cannot keep blood glucose in a healthy range.",
    "tags": [
     "diabetes"
-   ]
-  },
-  {
-   "id": "med-011",
-   "subcategory": "disease",
-   "difficulty": 3,
-   "question": "What does a malignant tumour do that a benign one does not?",
-   "choices": [
-    "Invades nearby tissue and can spread",
-    "Always disappears by itself",
-    "Only grows in bone",
-    "Stays the same size forever"
-   ],
-   "answer": 0,
-   "explanation": "Benign tumours stay in place; malignant ones invade and can metastasise.",
-   "tags": [
-    "cancer"
    ]
   },
   {
@@ -224,40 +175,6 @@
    ]
   },
   {
-   "id": "med-014",
-   "subcategory": "disease",
-   "difficulty": 3,
-   "question": "Roughly which reading is generally considered the upper edge of normal blood pressure for an adult?",
-   "choices": [
-    "Below 160/120 mmHg",
-    "Below 90/40 mmHg",
-    "Below 120/80 mmHg",
-    "Below 200/150 mmHg"
-   ],
-   "answer": 2,
-   "explanation": "About 120/80 mmHg is the usual healthy target.",
-   "tags": [
-    "pressure"
-   ]
-  },
-  {
-   "id": "med-015",
-   "subcategory": "disease",
-   "difficulty": 2,
-   "question": "Cystic fibrosis, sickle cell disease and haemophilia are all examples of what kind of illness?",
-   "choices": [
-    "Allergies",
-    "Genetic disorders",
-    "Infections",
-    "Vitamin deficiencies"
-   ],
-   "answer": 1,
-   "explanation": "They are caused by changes in a person's DNA.",
-   "tags": [
-    "genetic"
-   ]
-  },
-  {
    "id": "med-016",
    "subcategory": "disease",
    "difficulty": 1,
@@ -275,6 +192,40 @@
    ]
   },
   {
+   "id": "med-032",
+   "subcategory": "history",
+   "difficulty": 1,
+   "question": "Which French scientist showed that many diseases are caused by germs and is remembered in the name of a milk process?",
+   "choices": [
+    "Pierre Curie",
+    "Louis Pasteur",
+    "Marie Curie",
+    "Claude Bernard"
+   ],
+   "answer": 1,
+   "explanation": "Pasteurisation uses gentle heat to kill harmful microbes.",
+   "tags": [
+    "pasteur"
+   ]
+  },
+  {
+   "id": "med-034",
+   "subcategory": "history",
+   "difficulty": 1,
+   "question": "Washing hands with soap helps prevent what?",
+   "choices": [
+    "Sunburn",
+    "Broken bones",
+    "The spread of infections",
+    "High blood pressure"
+   ],
+   "answer": 2,
+   "explanation": "Clean hands remove germs that spread disease.",
+   "tags": [
+    "semmelweis"
+   ]
+  },
+  {
    "id": "med-017",
    "subcategory": "pharma",
    "difficulty": 1,
@@ -289,23 +240,6 @@
    "explanation": "Antibiotics kill or stop the growth of bacteria.",
    "tags": [
     "antibiotics"
-   ]
-  },
-  {
-   "id": "med-018",
-   "subcategory": "pharma",
-   "difficulty": 4,
-   "question": "Which kind of vaccine uses a molecule that carries instructions for cells to make a harmless piece of the germ?",
-   "choices": [
-    "Inactivated vaccine",
-    "mRNA vaccine",
-    "Live attenuated vaccine",
-    "Toxoid vaccine"
-   ],
-   "answer": 1,
-   "explanation": "mRNA vaccines deliver instructions so our own cells make an antigen, such as the coronavirus spike protein.",
-   "tags": [
-    "vaccines"
    ]
   },
   {
@@ -377,21 +311,23 @@
    ]
   },
   {
-   "id": "med-023",
-   "subcategory": "tech",
-   "difficulty": 3,
-   "question": "A CT scan builds its images by combining what?",
+   "id": "trk-019",
+   "subcategory": "pharma",
+   "difficulty": 1,
+   "question": "How many micrograms are in one milligram?",
    "choices": [
-    "Radio waves from atoms",
-    "Heat from the skin",
-    "Sound echoes",
-    "Many X-ray slices taken from different angles"
+    "1,000",
+    "10",
+    "1,000,000",
+    "100"
    ],
-   "answer": 3,
-   "explanation": "A rotating X-ray tube and detectors collect slices that a computer assembles into a 3D picture.",
+   "answer": 0,
+   "explanation": "The prefix micro is one millionth and milli is one thousandth, so 1 mg is 1,000 micrograms.",
    "tags": [
-    "imaging"
-   ]
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people mix up milligrams and micrograms when reading a dose."
   },
   {
    "id": "med-024",
@@ -408,23 +344,6 @@
    "explanation": "Ultrasound is safe and shows live moving images.",
    "tags": [
     "ultrasound"
-   ]
-  },
-  {
-   "id": "med-025",
-   "subcategory": "tech",
-   "difficulty": 4,
-   "question": "A defibrillator is used to treat which emergency?",
-   "choices": [
-    "A burst appendix",
-    "A broken bone",
-    "A chaotic heart rhythm such as ventricular fibrillation",
-    "Low blood sugar"
-   ],
-   "answer": 2,
-   "explanation": "A controlled shock can reset the heart to a normal rhythm.",
-   "tags": [
-    "heartdevice"
    ]
   },
   {
@@ -445,23 +364,6 @@
    ]
   },
   {
-   "id": "med-027",
-   "subcategory": "tech",
-   "difficulty": 2,
-   "question": "The Human Genome Project, completed in 2003, was an effort to do what?",
-   "choices": [
-    "Read the full sequence of human DNA",
-    "Map the stars",
-    "Make a new vaccine",
-    "Clone a human"
-   ],
-   "answer": 0,
-   "explanation": "It determined the order of about three billion DNA base pairs.",
-   "tags": [
-    "dna"
-   ]
-  },
-  {
    "id": "med-028",
    "subcategory": "tech",
    "difficulty": 1,
@@ -476,23 +378,6 @@
    "explanation": "Prostheses replace a missing body part.",
    "tags": [
     "prosthetics"
-   ]
-  },
-  {
-   "id": "med-029",
-   "subcategory": "tech",
-   "difficulty": 3,
-   "question": "Why must doctors match donors and recipients, and give anti-rejection drugs?",
-   "choices": [
-    "The recipient's immune system may attack the new organ",
-    "The new organ would grow too big",
-    "Organs expire at night",
-    "Donor blood would clot"
-   ],
-   "answer": 0,
-   "explanation": "Immunosuppressants reduce the chance that the immune system rejects the foreign tissue.",
-   "tags": [
-    "dialysis"
    ]
   },
   {
@@ -513,6 +398,195 @@
    ]
   },
   {
+   "id": "med-007",
+   "subcategory": "anatomy",
+   "difficulty": 2,
+   "question": "About how many bones does an adult human have?",
+   "choices": [
+    "106",
+    "206",
+    "306",
+    "412"
+   ],
+   "answer": 1,
+   "explanation": "Babies have more, but many bones fuse as we grow, leaving 206 in most adults.",
+   "tags": [
+    "bones"
+   ]
+  },
+  {
+   "id": "med-015",
+   "subcategory": "disease",
+   "difficulty": 2,
+   "question": "Cystic fibrosis, sickle cell disease and haemophilia are all examples of what kind of illness?",
+   "choices": [
+    "Allergies",
+    "Genetic disorders",
+    "Infections",
+    "Vitamin deficiencies"
+   ],
+   "answer": 1,
+   "explanation": "They are caused by changes in a person's DNA.",
+   "tags": [
+    "genetic"
+   ]
+  },
+  {
+   "id": "med-027",
+   "subcategory": "tech",
+   "difficulty": 2,
+   "question": "The Human Genome Project, completed in 2003, was an effort to do what?",
+   "choices": [
+    "Read the full sequence of human DNA",
+    "Map the stars",
+    "Make a new vaccine",
+    "Clone a human"
+   ],
+   "answer": 0,
+   "explanation": "It determined the order of about three billion DNA base pairs.",
+   "tags": [
+    "dna"
+   ]
+  },
+  {
+   "id": "med-009",
+   "subcategory": "disease",
+   "difficulty": 3,
+   "question": "Why do antibiotics not work against influenza?",
+   "choices": [
+    "Antibiotics only work on adults",
+    "Flu is caused by fungi",
+    "Viruses lack the cell structures that antibiotics attack",
+    "Flu germs are too large"
+   ],
+   "answer": 2,
+   "explanation": "Antibiotics target bacterial features such as cell walls; viruses have none of those and live inside our cells.",
+   "tags": [
+    "germs"
+   ]
+  },
+  {
+   "id": "med-011",
+   "subcategory": "disease",
+   "difficulty": 3,
+   "question": "What does a malignant tumour do that a benign one does not?",
+   "choices": [
+    "Invades nearby tissue and can spread",
+    "Always disappears by itself",
+    "Only grows in bone",
+    "Stays the same size forever"
+   ],
+   "answer": 0,
+   "explanation": "Benign tumours stay in place; malignant ones invade and can metastasise.",
+   "tags": [
+    "cancer"
+   ]
+  },
+  {
+   "id": "med-014",
+   "subcategory": "disease",
+   "difficulty": 3,
+   "question": "Roughly which reading is generally considered the upper edge of normal blood pressure for an adult?",
+   "choices": [
+    "Below 160/120 mmHg",
+    "Below 90/40 mmHg",
+    "Below 120/80 mmHg",
+    "Below 200/150 mmHg"
+   ],
+   "answer": 2,
+   "explanation": "About 120/80 mmHg is the usual healthy target.",
+   "tags": [
+    "pressure"
+   ]
+  },
+  {
+   "id": "trk-017",
+   "subcategory": "disease",
+   "difficulty": 3,
+   "question": "Which statement about catching a cold is correct?",
+   "choices": [
+    "Antibiotics prevent colds",
+    "A virus is necessary; being cold does not cause a cold by itself",
+    "Cold exposure alone is enough to cause a cold",
+    "A cold can occur with no virus at all"
+   ],
+   "answer": 1,
+   "explanation": "Infection needs a virus. Cold may affect how easily it spreads or takes hold, but it is not a sufficient cause.",
+   "tags": [
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think you catch a cold from being cold or having wet hair."
+  },
+  {
+   "id": "med-036",
+   "subcategory": "history",
+   "difficulty": 3,
+   "question": "The idea of keeping an operating theatre free of germs is called what?",
+   "choices": [
+    "Dialysis",
+    "Anaesthesia",
+    "Triage",
+    "Aseptic technique"
+   ],
+   "answer": 3,
+   "explanation": "Asepsis aims to keep germs out in the first place, going further than antiseptic treatment.",
+   "tags": [
+    "lister"
+   ]
+  },
+  {
+   "id": "med-023",
+   "subcategory": "tech",
+   "difficulty": 3,
+   "question": "A CT scan builds its images by combining what?",
+   "choices": [
+    "Radio waves from atoms",
+    "Heat from the skin",
+    "Sound echoes",
+    "Many X-ray slices taken from different angles"
+   ],
+   "answer": 3,
+   "explanation": "A rotating X-ray tube and detectors collect slices that a computer assembles into a 3D picture.",
+   "tags": [
+    "imaging"
+   ]
+  },
+  {
+   "id": "med-029",
+   "subcategory": "tech",
+   "difficulty": 3,
+   "question": "Why must doctors match donors and recipients, and give anti-rejection drugs?",
+   "choices": [
+    "The recipient's immune system may attack the new organ",
+    "The new organ would grow too big",
+    "Organs expire at night",
+    "Donor blood would clot"
+   ],
+   "answer": 0,
+   "explanation": "Immunosuppressants reduce the chance that the immune system rejects the foreign tissue.",
+   "tags": [
+    "dialysis"
+   ]
+  },
+  {
+   "id": "med-003",
+   "subcategory": "anatomy",
+   "difficulty": 4,
+   "question": "Damage to which area, usually in the left hemisphere, can leave a person understanding speech but unable to produce fluent words?",
+   "choices": [
+    "Wernicke's area",
+    "Broca's area",
+    "Occipital lobe",
+    "Pons"
+   ],
+   "answer": 1,
+   "explanation": "Broca's area is linked to speech production; damage causes a non-fluent aphasia.",
+   "tags": [
+    "brain"
+   ]
+  },
+  {
    "id": "med-031",
    "subcategory": "history",
    "difficulty": 4,
@@ -527,23 +601,6 @@
    "explanation": "Jenner used cowpox, and vacca is Latin for cow.",
    "tags": [
     "jenner"
-   ]
-  },
-  {
-   "id": "med-032",
-   "subcategory": "history",
-   "difficulty": 1,
-   "question": "Which French scientist showed that many diseases are caused by germs and is remembered in the name of a milk process?",
-   "choices": [
-    "Pierre Curie",
-    "Louis Pasteur",
-    "Marie Curie",
-    "Claude Bernard"
-   ],
-   "answer": 1,
-   "explanation": "Pasteurisation uses gentle heat to kill harmful microbes.",
-   "tags": [
-    "pasteur"
    ]
   },
   {
@@ -564,23 +621,6 @@
    ]
   },
   {
-   "id": "med-034",
-   "subcategory": "history",
-   "difficulty": 1,
-   "question": "Washing hands with soap helps prevent what?",
-   "choices": [
-    "Sunburn",
-    "Broken bones",
-    "The spread of infections",
-    "High blood pressure"
-   ],
-   "answer": 2,
-   "explanation": "Clean hands remove germs that spread disease.",
-   "tags": [
-    "semmelweis"
-   ]
-  },
-  {
    "id": "med-035",
    "subcategory": "history",
    "difficulty": 4,
@@ -598,20 +638,37 @@
    ]
   },
   {
-   "id": "med-036",
-   "subcategory": "history",
-   "difficulty": 3,
-   "question": "The idea of keeping an operating theatre free of germs is called what?",
+   "id": "med-018",
+   "subcategory": "pharma",
+   "difficulty": 4,
+   "question": "Which kind of vaccine uses a molecule that carries instructions for cells to make a harmless piece of the germ?",
    "choices": [
-    "Dialysis",
-    "Anaesthesia",
-    "Triage",
-    "Aseptic technique"
+    "Inactivated vaccine",
+    "mRNA vaccine",
+    "Live attenuated vaccine",
+    "Toxoid vaccine"
    ],
-   "answer": 3,
-   "explanation": "Asepsis aims to keep germs out in the first place, going further than antiseptic treatment.",
+   "answer": 1,
+   "explanation": "mRNA vaccines deliver instructions so our own cells make an antigen, such as the coronavirus spike protein.",
    "tags": [
-    "lister"
+    "vaccines"
+   ]
+  },
+  {
+   "id": "med-025",
+   "subcategory": "tech",
+   "difficulty": 4,
+   "question": "A defibrillator is used to treat which emergency?",
+   "choices": [
+    "A burst appendix",
+    "A broken bone",
+    "A chaotic heart rhythm such as ventricular fibrillation",
+    "Low blood sugar"
+   ],
+   "answer": 2,
+   "explanation": "A controlled shock can reset the heart to a normal rhythm.",
+   "tags": [
+    "heartdevice"
    ]
   }
  ]

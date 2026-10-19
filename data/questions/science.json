@@ -3,743 +3,6 @@
  "review": "unreviewed",
  "questions": [
   {
-   "id": "sci-001",
-   "subcategory": "physics",
-   "difficulty": 1,
-   "question": "What is the approximate speed of light in a vacuum?",
-   "choices": [
-    "3,000 km/s",
-    "30,000 km/s",
-    "300,000 km/s",
-    "3,000,000 km/s"
-   ],
-   "answer": 2,
-   "explanation": "Light travels at about 299,792 km/s in a vacuum, usually rounded to 300,000 km/s."
-  },
-  {
-   "id": "sci-002",
-   "subcategory": "space",
-   "difficulty": 1,
-   "question": "Which planet is known as the Red Planet?",
-   "choices": [
-    "Venus",
-    "Mars",
-    "Jupiter",
-    "Mercury"
-   ],
-   "answer": 1,
-   "explanation": "Iron oxide (rust) on its surface gives Mars its reddish colour."
-  },
-  {
-   "id": "sci-003",
-   "subcategory": "chemistry",
-   "difficulty": 1,
-   "question": "At sea-level pressure, at what temperature does pure water boil?",
-   "choices": [
-    "90 °C",
-    "100 °C",
-    "110 °C",
-    "120 °C"
-   ],
-   "answer": 1,
-   "explanation": "Water boils at 100 °C (212 °F) at standard sea-level pressure."
-  },
-  {
-   "id": "sci-004",
-   "subcategory": "physics",
-   "difficulty": 1,
-   "question": "Which force keeps the planets in orbit around the Sun?",
-   "choices": [
-    "Magnetism",
-    "Friction",
-    "Gravity",
-    "Static electricity"
-   ],
-   "answer": 2,
-   "explanation": "The Sun's gravity continually pulls the planets toward it, bending their paths into orbits."
-  },
-  {
-   "id": "sci-005",
-   "subcategory": "chemistry",
-   "difficulty": 2,
-   "question": "Which gas makes up most of Earth's atmosphere?",
-   "choices": [
-    "Oxygen",
-    "Carbon dioxide",
-    "Argon",
-    "Nitrogen"
-   ],
-   "answer": 3,
-   "explanation": "Nitrogen is about 78% of the atmosphere; oxygen is about 21%."
-  },
-  {
-   "id": "sci-006",
-   "subcategory": "chemistry",
-   "difficulty": 2,
-   "question": "What is the pH of pure water at 25 °C?",
-   "choices": [
-    "1",
-    "5",
-    "7",
-    "14"
-   ],
-   "answer": 2,
-   "explanation": "Pure water is neutral, with a pH of 7."
-  },
-  {
-   "id": "sci-007",
-   "subcategory": "physics",
-   "difficulty": 1,
-   "question": "Which subatomic particle carries a negative electric charge?",
-   "choices": [
-    "Proton",
-    "Neutron",
-    "Electron",
-    "Photon"
-   ],
-   "answer": 2,
-   "explanation": "Electrons carry negative charge; protons are positive and neutrons are neutral."
-  },
-  {
-   "id": "sci-008",
-   "subcategory": "physics",
-   "difficulty": 2,
-   "question": "Who published the general theory of relativity?",
-   "choices": [
-    "Isaac Newton",
-    "Albert Einstein",
-    "Niels Bohr",
-    "Galileo Galilei"
-   ],
-   "answer": 1,
-   "explanation": "Einstein presented the general theory of relativity in 1915."
-  },
-  {
-   "id": "sci-009",
-   "subcategory": "physics",
-   "difficulty": 2,
-   "question": "What is the SI unit of force?",
-   "choices": [
-    "Joule",
-    "Watt",
-    "Pascal",
-    "Newton"
-   ],
-   "answer": 3,
-   "explanation": "The newton (N) is the force needed to accelerate 1 kg at 1 m/s²."
-  },
-  {
-   "id": "sci-010",
-   "subcategory": "space",
-   "difficulty": 3,
-   "question": "Which element is the most abundant in the universe?",
-   "choices": [
-    "Helium",
-    "Hydrogen",
-    "Oxygen",
-    "Carbon"
-   ],
-   "answer": 1,
-   "explanation": "Hydrogen makes up roughly three quarters of ordinary matter by mass, with helium most of the rest."
-  },
-  {
-   "id": "sci-011",
-   "subcategory": "space",
-   "difficulty": 3,
-   "question": "About how long does sunlight take to reach Earth?",
-   "choices": [
-    "Around 8 seconds",
-    "Around 8 minutes",
-    "Around 8 hours",
-    "Around 8 days"
-   ],
-   "answer": 1,
-   "explanation": "At about 150 million km, light from the Sun takes roughly 8 minutes and 20 seconds."
-  },
-  {
-   "id": "sci-012",
-   "subcategory": "space",
-   "difficulty": 1,
-   "question": "How many planets are in our solar system?",
-   "choices": [
-    "7",
-    "8",
-    "9",
-    "10"
-   ],
-   "answer": 1,
-   "explanation": "There are eight: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune. Pluto is classed as a dwarf planet."
-  },
-  {
-   "id": "sci-013",
-   "subcategory": "space",
-   "difficulty": 3,
-   "question": "What is the boundary around a black hole called, beyond which nothing can escape?",
-   "choices": [
-    "Photon ring",
-    "Singularity",
-    "Event horizon",
-    "Accretion disk"
-   ],
-   "answer": 2,
-   "explanation": "Past the event horizon the escape velocity exceeds the speed of light."
-  },
-  {
-   "id": "sci-014",
-   "subcategory": "space",
-   "difficulty": 3,
-   "question": "Which astronomer formulated three laws of planetary motion in the early 1600s?",
-   "choices": [
-    "Johannes Kepler",
-    "Tycho Brahe",
-    "Nicolaus Copernicus",
-    "Edmond Halley"
-   ],
-   "answer": 0,
-   "explanation": "Kepler's laws describe elliptical orbits, equal areas in equal times, and the period–distance relationship."
-  },
-  {
-   "id": "sci-015",
-   "subcategory": "physics",
-   "difficulty": 3,
-   "question": "Absolute zero is approximately what temperature in degrees Celsius?",
-   "choices": [
-    "−100 °C",
-    "−173.15 °C",
-    "−273.15 °C",
-    "−373.15 °C"
-   ],
-   "answer": 2,
-   "explanation": "Absolute zero is 0 kelvin, which equals −273.15 °C."
-  },
-  {
-   "id": "sci-016",
-   "subcategory": "physics",
-   "difficulty": 3,
-   "question": "Which particle did J. J. Thomson discover in 1897?",
-   "choices": [
-    "Proton",
-    "Neutron",
-    "Quark",
-    "Electron"
-   ],
-   "answer": 3,
-   "explanation": "Thomson's cathode-ray experiments revealed the electron, the first subatomic particle found."
-  },
-  {
-   "id": "sci-017",
-   "subcategory": "physics",
-   "difficulty": 1,
-   "question": "What kind of energy does a moving object have?",
-   "choices": [
-    "Potential energy",
-    "Kinetic energy",
-    "Nuclear energy",
-    "Thermal energy only"
-   ],
-   "answer": 1,
-   "explanation": "Kinetic energy is the energy of motion, equal to ½mv²."
-  },
-  {
-   "id": "sci-018",
-   "subcategory": "physics",
-   "difficulty": 2,
-   "question": "Which law states that every action has an equal and opposite reaction?",
-   "choices": [
-    "Newton's first law",
-    "Newton's second law",
-    "Newton's third law",
-    "Boyle's law"
-   ],
-   "answer": 2,
-   "explanation": "That is Newton's third law of motion."
-  },
-  {
-   "id": "sci-019",
-   "subcategory": "space",
-   "difficulty": 4,
-   "question": "The Chandrasekhar limit describes the maximum mass of what kind of object?",
-   "choices": [
-    "A neutron star",
-    "A stable white dwarf",
-    "A brown dwarf",
-    "A red giant"
-   ],
-   "answer": 1,
-   "explanation": "Above roughly 1.4 solar masses, a white dwarf can no longer support itself against gravity."
-  },
-  {
-   "id": "sci-020",
-   "subcategory": "chemistry",
-   "difficulty": 1,
-   "question": "What is the hardest naturally occurring substance?",
-   "choices": [
-    "Quartz",
-    "Steel",
-    "Diamond",
-    "Granite"
-   ],
-   "answer": 2,
-   "explanation": "Diamond ranks 10 on the Mohs scale of mineral hardness."
-  },
-  {
-   "id": "sci-021",
-   "subcategory": "physics",
-   "difficulty": 3,
-   "question": "Which phenomenon is mainly responsible for the blue colour of the daytime sky?",
-   "choices": [
-    "Rayleigh scattering",
-    "Total internal reflection",
-    "Refraction by clouds",
-    "Ozone absorption"
-   ],
-   "answer": 0,
-   "explanation": "Air molecules scatter short (blue) wavelengths of sunlight much more strongly than long ones."
-  },
-  {
-   "id": "sci-022",
-   "subcategory": "space",
-   "difficulty": 1,
-   "question": "What is the closest star to Earth?",
-   "choices": [
-    "Proxima Centauri",
-    "Sirius",
-    "The Sun",
-    "Polaris"
-   ],
-   "answer": 2,
-   "explanation": "The Sun is about 150 million km away; the next nearest, Proxima Centauri, is over 4 light-years away."
-  },
-  {
-   "id": "sci-023",
-   "subcategory": "physics",
-   "difficulty": 2,
-   "question": "What name is given to the change in a wave's observed frequency when its source moves relative to the observer?",
-   "choices": [
-    "Doppler effect",
-    "Photoelectric effect",
-    "Greenhouse effect",
-    "Coriolis effect"
-   ],
-   "answer": 0,
-   "explanation": "The Doppler effect explains why an approaching siren sounds higher-pitched than a receding one."
-  },
-  {
-   "id": "sci-024",
-   "subcategory": "chemistry",
-   "difficulty": 3,
-   "question": "What is a substance called that speeds up a chemical reaction without being used up?",
-   "choices": [
-    "Solvent",
-    "Catalyst",
-    "Reagent",
-    "Precipitate"
-   ],
-   "answer": 1,
-   "explanation": "A catalyst lowers the activation energy of a reaction and is regenerated afterwards."
-  },
-  {
-   "id": "sci-025",
-   "subcategory": "physics",
-   "difficulty": 3,
-   "question": "Which type of electromagnetic radiation has the shortest wavelength?",
-   "choices": [
-    "Radio waves",
-    "Ultraviolet",
-    "Infrared",
-    "Gamma rays"
-   ],
-   "answer": 3,
-   "explanation": "Gamma rays sit at the high-energy, short-wavelength end of the electromagnetic spectrum."
-  },
-  {
-   "id": "sci-026",
-   "subcategory": "physics",
-   "difficulty": 3,
-   "question": "What is the SI unit of electrical resistance?",
-   "choices": [
-    "Volt",
-    "Ampere",
-    "Ohm",
-    "Farad"
-   ],
-   "answer": 2,
-   "explanation": "The ohm (symbol Ω) is the unit of electrical resistance."
-  },
-  {
-   "id": "sci-027",
-   "subcategory": "chemistry",
-   "difficulty": 3,
-   "question": "What is the process called when a solid turns directly into a gas?",
-   "choices": [
-    "Evaporation",
-    "Sublimation",
-    "Condensation",
-    "Deposition"
-   ],
-   "answer": 1,
-   "explanation": "Dry ice turning to carbon dioxide gas is a classic example of sublimation."
-  },
-  {
-   "id": "sci-028",
-   "subcategory": "space",
-   "difficulty": 2,
-   "question": "Which planet has the shortest year, orbiting the Sun in about 88 Earth days?",
-   "choices": [
-    "Venus",
-    "Mars",
-    "Mercury",
-    "Earth"
-   ],
-   "answer": 2,
-   "explanation": "Mercury is closest to the Sun and moves fastest, completing an orbit in about 88 days."
-  },
-  {
-   "id": "sci-029",
-   "subcategory": "history-of-science",
-   "difficulty": 2,
-   "question": "Which scientist discovered penicillin in 1928?",
-   "choices": [
-    "Louis Pasteur",
-    "Alexander Fleming",
-    "Joseph Lister",
-    "Robert Koch"
-   ],
-   "answer": 1,
-   "explanation": "Alexander Fleming noticed that a mould, Penicillium, killed bacteria on a culture plate."
-  },
-  {
-   "id": "sci-030",
-   "subcategory": "space",
-   "difficulty": 2,
-   "question": "What is the Great Red Spot on Jupiter?",
-   "choices": [
-    "A volcano",
-    "A giant storm",
-    "An impact crater",
-    "A moon's shadow"
-   ],
-   "answer": 1,
-   "explanation": "It is an enormous long-lived storm, large enough to swallow Earth."
-  },
-  {
-   "id": "pho-001",
-   "subcategory": "phobia",
-   "difficulty": 1,
-   "question": "Arachnophobia is the fear of what?",
-   "choices": [
-    "Spiders",
-    "Snakes",
-    "Heights",
-    "Water"
-   ],
-   "answer": 0,
-   "explanation": "Arachnophobia is an intense fear of spiders and other arachnids."
-  },
-  {
-   "id": "pho-002",
-   "subcategory": "phobia",
-   "difficulty": 1,
-   "question": "Claustrophobia is the fear of what?",
-   "choices": [
-    "Open spaces",
-    "Confined spaces",
-    "Darkness",
-    "Crowds"
-   ],
-   "answer": 1,
-   "explanation": "Claustrophobia is the fear of enclosed or confined spaces, such as lifts or tunnels."
-  },
-  {
-   "id": "pho-003",
-   "subcategory": "phobia",
-   "difficulty": 2,
-   "question": "Acrophobia is the fear of what?",
-   "choices": [
-    "Needles",
-    "Water",
-    "Heights",
-    "Flying insects"
-   ],
-   "answer": 2,
-   "explanation": "Acrophobia is an extreme fear of heights."
-  },
-  {
-   "id": "pho-004",
-   "subcategory": "phobia",
-   "difficulty": 2,
-   "question": "Hydrophobia, as a phobia, is the fear of what?",
-   "choices": [
-    "Fire",
-    "Water",
-    "Cold",
-    "Rain only"
-   ],
-   "answer": 1,
-   "explanation": "The word means fear of water. Historically the term was also used for a symptom of rabies."
-  },
-  {
-   "id": "pho-005",
-   "subcategory": "phobia",
-   "difficulty": 3,
-   "question": "Ophidiophobia is the fear of what?",
-   "choices": [
-    "Birds",
-    "Dogs",
-    "Snakes",
-    "Lizards"
-   ],
-   "answer": 2,
-   "explanation": "Ophidiophobia is the fear of snakes, from the Greek 'ophis', meaning serpent."
-  },
-  {
-   "id": "pho-006",
-   "subcategory": "phobia",
-   "difficulty": 2,
-   "question": "What is the fear of clowns called?",
-   "choices": [
-    "Pediophobia",
-    "Claustrophobia",
-    "Coulrophobia",
-    "Catoptrophobia"
-   ],
-   "answer": 2,
-   "explanation": "Coulrophobia is the fear of clowns. Pediophobia is a fear of dolls."
-  },
-  {
-   "id": "pho-007",
-   "subcategory": "phobia",
-   "difficulty": 2,
-   "question": "Nyctophobia is the fear of what?",
-   "choices": [
-    "Night or darkness",
-    "Noise",
-    "Nudity",
-    "Needles"
-   ],
-   "answer": 0,
-   "explanation": "Nyctophobia is a persistent fear of night or darkness."
-  },
-  {
-   "id": "pho-008",
-   "subcategory": "phobia",
-   "difficulty": 3,
-   "question": "Glossophobia is the fear of what?",
-   "choices": [
-    "Mirrors",
-    "Public speaking",
-    "Glass",
-    "Singing in the shower"
-   ],
-   "answer": 1,
-   "explanation": "Glossophobia is the fear of speaking in public, one of the most common social fears."
-  },
-  {
-   "id": "pho-009",
-   "subcategory": "phobia",
-   "difficulty": 3,
-   "question": "Triskaidekaphobia is the fear of which number?",
-   "choices": [
-    "7",
-    "13",
-    "666",
-    "3"
-   ],
-   "answer": 1,
-   "explanation": "It is the fear of the number 13, which is why many buildings skip a 13th floor."
-  },
-  {
-   "id": "pho-010",
-   "subcategory": "phobia",
-   "difficulty": 3,
-   "question": "Cynophobia is the fear of what?",
-   "choices": [
-    "Cats",
-    "Dogs",
-    "Horses",
-    "Mice"
-   ],
-   "answer": 1,
-   "explanation": "Cynophobia is the fear of dogs, from the Greek 'kyon'. The fear of cats is ailurophobia."
-  },
-  {
-   "id": "pho-011",
-   "subcategory": "phobia",
-   "difficulty": 3,
-   "question": "Entomophobia is the fear of what?",
-   "choices": [
-    "Insects",
-    "Birds",
-    "Fish",
-    "Worms only"
-   ],
-   "answer": 0,
-   "explanation": "Entomophobia is the fear of insects in general."
-  },
-  {
-   "id": "pho-012",
-   "subcategory": "phobia",
-   "difficulty": 4,
-   "question": "Pogonophobia is the fear of what?",
-   "choices": [
-    "Hats",
-    "Beards",
-    "Pogo sticks",
-    "Pigeons"
-   ],
-   "answer": 1,
-   "explanation": "Pogonophobia is an irrational fear or strong dislike of beards."
-  },
-  {
-   "id": "pho-013",
-   "subcategory": "phobia",
-   "difficulty": 3,
-   "question": "Hemophobia is the fear of what?",
-   "choices": [
-    "Blood",
-    "Hospitals",
-    "Hair",
-    "Hamsters"
-   ],
-   "answer": 0,
-   "explanation": "Hemophobia is the fear of blood. It often overlaps with the fear of injury or needles."
-  },
-  {
-   "id": "pho-014",
-   "subcategory": "phobia",
-   "difficulty": 3,
-   "question": "Agoraphobia is best described as a fear of what?",
-   "choices": [
-    "Marketplaces",
-    "Situations where escape might be hard, such as open or crowded places",
-    "Heights",
-    "Small rooms"
-   ],
-   "answer": 1,
-   "explanation": "Agoraphobia is anxiety about places or situations where escape might be difficult. It is not only a fear of open spaces."
-  },
-  {
-   "id": "pho-015",
-   "subcategory": "phobia",
-   "difficulty": 3,
-   "question": "Ailurophobia is the fear of what?",
-   "choices": [
-    "Cats",
-    "Dogs",
-    "Spiders",
-    "Thunder"
-   ],
-   "answer": 0,
-   "explanation": "Ailurophobia is the fear of cats."
-  },
-  {
-   "id": "pho-016",
-   "subcategory": "phobia",
-   "difficulty": 3,
-   "question": "Mysophobia is the fear of what?",
-   "choices": [
-    "Mice",
-    "Mist",
-    "Germs and contamination",
-    "Mirrors"
-   ],
-   "answer": 2,
-   "explanation": "Mysophobia is an extreme fear of germs, dirt or contamination."
-  },
-  {
-   "id": "pho-017",
-   "subcategory": "phobia",
-   "difficulty": 4,
-   "question": "Ornithophobia is the fear of what?",
-   "choices": [
-    "Birds",
-    "Ornaments",
-    "Orchards",
-    "Operations"
-   ],
-   "answer": 0,
-   "explanation": "Ornithophobia is the fear of birds."
-  },
-  {
-   "id": "pho-018",
-   "subcategory": "phobia",
-   "difficulty": 3,
-   "question": "Trypophobia is an aversion to what?",
-   "choices": [
-    "Trips and travel",
-    "Clusters of small holes or bumps",
-    "Tripods",
-    "Triangular shapes"
-   ],
-   "answer": 1,
-   "explanation": "People with trypophobia feel discomfort looking at clustered holes, such as in a lotus seed pod. It is not an official diagnosis in the DSM-5."
-  },
-  {
-   "id": "pho-019",
-   "subcategory": "phobia",
-   "difficulty": 4,
-   "question": "The 17-syllable word 'hippopotomonstrosesquippedaliophobia' is a jocular name for the fear of what?",
-   "choices": [
-    "Hippos",
-    "Monsters",
-    "Long words",
-    "Horses"
-   ],
-   "answer": 2,
-   "explanation": "It is a humorous coinage: a very long word for the fear of long words."
-  },
-  {
-   "id": "sci-101",
-   "subcategory": "states",
-   "difficulty": 1,
-   "question": "Which of these is a solid at room temperature?",
-   "choices": [
-    "Iron",
-    "Steam",
-    "Oxygen",
-    "Mercury"
-   ],
-   "answer": 0,
-   "explanation": "Iron is a solid; mercury is a liquid and oxygen and steam are gases.",
-   "tags": [
-    "solids"
-   ]
-  },
-  {
-   "id": "sci-102",
-   "subcategory": "states",
-   "difficulty": 1,
-   "question": "What do we call water in its solid form?",
-   "choices": [
-    "Ice",
-    "Dew",
-    "Steam",
-    "Fog"
-   ],
-   "answer": 0,
-   "explanation": "Water freezes to ice at 0 degrees Celsius.",
-   "tags": [
-    "water"
-   ]
-  },
-  {
-   "id": "sci-103",
-   "subcategory": "states",
-   "difficulty": 1,
-   "question": "What happens when you stir sugar into hot water?",
-   "choices": [
-    "It becomes a gas",
-    "It turns into salt",
-    "It dissolves",
-    "It evaporates"
-   ],
-   "answer": 2,
-   "explanation": "The sugar spreads out as molecules among the water, forming a solution.",
-   "tags": [
-    "mixtures"
-   ]
-  },
-  {
    "id": "sci-104",
    "subcategory": "atoms",
    "difficulty": 1,
@@ -771,278 +34,6 @@
    "explanation": "Dmitri Mendeleev published an early version in 1869.",
    "tags": [
     "periodic"
-   ]
-  },
-  {
-   "id": "sci-106",
-   "subcategory": "atoms",
-   "difficulty": 2,
-   "question": "Atoms of the same element with different numbers of neutrons are called what?",
-   "choices": [
-    "Molecules",
-    "Isotopes",
-    "Compounds",
-    "Ions"
-   ],
-   "answer": 1,
-   "explanation": "Carbon-12 and carbon-14 are both carbon but have different neutron counts.",
-   "tags": [
-    "isotopes"
-   ]
-  },
-  {
-   "id": "sci-107",
-   "subcategory": "reactions",
-   "difficulty": 1,
-   "question": "What gas must be present for a fire to burn in air?",
-   "choices": [
-    "Oxygen",
-    "Helium",
-    "Nitrogen",
-    "Neon"
-   ],
-   "answer": 0,
-   "explanation": "Fire needs fuel, heat and oxygen.",
-   "tags": [
-    "burning"
-   ]
-  },
-  {
-   "id": "sci-108",
-   "subcategory": "reactions",
-   "difficulty": 1,
-   "question": "Lemon juice tastes sour because it is what?",
-   "choices": [
-    "An acid",
-    "Neutral",
-    "A metal",
-    "A base"
-   ],
-   "answer": 0,
-   "explanation": "Citric acid gives lemons their sourness.",
-   "tags": [
-    "acids"
-   ]
-  },
-  {
-   "id": "sci-109",
-   "subcategory": "reactions",
-   "difficulty": 1,
-   "question": "What is the orange-brown crust that forms on iron left in damp air?",
-   "choices": [
-    "Rust",
-    "Soot",
-    "Ash",
-    "Salt"
-   ],
-   "answer": 0,
-   "explanation": "Rust is iron oxide.",
-   "tags": [
-    "rust"
-   ]
-  },
-  {
-   "id": "sci-110",
-   "subcategory": "cells",
-   "difficulty": 1,
-   "question": "What is the basic unit of life?",
-   "choices": [
-    "The molecule",
-    "The cell",
-    "The atom",
-    "The organ"
-   ],
-   "answer": 1,
-   "explanation": "All living things are made of one or more cells.",
-   "tags": [
-    "cell"
-   ]
-  },
-  {
-   "id": "sci-111",
-   "subcategory": "cells",
-   "difficulty": 1,
-   "question": "Which instrument do we use to see very small things such as cells?",
-   "choices": [
-    "Periscope",
-    "Barometer",
-    "Telescope",
-    "Microscope"
-   ],
-   "answer": 3,
-   "explanation": "Microscopes magnify tiny objects.",
-   "tags": [
-    "microscope"
-   ]
-  },
-  {
-   "id": "sci-112",
-   "subcategory": "cells",
-   "difficulty": 1,
-   "question": "How do your cells make more cells when you grow or heal a cut?",
-   "choices": [
-    "They eat each other",
-    "They shrink",
-    "They divide",
-    "They freeze"
-   ],
-   "answer": 2,
-   "explanation": "A cell splits into two new cells.",
-   "tags": [
-    "division"
-   ]
-  },
-  {
-   "id": "sci-113",
-   "subcategory": "plants",
-   "difficulty": 1,
-   "question": "What do plants make using sunlight?",
-   "choices": [
-    "Metal",
-    "Their food (sugar)",
-    "Salt",
-    "Plastic"
-   ],
-   "answer": 1,
-   "explanation": "Photosynthesis makes sugar from light, water and carbon dioxide.",
-   "tags": [
-    "photosynthesis"
-   ]
-  },
-  {
-   "id": "sci-114",
-   "subcategory": "plants",
-   "difficulty": 1,
-   "question": "What do the roots of a plant do?",
-   "choices": [
-    "Make flowers",
-    "Take in water and anchor the plant",
-    "Catch sunlight",
-    "Release seeds"
-   ],
-   "answer": 1,
-   "explanation": "Roots absorb water and minerals and hold the plant in the ground.",
-   "tags": [
-    "roots"
-   ]
-  },
-  {
-   "id": "sci-115",
-   "subcategory": "plants",
-   "difficulty": 1,
-   "question": "Which part of a flowering plant becomes the fruit?",
-   "choices": [
-    "The ovary",
-    "The root",
-    "The stem",
-    "The petal"
-   ],
-   "answer": 0,
-   "explanation": "After fertilisation the ovary develops into the fruit around the seeds.",
-   "tags": [
-    "seeds"
-   ]
-  },
-  {
-   "id": "sci-116",
-   "subcategory": "evolution",
-   "difficulty": 1,
-   "question": "Which scientist is famous for the theory of evolution by natural selection?",
-   "choices": [
-    "Albert Einstein",
-    "Isaac Newton",
-    "Charles Darwin",
-    "Louis Pasteur"
-   ],
-   "answer": 2,
-   "explanation": "Darwin published On the Origin of Species in 1859.",
-   "tags": [
-    "darwin"
-   ]
-  },
-  {
-   "id": "sci-117",
-   "subcategory": "evolution",
-   "difficulty": 1,
-   "question": "What are the preserved remains of ancient living things called?",
-   "choices": [
-    "Minerals",
-    "Pebbles",
-    "Crystals",
-    "Fossils"
-   ],
-   "answer": 3,
-   "explanation": "Fossils are typically found in sedimentary rock.",
-   "tags": [
-    "fossils"
-   ]
-  },
-  {
-   "id": "sci-118",
-   "subcategory": "evolution",
-   "difficulty": 1,
-   "question": "In a food chain, what do we call organisms such as grass that make their own food?",
-   "choices": [
-    "Parasites",
-    "Producers",
-    "Decomposers",
-    "Predators"
-   ],
-   "answer": 1,
-   "explanation": "Producers capture energy from sunlight.",
-   "tags": [
-    "food"
-   ]
-  },
-  {
-   "id": "sci-119",
-   "subcategory": "senses",
-   "difficulty": 1,
-   "question": "Which organ lets us see?",
-   "choices": [
-    "The nose",
-    "The tongue",
-    "The eye",
-    "The ear"
-   ],
-   "answer": 2,
-   "explanation": "Light enters the eye and is sensed at the back.",
-   "tags": [
-    "eye"
-   ]
-  },
-  {
-   "id": "sci-120",
-   "subcategory": "senses",
-   "difficulty": 1,
-   "question": "Which part of the body do we use to hear?",
-   "choices": [
-    "The skin",
-    "The ear",
-    "The nose",
-    "The eye"
-   ],
-   "answer": 1,
-   "explanation": "Sound waves enter the ear canal and reach the eardrum.",
-   "tags": [
-    "ear"
-   ]
-  },
-  {
-   "id": "sci-121",
-   "subcategory": "senses",
-   "difficulty": 1,
-   "question": "Which sense do you use mostly to detect odours?",
-   "choices": [
-    "Sight",
-    "Smell",
-    "Touch",
-    "Hearing"
-   ],
-   "answer": 1,
-   "explanation": "Receptors in the nose detect airborne chemicals.",
-   "tags": [
-    "taste"
    ]
   },
   {
@@ -1097,309 +88,184 @@
    ]
   },
   {
-   "id": "sci-125",
-   "subcategory": "genes",
-   "difficulty": 2,
-   "question": "Whose X-ray images helped Watson and Crick work out the structure of DNA in 1953?",
+   "id": "sci-110",
+   "subcategory": "cells",
+   "difficulty": 1,
+   "question": "What is the basic unit of life?",
    "choices": [
-    "Ada Lovelace",
-    "Marie Curie",
-    "Rosalind Franklin",
-    "Barbara McClintock"
+    "The molecule",
+    "The cell",
+    "The atom",
+    "The organ"
+   ],
+   "answer": 1,
+   "explanation": "All living things are made of one or more cells.",
+   "tags": [
+    "cell"
+   ]
+  },
+  {
+   "id": "sci-111",
+   "subcategory": "cells",
+   "difficulty": 1,
+   "question": "Which instrument do we use to see very small things such as cells?",
+   "choices": [
+    "Periscope",
+    "Barometer",
+    "Telescope",
+    "Microscope"
+   ],
+   "answer": 3,
+   "explanation": "Microscopes magnify tiny objects.",
+   "tags": [
+    "microscope"
+   ]
+  },
+  {
+   "id": "sci-112",
+   "subcategory": "cells",
+   "difficulty": 1,
+   "question": "How do your cells make more cells when you grow or heal a cut?",
+   "choices": [
+    "They eat each other",
+    "They shrink",
+    "They divide",
+    "They freeze"
    ],
    "answer": 2,
-   "explanation": "Franklin's Photo 51 revealed the helical shape.",
+   "explanation": "A cell splits into two new cells.",
    "tags": [
-    "dna"
+    "division"
    ]
   },
   {
-   "id": "sci-126",
-   "subcategory": "genes",
-   "difficulty": 2,
-   "question": "Which monk discovered the basic laws of inheritance by breeding pea plants?",
+   "id": "sci-003",
+   "subcategory": "chemistry",
+   "difficulty": 1,
+   "question": "At sea-level pressure, at what temperature does pure water boil?",
    "choices": [
-    "Charles Darwin",
-    "Francis Crick",
-    "Thomas Morgan",
-    "Gregor Mendel"
-   ],
-   "answer": 3,
-   "explanation": "Mendel's experiments were in the 1850s and 1860s.",
-   "tags": [
-    "mendel"
-   ]
-  },
-  {
-   "id": "sci-127",
-   "subcategory": "genes",
-   "difficulty": 2,
-   "question": "How many chromosomes are in a typical human body cell?",
-   "choices": [
-    "12",
-    "46",
-    "92",
-    "23"
+    "90 °C",
+    "100 °C",
+    "110 °C",
+    "120 °C"
    ],
    "answer": 1,
-   "explanation": "We have 23 pairs: one set from each parent.",
-   "tags": [
-    "chromosomes"
-   ]
+   "explanation": "Water boils at 100 °C (212 °F) at standard sea-level pressure."
   },
   {
-   "id": "sci-128",
-   "subcategory": "motion",
+   "id": "sci-020",
+   "subcategory": "chemistry",
    "difficulty": 1,
-   "question": "What force pulls objects toward the Earth?",
+   "question": "What is the hardest naturally occurring substance?",
    "choices": [
-    "Static",
-    "Gravity",
-    "Friction",
-    "Magnetism"
-   ],
-   "answer": 1,
-   "explanation": "Gravity pulls masses toward each other.",
-   "tags": [
-    "gravity"
-   ]
-  },
-  {
-   "id": "sci-129",
-   "subcategory": "motion",
-   "difficulty": 1,
-   "question": "Who is famous for describing the laws of motion and gravity?",
-   "choices": [
-    "Isaac Newton",
-    "Marie Curie",
-    "Galileo Galilei",
-    "Nikola Tesla"
-   ],
-   "answer": 0,
-   "explanation": "Newton published the Principia in 1687.",
-   "tags": [
-    "newton"
-   ]
-  },
-  {
-   "id": "sci-130",
-   "subcategory": "motion",
-   "difficulty": 1,
-   "question": "If a car travels 100 km in 2 hours, what is its average speed?",
-   "choices": [
-    "50 km/h",
-    "200 km/h",
-    "100 km/h",
-    "25 km/h"
-   ],
-   "answer": 0,
-   "explanation": "Speed equals distance divided by time.",
-   "tags": [
-    "speed"
-   ]
-  },
-  {
-   "id": "sci-131",
-   "subcategory": "energy",
-   "difficulty": 1,
-   "question": "A moving object has which kind of energy?",
-   "choices": [
-    "Nuclear energy",
-    "Kinetic energy",
-    "Chemical energy only",
-    "Sound energy"
-   ],
-   "answer": 1,
-   "explanation": "Kinetic energy depends on mass and speed.",
-   "tags": [
-    "forms"
-   ]
-  },
-  {
-   "id": "sci-132",
-   "subcategory": "energy",
-   "difficulty": 1,
-   "question": "Which of these is a good conductor of heat?",
-   "choices": [
-    "Wool",
-    "Copper",
-    "Plastic",
-    "Wood"
-   ],
-   "answer": 1,
-   "explanation": "Metals conduct heat well.",
-   "tags": [
-    "heat"
-   ]
-  },
-  {
-   "id": "sci-133",
-   "subcategory": "energy",
-   "difficulty": 1,
-   "question": "Which of these is a renewable source of energy?",
-   "choices": [
-    "Natural gas",
-    "Oil",
-    "Coal",
-    "Wind"
-   ],
-   "answer": 3,
-   "explanation": "Wind and sunlight are replenished naturally.",
-   "tags": [
-    "renewable"
-   ]
-  },
-  {
-   "id": "sci-134",
-   "subcategory": "machines",
-   "difficulty": 1,
-   "question": "Which simple machine is a seesaw?",
-   "choices": [
-    "A pulley",
-    "A screw",
-    "A wedge",
-    "A lever"
-   ],
-   "answer": 3,
-   "explanation": "A seesaw balances around a pivot.",
-   "tags": [
-    "lever"
-   ]
-  },
-  {
-   "id": "sci-135",
-   "subcategory": "machines",
-   "difficulty": 1,
-   "question": "Why is a sharp knife better at cutting than a blunt one?",
-   "choices": [
-    "It weighs less",
-    "It is magnetic",
-    "It is colder",
-    "Force is concentrated on a smaller area"
-   ],
-   "answer": 3,
-   "explanation": "Pressure equals force divided by area.",
-   "tags": [
-    "pressure"
-   ]
-  },
-  {
-   "id": "sci-136",
-   "subcategory": "machines",
-   "difficulty": 1,
-   "question": "What must be burned for a petrol car engine to run?",
-   "choices": [
-    "Stone",
-    "Sand",
-    "Water",
-    "Fuel"
-   ],
-   "answer": 3,
-   "explanation": "Fuel burns and the expanding gases push the pistons.",
-   "tags": [
-    "engines"
-   ]
-  },
-  {
-   "id": "sci-137",
-   "subcategory": "solar",
-   "difficulty": 1,
-   "question": "Which planet orbits nearest to the Sun?",
-   "choices": [
-    "Venus",
-    "Earth",
-    "Mercury",
-    "Mars"
+    "Quartz",
+    "Steel",
+    "Diamond",
+    "Granite"
    ],
    "answer": 2,
-   "explanation": "Mercury orbits the Sun in just 88 days.",
-   "tags": [
-    "planets"
-   ]
+   "explanation": "Diamond ranks 10 on the Mohs scale of mineral hardness."
   },
   {
-   "id": "sci-138",
-   "subcategory": "solar",
+   "id": "sci-170",
+   "subcategory": "climate",
    "difficulty": 1,
-   "question": "What does the Moon orbit?",
+   "question": "Earth's air is made up mostly of which gas?",
    "choices": [
-    "The Earth",
-    "Jupiter",
-    "Mars",
-    "The Sun"
+    "Argon",
+    "Nitrogen",
+    "Oxygen",
+    "Carbon dioxide"
    ],
-   "answer": 0,
-   "explanation": "The Moon orbits Earth about once every 27 days.",
+   "answer": 1,
+   "explanation": "Nitrogen is about 78 percent, oxygen about 21.",
    "tags": [
-    "moon"
+    "atmosphere"
    ]
   },
   {
-   "id": "sci-139",
-   "subcategory": "solar",
+   "id": "sci-171",
+   "subcategory": "climate",
    "difficulty": 1,
-   "question": "What causes day and night on Earth?",
+   "question": "What is the greenhouse effect?",
    "choices": [
-    "Earth's rotation",
-    "The Sun's orbit",
-    "Clouds",
-    "The Moon's shadow"
+    "Clouds make wind",
+    "Gases in the air trap some of the Sun's heat",
+    "The sea cools the air",
+    "Plants warm the air"
    ],
-   "answer": 0,
-   "explanation": "Earth turns once about every 24 hours.",
+   "answer": 1,
+   "explanation": "Without it Earth would be far colder.",
    "tags": [
-    "earth"
+    "greenhouse"
    ]
   },
   {
-   "id": "sci-140",
-   "subcategory": "stars",
+   "id": "sci-172",
+   "subcategory": "climate",
    "difficulty": 1,
-   "question": "What is the Sun?",
+   "question": "What are clouds made of?",
    "choices": [
-    "A comet",
-    "A planet",
-    "A moon",
-    "A star"
+    "Dust only",
+    "Smoke",
+    "Steam from the Sun",
+    "Tiny water droplets or ice crystals"
    ],
    "answer": 3,
-   "explanation": "The Sun is an average star.",
+   "explanation": "Water vapour condenses on particles in the air.",
    "tags": [
-    "sun"
+    "weather"
    ]
   },
   {
-   "id": "sci-141",
-   "subcategory": "stars",
+   "id": "sci-173",
+   "subcategory": "computing",
    "difficulty": 1,
-   "question": "What is faster: sound or light?",
+   "question": "What are the two digits used in binary code?",
    "choices": [
-    "Depends on the day",
-    "They are equal",
-    "Light",
-    "Sound"
-   ],
-   "answer": 2,
-   "explanation": "Light travels almost a million times faster than sound in air.",
-   "tags": [
-    "light"
-   ]
-  },
-  {
-   "id": "sci-142",
-   "subcategory": "stars",
-   "difficulty": 1,
-   "question": "Where are new stars born?",
-   "choices": [
-    "In clouds of gas and dust",
-    "On planets",
-    "In black holes",
-    "Inside comets"
+    "0 and 1",
+    "0 and 9",
+    "1 and 2",
+    "A and B"
    ],
    "answer": 0,
-   "explanation": "Gravity pulls clouds of gas called nebulae together.",
+   "explanation": "Computers store data as bits.",
    "tags": [
-    "lifecycle"
+    "computer"
+   ]
+  },
+  {
+   "id": "sci-174",
+   "subcategory": "computing",
+   "difficulty": 1,
+   "question": "Who invented the World Wide Web in 1989 while working at CERN?",
+   "choices": [
+    "Tim Berners-Lee",
+    "Bill Gates",
+    "Alan Turing",
+    "Steve Jobs"
+   ],
+   "answer": 0,
+   "explanation": "Berners-Lee proposed the web in 1989 and built the first website in 1990 to 1991.",
+   "tags": [
+    "internet"
+   ]
+  },
+  {
+   "id": "sci-175",
+   "subcategory": "computing",
+   "difficulty": 1,
+   "question": "What does AI stand for?",
+   "choices": [
+    "Artificial intelligence",
+    "Automatic input",
+    "Advanced internet",
+    "Analog interface"
+   ],
+   "answer": 0,
+   "explanation": "AI means machines doing tasks that normally require human intelligence.",
+   "tags": [
+    "ai"
    ]
   },
   {
@@ -1505,156 +371,105 @@
    ]
   },
   {
-   "id": "sci-149",
-   "subcategory": "waves",
+   "id": "sci-131",
+   "subcategory": "energy",
    "difficulty": 1,
-   "question": "What do sound waves need to travel?",
+   "question": "A moving object has which kind of energy?",
    "choices": [
-    "Gravity",
-    "A vacuum",
-    "A medium such as air",
-    "Light"
+    "Nuclear energy",
+    "Kinetic energy",
+    "Chemical energy only",
+    "Sound energy"
    ],
-   "answer": 2,
-   "explanation": "Sound cannot travel in empty space.",
+   "answer": 1,
+   "explanation": "Kinetic energy depends on mass and speed.",
    "tags": [
-    "sound"
+    "forms"
    ]
   },
   {
-   "id": "sci-150",
-   "subcategory": "waves",
+   "id": "sci-132",
+   "subcategory": "energy",
    "difficulty": 1,
-   "question": "What colours does a rainbow show?",
+   "question": "Which of these is a good conductor of heat?",
    "choices": [
-    "The visible spectrum",
-    "Only red",
-    "Only white",
-    "Black and white"
+    "Wool",
+    "Copper",
+    "Plastic",
+    "Wood"
    ],
-   "answer": 0,
-   "explanation": "Water droplets split sunlight into its colours.",
+   "answer": 1,
+   "explanation": "Metals conduct heat well.",
    "tags": [
-    "light"
+    "heat"
    ]
   },
   {
-   "id": "sci-151",
-   "subcategory": "waves",
+   "id": "sci-133",
+   "subcategory": "energy",
    "difficulty": 1,
-   "question": "Which type of wave carries your radio station?",
+   "question": "Which of these is a renewable source of energy?",
    "choices": [
-    "Gamma rays",
-    "Sound waves only",
-    "X-rays",
-    "Radio waves"
+    "Natural gas",
+    "Oil",
+    "Coal",
+    "Wind"
    ],
    "answer": 3,
-   "explanation": "Radio waves are electromagnetic waves.",
+   "explanation": "Wind and sunlight are replenished naturally.",
    "tags": [
-    "em"
+    "renewable"
    ]
   },
   {
-   "id": "sci-152",
-   "subcategory": "nuclear",
+   "id": "sci-116",
+   "subcategory": "evolution",
    "difficulty": 1,
-   "question": "Who discovered the radioactive elements polonium and radium and won two Nobel Prizes?",
+   "question": "Which scientist is famous for the theory of evolution by natural selection?",
    "choices": [
-    "Rosalind Franklin",
-    "Ada Lovelace",
-    "Marie Curie",
-    "Lise Meitner"
+    "Albert Einstein",
+    "Isaac Newton",
+    "Charles Darwin",
+    "Louis Pasteur"
    ],
    "answer": 2,
-   "explanation": "She won in Physics in 1903 and Chemistry in 1911.",
+   "explanation": "Darwin published On the Origin of Species in 1859.",
    "tags": [
-    "radioactive"
+    "darwin"
    ]
   },
   {
-   "id": "sci-153",
-   "subcategory": "nuclear",
+   "id": "sci-117",
+   "subcategory": "evolution",
    "difficulty": 1,
-   "question": "Which element is the main fuel in most nuclear power stations?",
+   "question": "What are the preserved remains of ancient living things called?",
    "choices": [
-    "Helium",
-    "Iron",
-    "Uranium",
-    "Gold"
+    "Minerals",
+    "Pebbles",
+    "Crystals",
+    "Fossils"
    ],
-   "answer": 2,
-   "explanation": "Uranium-235 undergoes fission.",
+   "answer": 3,
+   "explanation": "Fossils are typically found in sedimentary rock.",
    "tags": [
-    "fission"
+    "fossils"
    ]
   },
   {
-   "id": "sci-154",
-   "subcategory": "nuclear",
+   "id": "sci-118",
+   "subcategory": "evolution",
    "difficulty": 1,
-   "question": "What kind of nuclear reaction powers the stars?",
+   "question": "In a food chain, what do we call organisms such as grass that make their own food?",
    "choices": [
-    "Fusion",
-    "Combustion",
-    "Fission",
-    "Decay"
+    "Parasites",
+    "Producers",
+    "Decomposers",
+    "Predators"
    ],
-   "answer": 0,
-   "explanation": "Nuclei join and release energy.",
+   "answer": 1,
+   "explanation": "Producers capture energy from sunlight.",
    "tags": [
-    "fusion"
-   ]
-  },
-  {
-   "id": "sci-155",
-   "subcategory": "illusions",
-   "difficulty": 1,
-   "question": "What do we call a picture that tricks the brain into seeing something that is not really there?",
-   "choices": [
-    "A mirage",
-    "A reflection",
-    "An optical illusion",
-    "A hologram"
-   ],
-   "answer": 2,
-   "explanation": "Illusions show that perception is built by the brain, not just received.",
-   "tags": [
-    "illusion"
-   ]
-  },
-  {
-   "id": "sci-156",
-   "subcategory": "illusions",
-   "difficulty": 1,
-   "question": "Which part of memory holds a phone number for a few seconds?",
-   "choices": [
-    "Long-term memory only",
-    "Muscle memory",
-    "Short-term (working) memory",
-    "Genetic memory"
-   ],
-   "answer": 2,
-   "explanation": "Working memory holds about seven items briefly.",
-   "tags": [
-    "memory"
-   ]
-  },
-  {
-   "id": "sci-157",
-   "subcategory": "illusions",
-   "difficulty": 1,
-   "question": "In a medical trial, what is a placebo?",
-   "choices": [
-    "A vaccine",
-    "A strong poison",
-    "A treatment with no active ingredient",
-    "A new surgery"
-   ],
-   "answer": 2,
-   "explanation": "Placebos help separate real effects from expectation.",
-   "tags": [
-    "placebo"
+    "food"
    ]
   },
   {
@@ -1709,258 +524,156 @@
    ]
   },
   {
-   "id": "sci-161",
-   "subcategory": "method",
+   "id": "sci-179",
+   "subcategory": "flight",
    "difficulty": 1,
-   "question": "What is a hypothesis?",
+   "question": "Which brothers made the first powered aeroplane flight in 1903?",
    "choices": [
-    "A random guess",
-    "A proven fact",
-    "A testable idea or explanation",
-    "A law"
+    "The Wright brothers",
+    "The Lumiere brothers",
+    "The Montgolfier brothers",
+    "The Grimm brothers"
+   ],
+   "answer": 0,
+   "explanation": "Orville and Wilbur flew at Kitty Hawk.",
+   "tags": [
+    "aircraft"
+   ]
+  },
+  {
+   "id": "sci-180",
+   "subcategory": "flight",
+   "difficulty": 1,
+   "question": "Which was the first artificial satellite launched into orbit, in 1957?",
+   "choices": [
+    "Apollo 11",
+    "Vostok 1",
+    "Sputnik 1",
+    "Explorer 1"
    ],
    "answer": 2,
-   "explanation": "Scientists test hypotheses with experiments.",
+   "explanation": "The Soviet Union launched it on 4 October 1957.",
    "tags": [
-    "method"
+    "rocket"
    ]
   },
   {
-   "id": "sci-162",
-   "subcategory": "method",
+   "id": "sci-181",
+   "subcategory": "flight",
    "difficulty": 1,
-   "question": "Which unit measures length in the metric system?",
+   "question": "Which NASA rover landed in Gale Crater on Mars in 2012?",
    "choices": [
-    "Metre",
-    "Litre",
-    "Gram",
-    "Second"
+    "Curiosity",
+    "Spirit",
+    "Sojourner",
+    "Opportunity"
    ],
    "answer": 0,
-   "explanation": "The metre is the SI unit of length.",
+   "explanation": "Curiosity landed in Gale Crater in August 2012.",
    "tags": [
-    "measure"
+    "probe"
    ]
   },
   {
-   "id": "sci-163",
-   "subcategory": "method",
+   "id": "sci-155",
+   "subcategory": "illusions",
    "difficulty": 1,
-   "question": "Who developed the theory of relativity?",
+   "question": "What do we call a picture that tricks the brain into seeing something that is not really there?",
    "choices": [
-    "Isaac Newton",
-    "Albert Einstein",
-    "Stephen Hawking",
-    "Marie Curie"
-   ],
-   "answer": 1,
-   "explanation": "Einstein published special relativity in 1905 and general relativity in 1915.",
-   "tags": [
-    "scientists"
-   ]
-  },
-  {
-   "id": "sci-164",
-   "subcategory": "rocks",
-   "difficulty": 1,
-   "question": "Which type of rock forms from cooled lava?",
-   "choices": [
-    "Sedimentary rock",
-    "Fossil rock",
-    "Igneous rock",
-    "Metamorphic rock"
+    "A mirage",
+    "A reflection",
+    "An optical illusion",
+    "A hologram"
    ],
    "answer": 2,
-   "explanation": "Igneous rocks form from molten rock.",
+   "explanation": "Illusions show that perception is built by the brain, not just received.",
    "tags": [
-    "rocks"
+    "illusion"
    ]
   },
   {
-   "id": "sci-165",
-   "subcategory": "rocks",
+   "id": "sci-156",
+   "subcategory": "illusions",
    "difficulty": 1,
-   "question": "What are the large slabs of the Earth's crust called?",
+   "question": "Which part of memory holds a phone number for a few seconds?",
    "choices": [
-    "Dunes",
-    "Tectonic plates",
-    "Layers",
-    "Tiles"
-   ],
-   "answer": 1,
-   "explanation": "They move a few centimetres per year.",
-   "tags": [
-    "plates"
-   ]
-  },
-  {
-   "id": "sci-166",
-   "subcategory": "rocks",
-   "difficulty": 1,
-   "question": "What is the hot, dense centre of the Earth called?",
-   "choices": [
-    "The skin",
-    "The crust",
-    "The shell",
-    "The core"
-   ],
-   "answer": 3,
-   "explanation": "The core is mostly iron and nickel.",
-   "tags": [
-    "layers"
-   ]
-  },
-  {
-   "id": "sci-167",
-   "subcategory": "oceans",
-   "difficulty": 1,
-   "question": "Which ocean is the biggest on Earth by area?",
-   "choices": [
-    "Atlantic",
-    "Arctic",
-    "Pacific",
-    "Indian"
+    "Long-term memory only",
+    "Muscle memory",
+    "Short-term (working) memory",
+    "Genetic memory"
    ],
    "answer": 2,
-   "explanation": "The Pacific covers about a third of the planet.",
+   "explanation": "Working memory holds about seven items briefly.",
    "tags": [
-    "ocean"
+    "memory"
    ]
   },
   {
-   "id": "sci-168",
-   "subcategory": "oceans",
+   "id": "sci-157",
+   "subcategory": "illusions",
    "difficulty": 1,
-   "question": "What is a powerful river-like flow of seawater called?",
+   "question": "In a medical trial, what is a placebo?",
    "choices": [
-    "A tide",
-    "A swell",
-    "A rapid",
-    "A current"
+    "A vaccine",
+    "A strong poison",
+    "A treatment with no active ingredient",
+    "A new surgery"
+   ],
+   "answer": 2,
+   "explanation": "Placebos help separate real effects from expectation.",
+   "tags": [
+    "placebo"
+   ]
+  },
+  {
+   "id": "sci-134",
+   "subcategory": "machines",
+   "difficulty": 1,
+   "question": "Which simple machine is a seesaw?",
+   "choices": [
+    "A pulley",
+    "A screw",
+    "A wedge",
+    "A lever"
    ],
    "answer": 3,
-   "explanation": "The Gulf Stream is a famous example.",
+   "explanation": "A seesaw balances around a pivot.",
    "tags": [
-    "currents"
+    "lever"
    ]
   },
   {
-   "id": "sci-169",
-   "subcategory": "oceans",
+   "id": "sci-135",
+   "subcategory": "machines",
    "difficulty": 1,
-   "question": "Coral reefs are built by tiny animals called what?",
+   "question": "Why is a sharp knife better at cutting than a blunt one?",
    "choices": [
-    "Anemones",
-    "Coral polyps",
-    "Sponges",
-    "Starfish"
-   ],
-   "answer": 1,
-   "explanation": "Polyps secrete hard calcium carbonate skeletons.",
-   "tags": [
-    "reef"
-   ]
-  },
-  {
-   "id": "sci-170",
-   "subcategory": "climate",
-   "difficulty": 1,
-   "question": "Earth's air is made up mostly of which gas?",
-   "choices": [
-    "Argon",
-    "Nitrogen",
-    "Oxygen",
-    "Carbon dioxide"
-   ],
-   "answer": 1,
-   "explanation": "Nitrogen is about 78 percent, oxygen about 21.",
-   "tags": [
-    "atmosphere"
-   ]
-  },
-  {
-   "id": "sci-171",
-   "subcategory": "climate",
-   "difficulty": 1,
-   "question": "What is the greenhouse effect?",
-   "choices": [
-    "Clouds make wind",
-    "Gases in the air trap some of the Sun's heat",
-    "The sea cools the air",
-    "Plants warm the air"
-   ],
-   "answer": 1,
-   "explanation": "Without it Earth would be far colder.",
-   "tags": [
-    "greenhouse"
-   ]
-  },
-  {
-   "id": "sci-172",
-   "subcategory": "climate",
-   "difficulty": 1,
-   "question": "What are clouds made of?",
-   "choices": [
-    "Dust only",
-    "Smoke",
-    "Steam from the Sun",
-    "Tiny water droplets or ice crystals"
+    "It weighs less",
+    "It is magnetic",
+    "It is colder",
+    "Force is concentrated on a smaller area"
    ],
    "answer": 3,
-   "explanation": "Water vapour condenses on particles in the air.",
+   "explanation": "Pressure equals force divided by area.",
    "tags": [
-    "weather"
+    "pressure"
    ]
   },
   {
-   "id": "sci-173",
-   "subcategory": "computing",
+   "id": "sci-136",
+   "subcategory": "machines",
    "difficulty": 1,
-   "question": "What are the two digits used in binary code?",
+   "question": "What must be burned for a petrol car engine to run?",
    "choices": [
-    "0 and 1",
-    "0 and 9",
-    "1 and 2",
-    "A and B"
+    "Stone",
+    "Sand",
+    "Water",
+    "Fuel"
    ],
-   "answer": 0,
-   "explanation": "Computers store data as bits.",
+   "answer": 3,
+   "explanation": "Fuel burns and the expanding gases push the pistons.",
    "tags": [
-    "computer"
-   ]
-  },
-  {
-   "id": "sci-174",
-   "subcategory": "computing",
-   "difficulty": 1,
-   "question": "Who invented the World Wide Web in 1989 while working at CERN?",
-   "choices": [
-    "Tim Berners-Lee",
-    "Bill Gates",
-    "Alan Turing",
-    "Steve Jobs"
-   ],
-   "answer": 0,
-   "explanation": "Berners-Lee proposed the web in 1989 and built the first website in 1990 to 1991.",
-   "tags": [
-    "internet"
-   ]
-  },
-  {
-   "id": "sci-175",
-   "subcategory": "computing",
-   "difficulty": 1,
-   "question": "What does AI stand for?",
-   "choices": [
-    "Artificial intelligence",
-    "Automatic input",
-    "Advanced internet",
-    "Analog interface"
-   ],
-   "answer": 0,
-   "explanation": "AI means machines doing tasks that normally require human intelligence.",
-   "tags": [
-    "ai"
+    "engines"
    ]
   },
   {
@@ -2015,54 +728,1426 @@
    ]
   },
   {
-   "id": "sci-179",
-   "subcategory": "flight",
+   "id": "mth-001",
+   "subcategory": "maths",
    "difficulty": 1,
-   "question": "Which brothers made the first powered aeroplane flight in 1903?",
+   "question": "What is 2 + 3 × 4?",
    "choices": [
-    "The Wright brothers",
-    "The Lumiere brothers",
-    "The Montgolfier brothers",
-    "The Grimm brothers"
+    "20",
+    "24",
+    "9",
+    "14"
    ],
-   "answer": 0,
-   "explanation": "Orville and Wilbur flew at Kitty Hawk.",
+   "answer": 3,
+   "explanation": "Multiplication is done before addition: 3 × 4 = 12, then 2 + 12 = 14.",
    "tags": [
-    "aircraft"
+    "maths"
    ]
   },
   {
-   "id": "sci-180",
-   "subcategory": "flight",
+   "id": "mth-002",
+   "subcategory": "maths",
    "difficulty": 1,
-   "question": "Which was the first artificial satellite launched into orbit, in 1957?",
+   "question": "Rounded to the nearest ten, what is 347?",
    "choices": [
-    "Apollo 11",
-    "Vostok 1",
-    "Sputnik 1",
-    "Explorer 1"
+    "340",
+    "360",
+    "300",
+    "350"
+   ],
+   "answer": 3,
+   "explanation": "The units digit 7 is 5 or more, so 347 rounds up to 350.",
+   "tags": [
+    "maths"
+   ]
+  },
+  {
+   "id": "mth-005",
+   "subcategory": "maths",
+   "difficulty": 1,
+   "question": "How many degrees do the interior angles of a triangle add up to?",
+   "choices": [
+    "360",
+    "90",
+    "180",
+    "270"
    ],
    "answer": 2,
-   "explanation": "The Soviet Union launched it on 4 October 1957.",
+   "explanation": "The three interior angles of any flat triangle sum to 180 degrees.",
    "tags": [
-    "rocket"
+    "maths"
    ]
   },
   {
-   "id": "sci-181",
-   "subcategory": "flight",
+   "id": "mth-007",
+   "subcategory": "maths",
    "difficulty": 1,
-   "question": "Which NASA rover landed in Gale Crater on Mars in 2012?",
+   "question": "The diameter of a circle is how many times its radius?",
    "choices": [
-    "Curiosity",
-    "Spirit",
-    "Sojourner",
-    "Opportunity"
+    "4",
+    "2",
+    "1/2",
+    "π"
+   ],
+   "answer": 1,
+   "explanation": "The diameter passes through the centre and is twice the radius.",
+   "tags": [
+    "maths"
+   ]
+  },
+  {
+   "id": "mth-008",
+   "subcategory": "maths",
+   "difficulty": 1,
+   "question": "If x + 7 = 12, what is x?",
+   "choices": [
+    "5",
+    "4",
+    "19",
+    "7"
    ],
    "answer": 0,
-   "explanation": "Curiosity landed in Gale Crater in August 2012.",
+   "explanation": "Subtract 7 from both sides: x = 12 − 7 = 5.",
    "tags": [
-    "probe"
+    "maths"
+   ]
+  },
+  {
+   "id": "mth-010",
+   "subcategory": "maths",
+   "difficulty": 1,
+   "question": "What is 2⁵?",
+   "choices": [
+    "10",
+    "16",
+    "25",
+    "32"
+   ],
+   "answer": 3,
+   "explanation": "2 × 2 × 2 × 2 × 2 = 32.",
+   "tags": [
+    "maths"
+   ]
+  },
+  {
+   "id": "mth-013",
+   "subcategory": "maths",
+   "difficulty": 1,
+   "question": "What is the mean of 2, 4 and 9?",
+   "choices": [
+    "6",
+    "15",
+    "5",
+    "4"
+   ],
+   "answer": 2,
+   "explanation": "The sum is 15 and there are three numbers, so the mean is 15 ÷ 3 = 5.",
+   "tags": [
+    "maths"
+   ]
+  },
+  {
+   "id": "mth-015",
+   "subcategory": "maths",
+   "difficulty": 1,
+   "question": "Which of these is a prime number?",
+   "choices": [
+    "13",
+    "21",
+    "27",
+    "15"
+   ],
+   "answer": 0,
+   "explanation": "13 has no divisors except 1 and itself. 15, 21 and 27 are all multiples of 3.",
+   "tags": [
+    "maths"
+   ]
+  },
+  {
+   "id": "mth-021",
+   "subcategory": "maths",
+   "difficulty": 1,
+   "question": "What is the name of the theorem a² + b² = c² for right-angled triangles?",
+   "choices": [
+    "The Pythagorean theorem",
+    "Euler's theorem",
+    "Fermat's theorem",
+    "Thales' theorem"
+   ],
+   "answer": 0,
+   "explanation": "The Pythagorean theorem links the two shorter sides a and b to the hypotenuse c.",
+   "tags": [
+    "people"
+   ]
+  },
+  {
+   "id": "mth-024",
+   "subcategory": "maths",
+   "difficulty": 1,
+   "question": "How many metres are in a kilometre?",
+   "choices": [
+    "10,000",
+    "100",
+    "10",
+    "1,000"
+   ],
+   "answer": 3,
+   "explanation": "Kilo means one thousand.",
+   "tags": [
+    "units"
+   ]
+  },
+  {
+   "id": "mth-028",
+   "subcategory": "maths",
+   "difficulty": 1,
+   "question": "What comes next in the sequence 2, 4, 8, 16, …?",
+   "choices": [
+    "20",
+    "24",
+    "30",
+    "32"
+   ],
+   "answer": 3,
+   "explanation": "Each term is double the one before, so the next is 32.",
+   "tags": [
+    "sequences"
+   ]
+  },
+  {
+   "id": "sci-161",
+   "subcategory": "method",
+   "difficulty": 1,
+   "question": "What is a hypothesis?",
+   "choices": [
+    "A random guess",
+    "A proven fact",
+    "A testable idea or explanation",
+    "A law"
+   ],
+   "answer": 2,
+   "explanation": "Scientists test hypotheses with experiments.",
+   "tags": [
+    "method"
+   ]
+  },
+  {
+   "id": "sci-162",
+   "subcategory": "method",
+   "difficulty": 1,
+   "question": "Which unit measures length in the metric system?",
+   "choices": [
+    "Metre",
+    "Litre",
+    "Gram",
+    "Second"
+   ],
+   "answer": 0,
+   "explanation": "The metre is the SI unit of length.",
+   "tags": [
+    "measure"
+   ]
+  },
+  {
+   "id": "sci-163",
+   "subcategory": "method",
+   "difficulty": 1,
+   "question": "Who developed the theory of relativity?",
+   "choices": [
+    "Isaac Newton",
+    "Albert Einstein",
+    "Stephen Hawking",
+    "Marie Curie"
+   ],
+   "answer": 1,
+   "explanation": "Einstein published special relativity in 1905 and general relativity in 1915.",
+   "tags": [
+    "scientists"
+   ]
+  },
+  {
+   "id": "sci-128",
+   "subcategory": "motion",
+   "difficulty": 1,
+   "question": "What force pulls objects toward the Earth?",
+   "choices": [
+    "Static",
+    "Gravity",
+    "Friction",
+    "Magnetism"
+   ],
+   "answer": 1,
+   "explanation": "Gravity pulls masses toward each other.",
+   "tags": [
+    "gravity"
+   ]
+  },
+  {
+   "id": "sci-129",
+   "subcategory": "motion",
+   "difficulty": 1,
+   "question": "Who is famous for describing the laws of motion and gravity?",
+   "choices": [
+    "Isaac Newton",
+    "Marie Curie",
+    "Galileo Galilei",
+    "Nikola Tesla"
+   ],
+   "answer": 0,
+   "explanation": "Newton published the Principia in 1687.",
+   "tags": [
+    "newton"
+   ]
+  },
+  {
+   "id": "sci-130",
+   "subcategory": "motion",
+   "difficulty": 1,
+   "question": "If a car travels 100 km in 2 hours, what is its average speed?",
+   "choices": [
+    "50 km/h",
+    "200 km/h",
+    "100 km/h",
+    "25 km/h"
+   ],
+   "answer": 0,
+   "explanation": "Speed equals distance divided by time.",
+   "tags": [
+    "speed"
+   ]
+  },
+  {
+   "id": "sci-152",
+   "subcategory": "nuclear",
+   "difficulty": 1,
+   "question": "Who discovered the radioactive elements polonium and radium and won two Nobel Prizes?",
+   "choices": [
+    "Rosalind Franklin",
+    "Ada Lovelace",
+    "Marie Curie",
+    "Lise Meitner"
+   ],
+   "answer": 2,
+   "explanation": "She won in Physics in 1903 and Chemistry in 1911.",
+   "tags": [
+    "radioactive"
+   ]
+  },
+  {
+   "id": "sci-153",
+   "subcategory": "nuclear",
+   "difficulty": 1,
+   "question": "Which element is the main fuel in most nuclear power stations?",
+   "choices": [
+    "Helium",
+    "Iron",
+    "Uranium",
+    "Gold"
+   ],
+   "answer": 2,
+   "explanation": "Uranium-235 undergoes fission.",
+   "tags": [
+    "fission"
+   ]
+  },
+  {
+   "id": "sci-154",
+   "subcategory": "nuclear",
+   "difficulty": 1,
+   "question": "What kind of nuclear reaction powers the stars?",
+   "choices": [
+    "Fusion",
+    "Combustion",
+    "Fission",
+    "Decay"
+   ],
+   "answer": 0,
+   "explanation": "Nuclei join and release energy.",
+   "tags": [
+    "fusion"
+   ]
+  },
+  {
+   "id": "sci-167",
+   "subcategory": "oceans",
+   "difficulty": 1,
+   "question": "Which ocean is the biggest on Earth by area?",
+   "choices": [
+    "Atlantic",
+    "Arctic",
+    "Pacific",
+    "Indian"
+   ],
+   "answer": 2,
+   "explanation": "The Pacific covers about a third of the planet.",
+   "tags": [
+    "ocean"
+   ]
+  },
+  {
+   "id": "sci-168",
+   "subcategory": "oceans",
+   "difficulty": 1,
+   "question": "What is a powerful river-like flow of seawater called?",
+   "choices": [
+    "A tide",
+    "A swell",
+    "A rapid",
+    "A current"
+   ],
+   "answer": 3,
+   "explanation": "The Gulf Stream is a famous example.",
+   "tags": [
+    "currents"
+   ]
+  },
+  {
+   "id": "sci-169",
+   "subcategory": "oceans",
+   "difficulty": 1,
+   "question": "Coral reefs are built by tiny animals called what?",
+   "choices": [
+    "Anemones",
+    "Coral polyps",
+    "Sponges",
+    "Starfish"
+   ],
+   "answer": 1,
+   "explanation": "Polyps secrete hard calcium carbonate skeletons.",
+   "tags": [
+    "reef"
+   ]
+  },
+  {
+   "id": "pho-001",
+   "subcategory": "phobia",
+   "difficulty": 1,
+   "question": "Arachnophobia is the fear of what?",
+   "choices": [
+    "Spiders",
+    "Snakes",
+    "Heights",
+    "Water"
+   ],
+   "answer": 0,
+   "explanation": "Arachnophobia is an intense fear of spiders and other arachnids."
+  },
+  {
+   "id": "pho-002",
+   "subcategory": "phobia",
+   "difficulty": 1,
+   "question": "Claustrophobia is the fear of what?",
+   "choices": [
+    "Open spaces",
+    "Confined spaces",
+    "Darkness",
+    "Crowds"
+   ],
+   "answer": 1,
+   "explanation": "Claustrophobia is the fear of enclosed or confined spaces, such as lifts or tunnels."
+  },
+  {
+   "id": "sci-001",
+   "subcategory": "physics",
+   "difficulty": 1,
+   "question": "What is the approximate speed of light in a vacuum?",
+   "choices": [
+    "3,000 km/s",
+    "30,000 km/s",
+    "300,000 km/s",
+    "3,000,000 km/s"
+   ],
+   "answer": 2,
+   "explanation": "Light travels at about 299,792 km/s in a vacuum, usually rounded to 300,000 km/s."
+  },
+  {
+   "id": "sci-004",
+   "subcategory": "physics",
+   "difficulty": 1,
+   "question": "Which force keeps the planets in orbit around the Sun?",
+   "choices": [
+    "Magnetism",
+    "Friction",
+    "Gravity",
+    "Static electricity"
+   ],
+   "answer": 2,
+   "explanation": "The Sun's gravity continually pulls the planets toward it, bending their paths into orbits."
+  },
+  {
+   "id": "sci-007",
+   "subcategory": "physics",
+   "difficulty": 1,
+   "question": "Which subatomic particle carries a negative electric charge?",
+   "choices": [
+    "Proton",
+    "Neutron",
+    "Electron",
+    "Photon"
+   ],
+   "answer": 2,
+   "explanation": "Electrons carry negative charge; protons are positive and neutrons are neutral."
+  },
+  {
+   "id": "sci-017",
+   "subcategory": "physics",
+   "difficulty": 1,
+   "question": "What kind of energy does a moving object have?",
+   "choices": [
+    "Potential energy",
+    "Kinetic energy",
+    "Nuclear energy",
+    "Thermal energy only"
+   ],
+   "answer": 1,
+   "explanation": "Kinetic energy is the energy of motion, equal to ½mv²."
+  },
+  {
+   "id": "trk-009",
+   "subcategory": "physics",
+   "difficulty": 1,
+   "question": "Why are some old window panes thicker at the bottom?",
+   "choices": [
+    "Gravity melts glass in summer",
+    "The way they were made left them uneven",
+    "They were always fitted upside down by mistake",
+    "Glass slowly flows downward over centuries"
+   ],
+   "answer": 1,
+   "explanation": "Old crown glass was uneven and glaziers often put the thicker edge down; glass does not flow at room temperature on human timescales.",
+   "tags": [
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think old windows are thicker at the bottom because glass slowly flows downward."
+  },
+  {
+   "id": "sci-113",
+   "subcategory": "plants",
+   "difficulty": 1,
+   "question": "What do plants make using sunlight?",
+   "choices": [
+    "Metal",
+    "Their food (sugar)",
+    "Salt",
+    "Plastic"
+   ],
+   "answer": 1,
+   "explanation": "Photosynthesis makes sugar from light, water and carbon dioxide.",
+   "tags": [
+    "photosynthesis"
+   ]
+  },
+  {
+   "id": "sci-114",
+   "subcategory": "plants",
+   "difficulty": 1,
+   "question": "What do the roots of a plant do?",
+   "choices": [
+    "Make flowers",
+    "Take in water and anchor the plant",
+    "Catch sunlight",
+    "Release seeds"
+   ],
+   "answer": 1,
+   "explanation": "Roots absorb water and minerals and hold the plant in the ground.",
+   "tags": [
+    "roots"
+   ]
+  },
+  {
+   "id": "sci-115",
+   "subcategory": "plants",
+   "difficulty": 1,
+   "question": "Which part of a flowering plant becomes the fruit?",
+   "choices": [
+    "The ovary",
+    "The root",
+    "The stem",
+    "The petal"
+   ],
+   "answer": 0,
+   "explanation": "After fertilisation the ovary develops into the fruit around the seeds.",
+   "tags": [
+    "seeds"
+   ]
+  },
+  {
+   "id": "sci-107",
+   "subcategory": "reactions",
+   "difficulty": 1,
+   "question": "What gas must be present for a fire to burn in air?",
+   "choices": [
+    "Oxygen",
+    "Helium",
+    "Nitrogen",
+    "Neon"
+   ],
+   "answer": 0,
+   "explanation": "Fire needs fuel, heat and oxygen.",
+   "tags": [
+    "burning"
+   ]
+  },
+  {
+   "id": "sci-108",
+   "subcategory": "reactions",
+   "difficulty": 1,
+   "question": "Lemon juice tastes sour because it is what?",
+   "choices": [
+    "An acid",
+    "Neutral",
+    "A metal",
+    "A base"
+   ],
+   "answer": 0,
+   "explanation": "Citric acid gives lemons their sourness.",
+   "tags": [
+    "acids"
+   ]
+  },
+  {
+   "id": "sci-109",
+   "subcategory": "reactions",
+   "difficulty": 1,
+   "question": "What is the orange-brown crust that forms on iron left in damp air?",
+   "choices": [
+    "Rust",
+    "Soot",
+    "Ash",
+    "Salt"
+   ],
+   "answer": 0,
+   "explanation": "Rust is iron oxide.",
+   "tags": [
+    "rust"
+   ]
+  },
+  {
+   "id": "sci-164",
+   "subcategory": "rocks",
+   "difficulty": 1,
+   "question": "Which type of rock forms from cooled lava?",
+   "choices": [
+    "Sedimentary rock",
+    "Fossil rock",
+    "Igneous rock",
+    "Metamorphic rock"
+   ],
+   "answer": 2,
+   "explanation": "Igneous rocks form from molten rock.",
+   "tags": [
+    "rocks"
+   ]
+  },
+  {
+   "id": "sci-165",
+   "subcategory": "rocks",
+   "difficulty": 1,
+   "question": "What are the large slabs of the Earth's crust called?",
+   "choices": [
+    "Dunes",
+    "Tectonic plates",
+    "Layers",
+    "Tiles"
+   ],
+   "answer": 1,
+   "explanation": "They move a few centimetres per year.",
+   "tags": [
+    "plates"
+   ]
+  },
+  {
+   "id": "sci-166",
+   "subcategory": "rocks",
+   "difficulty": 1,
+   "question": "What is the hot, dense centre of the Earth called?",
+   "choices": [
+    "The skin",
+    "The crust",
+    "The shell",
+    "The core"
+   ],
+   "answer": 3,
+   "explanation": "The core is mostly iron and nickel.",
+   "tags": [
+    "layers"
+   ]
+  },
+  {
+   "id": "sci-119",
+   "subcategory": "senses",
+   "difficulty": 1,
+   "question": "Which organ lets us see?",
+   "choices": [
+    "The nose",
+    "The tongue",
+    "The eye",
+    "The ear"
+   ],
+   "answer": 2,
+   "explanation": "Light enters the eye and is sensed at the back.",
+   "tags": [
+    "eye"
+   ]
+  },
+  {
+   "id": "sci-120",
+   "subcategory": "senses",
+   "difficulty": 1,
+   "question": "Which part of the body do we use to hear?",
+   "choices": [
+    "The skin",
+    "The ear",
+    "The nose",
+    "The eye"
+   ],
+   "answer": 1,
+   "explanation": "Sound waves enter the ear canal and reach the eardrum.",
+   "tags": [
+    "ear"
+   ]
+  },
+  {
+   "id": "sci-121",
+   "subcategory": "senses",
+   "difficulty": 1,
+   "question": "Which sense do you use mostly to detect odours?",
+   "choices": [
+    "Sight",
+    "Smell",
+    "Touch",
+    "Hearing"
+   ],
+   "answer": 1,
+   "explanation": "Receptors in the nose detect airborne chemicals.",
+   "tags": [
+    "taste"
+   ]
+  },
+  {
+   "id": "sci-137",
+   "subcategory": "solar",
+   "difficulty": 1,
+   "question": "Which planet orbits nearest to the Sun?",
+   "choices": [
+    "Venus",
+    "Earth",
+    "Mercury",
+    "Mars"
+   ],
+   "answer": 2,
+   "explanation": "Mercury orbits the Sun in just 88 days.",
+   "tags": [
+    "planets"
+   ]
+  },
+  {
+   "id": "sci-138",
+   "subcategory": "solar",
+   "difficulty": 1,
+   "question": "What does the Moon orbit?",
+   "choices": [
+    "The Earth",
+    "Jupiter",
+    "Mars",
+    "The Sun"
+   ],
+   "answer": 0,
+   "explanation": "The Moon orbits Earth about once every 27 days.",
+   "tags": [
+    "moon"
+   ]
+  },
+  {
+   "id": "sci-139",
+   "subcategory": "solar",
+   "difficulty": 1,
+   "question": "What causes day and night on Earth?",
+   "choices": [
+    "Earth's rotation",
+    "The Sun's orbit",
+    "Clouds",
+    "The Moon's shadow"
+   ],
+   "answer": 0,
+   "explanation": "Earth turns once about every 24 hours.",
+   "tags": [
+    "earth"
+   ]
+  },
+  {
+   "id": "sci-002",
+   "subcategory": "space",
+   "difficulty": 1,
+   "question": "Which planet is known as the Red Planet?",
+   "choices": [
+    "Venus",
+    "Mars",
+    "Jupiter",
+    "Mercury"
+   ],
+   "answer": 1,
+   "explanation": "Iron oxide (rust) on its surface gives Mars its reddish colour."
+  },
+  {
+   "id": "sci-012",
+   "subcategory": "space",
+   "difficulty": 1,
+   "question": "How many planets are in our solar system?",
+   "choices": [
+    "7",
+    "8",
+    "9",
+    "10"
+   ],
+   "answer": 1,
+   "explanation": "There are eight: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune. Pluto is classed as a dwarf planet."
+  },
+  {
+   "id": "sci-022",
+   "subcategory": "space",
+   "difficulty": 1,
+   "question": "What is the closest star to Earth?",
+   "choices": [
+    "Proxima Centauri",
+    "Sirius",
+    "The Sun",
+    "Polaris"
+   ],
+   "answer": 2,
+   "explanation": "The Sun is about 150 million km away; the next nearest, Proxima Centauri, is over 4 light-years away."
+  },
+  {
+   "id": "trk-011",
+   "subcategory": "space",
+   "difficulty": 1,
+   "question": "What is true about the far side of the Moon?",
+   "choices": [
+    "It always faces the Sun",
+    "It receives as much sunlight as the near side over a month",
+    "It is always in Earth's shadow",
+    "It never receives sunlight"
+   ],
+   "answer": 1,
+   "explanation": "The Moon turns once per orbit, so every part of it has day and night. We just never see that side from Earth.",
+   "tags": [
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think the far side of the Moon is permanently dark."
+  },
+  {
+   "id": "sci-140",
+   "subcategory": "stars",
+   "difficulty": 1,
+   "question": "What is the Sun?",
+   "choices": [
+    "A comet",
+    "A planet",
+    "A moon",
+    "A star"
+   ],
+   "answer": 3,
+   "explanation": "The Sun is an average star.",
+   "tags": [
+    "sun"
+   ]
+  },
+  {
+   "id": "sci-141",
+   "subcategory": "stars",
+   "difficulty": 1,
+   "question": "What is faster: sound or light?",
+   "choices": [
+    "Depends on the day",
+    "They are equal",
+    "Light",
+    "Sound"
+   ],
+   "answer": 2,
+   "explanation": "Light travels almost a million times faster than sound in air.",
+   "tags": [
+    "light"
+   ]
+  },
+  {
+   "id": "sci-142",
+   "subcategory": "stars",
+   "difficulty": 1,
+   "question": "Where are new stars born?",
+   "choices": [
+    "In clouds of gas and dust",
+    "On planets",
+    "In black holes",
+    "Inside comets"
+   ],
+   "answer": 0,
+   "explanation": "Gravity pulls clouds of gas called nebulae together.",
+   "tags": [
+    "lifecycle"
+   ]
+  },
+  {
+   "id": "sci-101",
+   "subcategory": "states",
+   "difficulty": 1,
+   "question": "Which of these is a solid at room temperature?",
+   "choices": [
+    "Iron",
+    "Steam",
+    "Oxygen",
+    "Mercury"
+   ],
+   "answer": 0,
+   "explanation": "Iron is a solid; mercury is a liquid and oxygen and steam are gases.",
+   "tags": [
+    "solids"
+   ]
+  },
+  {
+   "id": "sci-102",
+   "subcategory": "states",
+   "difficulty": 1,
+   "question": "What do we call water in its solid form?",
+   "choices": [
+    "Ice",
+    "Dew",
+    "Steam",
+    "Fog"
+   ],
+   "answer": 0,
+   "explanation": "Water freezes to ice at 0 degrees Celsius.",
+   "tags": [
+    "water"
+   ]
+  },
+  {
+   "id": "sci-103",
+   "subcategory": "states",
+   "difficulty": 1,
+   "question": "What happens when you stir sugar into hot water?",
+   "choices": [
+    "It becomes a gas",
+    "It turns into salt",
+    "It dissolves",
+    "It evaporates"
+   ],
+   "answer": 2,
+   "explanation": "The sugar spreads out as molecules among the water, forming a solution.",
+   "tags": [
+    "mixtures"
+   ]
+  },
+  {
+   "id": "sci-149",
+   "subcategory": "waves",
+   "difficulty": 1,
+   "question": "What do sound waves need to travel?",
+   "choices": [
+    "Gravity",
+    "A vacuum",
+    "A medium such as air",
+    "Light"
+   ],
+   "answer": 2,
+   "explanation": "Sound cannot travel in empty space.",
+   "tags": [
+    "sound"
+   ]
+  },
+  {
+   "id": "sci-150",
+   "subcategory": "waves",
+   "difficulty": 1,
+   "question": "What colours does a rainbow show?",
+   "choices": [
+    "The visible spectrum",
+    "Only red",
+    "Only white",
+    "Black and white"
+   ],
+   "answer": 0,
+   "explanation": "Water droplets split sunlight into its colours.",
+   "tags": [
+    "light"
+   ]
+  },
+  {
+   "id": "sci-151",
+   "subcategory": "waves",
+   "difficulty": 1,
+   "question": "Which type of wave carries your radio station?",
+   "choices": [
+    "Gamma rays",
+    "Sound waves only",
+    "X-rays",
+    "Radio waves"
+   ],
+   "answer": 3,
+   "explanation": "Radio waves are electromagnetic waves.",
+   "tags": [
+    "em"
+   ]
+  },
+  {
+   "id": "sci-106",
+   "subcategory": "atoms",
+   "difficulty": 2,
+   "question": "Atoms of the same element with different numbers of neutrons are called what?",
+   "choices": [
+    "Molecules",
+    "Isotopes",
+    "Compounds",
+    "Ions"
+   ],
+   "answer": 1,
+   "explanation": "Carbon-12 and carbon-14 are both carbon but have different neutron counts.",
+   "tags": [
+    "isotopes"
+   ]
+  },
+  {
+   "id": "sci-005",
+   "subcategory": "chemistry",
+   "difficulty": 2,
+   "question": "Which gas makes up most of Earth's atmosphere?",
+   "choices": [
+    "Oxygen",
+    "Carbon dioxide",
+    "Argon",
+    "Nitrogen"
+   ],
+   "answer": 3,
+   "explanation": "Nitrogen is about 78% of the atmosphere; oxygen is about 21%."
+  },
+  {
+   "id": "sci-006",
+   "subcategory": "chemistry",
+   "difficulty": 2,
+   "question": "What is the pH of pure water at 25 °C?",
+   "choices": [
+    "1",
+    "5",
+    "7",
+    "14"
+   ],
+   "answer": 2,
+   "explanation": "Pure water is neutral, with a pH of 7."
+  },
+  {
+   "id": "sci-125",
+   "subcategory": "genes",
+   "difficulty": 2,
+   "question": "Whose X-ray images helped Watson and Crick work out the structure of DNA in 1953?",
+   "choices": [
+    "Ada Lovelace",
+    "Marie Curie",
+    "Rosalind Franklin",
+    "Barbara McClintock"
+   ],
+   "answer": 2,
+   "explanation": "Franklin's Photo 51 revealed the helical shape.",
+   "tags": [
+    "dna"
+   ]
+  },
+  {
+   "id": "sci-126",
+   "subcategory": "genes",
+   "difficulty": 2,
+   "question": "Which monk discovered the basic laws of inheritance by breeding pea plants?",
+   "choices": [
+    "Charles Darwin",
+    "Francis Crick",
+    "Thomas Morgan",
+    "Gregor Mendel"
+   ],
+   "answer": 3,
+   "explanation": "Mendel's experiments were in the 1850s and 1860s.",
+   "tags": [
+    "mendel"
+   ]
+  },
+  {
+   "id": "sci-127",
+   "subcategory": "genes",
+   "difficulty": 2,
+   "question": "How many chromosomes are in a typical human body cell?",
+   "choices": [
+    "12",
+    "46",
+    "92",
+    "23"
+   ],
+   "answer": 1,
+   "explanation": "We have 23 pairs: one set from each parent.",
+   "tags": [
+    "chromosomes"
+   ]
+  },
+  {
+   "id": "sci-029",
+   "subcategory": "history-of-science",
+   "difficulty": 2,
+   "question": "Which scientist discovered penicillin in 1928?",
+   "choices": [
+    "Louis Pasteur",
+    "Alexander Fleming",
+    "Joseph Lister",
+    "Robert Koch"
+   ],
+   "answer": 1,
+   "explanation": "Alexander Fleming noticed that a mould, Penicillium, killed bacteria on a culture plate."
+  },
+  {
+   "id": "mth-006",
+   "subcategory": "maths",
+   "difficulty": 2,
+   "question": "What is the area of a triangle with a base of 10 cm and a height of 6 cm?",
+   "choices": [
+    "30 cm²",
+    "16 cm²",
+    "15 cm²",
+    "60 cm²"
+   ],
+   "answer": 0,
+   "explanation": "Area = half × base × height = 0.5 × 10 × 6 = 30 cm².",
+   "tags": [
+    "maths"
+   ]
+  },
+  {
+   "id": "mth-009",
+   "subcategory": "maths",
+   "difficulty": 2,
+   "question": "What is (−3) × (−4)?",
+   "choices": [
+    "Negative 12",
+    "Positive 7",
+    "Negative 7",
+    "Positive 12"
+   ],
+   "answer": 3,
+   "explanation": "A negative multiplied by a negative gives a positive: 3 × 4 = 12.",
+   "tags": [
+    "maths"
+   ]
+  },
+  {
+   "id": "mth-012",
+   "subcategory": "maths",
+   "difficulty": 2,
+   "question": "A fair coin has landed heads five times in a row. What is the probability that the next flip is heads?",
+   "choices": [
+    "Less than 1/2",
+    "1/32",
+    "More than 1/2",
+    "1/2"
+   ],
+   "answer": 3,
+   "explanation": "Flips are independent, so the coin has no memory. The next flip is still 1/2.",
+   "tags": [
+    "maths"
+   ]
+  },
+  {
+   "id": "mth-016",
+   "subcategory": "maths",
+   "difficulty": 2,
+   "question": "A whole number is divisible by 9 exactly when what is true?",
+   "choices": [
+    "It is odd and divisible by 3",
+    "Its last digit is 9",
+    "Its digits add up to a multiple of 9",
+    "Its last two digits are divisible by 9"
+   ],
+   "answer": 2,
+   "explanation": "The digit-sum rule works for 9: for example 729 has digits summing to 18, so it is divisible by 9.",
+   "tags": [
+    "maths"
+   ]
+  },
+  {
+   "id": "mth-019",
+   "subcategory": "maths",
+   "difficulty": 2,
+   "question": "Oxygen is necessary for a fire. What does this mean?",
+   "choices": [
+    "Every fire needs wood",
+    "Oxygen always causes a fire",
+    "Oxygen alone is enough to start a fire",
+    "Without oxygen there can be no fire"
+   ],
+   "answer": 3,
+   "explanation": "A necessary condition must be present, but it does not guarantee the result by itself.",
+   "tags": [
+    "logic"
+   ]
+  },
+  {
+   "id": "mth-022",
+   "subcategory": "maths",
+   "difficulty": 2,
+   "question": "Which mathematician proved the Poincaré conjecture, in work published in 2002 and 2003?",
+   "choices": [
+    "Terence Tao",
+    "Paul Erdős",
+    "Grigori Perelman",
+    "Andrew Wiles"
+   ],
+   "answer": 2,
+   "explanation": "Perelman posted his proof online and later declined the Fields Medal and the Clay prize.",
+   "tags": [
+    "people"
+   ]
+  },
+  {
+   "id": "mth-025",
+   "subcategory": "maths",
+   "difficulty": 2,
+   "question": "Roughly how many seconds are there in one day?",
+   "choices": [
+    "14,400",
+    "864,000",
+    "3,600",
+    "86,400"
+   ],
+   "answer": 3,
+   "explanation": "24 × 60 × 60 = 86,400 seconds.",
+   "tags": [
+    "units"
+   ]
+  },
+  {
+   "id": "mth-027",
+   "subcategory": "maths",
+   "difficulty": 2,
+   "question": "In how many different orders can three people stand in a queue?",
+   "choices": [
+    "6",
+    "3",
+    "9",
+    "12"
+   ],
+   "answer": 0,
+   "explanation": "3 × 2 × 1 = 6 arrangements.",
+   "tags": [
+    "counting"
+   ]
+  },
+  {
+   "id": "sci-188",
+   "subcategory": "maths",
+   "difficulty": 2,
+   "question": "Which famous constant is the ratio of a circle's circumference to its diameter?",
+   "choices": [
+    "Phi",
+    "Pi",
+    "The square root of 2",
+    "e"
+   ],
+   "answer": 1,
+   "explanation": "Pi is approximately 3.14159 and its decimals never end or repeat.",
+   "tags": [
+    "infinity"
+   ]
+  },
+  {
+   "id": "sci-189",
+   "subcategory": "maths",
+   "difficulty": 2,
+   "question": "In a room of 23 people, the chance that at least two share a birthday is closest to what?",
+   "choices": [
+    "About 50 percent",
+    "About 6 percent",
+    "About 1 percent",
+    "About 90 percent"
+   ],
+   "answer": 0,
+   "explanation": "This is the birthday paradox.",
+   "tags": [
+    "probability"
+   ]
+  },
+  {
+   "id": "sci-190",
+   "subcategory": "maths",
+   "difficulty": 2,
+   "question": "Which ancient Greek philosopher posed the paradox of Achilles and the tortoise?",
+   "choices": [
+    "Plato",
+    "Aristotle",
+    "Socrates",
+    "Zeno of Elea"
+   ],
+   "answer": 3,
+   "explanation": "Zeno argued that motion could not occur, since it needs infinitely many steps.",
+   "tags": [
+    "logic"
+   ]
+  },
+  {
+   "id": "pho-003",
+   "subcategory": "phobia",
+   "difficulty": 2,
+   "question": "Acrophobia is the fear of what?",
+   "choices": [
+    "Needles",
+    "Water",
+    "Heights",
+    "Flying insects"
+   ],
+   "answer": 2,
+   "explanation": "Acrophobia is an extreme fear of heights."
+  },
+  {
+   "id": "pho-004",
+   "subcategory": "phobia",
+   "difficulty": 2,
+   "question": "Hydrophobia, as a phobia, is the fear of what?",
+   "choices": [
+    "Fire",
+    "Water",
+    "Cold",
+    "Rain only"
+   ],
+   "answer": 1,
+   "explanation": "The word means fear of water. Historically the term was also used for a symptom of rabies."
+  },
+  {
+   "id": "pho-006",
+   "subcategory": "phobia",
+   "difficulty": 2,
+   "question": "What is the fear of clowns called?",
+   "choices": [
+    "Pediophobia",
+    "Claustrophobia",
+    "Coulrophobia",
+    "Catoptrophobia"
+   ],
+   "answer": 2,
+   "explanation": "Coulrophobia is the fear of clowns. Pediophobia is a fear of dolls."
+  },
+  {
+   "id": "pho-007",
+   "subcategory": "phobia",
+   "difficulty": 2,
+   "question": "Nyctophobia is the fear of what?",
+   "choices": [
+    "Night or darkness",
+    "Noise",
+    "Nudity",
+    "Needles"
+   ],
+   "answer": 0,
+   "explanation": "Nyctophobia is a persistent fear of night or darkness."
+  },
+  {
+   "id": "sci-008",
+   "subcategory": "physics",
+   "difficulty": 2,
+   "question": "Who published the general theory of relativity?",
+   "choices": [
+    "Isaac Newton",
+    "Albert Einstein",
+    "Niels Bohr",
+    "Galileo Galilei"
+   ],
+   "answer": 1,
+   "explanation": "Einstein presented the general theory of relativity in 1915."
+  },
+  {
+   "id": "sci-009",
+   "subcategory": "physics",
+   "difficulty": 2,
+   "question": "What is the SI unit of force?",
+   "choices": [
+    "Joule",
+    "Watt",
+    "Pascal",
+    "Newton"
+   ],
+   "answer": 3,
+   "explanation": "The newton (N) is the force needed to accelerate 1 kg at 1 m/s²."
+  },
+  {
+   "id": "sci-018",
+   "subcategory": "physics",
+   "difficulty": 2,
+   "question": "Which law states that every action has an equal and opposite reaction?",
+   "choices": [
+    "Newton's first law",
+    "Newton's second law",
+    "Newton's third law",
+    "Boyle's law"
+   ],
+   "answer": 2,
+   "explanation": "That is Newton's third law of motion."
+  },
+  {
+   "id": "sci-023",
+   "subcategory": "physics",
+   "difficulty": 2,
+   "question": "What name is given to the change in a wave's observed frequency when its source moves relative to the observer?",
+   "choices": [
+    "Doppler effect",
+    "Photoelectric effect",
+    "Greenhouse effect",
+    "Coriolis effect"
+   ],
+   "answer": 0,
+   "explanation": "The Doppler effect explains why an approaching siren sounds higher-pitched than a receding one."
+  },
+  {
+   "id": "sci-185",
+   "subcategory": "quantum",
+   "difficulty": 2,
+   "question": "What is a photon?",
+   "choices": [
+    "A type of sound",
+    "A particle (quantum) of light",
+    "A unit of mass",
+    "A kind of atom"
+   ],
+   "answer": 1,
+   "explanation": "Light behaves as both wave and particle.",
+   "tags": [
+    "quantum"
+   ]
+  },
+  {
+   "id": "sci-186",
+   "subcategory": "quantum",
+   "difficulty": 2,
+   "question": "What does Heisenberg's uncertainty principle say?",
+   "choices": [
+    "Nothing can be measured",
+    "Position and momentum cannot both be known exactly",
+    "Everything is random",
+    "Light has no speed"
+   ],
+   "answer": 1,
+   "explanation": "The more precisely one is known, the less precisely the other can be.",
+   "tags": [
+    "uncertainty"
+   ]
+  },
+  {
+   "id": "sci-187",
+   "subcategory": "quantum",
+   "difficulty": 2,
+   "question": "Protons and neutrons are made of smaller particles called what?",
+   "choices": [
+    "Photons",
+    "Neutrinos",
+    "Quarks",
+    "Electrons"
+   ],
+   "answer": 2,
+   "explanation": "Each proton is two up quarks and one down quark.",
+   "tags": [
+    "particles"
    ]
   },
   {
@@ -2117,106 +2202,607 @@
    ]
   },
   {
-   "id": "sci-185",
-   "subcategory": "quantum",
+   "id": "sci-028",
+   "subcategory": "space",
    "difficulty": 2,
-   "question": "What is a photon?",
+   "question": "Which planet has the shortest year, orbiting the Sun in about 88 Earth days?",
    "choices": [
-    "A type of sound",
-    "A particle (quantum) of light",
-    "A unit of mass",
-    "A kind of atom"
-   ],
-   "answer": 1,
-   "explanation": "Light behaves as both wave and particle.",
-   "tags": [
-    "quantum"
-   ]
-  },
-  {
-   "id": "sci-186",
-   "subcategory": "quantum",
-   "difficulty": 2,
-   "question": "What does Heisenberg's uncertainty principle say?",
-   "choices": [
-    "Nothing can be measured",
-    "Position and momentum cannot both be known exactly",
-    "Everything is random",
-    "Light has no speed"
-   ],
-   "answer": 1,
-   "explanation": "The more precisely one is known, the less precisely the other can be.",
-   "tags": [
-    "uncertainty"
-   ]
-  },
-  {
-   "id": "sci-187",
-   "subcategory": "quantum",
-   "difficulty": 2,
-   "question": "Protons and neutrons are made of smaller particles called what?",
-   "choices": [
-    "Photons",
-    "Neutrinos",
-    "Quarks",
-    "Electrons"
+    "Venus",
+    "Mars",
+    "Mercury",
+    "Earth"
    ],
    "answer": 2,
-   "explanation": "Each proton is two up quarks and one down quark.",
-   "tags": [
-    "particles"
-   ]
+   "explanation": "Mercury is closest to the Sun and moves fastest, completing an orbit in about 88 days."
   },
   {
-   "id": "sci-188",
-   "subcategory": "maths",
+   "id": "sci-030",
+   "subcategory": "space",
    "difficulty": 2,
-   "question": "Which famous constant is the ratio of a circle's circumference to its diameter?",
+   "question": "What is the Great Red Spot on Jupiter?",
    "choices": [
-    "Phi",
-    "Pi",
-    "The square root of 2",
-    "e"
+    "A volcano",
+    "A giant storm",
+    "An impact crater",
+    "A moon's shadow"
    ],
    "answer": 1,
-   "explanation": "Pi is approximately 3.14159 and its decimals never end or repeat.",
+   "explanation": "It is an enormous long-lived storm, large enough to swallow Earth."
+  },
+  {
+   "id": "sci-024",
+   "subcategory": "chemistry",
+   "difficulty": 3,
+   "question": "What is a substance called that speeds up a chemical reaction without being used up?",
+   "choices": [
+    "Solvent",
+    "Catalyst",
+    "Reagent",
+    "Precipitate"
+   ],
+   "answer": 1,
+   "explanation": "A catalyst lowers the activation energy of a reaction and is regenerated afterwards."
+  },
+  {
+   "id": "sci-027",
+   "subcategory": "chemistry",
+   "difficulty": 3,
+   "question": "What is the process called when a solid turns directly into a gas?",
+   "choices": [
+    "Evaporation",
+    "Sublimation",
+    "Condensation",
+    "Deposition"
+   ],
+   "answer": 1,
+   "explanation": "Dry ice turning to carbon dioxide gas is a classic example of sublimation."
+  },
+  {
+   "id": "trk-010",
+   "subcategory": "chemistry",
+   "difficulty": 3,
+   "question": "Which condition is NECESSARY for a liquid to conduct electricity well?",
+   "choices": [
+    "The presence of oxygen",
+    "The presence of a metal",
+    "A high temperature",
+    "Mobile charged particles such as ions"
+   ],
+   "answer": 3,
+   "explanation": "Current needs charge carriers that can move; dissolved ions provide them. Pure water has very few ions.",
    "tags": [
-    "infinity"
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think pure water is a good electrical conductor."
+  },
+  {
+   "id": "mth-003",
+   "subcategory": "maths",
+   "difficulty": 3,
+   "question": "What is 2/3 divided by 4/9?",
+   "choices": [
+    "3/2",
+    "1/2",
+    "2/3",
+    "8/27"
+   ],
+   "answer": 0,
+   "explanation": "Dividing by a fraction means multiplying by its inverse: 2/3 × 9/4 = 18/12 = 3/2.",
+   "tags": [
+    "maths"
    ]
   },
   {
-   "id": "sci-189",
+   "id": "mth-004",
    "subcategory": "maths",
-   "difficulty": 2,
-   "question": "In a room of 23 people, the chance that at least two share a birthday is closest to what?",
+   "difficulty": 3,
+   "question": "A price rises by 20% and then falls by 20%. Compared with the original price, the final price is:",
    "choices": [
-    "About 50 percent",
-    "About 6 percent",
-    "About 1 percent",
-    "About 90 percent"
+    "The same",
+    "20% lower",
+    "4% higher",
+    "4% lower"
+   ],
+   "answer": 3,
+   "explanation": "Starting at 100: 100 × 1.2 = 120, then 120 × 0.8 = 96, which is 4% below the original.",
+   "tags": [
+    "maths"
+   ]
+  },
+  {
+   "id": "mth-011",
+   "subcategory": "maths",
+   "difficulty": 3,
+   "question": "Two fair dice are rolled. What is the probability that the sum is 7?",
+   "choices": [
+    "7/36",
+    "1/12",
+    "1/6",
+    "1/36"
+   ],
+   "answer": 2,
+   "explanation": "Six of the 36 equally likely outcomes sum to 7 (1+6, 2+5, 3+4 and their reverses), so 6/36 = 1/6.",
+   "tags": [
+    "maths"
+   ]
+  },
+  {
+   "id": "mth-014",
+   "subcategory": "maths",
+   "difficulty": 3,
+   "question": "A town's mean income is well above its median income. What does this most likely show?",
+   "choices": [
+    "Most people earn more than the mean",
+    "Incomes are spread evenly",
+    "The median was calculated wrongly",
+    "A few very high earners pull the mean up"
+   ],
+   "answer": 3,
+   "explanation": "A small group of very high incomes raises the mean but not the median, which marks the middle person.",
+   "tags": [
+    "maths"
+   ]
+  },
+  {
+   "id": "mth-017",
+   "subcategory": "maths",
+   "difficulty": 3,
+   "question": "What is the greatest common divisor of 84 and 126?",
+   "choices": [
+    "21",
+    "42",
+    "6",
+    "12"
+   ],
+   "answer": 1,
+   "explanation": "126 − 84 = 42, and 42 divides 84, so the greatest common divisor is 42 (Euclid's method).",
+   "tags": [
+    "maths"
+   ]
+  },
+  {
+   "id": "mth-018",
+   "subcategory": "maths",
+   "difficulty": 3,
+   "question": "The statement 'If it rains, the street is wet' is true, and the street is wet. What can you conclude?",
+   "choices": [
+    "It did not rain",
+    "The street was washed",
+    "Nothing for certain about the rain",
+    "It rained"
+   ],
+   "answer": 2,
+   "explanation": "A wet street could have other causes, so concluding it rained commits the fallacy of affirming the consequent.",
+   "tags": [
+    "logic"
+   ]
+  },
+  {
+   "id": "mth-020",
+   "subcategory": "maths",
+   "difficulty": 3,
+   "question": "An argument is valid but one of its premises is false. Which description fits?",
+   "choices": [
+    "It is sound",
+    "It is not sound",
+    "It is invalid",
+    "Its conclusion must be true"
+   ],
+   "answer": 1,
+   "explanation": "Soundness needs a valid argument and true premises, so one false premise makes it unsound.",
+   "tags": [
+    "logic"
+   ]
+  },
+  {
+   "id": "mth-023",
+   "subcategory": "maths",
+   "difficulty": 3,
+   "question": "Which number is approximately the golden ratio?",
+   "choices": [
+    "3.142",
+    "1.618",
+    "1.414",
+    "2.718"
+   ],
+   "answer": 1,
+   "explanation": "The golden ratio is (1 + √5) / 2, about 1.618.",
+   "tags": [
+    "constants"
+   ]
+  },
+  {
+   "id": "mth-026",
+   "subcategory": "maths",
+   "difficulty": 3,
+   "question": "Which metric prefix means one billionth (10⁻⁹)?",
+   "choices": [
+    "pico",
+    "micro",
+    "milli",
+    "nano"
+   ],
+   "answer": 3,
+   "explanation": "Nano means 10⁻⁹. Micro is 10⁻⁶ and pico is 10⁻¹².",
+   "tags": [
+    "units"
+   ]
+  },
+  {
+   "id": "mth-030",
+   "subcategory": "maths",
+   "difficulty": 3,
+   "question": "What is 0.999… (the 9 repeating forever) equal to?",
+   "choices": [
+    "0.9999",
+    "Just under 1",
+    "1",
+    "9/10"
+   ],
+   "answer": 2,
+   "explanation": "1/3 = 0.333… so 3 × (1/3) = 0.999… = 1. There is no number between them.",
+   "tags": [
+    "numbers"
+   ]
+  },
+  {
+   "id": "pho-005",
+   "subcategory": "phobia",
+   "difficulty": 3,
+   "question": "Ophidiophobia is the fear of what?",
+   "choices": [
+    "Birds",
+    "Dogs",
+    "Snakes",
+    "Lizards"
+   ],
+   "answer": 2,
+   "explanation": "Ophidiophobia is the fear of snakes, from the Greek 'ophis', meaning serpent."
+  },
+  {
+   "id": "pho-008",
+   "subcategory": "phobia",
+   "difficulty": 3,
+   "question": "Glossophobia is the fear of what?",
+   "choices": [
+    "Mirrors",
+    "Public speaking",
+    "Glass",
+    "Singing in the shower"
+   ],
+   "answer": 1,
+   "explanation": "Glossophobia is the fear of speaking in public, one of the most common social fears."
+  },
+  {
+   "id": "pho-009",
+   "subcategory": "phobia",
+   "difficulty": 3,
+   "question": "Triskaidekaphobia is the fear of which number?",
+   "choices": [
+    "7",
+    "13",
+    "666",
+    "3"
+   ],
+   "answer": 1,
+   "explanation": "It is the fear of the number 13, which is why many buildings skip a 13th floor."
+  },
+  {
+   "id": "pho-010",
+   "subcategory": "phobia",
+   "difficulty": 3,
+   "question": "Cynophobia is the fear of what?",
+   "choices": [
+    "Cats",
+    "Dogs",
+    "Horses",
+    "Mice"
+   ],
+   "answer": 1,
+   "explanation": "Cynophobia is the fear of dogs, from the Greek 'kyon'. The fear of cats is ailurophobia."
+  },
+  {
+   "id": "pho-011",
+   "subcategory": "phobia",
+   "difficulty": 3,
+   "question": "Entomophobia is the fear of what?",
+   "choices": [
+    "Insects",
+    "Birds",
+    "Fish",
+    "Worms only"
    ],
    "answer": 0,
-   "explanation": "This is the birthday paradox.",
+   "explanation": "Entomophobia is the fear of insects in general."
+  },
+  {
+   "id": "pho-013",
+   "subcategory": "phobia",
+   "difficulty": 3,
+   "question": "Hemophobia is the fear of what?",
+   "choices": [
+    "Blood",
+    "Hospitals",
+    "Hair",
+    "Hamsters"
+   ],
+   "answer": 0,
+   "explanation": "Hemophobia is the fear of blood. It often overlaps with the fear of injury or needles."
+  },
+  {
+   "id": "pho-014",
+   "subcategory": "phobia",
+   "difficulty": 3,
+   "question": "Agoraphobia is best described as a fear of what?",
+   "choices": [
+    "Marketplaces",
+    "Situations where escape might be hard, such as open or crowded places",
+    "Heights",
+    "Small rooms"
+   ],
+   "answer": 1,
+   "explanation": "Agoraphobia is anxiety about places or situations where escape might be difficult. It is not only a fear of open spaces."
+  },
+  {
+   "id": "pho-015",
+   "subcategory": "phobia",
+   "difficulty": 3,
+   "question": "Ailurophobia is the fear of what?",
+   "choices": [
+    "Cats",
+    "Dogs",
+    "Spiders",
+    "Thunder"
+   ],
+   "answer": 0,
+   "explanation": "Ailurophobia is the fear of cats."
+  },
+  {
+   "id": "pho-016",
+   "subcategory": "phobia",
+   "difficulty": 3,
+   "question": "Mysophobia is the fear of what?",
+   "choices": [
+    "Mice",
+    "Mist",
+    "Germs and contamination",
+    "Mirrors"
+   ],
+   "answer": 2,
+   "explanation": "Mysophobia is an extreme fear of germs, dirt or contamination."
+  },
+  {
+   "id": "pho-018",
+   "subcategory": "phobia",
+   "difficulty": 3,
+   "question": "Trypophobia is an aversion to what?",
+   "choices": [
+    "Trips and travel",
+    "Clusters of small holes or bumps",
+    "Tripods",
+    "Triangular shapes"
+   ],
+   "answer": 1,
+   "explanation": "People with trypophobia feel discomfort looking at clustered holes, such as in a lotus seed pod. It is not an official diagnosis in the DSM-5."
+  },
+  {
+   "id": "sci-015",
+   "subcategory": "physics",
+   "difficulty": 3,
+   "question": "Absolute zero is approximately what temperature in degrees Celsius?",
+   "choices": [
+    "−100 °C",
+    "−173.15 °C",
+    "−273.15 °C",
+    "−373.15 °C"
+   ],
+   "answer": 2,
+   "explanation": "Absolute zero is 0 kelvin, which equals −273.15 °C."
+  },
+  {
+   "id": "sci-016",
+   "subcategory": "physics",
+   "difficulty": 3,
+   "question": "Which particle did J. J. Thomson discover in 1897?",
+   "choices": [
+    "Proton",
+    "Neutron",
+    "Quark",
+    "Electron"
+   ],
+   "answer": 3,
+   "explanation": "Thomson's cathode-ray experiments revealed the electron, the first subatomic particle found."
+  },
+  {
+   "id": "sci-021",
+   "subcategory": "physics",
+   "difficulty": 3,
+   "question": "Which phenomenon is mainly responsible for the blue colour of the daytime sky?",
+   "choices": [
+    "Rayleigh scattering",
+    "Total internal reflection",
+    "Refraction by clouds",
+    "Ozone absorption"
+   ],
+   "answer": 0,
+   "explanation": "Air molecules scatter short (blue) wavelengths of sunlight much more strongly than long ones."
+  },
+  {
+   "id": "sci-025",
+   "subcategory": "physics",
+   "difficulty": 3,
+   "question": "Which type of electromagnetic radiation has the shortest wavelength?",
+   "choices": [
+    "Radio waves",
+    "Ultraviolet",
+    "Infrared",
+    "Gamma rays"
+   ],
+   "answer": 3,
+   "explanation": "Gamma rays sit at the high-energy, short-wavelength end of the electromagnetic spectrum."
+  },
+  {
+   "id": "sci-026",
+   "subcategory": "physics",
+   "difficulty": 3,
+   "question": "What is the SI unit of electrical resistance?",
+   "choices": [
+    "Volt",
+    "Ampere",
+    "Ohm",
+    "Farad"
+   ],
+   "answer": 2,
+   "explanation": "The ohm (symbol Ω) is the unit of electrical resistance."
+  },
+  {
+   "id": "trk-012",
+   "subcategory": "physics",
+   "difficulty": 3,
+   "question": "How many joules are in one kilocalorie, approximately?",
+   "choices": [
+    "About 41",
+    "About 418",
+    "About 4,184",
+    "About 41,840"
+   ],
+   "answer": 2,
+   "explanation": "One calorie is about 4.184 joules, so one kilocalorie is about 4,184 joules.",
+   "tags": [
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think a food Calorie and a calorie in physics are the same amount."
+  },
+  {
+   "id": "sci-010",
+   "subcategory": "space",
+   "difficulty": 3,
+   "question": "Which element is the most abundant in the universe?",
+   "choices": [
+    "Helium",
+    "Hydrogen",
+    "Oxygen",
+    "Carbon"
+   ],
+   "answer": 1,
+   "explanation": "Hydrogen makes up roughly three quarters of ordinary matter by mass, with helium most of the rest."
+  },
+  {
+   "id": "sci-011",
+   "subcategory": "space",
+   "difficulty": 3,
+   "question": "About how long does sunlight take to reach Earth?",
+   "choices": [
+    "Around 8 seconds",
+    "Around 8 minutes",
+    "Around 8 hours",
+    "Around 8 days"
+   ],
+   "answer": 1,
+   "explanation": "At about 150 million km, light from the Sun takes roughly 8 minutes and 20 seconds."
+  },
+  {
+   "id": "sci-013",
+   "subcategory": "space",
+   "difficulty": 3,
+   "question": "What is the boundary around a black hole called, beyond which nothing can escape?",
+   "choices": [
+    "Photon ring",
+    "Singularity",
+    "Event horizon",
+    "Accretion disk"
+   ],
+   "answer": 2,
+   "explanation": "Past the event horizon the escape velocity exceeds the speed of light."
+  },
+  {
+   "id": "sci-014",
+   "subcategory": "space",
+   "difficulty": 3,
+   "question": "Which astronomer formulated three laws of planetary motion in the early 1600s?",
+   "choices": [
+    "Johannes Kepler",
+    "Tycho Brahe",
+    "Nicolaus Copernicus",
+    "Edmond Halley"
+   ],
+   "answer": 0,
+   "explanation": "Kepler's laws describe elliptical orbits, equal areas in equal times, and the period–distance relationship."
+  },
+  {
+   "id": "mth-029",
+   "subcategory": "maths",
+   "difficulty": 4,
+   "question": "A disease affects 1 in 1,000 people. A test has 99% sensitivity and 99% specificity. A person tests positive. Roughly how likely is it that they have the disease?",
+   "choices": [
+    "About 1%",
+    "About 99%",
+    "About 50%",
+    "About 9%"
+   ],
+   "answer": 3,
+   "explanation": "Of 1,000 people, about 1 true case tests positive but so do about 10 healthy people, so roughly 1 in 11 positives is a true case.",
    "tags": [
     "probability"
    ]
   },
   {
-   "id": "sci-190",
-   "subcategory": "maths",
-   "difficulty": 2,
-   "question": "Which ancient Greek philosopher posed the paradox of Achilles and the tortoise?",
+   "id": "pho-012",
+   "subcategory": "phobia",
+   "difficulty": 4,
+   "question": "Pogonophobia is the fear of what?",
    "choices": [
-    "Plato",
-    "Aristotle",
-    "Socrates",
-    "Zeno of Elea"
+    "Hats",
+    "Beards",
+    "Pogo sticks",
+    "Pigeons"
    ],
-   "answer": 3,
-   "explanation": "Zeno argued that motion could not occur, since it needs infinitely many steps.",
-   "tags": [
-    "logic"
-   ]
+   "answer": 1,
+   "explanation": "Pogonophobia is an irrational fear or strong dislike of beards."
+  },
+  {
+   "id": "pho-017",
+   "subcategory": "phobia",
+   "difficulty": 4,
+   "question": "Ornithophobia is the fear of what?",
+   "choices": [
+    "Birds",
+    "Ornaments",
+    "Orchards",
+    "Operations"
+   ],
+   "answer": 0,
+   "explanation": "Ornithophobia is the fear of birds."
+  },
+  {
+   "id": "pho-019",
+   "subcategory": "phobia",
+   "difficulty": 4,
+   "question": "The 17-syllable word 'hippopotomonstrosesquippedaliophobia' is a jocular name for the fear of what?",
+   "choices": [
+    "Hippos",
+    "Monsters",
+    "Long words",
+    "Horses"
+   ],
+   "answer": 2,
+   "explanation": "It is a humorous coinage: a very long word for the fear of long words."
+  },
+  {
+   "id": "sci-019",
+   "subcategory": "space",
+   "difficulty": 4,
+   "question": "The Chandrasekhar limit describes the maximum mass of what kind of object?",
+   "choices": [
+    "A neutron star",
+    "A stable white dwarf",
+    "A brown dwarf",
+    "A red giant"
+   ],
+   "answer": 1,
+   "explanation": "Above roughly 1.4 solar masses, a white dwarf can no longer support itself against gravity."
   }
  ]
 }

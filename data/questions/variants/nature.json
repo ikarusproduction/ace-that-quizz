@@ -4,6 +4,40 @@
  "note": "Difficulty ladders: the original question keeps its own level, these are the other levels. Unreviewed.",
  "families": [
   {
+   "id": "nat-021",
+   "ask": {
+    "1": "Heart",
+    "2": "Four chambers",
+    "3": "Blood"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What are the two lower chambers of the heart called?",
+     "choices": [
+      "Arteries",
+      "Atria",
+      "Ventricles",
+      "Valves"
+     ],
+     "answer": 2,
+     "explanation": "The ventricles pump blood out."
+    },
+    {
+     "level": 3,
+     "question": "Which blood vessels carry oxygen-rich blood away from the heart to the body?",
+     "choices": [
+      "Veins",
+      "Lymphatics",
+      "Capillaries",
+      "Arteries"
+     ],
+     "answer": 3,
+     "explanation": "Arteries carry blood away from the heart."
+    }
+   ]
+  },
+  {
    "id": "nat-001",
    "ask": {
     "1": "Biggest animal",
@@ -34,108 +68,6 @@
      ],
      "answer": 1,
      "explanation": "Blue whales reach around 25 to 30 metres."
-    }
-   ]
-  },
-  {
-   "id": "nat-002",
-   "ask": {
-    "1": "Cell part",
-    "2": "Powerhouse",
-    "3": "What it makes"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which of these is the basic building block of all living things?",
-     "choices": [
-      "The cell",
-      "The molecule only",
-      "The organ",
-      "The atom only"
-     ],
-     "answer": 0,
-     "explanation": "Cells are the basic units of life."
-    },
-    {
-     "level": 3,
-     "question": "Mitochondria produce which energy-carrying molecule?",
-     "choices": [
-      "RNA",
-      "ATP",
-      "Glucose",
-      "DNA"
-     ],
-     "answer": 1,
-     "explanation": "Mitochondria make ATP through cellular respiration."
-    }
-   ]
-  },
-  {
-   "id": "nat-003",
-   "ask": {
-    "1": "Plant gas",
-    "2": "Photosynthesis",
-    "3": "Gas released"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "Which gas do plants release as a by-product of photosynthesis?",
-     "choices": [
-      "Carbon dioxide",
-      "Nitrogen",
-      "Oxygen",
-      "Methane"
-     ],
-     "answer": 2,
-     "explanation": "Photosynthesis releases oxygen."
-    },
-    {
-     "level": 3,
-     "question": "Which green pigment in leaves captures light for photosynthesis?",
-     "choices": [
-      "Chlorophyll",
-      "Haemoglobin",
-      "Keratin",
-      "Melanin"
-     ],
-     "answer": 0,
-     "explanation": "Chlorophyll absorbs light to power the process."
-    }
-   ]
-  },
-  {
-   "id": "nat-004",
-   "ask": {
-    "1": "Heart count",
-    "2": "Octopus hearts",
-    "3": "Why"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "How many arms does an octopus have?",
-     "choices": [
-      "8",
-      "10",
-      "4",
-      "6"
-     ],
-     "answer": 0,
-     "explanation": "Octopuses have eight arms."
-    },
-    {
-     "level": 2,
-     "question": "Octopus blood is blue because it contains which metal?",
-     "choices": [
-      "Silver",
-      "Iron",
-      "Copper",
-      "Zinc"
-     ],
-     "answer": 2,
-     "explanation": "Their blood uses copper-based hemocyanin."
     }
    ]
   },
@@ -204,6 +136,720 @@
      ],
      "answer": 1,
      "explanation": "A panda eats a large amount because bamboo is low in nutrients."
+    }
+   ]
+  },
+  {
+   "id": "nat-011",
+   "ask": {
+    "1": "Change process",
+    "2": "Metamorphosis",
+    "3": "Stage"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the stage called between caterpillar and butterfly, when the insect is inside a case?",
+     "choices": [
+      "The imago",
+      "The egg",
+      "The larva",
+      "The pupa"
+     ],
+     "answer": 3,
+     "explanation": "The chrysalis or pupa is the stage before the adult."
+    },
+    {
+     "level": 3,
+     "question": "What is the name of the hardened case a butterfly caterpillar makes in its pupal stage?",
+     "choices": [
+      "A shell",
+      "A chrysalis",
+      "A cocoon",
+      "A cyst"
+     ],
+     "answer": 1,
+     "explanation": "Butterflies form a chrysalis; many moths spin a silk cocoon."
+    }
+   ]
+  },
+  {
+   "id": "nat-012",
+   "ask": {
+    "1": "Marsupial",
+    "2": "Kangaroo",
+    "3": "Pouch"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which of these is also a marsupial, found in Australia and often seen eating eucalyptus leaves?",
+     "choices": [
+      "Koala",
+      "Meerkat",
+      "Panda",
+      "Sloth"
+     ],
+     "answer": 0,
+     "explanation": "The koala is a marsupial."
+    },
+    {
+     "level": 3,
+     "question": "A baby kangaroo is called what?",
+     "choices": [
+      "A joey",
+      "A cub",
+      "A pup",
+      "A kit"
+     ],
+     "answer": 0,
+     "explanation": "Marsupial babies are called joeys."
+    }
+   ]
+  },
+  {
+   "id": "nat-027",
+   "ask": {
+    "1": "Insect legs",
+    "2": "Six legs",
+    "3": "Body"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "How many body segments do adult insects have?",
+     "choices": [
+      "Two",
+      "Five",
+      "Three",
+      "Four"
+     ],
+     "answer": 2,
+     "explanation": "Head, thorax and abdomen."
+    },
+    {
+     "level": 3,
+     "question": "How many legs does a spider have, which makes it not an insect?",
+     "choices": [
+      "10",
+      "6",
+      "8",
+      "4"
+     ],
+     "answer": 2,
+     "explanation": "Spiders have eight legs."
+    }
+   ]
+  },
+  {
+   "id": "nat2-010",
+   "ask": {
+    "1": "The largest",
+    "2": "The kiwi",
+    "3": "The migrant"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which flightless bird is a national symbol of New Zealand?",
+     "choices": [
+      "The condor",
+      "The albatross",
+      "The emu",
+      "The kiwi"
+     ],
+     "answer": 3,
+     "explanation": "The kiwi is nocturnal and lays very large eggs."
+    },
+    {
+     "level": 3,
+     "question": "Which bird makes the longest annual migration, from the Arctic to the Antarctic and back?",
+     "choices": [
+      "The swallow",
+      "The white stork",
+      "The Arctic tern",
+      "The Canada goose"
+     ],
+     "answer": 2,
+     "explanation": "It can travel about 70,000 kilometres a year."
+    }
+   ]
+  },
+  {
+   "id": "nat2-015",
+   "ask": {
+    "1": "Herbivores",
+    "2": "Omnivores",
+    "3": "Carnivores"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which of these animals is an omnivore?",
+     "choices": [
+      "A bear",
+      "A cow",
+      "A giraffe",
+      "A lion"
+     ],
+     "answer": 0,
+     "explanation": "Bears eat plants, fish and other animals."
+    },
+    {
+     "level": 3,
+     "question": "Which of these is an obligate carnivore, needing meat to survive?",
+     "choices": [
+      "The domestic cat",
+      "The dog",
+      "The raccoon",
+      "The pig"
+     ],
+     "answer": 0,
+     "explanation": "Cats cannot make some nutrients from plants, such as taurine."
+    }
+   ]
+  },
+  {
+   "id": "trk-013",
+   "ask": {
+    "1": "Are bats blind",
+    "2": "Only flying mammal",
+    "3": "Echolocation"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Bats are the only mammals capable of what?",
+     "choices": [
+      "Giving birth to live young",
+      "True powered flight",
+      "Echolocation",
+      "Hibernation"
+     ],
+     "answer": 1,
+     "explanation": "Flying squirrels only glide; other echolocating mammals such as dolphins and shrews do not fly."
+    },
+    {
+     "level": 3,
+     "question": "Which of these animals also uses echolocation, like many bats?",
+     "choices": [
+      "Toothed whales",
+      "Parrots",
+      "Snakes",
+      "Elephants"
+     ],
+     "answer": 0,
+     "explanation": "Dolphins and other toothed whales use echolocation clicks to find objects and prey."
+    }
+   ]
+  },
+  {
+   "id": "trk-014",
+   "ask": {
+    "1": "Goldfish memory",
+    "2": "What experiments show",
+    "3": "Lifespan"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which finding contradicts the idea that goldfish forget after three seconds?",
+     "choices": [
+      "Goldfish live only one day",
+      "Goldfish cannot see colour",
+      "Trained fish remembered feeding signals for weeks to months",
+      "Goldfish have no brain"
+     ],
+     "answer": 2,
+     "explanation": "Experiments with trained goldfish show retention far longer than seconds."
+    },
+    {
+     "level": 3,
+     "question": "With good care, how long can a goldfish live?",
+     "choices": [
+      "Exactly one year",
+      "About 3 months",
+      "Only 3 days",
+      "More than 10 years"
+     ],
+     "answer": 3,
+     "explanation": "Common goldfish often live 10 to 20 years in good conditions."
+    }
+   ]
+  },
+  {
+   "id": "trk-016",
+   "ask": {
+    "1": "Insect or not",
+    "2": "Which is not an insect",
+    "3": "Antennae"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which of these is NOT an insect?",
+     "choices": [
+      "Beetle",
+      "Butterfly",
+      "Ant",
+      "Spider"
+     ],
+     "answer": 3,
+     "explanation": "Spiders are arachnids with eight legs and two body parts."
+    },
+    {
+     "level": 3,
+     "question": "Which feature do all insects have that spiders lack?",
+     "choices": [
+      "A pair of antennae",
+      "Venom",
+      "The ability to spin silk",
+      "Eight legs"
+     ],
+     "answer": 0,
+     "explanation": "Insects have antennae and six legs; arachnids have no antennae. Some insects also make silk."
+    }
+   ]
+  },
+  {
+   "id": "nat2-013",
+   "ask": {
+    "1": "The unit",
+    "2": "The nucleus",
+    "3": "The plant cell"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which structure holds most of an animal cell's DNA?",
+     "choices": [
+      "The cell membrane",
+      "The cytoplasm",
+      "The nucleus",
+      "The ribosome"
+     ],
+     "answer": 2,
+     "explanation": "The nucleus is enclosed by its own membrane."
+    },
+    {
+     "level": 3,
+     "question": "Which structure is found in plant cells but not in animal cells?",
+     "choices": [
+      "A nucleus",
+      "A cell wall",
+      "A ribosome",
+      "A cell membrane"
+     ],
+     "answer": 1,
+     "explanation": "The cell wall gives plant cells their rigid shape."
+    }
+   ]
+  },
+  {
+   "id": "nat2-001",
+   "ask": {
+    "1": "Backbones",
+    "2": "Whales",
+    "3": "Spiders"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "To which class of animals do whales belong?",
+     "choices": [
+      "Reptiles",
+      "Amphibians",
+      "Mammals",
+      "Fish"
+     ],
+     "answer": 2,
+     "explanation": "Whales breathe air and feed their young with milk."
+    },
+    {
+     "level": 3,
+     "question": "Spiders belong to which group of arthropods?",
+     "choices": [
+      "Arachnids",
+      "Myriapods",
+      "Crustaceans",
+      "Insects"
+     ],
+     "answer": 0,
+     "explanation": "Arachnids have eight legs and two body segments."
+    }
+   ]
+  },
+  {
+   "id": "nat2-017",
+   "ask": {
+    "1": "The namer",
+    "2": "The genus",
+    "3": "The rank"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "In the name Homo sapiens, what is 'Homo'?",
+     "choices": [
+      "The species",
+      "The family",
+      "The genus",
+      "The order"
+     ],
+     "answer": 2,
+     "explanation": "The genus name comes first and the species name second."
+    },
+    {
+     "level": 3,
+     "question": "Which taxonomic rank sits just above species?",
+     "choices": [
+      "Order",
+      "Class",
+      "Genus",
+      "Family"
+     ],
+     "answer": 2,
+     "explanation": "Closely related species share a genus."
+    }
+   ]
+  },
+  {
+   "id": "nat2-005",
+   "ask": {
+    "1": "Producers",
+    "2": "Decomposers",
+    "3": "Energy"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which organisms break down dead matter and return nutrients to the soil?",
+     "choices": [
+      "Parasites",
+      "Producers",
+      "Decomposers",
+      "Herbivores"
+     ],
+     "answer": 2,
+     "explanation": "Fungi and bacteria are the main decomposers."
+    },
+    {
+     "level": 3,
+     "question": "As a rule of thumb, about how much energy passes from one level of a food chain to the next?",
+     "choices": [
+      "About 90 percent",
+      "About 10 percent",
+      "About 50 percent",
+      "About 25 percent"
+     ],
+     "answer": 1,
+     "explanation": "Most energy is lost as heat and in life processes."
+    }
+   ]
+  },
+  {
+   "id": "nat2-014",
+   "ask": {
+    "1": "Tundra",
+    "2": "Taiga",
+    "3": "Savanna"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which biome is the vast coniferous forest across northern Canada and Russia?",
+     "choices": [
+      "Tundra",
+      "Savanna",
+      "Rainforest",
+      "Taiga"
+     ],
+     "answer": 3,
+     "explanation": "It is also called the boreal forest."
+    },
+    {
+     "level": 3,
+     "question": "Which biome covers the Serengeti, with grasses and scattered trees?",
+     "choices": [
+      "Tundra",
+      "Savanna",
+      "Rainforest",
+      "Taiga"
+     ],
+     "answer": 1,
+     "explanation": "Seasonal rains support grass and large herds."
+    }
+   ]
+  },
+  {
+   "id": "nat2-018",
+   "ask": {
+    "1": "Mutualism",
+    "2": "Parasitism",
+    "3": "Lichens"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which of these is an example of parasitism?",
+     "choices": [
+      "A clownfish and a sea anemone",
+      "A tapeworm in a human gut",
+      "A bee visiting a flower",
+      "Fungi on a tree's roots"
+     ],
+     "answer": 1,
+     "explanation": "The parasite benefits and the host is harmed."
+    },
+    {
+     "level": 3,
+     "question": "Lichens are a partnership between a fungus and what?",
+     "choices": [
+      "An alga or a cyanobacterium",
+      "A virus",
+      "A moss",
+      "A fern"
+     ],
+     "answer": 0,
+     "explanation": "The partner photosynthesises and feeds the fungus."
+    }
+   ]
+  },
+  {
+   "id": "nat2-003",
+   "ask": {
+    "1": "The scientist",
+    "2": "The islands",
+    "3": "The condition"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Darwin's finches are best known from which islands?",
+     "choices": [
+      "The Galápagos Islands",
+      "Madagascar",
+      "The Canary Islands",
+      "Hawaii"
+     ],
+     "answer": 0,
+     "explanation": "The finches' beaks differ from island to island."
+    },
+    {
+     "level": 3,
+     "question": "For natural selection to change a population, traits must be what?",
+     "choices": [
+      "Identical in all members",
+      "Learned during life",
+      "Variable and heritable",
+      "Chosen by each individual"
+     ],
+     "answer": 2,
+     "explanation": "Only differences that can be inherited can accumulate over generations."
+    }
+   ]
+  },
+  {
+   "id": "nat2-009",
+   "ask": {
+    "1": "The retina",
+    "2": "The cones",
+    "3": "Night blindness"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which retinal cells are responsible for colour vision?",
+     "choices": [
+      "Epithelial cells",
+      "Rods",
+      "Cones",
+      "Glial cells"
+     ],
+     "answer": 2,
+     "explanation": "Rods work in dim light; cones need brighter light."
+    },
+    {
+     "level": 3,
+     "question": "A lack of which vitamin can cause night blindness?",
+     "choices": [
+      "Vitamin D",
+      "Vitamin C",
+      "Vitamin K",
+      "Vitamin A"
+     ],
+     "answer": 3,
+     "explanation": "Vitamin A is needed to make the light-sensitive pigment in rods."
+    }
+   ]
+  },
+  {
+   "id": "nat2-020",
+   "ask": {
+    "1": "The bone",
+    "2": "The muscle",
+    "3": "The tendon"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which type of muscle makes up the heart?",
+     "choices": [
+      "Voluntary muscle",
+      "Smooth muscle",
+      "Cardiac muscle",
+      "Skeletal muscle"
+     ],
+     "answer": 2,
+     "explanation": "Cardiac muscle contracts without conscious control."
+    },
+    {
+     "level": 3,
+     "question": "Which tissue connects muscle to bone?",
+     "choices": [
+      "A tendon",
+      "Cartilage",
+      "A ligament",
+      "Fat"
+     ],
+     "answer": 0,
+     "explanation": "Ligaments connect bone to bone."
+    }
+   ]
+  },
+  {
+   "id": "nat-003",
+   "ask": {
+    "1": "Plant gas",
+    "2": "Photosynthesis",
+    "3": "Gas released"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which gas do plants release as a by-product of photosynthesis?",
+     "choices": [
+      "Carbon dioxide",
+      "Nitrogen",
+      "Oxygen",
+      "Methane"
+     ],
+     "answer": 2,
+     "explanation": "Photosynthesis releases oxygen."
+    },
+    {
+     "level": 3,
+     "question": "Which green pigment in leaves captures light for photosynthesis?",
+     "choices": [
+      "Chlorophyll",
+      "Haemoglobin",
+      "Keratin",
+      "Melanin"
+     ],
+     "answer": 0,
+     "explanation": "Chlorophyll absorbs light to power the process."
+    }
+   ]
+  },
+  {
+   "id": "nat-014",
+   "ask": {
+    "1": "Tree",
+    "2": "Oak seeds",
+    "3": "Another seed"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What do squirrels often collect and bury in autumn from oak trees?",
+     "choices": [
+      "Acorns",
+      "Maple keys",
+      "Chestnuts",
+      "Pine cones"
+     ],
+     "answer": 0,
+     "explanation": "Squirrels cache acorns."
+    },
+    {
+     "level": 3,
+     "question": "Which tree produces winged seeds called samaras, sometimes called helicopters?",
+     "choices": [
+      "Pine",
+      "Walnut",
+      "Oak",
+      "Maple"
+     ],
+     "answer": 3,
+     "explanation": "Maples have winged samaras."
+    }
+   ]
+  },
+  {
+   "id": "nat2-004",
+   "ask": {
+    "1": "The pigment",
+    "2": "The gas",
+    "3": "The pores"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which gas do plants release during photosynthesis?",
+     "choices": [
+      "Methane",
+      "Carbon dioxide",
+      "Oxygen",
+      "Nitrogen"
+     ],
+     "answer": 2,
+     "explanation": "Water is split and oxygen is released as a by-product."
+    },
+    {
+     "level": 3,
+     "question": "Which tiny leaf openings let a plant exchange gases with the air?",
+     "choices": [
+      "Stomata",
+      "Root hairs",
+      "Xylem vessels",
+      "Sepals"
+     ],
+     "answer": 0,
+     "explanation": "Guard cells open and close the stomata."
+    }
+   ]
+  },
+  {
+   "id": "trk-015",
+   "ask": {
+    "1": "Tomato fruit or vegetable",
+    "2": "Cucumber",
+    "3": "Not a fruit"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which of these is botanically a fruit but usually cooked as a vegetable?",
+     "choices": [
+      "Potato",
+      "Cucumber",
+      "Carrot",
+      "Spinach"
+     ],
+     "answer": 1,
+     "explanation": "A cucumber develops from the ovary and contains seeds. Carrots are roots, spinach is leaves and potatoes are tubers."
+    },
+    {
+     "level": 3,
+     "question": "Which of these is NOT botanically a fruit?",
+     "choices": [
+      "Pumpkin",
+      "Pepper",
+      "Rhubarb",
+      "Aubergine"
+     ],
+     "answer": 2,
+     "explanation": "Rhubarb is a leaf stalk. Pumpkins, aubergines and peppers develop from flower ovaries."
     }
    ]
   },
@@ -310,104 +956,70 @@
    ]
   },
   {
-   "id": "nat-010",
+   "id": "nat-022",
    "ask": {
-    "1": "Small bone",
-    "2": "Smallest bone",
-    "3": "Where"
+    "1": "Vitamin",
+    "2": "Sunlight",
+    "3": "Bones"
    },
    "variants": [
     {
      "level": 1,
-     "question": "Which part of the body does the stapes belong to?",
+     "question": "Which vitamin is often called the sunshine vitamin?",
      "choices": [
-      "The ear",
-      "The foot",
-      "The hand",
-      "The jaw"
+      "Vitamin A",
+      "Vitamin C",
+      "Vitamin D",
+      "Vitamin B"
      ],
-     "answer": 0,
-     "explanation": "The stapes is one of the three tiny bones of the middle ear."
+     "answer": 2,
+     "explanation": "Vitamin D is made in the skin in sunlight."
     },
     {
-     "level": 2,
-     "question": "The three tiny bones of the middle ear are the stapes, the incus and which other?",
+     "level": 3,
+     "question": "A lack of vitamin D in children can cause which bone disease?",
      "choices": [
-      "The ulna",
-      "The sternum",
-      "The femur",
-      "The malleus"
+      "Rickets",
+      "Pellagra",
+      "Beriberi",
+      "Scurvy"
      ],
-     "answer": 3,
-     "explanation": "The malleus, incus and stapes carry sound vibrations."
+     "answer": 0,
+     "explanation": "Rickets softens children's bones."
     }
    ]
   },
   {
-   "id": "nat-011",
+   "id": "nat-025",
    "ask": {
-    "1": "Change process",
-    "2": "Metamorphosis",
-    "3": "Stage"
+    "1": "Brain myth",
+    "2": "Brain use",
+    "3": "Brain facts"
    },
    "variants": [
     {
-     "level": 2,
-     "question": "What is the stage called between caterpillar and butterfly, when the insect is inside a case?",
+     "level": 1,
+     "question": "Which organ sits inside the skull?",
      "choices": [
-      "The imago",
-      "The egg",
-      "The larva",
-      "The pupa"
+      "The liver",
+      "The heart",
+      "The brain",
+      "The lungs"
+     ],
+     "answer": 2,
+     "explanation": "The brain is protected by the skull."
+    },
+    {
+     "level": 3,
+     "question": "About how much of the body's energy does the human brain use at rest?",
+     "choices": [
+      "About 80%",
+      "About 2%",
+      "About 50%",
+      "About 20%"
      ],
      "answer": 3,
-     "explanation": "The chrysalis or pupa is the stage before the adult."
-    },
-    {
-     "level": 3,
-     "question": "What is the name of the hardened case a butterfly caterpillar makes in its pupal stage?",
-     "choices": [
-      "A shell",
-      "A chrysalis",
-      "A cocoon",
-      "A cyst"
-     ],
-     "answer": 1,
-     "explanation": "Butterflies form a chrysalis; many moths spin a silk cocoon."
-    }
-   ]
-  },
-  {
-   "id": "nat-012",
-   "ask": {
-    "1": "Marsupial",
-    "2": "Kangaroo",
-    "3": "Pouch"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "Which of these is also a marsupial, found in Australia and often seen eating eucalyptus leaves?",
-     "choices": [
-      "Koala",
-      "Meerkat",
-      "Panda",
-      "Sloth"
-     ],
-     "answer": 0,
-     "explanation": "The koala is a marsupial."
-    },
-    {
-     "level": 3,
-     "question": "A baby kangaroo is called what?",
-     "choices": [
-      "A joey",
-      "A cub",
-      "A pup",
-      "A kit"
-     ],
-     "answer": 0,
-     "explanation": "Marsupial babies are called joeys."
+     "explanation": "The brain uses roughly 20 percent of resting energy."
     }
    ]
   },
@@ -442,40 +1054,6 @@
      ],
      "answer": 1,
      "explanation": "A group of crows is a murder; a group of owls is a parliament."
-    }
-   ]
-  },
-  {
-   "id": "nat-014",
-   "ask": {
-    "1": "Tree",
-    "2": "Oak seeds",
-    "3": "Another seed"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "What do squirrels often collect and bury in autumn from oak trees?",
-     "choices": [
-      "Acorns",
-      "Maple keys",
-      "Chestnuts",
-      "Pine cones"
-     ],
-     "answer": 0,
-     "explanation": "Squirrels cache acorns."
-    },
-    {
-     "level": 3,
-     "question": "Which tree produces winged seeds called samaras, sometimes called helicopters?",
-     "choices": [
-      "Pine",
-      "Walnut",
-      "Oak",
-      "Maple"
-     ],
-     "answer": 3,
-     "explanation": "Maples have winged samaras."
     }
    ]
   },
@@ -548,108 +1126,6 @@
    ]
   },
   {
-   "id": "nat-017",
-   "ask": {
-    "1": "Tall tree",
-    "2": "Redwood",
-    "3": "Where"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which of these is a very tall tree found in California?",
-     "choices": [
-      "Oak",
-      "Birch",
-      "Willow",
-      "Redwood"
-     ],
-     "answer": 3,
-     "explanation": "Coast redwoods grow in California."
-    },
-    {
-     "level": 2,
-     "question": "About how tall can the tallest coast redwoods grow?",
-     "choices": [
-      "Over 20 metres",
-      "Over 110 metres",
-      "Over 40 metres",
-      "Over 200 metres"
-     ],
-     "answer": 1,
-     "explanation": "Hyperion is about 116 metres tall."
-    }
-   ]
-  },
-  {
-   "id": "nat-018",
-   "ask": {
-    "1": "Study of birds",
-    "2": "Ornithology",
-    "3": "Other -ology"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "What is the name for a person who studies birds?",
-     "choices": [
-      "A geologist",
-      "A botanist",
-      "An ornithologist",
-      "An entomologist"
-     ],
-     "answer": 2,
-     "explanation": "Ornithologists study birds."
-    },
-    {
-     "level": 2,
-     "question": "Entomology is the study of what?",
-     "choices": [
-      "Reptiles",
-      "Fish",
-      "Birds",
-      "Insects"
-     ],
-     "answer": 3,
-     "explanation": "It covers all insects."
-    }
-   ]
-  },
-  {
-   "id": "nat-019",
-   "ask": {
-    "1": "Eye part",
-    "2": "Iris",
-    "3": "Function"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "What is the coloured part of the eye?",
-     "choices": [
-      "The lens",
-      "The retina",
-      "The cornea",
-      "The iris"
-     ],
-     "answer": 3,
-     "explanation": "The iris gives eyes their colour."
-    },
-    {
-     "level": 2,
-     "question": "What is the dark opening at the centre of the eye called?",
-     "choices": [
-      "The sclera",
-      "The optic nerve",
-      "The retina",
-      "The pupil"
-     ],
-     "answer": 3,
-     "explanation": "The pupil lets light in."
-    }
-   ]
-  },
-  {
    "id": "nat-020",
    "ask": {
     "1": "Largest cat",
@@ -680,108 +1156,6 @@
      ],
      "answer": 0,
      "explanation": "The Amur tiger is the largest."
-    }
-   ]
-  },
-  {
-   "id": "nat-021",
-   "ask": {
-    "1": "Heart",
-    "2": "Four chambers",
-    "3": "Blood"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "What are the two lower chambers of the heart called?",
-     "choices": [
-      "Arteries",
-      "Atria",
-      "Ventricles",
-      "Valves"
-     ],
-     "answer": 2,
-     "explanation": "The ventricles pump blood out."
-    },
-    {
-     "level": 3,
-     "question": "Which blood vessels carry oxygen-rich blood away from the heart to the body?",
-     "choices": [
-      "Veins",
-      "Lymphatics",
-      "Capillaries",
-      "Arteries"
-     ],
-     "answer": 3,
-     "explanation": "Arteries carry blood away from the heart."
-    }
-   ]
-  },
-  {
-   "id": "nat-022",
-   "ask": {
-    "1": "Vitamin",
-    "2": "Sunlight",
-    "3": "Bones"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which vitamin is often called the sunshine vitamin?",
-     "choices": [
-      "Vitamin A",
-      "Vitamin C",
-      "Vitamin D",
-      "Vitamin B"
-     ],
-     "answer": 2,
-     "explanation": "Vitamin D is made in the skin in sunlight."
-    },
-    {
-     "level": 3,
-     "question": "A lack of vitamin D in children can cause which bone disease?",
-     "choices": [
-      "Rickets",
-      "Pellagra",
-      "Beriberi",
-      "Scurvy"
-     ],
-     "answer": 0,
-     "explanation": "Rickets softens children's bones."
-    }
-   ]
-  },
-  {
-   "id": "nat-023",
-   "ask": {
-    "1": "Banana",
-    "2": "Berry or not",
-    "3": "Botany"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which of these fruits is yellow when ripe and grows in bunches on a tropical plant?",
-     "choices": [
-      "An apple",
-      "A cherry",
-      "A plum",
-      "A banana"
-     ],
-     "answer": 3,
-     "explanation": "Bananas grow in hanging bunches."
-    },
-    {
-     "level": 2,
-     "question": "Botanically, which of these is a berry?",
-     "choices": [
-      "A blackberry",
-      "A strawberry",
-      "A banana",
-      "A raspberry"
-     ],
-     "answer": 2,
-     "explanation": "Bananas are berries; strawberries and raspberries are not."
     }
    ]
   },
@@ -820,138 +1194,308 @@
    ]
   },
   {
-   "id": "nat-025",
+   "id": "nat-030",
    "ask": {
-    "1": "Brain myth",
-    "2": "Brain use",
-    "3": "Brain facts"
+    "1": "Egg-laying mammal",
+    "2": "Platypus",
+    "3": "Group"
    },
    "variants": [
     {
      "level": 1,
-     "question": "Which organ sits inside the skull?",
+     "question": "Which of these animals lays eggs?",
      "choices": [
-      "The liver",
-      "The heart",
-      "The brain",
-      "The lungs"
-     ],
-     "answer": 2,
-     "explanation": "The brain is protected by the skull."
-    },
-    {
-     "level": 3,
-     "question": "About how much of the body's energy does the human brain use at rest?",
-     "choices": [
-      "About 80%",
-      "About 2%",
-      "About 50%",
-      "About 20%"
-     ],
-     "answer": 3,
-     "explanation": "The brain uses roughly 20 percent of resting energy."
-    }
-   ]
-  },
-  {
-   "id": "nat-026",
-   "ask": {
-    "1": "Big wingspan",
-    "2": "Albatross",
-    "3": "Size"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which is a big seabird known for gliding over the ocean for long distances?",
-     "choices": [
-      "Robin",
-      "Sparrow",
-      "Albatross",
-      "Hummingbird"
-     ],
-     "answer": 2,
-     "explanation": "Albatrosses glide for hours."
-    },
-    {
-     "level": 2,
-     "question": "The wandering albatross lives mostly in which part of the world?",
-     "choices": [
-      "The Amazon",
-      "The Arctic",
-      "The Southern Ocean",
-      "The Sahara"
-     ],
-     "answer": 2,
-     "explanation": "It ranges across the Southern Ocean."
-    }
-   ]
-  },
-  {
-   "id": "nat-027",
-   "ask": {
-    "1": "Insect legs",
-    "2": "Six legs",
-    "3": "Body"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "How many body segments do adult insects have?",
-     "choices": [
-      "Two",
-      "Five",
-      "Three",
-      "Four"
-     ],
-     "answer": 2,
-     "explanation": "Head, thorax and abdomen."
-    },
-    {
-     "level": 3,
-     "question": "How many legs does a spider have, which makes it not an insect?",
-     "choices": [
-      "10",
-      "6",
-      "8",
-      "4"
-     ],
-     "answer": 2,
-     "explanation": "Spiders have eight legs."
-    }
-   ]
-  },
-  {
-   "id": "nat-028",
-   "ask": {
-    "1": "Plant tissue",
-    "2": "Xylem",
-    "3": "Opposite"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which part of a plant absorbs water from the soil?",
-     "choices": [
-      "The petals",
-      "The roots",
-      "The leaves",
-      "The flowers"
-     ],
-     "answer": 1,
-     "explanation": "Roots absorb water."
-    },
-    {
-     "level": 2,
-     "question": "Which part of a plant mainly makes food by photosynthesis?",
-     "choices": [
-      "The leaves",
-      "The bark",
-      "The roots",
-      "The seeds"
+      "A chicken",
+      "A dog",
+      "A cat",
+      "A cow"
      ],
      "answer": 0,
-     "explanation": "Leaves do most photosynthesis."
+     "explanation": "Chickens lay eggs."
+    },
+    {
+     "level": 3,
+     "question": "The platypus and echidnas make up which group of egg-laying mammals?",
+     "choices": [
+      "Primates",
+      "Marsupials",
+      "Monotremes",
+      "Rodents"
+     ],
+     "answer": 2,
+     "explanation": "They are monotremes."
+    }
+   ]
+  },
+  {
+   "id": "nat2-019",
+   "ask": {
+    "1": "Hibernation",
+    "2": "Nocturnal",
+    "3": "Crepuscular"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What do we call a long winter sleep in some animals?",
+     "choices": [
+      "Migration",
+      "Hibernation",
+      "Metamorphosis",
+      "Camouflage"
+     ],
+     "answer": 1,
+     "explanation": "Hibernating animals greatly slow their heartbeat and metabolism."
+    },
+    {
+     "level": 3,
+     "question": "What do we call animals that are mainly active at dawn and dusk?",
+     "choices": [
+      "Diurnal",
+      "Nocturnal",
+      "Nomadic",
+      "Crepuscular"
+     ],
+     "answer": 3,
+     "explanation": "Many rabbits and deer are crepuscular."
+    }
+   ]
+  },
+  {
+   "id": "nat-002",
+   "ask": {
+    "1": "Cell part",
+    "2": "Powerhouse",
+    "3": "What it makes"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which of these is the basic building block of all living things?",
+     "choices": [
+      "The cell",
+      "The molecule only",
+      "The organ",
+      "The atom only"
+     ],
+     "answer": 0,
+     "explanation": "Cells are the basic units of life."
+    },
+    {
+     "level": 3,
+     "question": "Mitochondria produce which energy-carrying molecule?",
+     "choices": [
+      "RNA",
+      "ATP",
+      "Glucose",
+      "DNA"
+     ],
+     "answer": 1,
+     "explanation": "Mitochondria make ATP through cellular respiration."
+    }
+   ]
+  },
+  {
+   "id": "nat2-002",
+   "ask": {
+    "1": "The molecule",
+    "2": "The shape",
+    "3": "The pioneer"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which molecule carries the genetic information of most living things?",
+     "choices": [
+      "Haemoglobin",
+      "DNA",
+      "ATP",
+      "Cellulose"
+     ],
+     "answer": 1,
+     "explanation": "DNA stores instructions for building proteins."
+    },
+    {
+     "level": 3,
+     "question": "Which scientist studied inheritance using pea plants in the 1860s?",
+     "choices": [
+      "Gregor Mendel",
+      "Alfred Wallace",
+      "Louis Pasteur",
+      "Charles Darwin"
+     ],
+     "answer": 0,
+     "explanation": "Mendel's work revealed the basic rules of heredity."
+    }
+   ]
+  },
+  {
+   "id": "nat2-007",
+   "ask": {
+    "1": "The builders",
+    "2": "The system",
+    "3": "The algae"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which tiny animals build coral reefs?",
+     "choices": [
+      "Plankton",
+      "Sponges",
+      "Jellyfish",
+      "Coral polyps"
+     ],
+     "answer": 3,
+     "explanation": "Polyps secrete limestone skeletons that accumulate over time."
+    },
+    {
+     "level": 3,
+     "question": "Coral bleaching happens when corals expel which algae living in their tissues?",
+     "choices": [
+      "Zooxanthellae",
+      "Diatoms",
+      "Kelp",
+      "Spirulina"
+     ],
+     "answer": 0,
+     "explanation": "Stress from warm water makes corals lose these algae and their colour."
+    }
+   ]
+  },
+  {
+   "id": "nat2-011",
+   "ask": {
+    "1": "Pollination",
+    "2": "The stamen",
+    "3": "Cones"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What is the transfer of pollen between flowers, allowing fertilisation, called?",
+     "choices": [
+      "Respiration",
+      "Pollination",
+      "Germination",
+      "Fermentation"
+     ],
+     "answer": 1,
+     "explanation": "Insects, birds, wind and water can carry pollen."
+    },
+    {
+     "level": 3,
+     "question": "Which group of plants produces its seeds in cones?",
+     "choices": [
+      "Conifers",
+      "Grasses",
+      "Ferns",
+      "Mosses"
+     ],
+     "answer": 0,
+     "explanation": "Pines, firs and spruces are conifers."
+    }
+   ]
+  },
+  {
+   "id": "nat-019",
+   "ask": {
+    "1": "Eye part",
+    "2": "Iris",
+    "3": "Function"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What is the coloured part of the eye?",
+     "choices": [
+      "The lens",
+      "The retina",
+      "The cornea",
+      "The iris"
+     ],
+     "answer": 3,
+     "explanation": "The iris gives eyes their colour."
+    },
+    {
+     "level": 2,
+     "question": "What is the dark opening at the centre of the eye called?",
+     "choices": [
+      "The sclera",
+      "The optic nerve",
+      "The retina",
+      "The pupil"
+     ],
+     "answer": 3,
+     "explanation": "The pupil lets light in."
+    }
+   ]
+  },
+  {
+   "id": "nat-004",
+   "ask": {
+    "1": "Heart count",
+    "2": "Octopus hearts",
+    "3": "Why"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "How many arms does an octopus have?",
+     "choices": [
+      "8",
+      "10",
+      "4",
+      "6"
+     ],
+     "answer": 0,
+     "explanation": "Octopuses have eight arms."
+    },
+    {
+     "level": 2,
+     "question": "Octopus blood is blue because it contains which metal?",
+     "choices": [
+      "Silver",
+      "Iron",
+      "Copper",
+      "Zinc"
+     ],
+     "answer": 2,
+     "explanation": "Their blood uses copper-based hemocyanin."
+    }
+   ]
+  },
+  {
+   "id": "nat-018",
+   "ask": {
+    "1": "Study of birds",
+    "2": "Ornithology",
+    "3": "Other -ology"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What is the name for a person who studies birds?",
+     "choices": [
+      "A geologist",
+      "A botanist",
+      "An ornithologist",
+      "An entomologist"
+     ],
+     "answer": 2,
+     "explanation": "Ornithologists study birds."
+    },
+    {
+     "level": 2,
+     "question": "Entomology is the study of what?",
+     "choices": [
+      "Reptiles",
+      "Fish",
+      "Birds",
+      "Insects"
+     ],
+     "answer": 3,
+     "explanation": "It covers all insects."
     }
    ]
   },
@@ -990,36 +1534,308 @@
    ]
   },
   {
-   "id": "nat-030",
+   "id": "nat2-012",
    "ask": {
-    "1": "Egg-laying mammal",
-    "2": "Platypus",
-    "3": "Group"
+    "1": "Amphibians",
+    "2": "Reptiles",
+    "3": "The difference"
    },
    "variants": [
     {
      "level": 1,
-     "question": "Which of these animals lays eggs?",
+     "question": "Which group of animals lives part of its life in water and part on land, like frogs?",
      "choices": [
-      "A chicken",
-      "A dog",
-      "A cat",
-      "A cow"
+      "Amphibians",
+      "Fish",
+      "Mammals",
+      "Reptiles"
      ],
      "answer": 0,
-     "explanation": "Chickens lay eggs."
+     "explanation": "Most amphibians begin life as water-breathing larvae."
     },
     {
-     "level": 3,
-     "question": "The platypus and echidnas make up which group of egg-laying mammals?",
+     "level": 2,
+     "question": "Which of these animals is a reptile?",
      "choices": [
-      "Primates",
-      "Marsupials",
-      "Monotremes",
-      "Rodents"
+      "A salamander",
+      "A toad",
+      "A crocodile",
+      "A newt"
      ],
      "answer": 2,
-     "explanation": "They are monotremes."
+     "explanation": "Crocodiles have dry scaly skin."
+    }
+   ]
+  },
+  {
+   "id": "nat2-016",
+   "ask": {
+    "1": "The dodo",
+    "2": "The moa",
+    "3": "The dinosaurs"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which flightless bird of Mauritius was driven to extinction by the late 17th century?",
+     "choices": [
+      "The elephant bird",
+      "The great auk",
+      "The dodo",
+      "The moa"
+     ],
+     "answer": 2,
+     "explanation": "Sailors, introduced animals and habitat loss wiped it out."
+    },
+    {
+     "level": 2,
+     "question": "Which giant flightless bird of New Zealand was hunted to extinction soon after humans arrived?",
+     "choices": [
+      "The moa",
+      "The dodo",
+      "The great auk",
+      "The kakapo"
+     ],
+     "answer": 0,
+     "explanation": "Moa died out within a few centuries of Polynesian settlement."
+    }
+   ]
+  },
+  {
+   "id": "nat2-006",
+   "ask": {
+    "1": "The sunlit zone",
+    "2": "The trench",
+    "3": "The depth"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which ocean layer receives enough light for photosynthesis?",
+     "choices": [
+      "The sunlit (photic) zone",
+      "The abyssal zone",
+      "The midnight zone",
+      "The hadal zone"
+     ],
+     "answer": 0,
+     "explanation": "Light fades out within a few hundred metres."
+    },
+    {
+     "level": 2,
+     "question": "Which trench contains the deepest known point in the oceans?",
+     "choices": [
+      "The Mariana Trench",
+      "The Tonga Trench",
+      "The Java Trench",
+      "The Kermadec Trench"
+     ],
+     "answer": 0,
+     "explanation": "The point is called the Challenger Deep."
+    }
+   ]
+  },
+  {
+   "id": "nat-017",
+   "ask": {
+    "1": "Tall tree",
+    "2": "Redwood",
+    "3": "Where"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which of these is a very tall tree found in California?",
+     "choices": [
+      "Oak",
+      "Birch",
+      "Willow",
+      "Redwood"
+     ],
+     "answer": 3,
+     "explanation": "Coast redwoods grow in California."
+    },
+    {
+     "level": 2,
+     "question": "About how tall can the tallest coast redwoods grow?",
+     "choices": [
+      "Over 20 metres",
+      "Over 110 metres",
+      "Over 40 metres",
+      "Over 200 metres"
+     ],
+     "answer": 1,
+     "explanation": "Hyperion is about 116 metres tall."
+    }
+   ]
+  },
+  {
+   "id": "nat-023",
+   "ask": {
+    "1": "Banana",
+    "2": "Berry or not",
+    "3": "Botany"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which of these fruits is yellow when ripe and grows in bunches on a tropical plant?",
+     "choices": [
+      "An apple",
+      "A cherry",
+      "A plum",
+      "A banana"
+     ],
+     "answer": 3,
+     "explanation": "Bananas grow in hanging bunches."
+    },
+    {
+     "level": 2,
+     "question": "Botanically, which of these is a berry?",
+     "choices": [
+      "A blackberry",
+      "A strawberry",
+      "A banana",
+      "A raspberry"
+     ],
+     "answer": 2,
+     "explanation": "Bananas are berries; strawberries and raspberries are not."
+    }
+   ]
+  },
+  {
+   "id": "nat-028",
+   "ask": {
+    "1": "Plant tissue",
+    "2": "Xylem",
+    "3": "Opposite"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which part of a plant absorbs water from the soil?",
+     "choices": [
+      "The petals",
+      "The roots",
+      "The leaves",
+      "The flowers"
+     ],
+     "answer": 1,
+     "explanation": "Roots absorb water."
+    },
+    {
+     "level": 2,
+     "question": "Which part of a plant mainly makes food by photosynthesis?",
+     "choices": [
+      "The leaves",
+      "The bark",
+      "The roots",
+      "The seeds"
+     ],
+     "answer": 0,
+     "explanation": "Leaves do most photosynthesis."
+    }
+   ]
+  },
+  {
+   "id": "nat-010",
+   "ask": {
+    "1": "Small bone",
+    "2": "Smallest bone",
+    "3": "Where"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which part of the body does the stapes belong to?",
+     "choices": [
+      "The ear",
+      "The foot",
+      "The hand",
+      "The jaw"
+     ],
+     "answer": 0,
+     "explanation": "The stapes is one of the three tiny bones of the middle ear."
+    },
+    {
+     "level": 2,
+     "question": "The three tiny bones of the middle ear are the stapes, the incus and which other?",
+     "choices": [
+      "The ulna",
+      "The sternum",
+      "The femur",
+      "The malleus"
+     ],
+     "answer": 3,
+     "explanation": "The malleus, incus and stapes carry sound vibrations."
+    }
+   ]
+  },
+  {
+   "id": "nat-026",
+   "ask": {
+    "1": "Big wingspan",
+    "2": "Albatross",
+    "3": "Size"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which is a big seabird known for gliding over the ocean for long distances?",
+     "choices": [
+      "Robin",
+      "Sparrow",
+      "Albatross",
+      "Hummingbird"
+     ],
+     "answer": 2,
+     "explanation": "Albatrosses glide for hours."
+    },
+    {
+     "level": 2,
+     "question": "The wandering albatross lives mostly in which part of the world?",
+     "choices": [
+      "The Amazon",
+      "The Arctic",
+      "The Southern Ocean",
+      "The Sahara"
+     ],
+     "answer": 2,
+     "explanation": "It ranges across the Southern Ocean."
+    }
+   ]
+  },
+  {
+   "id": "nat2-008",
+   "ask": {
+    "1": "Absorption",
+    "2": "Bile",
+    "3": "Saliva"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Where does most absorption of nutrients take place in the human digestive system?",
+     "choices": [
+      "The small intestine",
+      "The stomach",
+      "The oesophagus",
+      "The large intestine"
+     ],
+     "answer": 0,
+     "explanation": "Its lining is folded into villi that give a huge surface area."
+    },
+    {
+     "level": 2,
+     "question": "Which organ produces bile?",
+     "choices": [
+      "The liver",
+      "The pancreas",
+      "The stomach",
+      "The spleen"
+     ],
+     "answer": 0,
+     "explanation": "Bile helps digest fats and is stored in the gallbladder."
     }
    ]
   }

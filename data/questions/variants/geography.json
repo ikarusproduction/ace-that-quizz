@@ -4,6 +4,74 @@
  "note": "Difficulty ladders: the original question keeps its own level, these are the other levels. Unreviewed.",
  "families": [
   {
+   "id": "geo-029",
+   "ask": {
+    "1": "Equator",
+    "2": "Zero latitude",
+    "3": "Hemisphere"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "The Equator divides the Earth into which two hemispheres?",
+     "choices": [
+      "Land and water",
+      "Northern and Southern",
+      "Eastern and Western",
+      "Frozen and warm"
+     ],
+     "answer": 1,
+     "explanation": "Latitude 0 splits north from south."
+    },
+    {
+     "level": 3,
+     "question": "About how long is the Earth's circumference at the Equator?",
+     "choices": [
+      "About 20,000 kilometres",
+      "About 40,075 kilometres",
+      "About 100,000 kilometres",
+      "About 10,000 kilometres"
+     ],
+     "answer": 1,
+     "explanation": "The equatorial circumference is about 40,075 km."
+    }
+   ]
+  },
+  {
+   "id": "geo2-011",
+   "ask": {
+    "1": "The range",
+    "2": "The microstate",
+    "3": "The river"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which small country lies in the Pyrenees between France and Spain?",
+     "choices": [
+      "Luxembourg",
+      "Andorra",
+      "Monaco",
+      "Liechtenstein"
+     ],
+     "answer": 1,
+     "explanation": "It is a co-principality in the eastern Pyrenees."
+    },
+    {
+     "level": 3,
+     "question": "Which river forms much of the border between Germany and Poland?",
+     "choices": [
+      "The Danube",
+      "The Elbe",
+      "The Rhine",
+      "The Oder"
+     ],
+     "answer": 3,
+     "explanation": "The Oder and its tributary the Neisse mark the border."
+    }
+   ]
+  },
+  {
    "id": "geo-001",
    "ask": {
     "1": "Country's capital",
@@ -34,6 +102,380 @@
      ],
      "answer": 1,
      "explanation": "The Eiffel Tower stands on the Champ de Mars in the 7th arrondissement."
+    }
+   ]
+  },
+  {
+   "id": "geo2-004",
+   "ask": {
+    "1": "The belt",
+    "2": "The lake",
+    "3": "The wind"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which lake bordering Chad, Cameroon, Niger and Nigeria has shrunk dramatically since the 1960s?",
+     "choices": [
+      "Lake Chad",
+      "Lake Tanganyika",
+      "Lake Malawi",
+      "Lake Victoria"
+     ],
+     "answer": 0,
+     "explanation": "Drought and water use have shrunk it greatly."
+    },
+    {
+     "level": 3,
+     "question": "Which dry, dusty wind blows from the Sahara across West Africa in winter?",
+     "choices": [
+      "The Mistral",
+      "The Harmattan",
+      "The Monsoon",
+      "The Chinook"
+     ],
+     "answer": 1,
+     "explanation": "The Harmattan carries fine dust that reduces visibility."
+    }
+   ]
+  },
+  {
+   "id": "geo2-005",
+   "ask": {
+    "1": "The wind",
+    "2": "The direction",
+    "3": "The rainiest place"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "From which direction do the summer monsoon winds mainly reach India?",
+     "choices": [
+      "The south-east",
+      "The north-east",
+      "The north-west",
+      "The south-west"
+     ],
+     "answer": 3,
+     "explanation": "Moist air flows in from the Indian Ocean."
+    },
+    {
+     "level": 3,
+     "question": "Cherrapunji and Mawsynram, among the wettest places on Earth, are in which Indian state?",
+     "choices": [
+      "Sikkim",
+      "Meghalaya",
+      "Kerala",
+      "Assam"
+     ],
+     "answer": 1,
+     "explanation": "They lie on the Khasi Hills, which catch monsoon air."
+    }
+   ]
+  },
+  {
+   "id": "geo2-015",
+   "ask": {
+    "1": "The rainforest",
+    "2": "The system",
+    "3": "The Mediterranean climate"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "The Köppen system classifies world climates mainly by what?",
+     "choices": [
+      "Population and cities",
+      "Rock types and soil",
+      "Temperature and rainfall patterns",
+      "Ocean currents only"
+     ],
+     "answer": 2,
+     "explanation": "It uses temperature, precipitation and vegetation."
+    },
+    {
+     "level": 3,
+     "question": "Which climate has hot, dry summers and mild, wet winters, as around the Mediterranean and in California?",
+     "choices": [
+      "A polar climate",
+      "A humid tropical climate",
+      "A continental climate",
+      "A Mediterranean climate"
+     ],
+     "answer": 3,
+     "explanation": "It also occurs in central Chile and parts of Australia and South Africa."
+    }
+   ]
+  },
+  {
+   "id": "trk-008",
+   "ask": {
+    "1": "Map size",
+    "2": "What Mercator distorts",
+    "3": "What Mercator preserves"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What does the Mercator projection exaggerate most?",
+     "choices": [
+      "The distances between the poles",
+      "The number of coastlines",
+      "The size of areas far from the equator",
+      "The size of areas near the equator"
+     ],
+     "answer": 2,
+     "explanation": "Scale grows with latitude, so Greenland and Russia look much bigger than they are."
+    },
+    {
+     "level": 3,
+     "question": "Which property does the Mercator projection preserve, which made it useful for sailors?",
+     "choices": [
+      "The same scale everywhere",
+      "Areas",
+      "Angles, so a constant compass bearing is a straight line",
+      "Distances from the centre"
+     ],
+     "answer": 2,
+     "explanation": "Mercator is conformal: it keeps local angles but distorts area."
+    }
+   ]
+  },
+  {
+   "id": "geo-027",
+   "ask": {
+    "1": "Largest state",
+    "2": "Alaska",
+    "3": "Bought from"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "From which country did the United States buy Alaska in 1867?",
+     "choices": [
+      "Russia",
+      "France",
+      "Canada",
+      "Spain"
+     ],
+     "answer": 0,
+     "explanation": "The US bought Alaska from the Russian Empire."
+    },
+    {
+     "level": 3,
+     "question": "Alaska became the 49th US state in which year?",
+     "choices": [
+      "1975",
+      "1867",
+      "1945",
+      "1959"
+     ],
+     "answer": 3,
+     "explanation": "Alaska achieved statehood in January 1959."
+    }
+   ]
+  },
+  {
+   "id": "geo2-013",
+   "ask": {
+    "1": "The islands",
+    "2": "The strait",
+    "3": "The island"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "The Strait of Malacca separates the island of Sumatra from which peninsula?",
+     "choices": [
+      "The Indochinese Peninsula",
+      "The Malay Peninsula",
+      "The Arabian Peninsula",
+      "The Yucatán Peninsula"
+     ],
+     "answer": 1,
+     "explanation": "It is a major shipping lane between the Indian and Pacific oceans."
+    },
+    {
+     "level": 3,
+     "question": "Which Indonesian island is the most populous island in the world?",
+     "choices": [
+      "Sumatra",
+      "Sulawesi",
+      "Java",
+      "Borneo"
+     ],
+     "answer": 2,
+     "explanation": "More than 140 million people live on Java."
+    }
+   ]
+  },
+  {
+   "id": "geo2-023",
+   "ask": {
+    "1": "The country",
+    "2": "The state",
+    "3": "The strait"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Perth is the capital of which Australian state?",
+     "choices": [
+      "Victoria",
+      "Tasmania",
+      "Queensland",
+      "Western Australia"
+     ],
+     "answer": 3,
+     "explanation": "It is Australia's largest state by area."
+    },
+    {
+     "level": 3,
+     "question": "Which strait separates Tasmania from mainland Australia?",
+     "choices": [
+      "The Cook Strait",
+      "The Torres Strait",
+      "The Bass Strait",
+      "The Foveaux Strait"
+     ],
+     "answer": 2,
+     "explanation": "Bass Strait links the Indian and Pacific oceans' waters."
+    }
+   ]
+  },
+  {
+   "id": "trk-005",
+   "ask": {
+    "1": "Not the biggest city",
+    "2": "Switzerland",
+    "3": "More than one capital"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Zurich is Switzerland's largest city. Which city is the seat of its federal government?",
+     "choices": [
+      "Basel",
+      "Lausanne",
+      "Bern",
+      "Geneva"
+     ],
+     "answer": 2,
+     "explanation": "Bern is the federal city; Switzerland formally has no legally designated capital, but Bern hosts the government."
+    },
+    {
+     "level": 3,
+     "question": "Which of these countries has more than one capital city?",
+     "choices": [
+      "Egypt",
+      "Kenya",
+      "South Africa",
+      "Nigeria"
+     ],
+     "answer": 2,
+     "explanation": "South Africa has three: Pretoria (executive), Cape Town (legislative) and Bloemfontein (judicial)."
+    }
+   ]
+  },
+  {
+   "id": "trk-007",
+   "ask": {
+    "1": "Landlocked countries",
+    "2": "Doubly landlocked",
+    "3": "Which one"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which of these is doubly landlocked, meaning all its neighbours are landlocked too?",
+     "choices": [
+      "Austria",
+      "Luxembourg",
+      "Liechtenstein",
+      "Switzerland"
+     ],
+     "answer": 2,
+     "explanation": "Liechtenstein borders only Switzerland and Austria, both landlocked. Switzerland borders France and Italy, which have coasts."
+    },
+    {
+     "level": 3,
+     "question": "Which of these countries is doubly landlocked?",
+     "choices": [
+      "Kazakhstan",
+      "Bolivia",
+      "Mongolia",
+      "Uzbekistan"
+     ],
+     "answer": 3,
+     "explanation": "Uzbekistan and Liechtenstein are the only two. Kazakhstan and Mongolia border Russia and China, which have ocean coasts."
+    }
+   ]
+  },
+  {
+   "id": "geo-010",
+   "ask": {
+    "1": "Largest desert",
+    "2": "Sahara",
+    "3": "Continent"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "The Sahara covers much of which continent?",
+     "choices": [
+      "Australia",
+      "Africa",
+      "South America",
+      "Asia"
+     ],
+     "answer": 1,
+     "explanation": "The Sahara stretches across northern Africa."
+    },
+    {
+     "level": 3,
+     "question": "Which is the largest desert in the world overall, counting cold deserts?",
+     "choices": [
+      "Arctic",
+      "Gobi",
+      "Antarctica",
+      "Sahara"
+     ],
+     "answer": 2,
+     "explanation": "Antarctica is the largest desert by area."
+    }
+   ]
+  },
+  {
+   "id": "geo2-022",
+   "ask": {
+    "1": "The summit",
+    "2": "The neighbour",
+    "3": "The plates"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Mont Blanc stands on the border of France and which other country?",
+     "choices": [
+      "Switzerland",
+      "Germany",
+      "Austria",
+      "Italy"
+     ],
+     "answer": 3,
+     "explanation": "It lies in the Graian Alps."
+    },
+    {
+     "level": 3,
+     "question": "The Alps rose mainly from the collision of the Eurasian plate with which plate?",
+     "choices": [
+      "The Antarctic plate",
+      "The North American plate",
+      "The Pacific plate",
+      "The African plate"
+     ],
+     "answer": 3,
+     "explanation": "Africa and Adria pushed northwards into Europe."
     }
    ]
   },
@@ -72,36 +514,240 @@
    ]
   },
   {
-   "id": "geo-003",
+   "id": "geo2-009",
    "ask": {
-    "1": "Longest river",
-    "2": "Africa's rivers",
-    "3": "Flows into"
+    "1": "Tropic of Cancer",
+    "2": "Arctic Circle",
+    "3": "Prime Meridian"
    },
    "variants": [
     {
-     "level": 1,
-     "question": "In which continent does the Nile flow?",
+     "level": 2,
+     "question": "Which line of latitude lies at about 66.5° north?",
      "choices": [
-      "South America",
-      "Africa",
-      "Europe",
-      "Asia"
+      "The Arctic Circle",
+      "The Antarctic Circle",
+      "The Equator",
+      "The Tropic of Cancer"
      ],
-     "answer": 1,
-     "explanation": "The Nile flows through north-east Africa."
+     "answer": 0,
+     "explanation": "North of it, the Sun can stay above or below the horizon for 24 hours."
     },
     {
      "level": 3,
-     "question": "Into which sea does the Nile flow?",
+     "question": "Which line of longitude passes through Greenwich, in London?",
      "choices": [
-      "The Black Sea",
-      "The Arabian Sea",
-      "The Mediterranean Sea",
-      "The Red Sea"
+      "The Prime Meridian",
+      "The Equator",
+      "The International Date Line",
+      "The Tropic of Capricorn"
+     ],
+     "answer": 0,
+     "explanation": "It is defined as 0° longitude."
+    }
+   ]
+  },
+  {
+   "id": "geo2-017",
+   "ask": {
+    "1": "The continent",
+    "2": "The treaty",
+    "3": "The sea"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which 1959 treaty reserves Antarctica for peaceful and scientific use?",
+     "choices": [
+      "The Treaty of Tordesillas",
+      "The Kyoto Protocol",
+      "The Ramsar Convention",
+      "The Antarctic Treaty"
+     ],
+     "answer": 3,
+     "explanation": "It entered into force in 1961."
+    },
+    {
+     "level": 3,
+     "question": "Which Antarctic sea contains the Ross Ice Shelf?",
+     "choices": [
+      "The Ross Sea",
+      "The Bellingshausen Sea",
+      "The Weddell Sea",
+      "The Amundsen Sea"
+     ],
+     "answer": 0,
+     "explanation": "The shelf is named after the British explorer James Clark Ross."
+    }
+   ]
+  },
+  {
+   "id": "geo2-024",
+   "ask": {
+    "1": "The rivers",
+    "2": "The lowest point",
+    "3": "The strait"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which salt lake, bordering Israel and Jordan, is the lowest point on land?",
+     "choices": [
+      "The Sea of Galilee",
+      "The Red Sea",
+      "The Dead Sea",
+      "The Caspian Sea"
      ],
      "answer": 2,
-     "explanation": "The Nile delta reaches the Mediterranean in Egypt."
+     "explanation": "Its shore lies more than 430 metres below sea level."
+    },
+    {
+     "level": 3,
+     "question": "Which strait connects the Persian Gulf with the Gulf of Oman?",
+     "choices": [
+      "The Bab-el-Mandeb",
+      "The Bosphorus",
+      "The Strait of Hormuz",
+      "The Strait of Malacca"
+     ],
+     "answer": 2,
+     "explanation": "It is a narrow, strategically important passage for oil tankers."
+    }
+   ]
+  },
+  {
+   "id": "geo-012",
+   "ask": {
+    "1": "Paris river",
+    "2": "Seine",
+    "3": "Flows to"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "The Seine flows into which body of water?",
+     "choices": [
+      "The North Sea",
+      "The Mediterranean Sea",
+      "The Bay of Biscay",
+      "The English Channel"
+     ],
+     "answer": 3,
+     "explanation": "It enters the Channel near Le Havre."
+    },
+    {
+     "level": 3,
+     "question": "Which cathedral stands on the Ile de la Cite, an island in the Seine?",
+     "choices": [
+      "Saint-Denis",
+      "Sacre-Coeur",
+      "Notre-Dame",
+      "Chartres"
+     ],
+     "answer": 2,
+     "explanation": "Notre-Dame is on the Ile de la Cite."
+    }
+   ]
+  },
+  {
+   "id": "geo2-001",
+   "ask": {
+    "1": "The sea",
+    "2": "The tributaries",
+    "3": "The source"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which two Niles meet at Khartoum to form the main Nile?",
+     "choices": [
+      "The Blue Nile and the White Nile",
+      "The Zambezi and the Limpopo",
+      "The Tigris and the Euphrates",
+      "The Congo and the Niger"
+     ],
+     "answer": 0,
+     "explanation": "They join in Sudan's capital."
+    },
+    {
+     "level": 3,
+     "question": "In which country does the Blue Nile rise, from Lake Tana?",
+     "choices": [
+      "Uganda",
+      "Sudan",
+      "Ethiopia",
+      "Kenya"
+     ],
+     "answer": 2,
+     "explanation": "Lake Tana lies in the Ethiopian highlands."
+    }
+   ]
+  },
+  {
+   "id": "geo2-020",
+   "ask": {
+    "1": "The cities",
+    "2": "The sea",
+    "3": "The longest"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Into which sea does the Danube empty?",
+     "choices": [
+      "The North Sea",
+      "The Adriatic Sea",
+      "The Baltic Sea",
+      "The Black Sea"
+     ],
+     "answer": 3,
+     "explanation": "Its delta lies in Romania and Ukraine."
+    },
+    {
+     "level": 3,
+     "question": "Which is the longest river entirely within Europe?",
+     "choices": [
+      "The Dnieper",
+      "The Danube",
+      "The Volga",
+      "The Rhine"
+     ],
+     "answer": 2,
+     "explanation": "The Volga is about 3,500 km long."
+    }
+   ]
+  },
+  {
+   "id": "geo2-007",
+   "ask": {
+    "1": "The sea",
+    "2": "The island",
+    "3": "The canal"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which is the largest island in the Mediterranean Sea?",
+     "choices": [
+      "Crete",
+      "Cyprus",
+      "Sicily",
+      "Sardinia"
+     ],
+     "answer": 2,
+     "explanation": "Sicily covers about 25,700 square kilometres."
+    },
+    {
+     "level": 3,
+     "question": "Which canal, opened in 1869, links the Mediterranean with the Red Sea?",
+     "choices": [
+      "The Corinth Canal",
+      "The Kiel Canal",
+      "The Suez Canal",
+      "The Panama Canal"
+     ],
+     "answer": 2,
+     "explanation": "It lets ships avoid sailing around Africa."
     }
    ]
   },
@@ -208,278 +854,6 @@
    ]
   },
   {
-   "id": "geo-007",
-   "ask": {
-    "1": "Most populous",
-    "2": "India",
-    "3": "Population size"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which is the most populous continent?",
-     "choices": [
-      "North America",
-      "Europe",
-      "Asia",
-      "Africa"
-     ],
-     "answer": 2,
-     "explanation": "Asia has more than half the world's population."
-    },
-    {
-     "level": 3,
-     "question": "The population of India is closest to which figure in 2024?",
-     "choices": [
-      "About 800 million",
-      "About 500 million",
-      "About 1.4 billion",
-      "About 2.2 billion"
-     ],
-     "answer": 2,
-     "explanation": "India has roughly 1.4 billion people."
-    }
-   ]
-  },
-  {
-   "id": "geo-008",
-   "ask": {
-    "1": "Border country",
-    "2": "Everest",
-    "3": "Height"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Mount Everest is in which mountain range?",
-     "choices": [
-      "The Himalayas",
-      "The Andes",
-      "The Rockies",
-      "The Alps"
-     ],
-     "answer": 0,
-     "explanation": "Everest is the highest peak in the Himalayas."
-    },
-    {
-     "level": 3,
-     "question": "What is the officially recognised height of Mount Everest, set by China and Nepal in 2020?",
-     "choices": [
-      "8,611 metres",
-      "8,848.86 metres",
-      "8,000 metres",
-      "9,144 metres"
-     ],
-     "answer": 1,
-     "explanation": "The 2020 survey gave 8,848.86 m."
-    }
-   ]
-  },
-  {
-   "id": "geo-009",
-   "ask": {
-    "1": "Smallest country",
-    "2": "Vatican City",
-    "3": "Surrounded by"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Vatican City is inside which city?",
-     "choices": [
-      "Madrid",
-      "Rome",
-      "Venice",
-      "Paris"
-     ],
-     "answer": 1,
-     "explanation": "Vatican City is an enclave in Rome."
-    },
-    {
-     "level": 3,
-     "question": "Approximately how big is Vatican City?",
-     "choices": [
-      "About 4 square kilometres",
-      "About 40 square kilometres",
-      "About 0.44 square kilometres",
-      "About 400 square kilometres"
-     ],
-     "answer": 2,
-     "explanation": "The Vatican covers about 49 hectares."
-    }
-   ]
-  },
-  {
-   "id": "geo-010",
-   "ask": {
-    "1": "Largest desert",
-    "2": "Sahara",
-    "3": "Continent"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "The Sahara covers much of which continent?",
-     "choices": [
-      "Australia",
-      "Africa",
-      "South America",
-      "Asia"
-     ],
-     "answer": 1,
-     "explanation": "The Sahara stretches across northern Africa."
-    },
-    {
-     "level": 3,
-     "question": "Which is the largest desert in the world overall, counting cold deserts?",
-     "choices": [
-      "Arctic",
-      "Gobi",
-      "Antarctica",
-      "Sahara"
-     ],
-     "answer": 2,
-     "explanation": "Antarctica is the largest desert by area."
-    }
-   ]
-  },
-  {
-   "id": "geo-011",
-   "ask": {
-    "1": "Most time zones",
-    "2": "Country and zones",
-    "3": "Why"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which country is the largest in the world by area?",
-     "choices": [
-      "Russia",
-      "China",
-      "Canada",
-      "United States"
-     ],
-     "answer": 0,
-     "explanation": "Russia covers about 17 million square kilometres."
-    },
-    {
-     "level": 2,
-     "question": "The French territory of French Polynesia is located in which ocean?",
-     "choices": [
-      "The Pacific Ocean",
-      "The Indian Ocean",
-      "The Atlantic Ocean",
-      "The Arctic Ocean"
-     ],
-     "answer": 0,
-     "explanation": "Tahiti is in the South Pacific."
-    }
-   ]
-  },
-  {
-   "id": "geo-012",
-   "ask": {
-    "1": "Paris river",
-    "2": "Seine",
-    "3": "Flows to"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "The Seine flows into which body of water?",
-     "choices": [
-      "The North Sea",
-      "The Mediterranean Sea",
-      "The Bay of Biscay",
-      "The English Channel"
-     ],
-     "answer": 3,
-     "explanation": "It enters the Channel near Le Havre."
-    },
-    {
-     "level": 3,
-     "question": "Which cathedral stands on the Ile de la Cite, an island in the Seine?",
-     "choices": [
-      "Saint-Denis",
-      "Sacre-Coeur",
-      "Notre-Dame",
-      "Chartres"
-     ],
-     "answer": 2,
-     "explanation": "Notre-Dame is on the Ile de la Cite."
-    }
-   ]
-  },
-  {
-   "id": "geo-013",
-   "ask": {
-    "1": "Strait",
-    "2": "Gibraltar",
-    "3": "Width"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "The Strait of Gibraltar connects the Atlantic Ocean with which sea?",
-     "choices": [
-      "The Baltic Sea",
-      "The Mediterranean Sea",
-      "The Black Sea",
-      "The Red Sea"
-     ],
-     "answer": 1,
-     "explanation": "It is the entrance to the Mediterranean."
-    },
-    {
-     "level": 3,
-     "question": "About how wide is the Strait of Gibraltar at its narrowest?",
-     "choices": [
-      "About 14 kilometres",
-      "About 100 kilometres",
-      "About 2 kilometres",
-      "About 40 kilometres"
-     ],
-     "answer": 0,
-     "explanation": "It is roughly 14 km wide at the narrowest."
-    }
-   ]
-  },
-  {
-   "id": "geo-014",
-   "ask": {
-    "1": "Deepest lake",
-    "2": "Baikal",
-    "3": "Country"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Lake Baikal is in which country?",
-     "choices": [
-      "Canada",
-      "Finland",
-      "Russia",
-      "China"
-     ],
-     "answer": 2,
-     "explanation": "Baikal is in Siberia, Russia."
-    },
-    {
-     "level": 2,
-     "question": "Lake Baikal holds about what share of the world's unfrozen surface fresh water?",
-     "choices": [
-      "About 20%",
-      "About 2%",
-      "About 80%",
-      "About 50%"
-     ],
-     "answer": 0,
-     "explanation": "It holds roughly one fifth."
-    }
-   ]
-  },
-  {
    "id": "geo-015",
    "ask": {
     "1": "Capital",
@@ -510,244 +884,6 @@
      ],
      "answer": 0,
      "explanation": "The Turkish Republic made Ankara the capital in 1923."
-    }
-   ]
-  },
-  {
-   "id": "geo-016",
-   "ask": {
-    "1": "Most countries",
-    "2": "Continent",
-    "3": "Count"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which continent is the second-largest by area?",
-     "choices": [
-      "Antarctica",
-      "Europe",
-      "Australia",
-      "Africa"
-     ],
-     "answer": 3,
-     "explanation": "Africa is the second-largest continent."
-    },
-    {
-     "level": 3,
-     "question": "How many member states of the African Union are there approximately?",
-     "choices": [
-      "About 30",
-      "About 55",
-      "About 100",
-      "About 80"
-     ],
-     "answer": 1,
-     "explanation": "There are 55 AU member states."
-    }
-   ]
-  },
-  {
-   "id": "geo-017",
-   "ask": {
-    "1": "Capital",
-    "2": "Kazakhstan",
-    "3": "Renamed"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Kazakhstan is in which region of the world?",
-     "choices": [
-      "Southern Africa",
-      "Central Asia",
-      "Western Europe",
-      "South America"
-     ],
-     "answer": 1,
-     "explanation": "It is a large Central Asian country."
-    },
-    {
-     "level": 2,
-     "question": "What was Astana temporarily named between 2019 and 2022?",
-     "choices": [
-      "Tselinograd",
-      "Almaty",
-      "Alma-Ata",
-      "Nur-Sultan"
-     ],
-     "answer": 3,
-     "explanation": "It was renamed Nur-Sultan in 2019 and back to Astana in 2022."
-    }
-   ]
-  },
-  {
-   "id": "geo-018",
-   "ask": {
-    "1": "Longest border",
-    "2": "Canada and US",
-    "3": "Length"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Canada is directly north of which country?",
-     "choices": [
-      "Mexico",
-      "The United States",
-      "Greenland",
-      "Russia"
-     ],
-     "answer": 1,
-     "explanation": "Canada borders the USA to the south."
-    },
-    {
-     "level": 2,
-     "question": "The border between Canada and the United States is about how long?",
-     "choices": [
-      "About 20,000 kilometres",
-      "About 3,000 kilometres",
-      "About 8,900 kilometres",
-      "About 1,500 kilometres"
-     ],
-     "answer": 2,
-     "explanation": "It is roughly 8,900 km including Alaska."
-    }
-   ]
-  },
-  {
-   "id": "geo-019",
-   "ask": {
-    "1": "Largest island",
-    "2": "Greenland",
-    "3": "Belongs to"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Greenland is an autonomous territory of which country?",
-     "choices": [
-      "Canada",
-      "Denmark",
-      "Iceland",
-      "Norway"
-     ],
-     "answer": 1,
-     "explanation": "Greenland belongs to the Kingdom of Denmark."
-    },
-    {
-     "level": 3,
-     "question": "What is Greenland's capital?",
-     "choices": [
-      "Nuuk",
-      "Ilulissat",
-      "Qaanaaq",
-      "Reykjavik"
-     ],
-     "answer": 0,
-     "explanation": "Nuuk is the capital."
-    }
-   ]
-  },
-  {
-   "id": "geo-020",
-   "ask": {
-    "1": "Mountain",
-    "2": "Kilimanjaro",
-    "3": "Height"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Mount Kilimanjaro is on which continent?",
-     "choices": [
-      "Africa",
-      "Australia",
-      "Asia",
-      "South America"
-     ],
-     "answer": 0,
-     "explanation": "It is in east Africa."
-    },
-    {
-     "level": 3,
-     "question": "What is the height of Mount Kilimanjaro's Uhuru Peak?",
-     "choices": [
-      "About 8,000 metres",
-      "About 5,895 metres",
-      "About 4,000 metres",
-      "About 7,000 metres"
-     ],
-     "answer": 1,
-     "explanation": "It is Africa's tallest peak at 5,895 metres."
-    }
-   ]
-  },
-  {
-   "id": "geo-021",
-   "ask": {
-    "1": "Canal",
-    "2": "Panama",
-    "3": "Oceans"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "The Panama Canal is in which continent?",
-     "choices": [
-      "Asia",
-      "North America",
-      "Europe",
-      "South America"
-     ],
-     "answer": 1,
-     "explanation": "It is in the country of Panama, Central America."
-    },
-    {
-     "level": 3,
-     "question": "In which year was the Panama Canal opened?",
-     "choices": [
-      "1914",
-      "1869",
-      "1900",
-      "1950"
-     ],
-     "answer": 0,
-     "explanation": "The canal opened in August 1914."
-    }
-   ]
-  },
-  {
-   "id": "geo-022",
-   "ask": {
-    "1": "Waterfall",
-    "2": "Angel Falls",
-    "3": "Height"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "In which continent is Angel Falls?",
-     "choices": [
-      "Europe",
-      "South America",
-      "Asia",
-      "Africa"
-     ],
-     "answer": 1,
-     "explanation": "It is in Venezuela, in South America."
-    },
-    {
-     "level": 2,
-     "question": "Angel Falls is about how tall?",
-     "choices": [
-      "About 2,000 metres",
-      "About 979 metres",
-      "About 300 metres",
-      "About 100 metres"
-     ],
-     "answer": 1,
-     "explanation": "It is 979 metres in total height."
     }
    ]
   },
@@ -820,6 +956,448 @@
    ]
   },
   {
+   "id": "geo-016",
+   "ask": {
+    "1": "Most countries",
+    "2": "Continent",
+    "3": "Count"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which continent is the second-largest by area?",
+     "choices": [
+      "Antarctica",
+      "Europe",
+      "Australia",
+      "Africa"
+     ],
+     "answer": 3,
+     "explanation": "Africa is the second-largest continent."
+    },
+    {
+     "level": 3,
+     "question": "How many member states of the African Union are there approximately?",
+     "choices": [
+      "About 30",
+      "About 55",
+      "About 100",
+      "About 80"
+     ],
+     "answer": 1,
+     "explanation": "There are 55 AU member states."
+    }
+   ]
+  },
+  {
+   "id": "geo-030",
+   "ask": {
+    "1": "Smallest continent",
+    "2": "Oceania",
+    "3": "Countries"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which continent is also a single country?",
+     "choices": [
+      "Australia",
+      "Asia",
+      "South America",
+      "Africa"
+     ],
+     "answer": 0,
+     "explanation": "Australia is both."
+    },
+    {
+     "level": 3,
+     "question": "What is the largest country by area in Oceania, apart from Australia?",
+     "choices": [
+      "Fiji",
+      "Solomon Islands",
+      "New Zealand",
+      "Papua New Guinea"
+     ],
+     "answer": 3,
+     "explanation": "Papua New Guinea is the largest independent country in the region after Australia."
+    }
+   ]
+  },
+  {
+   "id": "geo-007",
+   "ask": {
+    "1": "Most populous",
+    "2": "India",
+    "3": "Population size"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which is the most populous continent?",
+     "choices": [
+      "North America",
+      "Europe",
+      "Asia",
+      "Africa"
+     ],
+     "answer": 2,
+     "explanation": "Asia has more than half the world's population."
+    },
+    {
+     "level": 3,
+     "question": "The population of India is closest to which figure in 2024?",
+     "choices": [
+      "About 800 million",
+      "About 500 million",
+      "About 1.4 billion",
+      "About 2.2 billion"
+     ],
+     "answer": 2,
+     "explanation": "India has roughly 1.4 billion people."
+    }
+   ]
+  },
+  {
+   "id": "geo-009",
+   "ask": {
+    "1": "Smallest country",
+    "2": "Vatican City",
+    "3": "Surrounded by"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Vatican City is inside which city?",
+     "choices": [
+      "Madrid",
+      "Rome",
+      "Venice",
+      "Paris"
+     ],
+     "answer": 1,
+     "explanation": "Vatican City is an enclave in Rome."
+    },
+    {
+     "level": 3,
+     "question": "Approximately how big is Vatican City?",
+     "choices": [
+      "About 4 square kilometres",
+      "About 40 square kilometres",
+      "About 0.44 square kilometres",
+      "About 400 square kilometres"
+     ],
+     "answer": 2,
+     "explanation": "The Vatican covers about 49 hectares."
+    }
+   ]
+  },
+  {
+   "id": "geo2-010",
+   "ask": {
+    "1": "The coasts",
+    "2": "The landlocked",
+    "3": "The range"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which South American country has coasts on both the Pacific Ocean and the Caribbean Sea?",
+     "choices": [
+      "Ecuador",
+      "Venezuela",
+      "Colombia",
+      "Chile"
+     ],
+     "answer": 2,
+     "explanation": "It is the only one with both."
+    },
+    {
+     "level": 3,
+     "question": "Which is the longest continental mountain range in the world?",
+     "choices": [
+      "The Rockies",
+      "The Urals",
+      "The Andes",
+      "The Himalayas"
+     ],
+     "answer": 2,
+     "explanation": "The Andes run about 7,000 km along South America's west coast."
+    }
+   ]
+  },
+  {
+   "id": "geo2-021",
+   "ask": {
+    "1": "The Gobi",
+    "2": "The Atacama",
+    "3": "The Kalahari"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which desert lies mostly in Mongolia and northern China?",
+     "choices": [
+      "The Taklamakan Desert",
+      "The Arabian Desert",
+      "The Thar Desert",
+      "The Gobi Desert"
+     ],
+     "answer": 3,
+     "explanation": "It is a cold desert with harsh winters."
+    },
+    {
+     "level": 3,
+     "question": "Which desert covers much of Botswana?",
+     "choices": [
+      "The Kalahari Desert",
+      "The Namib Desert",
+      "The Sahara",
+      "The Karoo"
+     ],
+     "answer": 0,
+     "explanation": "It is a semi-arid sandy savanna."
+    }
+   ]
+  },
+  {
+   "id": "geo-019",
+   "ask": {
+    "1": "Largest island",
+    "2": "Greenland",
+    "3": "Belongs to"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Greenland is an autonomous territory of which country?",
+     "choices": [
+      "Canada",
+      "Denmark",
+      "Iceland",
+      "Norway"
+     ],
+     "answer": 1,
+     "explanation": "Greenland belongs to the Kingdom of Denmark."
+    },
+    {
+     "level": 3,
+     "question": "What is Greenland's capital?",
+     "choices": [
+      "Nuuk",
+      "Ilulissat",
+      "Qaanaaq",
+      "Reykjavik"
+     ],
+     "answer": 0,
+     "explanation": "Nuuk is the capital."
+    }
+   ]
+  },
+  {
+   "id": "geo-008",
+   "ask": {
+    "1": "Border country",
+    "2": "Everest",
+    "3": "Height"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Mount Everest is in which mountain range?",
+     "choices": [
+      "The Himalayas",
+      "The Andes",
+      "The Rockies",
+      "The Alps"
+     ],
+     "answer": 0,
+     "explanation": "Everest is the highest peak in the Himalayas."
+    },
+    {
+     "level": 3,
+     "question": "What is the officially recognised height of Mount Everest, set by China and Nepal in 2020?",
+     "choices": [
+      "8,611 metres",
+      "8,848.86 metres",
+      "8,000 metres",
+      "9,144 metres"
+     ],
+     "answer": 1,
+     "explanation": "The 2020 survey gave 8,848.86 m."
+    }
+   ]
+  },
+  {
+   "id": "geo-020",
+   "ask": {
+    "1": "Mountain",
+    "2": "Kilimanjaro",
+    "3": "Height"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Mount Kilimanjaro is on which continent?",
+     "choices": [
+      "Africa",
+      "Australia",
+      "Asia",
+      "South America"
+     ],
+     "answer": 0,
+     "explanation": "It is in east Africa."
+    },
+    {
+     "level": 3,
+     "question": "What is the height of Mount Kilimanjaro's Uhuru Peak?",
+     "choices": [
+      "About 8,000 metres",
+      "About 5,895 metres",
+      "About 4,000 metres",
+      "About 7,000 metres"
+     ],
+     "answer": 1,
+     "explanation": "It is Africa's tallest peak at 5,895 metres."
+    }
+   ]
+  },
+  {
+   "id": "geo2-006",
+   "ask": {
+    "1": "The ocean",
+    "2": "The boundary",
+    "3": "The fault"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The 'Ring of Fire', with its many volcanoes and earthquakes, surrounds which ocean?",
+     "choices": [
+      "The Indian Ocean",
+      "The Arctic Ocean",
+      "The Atlantic Ocean",
+      "The Pacific Ocean"
+     ],
+     "answer": 3,
+     "explanation": "It runs along the Pacific rim from Chile through Alaska to Japan and New Zealand."
+    },
+    {
+     "level": 3,
+     "question": "Which fault, running through California, marks where the Pacific and North American plates slide past each other?",
+     "choices": [
+      "The Alpine Fault",
+      "The North Anatolian Fault",
+      "The San Andreas Fault",
+      "The New Madrid Fault"
+     ],
+     "answer": 2,
+     "explanation": "It is a transform fault about 1,200 km long."
+    }
+   ]
+  },
+  {
+   "id": "geo2-014",
+   "ask": {
+    "1": "The continent",
+    "2": "The giants",
+    "3": "The share"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which continent has the largest population?",
+     "choices": [
+      "Europe",
+      "Africa",
+      "Asia",
+      "North America"
+     ],
+     "answer": 2,
+     "explanation": "Asia is home to a majority of the world's people."
+    },
+    {
+     "level": 3,
+     "question": "About what share of the world's population lives in Asia?",
+     "choices": [
+      "About 45 percent",
+      "About 60 percent",
+      "About 30 percent",
+      "About 80 percent"
+     ],
+     "answer": 1,
+     "explanation": "Roughly three in five people live in Asia."
+    }
+   ]
+  },
+  {
+   "id": "geo2-018",
+   "ask": {
+    "1": "Iberia",
+    "2": "Scandinavia",
+    "3": "The Adriatic"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which peninsula holds Spain and Portugal?",
+     "choices": [
+      "The Scandinavian Peninsula",
+      "The Iberian Peninsula",
+      "The Balkan Peninsula",
+      "The Italian Peninsula"
+     ],
+     "answer": 1,
+     "explanation": "It lies in south-western Europe."
+    },
+    {
+     "level": 3,
+     "question": "Which sea lies between the Italian Peninsula and the Balkan Peninsula?",
+     "choices": [
+      "The Adriatic Sea",
+      "The Ionian Sea",
+      "The Tyrrhenian Sea",
+      "The Aegean Sea"
+     ],
+     "answer": 0,
+     "explanation": "It is an arm of the Mediterranean."
+    }
+   ]
+  },
+  {
+   "id": "geo-003",
+   "ask": {
+    "1": "Longest river",
+    "2": "Africa's rivers",
+    "3": "Flows into"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which continent does the Nile flow?",
+     "choices": [
+      "South America",
+      "Africa",
+      "Europe",
+      "Asia"
+     ],
+     "answer": 1,
+     "explanation": "The Nile flows through north-east Africa."
+    },
+    {
+     "level": 3,
+     "question": "Into which sea does the Nile flow?",
+     "choices": [
+      "The Black Sea",
+      "The Arabian Sea",
+      "The Mediterranean Sea",
+      "The Red Sea"
+     ],
+     "answer": 2,
+     "explanation": "The Nile delta reaches the Mediterranean in Egypt."
+    }
+   ]
+  },
+  {
    "id": "geo-025",
    "ask": {
     "1": "River",
@@ -850,6 +1428,176 @@
      ],
      "answer": 0,
      "explanation": "It meets the Atlantic in Brazil."
+    }
+   ]
+  },
+  {
+   "id": "geo2-002",
+   "ask": {
+    "1": "The ocean",
+    "2": "The country",
+    "3": "The mountains"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Into which ocean does the Amazon River flow?",
+     "choices": [
+      "The Indian Ocean",
+      "The Atlantic Ocean",
+      "The Arctic Ocean",
+      "The Pacific Ocean"
+     ],
+     "answer": 1,
+     "explanation": "Its mouth lies on Brazil's northern coast."
+    },
+    {
+     "level": 3,
+     "question": "The Amazon's headwaters rise in which mountain range?",
+     "choices": [
+      "The Himalayas",
+      "The Rockies",
+      "The Alps",
+      "The Andes"
+     ],
+     "answer": 3,
+     "explanation": "Meltwater and rain in the Peruvian Andes feed the river."
+    }
+   ]
+  },
+  {
+   "id": "geo-013",
+   "ask": {
+    "1": "Strait",
+    "2": "Gibraltar",
+    "3": "Width"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Strait of Gibraltar connects the Atlantic Ocean with which sea?",
+     "choices": [
+      "The Baltic Sea",
+      "The Mediterranean Sea",
+      "The Black Sea",
+      "The Red Sea"
+     ],
+     "answer": 1,
+     "explanation": "It is the entrance to the Mediterranean."
+    },
+    {
+     "level": 3,
+     "question": "About how wide is the Strait of Gibraltar at its narrowest?",
+     "choices": [
+      "About 14 kilometres",
+      "About 100 kilometres",
+      "About 2 kilometres",
+      "About 40 kilometres"
+     ],
+     "answer": 0,
+     "explanation": "It is roughly 14 km wide at the narrowest."
+    }
+   ]
+  },
+  {
+   "id": "geo-021",
+   "ask": {
+    "1": "Canal",
+    "2": "Panama",
+    "3": "Oceans"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Panama Canal is in which continent?",
+     "choices": [
+      "Asia",
+      "North America",
+      "Europe",
+      "South America"
+     ],
+     "answer": 1,
+     "explanation": "It is in the country of Panama, Central America."
+    },
+    {
+     "level": 3,
+     "question": "In which year was the Panama Canal opened?",
+     "choices": [
+      "1914",
+      "1869",
+      "1900",
+      "1950"
+     ],
+     "answer": 0,
+     "explanation": "The canal opened in August 1914."
+    }
+   ]
+  },
+  {
+   "id": "geo2-008",
+   "ask": {
+    "1": "The country",
+    "2": "The shore",
+    "3": "The capital"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Caspian Sea, the world's largest inland body of water, is bordered by which country?",
+     "choices": [
+      "Georgia",
+      "Iran",
+      "Turkey",
+      "Iraq"
+     ],
+     "answer": 1,
+     "explanation": "Five countries border it: Iran, Russia, Kazakhstan, Turkmenistan and Azerbaijan."
+    },
+    {
+     "level": 3,
+     "question": "Which Caspian port is the capital of Azerbaijan?",
+     "choices": [
+      "Tbilisi",
+      "Baku",
+      "Astana",
+      "Yerevan"
+     ],
+     "answer": 1,
+     "explanation": "Baku lies on the Absheron Peninsula."
+    }
+   ]
+  },
+  {
+   "id": "geo-017",
+   "ask": {
+    "1": "Capital",
+    "2": "Kazakhstan",
+    "3": "Renamed"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Kazakhstan is in which region of the world?",
+     "choices": [
+      "Southern Africa",
+      "Central Asia",
+      "Western Europe",
+      "South America"
+     ],
+     "answer": 1,
+     "explanation": "It is a large Central Asian country."
+    },
+    {
+     "level": 2,
+     "question": "What was Astana temporarily named between 2019 and 2022?",
+     "choices": [
+      "Tselinograd",
+      "Almaty",
+      "Alma-Ata",
+      "Nur-Sultan"
+     ],
+     "answer": 3,
+     "explanation": "It was renamed Nur-Sultan in 2019 and back to Astana in 2022."
     }
    ]
   },
@@ -888,36 +1636,308 @@
    ]
   },
   {
-   "id": "geo-027",
+   "id": "geo-018",
    "ask": {
-    "1": "Largest state",
-    "2": "Alaska",
-    "3": "Bought from"
+    "1": "Longest border",
+    "2": "Canada and US",
+    "3": "Length"
    },
    "variants": [
     {
-     "level": 2,
-     "question": "From which country did the United States buy Alaska in 1867?",
+     "level": 1,
+     "question": "Canada is directly north of which country?",
      "choices": [
-      "Russia",
-      "France",
-      "Canada",
-      "Spain"
+      "Mexico",
+      "The United States",
+      "Greenland",
+      "Russia"
      ],
-     "answer": 0,
-     "explanation": "The US bought Alaska from the Russian Empire."
+     "answer": 1,
+     "explanation": "Canada borders the USA to the south."
     },
     {
-     "level": 3,
-     "question": "Alaska became the 49th US state in which year?",
+     "level": 2,
+     "question": "The border between Canada and the United States is about how long?",
      "choices": [
-      "1975",
-      "1867",
-      "1945",
-      "1959"
+      "About 20,000 kilometres",
+      "About 3,000 kilometres",
+      "About 8,900 kilometres",
+      "About 1,500 kilometres"
+     ],
+     "answer": 2,
+     "explanation": "It is roughly 8,900 km including Alaska."
+    }
+   ]
+  },
+  {
+   "id": "geo-014",
+   "ask": {
+    "1": "Deepest lake",
+    "2": "Baikal",
+    "3": "Country"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Lake Baikal is in which country?",
+     "choices": [
+      "Canada",
+      "Finland",
+      "Russia",
+      "China"
+     ],
+     "answer": 2,
+     "explanation": "Baikal is in Siberia, Russia."
+    },
+    {
+     "level": 2,
+     "question": "Lake Baikal holds about what share of the world's unfrozen surface fresh water?",
+     "choices": [
+      "About 20%",
+      "About 2%",
+      "About 80%",
+      "About 50%"
+     ],
+     "answer": 0,
+     "explanation": "It holds roughly one fifth."
+    }
+   ]
+  },
+  {
+   "id": "geo2-019",
+   "ask": {
+    "1": "The largest",
+    "2": "The falls",
+    "3": "The only one in the US"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which is the largest of the North American Great Lakes by area?",
+     "choices": [
+      "Lake Erie",
+      "Lake Michigan",
+      "Lake Huron",
+      "Lake Superior"
      ],
      "answer": 3,
-     "explanation": "Alaska achieved statehood in January 1959."
+     "explanation": "It is the largest freshwater lake in the world by surface area."
+    },
+    {
+     "level": 2,
+     "question": "Niagara Falls lie on the river linking which two Great Lakes?",
+     "choices": [
+      "Lake Huron and Lake Erie",
+      "Lake Erie and Lake Ontario",
+      "Lake Superior and Lake Michigan",
+      "Lake Michigan and Lake Huron"
+     ],
+     "answer": 1,
+     "explanation": "The Niagara River flows from Erie to Ontario."
+    }
+   ]
+  },
+  {
+   "id": "geo2-003",
+   "ask": {
+    "1": "The range",
+    "2": "The plates",
+    "3": "The second peak"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which mountain range contains Mount Everest?",
+     "choices": [
+      "The Rockies",
+      "The Alps",
+      "The Andes",
+      "The Himalayas"
+     ],
+     "answer": 3,
+     "explanation": "The Himalayas stretch across Nepal, India, Bhutan, Tibet and Pakistan."
+    },
+    {
+     "level": 2,
+     "question": "The Himalayas were raised mainly by the collision of the Indian plate with which plate?",
+     "choices": [
+      "The African plate",
+      "The Pacific plate",
+      "The Eurasian plate",
+      "The Antarctic plate"
+     ],
+     "answer": 2,
+     "explanation": "The collision began about 50 million years ago and continues."
+    }
+   ]
+  },
+  {
+   "id": "geo2-016",
+   "ask": {
+    "1": "The current",
+    "2": "The cold current",
+    "3": "El Niño"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which warm ocean current carries water from the Gulf of Mexico towards north-western Europe?",
+     "choices": [
+      "The Humboldt Current",
+      "The Labrador Current",
+      "The Gulf Stream",
+      "The Benguela Current"
+     ],
+     "answer": 2,
+     "explanation": "It helps keep north-western Europe milder than other places at the same latitude."
+    },
+    {
+     "level": 2,
+     "question": "The cold Humboldt Current flows along the coast of which continent?",
+     "choices": [
+      "Australia",
+      "Europe",
+      "South America",
+      "Africa"
+     ],
+     "answer": 2,
+     "explanation": "It runs north along Chile and Peru."
+    }
+   ]
+  },
+  {
+   "id": "geo2-012",
+   "ask": {
+    "1": "The rift",
+    "2": "The lake",
+    "3": "The deepest"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Great Rift Valley is most closely associated with which continent?",
+     "choices": [
+      "South America",
+      "Africa",
+      "Europe",
+      "Antarctica"
+     ],
+     "answer": 1,
+     "explanation": "The East African Rift is where the African plate is slowly splitting."
+    },
+    {
+     "level": 2,
+     "question": "Which is the largest lake in Africa by area?",
+     "choices": [
+      "Lake Chad",
+      "Lake Tanganyika",
+      "Lake Victoria",
+      "Lake Malawi"
+     ],
+     "answer": 2,
+     "explanation": "It covers about 68,000 square kilometres."
+    }
+   ]
+  },
+  {
+   "id": "geo-022",
+   "ask": {
+    "1": "Waterfall",
+    "2": "Angel Falls",
+    "3": "Height"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which continent is Angel Falls?",
+     "choices": [
+      "Europe",
+      "South America",
+      "Asia",
+      "Africa"
+     ],
+     "answer": 1,
+     "explanation": "It is in Venezuela, in South America."
+    },
+    {
+     "level": 2,
+     "question": "Angel Falls is about how tall?",
+     "choices": [
+      "About 2,000 metres",
+      "About 979 metres",
+      "About 300 metres",
+      "About 100 metres"
+     ],
+     "answer": 1,
+     "explanation": "It is 979 metres in total height."
+    }
+   ]
+  },
+  {
+   "id": "geo-011",
+   "ask": {
+    "1": "Most time zones",
+    "2": "Country and zones",
+    "3": "Why"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country is the largest in the world by area?",
+     "choices": [
+      "Russia",
+      "China",
+      "Canada",
+      "United States"
+     ],
+     "answer": 0,
+     "explanation": "Russia covers about 17 million square kilometres."
+    },
+    {
+     "level": 2,
+     "question": "The French territory of French Polynesia is located in which ocean?",
+     "choices": [
+      "The Pacific Ocean",
+      "The Indian Ocean",
+      "The Atlantic Ocean",
+      "The Arctic Ocean"
+     ],
+     "answer": 0,
+     "explanation": "Tahiti is in the South Pacific."
+    }
+   ]
+  },
+  {
+   "id": "trk-006",
+   "ask": {
+    "1": "Highest versus tallest",
+    "2": "Mauna Kea",
+    "3": "Chimborazo"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which mountain has the highest summit above sea level?",
+     "choices": [
+      "Kilimanjaro",
+      "K2",
+      "Mount Everest",
+      "Mauna Kea"
+     ],
+     "answer": 2,
+     "explanation": "Everest reaches about 8,849 m above sea level."
+    },
+    {
+     "level": 2,
+     "question": "Which mountain is tallest when measured from its base on the ocean floor to its summit?",
+     "choices": [
+      "K2",
+      "Mauna Kea",
+      "Mount Everest",
+      "Mont Blanc"
+     ],
+     "answer": 1,
+     "explanation": "Mauna Kea in Hawaii rises over 10,000 m from the sea floor, though only about 4,200 m is above sea level."
     }
    ]
   },
@@ -952,74 +1972,6 @@
      ],
      "answer": 0,
      "explanation": "Vienna is on the Danube."
-    }
-   ]
-  },
-  {
-   "id": "geo-029",
-   "ask": {
-    "1": "Equator",
-    "2": "Zero latitude",
-    "3": "Hemisphere"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "The Equator divides the Earth into which two hemispheres?",
-     "choices": [
-      "Land and water",
-      "Northern and Southern",
-      "Eastern and Western",
-      "Frozen and warm"
-     ],
-     "answer": 1,
-     "explanation": "Latitude 0 splits north from south."
-    },
-    {
-     "level": 3,
-     "question": "About how long is the Earth's circumference at the Equator?",
-     "choices": [
-      "About 20,000 kilometres",
-      "About 40,075 kilometres",
-      "About 100,000 kilometres",
-      "About 10,000 kilometres"
-     ],
-     "answer": 1,
-     "explanation": "The equatorial circumference is about 40,075 km."
-    }
-   ]
-  },
-  {
-   "id": "geo-030",
-   "ask": {
-    "1": "Smallest continent",
-    "2": "Oceania",
-    "3": "Countries"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which continent is also a single country?",
-     "choices": [
-      "Australia",
-      "Asia",
-      "South America",
-      "Africa"
-     ],
-     "answer": 0,
-     "explanation": "Australia is both."
-    },
-    {
-     "level": 3,
-     "question": "What is the largest country by area in Oceania, apart from Australia?",
-     "choices": [
-      "Fiji",
-      "Solomon Islands",
-      "New Zealand",
-      "Papua New Guinea"
-     ],
-     "answer": 3,
-     "explanation": "Papua New Guinea is the largest independent country in the region after Australia."
     }
    ]
   }

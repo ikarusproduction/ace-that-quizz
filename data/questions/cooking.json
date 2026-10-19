@@ -3,34 +3,6 @@
  "review": "unreviewed",
  "questions": [
   {
-   "id": "coo-001",
-   "subcategory": "world",
-   "difficulty": 1,
-   "question": "Which country is the origin of sushi as most people know it?",
-   "choices": [
-    "China",
-    "Japan",
-    "Thailand",
-    "Korea"
-   ],
-   "answer": 1,
-   "explanation": "Modern nigiri sushi developed in Edo (Tokyo) in the 1800s."
-  },
-  {
-   "id": "coo-002",
-   "subcategory": "world",
-   "difficulty": 1,
-   "question": "Which Italian dish is made with layers of pasta, meat sauce and béchamel?",
-   "choices": [
-    "Risotto",
-    "Lasagna",
-    "Ravioli",
-    "Gnocchi"
-   ],
-   "answer": 1,
-   "explanation": "Lasagna is baked in the oven in layers."
-  },
-  {
    "id": "coo-003",
    "subcategory": "ingredients",
    "difficulty": 1,
@@ -57,6 +29,133 @@
    ],
    "answer": 1,
    "explanation": "Arborio or carnaroli rice is typically used."
+  },
+  {
+   "id": "coo-007",
+   "subcategory": "ingredients",
+   "difficulty": 1,
+   "question": "Which spice gives curry its yellow colour?",
+   "choices": [
+    "Cumin",
+    "Turmeric",
+    "Paprika",
+    "Saffron"
+   ],
+   "answer": 1,
+   "explanation": "Turmeric contains the pigment curcumin."
+  },
+  {
+   "id": "coo-009",
+   "subcategory": "ingredients",
+   "difficulty": 1,
+   "question": "Which fruit is the main ingredient of wine?",
+   "choices": [
+    "Apples",
+    "Grapes",
+    "Cherries",
+    "Plums"
+   ],
+   "answer": 1,
+   "explanation": "Wine is made by fermenting grape juice."
+  },
+  {
+   "id": "trk-027",
+   "subcategory": "ingredients",
+   "difficulty": 1,
+   "question": "Does all the alcohol cook off when a dish is briefly simmered with wine?",
+   "choices": [
+    "Yes, all of it",
+    "Yes, within one minute",
+    "Only when spirits are used",
+    "No, a significant share remains"
+   ],
+   "answer": 3,
+   "explanation": "Alcohol evaporates gradually; short cooking leaves much of it in the dish.",
+   "tags": [
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think all the alcohol cooks off when a dish is simmered with wine."
+  },
+  {
+   "id": "trk-026",
+   "subcategory": "science",
+   "difficulty": 1,
+   "question": "Does searing meat 'seal in the juices'?",
+   "choices": [
+    "Only for fish",
+    "No, it browns the surface but does not seal moisture",
+    "Only for beef",
+    "Yes, it forms a waterproof crust"
+   ],
+   "answer": 1,
+   "explanation": "Seared meat can lose as much moisture as unseared meat; the crust adds flavour, not a seal.",
+   "tags": [
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think searing meat seals in its juices."
+  },
+  {
+   "id": "coo-008",
+   "subcategory": "technique",
+   "difficulty": 1,
+   "question": "At what temperature in Celsius does water boil at sea level?",
+   "choices": [
+    "110 degrees",
+    "90 degrees",
+    "120 degrees",
+    "100 degrees"
+   ],
+   "answer": 3,
+   "explanation": "Water boils at 100 °C (212 °F) at standard pressure."
+  },
+  {
+   "id": "trk-028",
+   "subcategory": "technique",
+   "difficulty": 1,
+   "question": "Which leavener already contains an acid, so it can raise a batter by itself?",
+   "choices": [
+    "Baking soda",
+    "Both of them",
+    "Baking powder",
+    "Neither of them"
+   ],
+   "answer": 2,
+   "explanation": "Baking powder is baking soda plus a dry acid; baking soda needs an acid in the recipe.",
+   "tags": [
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think baking soda and baking powder are the same thing."
+  },
+  {
+   "id": "coo-001",
+   "subcategory": "world",
+   "difficulty": 1,
+   "question": "Which country is the origin of sushi as most people know it?",
+   "choices": [
+    "China",
+    "Japan",
+    "Thailand",
+    "Korea"
+   ],
+   "answer": 1,
+   "explanation": "Modern nigiri sushi developed in Edo (Tokyo) in the 1800s."
+  },
+  {
+   "id": "coo-002",
+   "subcategory": "world",
+   "difficulty": 1,
+   "question": "Which Italian dish is made with layers of pasta, meat sauce and béchamel?",
+   "choices": [
+    "Risotto",
+    "Lasagna",
+    "Ravioli",
+    "Gnocchi"
+   ],
+   "answer": 1,
+   "explanation": "Lasagna is baked in the oven in layers."
   },
   {
    "id": "coo-005",
@@ -87,76 +186,6 @@
    "explanation": "Crêpes originate in Brittany."
   },
   {
-   "id": "coo-007",
-   "subcategory": "ingredients",
-   "difficulty": 1,
-   "question": "Which spice gives curry its yellow colour?",
-   "choices": [
-    "Cumin",
-    "Turmeric",
-    "Paprika",
-    "Saffron"
-   ],
-   "answer": 1,
-   "explanation": "Turmeric contains the pigment curcumin."
-  },
-  {
-   "id": "coo-008",
-   "subcategory": "technique",
-   "difficulty": 1,
-   "question": "At what temperature in Celsius does water boil at sea level?",
-   "choices": [
-    "110 degrees",
-    "90 degrees",
-    "120 degrees",
-    "100 degrees"
-   ],
-   "answer": 3,
-   "explanation": "Water boils at 100 °C (212 °F) at standard pressure."
-  },
-  {
-   "id": "coo-009",
-   "subcategory": "ingredients",
-   "difficulty": 1,
-   "question": "Which fruit is the main ingredient of wine?",
-   "choices": [
-    "Apples",
-    "Grapes",
-    "Cherries",
-    "Plums"
-   ],
-   "answer": 1,
-   "explanation": "Wine is made by fermenting grape juice."
-  },
-  {
-   "id": "coo-010",
-   "subcategory": "world",
-   "difficulty": 2,
-   "question": "What is the Japanese dish of seasoned vinegar rice with raw fish called?",
-   "choices": [
-    "Sushi",
-    "Ramen",
-    "Tempura",
-    "Sashimi"
-   ],
-   "answer": 0,
-   "explanation": "Sashimi is sliced raw fish served without rice."
-  },
-  {
-   "id": "coo-011",
-   "subcategory": "technique",
-   "difficulty": 2,
-   "question": "What is 'mise en place' in cooking?",
-   "choices": [
-    "A type of knife cut",
-    "A French sauce",
-    "Having ingredients prepared and in place before cooking",
-    "A method of deep frying"
-   ],
-   "answer": 2,
-   "explanation": "It is French for 'putting in place'."
-  },
-  {
    "id": "coo-012",
    "subcategory": "ingredients",
    "difficulty": 2,
@@ -171,20 +200,6 @@
    "explanation": "Truffles grow underground near tree roots."
   },
   {
-   "id": "coo-013",
-   "subcategory": "world",
-   "difficulty": 2,
-   "question": "Which country is paella from?",
-   "choices": [
-    "Mexico",
-    "Spain",
-    "Italy",
-    "Portugal"
-   ],
-   "answer": 1,
-   "explanation": "Paella originated in Valencia."
-  },
-  {
    "id": "coo-014",
    "subcategory": "ingredients",
    "difficulty": 2,
@@ -197,6 +212,48 @@
    ],
    "answer": 0,
    "explanation": "Hummus also contains tahini, lemon and garlic."
+  },
+  {
+   "id": "coo-021",
+   "subcategory": "ingredients",
+   "difficulty": 2,
+   "question": "Which herb is the main ingredient of pesto?",
+   "choices": [
+    "Mint",
+    "Coriander",
+    "Parsley",
+    "Basil"
+   ],
+   "answer": 3,
+   "explanation": "Pesto genovese uses basil, pine nuts, Parmesan, garlic and olive oil."
+  },
+  {
+   "id": "coo-038",
+   "subcategory": "ingredients",
+   "difficulty": 2,
+   "question": "Which dairy product is made by churning cream?",
+   "choices": [
+    "Yoghurt",
+    "Butter",
+    "Ghee only",
+    "Cheese"
+   ],
+   "answer": 1,
+   "explanation": "Churning separates butterfat from buttermilk."
+  },
+  {
+   "id": "coo-011",
+   "subcategory": "technique",
+   "difficulty": 2,
+   "question": "What is 'mise en place' in cooking?",
+   "choices": [
+    "A type of knife cut",
+    "A French sauce",
+    "Having ingredients prepared and in place before cooking",
+    "A method of deep frying"
+   ],
+   "answer": 2,
+   "explanation": "It is French for 'putting in place'."
   },
   {
    "id": "coo-015",
@@ -227,20 +284,6 @@
    "explanation": "Hollandaise is one of the five French mother sauces."
   },
   {
-   "id": "coo-017",
-   "subcategory": "world",
-   "difficulty": 2,
-   "question": "Which fermented Korean side dish is made from cabbage and chilli?",
-   "choices": [
-    "Natto",
-    "Miso",
-    "Kimchi",
-    "Tempeh"
-   ],
-   "answer": 2,
-   "explanation": "Kimchi is a staple of Korean cuisine."
-  },
-  {
    "id": "coo-018",
    "subcategory": "technique",
    "difficulty": 2,
@@ -253,6 +296,48 @@
    ],
    "answer": 2,
    "explanation": "Layers of butter are folded into yeasted dough."
+  },
+  {
+   "id": "coo-010",
+   "subcategory": "world",
+   "difficulty": 2,
+   "question": "What is the Japanese dish of seasoned vinegar rice with raw fish called?",
+   "choices": [
+    "Sushi",
+    "Ramen",
+    "Tempura",
+    "Sashimi"
+   ],
+   "answer": 0,
+   "explanation": "Sashimi is sliced raw fish served without rice."
+  },
+  {
+   "id": "coo-013",
+   "subcategory": "world",
+   "difficulty": 2,
+   "question": "Which country is paella from?",
+   "choices": [
+    "Mexico",
+    "Spain",
+    "Italy",
+    "Portugal"
+   ],
+   "answer": 1,
+   "explanation": "Paella originated in Valencia."
+  },
+  {
+   "id": "coo-017",
+   "subcategory": "world",
+   "difficulty": 2,
+   "question": "Which fermented Korean side dish is made from cabbage and chilli?",
+   "choices": [
+    "Natto",
+    "Miso",
+    "Kimchi",
+    "Tempeh"
+   ],
+   "answer": 2,
+   "explanation": "Kimchi is a staple of Korean cuisine."
   },
   {
    "id": "coo-019",
@@ -283,32 +368,18 @@
    "explanation": "Classic Caesar dressing has egg yolk, anchovy, garlic, lemon and oil."
   },
   {
-   "id": "coo-021",
-   "subcategory": "ingredients",
+   "id": "coo-039",
+   "subcategory": "world",
    "difficulty": 2,
-   "question": "Which herb is the main ingredient of pesto?",
+   "question": "What is the Italian word for 'coffee with milk foam' served in the morning?",
    "choices": [
-    "Mint",
-    "Coriander",
-    "Parsley",
-    "Basil"
+    "Affogato",
+    "Ristretto",
+    "Cappuccino",
+    "Lungo"
    ],
-   "answer": 3,
-   "explanation": "Pesto genovese uses basil, pine nuts, Parmesan, garlic and olive oil."
-  },
-  {
-   "id": "coo-022",
-   "subcategory": "technique",
-   "difficulty": 3,
-   "question": "Which are the five French 'mother sauces'?",
-   "choices": [
-    "Pesto, ragù, salsa, chimichurri, gravy",
-    "Béarnaise, aioli, mayonnaise, ravigote, tartare",
-    "Dijonnaise, bordelaise, mornay, soubise, chasseur",
-    "Béchamel, velouté, espagnole, hollandaise, tomato"
-   ],
-   "answer": 3,
-   "explanation": "Auguste Escoffier codified them in the early 1900s."
+   "answer": 2,
+   "explanation": "Cappuccino is espresso with steamed milk and foam."
   },
   {
    "id": "coo-023",
@@ -325,6 +396,48 @@
    "explanation": "Each flower yields only three stigmas."
   },
   {
+   "id": "coo-028",
+   "subcategory": "ingredients",
+   "difficulty": 3,
+   "question": "Which flour is used for traditional Neapolitan pizza?",
+   "choices": [
+    "Self-raising flour",
+    "Type 00",
+    "Rye flour",
+    "Buckwheat flour"
+   ],
+   "answer": 1,
+   "explanation": "Finely milled '00' flour is common in Italy."
+  },
+  {
+   "id": "coo-031",
+   "subcategory": "ingredients",
+   "difficulty": 3,
+   "question": "Which country does the cheese Gruyère come from?",
+   "choices": [
+    "Netherlands",
+    "Norway",
+    "Italy",
+    "Switzerland"
+   ],
+   "answer": 3,
+   "explanation": "Gruyère is named after the town of Gruyères."
+  },
+  {
+   "id": "coo-037",
+   "subcategory": "ingredients",
+   "difficulty": 3,
+   "question": "Which type of rice is used for sushi?",
+   "choices": [
+    "Basmati",
+    "Short-grain rice",
+    "Long-grain jasmine",
+    "Wild rice"
+   ],
+   "answer": 1,
+   "explanation": "Short-grain rice is sticky when cooked."
+  },
+  {
    "id": "coo-024",
    "subcategory": "science",
    "difficulty": 3,
@@ -337,6 +450,34 @@
    ],
    "answer": 1,
    "explanation": "The Maillard reaction involves amino acids and sugars."
+  },
+  {
+   "id": "coo-029",
+   "subcategory": "science",
+   "difficulty": 3,
+   "question": "Which living ingredient makes traditional bread dough rise?",
+   "choices": [
+    "Salt",
+    "Sugar",
+    "Yeast",
+    "Flour"
+   ],
+   "answer": 2,
+   "explanation": "Yeast ferments sugars producing carbon dioxide."
+  },
+  {
+   "id": "coo-022",
+   "subcategory": "technique",
+   "difficulty": 3,
+   "question": "Which are the five French 'mother sauces'?",
+   "choices": [
+    "Pesto, ragù, salsa, chimichurri, gravy",
+    "Béarnaise, aioli, mayonnaise, ravigote, tartare",
+    "Dijonnaise, bordelaise, mornay, soubise, chasseur",
+    "Béchamel, velouté, espagnole, hollandaise, tomato"
+   ],
+   "answer": 3,
+   "explanation": "Auguste Escoffier codified them in the early 1900s."
   },
   {
    "id": "coo-025",
@@ -381,34 +522,6 @@
    "explanation": "Dashi is the base of miso soup."
   },
   {
-   "id": "coo-028",
-   "subcategory": "ingredients",
-   "difficulty": 3,
-   "question": "Which flour is used for traditional Neapolitan pizza?",
-   "choices": [
-    "Self-raising flour",
-    "Type 00",
-    "Rye flour",
-    "Buckwheat flour"
-   ],
-   "answer": 1,
-   "explanation": "Finely milled '00' flour is common in Italy."
-  },
-  {
-   "id": "coo-029",
-   "subcategory": "science",
-   "difficulty": 3,
-   "question": "Which living ingredient makes traditional bread dough rise?",
-   "choices": [
-    "Salt",
-    "Sugar",
-    "Yeast",
-    "Flour"
-   ],
-   "answer": 2,
-   "explanation": "Yeast ferments sugars producing carbon dioxide."
-  },
-  {
    "id": "coo-030",
    "subcategory": "world",
    "difficulty": 3,
@@ -421,34 +534,6 @@
    ],
    "answer": 3,
    "explanation": "A tandoor is a clay oven."
-  },
-  {
-   "id": "coo-031",
-   "subcategory": "ingredients",
-   "difficulty": 3,
-   "question": "Which country does the cheese Gruyère come from?",
-   "choices": [
-    "Netherlands",
-    "Norway",
-    "Italy",
-    "Switzerland"
-   ],
-   "answer": 3,
-   "explanation": "Gruyère is named after the town of Gruyères."
-  },
-  {
-   "id": "coo-032",
-   "subcategory": "technique",
-   "difficulty": 4,
-   "question": "What temperature in Celsius is a typical safe internal temperature for cooked chicken?",
-   "choices": [
-    "55 degrees",
-    "90 degrees",
-    "74 degrees (165°F)",
-    "60 degrees"
-   ],
-   "answer": 2,
-   "explanation": "Food safety agencies recommend 165 °F / 74 °C."
   },
   {
    "id": "coo-033",
@@ -479,20 +564,6 @@
    "explanation": "Umami was identified by Kikunae Ikeda in 1908."
   },
   {
-   "id": "coo-035",
-   "subcategory": "world",
-   "difficulty": 4,
-   "question": "Which Spanish cold tomato soup is served in summer?",
-   "choices": [
-    "Gazpacho",
-    "Pisto",
-    "Fabada",
-    "Caldo gallego"
-   ],
-   "answer": 0,
-   "explanation": "Gazpacho comes from Andalusia."
-  },
-  {
    "id": "coo-036",
    "subcategory": "science",
    "difficulty": 4,
@@ -507,46 +578,32 @@
    "explanation": "The Scoville scale measures chilli heat."
   },
   {
-   "id": "coo-037",
-   "subcategory": "ingredients",
-   "difficulty": 3,
-   "question": "Which type of rice is used for sushi?",
+   "id": "coo-032",
+   "subcategory": "technique",
+   "difficulty": 4,
+   "question": "What temperature in Celsius is a typical safe internal temperature for cooked chicken?",
    "choices": [
-    "Basmati",
-    "Short-grain rice",
-    "Long-grain jasmine",
-    "Wild rice"
-   ],
-   "answer": 1,
-   "explanation": "Short-grain rice is sticky when cooked."
-  },
-  {
-   "id": "coo-038",
-   "subcategory": "ingredients",
-   "difficulty": 2,
-   "question": "Which dairy product is made by churning cream?",
-   "choices": [
-    "Yoghurt",
-    "Butter",
-    "Ghee only",
-    "Cheese"
-   ],
-   "answer": 1,
-   "explanation": "Churning separates butterfat from buttermilk."
-  },
-  {
-   "id": "coo-039",
-   "subcategory": "world",
-   "difficulty": 2,
-   "question": "What is the Italian word for 'coffee with milk foam' served in the morning?",
-   "choices": [
-    "Affogato",
-    "Ristretto",
-    "Cappuccino",
-    "Lungo"
+    "55 degrees",
+    "90 degrees",
+    "74 degrees (165°F)",
+    "60 degrees"
    ],
    "answer": 2,
-   "explanation": "Cappuccino is espresso with steamed milk and foam."
+   "explanation": "Food safety agencies recommend 165 °F / 74 °C."
+  },
+  {
+   "id": "coo-035",
+   "subcategory": "world",
+   "difficulty": 4,
+   "question": "Which Spanish cold tomato soup is served in summer?",
+   "choices": [
+    "Gazpacho",
+    "Pisto",
+    "Fabada",
+    "Caldo gallego"
+   ],
+   "answer": 0,
+   "explanation": "Gazpacho comes from Andalusia."
   }
  ]
 }

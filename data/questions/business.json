@@ -3,18 +3,18 @@
  "review": "unreviewed",
  "questions": [
   {
-   "id": "biz-001",
-   "subcategory": "tech",
+   "id": "biz-005",
+   "subcategory": "basics",
    "difficulty": 1,
-   "question": "Which company created the iPhone?",
+   "question": "What does 'CEO' stand for?",
    "choices": [
-    "Samsung",
-    "Sony",
-    "Nokia",
-    "Apple"
+    "Chief Economic Officer",
+    "Central Executive Operator",
+    "Chief Efficiency Officer",
+    "Chief Executive Officer"
    ],
    "answer": 3,
-   "explanation": "Apple launched the iPhone in 2007."
+   "explanation": "The CEO leads the company's management."
   },
   {
    "id": "biz-002",
@@ -29,6 +29,34 @@
    ],
    "answer": 2,
    "explanation": "The swoosh was designed in 1971."
+  },
+  {
+   "id": "biz-007",
+   "subcategory": "brands",
+   "difficulty": 1,
+   "question": "Which fast-food chain has golden arches?",
+   "choices": [
+    "Burger King",
+    "McDonald's",
+    "Wendy's",
+    "KFC"
+   ],
+   "answer": 1,
+   "explanation": "The Golden Arches are among the best-known logos."
+  },
+  {
+   "id": "biz-001",
+   "subcategory": "tech",
+   "difficulty": 1,
+   "question": "Which company created the iPhone?",
+   "choices": [
+    "Samsung",
+    "Sony",
+    "Nokia",
+    "Apple"
+   ],
+   "answer": 3,
+   "explanation": "Apple launched the iPhone in 2007."
   },
   {
    "id": "biz-003",
@@ -59,20 +87,6 @@
    "explanation": "Musk joined Tesla in 2004 as chairman and later became CEO."
   },
   {
-   "id": "biz-005",
-   "subcategory": "basics",
-   "difficulty": 1,
-   "question": "What does 'CEO' stand for?",
-   "choices": [
-    "Chief Economic Officer",
-    "Central Executive Operator",
-    "Chief Efficiency Officer",
-    "Chief Executive Officer"
-   ],
-   "answer": 3,
-   "explanation": "The CEO leads the company's management."
-  },
-  {
    "id": "biz-006",
    "subcategory": "tech",
    "difficulty": 1,
@@ -85,20 +99,6 @@
    ],
    "answer": 1,
    "explanation": "Meta (formerly Facebook) acquired Instagram in 2012."
-  },
-  {
-   "id": "biz-007",
-   "subcategory": "brands",
-   "difficulty": 1,
-   "question": "Which fast-food chain has golden arches?",
-   "choices": [
-    "Burger King",
-    "McDonald's",
-    "Wendy's",
-    "KFC"
-   ],
-   "answer": 1,
-   "explanation": "The Golden Arches are among the best-known logos."
   },
   {
    "id": "biz-008",
@@ -115,48 +115,6 @@
    "explanation": "B2B companies sell to other businesses."
   },
   {
-   "id": "biz-009",
-   "subcategory": "tech",
-   "difficulty": 2,
-   "question": "Which company is the owner of Android?",
-   "choices": [
-    "Apple",
-    "Google",
-    "Microsoft",
-    "Samsung"
-   ],
-   "answer": 1,
-   "explanation": "Google bought Android Inc. in 2005."
-  },
-  {
-   "id": "biz-010",
-   "subcategory": "startups",
-   "difficulty": 2,
-   "question": "What is a 'startup unicorn'?",
-   "choices": [
-    "A government-owned firm",
-    "A company with a mascot",
-    "A startup valued at over $1 billion",
-    "A failed startup"
-   ],
-   "answer": 2,
-   "explanation": "The term was coined by Aileen Lee in 2013."
-  },
-  {
-   "id": "biz-011",
-   "subcategory": "tech",
-   "difficulty": 2,
-   "question": "Who co-founded Microsoft with Paul Allen?",
-   "choices": [
-    "Larry Ellison",
-    "Steve Jobs",
-    "Michael Dell",
-    "Bill Gates"
-   ],
-   "answer": 3,
-   "explanation": "Microsoft was founded in 1975."
-  },
-  {
    "id": "biz-012",
    "subcategory": "basics",
    "difficulty": 2,
@@ -169,6 +127,48 @@
    ],
    "answer": 3,
    "explanation": "KPIs track progress towards goals."
+  },
+  {
+   "id": "biz-031",
+   "subcategory": "basics",
+   "difficulty": 2,
+   "question": "What is an 'invoice'?",
+   "choices": [
+    "A bill requesting payment for goods or services",
+    "A legal contract",
+    "A tax return",
+    "A job offer"
+   ],
+   "answer": 0,
+   "explanation": "Invoices list items and amounts due."
+  },
+  {
+   "id": "biz-032",
+   "subcategory": "basics",
+   "difficulty": 2,
+   "question": "What is a 'franchise'?",
+   "choices": [
+    "A merger",
+    "A product patent",
+    "Permission to operate under an established brand",
+    "A tax"
+   ],
+   "answer": 2,
+   "explanation": "McDonald's and Subway use franchising."
+  },
+  {
+   "id": "biz-035",
+   "subcategory": "basics",
+   "difficulty": 2,
+   "question": "What does 'HR' stand for?",
+   "choices": [
+    "Home Registry",
+    "High Revenue",
+    "Hourly Rate",
+    "Human Resources"
+   ],
+   "answer": 3,
+   "explanation": "HR manages hiring and employee relations."
   },
   {
    "id": "biz-013",
@@ -185,6 +185,20 @@
    "explanation": "Disney+ launched in 2019."
   },
   {
+   "id": "biz-015",
+   "subcategory": "brands",
+   "difficulty": 2,
+   "question": "Which Swedish company is known for flat-pack furniture?",
+   "choices": [
+    "Electrolux",
+    "Volvo",
+    "IKEA",
+    "H&M"
+   ],
+   "answer": 2,
+   "explanation": "IKEA was founded by Ingvar Kamprad in 1943."
+  },
+  {
    "id": "biz-014",
    "subcategory": "marketing",
    "difficulty": 2,
@@ -199,18 +213,18 @@
    "explanation": "Branding includes names, logos and messaging."
   },
   {
-   "id": "biz-015",
-   "subcategory": "brands",
+   "id": "biz-010",
+   "subcategory": "startups",
    "difficulty": 2,
-   "question": "Which Swedish company is known for flat-pack furniture?",
+   "question": "What is a 'startup unicorn'?",
    "choices": [
-    "Electrolux",
-    "Volvo",
-    "IKEA",
-    "H&M"
+    "A government-owned firm",
+    "A company with a mascot",
+    "A startup valued at over $1 billion",
+    "A failed startup"
    ],
    "answer": 2,
-   "explanation": "IKEA was founded by Ingvar Kamprad in 1943."
+   "explanation": "The term was coined by Aileen Lee in 2013."
   },
   {
    "id": "biz-016",
@@ -227,32 +241,60 @@
    "explanation": "VCs take equity in exchange for funding."
   },
   {
-   "id": "biz-017",
+   "id": "biz-009",
    "subcategory": "tech",
-   "difficulty": 3,
-   "question": "Which company was the first to reach a market value of $1 trillion?",
+   "difficulty": 2,
+   "question": "Which company is the owner of Android?",
+   "choices": [
+    "Apple",
+    "Google",
+    "Microsoft",
+    "Samsung"
+   ],
+   "answer": 1,
+   "explanation": "Google bought Android Inc. in 2005."
+  },
+  {
+   "id": "biz-011",
+   "subcategory": "tech",
+   "difficulty": 2,
+   "question": "Who co-founded Microsoft with Paul Allen?",
+   "choices": [
+    "Larry Ellison",
+    "Steve Jobs",
+    "Michael Dell",
+    "Bill Gates"
+   ],
+   "answer": 3,
+   "explanation": "Microsoft was founded in 1975."
+  },
+  {
+   "id": "biz-033",
+   "subcategory": "tech",
+   "difficulty": 2,
+   "question": "Which company popularised 'one-click' ordering?",
    "choices": [
     "Amazon",
     "Apple",
-    "Saudi Aramco",
-    "Microsoft"
-   ],
-   "answer": 1,
-   "explanation": "Apple reached $1 trillion in August 2018."
-  },
-  {
-   "id": "biz-018",
-   "subcategory": "strategy",
-   "difficulty": 3,
-   "question": "What does 'SWOT' analysis stand for?",
-   "choices": [
-    "Strengths, Weaknesses, Opportunities, Threats",
-    "Stocks, Wealth, Options, Trade",
-    "Sales, Wages, Orders, Taxes",
-    "Systems, Workflow, Output, Time"
+    "PayPal",
+    "eBay"
    ],
    "answer": 0,
-   "explanation": "SWOT is a strategic planning framework."
+   "explanation": "Amazon patented one-click ordering in 1999."
+  },
+  {
+   "id": "biz-025",
+   "subcategory": "basics",
+   "difficulty": 3,
+   "question": "What does 'M&A' stand for?",
+   "choices": [
+    "Marketing and Advertising",
+    "Management and Administration",
+    "Mergers and Acquisitions",
+    "Markets and Assets"
+   ],
+   "answer": 2,
+   "explanation": "M&A refers to combining companies."
   },
   {
    "id": "biz-019",
@@ -269,18 +311,18 @@
    "explanation": "The Walkman launched in 1979."
   },
   {
-   "id": "biz-020",
-   "subcategory": "strategy",
+   "id": "biz-034",
+   "subcategory": "brands",
    "difficulty": 3,
-   "question": "Which company originated the 'just-in-time' manufacturing method?",
+   "question": "Which luxury group owns Louis Vuitton, Dior and Moët & Chandon?",
    "choices": [
-    "Honda",
-    "General Motors",
-    "Toyota",
-    "Ford"
+    "LVMH",
+    "Richemont",
+    "Kering",
+    "Hermès"
    ],
-   "answer": 2,
-   "explanation": "Just-in-time is part of the Toyota Production System."
+   "answer": 0,
+   "explanation": "LVMH is led by Bernard Arnault."
   },
   {
    "id": "biz-021",
@@ -311,6 +353,48 @@
    "explanation": "Startups pivot when the original idea does not work."
   },
   {
+   "id": "biz-018",
+   "subcategory": "strategy",
+   "difficulty": 3,
+   "question": "What does 'SWOT' analysis stand for?",
+   "choices": [
+    "Strengths, Weaknesses, Opportunities, Threats",
+    "Stocks, Wealth, Options, Trade",
+    "Sales, Wages, Orders, Taxes",
+    "Systems, Workflow, Output, Time"
+   ],
+   "answer": 0,
+   "explanation": "SWOT is a strategic planning framework."
+  },
+  {
+   "id": "biz-020",
+   "subcategory": "strategy",
+   "difficulty": 3,
+   "question": "Which company originated the 'just-in-time' manufacturing method?",
+   "choices": [
+    "Honda",
+    "General Motors",
+    "Toyota",
+    "Ford"
+   ],
+   "answer": 2,
+   "explanation": "Just-in-time is part of the Toyota Production System."
+  },
+  {
+   "id": "biz-017",
+   "subcategory": "tech",
+   "difficulty": 3,
+   "question": "Which company was the first to reach a market value of $1 trillion?",
+   "choices": [
+    "Amazon",
+    "Apple",
+    "Saudi Aramco",
+    "Microsoft"
+   ],
+   "answer": 1,
+   "explanation": "Apple reached $1 trillion in August 2018."
+  },
+  {
    "id": "biz-023",
    "subcategory": "tech",
    "difficulty": 3,
@@ -337,20 +421,6 @@
    ],
    "answer": 2,
    "explanation": "Netflix started in 1997 and launched streaming in 2007."
-  },
-  {
-   "id": "biz-025",
-   "subcategory": "basics",
-   "difficulty": 3,
-   "question": "What does 'M&A' stand for?",
-   "choices": [
-    "Marketing and Advertising",
-    "Management and Administration",
-    "Mergers and Acquisitions",
-    "Markets and Assets"
-   ],
-   "answer": 2,
-   "explanation": "M&A refers to combining companies."
   },
   {
    "id": "biz-026",
@@ -421,76 +491,6 @@
    ],
    "answer": 2,
    "explanation": "They met at Stanford University."
-  },
-  {
-   "id": "biz-031",
-   "subcategory": "basics",
-   "difficulty": 2,
-   "question": "What is an 'invoice'?",
-   "choices": [
-    "A bill requesting payment for goods or services",
-    "A legal contract",
-    "A tax return",
-    "A job offer"
-   ],
-   "answer": 0,
-   "explanation": "Invoices list items and amounts due."
-  },
-  {
-   "id": "biz-032",
-   "subcategory": "basics",
-   "difficulty": 2,
-   "question": "What is a 'franchise'?",
-   "choices": [
-    "A merger",
-    "A product patent",
-    "Permission to operate under an established brand",
-    "A tax"
-   ],
-   "answer": 2,
-   "explanation": "McDonald's and Subway use franchising."
-  },
-  {
-   "id": "biz-033",
-   "subcategory": "tech",
-   "difficulty": 2,
-   "question": "Which company popularised 'one-click' ordering?",
-   "choices": [
-    "Amazon",
-    "Apple",
-    "PayPal",
-    "eBay"
-   ],
-   "answer": 0,
-   "explanation": "Amazon patented one-click ordering in 1999."
-  },
-  {
-   "id": "biz-034",
-   "subcategory": "brands",
-   "difficulty": 3,
-   "question": "Which luxury group owns Louis Vuitton, Dior and Moët & Chandon?",
-   "choices": [
-    "LVMH",
-    "Richemont",
-    "Kering",
-    "Hermès"
-   ],
-   "answer": 0,
-   "explanation": "LVMH is led by Bernard Arnault."
-  },
-  {
-   "id": "biz-035",
-   "subcategory": "basics",
-   "difficulty": 2,
-   "question": "What does 'HR' stand for?",
-   "choices": [
-    "Home Registry",
-    "High Revenue",
-    "Hourly Rate",
-    "Human Resources"
-   ],
-   "answer": 3,
-   "explanation": "HR manages hiring and employee relations."
   }
  ]
 }

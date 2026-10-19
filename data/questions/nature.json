@@ -1,36 +1,827 @@
 {
-  "category": "nature",
-  "review": "unreviewed",
-  "questions": [
-    {"id":"nat-001","subcategory":"animals","difficulty":1,"question":"What is the largest animal alive today?","choices":["African elephant","Blue whale","Great white shark","Giraffe"],"answer":1,"explanation":"The blue whale can exceed 25 metres in length and weigh well over 100 tonnes."},
-    {"id":"nat-002","subcategory":"cells","difficulty":2,"question":"Which part of a cell is known as its 'powerhouse'?","choices":["Nucleus","Ribosome","Mitochondrion","Vacuole"],"answer":2,"explanation":"Mitochondria produce most of the cell's usable energy, in the form of ATP."},
-    {"id":"nat-003","subcategory":"plants","difficulty":1,"question":"Which gas do plants absorb from the air for photosynthesis?","choices":["Oxygen","Nitrogen","Carbon dioxide","Hydrogen"],"answer":2,"explanation":"Plants use sunlight to turn carbon dioxide and water into sugars, releasing oxygen."},
-    {"id":"nat-004","subcategory":"animals","difficulty":3,"question":"How many hearts does an octopus have?","choices":["1","2","3","4"],"answer":2,"explanation":"An octopus has three hearts: two pump blood to the gills and one to the rest of the body."},
-    {"id":"nat-005","subcategory":"animals","difficulty":1,"question":"What is the fastest land animal?","choices":["Lion","Cheetah","Pronghorn","Greyhound"],"answer":1,"explanation":"Cheetahs can reach about 100 km/h in short sprints."},
-    {"id":"nat-006","subcategory":"animals","difficulty":1,"question":"What do giant pandas mainly eat?","choices":["Bamboo","Fish","Berries","Grass"],"answer":0,"explanation":"Bamboo makes up about 99% of a giant panda's diet."},
-    {"id":"nat-007","subcategory":"anatomy","difficulty":2,"question":"What is the largest organ of the human body?","choices":["Liver","Brain","Lungs","Skin"],"answer":3,"explanation":"The skin covers roughly 1.5 to 2 square metres in an adult."},
-    {"id":"nat-008","subcategory":"anatomy","difficulty":2,"question":"How many bones are in an adult human body?","choices":["186","206","226","256"],"answer":1,"explanation":"Adults have 206 bones; babies are born with more, which later fuse."},
-    {"id":"nat-009","subcategory":"anatomy","difficulty":2,"question":"Which blood cells carry oxygen around the body?","choices":["White blood cells","Platelets","Red blood cells","Plasma cells"],"answer":2,"explanation":"Red blood cells contain haemoglobin, which binds oxygen in the lungs."},
-    {"id":"nat-010","subcategory":"anatomy","difficulty":4,"question":"What is the smallest bone in the human body?","choices":["Stapes","Hyoid","Patella","Coccyx"],"answer":0,"explanation":"The stapes, in the middle ear, is about 3 mm long."},
-    {"id":"nat-011","subcategory":"animals","difficulty":1,"question":"What is the process by which a caterpillar becomes a butterfly called?","choices":["Migration","Photosynthesis","Metamorphosis","Hibernation"],"answer":2,"explanation":"Metamorphosis is a complete change of body form between life stages."},
-    {"id":"nat-012","subcategory":"animals","difficulty":1,"question":"Which of these animals is a marsupial?","choices":["Wolf","Kangaroo","Otter","Rabbit"],"answer":1,"explanation":"Marsupials, like kangaroos, carry their young in a pouch after a very short pregnancy."},
-    {"id":"nat-013","subcategory":"animals","difficulty":2,"question":"What is a group of lions called?","choices":["A pack","A herd","A pride","A troop"],"answer":2,"explanation":"A group of lions is a pride."},
-    {"id":"nat-014","subcategory":"plants","difficulty":1,"question":"Acorns are the seeds of which tree?","choices":["Maple","Oak","Birch","Pine"],"answer":1,"explanation":"Oak trees produce acorns."},
-    {"id":"nat-015","subcategory":"animals","difficulty":2,"question":"Bees collect which substance from flowers to make honey?","choices":["Pollen only","Sap","Nectar","Resin"],"answer":2,"explanation":"Bees collect nectar and convert it to honey by evaporation and enzymes."},
-    {"id":"nat-016","subcategory":"animals","difficulty":2,"question":"Which is the only mammal capable of true, sustained flight?","choices":["Flying squirrel","Bat","Sugar glider","Colugo"],"answer":1,"explanation":"Bats can fly with their wings. Flying squirrels and gliders only glide."},
-    {"id":"nat-017","subcategory":"plants","difficulty":3,"question":"Which is the tallest tree species in the world?","choices":["Giant sequoia","Douglas fir","Coast redwood","Eucalyptus"],"answer":2,"explanation":"Coast redwoods can exceed 115 metres in height."},
-    {"id":"nat-018","subcategory":"animals","difficulty":3,"question":"What is the scientific study of birds called?","choices":["Entomology","Herpetology","Ornithology","Ichthyology"],"answer":2,"explanation":"Ornithology is the study of birds. Entomology is insects and herpetology is reptiles and amphibians."},
-    {"id":"nat-019","subcategory":"anatomy","difficulty":3,"question":"Which part of the eye adjusts the size of the pupil?","choices":["Cornea","Retina","Iris","Lens"],"answer":2,"explanation":"Muscles in the iris widen or narrow the pupil to control how much light enters the eye."},
-    {"id":"nat-020","subcategory":"animals","difficulty":2,"question":"Which is the largest living species of cat?","choices":["Lion","Tiger","Jaguar","Snow leopard"],"answer":1,"explanation":"The tiger is the largest cat, with Siberian tigers reaching around 300 kg."},
-    {"id":"nat-021","subcategory":"anatomy","difficulty":1,"question":"How many chambers does the human heart have?","choices":["2","3","4","6"],"answer":2,"explanation":"The heart has two atria and two ventricles."},
-    {"id":"nat-022","subcategory":"anatomy","difficulty":2,"question":"Which vitamin does the skin produce when exposed to sunlight?","choices":["Vitamin A","Vitamin C","Vitamin D","Vitamin K"],"answer":2,"explanation":"UVB light triggers vitamin D synthesis in the skin."},
-    {"id":"nat-023","subcategory":"plants","difficulty":3,"question":"True or false: botanically, a banana is a berry.","type":"tf","answer":true,"explanation":"Botanically, a berry develops from a single ovary and has soft flesh and seeds. Bananas qualify, while strawberries do not."},
-    {"id":"nat-024","subcategory":"animals","difficulty":2,"question":"True or false: goldfish only have a three-second memory.","type":"tf","answer":false,"explanation":"Studies show goldfish can remember things for weeks or months and can be trained."},
-    {"id":"nat-025","subcategory":"anatomy","difficulty":2,"question":"True or false: humans only use 10% of their brains.","type":"tf","answer":false,"explanation":"Brain imaging shows activity across virtually the whole brain; the 10% claim is a myth."},
-    {"id":"nat-026","subcategory":"animals","difficulty":4,"question":"Which living bird has the largest wingspan?","choices":["Andean condor","Wandering albatross","Californian condor","Marabou stork"],"answer":1,"explanation":"The wandering albatross has a wingspan of up to about 3.5 metres."},
-    {"id":"nat-027","subcategory":"animals","difficulty":1,"question":"How many legs does an adult insect have?","choices":["4","6","8","10"],"answer":1,"explanation":"All insects have six legs. Spiders have eight and are not insects."},
-    {"id":"nat-028","subcategory":"plants","difficulty":3,"question":"Which plant tissue carries water upward from the roots to the leaves?","choices":["Phloem","Xylem","Cambium","Epidermis"],"answer":1,"explanation":"Xylem carries water and minerals up; phloem carries sugars around the plant."},
-    {"id":"nat-029","subcategory":"animals","difficulty":3,"question":"Which amphibian is famous for its ability to regrow lost limbs?","choices":["Axolotl","Common frog","Cane toad","Fire salamander"],"answer":0,"explanation":"Axolotls can regenerate limbs, parts of the heart and even parts of the brain."},
-    {"id":"nat-030","subcategory":"animals","difficulty":2,"question":"Which mammal lays eggs?","choices":["Platypus","Armadillo","Pangolin","Opossum"],"answer":0,"explanation":"The platypus and echidnas are monotremes, the only mammals that lay eggs."}
-  ]
+ "category": "nature",
+ "review": "unreviewed",
+ "questions": [
+  {
+   "id": "nat-021",
+   "subcategory": "anatomy",
+   "difficulty": 1,
+   "question": "How many chambers does the human heart have?",
+   "choices": [
+    "2",
+    "3",
+    "4",
+    "6"
+   ],
+   "answer": 2,
+   "explanation": "The heart has two atria and two ventricles."
+  },
+  {
+   "id": "nat-001",
+   "subcategory": "animals",
+   "difficulty": 1,
+   "question": "What is the largest animal alive today?",
+   "choices": [
+    "African elephant",
+    "Blue whale",
+    "Great white shark",
+    "Giraffe"
+   ],
+   "answer": 1,
+   "explanation": "The blue whale can exceed 25 metres in length and weigh well over 100 tonnes."
+  },
+  {
+   "id": "nat-005",
+   "subcategory": "animals",
+   "difficulty": 1,
+   "question": "What is the fastest land animal?",
+   "choices": [
+    "Lion",
+    "Cheetah",
+    "Pronghorn",
+    "Greyhound"
+   ],
+   "answer": 1,
+   "explanation": "Cheetahs can reach about 100 km/h in short sprints."
+  },
+  {
+   "id": "nat-006",
+   "subcategory": "animals",
+   "difficulty": 1,
+   "question": "What do giant pandas mainly eat?",
+   "choices": [
+    "Bamboo",
+    "Fish",
+    "Berries",
+    "Grass"
+   ],
+   "answer": 0,
+   "explanation": "Bamboo makes up about 99% of a giant panda's diet."
+  },
+  {
+   "id": "nat-011",
+   "subcategory": "animals",
+   "difficulty": 1,
+   "question": "What is the process by which a caterpillar becomes a butterfly called?",
+   "choices": [
+    "Migration",
+    "Photosynthesis",
+    "Metamorphosis",
+    "Hibernation"
+   ],
+   "answer": 2,
+   "explanation": "Metamorphosis is a complete change of body form between life stages."
+  },
+  {
+   "id": "nat-012",
+   "subcategory": "animals",
+   "difficulty": 1,
+   "question": "Which of these animals is a marsupial?",
+   "choices": [
+    "Wolf",
+    "Kangaroo",
+    "Otter",
+    "Rabbit"
+   ],
+   "answer": 1,
+   "explanation": "Marsupials, like kangaroos, carry their young in a pouch after a very short pregnancy."
+  },
+  {
+   "id": "nat-027",
+   "subcategory": "animals",
+   "difficulty": 1,
+   "question": "How many legs does an adult insect have?",
+   "choices": [
+    "4",
+    "6",
+    "8",
+    "10"
+   ],
+   "answer": 1,
+   "explanation": "All insects have six legs. Spiders have eight and are not insects."
+  },
+  {
+   "id": "nat2-010",
+   "subcategory": "animals",
+   "difficulty": 1,
+   "question": "Which is the largest living bird, and cannot fly?",
+   "choices": [
+    "The emu",
+    "The penguin",
+    "The ostrich",
+    "The kiwi"
+   ],
+   "answer": 2,
+   "explanation": "An ostrich can reach about 2.7 metres in height.",
+   "tags": [
+    "birds"
+   ]
+  },
+  {
+   "id": "nat2-015",
+   "subcategory": "animals",
+   "difficulty": 1,
+   "question": "What do we call an animal that eats only plants?",
+   "choices": [
+    "An insectivore",
+    "An omnivore",
+    "A herbivore",
+    "A carnivore"
+   ],
+   "answer": 2,
+   "explanation": "Cows and rabbits are herbivores.",
+   "tags": [
+    "diets"
+   ]
+  },
+  {
+   "id": "trk-013",
+   "subcategory": "animals",
+   "difficulty": 1,
+   "question": "Which statement about bats is true?",
+   "choices": [
+    "Bats are blind",
+    "Bats cannot fly in daylight",
+    "Bats can see, and many also use echolocation",
+    "Bats are rodents"
+   ],
+   "answer": 2,
+   "explanation": "All bats have eyes and see; many species add echolocation to find prey in the dark.",
+   "tags": [
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think bats are blind."
+  },
+  {
+   "id": "trk-014",
+   "subcategory": "animals",
+   "difficulty": 1,
+   "question": "What do experiments show about a goldfish's memory?",
+   "choices": [
+    "It lasts for weeks or months",
+    "It lasts about three seconds",
+    "It lasts about ten seconds",
+    "Goldfish have no memory"
+   ],
+   "answer": 0,
+   "explanation": "Goldfish learn feeding signals and mazes and remember them for long periods.",
+   "tags": [
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think goldfish have a memory of only three seconds."
+  },
+  {
+   "id": "trk-016",
+   "subcategory": "animals",
+   "difficulty": 1,
+   "question": "An adult insect has how many legs?",
+   "choices": [
+    "Ten",
+    "Six",
+    "Eight",
+    "Four"
+   ],
+   "answer": 1,
+   "explanation": "Insects have six legs; spiders and other arachnids have eight.",
+   "tags": [
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think spiders are insects."
+  },
+  {
+   "id": "nat2-013",
+   "subcategory": "cell-biology",
+   "difficulty": 1,
+   "question": "Which basic units make up all living organisms?",
+   "choices": [
+    "Cells",
+    "Atoms",
+    "Organs",
+    "Tissues"
+   ],
+   "answer": 0,
+   "explanation": "All known living things are made of one or more cells.",
+   "tags": [
+    "cell"
+   ]
+  },
+  {
+   "id": "nat2-001",
+   "subcategory": "classification",
+   "difficulty": 1,
+   "question": "What do we call animals that have a backbone?",
+   "choices": [
+    "Arthropods",
+    "Vertebrates",
+    "Molluscs",
+    "Invertebrates"
+   ],
+   "answer": 1,
+   "explanation": "Fish, amphibians, reptiles, birds and mammals are vertebrates.",
+   "tags": [
+    "taxa"
+   ]
+  },
+  {
+   "id": "nat2-017",
+   "subcategory": "classification",
+   "difficulty": 1,
+   "question": "Which scientist created the binomial system for naming species?",
+   "choices": [
+    "Charles Darwin",
+    "Gregor Mendel",
+    "Carl Linnaeus",
+    "Aristotle"
+   ],
+   "answer": 2,
+   "explanation": "His Systema Naturae of 1735 began modern classification.",
+   "tags": [
+    "linnaeus"
+   ]
+  },
+  {
+   "id": "nat2-005",
+   "subcategory": "ecology",
+   "difficulty": 1,
+   "question": "What do we call an organism that makes its own food from sunlight?",
+   "choices": [
+    "A predator",
+    "A decomposer",
+    "A scavenger",
+    "A producer"
+   ],
+   "answer": 3,
+   "explanation": "Plants, algae and some bacteria are producers.",
+   "tags": [
+    "foodchain"
+   ]
+  },
+  {
+   "id": "nat2-014",
+   "subcategory": "ecology",
+   "difficulty": 1,
+   "question": "Which biome has permanently frozen subsoil and almost no trees?",
+   "choices": [
+    "Desert",
+    "Tundra",
+    "Savanna",
+    "Taiga"
+   ],
+   "answer": 1,
+   "explanation": "Permafrost keeps tree roots from growing deep.",
+   "tags": [
+    "biomes"
+   ]
+  },
+  {
+   "id": "nat2-018",
+   "subcategory": "ecology",
+   "difficulty": 1,
+   "question": "What is a relationship in which both organisms benefit called?",
+   "choices": [
+    "Predation",
+    "Competition",
+    "Parasitism",
+    "Mutualism"
+   ],
+   "answer": 3,
+   "explanation": "Bees and flowering plants are a classic example.",
+   "tags": [
+    "symbiosis"
+   ]
+  },
+  {
+   "id": "nat2-003",
+   "subcategory": "evolution",
+   "difficulty": 1,
+   "question": "Which scientist proposed evolution by natural selection in On the Origin of Species (1859)?",
+   "choices": [
+    "Gregor Mendel",
+    "Charles Darwin",
+    "Jean-Baptiste Lamarck",
+    "Carl Linnaeus"
+   ],
+   "answer": 1,
+   "explanation": "Darwin and Alfred Wallace formulated the idea independently.",
+   "tags": [
+    "darwin"
+   ]
+  },
+  {
+   "id": "nat2-009",
+   "subcategory": "human",
+   "difficulty": 1,
+   "question": "Which part of the eye contains the cells that detect light?",
+   "choices": [
+    "The iris",
+    "The retina",
+    "The cornea",
+    "The lens"
+   ],
+   "answer": 1,
+   "explanation": "The retina sends signals to the brain through the optic nerve.",
+   "tags": [
+    "eye"
+   ]
+  },
+  {
+   "id": "nat2-020",
+   "subcategory": "human",
+   "difficulty": 1,
+   "question": "Which thigh bone is the longest bone in the human body?",
+   "choices": [
+    "The tibia",
+    "The humerus",
+    "The fibula",
+    "The femur"
+   ],
+   "answer": 3,
+   "explanation": "The femur is the thigh bone.",
+   "tags": [
+    "muscle"
+   ]
+  },
+  {
+   "id": "nat-003",
+   "subcategory": "plants",
+   "difficulty": 1,
+   "question": "Which gas do plants absorb from the air for photosynthesis?",
+   "choices": [
+    "Oxygen",
+    "Nitrogen",
+    "Carbon dioxide",
+    "Hydrogen"
+   ],
+   "answer": 2,
+   "explanation": "Plants use sunlight to turn carbon dioxide and water into sugars, releasing oxygen."
+  },
+  {
+   "id": "nat-014",
+   "subcategory": "plants",
+   "difficulty": 1,
+   "question": "Acorns are the seeds of which tree?",
+   "choices": [
+    "Maple",
+    "Oak",
+    "Birch",
+    "Pine"
+   ],
+   "answer": 1,
+   "explanation": "Oak trees produce acorns."
+  },
+  {
+   "id": "nat2-004",
+   "subcategory": "plants",
+   "difficulty": 1,
+   "question": "Which pigment makes plants green and captures light for photosynthesis?",
+   "choices": [
+    "Keratin",
+    "Melanin",
+    "Chlorophyll",
+    "Haemoglobin"
+   ],
+   "answer": 2,
+   "explanation": "Chlorophyll absorbs mainly red and blue light.",
+   "tags": [
+    "chlorophyll"
+   ]
+  },
+  {
+   "id": "trk-015",
+   "subcategory": "plants",
+   "difficulty": 1,
+   "question": "Botanically, what is a tomato?",
+   "choices": [
+    "A leaf",
+    "A fruit (a berry)",
+    "A stem",
+    "A vegetable root"
+   ],
+   "answer": 1,
+   "explanation": "A tomato develops from a flower's ovary and holds seeds, so it is a fruit.",
+   "tags": [
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think a tomato is botanically a vegetable."
+  },
+  {
+   "id": "nat-007",
+   "subcategory": "anatomy",
+   "difficulty": 2,
+   "question": "What is the largest organ of the human body?",
+   "choices": [
+    "Liver",
+    "Brain",
+    "Lungs",
+    "Skin"
+   ],
+   "answer": 3,
+   "explanation": "The skin covers roughly 1.5 to 2 square metres in an adult."
+  },
+  {
+   "id": "nat-008",
+   "subcategory": "anatomy",
+   "difficulty": 2,
+   "question": "How many bones are in an adult human body?",
+   "choices": [
+    "186",
+    "206",
+    "226",
+    "256"
+   ],
+   "answer": 1,
+   "explanation": "Adults have 206 bones; babies are born with more, which later fuse."
+  },
+  {
+   "id": "nat-009",
+   "subcategory": "anatomy",
+   "difficulty": 2,
+   "question": "Which blood cells carry oxygen around the body?",
+   "choices": [
+    "White blood cells",
+    "Platelets",
+    "Red blood cells",
+    "Plasma cells"
+   ],
+   "answer": 2,
+   "explanation": "Red blood cells contain haemoglobin, which binds oxygen in the lungs."
+  },
+  {
+   "id": "nat-022",
+   "subcategory": "anatomy",
+   "difficulty": 2,
+   "question": "Which vitamin does the skin produce when exposed to sunlight?",
+   "choices": [
+    "Vitamin A",
+    "Vitamin C",
+    "Vitamin D",
+    "Vitamin K"
+   ],
+   "answer": 2,
+   "explanation": "UVB light triggers vitamin D synthesis in the skin."
+  },
+  {
+   "id": "nat-025",
+   "subcategory": "anatomy",
+   "difficulty": 2,
+   "question": "True or false: humans only use 10% of their brains.",
+   "type": "tf",
+   "answer": false,
+   "explanation": "Brain imaging shows activity across virtually the whole brain; the 10% claim is a myth."
+  },
+  {
+   "id": "nat-013",
+   "subcategory": "animals",
+   "difficulty": 2,
+   "question": "What is a group of lions called?",
+   "choices": [
+    "A pack",
+    "A herd",
+    "A pride",
+    "A troop"
+   ],
+   "answer": 2,
+   "explanation": "A group of lions is a pride."
+  },
+  {
+   "id": "nat-015",
+   "subcategory": "animals",
+   "difficulty": 2,
+   "question": "Bees collect which substance from flowers to make honey?",
+   "choices": [
+    "Pollen only",
+    "Sap",
+    "Nectar",
+    "Resin"
+   ],
+   "answer": 2,
+   "explanation": "Bees collect nectar and convert it to honey by evaporation and enzymes."
+  },
+  {
+   "id": "nat-016",
+   "subcategory": "animals",
+   "difficulty": 2,
+   "question": "Which is the only mammal capable of true, sustained flight?",
+   "choices": [
+    "Flying squirrel",
+    "Bat",
+    "Sugar glider",
+    "Colugo"
+   ],
+   "answer": 1,
+   "explanation": "Bats can fly with their wings. Flying squirrels and gliders only glide."
+  },
+  {
+   "id": "nat-020",
+   "subcategory": "animals",
+   "difficulty": 2,
+   "question": "Which is the largest living species of cat?",
+   "choices": [
+    "Lion",
+    "Tiger",
+    "Jaguar",
+    "Snow leopard"
+   ],
+   "answer": 1,
+   "explanation": "The tiger is the largest cat, with Siberian tigers reaching around 300 kg."
+  },
+  {
+   "id": "nat-024",
+   "subcategory": "animals",
+   "difficulty": 2,
+   "question": "True or false: goldfish only have a three-second memory.",
+   "type": "tf",
+   "answer": false,
+   "explanation": "Studies show goldfish can remember things for weeks or months and can be trained."
+  },
+  {
+   "id": "nat-030",
+   "subcategory": "animals",
+   "difficulty": 2,
+   "question": "Which mammal lays eggs?",
+   "choices": [
+    "Platypus",
+    "Armadillo",
+    "Pangolin",
+    "Opossum"
+   ],
+   "answer": 0,
+   "explanation": "The platypus and echidnas are monotremes, the only mammals that lay eggs."
+  },
+  {
+   "id": "nat2-019",
+   "subcategory": "animals",
+   "difficulty": 2,
+   "question": "What do we call animals that are mainly active at night?",
+   "choices": [
+    "Diurnal",
+    "Aquatic",
+    "Crepuscular",
+    "Nocturnal"
+   ],
+   "answer": 3,
+   "explanation": "Owls and bats are nocturnal.",
+   "tags": [
+    "rhythms"
+   ]
+  },
+  {
+   "id": "nat-002",
+   "subcategory": "cells",
+   "difficulty": 2,
+   "question": "Which part of a cell is known as its 'powerhouse'?",
+   "choices": [
+    "Nucleus",
+    "Ribosome",
+    "Mitochondrion",
+    "Vacuole"
+   ],
+   "answer": 2,
+   "explanation": "Mitochondria produce most of the cell's usable energy, in the form of ATP."
+  },
+  {
+   "id": "nat2-002",
+   "subcategory": "genetics",
+   "difficulty": 2,
+   "question": "Which shape best describes the structure of DNA, first modelled in 1953?",
+   "choices": [
+    "A single strand",
+    "A double helix",
+    "A cube",
+    "A triple helix"
+   ],
+   "answer": 1,
+   "explanation": "Two strands twist around each other, as shown by Watson, Crick and Franklin's data.",
+   "tags": [
+    "dna"
+   ]
+  },
+  {
+   "id": "nat2-007",
+   "subcategory": "oceans",
+   "difficulty": 2,
+   "question": "Which coral reef system, off the coast of Queensland, is the biggest on Earth?",
+   "choices": [
+    "The Great Barrier Reef",
+    "The Red Sea reefs",
+    "The Belize Barrier Reef",
+    "The Maldives atolls"
+   ],
+   "answer": 0,
+   "explanation": "It stretches over more than 2,000 kilometres off Queensland.",
+   "tags": [
+    "coral"
+   ]
+  },
+  {
+   "id": "nat2-011",
+   "subcategory": "plants",
+   "difficulty": 2,
+   "question": "Which part of a flower produces pollen?",
+   "choices": [
+    "The pistil",
+    "The sepal",
+    "The stamen",
+    "The petal"
+   ],
+   "answer": 2,
+   "explanation": "The anther at the tip of the stamen makes the pollen.",
+   "tags": [
+    "pollination"
+   ]
+  },
+  {
+   "id": "nat-019",
+   "subcategory": "anatomy",
+   "difficulty": 3,
+   "question": "Which part of the eye adjusts the size of the pupil?",
+   "choices": [
+    "Cornea",
+    "Retina",
+    "Iris",
+    "Lens"
+   ],
+   "answer": 2,
+   "explanation": "Muscles in the iris widen or narrow the pupil to control how much light enters the eye."
+  },
+  {
+   "id": "nat-004",
+   "subcategory": "animals",
+   "difficulty": 3,
+   "question": "How many hearts does an octopus have?",
+   "choices": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "answer": 2,
+   "explanation": "An octopus has three hearts: two pump blood to the gills and one to the rest of the body."
+  },
+  {
+   "id": "nat-018",
+   "subcategory": "animals",
+   "difficulty": 3,
+   "question": "What is the scientific study of birds called?",
+   "choices": [
+    "Entomology",
+    "Herpetology",
+    "Ornithology",
+    "Ichthyology"
+   ],
+   "answer": 2,
+   "explanation": "Ornithology is the study of birds. Entomology is insects and herpetology is reptiles and amphibians."
+  },
+  {
+   "id": "nat-029",
+   "subcategory": "animals",
+   "difficulty": 3,
+   "question": "Which amphibian is famous for its ability to regrow lost limbs?",
+   "choices": [
+    "Axolotl",
+    "Common frog",
+    "Cane toad",
+    "Fire salamander"
+   ],
+   "answer": 0,
+   "explanation": "Axolotls can regenerate limbs, parts of the heart and even parts of the brain."
+  },
+  {
+   "id": "nat2-012",
+   "subcategory": "animals",
+   "difficulty": 3,
+   "question": "Which feature distinguishes reptiles from amphibians?",
+   "choices": [
+    "Gills as adults",
+    "Smooth, moist skin",
+    "A larval stage in water",
+    "Dry, scaly skin and eggs that do not need water"
+   ],
+   "answer": 3,
+   "explanation": "Reptile eggs have shells or membranes that let them develop on land.",
+   "tags": [
+    "amphibians"
+   ]
+  },
+  {
+   "id": "nat2-016",
+   "subcategory": "evolution",
+   "difficulty": 3,
+   "question": "Roughly when did the non-avian dinosaurs go extinct?",
+   "choices": [
+    "About 10,000 years ago",
+    "About 66 million years ago",
+    "About 250 million years ago",
+    "About 6 million years ago"
+   ],
+   "answer": 1,
+   "explanation": "An asteroid impact and volcanic activity are linked to the extinction.",
+   "tags": [
+    "extinct"
+   ]
+  },
+  {
+   "id": "nat2-006",
+   "subcategory": "oceans",
+   "difficulty": 3,
+   "question": "About how deep is the Challenger Deep?",
+   "choices": [
+    "About 11 kilometres",
+    "About 6 kilometres",
+    "About 15 kilometres",
+    "About 4 kilometres"
+   ],
+   "answer": 0,
+   "explanation": "It is roughly 10,900 metres deep.",
+   "tags": [
+    "ocean"
+   ]
+  },
+  {
+   "id": "nat-017",
+   "subcategory": "plants",
+   "difficulty": 3,
+   "question": "Which is the tallest tree species in the world?",
+   "choices": [
+    "Giant sequoia",
+    "Douglas fir",
+    "Coast redwood",
+    "Eucalyptus"
+   ],
+   "answer": 2,
+   "explanation": "Coast redwoods can exceed 115 metres in height."
+  },
+  {
+   "id": "nat-023",
+   "subcategory": "plants",
+   "difficulty": 3,
+   "question": "True or false: botanically, a banana is a berry.",
+   "type": "tf",
+   "answer": true,
+   "explanation": "Botanically, a berry develops from a single ovary and has soft flesh and seeds. Bananas qualify, while strawberries do not."
+  },
+  {
+   "id": "nat-028",
+   "subcategory": "plants",
+   "difficulty": 3,
+   "question": "Which plant tissue carries water upward from the roots to the leaves?",
+   "choices": [
+    "Phloem",
+    "Xylem",
+    "Cambium",
+    "Epidermis"
+   ],
+   "answer": 1,
+   "explanation": "Xylem carries water and minerals up; phloem carries sugars around the plant."
+  },
+  {
+   "id": "nat-010",
+   "subcategory": "anatomy",
+   "difficulty": 4,
+   "question": "What is the smallest bone in the human body?",
+   "choices": [
+    "Stapes",
+    "Hyoid",
+    "Patella",
+    "Coccyx"
+   ],
+   "answer": 0,
+   "explanation": "The stapes, in the middle ear, is about 3 mm long."
+  },
+  {
+   "id": "nat-026",
+   "subcategory": "animals",
+   "difficulty": 4,
+   "question": "Which living bird has the largest wingspan?",
+   "choices": [
+    "Andean condor",
+    "Wandering albatross",
+    "Californian condor",
+    "Marabou stork"
+   ],
+   "answer": 1,
+   "explanation": "The wandering albatross has a wingspan of up to about 3.5 metres."
+  },
+  {
+   "id": "nat2-008",
+   "subcategory": "human",
+   "difficulty": 4,
+   "question": "Which enzyme in saliva begins to break down starch?",
+   "choices": [
+    "Trypsin",
+    "Amylase",
+    "Pepsin",
+    "Lipase"
+   ],
+   "answer": 1,
+   "explanation": "This is why bread tastes slightly sweet if you chew it long enough.",
+   "tags": [
+    "digestion"
+   ]
+  }
+ ]
 }

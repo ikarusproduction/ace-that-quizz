@@ -4,70 +4,36 @@
  "note": "Difficulty ladders: the original question keeps its own level, these are the other levels. Unreviewed.",
  "families": [
   {
-   "id": "pop-001",
+   "id": "pop-015",
    "ask": {
-    "1": "Name the show",
-    "2": "TV network",
-    "3": "Famous episode"
+    "1": "Actor",
+    "2": "Iron Man",
+    "3": "First MCU film"
    },
    "variants": [
     {
      "level": 2,
-     "question": "Game of Thrones is based on novels by which author?",
+     "question": "In which year was the first Iron Man film released?",
      "choices": [
-      "George R. R. Martin",
-      "Robert Jordan",
-      "J. R. R. Tolkien",
-      "Brandon Sanderson"
-     ],
-     "answer": 0,
-     "explanation": "The novels are A Song of Ice and Fire by George R. R. Martin."
-    },
-    {
-     "level": 3,
-     "question": "Game of Thrones premiered in which year on HBO?",
-     "choices": [
-      "2011",
-      "2017",
       "2008",
-      "2014"
+      "2002",
+      "2012",
+      "2015"
      ],
      "answer": 0,
-     "explanation": "It premiered in April 2011."
-    }
-   ]
-  },
-  {
-   "id": "pop-002",
-   "ask": {
-    "1": "Coffee shop",
-    "2": "Friends",
-    "3": "Characters"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "Which actress played Rachel Green in Friends?",
-     "choices": [
-      "Lisa Kudrow",
-      "Courteney Cox",
-      "Jennifer Aniston",
-      "Reese Witherspoon"
-     ],
-     "answer": 2,
-     "explanation": "Jennifer Aniston played Rachel."
+     "explanation": "Iron Man came out in 2008."
     },
     {
      "level": 3,
-     "question": "In which US city is Friends set?",
+     "question": "Which company owns Marvel Studios, since 2009?",
      "choices": [
-      "Chicago",
-      "Boston",
-      "Los Angeles",
-      "New York City"
+      "Universal",
+      "Disney",
+      "Warner Bros.",
+      "Sony"
      ],
-     "answer": 3,
-     "explanation": "Friends is set in Manhattan, New York City."
+     "answer": 1,
+     "explanation": "Disney bought Marvel in 2009."
     }
    ]
   },
@@ -102,108 +68,6 @@
      ],
      "answer": 3,
      "explanation": "The 1983 arcade game Mario Bros. introduced Luigi."
-    }
-   ]
-  },
-  {
-   "id": "pop-004",
-   "ask": {
-    "1": "Show",
-    "2": "Squid Game",
-    "3": "Creator"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "Which colourful shape is on the guards' masks in Squid Game: a circle, triangle or square?",
-     "choices": [
-      "Stripes only",
-      "Hearts and stars",
-      "Diamond only",
-      "Circle, triangle and square"
-     ],
-     "answer": 3,
-     "explanation": "The guards wear masks marked with a circle, triangle or square."
-    },
-    {
-     "level": 3,
-     "question": "Who created Squid Game?",
-     "choices": [
-      "Na Hong-jin",
-      "Park Chan-wook",
-      "Hwang Dong-hyuk",
-      "Bong Joon-ho"
-     ],
-     "answer": 2,
-     "explanation": "Hwang Dong-hyuk wrote and directed it."
-    }
-   ]
-  },
-  {
-   "id": "pop-005",
-   "ask": {
-    "1": "Show",
-    "2": "Walter White",
-    "3": "Actor"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "Which actor plays Walter White in Breaking Bad?",
-     "choices": [
-      "Aaron Paul",
-      "Bob Odenkirk",
-      "Bryan Cranston",
-      "Jon Hamm"
-     ],
-     "answer": 2,
-     "explanation": "Bryan Cranston played Walter White."
-    },
-    {
-     "level": 3,
-     "question": "What is Walter White's alias as a drug lord in Breaking Bad?",
-     "choices": [
-      "Gus",
-      "Tuco",
-      "Mr. Chips",
-      "Heisenberg"
-     ],
-     "answer": 3,
-     "explanation": "Walter adopts the name Heisenberg."
-    }
-   ]
-  },
-  {
-   "id": "pop-006",
-   "ask": {
-    "1": "Pet snail",
-    "2": "SpongeBob",
-    "3": "Setting"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "In which fictional town does SpongeBob live?",
-     "choices": [
-      "Bikini Bottom",
-      "Quahog",
-      "Springfield",
-      "South Park"
-     ],
-     "answer": 0,
-     "explanation": "SpongeBob lives in Bikini Bottom."
-    },
-    {
-     "level": 3,
-     "question": "What sound does Gary the snail make?",
-     "choices": [
-      "Meow",
-      "Squeak",
-      "Ribbit",
-      "Woof"
-     ],
-     "answer": 0,
-     "explanation": "Gary meows."
     }
    ]
   },
@@ -310,6 +174,40 @@
    ]
   },
   {
+   "id": "pop-017",
+   "ask": {
+    "1": "Hedgehog",
+    "2": "Sonic",
+    "3": "Company"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What does Sonic collect in his games to protect himself?",
+     "choices": [
+      "Mushrooms",
+      "Stars",
+      "Coins",
+      "Rings"
+     ],
+     "answer": 3,
+     "explanation": "Sonic collects rings."
+    },
+    {
+     "level": 3,
+     "question": "In which year was the first Sonic the Hedgehog game released?",
+     "choices": [
+      "1991",
+      "1985",
+      "1998",
+      "2003"
+     ],
+     "answer": 0,
+     "explanation": "It was released on the Sega Genesis in 1991."
+    }
+   ]
+  },
+  {
    "id": "pop-010",
    "ask": {
     "1": "Slang",
@@ -412,40 +310,6 @@
    ]
   },
   {
-   "id": "pop-013",
-   "ask": {
-    "1": "K-pop group",
-    "2": "BTS",
-    "3": "Members"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "How many members does BTS have?",
-     "choices": [
-      "9",
-      "12",
-      "7",
-      "5"
-     ],
-     "answer": 2,
-     "explanation": "BTS has seven members."
-    },
-    {
-     "level": 3,
-     "question": "In which year did BTS debut?",
-     "choices": [
-      "2010",
-      "2013",
-      "2016",
-      "2019"
-     ],
-     "answer": 1,
-     "explanation": "They debuted in June 2013."
-    }
-   ]
-  },
-  {
    "id": "pop-014",
    "ask": {
     "1": "Chatbot",
@@ -480,36 +344,206 @@
    ]
   },
   {
-   "id": "pop-015",
+   "id": "pop-013",
    "ask": {
-    "1": "Actor",
-    "2": "Iron Man",
-    "3": "First MCU film"
+    "1": "K-pop group",
+    "2": "BTS",
+    "3": "Members"
    },
    "variants": [
     {
      "level": 2,
-     "question": "In which year was the first Iron Man film released?",
+     "question": "How many members does BTS have?",
      "choices": [
-      "2008",
-      "2002",
-      "2012",
-      "2015"
+      "9",
+      "12",
+      "7",
+      "5"
      ],
-     "answer": 0,
-     "explanation": "Iron Man came out in 2008."
+     "answer": 2,
+     "explanation": "BTS has seven members."
     },
     {
      "level": 3,
-     "question": "Which company owns Marvel Studios, since 2009?",
+     "question": "In which year did BTS debut?",
      "choices": [
-      "Universal",
-      "Disney",
-      "Warner Bros.",
-      "Sony"
+      "2010",
+      "2013",
+      "2016",
+      "2019"
      ],
      "answer": 1,
-     "explanation": "Disney bought Marvel in 2009."
+     "explanation": "They debuted in June 2013."
+    }
+   ]
+  },
+  {
+   "id": "pop-001",
+   "ask": {
+    "1": "Name the show",
+    "2": "TV network",
+    "3": "Famous episode"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Game of Thrones is based on novels by which author?",
+     "choices": [
+      "George R. R. Martin",
+      "Robert Jordan",
+      "J. R. R. Tolkien",
+      "Brandon Sanderson"
+     ],
+     "answer": 0,
+     "explanation": "The novels are A Song of Ice and Fire by George R. R. Martin."
+    },
+    {
+     "level": 3,
+     "question": "Game of Thrones premiered in which year on HBO?",
+     "choices": [
+      "2011",
+      "2017",
+      "2008",
+      "2014"
+     ],
+     "answer": 0,
+     "explanation": "It premiered in April 2011."
+    }
+   ]
+  },
+  {
+   "id": "pop-002",
+   "ask": {
+    "1": "Coffee shop",
+    "2": "Friends",
+    "3": "Characters"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which actress played Rachel Green in Friends?",
+     "choices": [
+      "Lisa Kudrow",
+      "Courteney Cox",
+      "Jennifer Aniston",
+      "Reese Witherspoon"
+     ],
+     "answer": 2,
+     "explanation": "Jennifer Aniston played Rachel."
+    },
+    {
+     "level": 3,
+     "question": "In which US city is Friends set?",
+     "choices": [
+      "Chicago",
+      "Boston",
+      "Los Angeles",
+      "New York City"
+     ],
+     "answer": 3,
+     "explanation": "Friends is set in Manhattan, New York City."
+    }
+   ]
+  },
+  {
+   "id": "pop-004",
+   "ask": {
+    "1": "Show",
+    "2": "Squid Game",
+    "3": "Creator"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which colourful shape is on the guards' masks in Squid Game: a circle, triangle or square?",
+     "choices": [
+      "Stripes only",
+      "Hearts and stars",
+      "Diamond only",
+      "Circle, triangle and square"
+     ],
+     "answer": 3,
+     "explanation": "The guards wear masks marked with a circle, triangle or square."
+    },
+    {
+     "level": 3,
+     "question": "Who created Squid Game?",
+     "choices": [
+      "Na Hong-jin",
+      "Park Chan-wook",
+      "Hwang Dong-hyuk",
+      "Bong Joon-ho"
+     ],
+     "answer": 2,
+     "explanation": "Hwang Dong-hyuk wrote and directed it."
+    }
+   ]
+  },
+  {
+   "id": "pop-005",
+   "ask": {
+    "1": "Show",
+    "2": "Walter White",
+    "3": "Actor"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which actor plays Walter White in Breaking Bad?",
+     "choices": [
+      "Aaron Paul",
+      "Bob Odenkirk",
+      "Bryan Cranston",
+      "Jon Hamm"
+     ],
+     "answer": 2,
+     "explanation": "Bryan Cranston played Walter White."
+    },
+    {
+     "level": 3,
+     "question": "What is Walter White's alias as a drug lord in Breaking Bad?",
+     "choices": [
+      "Gus",
+      "Tuco",
+      "Mr. Chips",
+      "Heisenberg"
+     ],
+     "answer": 3,
+     "explanation": "Walter adopts the name Heisenberg."
+    }
+   ]
+  },
+  {
+   "id": "pop-006",
+   "ask": {
+    "1": "Pet snail",
+    "2": "SpongeBob",
+    "3": "Setting"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "In which fictional town does SpongeBob live?",
+     "choices": [
+      "Bikini Bottom",
+      "Quahog",
+      "Springfield",
+      "South Park"
+     ],
+     "answer": 0,
+     "explanation": "SpongeBob lives in Bikini Bottom."
+    },
+    {
+     "level": 3,
+     "question": "What sound does Gary the snail make?",
+     "choices": [
+      "Meow",
+      "Squeak",
+      "Ribbit",
+      "Woof"
+     ],
+     "answer": 0,
+     "explanation": "Gary meows."
     }
    ]
   },
@@ -548,70 +582,138 @@
    ]
   },
   {
-   "id": "pop-017",
+   "id": "pop-027",
    "ask": {
-    "1": "Hedgehog",
-    "2": "Sonic",
-    "3": "Company"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "What does Sonic collect in his games to protect himself?",
-     "choices": [
-      "Mushrooms",
-      "Stars",
-      "Coins",
-      "Rings"
-     ],
-     "answer": 3,
-     "explanation": "Sonic collects rings."
-    },
-    {
-     "level": 3,
-     "question": "In which year was the first Sonic the Hedgehog game released?",
-     "choices": [
-      "1991",
-      "1985",
-      "1998",
-      "2003"
-     ],
-     "answer": 0,
-     "explanation": "It was released on the Sega Genesis in 1991."
-    }
-   ]
-  },
-  {
-   "id": "pop-018",
-   "ask": {
-    "1": "Song",
-    "2": "Gangnam Style",
-    "3": "Singer"
+    "1": "Fashion",
+    "2": "Chanel",
+    "3": "Founder"
    },
    "variants": [
     {
      "level": 1,
-     "question": "Which country is Psy from?",
+     "question": "Which French fashion house created Chanel No. 5?",
      "choices": [
-      "Japan",
-      "Thailand",
-      "China",
-      "South Korea"
+      "Chanel",
+      "Hermes",
+      "Louis Vuitton",
+      "Dior"
      ],
-     "answer": 3,
-     "explanation": "Psy is a South Korean singer."
+     "answer": 0,
+     "explanation": "Chanel No. 5 was launched in 1921."
     },
     {
      "level": 3,
-     "question": "Gangnam Style was the first video to reach one billion views on which site?",
+     "question": "Who founded the Chanel brand?",
      "choices": [
-      "Instagram",
-      "YouTube",
-      "Vimeo",
-      "Dailymotion"
+      "Hubert de Givenchy",
+      "Yves Saint Laurent",
+      "Christian Dior",
+      "Coco Chanel"
      ],
-     "answer": 1,
-     "explanation": "It passed a billion views on YouTube in December 2012."
+     "answer": 3,
+     "explanation": "Gabrielle Coco Chanel founded it."
+    }
+   ]
+  },
+  {
+   "id": "pop-021",
+   "ask": {
+    "1": "Films",
+    "2": "Barbenheimer",
+    "3": "Date"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which doll is the star of Greta Gerwig's 2023 movie?",
+     "choices": [
+      "Cabbage Patch Kids",
+      "Bratz",
+      "Barbie",
+      "Polly Pocket"
+     ],
+     "answer": 2,
+     "explanation": "Barbie starred Margot Robbie."
+    },
+    {
+     "level": 3,
+     "question": "On which date were Barbie and Oppenheimer both released in cinemas in 2023?",
+     "choices": [
+      "14 June",
+      "1 August",
+      "4 July",
+      "21 July"
+     ],
+     "answer": 3,
+     "explanation": "Both opened on 21 July 2023."
+    }
+   ]
+  },
+  {
+   "id": "pop-024",
+   "ask": {
+    "1": "Mario Kart item",
+    "2": "Blue shell",
+    "3": "Position"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In Mario Kart, which item can you throw to make others slip?",
+     "choices": [
+      "Banana peel",
+      "Blue shell",
+      "Super Star",
+      "Lightning"
+     ],
+     "answer": 0,
+     "explanation": "A banana peel makes karts spin out."
+    },
+    {
+     "level": 3,
+     "question": "In which Mario Kart game did the spiny blue shell first appear?",
+     "choices": [
+      "Mario Kart Wii",
+      "Mario Kart 8",
+      "Super Mario Kart",
+      "Mario Kart 64"
+     ],
+     "answer": 3,
+     "explanation": "The blue shell debuted in Mario Kart 64."
+    }
+   ]
+  },
+  {
+   "id": "pop-026",
+   "ask": {
+    "1": "PC store",
+    "2": "Steam",
+    "3": "Company"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which company runs Steam?",
+     "choices": [
+      "Valve",
+      "Ubisoft",
+      "Microsoft",
+      "EA"
+     ],
+     "answer": 0,
+     "explanation": "Valve runs Steam."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Steam launch?",
+     "choices": [
+      "2012",
+      "2008",
+      "1998",
+      "2003"
+     ],
+     "answer": 3,
+     "explanation": "Steam launched in September 2003."
     }
    ]
   },
@@ -684,36 +786,104 @@
    ]
   },
   {
-   "id": "pop-021",
+   "id": "pop-018",
    "ask": {
-    "1": "Films",
-    "2": "Barbenheimer",
-    "3": "Date"
+    "1": "Song",
+    "2": "Gangnam Style",
+    "3": "Singer"
    },
    "variants": [
     {
      "level": 1,
-     "question": "Which doll is the star of Greta Gerwig's 2023 movie?",
+     "question": "Which country is Psy from?",
      "choices": [
-      "Cabbage Patch Kids",
-      "Bratz",
-      "Barbie",
-      "Polly Pocket"
+      "Japan",
+      "Thailand",
+      "China",
+      "South Korea"
      ],
-     "answer": 2,
-     "explanation": "Barbie starred Margot Robbie."
+     "answer": 3,
+     "explanation": "Psy is a South Korean singer."
     },
     {
      "level": 3,
-     "question": "On which date were Barbie and Oppenheimer both released in cinemas in 2023?",
+     "question": "Gangnam Style was the first video to reach one billion views on which site?",
      "choices": [
-      "14 June",
-      "1 August",
-      "4 July",
-      "21 July"
+      "Instagram",
+      "YouTube",
+      "Vimeo",
+      "Dailymotion"
      ],
-     "answer": 3,
-     "explanation": "Both opened on 21 July 2023."
+     "answer": 1,
+     "explanation": "It passed a billion views on YouTube in December 2012."
+    }
+   ]
+  },
+  {
+   "id": "pop-038",
+   "ask": {
+    "1": "Singer",
+    "2": "Eras Tour",
+    "3": "Artist"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which singer wrote the album 1989?",
+     "choices": [
+      "Taylor Swift",
+      "Billie Eilish",
+      "Adele",
+      "Dua Lipa"
+     ],
+     "answer": 0,
+     "explanation": "Taylor Swift released 1989 in 2014."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Taylor Swift's Eras Tour begin?",
+     "choices": [
+      "2021",
+      "2019",
+      "2023",
+      "2025"
+     ],
+     "answer": 2,
+     "explanation": "The Eras Tour began in March 2023."
+    }
+   ]
+  },
+  {
+   "id": "pop-025",
+   "ask": {
+    "1": "Year",
+    "2": "Phone",
+    "3": "Founder"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which company makes the iPhone?",
+     "choices": [
+      "Apple",
+      "Nokia",
+      "Samsung",
+      "Google"
+     ],
+     "answer": 0,
+     "explanation": "Apple makes the iPhone."
+    },
+    {
+     "level": 3,
+     "question": "Who unveiled the first iPhone on stage in January 2007?",
+     "choices": [
+      "Jony Ive",
+      "Steve Wozniak",
+      "Steve Jobs",
+      "Tim Cook"
+     ],
+     "answer": 2,
+     "explanation": "Steve Jobs announced it at Macworld."
     }
    ]
   },
@@ -786,172 +956,70 @@
    ]
   },
   {
-   "id": "pop-024",
+   "id": "pop-037",
    "ask": {
-    "1": "Mario Kart item",
-    "2": "Blue shell",
-    "3": "Position"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "In Mario Kart, which item can you throw to make others slip?",
-     "choices": [
-      "Banana peel",
-      "Blue shell",
-      "Super Star",
-      "Lightning"
-     ],
-     "answer": 0,
-     "explanation": "A banana peel makes karts spin out."
-    },
-    {
-     "level": 3,
-     "question": "In which Mario Kart game did the spiny blue shell first appear?",
-     "choices": [
-      "Mario Kart Wii",
-      "Mario Kart 8",
-      "Super Mario Kart",
-      "Mario Kart 64"
-     ],
-     "answer": 3,
-     "explanation": "The blue shell debuted in Mario Kart 64."
-    }
-   ]
-  },
-  {
-   "id": "pop-025",
-   "ask": {
-    "1": "Year",
-    "2": "Phone",
+    "1": "Brand",
+    "2": "Yeezy",
     "3": "Founder"
    },
    "variants": [
     {
      "level": 1,
-     "question": "Which company makes the iPhone?",
+     "question": "Which brand is the sneaker line founded by Kanye West?",
      "choices": [
-      "Apple",
-      "Nokia",
-      "Samsung",
-      "Google"
+      "Yeezy",
+      "Jordan",
+      "Air Max",
+      "Superstar"
      ],
      "answer": 0,
-     "explanation": "Apple makes the iPhone."
-    },
-    {
-     "level": 3,
-     "question": "Who unveiled the first iPhone on stage in January 2007?",
-     "choices": [
-      "Jony Ive",
-      "Steve Wozniak",
-      "Steve Jobs",
-      "Tim Cook"
-     ],
-     "answer": 2,
-     "explanation": "Steve Jobs announced it at Macworld."
-    }
-   ]
-  },
-  {
-   "id": "pop-026",
-   "ask": {
-    "1": "PC store",
-    "2": "Steam",
-    "3": "Company"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which company runs Steam?",
-     "choices": [
-      "Valve",
-      "Ubisoft",
-      "Microsoft",
-      "EA"
-     ],
-     "answer": 0,
-     "explanation": "Valve runs Steam."
-    },
-    {
-     "level": 3,
-     "question": "In which year did Steam launch?",
-     "choices": [
-      "2012",
-      "2008",
-      "1998",
-      "2003"
-     ],
-     "answer": 3,
-     "explanation": "Steam launched in September 2003."
-    }
-   ]
-  },
-  {
-   "id": "pop-027",
-   "ask": {
-    "1": "Fashion",
-    "2": "Chanel",
-    "3": "Founder"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which French fashion house created Chanel No. 5?",
-     "choices": [
-      "Chanel",
-      "Hermes",
-      "Louis Vuitton",
-      "Dior"
-     ],
-     "answer": 0,
-     "explanation": "Chanel No. 5 was launched in 1921."
-    },
-    {
-     "level": 3,
-     "question": "Who founded the Chanel brand?",
-     "choices": [
-      "Hubert de Givenchy",
-      "Yves Saint Laurent",
-      "Christian Dior",
-      "Coco Chanel"
-     ],
-     "answer": 3,
-     "explanation": "Gabrielle Coco Chanel founded it."
-    }
-   ]
-  },
-  {
-   "id": "pop-028",
-   "ask": {
-    "1": "Video",
-    "2": "First YouTube video",
-    "3": "Year"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which video platform has the logo of a red play button?",
-     "choices": [
-      "YouTube",
-      "TikTok",
-      "Twitch",
-      "Vimeo"
-     ],
-     "answer": 0,
-     "explanation": "YouTube uses a red button."
+     "explanation": "Yeezy sneakers were made with Adidas."
     },
     {
      "level": 2,
-     "question": "In which year was YouTube founded?",
+     "question": "Which company partnered with Kanye West on Yeezy sneakers from 2013 until 2022?",
      "choices": [
-      "2012",
-      "2005",
-      "2009",
-      "1999"
+      "Reebok",
+      "Nike",
+      "Puma",
+      "Adidas"
+     ],
+     "answer": 3,
+     "explanation": "Adidas made Yeezys."
+    }
+   ]
+  },
+  {
+   "id": "pop-033",
+   "ask": {
+    "1": "Barbie",
+    "2": "Actress",
+    "3": "Director"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which doll is the star of the 2023 film directed by Greta Gerwig?",
+     "choices": [
+      "Barbie",
+      "Cabbage Patch",
+      "Bratz",
+      "Polly Pocket"
+     ],
+     "answer": 0,
+     "explanation": "It is the Barbie movie."
+    },
+    {
+     "level": 2,
+     "question": "Who played Ken in the 2023 Barbie film?",
+     "choices": [
+      "Chris Evans",
+      "Ryan Gosling",
+      "Ryan Reynolds",
+      "Timothee Chalamet"
      ],
      "answer": 1,
-     "explanation": "YouTube was founded in 2005."
+     "explanation": "Ryan Gosling played Ken."
     }
    ]
   },
@@ -986,6 +1054,108 @@
      ],
      "answer": 2,
      "explanation": "Microsoft acquired Mojang."
+    }
+   ]
+  },
+  {
+   "id": "pop-032",
+   "ask": {
+    "1": "Game",
+    "2": "Fortnite",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which game features a Battle Bus and building structures?",
+     "choices": [
+      "Fortnite",
+      "Minecraft",
+      "Roblox",
+      "Among Us"
+     ],
+     "answer": 0,
+     "explanation": "Fortnite Battle Royale has the Battle Bus."
+    },
+    {
+     "level": 2,
+     "question": "Which company developed Fortnite?",
+     "choices": [
+      "Activision",
+      "Riot Games",
+      "Valve",
+      "Epic Games"
+     ],
+     "answer": 3,
+     "explanation": "Epic Games developed Fortnite."
+    }
+   ]
+  },
+  {
+   "id": "pop-036",
+   "ask": {
+    "1": "Game",
+    "2": "Among Us",
+    "3": "Role"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which game features colourful astronauts?",
+     "choices": [
+      "Among Us",
+      "Minecraft",
+      "Fall Guys",
+      "Overwatch"
+     ],
+     "answer": 0,
+     "explanation": "Among Us has colourful crewmates."
+    },
+    {
+     "level": 2,
+     "question": "What do you call the traitors in Among Us?",
+     "choices": [
+      "Killers",
+      "Zombies",
+      "Monsters",
+      "Impostors"
+     ],
+     "answer": 3,
+     "explanation": "The traitors are impostors."
+    }
+   ]
+  },
+  {
+   "id": "pop-028",
+   "ask": {
+    "1": "Video",
+    "2": "First YouTube video",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which video platform has the logo of a red play button?",
+     "choices": [
+      "YouTube",
+      "TikTok",
+      "Twitch",
+      "Vimeo"
+     ],
+     "answer": 0,
+     "explanation": "YouTube uses a red button."
+    },
+    {
+     "level": 2,
+     "question": "In which year was YouTube founded?",
+     "choices": [
+      "2012",
+      "2005",
+      "2009",
+      "1999"
+     ],
+     "answer": 1,
+     "explanation": "YouTube was founded in 2005."
     }
    ]
   },
@@ -1058,74 +1228,6 @@
    ]
   },
   {
-   "id": "pop-032",
-   "ask": {
-    "1": "Game",
-    "2": "Fortnite",
-    "3": "Year"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which game features a Battle Bus and building structures?",
-     "choices": [
-      "Fortnite",
-      "Minecraft",
-      "Roblox",
-      "Among Us"
-     ],
-     "answer": 0,
-     "explanation": "Fortnite Battle Royale has the Battle Bus."
-    },
-    {
-     "level": 2,
-     "question": "Which company developed Fortnite?",
-     "choices": [
-      "Activision",
-      "Riot Games",
-      "Valve",
-      "Epic Games"
-     ],
-     "answer": 3,
-     "explanation": "Epic Games developed Fortnite."
-    }
-   ]
-  },
-  {
-   "id": "pop-033",
-   "ask": {
-    "1": "Barbie",
-    "2": "Actress",
-    "3": "Director"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which doll is the star of the 2023 film directed by Greta Gerwig?",
-     "choices": [
-      "Barbie",
-      "Cabbage Patch",
-      "Bratz",
-      "Polly Pocket"
-     ],
-     "answer": 0,
-     "explanation": "It is the Barbie movie."
-    },
-    {
-     "level": 2,
-     "question": "Who played Ken in the 2023 Barbie film?",
-     "choices": [
-      "Chris Evans",
-      "Ryan Gosling",
-      "Ryan Reynolds",
-      "Timothee Chalamet"
-     ],
-     "answer": 1,
-     "explanation": "Ryan Gosling played Ken."
-    }
-   ]
-  },
-  {
    "id": "pop-034",
    "ask": {
     "1": "Virtual idol",
@@ -1190,108 +1292,6 @@
      ],
      "answer": 2,
      "explanation": "Netflix picked it up for season 3."
-    }
-   ]
-  },
-  {
-   "id": "pop-036",
-   "ask": {
-    "1": "Game",
-    "2": "Among Us",
-    "3": "Role"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which game features colourful astronauts?",
-     "choices": [
-      "Among Us",
-      "Minecraft",
-      "Fall Guys",
-      "Overwatch"
-     ],
-     "answer": 0,
-     "explanation": "Among Us has colourful crewmates."
-    },
-    {
-     "level": 2,
-     "question": "What do you call the traitors in Among Us?",
-     "choices": [
-      "Killers",
-      "Zombies",
-      "Monsters",
-      "Impostors"
-     ],
-     "answer": 3,
-     "explanation": "The traitors are impostors."
-    }
-   ]
-  },
-  {
-   "id": "pop-037",
-   "ask": {
-    "1": "Brand",
-    "2": "Yeezy",
-    "3": "Founder"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which brand is the sneaker line founded by Kanye West?",
-     "choices": [
-      "Yeezy",
-      "Jordan",
-      "Air Max",
-      "Superstar"
-     ],
-     "answer": 0,
-     "explanation": "Yeezy sneakers were made with Adidas."
-    },
-    {
-     "level": 2,
-     "question": "Which company partnered with Kanye West on Yeezy sneakers from 2013 until 2022?",
-     "choices": [
-      "Reebok",
-      "Nike",
-      "Puma",
-      "Adidas"
-     ],
-     "answer": 3,
-     "explanation": "Adidas made Yeezys."
-    }
-   ]
-  },
-  {
-   "id": "pop-038",
-   "ask": {
-    "1": "Singer",
-    "2": "Eras Tour",
-    "3": "Artist"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which singer wrote the album 1989?",
-     "choices": [
-      "Taylor Swift",
-      "Billie Eilish",
-      "Adele",
-      "Dua Lipa"
-     ],
-     "answer": 0,
-     "explanation": "Taylor Swift released 1989 in 2014."
-    },
-    {
-     "level": 3,
-     "question": "In which year did Taylor Swift's Eras Tour begin?",
-     "choices": [
-      "2021",
-      "2019",
-      "2023",
-      "2025"
-     ],
-     "answer": 2,
-     "explanation": "The Eras Tour began in March 2023."
     }
    ]
   }

@@ -7,6 +7,10 @@ export const CATEGORIES = {
   history: { label: 'History', short: 'History' },
   geography: { label: 'Geography', short: 'Geography' },
   science: { label: 'Science', short: 'Science' },
+  literature: { label: 'Literature & Language', short: 'Literature' },
+  mythology: { label: 'Mythology & Religions', short: 'Myth' },
+  philosophy: { label: 'Philosophy & Ideas', short: 'Philosophy' },
+  politics: { label: 'Politics, Institutions & Economics', short: 'Politics' },
   medicine: { label: 'Medicine & Health', short: 'Medicine' },
   phobia: { label: 'Phobias', short: 'Phobias' },
   nature: { label: 'Nature & Biology', short: 'Nature' },
@@ -69,6 +73,16 @@ export function normalizeQuestion(raw, file) {
     audio: raw.audio ?? null,
     audioCredit: raw.audioCredit ?? null,
     refs: raw.refs ?? [],
+    // Champion's Academy content model (all optional). `source` and `verified` stay null until a human has checked the fact.
+    format: raw.format ?? null,               // 'trick' | 'assoc' | 'chrono' | null
+    relation: raw.relation ?? null,           // e.g. 'author-work:forward'
+    misconception: raw.misconception ?? null, // the usual wrong idea, shown after a mistake
+    mnemonic: raw.mnemonic ?? null,
+    hints: raw.hints ?? [],
+    related: raw.related ?? [],               // concept ids
+    source: raw.source ?? null,
+    verified: raw.verified ?? null,           // YYYY-MM-DD, only when a human checked it
+    expires: raw.expires ?? null,             // YYYY-MM-DD: never asked after this date
   };
 }
 

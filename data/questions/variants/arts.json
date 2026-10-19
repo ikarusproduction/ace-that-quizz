@@ -4,6 +4,210 @@
  "note": "Difficulty ladders: the original question keeps its own level, these are the other levels. Unreviewed.",
  "families": [
   {
+   "id": "art-025",
+   "ask": {
+    "1": "Franchise",
+    "2": "Lightsabers",
+    "3": "Creator"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Who created the Star Wars franchise?",
+     "choices": [
+      "Steven Spielberg",
+      "George Lucas",
+      "Gene Roddenberry",
+      "Ridley Scott"
+     ],
+     "answer": 1,
+     "explanation": "George Lucas created it in 1977."
+    },
+    {
+     "level": 3,
+     "question": "In which year was the original Star Wars released in cinemas?",
+     "choices": [
+      "1972",
+      "1977",
+      "1980",
+      "1983"
+     ],
+     "answer": 1,
+     "explanation": "The original film came out in May 1977."
+    }
+   ]
+  },
+  {
+   "id": "art-026",
+   "ask": {
+    "1": "Company",
+    "2": "Mario",
+    "3": "Famous plumber"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which character is Mario's brother?",
+     "choices": [
+      "Wario",
+      "Toad",
+      "Bowser",
+      "Luigi"
+     ],
+     "answer": 3,
+     "explanation": "Luigi is Mario's brother."
+    },
+    {
+     "level": 3,
+     "question": "In which 1981 arcade game did Mario first appear, then called Jumpman?",
+     "choices": [
+      "Pac-Man",
+      "Donkey Kong",
+      "Space Invaders",
+      "Super Mario Bros."
+     ],
+     "answer": 1,
+     "explanation": "Mario first appeared in Donkey Kong."
+    }
+   ]
+  },
+  {
+   "id": "art-030",
+   "ask": {
+    "1": "Chess",
+    "2": "Chess piece",
+    "3": "L shape"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which chess piece can only move diagonally?",
+     "choices": [
+      "The rook",
+      "The bishop",
+      "The knight",
+      "The king"
+     ],
+     "answer": 1,
+     "explanation": "Bishops slide along diagonals and stay on one colour."
+    },
+    {
+     "level": 3,
+     "question": "Which chess piece can jump over other pieces?",
+     "choices": [
+      "The rook",
+      "The bishop",
+      "The queen",
+      "The knight"
+     ],
+     "answer": 3,
+     "explanation": "Knights jump over pieces."
+    }
+   ]
+  },
+  {
+   "id": "art-032",
+   "ask": {
+    "1": "Author",
+    "2": "Pride and Prejudice",
+    "3": "Characters"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Who are the main romantic leads in 'Pride and Prejudice'?",
+     "choices": [
+      "Emma and Mr Knightley",
+      "Elizabeth Bennet and Mr Darcy",
+      "Jane Eyre and Mr Rochester",
+      "Catherine and Heathcliff"
+     ],
+     "answer": 1,
+     "explanation": "Austen's lead couple are Elizabeth Bennet and Fitzwilliam Darcy."
+    },
+    {
+     "level": 3,
+     "question": "In which year was 'Pride and Prejudice' first published?",
+     "choices": [
+      "1901",
+      "1775",
+      "1850",
+      "1813"
+     ],
+     "answer": 3,
+     "explanation": "The novel was published in January 1813."
+    }
+   ]
+  },
+  {
+   "id": "art-033",
+   "ask": {
+    "1": "Author",
+    "2": "1984",
+    "3": "Big Brother"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "In '1984', what is the name of the omnipresent leader whose face is on posters?",
+     "choices": [
+      "Old Father",
+      "Uncle Sam",
+      "The Great Leader",
+      "Big Brother"
+     ],
+     "answer": 3,
+     "explanation": "Big Brother is the face of the Party."
+    },
+    {
+     "level": 3,
+     "question": "In which year was George Orwell's '1984' published?",
+     "choices": [
+      "1984",
+      "1960",
+      "1949",
+      "1932"
+     ],
+     "answer": 2,
+     "explanation": "It was published in 1949."
+    }
+   ]
+  },
+  {
+   "id": "trk-020",
+   "ask": {
+    "1": "Who is Frankenstein",
+    "2": "The creature's name",
+    "3": "Not in the novel"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the creature called by name in Shelley's novel?",
+     "choices": [
+      "He has no name",
+      "Victor",
+      "Igor",
+      "Frankenstein"
+     ],
+     "answer": 0,
+     "explanation": "The creature is unnamed; he is called 'creature', 'monster' or 'wretch'."
+    },
+    {
+     "level": 3,
+     "question": "Which character does NOT appear in Mary Shelley's Frankenstein (1818)?",
+     "choices": [
+      "Henry Clerval",
+      "Elizabeth Lavenza",
+      "Captain Walton",
+      "Igor"
+     ],
+     "answer": 3,
+     "explanation": "Igor is an assistant invented for later stage and film adaptations."
+    }
+   ]
+  },
+  {
    "id": "art-001",
    "ask": {
     "1": "Name the band",
@@ -68,40 +272,6 @@
      ],
      "answer": 2,
      "explanation": "The Billie Jean video broke the MTV colour barrier in 1983."
-    }
-   ]
-  },
-  {
-   "id": "art-003",
-   "ask": {
-    "1": "Famous composer",
-    "2": "Four Seasons composer",
-    "3": "Nationality"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which Italian composer wrote a famous piece called 'The Four Seasons'?",
-     "choices": [
-      "Antonio Vivaldi",
-      "Wolfgang Amadeus Mozart",
-      "Frederic Chopin",
-      "Ludwig van Beethoven"
-     ],
-     "answer": 0,
-     "explanation": "Vivaldi was a Baroque composer from Venice."
-    },
-    {
-     "level": 3,
-     "question": "In which Italian city was Antonio Vivaldi born in 1678?",
-     "choices": [
-      "Milan",
-      "Florence",
-      "Rome",
-      "Venice"
-     ],
-     "answer": 3,
-     "explanation": "Vivaldi was born in Venice."
     }
    ]
   },
@@ -174,278 +344,6 @@
    ]
   },
   {
-   "id": "art-006",
-   "ask": {
-    "1": "Band name",
-    "2": "Dark Side of the Moon",
-    "3": "Release"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which band is known for a prism on an album cover and a giant flying pig?",
-     "choices": [
-      "Led Zeppelin",
-      "Pink Floyd",
-      "Queen",
-      "The Beatles"
-     ],
-     "answer": 1,
-     "explanation": "Pink Floyd's Dark Side of the Moon has the famous prism cover."
-    },
-    {
-     "level": 3,
-     "question": "Which Pink Floyd album, released in 1979, is a rock opera about a wall?",
-     "choices": [
-      "The Wall",
-      "Animals",
-      "Wish You Were Here",
-      "Meddle"
-     ],
-     "answer": 0,
-     "explanation": "The Wall was released in 1979."
-    }
-   ]
-  },
-  {
-   "id": "art-007",
-   "ask": {
-    "1": "Swedish group",
-    "2": "Waterloo",
-    "3": "Eurovision"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which Swedish group sang 'Dancing Queen'?",
-     "choices": [
-      "The Cardigans",
-      "Europe",
-      "ABBA",
-      "Roxette"
-     ],
-     "answer": 2,
-     "explanation": "Dancing Queen is a 1976 hit by ABBA."
-    },
-    {
-     "level": 3,
-     "question": "In which British seaside city was the 1974 Eurovision Song Contest held?",
-     "choices": [
-      "Liverpool",
-      "Blackpool",
-      "Brighton",
-      "Edinburgh"
-     ],
-     "answer": 2,
-     "explanation": "The 1974 contest was staged at the Brighton Dome."
-    }
-   ]
-  },
-  {
-   "id": "art-008",
-   "ask": {
-    "1": "Rapper",
-    "2": "Marshall Mathers",
-    "3": "Stage name"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which rapper is known for the song 'Lose Yourself' from the film 8 Mile?",
-     "choices": [
-      "Jay-Z",
-      "Kanye West",
-      "Drake",
-      "Eminem"
-     ],
-     "answer": 3,
-     "explanation": "Lose Yourself won an Academy Award in 2003."
-    },
-    {
-     "level": 3,
-     "question": "What is the name of Eminem's alter ego, which is also the title of a 2000 album?",
-     "choices": [
-      "Mr. Mathers",
-      "Slim Shady",
-      "The Real Marshall",
-      "Rap God"
-     ],
-     "answer": 1,
-     "explanation": "Slim Shady is his alter ego, and The Marshall Mathers LP followed in 2000."
-    }
-   ]
-  },
-  {
-   "id": "art-009",
-   "ask": {
-    "1": "Queen of Soul",
-    "2": "Soul singer",
-    "3": "Famous hit"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which legendary singer sang 'Respect' in 1967?",
-     "choices": [
-      "Aretha Franklin",
-      "Diana Ross",
-      "Whitney Houston",
-      "Tina Turner"
-     ],
-     "answer": 0,
-     "explanation": "Aretha Franklin's cover of Respect topped the charts in 1967."
-    },
-    {
-     "level": 2,
-     "question": "Which singer of 'Like a Prayer' has the nickname 'Queen of Pop'?",
-     "choices": [
-      "Celine Dion",
-      "Madonna",
-      "Cher",
-      "Janet Jackson"
-     ],
-     "answer": 1,
-     "explanation": "Madonna has the nickname Queen of Pop."
-    }
-   ]
-  },
-  {
-   "id": "art-010",
-   "ask": {
-    "1": "Band name",
-    "2": "Queen members",
-    "3": "Frontman"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which British band had a lead singer named Freddie Mercury?",
-     "choices": [
-      "The Who",
-      "Oasis",
-      "Queen",
-      "The Rolling Stones"
-     ],
-     "answer": 2,
-     "explanation": "Freddie Mercury was Queen's lead singer."
-    },
-    {
-     "level": 3,
-     "question": "On which Queen album did 'Bohemian Rhapsody' first appear, in 1975?",
-     "choices": [
-      "News of the World",
-      "Sheer Heart Attack",
-      "A Night at the Opera",
-      "Jazz"
-     ],
-     "answer": 2,
-     "explanation": "Bohemian Rhapsody was on A Night at the Opera."
-    }
-   ]
-  },
-  {
-   "id": "art-011",
-   "ask": {
-    "1": "Music term",
-    "2": "Crescendo",
-    "3": "Opposite"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "In music, what does 'forte' mean?",
-     "choices": [
-      "Quiet",
-      "Fast",
-      "Slow",
-      "Loud"
-     ],
-     "answer": 3,
-     "explanation": "Forte means loud."
-    },
-    {
-     "level": 3,
-     "question": "What is the opposite of crescendo in music, meaning gradually getting quieter?",
-     "choices": [
-      "Decrescendo",
-      "Allegro",
-      "Legato",
-      "Staccato"
-     ],
-     "answer": 0,
-     "explanation": "A decrescendo or diminuendo gets quieter."
-    }
-   ]
-  },
-  {
-   "id": "art-012",
-   "ask": {
-    "1": "Music term",
-    "2": "Adagio",
-    "3": "Tempo"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "In music, what does 'allegro' usually mean?",
-     "choices": [
-      "Very loud",
-      "Very quiet",
-      "Fast and lively",
-      "Very slow"
-     ],
-     "answer": 2,
-     "explanation": "Allegro means fast and cheerful."
-    },
-    {
-     "level": 2,
-     "question": "In music, what does 'piano' mean as a dynamic marking?",
-     "choices": [
-      "Fast",
-      "Quietly",
-      "Loudly",
-      "Slowly"
-     ],
-     "answer": 1,
-     "explanation": "Piano means soft."
-    }
-   ]
-  },
-  {
-   "id": "art-013",
-   "ask": {
-    "1": "Composer",
-    "2": "Magic Flute",
-    "3": "Opera"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which Austrian composer wrote 'Eine kleine Nachtmusik'?",
-     "choices": [
-      "Johann Strauss",
-      "Wolfgang Amadeus Mozart",
-      "Gustav Mahler",
-      "Joseph Haydn"
-     ],
-     "answer": 1,
-     "explanation": "Mozart wrote it in 1787."
-    },
-    {
-     "level": 3,
-     "question": "In which year did 'The Magic Flute' premiere in Vienna?",
-     "choices": [
-      "1805",
-      "1791",
-      "1825",
-      "1756"
-     ],
-     "answer": 1,
-     "explanation": "The opera premiered in September 1791, shortly before Mozart died."
-    }
-   ]
-  },
-  {
    "id": "art-014",
    "ask": {
     "1": "K-pop group",
@@ -480,74 +378,6 @@
    ]
   },
   {
-   "id": "art-015",
-   "ask": {
-    "1": "Band",
-    "2": "Rumours",
-    "3": "Year"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which band released the album 'Rumours', one of the best-selling of all time?",
-     "choices": [
-      "ABBA",
-      "Fleetwood Mac",
-      "The Eagles",
-      "Pink Floyd"
-     ],
-     "answer": 1,
-     "explanation": "Rumours is a 1977 album by Fleetwood Mac."
-    },
-    {
-     "level": 2,
-     "question": "Which Fleetwood Mac song from Rumours includes the line 'Don't stop thinking about tomorrow'?",
-     "choices": [
-      "Go Your Own Way",
-      "Don't Stop",
-      "The Chain",
-      "Dreams"
-     ],
-     "answer": 1,
-     "explanation": "Don't Stop is on Rumours."
-    }
-   ]
-  },
-  {
-   "id": "art-016",
-   "ask": {
-    "1": "Artist",
-    "2": "Lemonade",
-    "3": "Format"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which singer is known for the hit 'Single Ladies'?",
-     "choices": [
-      "Beyonce",
-      "Rihanna",
-      "Taylor Swift",
-      "Adele"
-     ],
-     "answer": 0,
-     "explanation": "Single Ladies is a 2008 Beyonce song."
-    },
-    {
-     "level": 3,
-     "question": "Lemonade was released as a visual album on which channel in April 2016?",
-     "choices": [
-      "HBO",
-      "Netflix",
-      "MTV",
-      "BBC"
-     ],
-     "answer": 0,
-     "explanation": "Lemonade premiered on HBO."
-    }
-   ]
-  },
-  {
    "id": "art-017",
    "ask": {
     "1": "Composer",
@@ -578,6 +408,108 @@
      ],
      "answer": 1,
      "explanation": "The premiere was in May 1824."
+    }
+   ]
+  },
+  {
+   "id": "art-037",
+   "ask": {
+    "1": "Painter",
+    "2": "Mona Lisa",
+    "3": "Where"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "In which museum is the Mona Lisa displayed?",
+     "choices": [
+      "The Uffizi",
+      "The British Museum",
+      "The Louvre",
+      "The Prado"
+     ],
+     "answer": 2,
+     "explanation": "The Mona Lisa hangs in the Louvre in Paris."
+    },
+    {
+     "level": 3,
+     "question": "Which Italian city was Leonardo da Vinci's workplace when he painted the Last Supper, around 1495 to 1498?",
+     "choices": [
+      "Naples",
+      "Venice",
+      "Milan",
+      "Rome"
+     ],
+     "answer": 2,
+     "explanation": "He painted the Last Supper in Milan."
+    }
+   ]
+  },
+  {
+   "id": "art-038",
+   "ask": {
+    "1": "Painter",
+    "2": "Starry Night",
+    "3": "Where"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "In which institution can you see Van Gogh's The Starry Night?",
+     "choices": [
+      "The Tate",
+      "The Rijksmuseum",
+      "The Louvre",
+      "The Museum of Modern Art in New York"
+     ],
+     "answer": 3,
+     "explanation": "It is at MoMA in New York."
+    },
+    {
+     "level": 3,
+     "question": "Van Gogh painted The Starry Night in 1889 while staying in a hospital in which French town?",
+     "choices": [
+      "Auvers-sur-Oise",
+      "Avignon",
+      "Saint-Remy-de-Provence",
+      "Arles"
+     ],
+     "answer": 2,
+     "explanation": "He painted it at the asylum in Saint-Remy-de-Provence."
+    }
+   ]
+  },
+  {
+   "id": "trk-021",
+   "ask": {
+    "1": "Monet or Manet",
+    "2": "Olympia",
+    "3": "Matching pairs"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Who painted the controversial nude 'Olympia', shown in 1865?",
+     "choices": [
+      "Claude Monet",
+      "Pierre-Auguste Renoir",
+      "Paul Cezanne",
+      "Edouard Manet"
+     ],
+     "answer": 3,
+     "explanation": "Olympia is by Manet, who is often confused with Monet."
+    },
+    {
+     "level": 3,
+     "question": "Which pair correctly matches painter and work?",
+     "choices": [
+      "Monet: A Bar at the Folies-Bergere; Manet: Haystacks",
+      "Monet: Olympia; Manet: Water Lilies",
+      "Manet: Olympia; Monet: Water Lilies",
+      "Manet: Impression, Sunrise; Monet: Olympia"
+     ],
+     "answer": 2,
+     "explanation": "Manet painted Olympia and A Bar at the Folies-Bergere; Monet painted Water Lilies, Haystacks and Impression, Sunrise."
     }
    ]
   },
@@ -752,40 +684,6 @@
    ]
   },
   {
-   "id": "art-023",
-   "ask": {
-    "1": "Film",
-    "2": "Spirited Away",
-    "3": "Director"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which Japanese animation studio made 'Spirited Away'?",
-     "choices": [
-      "Pixar",
-      "Madhouse",
-      "Toei",
-      "Studio Ghibli"
-     ],
-     "answer": 3,
-     "explanation": "Studio Ghibli made it in 2001."
-    },
-    {
-     "level": 2,
-     "question": "Who directed 'Spirited Away'?",
-     "choices": [
-      "Isao Takahata",
-      "Mamoru Hosoda",
-      "Hayao Miyazaki",
-      "Makoto Shinkai"
-     ],
-     "answer": 2,
-     "explanation": "Miyazaki directed it."
-    }
-   ]
-  },
-  {
    "id": "art-024",
    "ask": {
     "1": "Director",
@@ -816,74 +714,6 @@
      ],
      "answer": 3,
      "explanation": "Cillian Murphy won the Oscar for the role."
-    }
-   ]
-  },
-  {
-   "id": "art-025",
-   "ask": {
-    "1": "Franchise",
-    "2": "Lightsabers",
-    "3": "Creator"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "Who created the Star Wars franchise?",
-     "choices": [
-      "Steven Spielberg",
-      "George Lucas",
-      "Gene Roddenberry",
-      "Ridley Scott"
-     ],
-     "answer": 1,
-     "explanation": "George Lucas created it in 1977."
-    },
-    {
-     "level": 3,
-     "question": "In which year was the original Star Wars released in cinemas?",
-     "choices": [
-      "1972",
-      "1977",
-      "1980",
-      "1983"
-     ],
-     "answer": 1,
-     "explanation": "The original film came out in May 1977."
-    }
-   ]
-  },
-  {
-   "id": "art-026",
-   "ask": {
-    "1": "Company",
-    "2": "Mario",
-    "3": "Famous plumber"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "Which character is Mario's brother?",
-     "choices": [
-      "Wario",
-      "Toad",
-      "Bowser",
-      "Luigi"
-     ],
-     "answer": 3,
-     "explanation": "Luigi is Mario's brother."
-    },
-    {
-     "level": 3,
-     "question": "In which 1981 arcade game did Mario first appear, then called Jumpman?",
-     "choices": [
-      "Pac-Man",
-      "Donkey Kong",
-      "Space Invaders",
-      "Super Mario Bros."
-     ],
-     "answer": 1,
-     "explanation": "Mario first appeared in Donkey Kong."
     }
    ]
   },
@@ -922,40 +752,6 @@
    ]
   },
   {
-   "id": "art-028",
-   "ask": {
-    "1": "Tetris",
-    "2": "Pieces",
-    "3": "Origin"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which game involves falling blocks that you must fit together to clear lines?",
-     "choices": [
-      "Pong",
-      "Pac-Man",
-      "Tetris",
-      "Snake"
-     ],
-     "answer": 2,
-     "explanation": "Tetris involves falling blocks."
-    },
-    {
-     "level": 2,
-     "question": "Which country was Tetris created in?",
-     "choices": [
-      "The Soviet Union",
-      "Germany",
-      "The United States",
-      "Japan"
-     ],
-     "answer": 0,
-     "explanation": "Alexey Pajitnov created Tetris in Moscow in 1984."
-    }
-   ]
-  },
-  {
    "id": "art-029",
    "ask": {
     "1": "Series",
@@ -986,176 +782,6 @@
      ],
      "answer": 0,
      "explanation": "Princess Zelda is the title character."
-    }
-   ]
-  },
-  {
-   "id": "art-030",
-   "ask": {
-    "1": "Chess",
-    "2": "Chess piece",
-    "3": "L shape"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "Which chess piece can only move diagonally?",
-     "choices": [
-      "The rook",
-      "The bishop",
-      "The knight",
-      "The king"
-     ],
-     "answer": 1,
-     "explanation": "Bishops slide along diagonals and stay on one colour."
-    },
-    {
-     "level": 3,
-     "question": "Which chess piece can jump over other pieces?",
-     "choices": [
-      "The rook",
-      "The bishop",
-      "The queen",
-      "The knight"
-     ],
-     "answer": 3,
-     "explanation": "Knights jump over pieces."
-    }
-   ]
-  },
-  {
-   "id": "art-031",
-   "ask": {
-    "1": "Pac-Man",
-    "2": "Release",
-    "3": "Origin"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which yellow character eats dots and ghosts in a maze?",
-     "choices": [
-      "Kirby",
-      "Sonic",
-      "Pac-Man",
-      "Mario"
-     ],
-     "answer": 2,
-     "explanation": "Pac-Man eats pellets."
-    },
-    {
-     "level": 2,
-     "question": "Which country created Pac-Man?",
-     "choices": [
-      "Japan",
-      "Germany",
-      "The United States",
-      "The UK"
-     ],
-     "answer": 0,
-     "explanation": "Pac-Man came from Namco in Japan."
-    }
-   ]
-  },
-  {
-   "id": "art-032",
-   "ask": {
-    "1": "Author",
-    "2": "Pride and Prejudice",
-    "3": "Characters"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "Who are the main romantic leads in 'Pride and Prejudice'?",
-     "choices": [
-      "Emma and Mr Knightley",
-      "Elizabeth Bennet and Mr Darcy",
-      "Jane Eyre and Mr Rochester",
-      "Catherine and Heathcliff"
-     ],
-     "answer": 1,
-     "explanation": "Austen's lead couple are Elizabeth Bennet and Fitzwilliam Darcy."
-    },
-    {
-     "level": 3,
-     "question": "In which year was 'Pride and Prejudice' first published?",
-     "choices": [
-      "1901",
-      "1775",
-      "1850",
-      "1813"
-     ],
-     "answer": 3,
-     "explanation": "The novel was published in January 1813."
-    }
-   ]
-  },
-  {
-   "id": "art-033",
-   "ask": {
-    "1": "Author",
-    "2": "1984",
-    "3": "Big Brother"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "In '1984', what is the name of the omnipresent leader whose face is on posters?",
-     "choices": [
-      "Old Father",
-      "Uncle Sam",
-      "The Great Leader",
-      "Big Brother"
-     ],
-     "answer": 3,
-     "explanation": "Big Brother is the face of the Party."
-    },
-    {
-     "level": 3,
-     "question": "In which year was George Orwell's '1984' published?",
-     "choices": [
-      "1984",
-      "1960",
-      "1949",
-      "1932"
-     ],
-     "answer": 2,
-     "explanation": "It was published in 1949."
-    }
-   ]
-  },
-  {
-   "id": "art-034",
-   "ask": {
-    "1": "Author",
-    "2": "Don Quixote",
-    "3": "Language"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "In which language was 'Don Quixote' originally written?",
-     "choices": [
-      "French",
-      "Italian",
-      "Spanish",
-      "Portuguese"
-     ],
-     "answer": 2,
-     "explanation": "Cervantes wrote in Spanish."
-    },
-    {
-     "level": 2,
-     "question": "What is the name of Don Quixote's loyal squire?",
-     "choices": [
-      "Zorro",
-      "Rocinante",
-      "Dulcinea",
-      "Sancho Panza"
-     ],
-     "answer": 3,
-     "explanation": "Sancho Panza accompanies him."
     }
    ]
   },
@@ -1194,104 +820,274 @@
    ]
   },
   {
-   "id": "art-036",
+   "id": "art-003",
    "ask": {
-    "1": "Author",
-    "2": "Famous novel",
-    "3": "Country"
+    "1": "Famous composer",
+    "2": "Four Seasons composer",
+    "3": "Nationality"
    },
    "variants": [
     {
      "level": 1,
-     "question": "From which country was Gabriel Garcia Marquez?",
+     "question": "Which Italian composer wrote a famous piece called 'The Four Seasons'?",
      "choices": [
-      "Spain",
-      "Colombia",
-      "Mexico",
-      "Argentina"
+      "Antonio Vivaldi",
+      "Wolfgang Amadeus Mozart",
+      "Frederic Chopin",
+      "Ludwig van Beethoven"
      ],
-     "answer": 1,
-     "explanation": "He was born in Colombia."
-    },
-    {
-     "level": 2,
-     "question": "Gabriel Garcia Marquez won which major prize in 1982?",
-     "choices": [
-      "The Pulitzer Prize",
-      "The Booker Prize",
-      "The Nobel Prize in Literature",
-      "The Goncourt Prize"
-     ],
-     "answer": 2,
-     "explanation": "He won the Nobel Prize in Literature in 1982."
-    }
-   ]
-  },
-  {
-   "id": "art-037",
-   "ask": {
-    "1": "Painter",
-    "2": "Mona Lisa",
-    "3": "Where"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "In which museum is the Mona Lisa displayed?",
-     "choices": [
-      "The Uffizi",
-      "The British Museum",
-      "The Louvre",
-      "The Prado"
-     ],
-     "answer": 2,
-     "explanation": "The Mona Lisa hangs in the Louvre in Paris."
+     "answer": 0,
+     "explanation": "Vivaldi was a Baroque composer from Venice."
     },
     {
      "level": 3,
-     "question": "Which Italian city was Leonardo da Vinci's workplace when he painted the Last Supper, around 1495 to 1498?",
+     "question": "In which Italian city was Antonio Vivaldi born in 1678?",
      "choices": [
-      "Naples",
-      "Venice",
       "Milan",
-      "Rome"
-     ],
-     "answer": 2,
-     "explanation": "He painted the Last Supper in Milan."
-    }
-   ]
-  },
-  {
-   "id": "art-038",
-   "ask": {
-    "1": "Painter",
-    "2": "Starry Night",
-    "3": "Where"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "In which institution can you see Van Gogh's The Starry Night?",
-     "choices": [
-      "The Tate",
-      "The Rijksmuseum",
-      "The Louvre",
-      "The Museum of Modern Art in New York"
+      "Florence",
+      "Rome",
+      "Venice"
      ],
      "answer": 3,
-     "explanation": "It is at MoMA in New York."
+     "explanation": "Vivaldi was born in Venice."
+    }
+   ]
+  },
+  {
+   "id": "art-006",
+   "ask": {
+    "1": "Band name",
+    "2": "Dark Side of the Moon",
+    "3": "Release"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which band is known for a prism on an album cover and a giant flying pig?",
+     "choices": [
+      "Led Zeppelin",
+      "Pink Floyd",
+      "Queen",
+      "The Beatles"
+     ],
+     "answer": 1,
+     "explanation": "Pink Floyd's Dark Side of the Moon has the famous prism cover."
     },
     {
      "level": 3,
-     "question": "Van Gogh painted The Starry Night in 1889 while staying in a hospital in which French town?",
+     "question": "Which Pink Floyd album, released in 1979, is a rock opera about a wall?",
      "choices": [
-      "Auvers-sur-Oise",
-      "Avignon",
-      "Saint-Remy-de-Provence",
-      "Arles"
+      "The Wall",
+      "Animals",
+      "Wish You Were Here",
+      "Meddle"
+     ],
+     "answer": 0,
+     "explanation": "The Wall was released in 1979."
+    }
+   ]
+  },
+  {
+   "id": "art-007",
+   "ask": {
+    "1": "Swedish group",
+    "2": "Waterloo",
+    "3": "Eurovision"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Swedish group sang 'Dancing Queen'?",
+     "choices": [
+      "The Cardigans",
+      "Europe",
+      "ABBA",
+      "Roxette"
      ],
      "answer": 2,
-     "explanation": "He painted it at the asylum in Saint-Remy-de-Provence."
+     "explanation": "Dancing Queen is a 1976 hit by ABBA."
+    },
+    {
+     "level": 3,
+     "question": "In which British seaside city was the 1974 Eurovision Song Contest held?",
+     "choices": [
+      "Liverpool",
+      "Blackpool",
+      "Brighton",
+      "Edinburgh"
+     ],
+     "answer": 2,
+     "explanation": "The 1974 contest was staged at the Brighton Dome."
+    }
+   ]
+  },
+  {
+   "id": "art-008",
+   "ask": {
+    "1": "Rapper",
+    "2": "Marshall Mathers",
+    "3": "Stage name"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which rapper is known for the song 'Lose Yourself' from the film 8 Mile?",
+     "choices": [
+      "Jay-Z",
+      "Kanye West",
+      "Drake",
+      "Eminem"
+     ],
+     "answer": 3,
+     "explanation": "Lose Yourself won an Academy Award in 2003."
+    },
+    {
+     "level": 3,
+     "question": "What is the name of Eminem's alter ego, which is also the title of a 2000 album?",
+     "choices": [
+      "Mr. Mathers",
+      "Slim Shady",
+      "The Real Marshall",
+      "Rap God"
+     ],
+     "answer": 1,
+     "explanation": "Slim Shady is his alter ego, and The Marshall Mathers LP followed in 2000."
+    }
+   ]
+  },
+  {
+   "id": "art-010",
+   "ask": {
+    "1": "Band name",
+    "2": "Queen members",
+    "3": "Frontman"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which British band had a lead singer named Freddie Mercury?",
+     "choices": [
+      "The Who",
+      "Oasis",
+      "Queen",
+      "The Rolling Stones"
+     ],
+     "answer": 2,
+     "explanation": "Freddie Mercury was Queen's lead singer."
+    },
+    {
+     "level": 3,
+     "question": "On which Queen album did 'Bohemian Rhapsody' first appear, in 1975?",
+     "choices": [
+      "News of the World",
+      "Sheer Heart Attack",
+      "A Night at the Opera",
+      "Jazz"
+     ],
+     "answer": 2,
+     "explanation": "Bohemian Rhapsody was on A Night at the Opera."
+    }
+   ]
+  },
+  {
+   "id": "art-011",
+   "ask": {
+    "1": "Music term",
+    "2": "Crescendo",
+    "3": "Opposite"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In music, what does 'forte' mean?",
+     "choices": [
+      "Quiet",
+      "Fast",
+      "Slow",
+      "Loud"
+     ],
+     "answer": 3,
+     "explanation": "Forte means loud."
+    },
+    {
+     "level": 3,
+     "question": "What is the opposite of crescendo in music, meaning gradually getting quieter?",
+     "choices": [
+      "Decrescendo",
+      "Allegro",
+      "Legato",
+      "Staccato"
+     ],
+     "answer": 0,
+     "explanation": "A decrescendo or diminuendo gets quieter."
+    }
+   ]
+  },
+  {
+   "id": "art-013",
+   "ask": {
+    "1": "Composer",
+    "2": "Magic Flute",
+    "3": "Opera"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Austrian composer wrote 'Eine kleine Nachtmusik'?",
+     "choices": [
+      "Johann Strauss",
+      "Wolfgang Amadeus Mozart",
+      "Gustav Mahler",
+      "Joseph Haydn"
+     ],
+     "answer": 1,
+     "explanation": "Mozart wrote it in 1787."
+    },
+    {
+     "level": 3,
+     "question": "In which year did 'The Magic Flute' premiere in Vienna?",
+     "choices": [
+      "1805",
+      "1791",
+      "1825",
+      "1756"
+     ],
+     "answer": 1,
+     "explanation": "The opera premiered in September 1791, shortly before Mozart died."
+    }
+   ]
+  },
+  {
+   "id": "art-016",
+   "ask": {
+    "1": "Artist",
+    "2": "Lemonade",
+    "3": "Format"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which singer is known for the hit 'Single Ladies'?",
+     "choices": [
+      "Beyonce",
+      "Rihanna",
+      "Taylor Swift",
+      "Adele"
+     ],
+     "answer": 0,
+     "explanation": "Single Ladies is a 2008 Beyonce song."
+    },
+    {
+     "level": 3,
+     "question": "Lemonade was released as a visual album on which channel in April 2016?",
+     "choices": [
+      "HBO",
+      "Netflix",
+      "MTV",
+      "BBC"
+     ],
+     "answer": 0,
+     "explanation": "Lemonade premiered on HBO."
     }
    ]
   },
@@ -1360,6 +1156,312 @@
      ],
      "answer": 1,
      "explanation": "The Pyramid opened in 1989."
+    }
+   ]
+  },
+  {
+   "id": "art-023",
+   "ask": {
+    "1": "Film",
+    "2": "Spirited Away",
+    "3": "Director"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Japanese animation studio made 'Spirited Away'?",
+     "choices": [
+      "Pixar",
+      "Madhouse",
+      "Toei",
+      "Studio Ghibli"
+     ],
+     "answer": 3,
+     "explanation": "Studio Ghibli made it in 2001."
+    },
+    {
+     "level": 2,
+     "question": "Who directed 'Spirited Away'?",
+     "choices": [
+      "Isao Takahata",
+      "Mamoru Hosoda",
+      "Hayao Miyazaki",
+      "Makoto Shinkai"
+     ],
+     "answer": 2,
+     "explanation": "Miyazaki directed it."
+    }
+   ]
+  },
+  {
+   "id": "art-028",
+   "ask": {
+    "1": "Tetris",
+    "2": "Pieces",
+    "3": "Origin"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which game involves falling blocks that you must fit together to clear lines?",
+     "choices": [
+      "Pong",
+      "Pac-Man",
+      "Tetris",
+      "Snake"
+     ],
+     "answer": 2,
+     "explanation": "Tetris involves falling blocks."
+    },
+    {
+     "level": 2,
+     "question": "Which country was Tetris created in?",
+     "choices": [
+      "The Soviet Union",
+      "Germany",
+      "The United States",
+      "Japan"
+     ],
+     "answer": 0,
+     "explanation": "Alexey Pajitnov created Tetris in Moscow in 1984."
+    }
+   ]
+  },
+  {
+   "id": "art-031",
+   "ask": {
+    "1": "Pac-Man",
+    "2": "Release",
+    "3": "Origin"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which yellow character eats dots and ghosts in a maze?",
+     "choices": [
+      "Kirby",
+      "Sonic",
+      "Pac-Man",
+      "Mario"
+     ],
+     "answer": 2,
+     "explanation": "Pac-Man eats pellets."
+    },
+    {
+     "level": 2,
+     "question": "Which country created Pac-Man?",
+     "choices": [
+      "Japan",
+      "Germany",
+      "The United States",
+      "The UK"
+     ],
+     "answer": 0,
+     "explanation": "Pac-Man came from Namco in Japan."
+    }
+   ]
+  },
+  {
+   "id": "art-034",
+   "ask": {
+    "1": "Author",
+    "2": "Don Quixote",
+    "3": "Language"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which language was 'Don Quixote' originally written?",
+     "choices": [
+      "French",
+      "Italian",
+      "Spanish",
+      "Portuguese"
+     ],
+     "answer": 2,
+     "explanation": "Cervantes wrote in Spanish."
+    },
+    {
+     "level": 2,
+     "question": "What is the name of Don Quixote's loyal squire?",
+     "choices": [
+      "Zorro",
+      "Rocinante",
+      "Dulcinea",
+      "Sancho Panza"
+     ],
+     "answer": 3,
+     "explanation": "Sancho Panza accompanies him."
+    }
+   ]
+  },
+  {
+   "id": "art-036",
+   "ask": {
+    "1": "Author",
+    "2": "Famous novel",
+    "3": "Country"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "From which country was Gabriel Garcia Marquez?",
+     "choices": [
+      "Spain",
+      "Colombia",
+      "Mexico",
+      "Argentina"
+     ],
+     "answer": 1,
+     "explanation": "He was born in Colombia."
+    },
+    {
+     "level": 2,
+     "question": "Gabriel Garcia Marquez won which major prize in 1982?",
+     "choices": [
+      "The Pulitzer Prize",
+      "The Booker Prize",
+      "The Nobel Prize in Literature",
+      "The Goncourt Prize"
+     ],
+     "answer": 2,
+     "explanation": "He won the Nobel Prize in Literature in 1982."
+    }
+   ]
+  },
+  {
+   "id": "art-009",
+   "ask": {
+    "1": "Queen of Soul",
+    "2": "Soul singer",
+    "3": "Famous hit"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which legendary singer sang 'Respect' in 1967?",
+     "choices": [
+      "Aretha Franklin",
+      "Diana Ross",
+      "Whitney Houston",
+      "Tina Turner"
+     ],
+     "answer": 0,
+     "explanation": "Aretha Franklin's cover of Respect topped the charts in 1967."
+    },
+    {
+     "level": 2,
+     "question": "Which singer of 'Like a Prayer' has the nickname 'Queen of Pop'?",
+     "choices": [
+      "Celine Dion",
+      "Madonna",
+      "Cher",
+      "Janet Jackson"
+     ],
+     "answer": 1,
+     "explanation": "Madonna has the nickname Queen of Pop."
+    }
+   ]
+  },
+  {
+   "id": "art-012",
+   "ask": {
+    "1": "Music term",
+    "2": "Adagio",
+    "3": "Tempo"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In music, what does 'allegro' usually mean?",
+     "choices": [
+      "Very loud",
+      "Very quiet",
+      "Fast and lively",
+      "Very slow"
+     ],
+     "answer": 2,
+     "explanation": "Allegro means fast and cheerful."
+    },
+    {
+     "level": 2,
+     "question": "In music, what does 'piano' mean as a dynamic marking?",
+     "choices": [
+      "Fast",
+      "Quietly",
+      "Loudly",
+      "Slowly"
+     ],
+     "answer": 1,
+     "explanation": "Piano means soft."
+    }
+   ]
+  },
+  {
+   "id": "art-015",
+   "ask": {
+    "1": "Band",
+    "2": "Rumours",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which band released the album 'Rumours', one of the best-selling of all time?",
+     "choices": [
+      "ABBA",
+      "Fleetwood Mac",
+      "The Eagles",
+      "Pink Floyd"
+     ],
+     "answer": 1,
+     "explanation": "Rumours is a 1977 album by Fleetwood Mac."
+    },
+    {
+     "level": 2,
+     "question": "Which Fleetwood Mac song from Rumours includes the line 'Don't stop thinking about tomorrow'?",
+     "choices": [
+      "Go Your Own Way",
+      "Don't Stop",
+      "The Chain",
+      "Dreams"
+     ],
+     "answer": 1,
+     "explanation": "Don't Stop is on Rumours."
+    }
+   ]
+  },
+  {
+   "id": "trk-022",
+   "ask": {
+    "1": "1812 Overture",
+    "2": "Year of composition",
+    "3": "Gap"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What event does Tchaikovsky's 1812 Overture commemorate?",
+     "choices": [
+      "Russia's defence against Napoleon's invasion",
+      "The American War of 1812",
+      "A war between Russia and Sweden",
+      "The French Revolution"
+     ],
+     "answer": 0,
+     "explanation": "The piece marks Russia's resistance to Napoleon in 1812, and its finale uses cannon fire."
+    },
+    {
+     "level": 2,
+     "question": "In which year was the 1812 Overture composed?",
+     "choices": [
+      "1880",
+      "1812",
+      "1870",
+      "1900"
+     ],
+     "answer": 0,
+     "explanation": "Tchaikovsky wrote it in 1880; the title gives the year of the event, not of composition."
     }
    ]
   }

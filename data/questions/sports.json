@@ -3,46 +3,18 @@
  "review": "unreviewed",
  "questions": [
   {
-   "id": "spo-001",
-   "subcategory": "football",
+   "id": "spo-008",
+   "subcategory": "american-football",
    "difficulty": 1,
-   "question": "How many players are on the pitch for each team in a football (soccer) match?",
+   "question": "In which sport do you score a 'touchdown'?",
    "choices": [
-    "11",
-    "12",
-    "10",
-    "9"
+    "Basketball",
+    "Rugby union only",
+    "Baseball",
+    "American football"
    ],
-   "answer": 0,
-   "explanation": "Each side fields eleven players including the goalkeeper."
-  },
-  {
-   "id": "spo-002",
-   "subcategory": "olympics",
-   "difficulty": 1,
-   "question": "Which country hosted the 2016 Summer Olympics?",
-   "choices": [
-    "China",
-    "United Kingdom",
-    "Brazil",
-    "Greece"
-   ],
-   "answer": 2,
-   "explanation": "The Games were held in Rio de Janeiro."
-  },
-  {
-   "id": "spo-003",
-   "subcategory": "tennis",
-   "difficulty": 1,
-   "question": "In tennis, what is a score of zero called?",
-   "choices": [
-    "Duck",
-    "Love",
-    "Nil",
-    "Zero"
-   ],
-   "answer": 1,
-   "explanation": "'Love' is used in tennis scoring."
+   "answer": 3,
+   "explanation": "A touchdown is worth six points."
   },
   {
    "id": "spo-004",
@@ -59,32 +31,18 @@
    "explanation": "A free throw is worth one point."
   },
   {
-   "id": "spo-005",
-   "subcategory": "tennis",
+   "id": "spo-001",
+   "subcategory": "football",
    "difficulty": 1,
-   "question": "Which sport is played at Wimbledon?",
+   "question": "How many players are on the pitch for each team in a football (soccer) match?",
    "choices": [
-    "Rugby",
-    "Golf",
-    "Tennis",
-    "Cricket"
+    "11",
+    "12",
+    "10",
+    "9"
    ],
-   "answer": 2,
-   "explanation": "Wimbledon is the oldest tennis tournament, played on grass."
-  },
-  {
-   "id": "spo-006",
-   "subcategory": "olympics",
-   "difficulty": 1,
-   "question": "How many rings are on the Olympic flag?",
-   "choices": [
-    "4",
-    "6",
-    "5",
-    "7"
-   ],
-   "answer": 2,
-   "explanation": "The five rings represent five continents."
+   "answer": 0,
+   "explanation": "Each side fields eleven players including the goalkeeper."
   },
   {
    "id": "spo-007",
@@ -101,32 +59,136 @@
    "explanation": "France beat Croatia 4–2 in the final."
   },
   {
-   "id": "spo-008",
-   "subcategory": "american-football",
+   "id": "trk-029",
+   "subcategory": "football",
    "difficulty": 1,
-   "question": "In which sport do you score a 'touchdown'?",
+   "question": "In football (soccer), can a player be offside in their own half?",
    "choices": [
-    "Basketball",
-    "Rugby union only",
-    "Baseball",
-    "American football"
+    "No",
+    "Only at corners",
+    "Only the goalkeeper",
+    "Yes"
    ],
-   "answer": 3,
-   "explanation": "A touchdown is worth six points."
+   "answer": 0,
+   "explanation": "A player cannot be offside in their own half of the pitch.",
+   "tags": [
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think a player can be offside in any situation, including when level with a defender."
   },
   {
-   "id": "spo-009",
-   "subcategory": "football",
-   "difficulty": 2,
-   "question": "Who won the 2022 FIFA World Cup?",
+   "id": "spo-002",
+   "subcategory": "olympics",
+   "difficulty": 1,
+   "question": "Which country hosted the 2016 Summer Olympics?",
    "choices": [
-    "France",
+    "China",
+    "United Kingdom",
     "Brazil",
-    "Croatia",
-    "Argentina"
+    "Greece"
    ],
-   "answer": 3,
-   "explanation": "Argentina beat France on penalties in Qatar."
+   "answer": 2,
+   "explanation": "The Games were held in Rio de Janeiro."
+  },
+  {
+   "id": "spo-006",
+   "subcategory": "olympics",
+   "difficulty": 1,
+   "question": "How many rings are on the Olympic flag?",
+   "choices": [
+    "4",
+    "6",
+    "5",
+    "7"
+   ],
+   "answer": 2,
+   "explanation": "The five rings represent five continents."
+  },
+  {
+   "id": "trk-031",
+   "subcategory": "olympics",
+   "difficulty": 1,
+   "question": "How long is an official marathon?",
+   "choices": [
+    "42.195 kilometres",
+    "40 kilometres",
+    "42 kilometres exactly",
+    "45 kilometres"
+   ],
+   "answer": 0,
+   "explanation": "The standard is 42.195 km, or 26 miles 385 yards.",
+   "tags": [
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think the marathon is 42 km exactly or an even 40 km."
+  },
+  {
+   "id": "trk-032",
+   "subcategory": "rugby",
+   "difficulty": 1,
+   "question": "How many players per side are on the field in a rugby union match?",
+   "choices": [
+    "13",
+    "11",
+    "15",
+    "7"
+   ],
+   "answer": 2,
+   "explanation": "Rugby union has 15 players per side.",
+   "tags": [
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think all forms of rugby field 15 players per side."
+  },
+  {
+   "id": "spo-003",
+   "subcategory": "tennis",
+   "difficulty": 1,
+   "question": "In tennis, what is a score of zero called?",
+   "choices": [
+    "Duck",
+    "Love",
+    "Nil",
+    "Zero"
+   ],
+   "answer": 1,
+   "explanation": "'Love' is used in tennis scoring."
+  },
+  {
+   "id": "spo-005",
+   "subcategory": "tennis",
+   "difficulty": 1,
+   "question": "Which sport is played at Wimbledon?",
+   "choices": [
+    "Rugby",
+    "Golf",
+    "Tennis",
+    "Cricket"
+   ],
+   "answer": 2,
+   "explanation": "Wimbledon is the oldest tennis tournament, played on grass."
+  },
+  {
+   "id": "trk-030",
+   "subcategory": "tennis",
+   "difficulty": 1,
+   "question": "What does 'deuce' mean in a tennis game?",
+   "choices": [
+    "The score is tied at 40-40",
+    "The game has ended",
+    "One player is one point from winning",
+    "The score is tied at 30-30"
+   ],
+   "answer": 0,
+   "explanation": "Deuce means both players have three points, shown as 40-40.",
+   "tags": [
+    "trick"
+   ],
+   "format": "trick",
+   "misconception": "Many people think a tennis game is won simply by the first player to reach 40."
   },
   {
    "id": "spo-010",
@@ -143,6 +205,20 @@
    "explanation": "Bolt set it at the 2009 World Championships in Berlin."
   },
   {
+   "id": "spo-016",
+   "subcategory": "athletics",
+   "difficulty": 2,
+   "question": "How long is a marathon?",
+   "choices": [
+    "42.195 km",
+    "26 km",
+    "40 km",
+    "45 km"
+   ],
+   "answer": 0,
+   "explanation": "That is about 26.2 miles."
+  },
+  {
    "id": "spo-011",
    "subcategory": "basketball",
    "difficulty": 2,
@@ -155,34 +231,6 @@
    ],
    "answer": 3,
    "explanation": "Each team has five players on court."
-  },
-  {
-   "id": "spo-012",
-   "subcategory": "olympics",
-   "difficulty": 2,
-   "question": "Which city hosted the 2024 Summer Olympics?",
-   "choices": [
-    "Tokyo",
-    "Los Angeles",
-    "London",
-    "Paris"
-   ],
-   "answer": 3,
-   "explanation": "Paris hosted for the third time, 100 years after 1924."
-  },
-  {
-   "id": "spo-013",
-   "subcategory": "golf",
-   "difficulty": 2,
-   "question": "Which golfer has won the most major championships (18)?",
-   "choices": [
-    "Gary Player",
-    "Jack Nicklaus",
-    "Arnold Palmer",
-    "Tiger Woods"
-   ],
-   "answer": 1,
-   "explanation": "Tiger Woods has 15 majors."
   },
   {
    "id": "spo-014",
@@ -199,48 +247,6 @@
    "explanation": "A slam dunk is a forceful shot above the rim."
   },
   {
-   "id": "spo-015",
-   "subcategory": "rugby",
-   "difficulty": 2,
-   "question": "Which country invented the sport of rugby?",
-   "choices": [
-    "Ireland",
-    "England",
-    "New Zealand",
-    "Wales"
-   ],
-   "answer": 1,
-   "explanation": "Rugby is said to have originated at Rugby School in the 1820s."
-  },
-  {
-   "id": "spo-016",
-   "subcategory": "athletics",
-   "difficulty": 2,
-   "question": "How long is a marathon?",
-   "choices": [
-    "42.195 km",
-    "26 km",
-    "40 km",
-    "45 km"
-   ],
-   "answer": 0,
-   "explanation": "That is about 26.2 miles."
-  },
-  {
-   "id": "spo-017",
-   "subcategory": "tennis",
-   "difficulty": 2,
-   "question": "Which tennis player has won the most men's Grand Slam singles titles (24)?",
-   "choices": [
-    "Novak Djokovic",
-    "Roger Federer",
-    "Pete Sampras",
-    "Rafael Nadal"
-   ],
-   "answer": 0,
-   "explanation": "Djokovic overtook Nadal's 22 titles."
-  },
-  {
    "id": "spo-018",
    "subcategory": "basketball",
    "difficulty": 2,
@@ -253,6 +259,20 @@
    ],
    "answer": 1,
    "explanation": "The Bulls won two three-peats in the 1990s."
+  },
+  {
+   "id": "spo-009",
+   "subcategory": "football",
+   "difficulty": 2,
+   "question": "Who won the 2022 FIFA World Cup?",
+   "choices": [
+    "France",
+    "Brazil",
+    "Croatia",
+    "Argentina"
+   ],
+   "answer": 3,
+   "explanation": "Argentina beat France on penalties in Qatar."
   },
   {
    "id": "spo-019",
@@ -269,116 +289,88 @@
    "explanation": "Brazil has won five titles."
   },
   {
-   "id": "spo-020",
-   "subcategory": "football",
-   "difficulty": 3,
-   "question": "Who scored the 'Hand of God' goal at the 1986 World Cup?",
+   "id": "spo-013",
+   "subcategory": "golf",
+   "difficulty": 2,
+   "question": "Which golfer has won the most major championships (18)?",
    "choices": [
-    "Pelé",
-    "Diego Maradona",
-    "Zinedine Zidane",
-    "Johan Cruyff"
+    "Gary Player",
+    "Jack Nicklaus",
+    "Arnold Palmer",
+    "Tiger Woods"
    ],
    "answer": 1,
-   "explanation": "Argentina beat England 2–1 in the quarter-final."
+   "explanation": "Tiger Woods has 15 majors."
   },
   {
-   "id": "spo-021",
-   "subcategory": "cycling",
-   "difficulty": 3,
-   "question": "Which cyclist won seven consecutive Tours de France, later stripped for doping?",
+   "id": "spo-012",
+   "subcategory": "olympics",
+   "difficulty": 2,
+   "question": "Which city hosted the 2024 Summer Olympics?",
    "choices": [
-    "Eddy Merckx",
-    "Chris Froome",
-    "Lance Armstrong",
-    "Miguel Induráin"
+    "Tokyo",
+    "Los Angeles",
+    "London",
+    "Paris"
+   ],
+   "answer": 3,
+   "explanation": "Paris hosted for the third time, 100 years after 1924."
+  },
+  {
+   "id": "spo-015",
+   "subcategory": "rugby",
+   "difficulty": 2,
+   "question": "Which country invented the sport of rugby?",
+   "choices": [
+    "Ireland",
+    "England",
+    "New Zealand",
+    "Wales"
+   ],
+   "answer": 1,
+   "explanation": "Rugby is said to have originated at Rugby School in the 1820s."
+  },
+  {
+   "id": "spo-037",
+   "subcategory": "rugby",
+   "difficulty": 2,
+   "question": "Which country is known for the 'Haka' before rugby matches?",
+   "choices": [
+    "Samoa",
+    "Tonga",
+    "New Zealand",
+    "Australia"
    ],
    "answer": 2,
-   "explanation": "His titles from 1999 to 2005 were vacated."
+   "explanation": "The All Blacks perform the haka."
   },
   {
-   "id": "spo-022",
+   "id": "spo-017",
    "subcategory": "tennis",
-   "difficulty": 3,
-   "question": "How many Grand Slam tournaments are there in tennis each year?",
+   "difficulty": 2,
+   "question": "Which tennis player has won the most men's Grand Slam singles titles (24)?",
    "choices": [
-    "4",
-    "5",
-    "6",
-    "3"
+    "Novak Djokovic",
+    "Roger Federer",
+    "Pete Sampras",
+    "Rafael Nadal"
    ],
    "answer": 0,
-   "explanation": "Australian Open, French Open, Wimbledon and US Open."
+   "explanation": "Djokovic overtook Nadal's 22 titles."
   },
   {
-   "id": "spo-023",
-   "subcategory": "golf",
+   "id": "spo-035",
+   "subcategory": "american-football",
    "difficulty": 3,
-   "question": "Which sport uses the terms 'birdie', 'bogey' and 'eagle'?",
+   "question": "Which sport features the 'Super Bowl'?",
    "choices": [
-    "Golf",
+    "American football",
+    "Ice hockey",
     "Baseball",
-    "Cricket",
-    "Archery"
+    "Basketball"
    ],
    "answer": 0,
-   "explanation": "They describe scores relative to par."
-  },
-  {
-   "id": "spo-024",
-   "subcategory": "other",
-   "difficulty": 3,
-   "question": "What is the term for three strikes in a row in bowling?",
-   "choices": [
-    "Hawk",
-    "Triple",
-    "Hat-trick",
-    "Turkey"
-   ],
-   "answer": 3,
-   "explanation": "Three consecutive strikes make a turkey."
-  },
-  {
-   "id": "spo-025",
-   "subcategory": "football",
-   "difficulty": 3,
-   "question": "Which country won the first FIFA World Cup in 1930?",
-   "choices": [
-    "Argentina",
-    "Italy",
-    "Brazil",
-    "Uruguay"
-   ],
-   "answer": 3,
-   "explanation": "Uruguay hosted and won the first tournament."
-  },
-  {
-   "id": "spo-026",
-   "subcategory": "olympics",
-   "difficulty": 3,
-   "question": "Which swimmer holds the most Olympic gold medals (23)?",
-   "choices": [
-    "Michael Phelps",
-    "Ian Thorpe",
-    "Mark Spitz",
-    "Ryan Lochte"
-   ],
-   "answer": 0,
-   "explanation": "Phelps won 23 golds across four Olympics."
-  },
-  {
-   "id": "spo-027",
-   "subcategory": "cycling",
-   "difficulty": 3,
-   "question": "Which famous cycling race traditionally finishes on the Champs-Élysées in Paris?",
-   "choices": [
-    "Tour de France",
-    "Paris–Roubaix",
-    "Vuelta a España",
-    "Giro d'Italia"
-   ],
-   "answer": 0,
-   "explanation": "The Tour usually ends in Paris."
+   "explanation": "The NFL championship game."
   },
   {
    "id": "spo-028",
@@ -395,6 +387,76 @@
    "explanation": "Judo was founded by Jigoro Kano in 1882."
   },
   {
+   "id": "spo-021",
+   "subcategory": "cycling",
+   "difficulty": 3,
+   "question": "Which cyclist won seven consecutive Tours de France, later stripped for doping?",
+   "choices": [
+    "Eddy Merckx",
+    "Chris Froome",
+    "Lance Armstrong",
+    "Miguel Induráin"
+   ],
+   "answer": 2,
+   "explanation": "His titles from 1999 to 2005 were vacated."
+  },
+  {
+   "id": "spo-027",
+   "subcategory": "cycling",
+   "difficulty": 3,
+   "question": "Which famous cycling race traditionally finishes on the Champs-Élysées in Paris?",
+   "choices": [
+    "Tour de France",
+    "Paris–Roubaix",
+    "Vuelta a España",
+    "Giro d'Italia"
+   ],
+   "answer": 0,
+   "explanation": "The Tour usually ends in Paris."
+  },
+  {
+   "id": "spo-020",
+   "subcategory": "football",
+   "difficulty": 3,
+   "question": "Who scored the 'Hand of God' goal at the 1986 World Cup?",
+   "choices": [
+    "Pelé",
+    "Diego Maradona",
+    "Zinedine Zidane",
+    "Johan Cruyff"
+   ],
+   "answer": 1,
+   "explanation": "Argentina beat England 2–1 in the quarter-final."
+  },
+  {
+   "id": "spo-025",
+   "subcategory": "football",
+   "difficulty": 3,
+   "question": "Which country won the first FIFA World Cup in 1930?",
+   "choices": [
+    "Argentina",
+    "Italy",
+    "Brazil",
+    "Uruguay"
+   ],
+   "answer": 3,
+   "explanation": "Uruguay hosted and won the first tournament."
+  },
+  {
+   "id": "spo-023",
+   "subcategory": "golf",
+   "difficulty": 3,
+   "question": "Which sport uses the terms 'birdie', 'bogey' and 'eagle'?",
+   "choices": [
+    "Golf",
+    "Baseball",
+    "Cricket",
+    "Archery"
+   ],
+   "answer": 0,
+   "explanation": "They describe scores relative to par."
+  },
+  {
    "id": "spo-029",
    "subcategory": "golf",
    "difficulty": 3,
@@ -407,6 +469,62 @@
    ],
    "answer": 0,
    "explanation": "First held in 1860 at Prestwick."
+  },
+  {
+   "id": "spo-026",
+   "subcategory": "olympics",
+   "difficulty": 3,
+   "question": "Which swimmer holds the most Olympic gold medals (23)?",
+   "choices": [
+    "Michael Phelps",
+    "Ian Thorpe",
+    "Mark Spitz",
+    "Ryan Lochte"
+   ],
+   "answer": 0,
+   "explanation": "Phelps won 23 golds across four Olympics."
+  },
+  {
+   "id": "spo-024",
+   "subcategory": "other",
+   "difficulty": 3,
+   "question": "What is the term for three strikes in a row in bowling?",
+   "choices": [
+    "Hawk",
+    "Triple",
+    "Hat-trick",
+    "Turkey"
+   ],
+   "answer": 3,
+   "explanation": "Three consecutive strikes make a turkey."
+  },
+  {
+   "id": "spo-036",
+   "subcategory": "rugby",
+   "difficulty": 3,
+   "question": "How many points is a try worth in rugby union?",
+   "choices": [
+    "4",
+    "5",
+    "7",
+    "3"
+   ],
+   "answer": 1,
+   "explanation": "A conversion adds 2."
+  },
+  {
+   "id": "spo-022",
+   "subcategory": "tennis",
+   "difficulty": 3,
+   "question": "How many Grand Slam tournaments are there in tennis each year?",
+   "choices": [
+    "4",
+    "5",
+    "6",
+    "3"
+   ],
+   "answer": 0,
+   "explanation": "Australian Open, French Open, Wimbledon and US Open."
   },
   {
    "id": "spo-030",
@@ -423,18 +541,18 @@
    "explanation": "Fontaine scored 13 for France in 1958."
   },
   {
-   "id": "spo-031",
-   "subcategory": "other",
+   "id": "spo-034",
+   "subcategory": "football",
    "difficulty": 4,
-   "question": "What is the maximum break in snooker?",
+   "question": "How many Ballon d'Or awards has Lionel Messi won as of 2025?",
    "choices": [
-    "147",
-    "100",
-    "180",
-    "155"
+    "9",
+    "8",
+    "7",
+    "6"
    ],
-   "answer": 0,
-   "explanation": "A maximum break is 15 reds with 15 blacks then all colours."
+   "answer": 1,
+   "explanation": "Messi's eighth came in 2023."
   },
   {
    "id": "spo-032",
@@ -465,60 +583,18 @@
    "explanation": "Athens hosted the first modern Games."
   },
   {
-   "id": "spo-034",
-   "subcategory": "football",
+   "id": "spo-031",
+   "subcategory": "other",
    "difficulty": 4,
-   "question": "How many Ballon d'Or awards has Lionel Messi won as of 2025?",
+   "question": "What is the maximum break in snooker?",
    "choices": [
-    "9",
-    "8",
-    "7",
-    "6"
-   ],
-   "answer": 1,
-   "explanation": "Messi's eighth came in 2023."
-  },
-  {
-   "id": "spo-035",
-   "subcategory": "american-football",
-   "difficulty": 3,
-   "question": "Which sport features the 'Super Bowl'?",
-   "choices": [
-    "American football",
-    "Ice hockey",
-    "Baseball",
-    "Basketball"
+    "147",
+    "100",
+    "180",
+    "155"
    ],
    "answer": 0,
-   "explanation": "The NFL championship game."
-  },
-  {
-   "id": "spo-036",
-   "subcategory": "rugby",
-   "difficulty": 3,
-   "question": "How many points is a try worth in rugby union?",
-   "choices": [
-    "4",
-    "5",
-    "7",
-    "3"
-   ],
-   "answer": 1,
-   "explanation": "A conversion adds 2."
-  },
-  {
-   "id": "spo-037",
-   "subcategory": "rugby",
-   "difficulty": 2,
-   "question": "Which country is known for the 'Haka' before rugby matches?",
-   "choices": [
-    "Samoa",
-    "Tonga",
-    "New Zealand",
-    "Australia"
-   ],
-   "answer": 2,
-   "explanation": "The All Blacks perform the haka."
+   "explanation": "A maximum break is 15 reds with 15 blacks then all colours."
   }
  ]
 }

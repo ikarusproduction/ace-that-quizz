@@ -20,8 +20,8 @@ function answer(s, ctx, { right = true, stake = 1, elapsedMs = 3000 } = {}) {
 }
 const next = (s, ctx) => go(s, ctx, { type: 'NEXT' });
 
-test('the roster has ten bosses, each with a pattern, a specialty and a sprite name', () => {
-  assert.equal(BOSS_IDS.length, 10);
+test('the roster has eleven bosses, each with a pattern, a specialty and a sprite name', () => {
+  assert.equal(BOSS_IDS.length, 11);
   for (const b of Object.values(BOSS_ROSTER)) {
     assert.ok(b.hp >= 12 && b.name && b.sprite && b.color && b.cat);
     assert.ok(b.intents.length >= 3 && b.enraged.length >= 3);

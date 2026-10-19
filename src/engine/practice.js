@@ -5,7 +5,7 @@
 // What a run records for every answer (run.answers), which is what the spaced-repetition engine consumes:
 //   { id: conceptId, qid, correct, hints (0-2), confidence ('sure'|'maybe'|'guess'|null), level (1-3), wrongText }
 // Hints remove one wrong choice each (so "eliminated" answers are never confused with independent recall).
-// Time is never recorded: a slow answer is as good as a fast one.
+// Time never changes the schedule: a slow answer is as good as a fast one. `ms` (optional) is kept only for the Academy's speed statistics.
 import { Rng } from './rng.js';
 
 export const CONFIDENCE = ['sure', 'maybe', 'guess'];
@@ -78,7 +78,7 @@ export function useHint(run, ctx) {
 }
 
 /** Answer by displayed position. A position that a hint removed is ignored. */
-export function answerRun(run, display, ctx) {
+export function answerRun(run, display, ctx, { ms = null } = {}) {
   if (run.status !== 'play' || run.picked) return run;
   const item = run.queue[run.idx];
   const q = ctx.byId.get(item.qid);
@@ -86,7 +86,7 @@ export function answerRun(run, display, ctx) {
   if (chosen === undefined || item.elim.includes(chosen)) return run;
   const correct = chosen === q.answer;
   const outcome = {
-    id: item.family, qid: item.qid, correct, hints: item.hints, confidence: item.conf, level: item.level, stake: item.shift,
+    id: item.family, qid: item.qid, correct, hints: item.hints, confidence: item.conf, level: item.level, stake: item.shift, retry: Boolean(item.retry), ms: Number.isFinite(ms) ? Math.round(ms) : null,
     wrongText: correct ? null : String(q.choices[chosen] ?? '').slice(0, 60),
   };
   const next = {

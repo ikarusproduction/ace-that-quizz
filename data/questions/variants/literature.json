@@ -1,0 +1,483 @@
+{
+ "category": "literature",
+ "review": "unreviewed",
+ "note": "Difficulty ladders: unreviewed.",
+ "families": [
+  {
+   "id": "lit-001",
+   "ask": {
+    "1": "The author",
+    "2": "Fellow works",
+    "3": "Publication"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which author wrote both Notre-Dame de Paris and Les Misérables?",
+     "choices": [
+      "Stendhal",
+      "Honoré de Balzac",
+      "Guy de Maupassant",
+      "Victor Hugo"
+     ],
+     "answer": 3,
+     "explanation": "Hugo, the leading figure of French Romanticism, wrote both novels."
+    },
+    {
+     "level": 3,
+     "question": "In which year was Les Misérables first published?",
+     "choices": [
+      "1885",
+      "1832",
+      "1848",
+      "1862"
+     ],
+     "answer": 3,
+     "explanation": "The novel appeared in 1862, in the reign of Napoleon III while Hugo was in exile."
+    }
+   ]
+  },
+  {
+   "id": "lit-006",
+   "ask": {
+    "1": "The author",
+    "2": "The squire",
+    "3": "The giants"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which companion rides beside Don Quixote as his squire?",
+     "choices": [
+      "Dulcinea",
+      "Rocinante",
+      "Sancho Panza",
+      "Sanchez Pons"
+     ],
+     "answer": 2,
+     "explanation": "Rocinante is his horse and Dulcinea his imagined lady."
+    },
+    {
+     "level": 3,
+     "question": "In his most famous adventure, Don Quixote charges at what, believing them to be giants?",
+     "choices": [
+      "Windmills",
+      "Oak trees",
+      "Stone bridges",
+      "Watchtowers"
+     ],
+     "answer": 0,
+     "explanation": "The tilting at windmills gave English the expression for fighting imaginary enemies."
+    }
+   ]
+  },
+  {
+   "id": "lit-008",
+   "ask": {
+    "1": "The author",
+    "2": "The setting",
+    "3": "Another novel"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "War and Peace is set against which invasion of Russia?",
+     "choices": [
+      "The German invasion of 1941",
+      "The Mongol invasion of the 13th century",
+      "The Swedish invasion of 1709",
+      "Napoleon's invasion of 1812"
+     ],
+     "answer": 3,
+     "explanation": "The novel follows aristocratic families through the Napoleonic wars."
+    },
+    {
+     "level": 3,
+     "question": "Which Tolstoy novel of 1877 opens with the line about happy families all being alike?",
+     "choices": [
+      "The Death of Ivan Ilyich",
+      "Resurrection",
+      "The Kreutzer Sonata",
+      "Anna Karenina"
+     ],
+     "answer": 3,
+     "explanation": "Anna Karenina begins: Happy families are all alike; every unhappy family is unhappy in its own way."
+    }
+   ]
+  },
+  {
+   "id": "lit-002",
+   "ask": {
+    "1": "The play",
+    "2": "The setting",
+    "3": "The genre"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "In which Italian city is Romeo and Juliet set?",
+     "choices": [
+      "Verona",
+      "Florence",
+      "Venice",
+      "Rome"
+     ],
+     "answer": 0,
+     "explanation": "The feuding Montague and Capulet families live in Verona."
+    },
+    {
+     "level": 3,
+     "question": "Romeo and Juliet belongs to which of Shakespeare's genres?",
+     "choices": [
+      "Comedy",
+      "Pastoral idyll",
+      "Tragedy",
+      "History play"
+     ],
+     "answer": 2,
+     "explanation": "It ends with the deaths of the two lovers, which makes it a tragedy."
+    }
+   ]
+  },
+  {
+   "id": "lit-003",
+   "ask": {
+    "1": "The author",
+    "2": "Another work",
+    "3": "The narrator"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which of these novels was written by Albert Camus?",
+     "choices": [
+      "Nausea",
+      "Madame Bovary",
+      "The Stranger",
+      "Les Misérables"
+     ],
+     "answer": 2,
+     "explanation": "Nausea is by Sartre, Les Misérables by Hugo and Madame Bovary by Flaubert."
+    },
+    {
+     "level": 3,
+     "question": "Who is the narrator of Camus's The Stranger?",
+     "choices": [
+      "Roquentin",
+      "Julien Sorel",
+      "Rieux",
+      "Meursault"
+     ],
+     "answer": 3,
+     "explanation": "Rieux appears in The Plague, Roquentin in Nausea and Julien Sorel in The Red and the Black."
+    }
+   ]
+  },
+  {
+   "id": "lit-005",
+   "ask": {
+    "1": "Role",
+    "2": "Foundation",
+    "3": "Seats"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Académie française is responsible for what?",
+     "choices": [
+      "Running French libraries",
+      "Guarding the French language and its dictionary",
+      "Awarding the Goncourt Prize",
+      "Organising French elections"
+     ],
+     "answer": 1,
+     "explanation": "It publishes the official Dictionnaire de l'Académie française."
+    },
+    {
+     "level": 3,
+     "question": "How many seats (fauteuils) does the Académie française have?",
+     "choices": [
+      "60",
+      "40",
+      "100",
+      "12"
+     ],
+     "answer": 1,
+     "explanation": "Its members are known as the Immortals and occupy 40 numbered seats."
+    }
+   ]
+  },
+  {
+   "id": "lit-009",
+   "ask": {
+    "1": "The ancestor",
+    "2": "A member",
+    "3": "Which Latin"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which of these is a Romance language?",
+     "choices": [
+      "Polish",
+      "Portuguese",
+      "Dutch",
+      "German"
+     ],
+     "answer": 1,
+     "explanation": "Portuguese descends from Latin, whereas the other three are Germanic or Slavic."
+    },
+    {
+     "level": 3,
+     "question": "From which form of Latin do the Romance languages mainly descend?",
+     "choices": [
+      "Proto-Indo-European",
+      "Old Church Slavonic",
+      "Vulgar Latin, the spoken language",
+      "The Classical Latin of Cicero's writings"
+     ],
+     "answer": 2,
+     "explanation": "The Romance languages evolved from the everyday spoken Latin of ordinary people rather than the literary standard."
+    }
+   ]
+  },
+  {
+   "id": "lit-014",
+   "ask": {
+    "1": "The word",
+    "2": "Russian",
+    "3": "The origin"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which alphabet is used to write Russian?",
+     "choices": [
+      "Arabic",
+      "Cyrillic",
+      "Greek",
+      "Latin"
+     ],
+     "answer": 1,
+     "explanation": "Cyrillic is also used for Bulgarian, Serbian and Ukrainian."
+    },
+    {
+     "level": 3,
+     "question": "Which ancient people developed the early alphabet from which the Greek and Latin alphabets derive?",
+     "choices": [
+      "The Egyptians",
+      "The Sumerians",
+      "The Minoans",
+      "The Phoenicians"
+     ],
+     "answer": 3,
+     "explanation": "The Greeks adapted the Phoenician script and added vowels."
+    }
+   ]
+  },
+  {
+   "id": "lit-011",
+   "ask": {
+    "1": "Line count",
+    "2": "The form",
+    "3": "Petrarch"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "A sonnet is a type of what?",
+     "choices": [
+      "Poem",
+      "Play",
+      "Essay",
+      "Novel"
+     ],
+     "answer": 0,
+     "explanation": "It is a short fixed-form poem."
+    },
+    {
+     "level": 3,
+     "question": "Which Italian poet is famous for sonnets addressed to Laura and gave his name to the Italian sonnet?",
+     "choices": [
+      "Dante",
+      "Ariosto",
+      "Petrarch",
+      "Boccaccio"
+     ],
+     "answer": 2,
+     "explanation": "The Petrarchan sonnet takes its name from Francesco Petrarca."
+    }
+   ]
+  },
+  {
+   "id": "lit-007",
+   "ask": {
+    "1": "The journey",
+    "2": "The poet",
+    "3": "The war"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which ancient Greek poet is traditionally credited with the Iliad and the Odyssey?",
+     "choices": [
+      "Sophocles",
+      "Hesiod",
+      "Homer",
+      "Virgil"
+     ],
+     "answer": 2,
+     "explanation": "The two epics are traditionally attributed to Homer."
+    },
+    {
+     "level": 2,
+     "question": "The Iliad is set during the war against which city?",
+     "choices": [
+      "Sparta",
+      "Thebes",
+      "Athens",
+      "Troy"
+     ],
+     "answer": 3,
+     "explanation": "It tells of a few weeks in the tenth year of the siege of Troy."
+    }
+   ]
+  },
+  {
+   "id": "lit-013",
+   "ask": {
+    "1": "The poet",
+    "2": "The guide",
+    "3": "The realms"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Italian poet wrote the Divine Comedy?",
+     "choices": [
+      "Giovanni Boccaccio",
+      "Niccolò Machiavelli",
+      "Dante Alighieri",
+      "Petrarch"
+     ],
+     "answer": 2,
+     "explanation": "Dante wrote it in the early 14th century."
+    },
+    {
+     "level": 2,
+     "question": "Who guides Dante through Hell and Purgatory?",
+     "choices": [
+      "Ovid",
+      "Homer",
+      "Beatrice",
+      "Virgil"
+     ],
+     "answer": 3,
+     "explanation": "Virgil leads him through the first two realms, and Beatrice takes over in Paradise."
+    }
+   ]
+  },
+  {
+   "id": "lit-012",
+   "ask": {
+    "1": "The king",
+    "2": "The play",
+    "3": "The miser"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which French playwright wrote the comedy Tartuffe?",
+     "choices": [
+      "Molière",
+      "Victor Hugo",
+      "Voltaire",
+      "Jean Racine"
+     ],
+     "answer": 0,
+     "explanation": "Tartuffe was first performed in 1664 and was soon banned for a time."
+    },
+    {
+     "level": 2,
+     "question": "Which comedy by Molière centres on a miser called Harpagon?",
+     "choices": [
+      "Tartuffe",
+      "The Misanthrope",
+      "The Miser (L'Avare)",
+      "The Imaginary Invalid"
+     ],
+     "answer": 2,
+     "explanation": "L'Avare was first staged in 1668."
+    }
+   ]
+  },
+  {
+   "id": "lit-004",
+   "ask": {
+    "1": "The trial",
+    "2": "The collection",
+    "3": "The poet"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Les Fleurs du mal is a collection of what?",
+     "choices": [
+      "Short stories",
+      "Letters",
+      "Plays",
+      "Poems"
+     ],
+     "answer": 3,
+     "explanation": "It is Baudelaire's major volume of verse."
+    },
+    {
+     "level": 2,
+     "question": "Which poet wrote Les Fleurs du mal?",
+     "choices": [
+      "Charles Baudelaire",
+      "Alphonse de Lamartine",
+      "Jean Racine",
+      "Jacques Prévert"
+     ],
+     "answer": 0,
+     "explanation": "Baudelaire published it in 1857 and revised it in 1861."
+    }
+   ]
+  },
+  {
+   "id": "lit-010",
+   "ask": {
+    "1": "The madeleine",
+    "2": "The author",
+    "3": "The work"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which cake does the narrator dip in tea in Proust's famous scene?",
+     "choices": [
+      "A madeleine",
+      "A macaron",
+      "An éclair",
+      "A croissant"
+     ],
+     "answer": 0,
+     "explanation": "The taste triggers an involuntary memory that opens the novel's reminiscences."
+    },
+    {
+     "level": 2,
+     "question": "À la recherche du temps perdu is a novel by which French writer?",
+     "choices": [
+      "Guy de Maupassant",
+      "Émile Zola",
+      "Marcel Proust",
+      "Honoré de Balzac"
+     ],
+     "answer": 2,
+     "explanation": "It is Proust's great cycle of novels about memory and society."
+    }
+   ]
+  }
+ ]
+}

@@ -3,32 +3,18 @@
  "review": "unreviewed",
  "questions": [
   {
-   "id": "pop-001",
-   "subcategory": "tv",
+   "id": "pop-015",
+   "subcategory": "films",
    "difficulty": 1,
-   "question": "Which fantasy TV series features the Iron Throne?",
+   "question": "Which actor plays Tony Stark in the Marvel Cinematic Universe?",
    "choices": [
-    "Game of Thrones",
-    "Vikings",
-    "The Witcher",
-    "Merlin"
+    "Robert Downey Jr.",
+    "Chris Evans",
+    "Mark Ruffalo",
+    "Chris Hemsworth"
    ],
    "answer": 0,
-   "explanation": "The HBO series ran from 2011 to 2019."
-  },
-  {
-   "id": "pop-002",
-   "subcategory": "tv",
-   "difficulty": 1,
-   "question": "In 'Friends', what is the name of the coffee shop where the characters hang out?",
-   "choices": [
-    "Cheers",
-    "Central Perk",
-    "Monk's Cafe",
-    "Luke's Diner"
-   ],
-   "answer": 1,
-   "explanation": "Central Perk is the group's regular hangout in New York."
+   "explanation": "He first played Iron Man in 2008."
   },
   {
    "id": "pop-003",
@@ -43,48 +29,6 @@
    ],
    "answer": 0,
    "explanation": "Luigi first appeared in Mario Bros. in 1983."
-  },
-  {
-   "id": "pop-004",
-   "subcategory": "tv",
-   "difficulty": 1,
-   "question": "Which Netflix series from 2021 features a deadly series of children's games in South Korea?",
-   "choices": [
-    "Alice in Borderland",
-    "Squid Game",
-    "Money Heist",
-    "Kingdom"
-   ],
-   "answer": 1,
-   "explanation": "Squid Game became Netflix's most-watched series at launch."
-  },
-  {
-   "id": "pop-005",
-   "subcategory": "tv",
-   "difficulty": 1,
-   "question": "Which TV series features a chemistry teacher named Walter White?",
-   "choices": [
-    "Dexter",
-    "Ozark",
-    "Breaking Bad",
-    "Better Call Saul"
-   ],
-   "answer": 2,
-   "explanation": "Bryan Cranston plays Walter White in the AMC series."
-  },
-  {
-   "id": "pop-006",
-   "subcategory": "tv",
-   "difficulty": 1,
-   "question": "What is the name of SpongeBob's pet snail?",
-   "choices": [
-    "Patrick",
-    "Gary",
-    "Squidward",
-    "Larry"
-   ],
-   "answer": 1,
-   "explanation": "Gary meows like a cat."
   },
   {
    "id": "pop-007",
@@ -129,6 +73,20 @@
    "explanation": "Minecraft was created by Markus Persson and released in full in 2011."
   },
   {
+   "id": "pop-017",
+   "subcategory": "games",
+   "difficulty": 1,
+   "question": "Which blue hedgehog is a video game icon of Sega?",
+   "choices": [
+    "Crash",
+    "Sonic",
+    "Rayman",
+    "Knuckles"
+   ],
+   "answer": 1,
+   "explanation": "Sonic the Hedgehog debuted in 1991."
+  },
+  {
    "id": "pop-010",
    "subcategory": "internet",
    "difficulty": 1,
@@ -171,20 +129,6 @@
    "explanation": "Snapchat is known for disappearing photos and short videos."
   },
   {
-   "id": "pop-013",
-   "subcategory": "music",
-   "difficulty": 1,
-   "question": "Which K-pop group includes Jungkook, V and Jimin?",
-   "choices": [
-    "Blackpink",
-    "Stray Kids",
-    "BTS",
-    "EXO"
-   ],
-   "answer": 2,
-   "explanation": "BTS debuted in 2013 and became a global phenomenon."
-  },
-  {
    "id": "pop-014",
    "subcategory": "internet",
    "difficulty": 1,
@@ -199,18 +143,88 @@
    "explanation": "ChatGPT reached 100 million users within about two months."
   },
   {
-   "id": "pop-015",
-   "subcategory": "films",
+   "id": "pop-013",
+   "subcategory": "music",
    "difficulty": 1,
-   "question": "Which actor plays Tony Stark in the Marvel Cinematic Universe?",
+   "question": "Which K-pop group includes Jungkook, V and Jimin?",
    "choices": [
-    "Robert Downey Jr.",
-    "Chris Evans",
-    "Mark Ruffalo",
-    "Chris Hemsworth"
+    "Blackpink",
+    "Stray Kids",
+    "BTS",
+    "EXO"
+   ],
+   "answer": 2,
+   "explanation": "BTS debuted in 2013 and became a global phenomenon."
+  },
+  {
+   "id": "pop-001",
+   "subcategory": "tv",
+   "difficulty": 1,
+   "question": "Which fantasy TV series features the Iron Throne?",
+   "choices": [
+    "Game of Thrones",
+    "Vikings",
+    "The Witcher",
+    "Merlin"
    ],
    "answer": 0,
-   "explanation": "He first played Iron Man in 2008."
+   "explanation": "The HBO series ran from 2011 to 2019."
+  },
+  {
+   "id": "pop-002",
+   "subcategory": "tv",
+   "difficulty": 1,
+   "question": "In 'Friends', what is the name of the coffee shop where the characters hang out?",
+   "choices": [
+    "Cheers",
+    "Central Perk",
+    "Monk's Cafe",
+    "Luke's Diner"
+   ],
+   "answer": 1,
+   "explanation": "Central Perk is the group's regular hangout in New York."
+  },
+  {
+   "id": "pop-004",
+   "subcategory": "tv",
+   "difficulty": 1,
+   "question": "Which Netflix series from 2021 features a deadly series of children's games in South Korea?",
+   "choices": [
+    "Alice in Borderland",
+    "Squid Game",
+    "Money Heist",
+    "Kingdom"
+   ],
+   "answer": 1,
+   "explanation": "Squid Game became Netflix's most-watched series at launch."
+  },
+  {
+   "id": "pop-005",
+   "subcategory": "tv",
+   "difficulty": 1,
+   "question": "Which TV series features a chemistry teacher named Walter White?",
+   "choices": [
+    "Dexter",
+    "Ozark",
+    "Breaking Bad",
+    "Better Call Saul"
+   ],
+   "answer": 2,
+   "explanation": "Bryan Cranston plays Walter White in the AMC series."
+  },
+  {
+   "id": "pop-006",
+   "subcategory": "tv",
+   "difficulty": 1,
+   "question": "What is the name of SpongeBob's pet snail?",
+   "choices": [
+    "Patrick",
+    "Gary",
+    "Squidward",
+    "Larry"
+   ],
+   "answer": 1,
+   "explanation": "Gary meows like a cat."
   },
   {
    "id": "pop-016",
@@ -227,32 +241,60 @@
    "explanation": "Stranger Things premiered in 2016."
   },
   {
-   "id": "pop-017",
-   "subcategory": "games",
-   "difficulty": 1,
-   "question": "Which blue hedgehog is a video game icon of Sega?",
+   "id": "pop-027",
+   "subcategory": "fashion",
+   "difficulty": 2,
+   "question": "Which luxury fashion house uses a logo of two interlocking Cs?",
    "choices": [
-    "Crash",
-    "Sonic",
-    "Rayman",
-    "Knuckles"
+    "Gucci",
+    "Cavalli",
+    "Chanel",
+    "Cartier"
    ],
-   "answer": 1,
-   "explanation": "Sonic the Hedgehog debuted in 1991."
+   "answer": 2,
+   "explanation": "Coco Chanel founded the house in the early 20th century."
   },
   {
-   "id": "pop-018",
-   "subcategory": "music",
+   "id": "pop-021",
+   "subcategory": "films",
    "difficulty": 2,
-   "question": "Which 2012 song by Psy made a horse-riding dance go viral?",
+   "question": "Which two films opened on the same day in July 2023, creating the 'Barbenheimer' phenomenon?",
    "choices": [
-    "Despacito",
-    "Gangnam Style",
-    "Call Me Maybe",
-    "Harlem Shake"
+    "Oppenheimer and Dune",
+    "Barbie and Mission: Impossible",
+    "Barbie and Oppenheimer",
+    "Barbie and Wonka"
    ],
-   "answer": 1,
-   "explanation": "It was the first YouTube video to reach one billion views."
+   "answer": 2,
+   "explanation": "Both opened on 21 July 2023."
+  },
+  {
+   "id": "pop-024",
+   "subcategory": "games",
+   "difficulty": 2,
+   "question": "Which Nintendo item in Mario Kart targets the player in first place?",
+   "choices": [
+    "Blue shell",
+    "Lightning",
+    "Banana",
+    "Red shell"
+   ],
+   "answer": 0,
+   "explanation": "The spiny blue shell flies over the track to hit the leader."
+  },
+  {
+   "id": "pop-026",
+   "subcategory": "games",
+   "difficulty": 2,
+   "question": "Which digital store by Valve is the largest PC game marketplace?",
+   "choices": [
+    "Steam",
+    "GOG",
+    "Origin",
+    "Epic Games Store"
+   ],
+   "answer": 0,
+   "explanation": "Steam launched in 2003."
   },
   {
    "id": "pop-019",
@@ -283,18 +325,46 @@
    "explanation": "The prank uses Rick Astley's 1987 hit."
   },
   {
-   "id": "pop-021",
-   "subcategory": "films",
+   "id": "pop-018",
+   "subcategory": "music",
    "difficulty": 2,
-   "question": "Which two films opened on the same day in July 2023, creating the 'Barbenheimer' phenomenon?",
+   "question": "Which 2012 song by Psy made a horse-riding dance go viral?",
    "choices": [
-    "Oppenheimer and Dune",
-    "Barbie and Mission: Impossible",
-    "Barbie and Oppenheimer",
-    "Barbie and Wonka"
+    "Despacito",
+    "Gangnam Style",
+    "Call Me Maybe",
+    "Harlem Shake"
+   ],
+   "answer": 1,
+   "explanation": "It was the first YouTube video to reach one billion views."
+  },
+  {
+   "id": "pop-038",
+   "subcategory": "music",
+   "difficulty": 2,
+   "question": "Which singer's tour is known as 'The Eras Tour'?",
+   "choices": [
+    "Adele",
+    "Dua Lipa",
+    "Taylor Swift",
+    "Beyoncé"
    ],
    "answer": 2,
-   "explanation": "Both opened on 21 July 2023."
+   "explanation": "The Eras Tour ran from 2023 to 2024."
+  },
+  {
+   "id": "pop-025",
+   "subcategory": "tech",
+   "difficulty": 2,
+   "question": "What year did the first iPhone launch?",
+   "choices": [
+    "2009",
+    "2007",
+    "2005",
+    "2010"
+   ],
+   "answer": 1,
+   "explanation": "Steve Jobs introduced it in January 2007."
   },
   {
    "id": "pop-022",
@@ -325,74 +395,32 @@
    "explanation": "Grogu appears in The Mandalorian."
   },
   {
-   "id": "pop-024",
-   "subcategory": "games",
-   "difficulty": 2,
-   "question": "Which Nintendo item in Mario Kart targets the player in first place?",
-   "choices": [
-    "Blue shell",
-    "Lightning",
-    "Banana",
-    "Red shell"
-   ],
-   "answer": 0,
-   "explanation": "The spiny blue shell flies over the track to hit the leader."
-  },
-  {
-   "id": "pop-025",
-   "subcategory": "tech",
-   "difficulty": 2,
-   "question": "What year did the first iPhone launch?",
-   "choices": [
-    "2009",
-    "2007",
-    "2005",
-    "2010"
-   ],
-   "answer": 1,
-   "explanation": "Steve Jobs introduced it in January 2007."
-  },
-  {
-   "id": "pop-026",
-   "subcategory": "games",
-   "difficulty": 2,
-   "question": "Which digital store by Valve is the largest PC game marketplace?",
-   "choices": [
-    "Steam",
-    "GOG",
-    "Origin",
-    "Epic Games Store"
-   ],
-   "answer": 0,
-   "explanation": "Steam launched in 2003."
-  },
-  {
-   "id": "pop-027",
+   "id": "pop-037",
    "subcategory": "fashion",
-   "difficulty": 2,
-   "question": "Which luxury fashion house uses a logo of two interlocking Cs?",
+   "difficulty": 3,
+   "question": "Which rapper-producer founded the brand Yeezy?",
    "choices": [
-    "Gucci",
-    "Cavalli",
-    "Chanel",
-    "Cartier"
+    "Pharrell Williams",
+    "Travis Scott",
+    "Jay-Z",
+    "Kanye West"
    ],
-   "answer": 2,
-   "explanation": "Coco Chanel founded the house in the early 20th century."
+   "answer": 3,
+   "explanation": "Yeezy sneakers began with Nike and then Adidas."
   },
   {
-   "id": "pop-028",
-   "subcategory": "internet",
+   "id": "pop-033",
+   "subcategory": "films",
    "difficulty": 3,
-   "question": "What was the title of the first video uploaded to YouTube?",
+   "question": "Which actress starred as Barbie in the 2023 film directed by Greta Gerwig?",
    "choices": [
-    "First Video",
-    "Me at the zoo",
-    "Elephant Dream",
-    "Hello World"
+    "Anne Hathaway",
+    "Margot Robbie",
+    "Florence Pugh",
+    "Emma Stone"
    ],
    "answer": 1,
-   "explanation": "It was uploaded on 23 April 2005 by co-founder Jawed Karim."
+   "explanation": "The film grossed over a billion dollars."
   },
   {
    "id": "pop-029",
@@ -407,6 +435,48 @@
    ],
    "answer": 2,
    "explanation": "Minecraft has sold over 300 million copies."
+  },
+  {
+   "id": "pop-032",
+   "subcategory": "games",
+   "difficulty": 3,
+   "question": "In what year did Fortnite first release in early access?",
+   "choices": [
+    "2017",
+    "2015",
+    "2019",
+    "2020"
+   ],
+   "answer": 0,
+   "explanation": "Epic Games released Fortnite's Save the World mode in July 2017."
+  },
+  {
+   "id": "pop-036",
+   "subcategory": "games",
+   "difficulty": 3,
+   "question": "Which game features crewmates and impostors on a spaceship?",
+   "choices": [
+    "Overcooked",
+    "Fall Guys",
+    "Among Us",
+    "Phasmophobia"
+   ],
+   "answer": 2,
+   "explanation": "Among Us was released in 2018 and went viral in 2020."
+  },
+  {
+   "id": "pop-028",
+   "subcategory": "internet",
+   "difficulty": 3,
+   "question": "What was the title of the first video uploaded to YouTube?",
+   "choices": [
+    "First Video",
+    "Me at the zoo",
+    "Elephant Dream",
+    "Hello World"
+   ],
+   "answer": 1,
+   "explanation": "It was uploaded on 23 April 2005 by co-founder Jawed Karim."
   },
   {
    "id": "pop-030",
@@ -437,34 +507,6 @@
    "explanation": "A Golden Buzzer sends an act straight to the live shows."
   },
   {
-   "id": "pop-032",
-   "subcategory": "games",
-   "difficulty": 3,
-   "question": "In what year did Fortnite first release in early access?",
-   "choices": [
-    "2017",
-    "2015",
-    "2019",
-    "2020"
-   ],
-   "answer": 0,
-   "explanation": "Epic Games released Fortnite's Save the World mode in July 2017."
-  },
-  {
-   "id": "pop-033",
-   "subcategory": "films",
-   "difficulty": 3,
-   "question": "Which actress starred as Barbie in the 2023 film directed by Greta Gerwig?",
-   "choices": [
-    "Anne Hathaway",
-    "Margot Robbie",
-    "Florence Pugh",
-    "Emma Stone"
-   ],
-   "answer": 1,
-   "explanation": "The film grossed over a billion dollars."
-  },
-  {
    "id": "pop-034",
    "subcategory": "music",
    "difficulty": 4,
@@ -491,48 +533,6 @@
    ],
    "answer": 1,
    "explanation": "Black Mirror premiered on Channel 4 in 2011 before moving to Netflix."
-  },
-  {
-   "id": "pop-036",
-   "subcategory": "games",
-   "difficulty": 3,
-   "question": "Which game features crewmates and impostors on a spaceship?",
-   "choices": [
-    "Overcooked",
-    "Fall Guys",
-    "Among Us",
-    "Phasmophobia"
-   ],
-   "answer": 2,
-   "explanation": "Among Us was released in 2018 and went viral in 2020."
-  },
-  {
-   "id": "pop-037",
-   "subcategory": "fashion",
-   "difficulty": 3,
-   "question": "Which rapper-producer founded the brand Yeezy?",
-   "choices": [
-    "Pharrell Williams",
-    "Travis Scott",
-    "Jay-Z",
-    "Kanye West"
-   ],
-   "answer": 3,
-   "explanation": "Yeezy sneakers began with Nike and then Adidas."
-  },
-  {
-   "id": "pop-038",
-   "subcategory": "music",
-   "difficulty": 2,
-   "question": "Which singer's tour is known as 'The Eras Tour'?",
-   "choices": [
-    "Adele",
-    "Dua Lipa",
-    "Taylor Swift",
-    "Beyoncé"
-   ],
-   "answer": 2,
-   "explanation": "The Eras Tour ran from 2023 to 2024."
   }
  ]
 }

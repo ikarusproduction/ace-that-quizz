@@ -1,0 +1,2473 @@
+{
+ "note": "Unreviewed drafts. source/verified stay null until a human checks.",
+ "types": {
+  "author-work": {
+   "category": "literature",
+   "subcategory": "authors",
+   "fwd": {
+    "en": "Which work was written by {a}?",
+    "fr": "Quelle œuvre a été écrite par {a} ?"
+   },
+   "rev": {
+    "en": "Who wrote {b}?",
+    "fr": "Qui a écrit {b} ?"
+   }
+  },
+  "scientist-discovery": {
+   "category": "science",
+   "subcategory": "discoveries",
+   "fwd": {
+    "en": "Which discovery or theory is credited to {a}?",
+    "fr": "Quelle découverte ou théorie est attribuée à {a} ?"
+   },
+   "rev": {
+    "en": "Who is credited with {b}?",
+    "fr": "Qui est crédité de la découverte suivante : {b} ?"
+   }
+  },
+  "composer-work": {
+   "category": "music",
+   "subcategory": "classical",
+   "fwd": {
+    "en": "Which work did {a} compose?",
+    "fr": "Quelle œuvre {a} a-t-il composée ?"
+   },
+   "rev": {
+    "en": "Who composed {b}?",
+    "fr": "Qui a composé {b} ?"
+   }
+  },
+  "artist-work": {
+   "category": "arts",
+   "subcategory": "painting",
+   "fwd": {
+    "en": "Which work was painted by {a}?",
+    "fr": "Quelle œuvre a été peinte par {a} ?"
+   },
+   "rev": {
+    "en": "Who painted {b}?",
+    "fr": "Qui a peint {b} ?"
+   }
+  },
+  "invention-inventor": {
+   "category": "science",
+   "subcategory": "inventions",
+   "fwd": {
+    "en": "Who is credited with inventing or developing {a}?",
+    "fr": "À qui attribue-t-on cette invention : {a} ?"
+   },
+   "rev": {
+    "en": "Which invention is {b} credited with?",
+    "fr": "Laquelle de ces inventions est attribuée à : {b} ?"
+   }
+  },
+  "figure-period": {
+   "category": "history",
+   "subcategory": "figures",
+   "fwd": {
+    "en": "Which event or period is {a} most closely associated with?",
+    "fr": "Quel événement ou quelle période est le plus étroitement associé à {a} ?"
+   },
+   "rev": {
+    "en": "Which figure is most closely associated with {b}?",
+    "fr": "Quelle figure est la plus étroitement associée à ceci : {b} ?"
+   }
+  },
+  "landmark-country": {
+   "category": "geography",
+   "subcategory": "landmarks",
+   "fwd": {
+    "en": "In which country is {a} located?",
+    "fr": "Dans quel pays se trouve {a} ?"
+   },
+   "rev": {
+    "en": "Which of these landmarks is located in {b}?",
+    "fr": "Lequel de ces monuments se trouve dans ce pays : {b} ?"
+   }
+  },
+  "concept-discipline": {
+   "category": "science",
+   "subcategory": "disciplines",
+   "fwd": {
+    "en": "Which discipline most directly studies {a}?",
+    "fr": "Quelle discipline étudie le plus directement {a} ?"
+   },
+   "rev": {
+    "en": "Which of these is a core subject of {b}?",
+    "fr": "Lequel de ces sujets est un thème central de la discipline suivante : {b} ?"
+   }
+  }
+ },
+ "facts": [
+  {
+   "id": "aw-001",
+   "type": "author-work",
+   "a": "Victor Hugo",
+   "b": "Les Misérables",
+   "a_fr": null,
+   "b_fr": null,
+   "grp": "fr-lit",
+   "d": 1,
+   "expl": {
+    "en": "Hugo's 1862 novel follows Jean Valjean in post-revolutionary France.",
+    "fr": "Le roman de Hugo (1862) suit Jean Valjean dans la France postrévolutionnaire."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-002",
+   "type": "author-work",
+   "a": "Alexandre Dumas",
+   "b": "The Count of Monte Cristo",
+   "a_fr": null,
+   "b_fr": "Le Comte de Monte-Cristo",
+   "grp": "fr-lit",
+   "d": 1,
+   "expl": {
+    "en": "Dumas published this tale of betrayal and revenge in 1844 to 1846.",
+    "fr": "Dumas a publié ce récit de trahison et de vengeance en 1844-1846."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-003",
+   "type": "author-work",
+   "a": "Molière",
+   "b": "Tartuffe",
+   "a_fr": null,
+   "b_fr": null,
+   "grp": "fr-lit",
+   "d": 2,
+   "expl": {
+    "en": "This 1664 comedy mocks religious hypocrisy.",
+    "fr": "Cette comédie de 1664 se moque de l'hypocrisie religieuse."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-004",
+   "type": "author-work",
+   "a": "Voltaire",
+   "b": "Candide",
+   "a_fr": null,
+   "b_fr": null,
+   "grp": "fr-lit",
+   "d": 1,
+   "expl": {
+    "en": "Voltaire's 1759 satire attacks naive optimism.",
+    "fr": "La satire de Voltaire (1759) s'en prend à l'optimisme naïf."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-005",
+   "type": "author-work",
+   "a": "Marcel Proust",
+   "b": "In Search of Lost Time",
+   "a_fr": null,
+   "b_fr": "À la recherche du temps perdu",
+   "grp": "fr-lit",
+   "d": 2,
+   "expl": {
+    "en": "Proust's long novel cycle begins with the famous madeleine scene.",
+    "fr": "Le long cycle romanesque de Proust s'ouvre sur la célèbre scène de la madeleine."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-006",
+   "type": "author-work",
+   "a": "Albert Camus",
+   "b": "The Stranger",
+   "a_fr": null,
+   "b_fr": "L'Étranger",
+   "grp": "fr-lit",
+   "d": 1,
+   "expl": {
+    "en": "Camus's 1942 novel is a classic of absurdist fiction.",
+    "fr": "Le roman de Camus (1942) est un classique de la littérature de l'absurde."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-007",
+   "type": "author-work",
+   "a": "Antoine de Saint-Exupéry",
+   "b": "The Little Prince",
+   "a_fr": null,
+   "b_fr": "Le Petit Prince",
+   "grp": "fr-lit",
+   "d": 1,
+   "expl": {
+    "en": "The 1943 tale is among the most translated books in the world.",
+    "fr": "Ce conte de 1943 est l'un des livres les plus traduits au monde."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-008",
+   "type": "author-work",
+   "a": "Gustave Flaubert",
+   "b": "Madame Bovary",
+   "a_fr": null,
+   "b_fr": null,
+   "grp": "fr-lit",
+   "d": 2,
+   "expl": {
+    "en": "Flaubert's 1857 novel is a landmark of literary realism.",
+    "fr": "Le roman de Flaubert (1857) est un jalon du réalisme littéraire."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-009",
+   "type": "author-work",
+   "a": "Jules Verne",
+   "b": "Twenty Thousand Leagues Under the Seas",
+   "a_fr": null,
+   "b_fr": "Vingt mille lieues sous les mers",
+   "grp": "fr-lit",
+   "d": 1,
+   "expl": {
+    "en": "Verne's 1870 novel features Captain Nemo and the Nautilus.",
+    "fr": "Le roman de Verne (1870) met en scène le capitaine Nemo et le Nautilus."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-010",
+   "type": "author-work",
+   "a": "William Shakespeare",
+   "b": "Hamlet",
+   "a_fr": null,
+   "b_fr": null,
+   "grp": "en-lit",
+   "d": 1,
+   "expl": {
+    "en": "Hamlet is one of Shakespeare's best-known tragedies, written around 1600.",
+    "fr": "Hamlet est l'une des tragédies les plus connues de Shakespeare, écrite vers 1600."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-011",
+   "type": "author-work",
+   "a": "Jane Austen",
+   "b": "Pride and Prejudice",
+   "a_fr": null,
+   "b_fr": "Orgueil et Préjugés",
+   "grp": "en-lit",
+   "d": 1,
+   "expl": {
+    "en": "Austen published it in 1813.",
+    "fr": "Austen l'a publié en 1813."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-012",
+   "type": "author-work",
+   "a": "Charles Dickens",
+   "b": "Oliver Twist",
+   "a_fr": null,
+   "b_fr": null,
+   "grp": "en-lit",
+   "d": 1,
+   "expl": {
+    "en": "Dickens's 1838 novel depicts the poverty of Victorian London.",
+    "fr": "Le roman de Dickens (1838) dépeint la misère du Londres victorien."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-013",
+   "type": "author-work",
+   "a": "George Orwell",
+   "b": "Nineteen Eighty-Four",
+   "a_fr": null,
+   "b_fr": "1984",
+   "grp": "en-lit",
+   "d": 1,
+   "expl": {
+    "en": "Orwell's 1949 dystopia gave us the phrase 'Big Brother'.",
+    "fr": "La dystopie d'Orwell (1949) a popularisé l'expression « Big Brother »."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-014",
+   "type": "author-work",
+   "a": "Mary Shelley",
+   "b": "Frankenstein",
+   "a_fr": null,
+   "b_fr": null,
+   "grp": "en-lit",
+   "d": 1,
+   "expl": {
+    "en": "Shelley wrote it as a teenager and published it in 1818.",
+    "fr": "Mary Shelley l'a écrit très jeune et publié en 1818."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-015",
+   "type": "author-work",
+   "a": "Herman Melville",
+   "b": "Moby-Dick",
+   "a_fr": null,
+   "b_fr": null,
+   "grp": "en-lit",
+   "d": 1,
+   "expl": {
+    "en": "The 1851 novel follows Captain Ahab's hunt for a white whale.",
+    "fr": "Le roman de 1851 suit la chasse du capitaine Achab à une baleine blanche."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-016",
+   "type": "author-work",
+   "a": "Mark Twain",
+   "b": "The Adventures of Huckleberry Finn",
+   "a_fr": null,
+   "b_fr": "Les Aventures de Huckleberry Finn",
+   "grp": "en-lit",
+   "d": 2,
+   "expl": {
+    "en": "Twain published it in 1884 to 1885.",
+    "fr": "Twain l'a publié en 1884-1885."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-017",
+   "type": "author-work",
+   "a": "J. R. R. Tolkien",
+   "b": "The Lord of the Rings",
+   "a_fr": null,
+   "b_fr": "Le Seigneur des anneaux",
+   "grp": "en-lit",
+   "d": 1,
+   "expl": {
+    "en": "The trilogy appeared in 1954 and 1955.",
+    "fr": "La trilogie est parue en 1954 et 1955."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-018",
+   "type": "author-work",
+   "a": "F. Scott Fitzgerald",
+   "b": "The Great Gatsby",
+   "a_fr": null,
+   "b_fr": "Gatsby le Magnifique",
+   "grp": "en-lit",
+   "d": 1,
+   "expl": {
+    "en": "The 1925 novel captures the Jazz Age.",
+    "fr": "Le roman de 1925 saisit l'âge du jazz."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-019",
+   "type": "author-work",
+   "a": "Leo Tolstoy",
+   "b": "War and Peace",
+   "a_fr": null,
+   "b_fr": "Guerre et Paix",
+   "grp": "world-lit",
+   "d": 1,
+   "expl": {
+    "en": "Tolstoy's epic of the Napoleonic era was published in 1869.",
+    "fr": "L'épopée de Tolstoï sur l'ère napoléonienne a été publiée en 1869."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-020",
+   "type": "author-work",
+   "a": "Fyodor Dostoevsky",
+   "b": "Crime and Punishment",
+   "a_fr": null,
+   "b_fr": "Crime et Châtiment",
+   "grp": "world-lit",
+   "d": 1,
+   "expl": {
+    "en": "Published in 1866, it follows the student Raskolnikov.",
+    "fr": "Publié en 1866, il suit l'étudiant Raskolnikov."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-021",
+   "type": "author-work",
+   "a": "Miguel de Cervantes",
+   "b": "Don Quixote",
+   "a_fr": null,
+   "b_fr": "Don Quichotte",
+   "grp": "world-lit",
+   "d": 1,
+   "expl": {
+    "en": "The two parts appeared in 1605 and 1615.",
+    "fr": "Les deux parties sont parues en 1605 et 1615."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-022",
+   "type": "author-work",
+   "a": "Dante Alighieri",
+   "b": "The Divine Comedy",
+   "a_fr": null,
+   "b_fr": "La Divine Comédie",
+   "grp": "world-lit",
+   "d": 1,
+   "expl": {
+    "en": "Dante completed it around 1320; it includes Inferno, Purgatorio and Paradiso.",
+    "fr": "Dante l'a achevée vers 1320 ; elle comprend l'Enfer, le Purgatoire et le Paradis."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-023",
+   "type": "author-work",
+   "a": "Homer",
+   "b": "The Odyssey",
+   "a_fr": null,
+   "b_fr": "L'Odyssée",
+   "grp": "world-lit",
+   "d": 1,
+   "expl": {
+    "en": "The epic of Odysseus's journey home is traditionally attributed to Homer.",
+    "fr": "L'épopée du retour d'Ulysse est traditionnellement attribuée à Homère."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-024",
+   "type": "author-work",
+   "a": "Franz Kafka",
+   "b": "The Metamorphosis",
+   "a_fr": null,
+   "b_fr": "La Métamorphose",
+   "grp": "world-lit",
+   "d": 2,
+   "expl": {
+    "en": "Kafka's 1915 novella begins with a man waking up as an insect.",
+    "fr": "La nouvelle de Kafka (1915) commence par un homme qui se réveille transformé en insecte."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-025",
+   "type": "author-work",
+   "a": "Gabriel García Márquez",
+   "b": "One Hundred Years of Solitude",
+   "a_fr": null,
+   "b_fr": "Cent ans de solitude",
+   "grp": "world-lit",
+   "d": 2,
+   "expl": {
+    "en": "The 1967 novel is a key work of magical realism.",
+    "fr": "Le roman de 1967 est une œuvre clé du réalisme magique."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "aw-026",
+   "type": "author-work",
+   "a": "Johann Wolfgang von Goethe",
+   "b": "Faust",
+   "a_fr": null,
+   "b_fr": null,
+   "grp": "world-lit",
+   "d": 2,
+   "expl": {
+    "en": "Goethe worked on this drama for most of his life; part one appeared in 1808.",
+    "fr": "Goethe a travaillé à ce drame presque toute sa vie ; la première partie date de 1808."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-001",
+   "type": "scientist-discovery",
+   "a": "Isaac Newton",
+   "b": "the law of universal gravitation",
+   "a_fr": null,
+   "b_fr": "la loi de la gravitation universelle",
+   "grp": "physics",
+   "d": 1,
+   "expl": {
+    "en": "Newton set it out in the Principia (1687).",
+    "fr": "Newton l'a exposée dans les Principia (1687)."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-002",
+   "type": "scientist-discovery",
+   "a": "Albert Einstein",
+   "b": "the theory of relativity",
+   "a_fr": null,
+   "b_fr": "la théorie de la relativité",
+   "grp": "physics",
+   "d": 1,
+   "expl": {
+    "en": "Special relativity dates from 1905, general relativity from 1915.",
+    "fr": "La relativité restreinte date de 1905, la relativité générale de 1915."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-003",
+   "type": "scientist-discovery",
+   "a": "Galileo Galilei",
+   "b": "the four largest moons of Jupiter",
+   "a_fr": null,
+   "b_fr": "les quatre plus grandes lunes de Jupiter",
+   "grp": "physics",
+   "d": 2,
+   "expl": {
+    "en": "He saw them through his telescope in 1610.",
+    "fr": "Il les a observées avec sa lunette en 1610."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-004",
+   "type": "scientist-discovery",
+   "a": "Johannes Kepler",
+   "b": "the laws of planetary motion",
+   "a_fr": null,
+   "b_fr": "les lois du mouvement des planètes",
+   "grp": "physics",
+   "d": 2,
+   "expl": {
+    "en": "Kepler showed that planets move in ellipses.",
+    "fr": "Kepler a montré que les planètes décrivent des ellipses."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-005",
+   "type": "scientist-discovery",
+   "a": "Michael Faraday",
+   "b": "electromagnetic induction",
+   "a_fr": null,
+   "b_fr": "l'induction électromagnétique",
+   "grp": "physics",
+   "d": 2,
+   "expl": {
+    "en": "Faraday showed in 1831 that a changing magnetic field produces a current.",
+    "fr": "Faraday a montré en 1831 qu'un champ magnétique variable produit un courant."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-006",
+   "type": "scientist-discovery",
+   "a": "Marie Curie",
+   "b": "the elements polonium and radium",
+   "a_fr": null,
+   "b_fr": "les éléments polonium et radium",
+   "grp": "physics",
+   "d": 1,
+   "expl": {
+    "en": "Marie and Pierre Curie announced them in 1898.",
+    "fr": "Marie et Pierre Curie les ont annoncés en 1898."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-007",
+   "type": "scientist-discovery",
+   "a": "Wilhelm Röntgen",
+   "b": "X-rays",
+   "a_fr": null,
+   "b_fr": "les rayons X",
+   "grp": "physics",
+   "d": 2,
+   "expl": {
+    "en": "He discovered them in 1895 and won the first Nobel Prize in Physics.",
+    "fr": "Il les a découverts en 1895 et a reçu le premier prix Nobel de physique."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-008",
+   "type": "scientist-discovery",
+   "a": "Edwin Hubble",
+   "b": "the expansion of the universe",
+   "a_fr": null,
+   "b_fr": "l'expansion de l'Univers",
+   "grp": "physics",
+   "d": 2,
+   "expl": {
+    "en": "His 1929 observations showed distant galaxies receding.",
+    "fr": "Ses observations de 1929 ont montré que les galaxies lointaines s'éloignent."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-009",
+   "type": "scientist-discovery",
+   "a": "Max Planck",
+   "b": "the quantum of energy (Planck's constant)",
+   "a_fr": null,
+   "b_fr": "le quantum d'énergie (constante de Planck)",
+   "grp": "physics",
+   "d": 3,
+   "expl": {
+    "en": "Planck introduced it in 1900, founding quantum theory.",
+    "fr": "Planck l'a introduit en 1900, fondant la théorie quantique."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-010",
+   "type": "scientist-discovery",
+   "a": "Charles Darwin",
+   "b": "evolution by natural selection",
+   "a_fr": null,
+   "b_fr": "l'évolution par sélection naturelle",
+   "grp": "life",
+   "d": 1,
+   "expl": {
+    "en": "Darwin published On the Origin of Species in 1859.",
+    "fr": "Darwin a publié L'Origine des espèces en 1859."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-011",
+   "type": "scientist-discovery",
+   "a": "Gregor Mendel",
+   "b": "the basic laws of heredity",
+   "a_fr": null,
+   "b_fr": "les lois fondamentales de l'hérédité",
+   "grp": "life",
+   "d": 1,
+   "expl": {
+    "en": "He bred pea plants in the 1850s and 1860s.",
+    "fr": "Il a croisé des pois dans les années 1850 et 1860."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-012",
+   "type": "scientist-discovery",
+   "a": "Louis Pasteur",
+   "b": "pasteurization",
+   "a_fr": null,
+   "b_fr": "la pasteurisation",
+   "grp": "life",
+   "d": 1,
+   "expl": {
+    "en": "Pasteur showed that gentle heat kills spoilage microbes.",
+    "fr": "Pasteur a montré qu'une chaleur douce tue les microbes responsables de l'altération."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-013",
+   "type": "scientist-discovery",
+   "a": "Alexander Fleming",
+   "b": "penicillin",
+   "a_fr": null,
+   "b_fr": "la pénicilline",
+   "grp": "life",
+   "d": 1,
+   "expl": {
+    "en": "He noticed its antibacterial effect in 1928.",
+    "fr": "Il a remarqué son effet antibactérien en 1928."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-014",
+   "type": "scientist-discovery",
+   "a": "Robert Hooke",
+   "b": "the cell (naming it)",
+   "a_fr": null,
+   "b_fr": "la cellule (qu'il a nommée)",
+   "grp": "life",
+   "d": 3,
+   "expl": {
+    "en": "He used the word 'cell' in Micrographia (1665) after looking at cork.",
+    "fr": "Il a employé le mot « cellule » dans Micrographia (1665) en observant du liège."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-015",
+   "type": "scientist-discovery",
+   "a": "Alfred Wegener",
+   "b": "continental drift",
+   "a_fr": null,
+   "b_fr": "la dérive des continents",
+   "grp": "life",
+   "d": 2,
+   "expl": {
+    "en": "He proposed it in 1912; plate tectonics later vindicated the idea.",
+    "fr": "Il l'a proposée en 1912 ; la tectonique des plaques lui a donné raison."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-016",
+   "type": "scientist-discovery",
+   "a": "Carl Linnaeus",
+   "b": "binomial nomenclature",
+   "a_fr": null,
+   "b_fr": "la nomenclature binominale",
+   "grp": "life",
+   "d": 3,
+   "expl": {
+    "en": "His two-part Latin names for species are still the standard.",
+    "fr": "Ses noms latins en deux parties pour les espèces restent la norme."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-017",
+   "type": "scientist-discovery",
+   "a": "Watson and Crick",
+   "b": "the double-helix structure of DNA",
+   "a_fr": "Watson et Crick",
+   "b_fr": "la structure en double hélice de l'ADN",
+   "grp": "life",
+   "d": 1,
+   "expl": {
+    "en": "They published their model in 1953, using Rosalind Franklin's X-ray data.",
+    "fr": "Ils ont publié leur modèle en 1953, avec les données aux rayons X de Rosalind Franklin."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-018",
+   "type": "scientist-discovery",
+   "a": "Antonie van Leeuwenhoek",
+   "b": "microorganisms seen through a microscope",
+   "a_fr": null,
+   "b_fr": "les micro-organismes observés au microscope",
+   "grp": "life",
+   "d": 3,
+   "expl": {
+    "en": "He described 'animalcules' in the 1670s.",
+    "fr": "Il a décrit des « animalcules » dans les années 1670."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-019",
+   "type": "scientist-discovery",
+   "a": "Dmitri Mendeleev",
+   "b": "the periodic table",
+   "a_fr": null,
+   "b_fr": "le tableau périodique",
+   "grp": "chem-atom",
+   "d": 1,
+   "expl": {
+    "en": "He published his table in 1869 and predicted undiscovered elements.",
+    "fr": "Il a publié son tableau en 1869 et prédit des éléments encore inconnus."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-020",
+   "type": "scientist-discovery",
+   "a": "Antoine Lavoisier",
+   "b": "the role of oxygen in combustion",
+   "a_fr": null,
+   "b_fr": "le rôle de l'oxygène dans la combustion",
+   "grp": "chem-atom",
+   "d": 2,
+   "expl": {
+    "en": "He also stated the conservation of mass in chemical reactions.",
+    "fr": "Il a aussi énoncé la conservation de la masse dans les réactions chimiques."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-021",
+   "type": "scientist-discovery",
+   "a": "John Dalton",
+   "b": "modern atomic theory",
+   "a_fr": null,
+   "b_fr": "la théorie atomique moderne",
+   "grp": "chem-atom",
+   "d": 2,
+   "expl": {
+    "en": "Dalton proposed in the early 1800s that each element has its own atoms.",
+    "fr": "Dalton a proposé au début des années 1800 que chaque élément a ses propres atomes."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-022",
+   "type": "scientist-discovery",
+   "a": "Archimedes",
+   "b": "the principle of buoyancy",
+   "a_fr": null,
+   "b_fr": "le principe de la poussée (flottabilité)",
+   "grp": "chem-atom",
+   "d": 1,
+   "expl": {
+    "en": "A body in a fluid is pushed up by a force equal to the fluid it displaces.",
+    "fr": "Un corps plongé dans un fluide subit une poussée égale au poids du fluide déplacé."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-023",
+   "type": "scientist-discovery",
+   "a": "Robert Boyle",
+   "b": "the law relating gas pressure and volume",
+   "a_fr": null,
+   "b_fr": "la loi reliant la pression et le volume d'un gaz",
+   "grp": "chem-atom",
+   "d": 3,
+   "expl": {
+    "en": "Boyle's law: at constant temperature, pressure times volume is constant.",
+    "fr": "Loi de Boyle : à température constante, pression fois volume est constant."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-024",
+   "type": "scientist-discovery",
+   "a": "Ernest Rutherford",
+   "b": "the atomic nucleus",
+   "a_fr": null,
+   "b_fr": "le noyau de l'atome",
+   "grp": "chem-atom",
+   "d": 2,
+   "expl": {
+    "en": "His team's gold-foil experiment led to the nuclear atom in 1911.",
+    "fr": "L'expérience de son équipe sur une feuille d'or a conduit à l'atome nucléaire en 1911."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-025",
+   "type": "scientist-discovery",
+   "a": "J. J. Thomson",
+   "b": "the electron",
+   "a_fr": null,
+   "b_fr": "l'électron",
+   "grp": "chem-atom",
+   "d": 2,
+   "expl": {
+    "en": "He identified it in 1897.",
+    "fr": "Il l'a identifié en 1897."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "sd-026",
+   "type": "scientist-discovery",
+   "a": "Niels Bohr",
+   "b": "the atom model with quantized electron orbits",
+   "a_fr": null,
+   "b_fr": "le modèle de l'atome aux orbites d'électrons quantifiées",
+   "grp": "chem-atom",
+   "d": 3,
+   "expl": {
+    "en": "Bohr proposed it in 1913.",
+    "fr": "Bohr l'a proposé en 1913."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cw-001",
+   "type": "composer-work",
+   "a": "Johann Sebastian Bach",
+   "b": "the Brandenburg Concertos",
+   "a_fr": null,
+   "b_fr": "les Concertos brandebourgeois",
+   "grp": "baroque-classical",
+   "d": 2,
+   "expl": {
+    "en": "Bach dedicated the six concertos to the Margrave of Brandenburg in 1721.",
+    "fr": "Bach a dédié les six concertos au margrave de Brandebourg en 1721."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cw-002",
+   "type": "composer-work",
+   "a": "Antonio Vivaldi",
+   "b": "The Four Seasons",
+   "a_fr": null,
+   "b_fr": "Les Quatre Saisons",
+   "grp": "baroque-classical",
+   "d": 1,
+   "expl": {
+    "en": "These four violin concertos date from the 1720s.",
+    "fr": "Ces quatre concertos pour violon datent des années 1720."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cw-003",
+   "type": "composer-work",
+   "a": "George Frideric Handel",
+   "b": "Messiah",
+   "a_fr": null,
+   "b_fr": "Le Messie",
+   "grp": "baroque-classical",
+   "d": 1,
+   "expl": {
+    "en": "The oratorio, premiered in 1742, includes the 'Hallelujah' chorus.",
+    "fr": "L'oratorio, créé en 1742, comprend le chœur « Alléluia »."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cw-004",
+   "type": "composer-work",
+   "a": "Wolfgang Amadeus Mozart",
+   "b": "The Magic Flute",
+   "a_fr": null,
+   "b_fr": "La Flûte enchantée",
+   "grp": "baroque-classical",
+   "d": 1,
+   "expl": {
+    "en": "Mozart's opera premiered in 1791, the year he died.",
+    "fr": "L'opéra de Mozart a été créé en 1791, l'année de sa mort."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cw-005",
+   "type": "composer-work",
+   "a": "Ludwig van Beethoven",
+   "b": "the Ninth Symphony",
+   "a_fr": null,
+   "b_fr": "la Neuvième Symphonie",
+   "grp": "baroque-classical",
+   "d": 1,
+   "expl": {
+    "en": "It ends with the 'Ode to Joy' choral finale (1824).",
+    "fr": "Elle se termine par le finale choral de l'« Ode à la joie » (1824)."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cw-006",
+   "type": "composer-work",
+   "a": "Joseph Haydn",
+   "b": "The Creation",
+   "a_fr": null,
+   "b_fr": "La Création",
+   "grp": "baroque-classical",
+   "d": 3,
+   "expl": {
+    "en": "Haydn's oratorio premiered in Vienna in 1798.",
+    "fr": "L'oratorio de Haydn a été créé à Vienne en 1798."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cw-007",
+   "type": "composer-work",
+   "a": "Pyotr Ilyich Tchaikovsky",
+   "b": "Swan Lake",
+   "a_fr": null,
+   "b_fr": "Le Lac des cygnes",
+   "grp": "romantic",
+   "d": 1,
+   "expl": {
+    "en": "The ballet premiered in 1877.",
+    "fr": "Le ballet a été créé en 1877."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cw-008",
+   "type": "composer-work",
+   "a": "Giuseppe Verdi",
+   "b": "La Traviata",
+   "a_fr": null,
+   "b_fr": null,
+   "grp": "romantic",
+   "d": 2,
+   "expl": {
+    "en": "Verdi's opera premiered in Venice in 1853.",
+    "fr": "L'opéra de Verdi a été créé à Venise en 1853."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cw-009",
+   "type": "composer-work",
+   "a": "Richard Wagner",
+   "b": "the Ring Cycle",
+   "a_fr": null,
+   "b_fr": "L'Anneau du Nibelung",
+   "grp": "romantic",
+   "d": 2,
+   "expl": {
+    "en": "Four operas make up The Ring of the Nibelung.",
+    "fr": "Quatre opéras forment L'Anneau du Nibelung."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cw-010",
+   "type": "composer-work",
+   "a": "Johannes Brahms",
+   "b": "A German Requiem",
+   "a_fr": null,
+   "b_fr": "Un requiem allemand",
+   "grp": "romantic",
+   "d": 3,
+   "expl": {
+    "en": "Brahms completed the work in 1868.",
+    "fr": "Brahms a terminé l'œuvre en 1868."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cw-011",
+   "type": "composer-work",
+   "a": "Georges Bizet",
+   "b": "Carmen",
+   "a_fr": null,
+   "b_fr": null,
+   "grp": "romantic",
+   "d": 1,
+   "expl": {
+    "en": "The opera premiered in Paris in 1875.",
+    "fr": "L'opéra a été créé à Paris en 1875."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cw-012",
+   "type": "composer-work",
+   "a": "Frédéric Chopin",
+   "b": "the Minute Waltz",
+   "a_fr": null,
+   "b_fr": "la Valse minute",
+   "grp": "romantic",
+   "d": 2,
+   "expl": {
+    "en": "It is his Waltz in D-flat major, Op. 64 No. 1.",
+    "fr": "C'est sa Valse en ré bémol majeur, op. 64 n° 1."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cw-013",
+   "type": "composer-work",
+   "a": "Igor Stravinsky",
+   "b": "The Rite of Spring",
+   "a_fr": null,
+   "b_fr": "Le Sacre du printemps",
+   "grp": "modern",
+   "d": 2,
+   "expl": {
+    "en": "The 1913 premiere in Paris caused a famous uproar.",
+    "fr": "La création de 1913 à Paris a provoqué un célèbre tumulte."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cw-014",
+   "type": "composer-work",
+   "a": "Maurice Ravel",
+   "b": "Boléro",
+   "a_fr": null,
+   "b_fr": null,
+   "grp": "modern",
+   "d": 1,
+   "expl": {
+    "en": "Ravel composed it in 1928 as a ballet score.",
+    "fr": "Ravel l'a composé en 1928 pour un ballet."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cw-015",
+   "type": "composer-work",
+   "a": "Claude Debussy",
+   "b": "Clair de lune",
+   "a_fr": null,
+   "b_fr": null,
+   "grp": "modern",
+   "d": 1,
+   "expl": {
+    "en": "It is the third movement of his Suite bergamasque.",
+    "fr": "C'est le troisième mouvement de sa Suite bergamasque."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cw-016",
+   "type": "composer-work",
+   "a": "George Gershwin",
+   "b": "Rhapsody in Blue",
+   "a_fr": null,
+   "b_fr": null,
+   "grp": "modern",
+   "d": 1,
+   "expl": {
+    "en": "It premiered in 1924 in New York.",
+    "fr": "Elle a été créée en 1924 à New York."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ar-001",
+   "type": "artist-work",
+   "a": "Leonardo da Vinci",
+   "b": "the Mona Lisa",
+   "a_fr": null,
+   "b_fr": "la Joconde",
+   "grp": "renaissance-baroque",
+   "d": 1,
+   "expl": {
+    "en": "It hangs in the Louvre in Paris.",
+    "fr": "Elle est exposée au Louvre, à Paris."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ar-002",
+   "type": "artist-work",
+   "a": "Michelangelo",
+   "b": "the ceiling of the Sistine Chapel",
+   "a_fr": null,
+   "b_fr": "le plafond de la chapelle Sixtine",
+   "grp": "renaissance-baroque",
+   "d": 1,
+   "expl": {
+    "en": "He painted it between 1508 and 1512.",
+    "fr": "Il l'a peint entre 1508 et 1512."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ar-003",
+   "type": "artist-work",
+   "a": "Sandro Botticelli",
+   "b": "The Birth of Venus",
+   "a_fr": null,
+   "b_fr": "La Naissance de Vénus",
+   "grp": "renaissance-baroque",
+   "d": 2,
+   "expl": {
+    "en": "It dates from the mid-1480s and hangs in the Uffizi in Florence.",
+    "fr": "Il date du milieu des années 1480 et est conservé aux Offices, à Florence."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ar-004",
+   "type": "artist-work",
+   "a": "Rembrandt",
+   "b": "The Night Watch",
+   "a_fr": null,
+   "b_fr": "La Ronde de nuit",
+   "grp": "renaissance-baroque",
+   "d": 1,
+   "expl": {
+    "en": "He painted it in 1642; it is in the Rijksmuseum.",
+    "fr": "Il l'a peint en 1642 ; il est au Rijksmuseum."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ar-005",
+   "type": "artist-work",
+   "a": "Johannes Vermeer",
+   "b": "Girl with a Pearl Earring",
+   "a_fr": null,
+   "b_fr": "La Jeune Fille à la perle",
+   "grp": "renaissance-baroque",
+   "d": 1,
+   "expl": {
+    "en": "The oil painting dates from about 1665.",
+    "fr": "Cette huile date d'environ 1665."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ar-006",
+   "type": "artist-work",
+   "a": "Diego Velázquez",
+   "b": "Las Meninas",
+   "a_fr": null,
+   "b_fr": null,
+   "grp": "renaissance-baroque",
+   "d": 2,
+   "expl": {
+    "en": "He painted it in 1656; it is in the Prado.",
+    "fr": "Il l'a peint en 1656 ; il est au Prado."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ar-007",
+   "type": "artist-work",
+   "a": "Claude Monet",
+   "b": "Impression, Sunrise",
+   "a_fr": null,
+   "b_fr": "Impression, soleil levant",
+   "grp": "nineteenth",
+   "d": 1,
+   "expl": {
+    "en": "Its 1872 title gave Impressionism its name.",
+    "fr": "Son titre (1872) a donné son nom à l'impressionnisme."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ar-008",
+   "type": "artist-work",
+   "a": "Vincent van Gogh",
+   "b": "The Starry Night",
+   "a_fr": null,
+   "b_fr": "La Nuit étoilée",
+   "grp": "nineteenth",
+   "d": 1,
+   "expl": {
+    "en": "He painted it in 1889 from the asylum at Saint-Rémy.",
+    "fr": "Il l'a peint en 1889 depuis l'asile de Saint-Rémy."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ar-009",
+   "type": "artist-work",
+   "a": "Édouard Manet",
+   "b": "Olympia",
+   "a_fr": null,
+   "b_fr": null,
+   "grp": "nineteenth",
+   "d": 3,
+   "expl": {
+    "en": "The 1863 painting scandalised the Paris Salon of 1865.",
+    "fr": "Ce tableau de 1863 a fait scandale au Salon de Paris de 1865."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ar-010",
+   "type": "artist-work",
+   "a": "Georges Seurat",
+   "b": "A Sunday Afternoon on the Island of La Grande Jatte",
+   "a_fr": null,
+   "b_fr": "Un dimanche après-midi à l'île de la Grande Jatte",
+   "grp": "nineteenth",
+   "d": 2,
+   "expl": {
+    "en": "It is a famous example of pointillism (1884 to 1886).",
+    "fr": "C'est un célèbre exemple de pointillisme (1884-1886)."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ar-011",
+   "type": "artist-work",
+   "a": "Eugène Delacroix",
+   "b": "Liberty Leading the People",
+   "a_fr": null,
+   "b_fr": "La Liberté guidant le peuple",
+   "grp": "nineteenth",
+   "d": 1,
+   "expl": {
+    "en": "The 1830 painting commemorates the July Revolution.",
+    "fr": "Ce tableau de 1830 commémore la révolution de Juillet."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ar-012",
+   "type": "artist-work",
+   "a": "Francisco Goya",
+   "b": "The Third of May 1808",
+   "a_fr": null,
+   "b_fr": "Le 3 mai 1808",
+   "grp": "nineteenth",
+   "d": 3,
+   "expl": {
+    "en": "It shows the execution of Spanish rebels by French troops in Madrid.",
+    "fr": "Il montre l'exécution d'insurgés espagnols par des soldats français à Madrid."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ar-013",
+   "type": "artist-work",
+   "a": "Pablo Picasso",
+   "b": "Guernica",
+   "a_fr": null,
+   "b_fr": null,
+   "grp": "modern",
+   "d": 1,
+   "expl": {
+    "en": "He painted it in 1937 in response to the bombing of a Basque town.",
+    "fr": "Il l'a peint en 1937 après le bombardement d'une ville basque."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ar-014",
+   "type": "artist-work",
+   "a": "Salvador Dalí",
+   "b": "The Persistence of Memory",
+   "a_fr": null,
+   "b_fr": "La Persistance de la mémoire",
+   "grp": "modern",
+   "d": 1,
+   "expl": {
+    "en": "The 1931 painting is known for its melting clocks.",
+    "fr": "Le tableau de 1931 est connu pour ses montres molles."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ar-015",
+   "type": "artist-work",
+   "a": "Edvard Munch",
+   "b": "The Scream",
+   "a_fr": null,
+   "b_fr": "Le Cri",
+   "grp": "modern",
+   "d": 1,
+   "expl": {
+    "en": "Munch made several versions from 1893.",
+    "fr": "Munch en a réalisé plusieurs versions à partir de 1893."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ar-016",
+   "type": "artist-work",
+   "a": "Gustav Klimt",
+   "b": "The Kiss",
+   "a_fr": null,
+   "b_fr": "Le Baiser",
+   "grp": "modern",
+   "d": 1,
+   "expl": {
+    "en": "He painted it around 1907 to 1908 in Vienna.",
+    "fr": "Il l'a peint vers 1907-1908 à Vienne."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ar-017",
+   "type": "artist-work",
+   "a": "Henri Matisse",
+   "b": "The Dance",
+   "a_fr": null,
+   "b_fr": "La Danse",
+   "grp": "modern",
+   "d": 2,
+   "expl": {
+    "en": "Matisse painted the famous version in 1910.",
+    "fr": "Matisse a peint la célèbre version en 1910."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ar-018",
+   "type": "artist-work",
+   "a": "Frida Kahlo",
+   "b": "The Two Fridas",
+   "a_fr": null,
+   "b_fr": "Les Deux Frida",
+   "grp": "modern",
+   "d": 3,
+   "expl": {
+    "en": "The 1939 double self-portrait is in Mexico City.",
+    "fr": "Ce double autoportrait de 1939 se trouve à Mexico."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ii-001",
+   "type": "invention-inventor",
+   "a": "the telephone",
+   "b": "Alexander Graham Bell",
+   "a_fr": "le téléphone",
+   "b_fr": null,
+   "grp": "industrial",
+   "d": 1,
+   "expl": {
+    "en": "Bell received the first US telephone patent in 1876.",
+    "fr": "Bell a obtenu le premier brevet américain du téléphone en 1876."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ii-002",
+   "type": "invention-inventor",
+   "a": "the phonograph",
+   "b": "Thomas Edison",
+   "a_fr": "le phonographe",
+   "b_fr": null,
+   "grp": "industrial",
+   "d": 1,
+   "expl": {
+    "en": "Edison demonstrated it in 1877.",
+    "fr": "Edison l'a présenté en 1877."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ii-003",
+   "type": "invention-inventor",
+   "a": "the movable-type printing press in Europe",
+   "b": "Johannes Gutenberg",
+   "a_fr": "l'imprimerie à caractères mobiles en Europe",
+   "b_fr": null,
+   "grp": "early",
+   "d": 1,
+   "expl": {
+    "en": "Gutenberg developed it around 1450 in Mainz.",
+    "fr": "Gutenberg l'a mise au point vers 1450 à Mayence."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ii-004",
+   "type": "invention-inventor",
+   "a": "the World Wide Web",
+   "b": "Tim Berners-Lee",
+   "a_fr": "le World Wide Web",
+   "b_fr": null,
+   "grp": "modern",
+   "d": 1,
+   "expl": {
+    "en": "He proposed it in 1989 while working at CERN.",
+    "fr": "Il l'a proposé en 1989 alors qu'il travaillait au CERN."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ii-005",
+   "type": "invention-inventor",
+   "a": "dynamite",
+   "b": "Alfred Nobel",
+   "a_fr": "la dynamite",
+   "b_fr": null,
+   "grp": "industrial",
+   "d": 1,
+   "expl": {
+    "en": "Nobel patented it in 1867; his will created the Nobel Prizes.",
+    "fr": "Nobel l'a brevetée en 1867 ; son testament a créé les prix Nobel."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ii-006",
+   "type": "invention-inventor",
+   "a": "the cinematograph",
+   "b": "the Lumière brothers",
+   "a_fr": "le cinématographe",
+   "b_fr": "les frères Lumière",
+   "grp": "modern",
+   "d": 1,
+   "expl": {
+    "en": "Auguste and Louis Lumière gave public screenings in Paris in 1895.",
+    "fr": "Auguste et Louis Lumière ont organisé des projections publiques à Paris en 1895."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ii-007",
+   "type": "invention-inventor",
+   "a": "the first sustained powered airplane flight",
+   "b": "the Wright brothers",
+   "a_fr": "le premier vol motorisé soutenu en avion",
+   "b_fr": "les frères Wright",
+   "grp": "modern",
+   "d": 1,
+   "expl": {
+    "en": "Orville and Wilbur Wright flew at Kitty Hawk in 1903.",
+    "fr": "Orville et Wilbur Wright ont volé à Kitty Hawk en 1903."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ii-008",
+   "type": "invention-inventor",
+   "a": "the smallpox vaccine",
+   "b": "Edward Jenner",
+   "a_fr": "le vaccin contre la variole",
+   "b_fr": null,
+   "grp": "early",
+   "d": 1,
+   "expl": {
+    "en": "Jenner used cowpox to protect against smallpox in 1796.",
+    "fr": "Jenner a utilisé la vaccine pour protéger de la variole en 1796."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ii-009",
+   "type": "invention-inventor",
+   "a": "the voltaic pile (the first electric battery)",
+   "b": "Alessandro Volta",
+   "a_fr": "la pile voltaïque (première pile électrique)",
+   "b_fr": null,
+   "grp": "early",
+   "d": 2,
+   "expl": {
+    "en": "Volta announced it in 1800; the volt is named after him.",
+    "fr": "Volta l'a annoncée en 1800 ; le volt porte son nom."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ii-010",
+   "type": "invention-inventor",
+   "a": "the lightning rod",
+   "b": "Benjamin Franklin",
+   "a_fr": "le paratonnerre",
+   "b_fr": null,
+   "grp": "early",
+   "d": 2,
+   "expl": {
+    "en": "Franklin proposed it in the 1750s.",
+    "fr": "Franklin l'a proposé dans les années 1750."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ii-011",
+   "type": "invention-inventor",
+   "a": "the Braille reading system",
+   "b": "Louis Braille",
+   "a_fr": "le braille",
+   "b_fr": null,
+   "grp": "industrial",
+   "d": 1,
+   "expl": {
+    "en": "Braille developed it in the 1820s, as a teenager.",
+    "fr": "Braille l'a mis au point dans les années 1820, adolescent."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ii-012",
+   "type": "invention-inventor",
+   "a": "the diesel engine",
+   "b": "Rudolf Diesel",
+   "a_fr": "le moteur diesel",
+   "b_fr": null,
+   "grp": "industrial",
+   "d": 2,
+   "expl": {
+    "en": "Diesel patented it in 1892.",
+    "fr": "Diesel l'a breveté en 1892."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ii-013",
+   "type": "invention-inventor",
+   "a": "the hot-air balloon",
+   "b": "the Montgolfier brothers",
+   "a_fr": "la montgolfière",
+   "b_fr": "les frères Montgolfier",
+   "grp": "early",
+   "d": 2,
+   "expl": {
+    "en": "Their first public flight took place in 1783.",
+    "fr": "Leur premier vol public a eu lieu en 1783."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ii-014",
+   "type": "invention-inventor",
+   "a": "the mechanical calculator known as the Pascaline",
+   "b": "Blaise Pascal",
+   "a_fr": "la machine à calculer appelée Pascaline",
+   "b_fr": null,
+   "grp": "early",
+   "d": 3,
+   "expl": {
+    "en": "Pascal built it in the 1640s to help his father's tax work.",
+    "fr": "Pascal l'a construite dans les années 1640 pour aider son père dans ses calculs fiscaux."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ii-015",
+   "type": "invention-inventor",
+   "a": "the stethoscope",
+   "b": "René Laennec",
+   "a_fr": "le stéthoscope",
+   "b_fr": null,
+   "grp": "industrial",
+   "d": 3,
+   "expl": {
+    "en": "Laennec invented it in 1816.",
+    "fr": "Laennec l'a inventé en 1816."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ii-016",
+   "type": "invention-inventor",
+   "a": "the programmable Jacquard loom",
+   "b": "Joseph Marie Jacquard",
+   "a_fr": "le métier à tisser programmable de Jacquard",
+   "b_fr": null,
+   "grp": "early",
+   "d": 3,
+   "expl": {
+    "en": "Its punched cards inspired early computing.",
+    "fr": "Ses cartes perforées ont inspiré les débuts de l'informatique."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ii-017",
+   "type": "invention-inventor",
+   "a": "the safety elevator",
+   "b": "Elisha Otis",
+   "a_fr": "l'ascenseur de sécurité",
+   "b_fr": null,
+   "grp": "industrial",
+   "d": 3,
+   "expl": {
+    "en": "Otis demonstrated the safety brake in 1854.",
+    "fr": "Otis a présenté son frein de sécurité en 1854."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ii-018",
+   "type": "invention-inventor",
+   "a": "the Analytical Engine (an early design for a general computer)",
+   "b": "Charles Babbage",
+   "a_fr": "la machine analytique (un des premiers projets d'ordinateur général)",
+   "b_fr": null,
+   "grp": "industrial",
+   "d": 3,
+   "expl": {
+    "en": "Babbage designed it in the 1830s but never completed it.",
+    "fr": "Babbage l'a conçue dans les années 1830 sans jamais l'achever."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ii-019",
+   "type": "invention-inventor",
+   "a": "Bakelite, the first fully synthetic plastic",
+   "b": "Leo Baekeland",
+   "a_fr": "la bakélite, premier plastique entièrement synthétique",
+   "b_fr": null,
+   "grp": "modern",
+   "d": 3,
+   "expl": {
+    "en": "Baekeland announced it in 1907.",
+    "fr": "Baekeland l'a présentée en 1907."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "ii-020",
+   "type": "invention-inventor",
+   "a": "the daguerreotype, an early photographic process",
+   "b": "Louis Daguerre",
+   "a_fr": "le daguerréotype, un des premiers procédés photographiques",
+   "b_fr": null,
+   "grp": "industrial",
+   "d": 2,
+   "expl": {
+    "en": "It was announced publicly in 1839.",
+    "fr": "Il a été annoncé publiquement en 1839."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "fp-001",
+   "type": "figure-period",
+   "a": "Julius Caesar",
+   "b": "crossing the Rubicon (49 BC)",
+   "a_fr": null,
+   "b_fr": "le passage du Rubicon (49 av. J.-C.)",
+   "grp": "ancient",
+   "d": 1,
+   "expl": {
+    "en": "His crossing started the Roman civil war.",
+    "fr": "Son passage a déclenché la guerre civile romaine."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "fp-002",
+   "type": "figure-period",
+   "a": "Alexander the Great",
+   "b": "the conquest of the Persian Empire",
+   "a_fr": null,
+   "b_fr": "la conquête de l'Empire perse",
+   "grp": "ancient",
+   "d": 1,
+   "expl": {
+    "en": "Alexander overthrew Persia between 334 and 330 BC.",
+    "fr": "Alexandre a renversé la Perse entre 334 et 330 av. J.-C."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "fp-003",
+   "type": "figure-period",
+   "a": "Cleopatra",
+   "b": "the end of Ptolemaic Egypt",
+   "a_fr": null,
+   "b_fr": "la fin de l'Égypte ptolémaïque",
+   "grp": "ancient",
+   "d": 1,
+   "expl": {
+    "en": "She was the last active ruler of the Ptolemaic dynasty; Egypt became Roman in 30 BC.",
+    "fr": "Dernière souveraine active de la dynastie ptolémaïque ; l'Égypte devient romaine en 30 av. J.-C."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "fp-004",
+   "type": "figure-period",
+   "a": "Charlemagne",
+   "b": "the revival of the imperial title in the West (crowned in 800)",
+   "a_fr": null,
+   "b_fr": "le rétablissement du titre impérial en Occident (couronné en 800)",
+   "grp": "medieval",
+   "d": 1,
+   "expl": {
+    "en": "The pope crowned him emperor on Christmas Day 800.",
+    "fr": "Le pape l'a couronné empereur le jour de Noël 800."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "fp-005",
+   "type": "figure-period",
+   "a": "William the Conqueror",
+   "b": "the Norman conquest of England (1066)",
+   "a_fr": null,
+   "b_fr": "la conquête normande de l'Angleterre (1066)",
+   "grp": "medieval",
+   "d": 1,
+   "expl": {
+    "en": "He won the Battle of Hastings and became king of England.",
+    "fr": "Il a remporté la bataille d'Hastings et est devenu roi d'Angleterre."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "fp-006",
+   "type": "figure-period",
+   "a": "Joan of Arc",
+   "b": "the siege of Orléans (1429)",
+   "a_fr": null,
+   "b_fr": "le siège d'Orléans (1429)",
+   "grp": "medieval",
+   "d": 1,
+   "expl": {
+    "en": "Her role in lifting the siege made her a national symbol.",
+    "fr": "Son rôle dans la levée du siège en a fait un symbole national."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "fp-007",
+   "type": "figure-period",
+   "a": "King John of England",
+   "b": "the sealing of Magna Carta (1215)",
+   "a_fr": null,
+   "b_fr": "la signature de la Grande Charte (1215)",
+   "grp": "medieval",
+   "d": 2,
+   "expl": {
+    "en": "Rebel barons forced him to accept limits on royal power.",
+    "fr": "Des barons rebelles lui ont imposé des limites au pouvoir royal."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "fp-008",
+   "type": "figure-period",
+   "a": "Christopher Columbus",
+   "b": "the 1492 voyage across the Atlantic to the Americas",
+   "a_fr": null,
+   "b_fr": "la traversée de l'Atlantique de 1492 vers les Amériques",
+   "grp": "early-modern",
+   "d": 1,
+   "expl": {
+    "en": "His first voyage reached the Caribbean in October 1492.",
+    "fr": "Son premier voyage a atteint les Caraïbes en octobre 1492."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "fp-009",
+   "type": "figure-period",
+   "a": "Martin Luther",
+   "b": "the Protestant Reformation (95 Theses, 1517)",
+   "a_fr": null,
+   "b_fr": "la Réforme protestante (95 thèses, 1517)",
+   "grp": "early-modern",
+   "d": 1,
+   "expl": {
+    "en": "His theses against indulgences launched the Reformation.",
+    "fr": "Ses thèses contre les indulgences ont lancé la Réforme."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "fp-010",
+   "type": "figure-period",
+   "a": "Louis XIV",
+   "b": "the 'Sun King' era and the Palace of Versailles",
+   "a_fr": null,
+   "b_fr": "le règne du « Roi-Soleil » et le château de Versailles",
+   "grp": "early-modern",
+   "d": 1,
+   "expl": {
+    "en": "He ruled France from 1643 to 1715.",
+    "fr": "Il a régné sur la France de 1643 à 1715."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "fp-011",
+   "type": "figure-period",
+   "a": "Elizabeth I of England",
+   "b": "the defeat of the Spanish Armada (1588)",
+   "a_fr": null,
+   "b_fr": "la défaite de l'Invincible Armada (1588)",
+   "grp": "early-modern",
+   "d": 2,
+   "expl": {
+    "en": "Her reign (1558 to 1603) saw England repel Spain's fleet.",
+    "fr": "Sous son règne (1558-1603), l'Angleterre a repoussé la flotte espagnole."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "fp-012",
+   "type": "figure-period",
+   "a": "Napoleon Bonaparte",
+   "b": "his coronation as Emperor of the French (1804)",
+   "a_fr": null,
+   "b_fr": "son sacre comme empereur des Français (1804)",
+   "grp": "modern",
+   "d": 1,
+   "expl": {
+    "en": "He crowned himself in Notre-Dame in December 1804.",
+    "fr": "Il s'est couronné lui-même à Notre-Dame en décembre 1804."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "fp-013",
+   "type": "figure-period",
+   "a": "Maximilien Robespierre",
+   "b": "the Reign of Terror (1793 to 1794)",
+   "a_fr": null,
+   "b_fr": "la Terreur (1793-1794)",
+   "grp": "modern",
+   "d": 2,
+   "expl": {
+    "en": "He led the Committee of Public Safety during the Terror.",
+    "fr": "Il a dominé le Comité de salut public pendant la Terreur."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "fp-014",
+   "type": "figure-period",
+   "a": "Abraham Lincoln",
+   "b": "the Emancipation Proclamation (1863)",
+   "a_fr": null,
+   "b_fr": "la proclamation d'émancipation (1863)",
+   "grp": "modern",
+   "d": 1,
+   "expl": {
+    "en": "Lincoln declared slaves in rebel states free during the Civil War.",
+    "fr": "Lincoln a déclaré libres les esclaves des États rebelles pendant la guerre de Sécession."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "fp-015",
+   "type": "figure-period",
+   "a": "Otto von Bismarck",
+   "b": "the unification of Germany (1871)",
+   "a_fr": null,
+   "b_fr": "l'unification de l'Allemagne (1871)",
+   "grp": "modern",
+   "d": 2,
+   "expl": {
+    "en": "Prussia's chancellor engineered the German Empire.",
+    "fr": "Le chancelier de Prusse a conduit la création de l'Empire allemand."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "fp-016",
+   "type": "figure-period",
+   "a": "Mahatma Gandhi",
+   "b": "the Salt March (1930)",
+   "a_fr": null,
+   "b_fr": "la marche du sel (1930)",
+   "grp": "modern",
+   "d": 1,
+   "expl": {
+    "en": "He led the nonviolent protest against the British salt tax.",
+    "fr": "Il a mené la protestation non violente contre la taxe britannique sur le sel."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "fp-017",
+   "type": "figure-period",
+   "a": "Nelson Mandela",
+   "b": "the end of apartheid and the first multiracial election in South Africa (1994)",
+   "a_fr": null,
+   "b_fr": "la fin de l'apartheid et la première élection multiraciale en Afrique du Sud (1994)",
+   "grp": "modern",
+   "d": 1,
+   "expl": {
+    "en": "He became South Africa's first democratically elected president.",
+    "fr": "Il est devenu le premier président élu démocratiquement d'Afrique du Sud."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "fp-018",
+   "type": "figure-period",
+   "a": "Queen Victoria",
+   "b": "the Victorian era",
+   "a_fr": null,
+   "b_fr": "l'époque victorienne",
+   "grp": "modern",
+   "d": 1,
+   "expl": {
+    "en": "She reigned from 1837 to 1901.",
+    "fr": "Elle a régné de 1837 à 1901."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "lc-001",
+   "type": "landmark-country",
+   "a": "the Eiffel Tower",
+   "b": "France",
+   "a_fr": "la tour Eiffel",
+   "b_fr": null,
+   "grp": "europe",
+   "d": 1,
+   "expl": {
+    "en": "It was built for the 1889 World's Fair in Paris.",
+    "fr": "Elle a été construite pour l'Exposition universelle de 1889 à Paris."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "lc-002",
+   "type": "landmark-country",
+   "a": "the Colosseum",
+   "b": "Italy",
+   "a_fr": "le Colisée",
+   "b_fr": "Italie",
+   "grp": "europe",
+   "d": 1,
+   "expl": {
+    "en": "The amphitheatre stands in Rome.",
+    "fr": "L'amphithéâtre se trouve à Rome."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "lc-003",
+   "type": "landmark-country",
+   "a": "the Acropolis",
+   "b": "Greece",
+   "a_fr": "l'Acropole",
+   "b_fr": "Grèce",
+   "grp": "europe",
+   "d": 1,
+   "expl": {
+    "en": "It overlooks Athens.",
+    "fr": "Elle domine Athènes."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "lc-004",
+   "type": "landmark-country",
+   "a": "the Sagrada Família",
+   "b": "Spain",
+   "a_fr": "la Sagrada Família",
+   "b_fr": "Espagne",
+   "grp": "europe",
+   "d": 1,
+   "expl": {
+    "en": "Gaudí's basilica is in Barcelona.",
+    "fr": "La basilique de Gaudí est à Barcelone."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "lc-005",
+   "type": "landmark-country",
+   "a": "Big Ben",
+   "b": "the United Kingdom",
+   "a_fr": "Big Ben",
+   "b_fr": "Royaume-Uni",
+   "grp": "europe",
+   "d": 1,
+   "expl": {
+    "en": "The bell tower is at the Palace of Westminster in London.",
+    "fr": "La tour de l'horloge se trouve au Palais de Westminster à Londres."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "lc-006",
+   "type": "landmark-country",
+   "a": "Neuschwanstein Castle",
+   "b": "Germany",
+   "a_fr": "le château de Neuschwanstein",
+   "b_fr": "Allemagne",
+   "grp": "europe",
+   "d": 2,
+   "expl": {
+    "en": "The castle stands in Bavaria.",
+    "fr": "Le château se dresse en Bavière."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "lc-007",
+   "type": "landmark-country",
+   "a": "the Taj Mahal",
+   "b": "India",
+   "a_fr": "le Taj Mahal",
+   "b_fr": "Inde",
+   "grp": "asia",
+   "d": 1,
+   "expl": {
+    "en": "It is in Agra.",
+    "fr": "Il se trouve à Agra."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "lc-008",
+   "type": "landmark-country",
+   "a": "the Great Wall",
+   "b": "China",
+   "a_fr": "la Grande Muraille",
+   "b_fr": "Chine",
+   "grp": "asia",
+   "d": 1,
+   "expl": {
+    "en": "Its walls stretch across northern China.",
+    "fr": "Ses murailles traversent le nord de la Chine."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "lc-009",
+   "type": "landmark-country",
+   "a": "Angkor Wat",
+   "b": "Cambodia",
+   "a_fr": "Angkor Vat",
+   "b_fr": "Cambodge",
+   "grp": "asia",
+   "d": 2,
+   "expl": {
+    "en": "The temple complex is near Siem Reap.",
+    "fr": "Le complexe de temples est près de Siem Reap."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "lc-010",
+   "type": "landmark-country",
+   "a": "Mount Fuji",
+   "b": "Japan",
+   "a_fr": "le mont Fuji",
+   "b_fr": "Japon",
+   "grp": "asia",
+   "d": 1,
+   "expl": {
+    "en": "Japan's highest mountain rises on Honshu.",
+    "fr": "Le plus haut sommet du Japon s'élève sur l'île de Honshu."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "lc-011",
+   "type": "landmark-country",
+   "a": "Petra",
+   "b": "Jordan",
+   "a_fr": "Pétra",
+   "b_fr": "Jordanie",
+   "grp": "africa-middle-east",
+   "d": 2,
+   "expl": {
+    "en": "The rock-cut city was built by the Nabataeans.",
+    "fr": "La cité taillée dans le roc a été bâtie par les Nabatéens."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "lc-012",
+   "type": "landmark-country",
+   "a": "the Great Pyramid of Giza",
+   "b": "Egypt",
+   "a_fr": "la Grande Pyramide de Gizeh",
+   "b_fr": "Égypte",
+   "grp": "africa-middle-east",
+   "d": 1,
+   "expl": {
+    "en": "It was built around 2560 BC for Pharaoh Khufu.",
+    "fr": "Elle a été construite vers 2560 av. J.-C. pour le pharaon Khéops."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "lc-013",
+   "type": "landmark-country",
+   "a": "Table Mountain",
+   "b": "South Africa",
+   "a_fr": "la montagne de la Table",
+   "b_fr": "Afrique du Sud",
+   "grp": "africa-middle-east",
+   "d": 2,
+   "expl": {
+    "en": "The flat-topped mountain overlooks Cape Town.",
+    "fr": "Cette montagne à sommet plat domine Le Cap."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "lc-014",
+   "type": "landmark-country",
+   "a": "Machu Picchu",
+   "b": "Peru",
+   "a_fr": "le Machu Picchu",
+   "b_fr": "Pérou",
+   "grp": "americas-oceania",
+   "d": 1,
+   "expl": {
+    "en": "The Inca citadel sits high in the Andes.",
+    "fr": "La citadelle inca est perchée dans les Andes."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "lc-015",
+   "type": "landmark-country",
+   "a": "Christ the Redeemer",
+   "b": "Brazil",
+   "a_fr": "le Christ Rédempteur",
+   "b_fr": "Brésil",
+   "grp": "americas-oceania",
+   "d": 1,
+   "expl": {
+    "en": "The statue overlooks Rio de Janeiro.",
+    "fr": "La statue domine Rio de Janeiro."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "lc-016",
+   "type": "landmark-country",
+   "a": "the Statue of Liberty",
+   "b": "the United States",
+   "a_fr": "la statue de la Liberté",
+   "b_fr": "États-Unis",
+   "grp": "americas-oceania",
+   "d": 1,
+   "expl": {
+    "en": "It stands in New York Harbor; France gave it in 1886.",
+    "fr": "Elle se dresse dans le port de New York ; la France l'a offerte en 1886."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "lc-017",
+   "type": "landmark-country",
+   "a": "Chichén Itzá",
+   "b": "Mexico",
+   "a_fr": "Chichén Itzá",
+   "b_fr": "Mexique",
+   "grp": "americas-oceania",
+   "d": 2,
+   "expl": {
+    "en": "The Maya site lies on the Yucatán Peninsula.",
+    "fr": "Le site maya se trouve dans la péninsule du Yucatán."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "lc-018",
+   "type": "landmark-country",
+   "a": "the Sydney Opera House",
+   "b": "Australia",
+   "a_fr": "l'Opéra de Sydney",
+   "b_fr": "Australie",
+   "grp": "americas-oceania",
+   "d": 1,
+   "expl": {
+    "en": "It opened in 1973 on Sydney Harbour.",
+    "fr": "Il a ouvert en 1973 sur la baie de Sydney."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cd-001",
+   "type": "concept-discipline",
+   "a": "a nebula",
+   "b": "Astronomy",
+   "a_fr": "une nébuleuse",
+   "b_fr": "Astronomie",
+   "grp": "physical",
+   "d": 1,
+   "expl": {
+    "en": "Astronomy studies celestial objects such as nebulae.",
+    "fr": "L'astronomie étudie les objets célestes comme les nébuleuses."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cd-002",
+   "type": "concept-discipline",
+   "a": "a chemical bond",
+   "b": "Chemistry",
+   "a_fr": "une liaison chimique",
+   "b_fr": "Chimie",
+   "grp": "physical",
+   "d": 1,
+   "expl": {
+    "en": "Chemistry studies how atoms bond and react.",
+    "fr": "La chimie étudie comment les atomes se lient et réagissent."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cd-003",
+   "type": "concept-discipline",
+   "a": "momentum",
+   "b": "Physics",
+   "a_fr": "la quantité de mouvement",
+   "b_fr": "Physique",
+   "grp": "physical",
+   "d": 2,
+   "expl": {
+    "en": "Physics studies motion, forces and energy.",
+    "fr": "La physique étudie le mouvement, les forces et l'énergie."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cd-004",
+   "type": "concept-discipline",
+   "a": "a cold front",
+   "b": "Meteorology",
+   "a_fr": "un front froid",
+   "b_fr": "Météorologie",
+   "grp": "earth",
+   "d": 1,
+   "expl": {
+    "en": "Meteorology studies weather and the atmosphere.",
+    "fr": "La météorologie étudie le temps et l'atmosphère."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cd-005",
+   "type": "concept-discipline",
+   "a": "igneous rock",
+   "b": "Geology",
+   "a_fr": "une roche magmatique",
+   "b_fr": "Géologie",
+   "grp": "earth",
+   "d": 1,
+   "expl": {
+    "en": "Geology studies the Earth's rocks and structure.",
+    "fr": "La géologie étudie les roches et la structure de la Terre."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cd-006",
+   "type": "concept-discipline",
+   "a": "ocean currents",
+   "b": "Oceanography",
+   "a_fr": "les courants océaniques",
+   "b_fr": "Océanographie",
+   "grp": "earth",
+   "d": 2,
+   "expl": {
+    "en": "Oceanography studies the physics, chemistry and life of the seas.",
+    "fr": "L'océanographie étudie la physique, la chimie et la vie des mers."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cd-007",
+   "type": "concept-discipline",
+   "a": "an ecosystem",
+   "b": "Ecology",
+   "a_fr": "un écosystème",
+   "b_fr": "Écologie",
+   "grp": "life",
+   "d": 1,
+   "expl": {
+    "en": "Ecology studies how organisms interact with their environment.",
+    "fr": "L'écologie étudie comment les organismes interagissent avec leur milieu."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cd-008",
+   "type": "concept-discipline",
+   "a": "a chromosome",
+   "b": "Genetics",
+   "a_fr": "un chromosome",
+   "b_fr": "Génétique",
+   "grp": "life",
+   "d": 1,
+   "expl": {
+    "en": "Genetics studies genes and heredity.",
+    "fr": "La génétique étudie les gènes et l'hérédité."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cd-009",
+   "type": "concept-discipline",
+   "a": "human organs",
+   "b": "Anatomy",
+   "a_fr": "les organes humains",
+   "b_fr": "Anatomie",
+   "grp": "life",
+   "d": 2,
+   "expl": {
+    "en": "Anatomy studies the structure of the body.",
+    "fr": "L'anatomie étudie la structure du corps."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cd-010",
+   "type": "concept-discipline",
+   "a": "stomata",
+   "b": "Botany",
+   "a_fr": "les stomates",
+   "b_fr": "Botanique",
+   "grp": "life",
+   "d": 3,
+   "expl": {
+    "en": "Botany studies plants, including the pores in their leaves.",
+    "fr": "La botanique étudie les plantes, y compris les pores de leurs feuilles."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cd-011",
+   "type": "concept-discipline",
+   "a": "vertebrates",
+   "b": "Zoology",
+   "a_fr": "les vertébrés",
+   "b_fr": "Zoologie",
+   "grp": "life",
+   "d": 2,
+   "expl": {
+    "en": "Zoology studies animals and their classification.",
+    "fr": "La zoologie étudie les animaux et leur classification."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cd-012",
+   "type": "concept-discipline",
+   "a": "syntax",
+   "b": "Linguistics",
+   "a_fr": "la syntaxe",
+   "b_fr": "Linguistique",
+   "grp": "human",
+   "d": 2,
+   "expl": {
+    "en": "Linguistics studies language, including how sentences are built.",
+    "fr": "La linguistique étudie le langage, notamment la construction des phrases."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cd-013",
+   "type": "concept-discipline",
+   "a": "supply and demand",
+   "b": "Economics",
+   "a_fr": "l'offre et la demande",
+   "b_fr": "Économie",
+   "grp": "human",
+   "d": 1,
+   "expl": {
+    "en": "Economics studies how markets allocate scarce resources.",
+    "fr": "L'économie étudie comment les marchés répartissent des ressources rares."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cd-014",
+   "type": "concept-discipline",
+   "a": "excavation",
+   "b": "Archaeology",
+   "a_fr": "la fouille",
+   "b_fr": "Archéologie",
+   "grp": "human",
+   "d": 1,
+   "expl": {
+    "en": "Archaeology studies the human past through material remains.",
+    "fr": "L'archéologie étudie le passé humain à travers ses vestiges matériels."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cd-015",
+   "type": "concept-discipline",
+   "a": "cognition",
+   "b": "Psychology",
+   "a_fr": "la cognition",
+   "b_fr": "Psychologie",
+   "grp": "human",
+   "d": 2,
+   "expl": {
+    "en": "Psychology studies the mind and behaviour.",
+    "fr": "La psychologie étudie l'esprit et le comportement."
+   },
+   "mnemonic": null
+  },
+  {
+   "id": "cd-016",
+   "type": "concept-discipline",
+   "a": "social class",
+   "b": "Sociology",
+   "a_fr": "les classes sociales",
+   "b_fr": "Sociologie",
+   "grp": "human",
+   "d": 2,
+   "expl": {
+    "en": "Sociology studies society and social structures.",
+    "fr": "La sociologie étudie la société et ses structures."
+   },
+   "mnemonic": null
+  }
+ ]
+}

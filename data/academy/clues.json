@@ -1,0 +1,1805 @@
+{
+ "note": "Unreviewed drafts. Progressive clue sets: clue 1 informative but hard, clue 4 unmistakable. Not verified against sources.",
+ "items": [
+  {
+   "id": "cl-001",
+   "category": "science",
+   "subcategory": "figures",
+   "d": 1,
+   "answer": {
+    "en": "Marie Curie",
+    "fr": "Marie Curie"
+   },
+   "choices": [
+    {
+     "en": "Marie Curie",
+     "fr": "Marie Curie"
+    },
+    {
+     "en": "Lise Meitner",
+     "fr": "Lise Meitner"
+    },
+    {
+     "en": "Rosalind Franklin",
+     "fr": "Rosalind Franklin"
+    },
+    {
+     "en": "Irène Joliot-Curie",
+     "fr": "Irène Joliot-Curie"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I was born in Warsaw in 1867 and moved to Paris to continue my studies.",
+     "fr": "Je suis née à Varsovie en 1867 et je suis partie à Paris poursuivre mes études."
+    },
+    {
+     "en": "I shared a Nobel Prize in Physics in 1903 with my husband and another scientist.",
+     "fr": "J'ai partagé un prix Nobel de physique en 1903 avec mon mari et un autre scientifique."
+    },
+    {
+     "en": "I later won a second Nobel Prize, this time in Chemistry, in 1911.",
+     "fr": "J'ai ensuite reçu un second prix Nobel, de chimie cette fois, en 1911."
+    },
+    {
+     "en": "I discovered the elements polonium and radium and coined the word 'radioactivity'.",
+     "fr": "J'ai découvert le polonium et le radium et inventé le mot « radioactivité »."
+    }
+   ],
+   "expl": {
+    "en": "Marie Curie is the only person to have won Nobel Prizes in two different sciences. Irène Joliot-Curie, her daughter, won in Chemistry only and was born in Paris.",
+    "fr": "Marie Curie est la seule personne à avoir reçu des prix Nobel dans deux sciences différentes. Sa fille Irène Joliot-Curie n'a reçu que celui de chimie et est née à Paris."
+   }
+  },
+  {
+   "id": "cl-002",
+   "category": "arts",
+   "subcategory": "figures",
+   "d": 1,
+   "answer": {
+    "en": "Leonardo da Vinci",
+    "fr": "Léonard de Vinci"
+   },
+   "choices": [
+    {
+     "en": "Michelangelo",
+     "fr": "Michel-Ange"
+    },
+    {
+     "en": "Leonardo da Vinci",
+     "fr": "Léonard de Vinci"
+    },
+    {
+     "en": "Raphael",
+     "fr": "Raphaël"
+    },
+    {
+     "en": "Sandro Botticelli",
+     "fr": "Sandro Botticelli"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I was born in 1452 in a small Tuscan town near Florence.",
+     "fr": "Je suis né en 1452 dans une petite ville toscane près de Florence."
+    },
+    {
+     "en": "I worked for the Duke of Milan and spent my last years in France at the invitation of its king.",
+     "fr": "J'ai travaillé pour le duc de Milan et passé mes dernières années en France, à l'invitation de son roi."
+    },
+    {
+     "en": "My notebooks, written in mirror script, hold designs for flying machines and studies of anatomy.",
+     "fr": "Mes carnets, écrits en écriture inversée, contiennent des plans de machines volantes et des études d'anatomie."
+    },
+    {
+     "en": "A portrait I painted of a seated woman with a famous smile hangs in the Louvre.",
+     "fr": "Un portrait que j'ai peint d'une femme assise au sourire célèbre est exposé au Louvre."
+    }
+   ],
+   "expl": {
+    "en": "Leonardo was born in Anchiano near Vinci in 1452 and died in Amboise, France, in 1519. Michelangelo (1475), Raphael (1483) and Botticelli (1445) do not fit the date and the journey to France.",
+    "fr": "Léonard est né à Anchiano, près de Vinci, en 1452 et mort à Amboise en 1519. Michel-Ange (1475), Raphaël (1483) et Botticelli (1445) ne correspondent ni à la date ni au séjour en France."
+   }
+  },
+  {
+   "id": "cl-003",
+   "category": "history",
+   "subcategory": "figures",
+   "d": 1,
+   "answer": {
+    "en": "Napoleon Bonaparte",
+    "fr": "Napoléon Bonaparte"
+   },
+   "choices": [
+    {
+     "en": "Louis XIV",
+     "fr": "Louis XIV"
+    },
+    {
+     "en": "Charlemagne",
+     "fr": "Charlemagne"
+    },
+    {
+     "en": "Napoleon Bonaparte",
+     "fr": "Napoléon Bonaparte"
+    },
+    {
+     "en": "Charles de Gaulle",
+     "fr": "Charles de Gaulle"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I was born in 1769 on an island that had become French only the year before.",
+     "fr": "Je suis né en 1769 sur une île devenue française l'année précédente seulement."
+    },
+    {
+     "en": "I rose to prominence as an artillery officer during the Revolution.",
+     "fr": "Je me suis fait remarquer comme officier d'artillerie pendant la Révolution."
+    },
+    {
+     "en": "In 1804 I took the crown from the Pope's hands and placed it on my own head.",
+     "fr": "En 1804, j'ai pris la couronne des mains du pape pour la poser moi-même sur ma tête."
+    },
+    {
+     "en": "I died in 1821 in exile on the island of Saint Helena.",
+     "fr": "Je suis mort en 1821 en exil sur l'île de Sainte-Hélène."
+    }
+   ],
+   "expl": {
+    "en": "Napoleon was born in Ajaccio, Corsica, which France had acquired from Genoa in 1768.",
+    "fr": "Napoléon est né à Ajaccio, en Corse, que la France avait acquise de Gênes en 1768."
+   }
+  },
+  {
+   "id": "cl-004",
+   "category": "science",
+   "subcategory": "figures",
+   "d": 2,
+   "answer": {
+    "en": "Ada Lovelace",
+    "fr": "Ada Lovelace"
+   },
+   "choices": [
+    {
+     "en": "Mary Shelley",
+     "fr": "Mary Shelley"
+    },
+    {
+     "en": "Florence Nightingale",
+     "fr": "Florence Nightingale"
+    },
+    {
+     "en": "Grace Hopper",
+     "fr": "Grace Hopper"
+    },
+    {
+     "en": "Ada Lovelace",
+     "fr": "Ada Lovelace"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I was born in London in 1815, the daughter of a famous poet.",
+     "fr": "Je suis née à Londres en 1815, fille d'un poète célèbre."
+    },
+    {
+     "en": "I worked with a mathematician and inventor on his proposed Analytical Engine.",
+     "fr": "J'ai travaillé avec un mathématicien et inventeur sur sa Machine analytique."
+    },
+    {
+     "en": "In 1843 I published notes that include what is often called the first algorithm intended for a machine.",
+     "fr": "En 1843, j'ai publié des notes contenant ce que l'on appelle souvent le premier algorithme destiné à une machine."
+    },
+    {
+     "en": "A programming language was later named after me.",
+     "fr": "Un langage de programmation a plus tard été nommé d'après moi."
+    }
+   ],
+   "expl": {
+    "en": "Ada Lovelace, daughter of Lord Byron, annotated Luigi Menabrea's article on Charles Babbage's Analytical Engine.",
+    "fr": "Ada Lovelace, fille de Lord Byron, a annoté l'article de Luigi Menabrea sur la Machine analytique de Charles Babbage."
+   }
+  },
+  {
+   "id": "cl-005",
+   "category": "history",
+   "subcategory": "figures",
+   "d": 1,
+   "answer": {
+    "en": "Cleopatra VII",
+    "fr": "Cléopâtre VII"
+   },
+   "choices": [
+    {
+     "en": "Cleopatra VII",
+     "fr": "Cléopâtre VII"
+    },
+    {
+     "en": "Nefertiti",
+     "fr": "Néfertiti"
+    },
+    {
+     "en": "Hatshepsut",
+     "fr": "Hatchepsout"
+    },
+    {
+     "en": "Zenobia of Palmyra",
+     "fr": "Zénobie de Palmyre"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I was born around 69 BC into a royal family descended from a Macedonian Greek general.",
+     "fr": "Je suis née vers 69 av. J.-C. dans une famille royale issue d'un général grec macédonien."
+    },
+    {
+     "en": "I spoke many languages, and ancient writers say I was the first of my family to learn Egyptian.",
+     "fr": "Je parlais de nombreuses langues et, selon les auteurs antiques, j'ai été la première de ma famille à apprendre l'égyptien."
+    },
+    {
+     "en": "I formed alliances, and relationships, with two powerful Romans in turn.",
+     "fr": "Je me suis alliée, et attachée, à deux puissants Romains successivement."
+    },
+    {
+     "en": "I died in 30 BC, traditionally said to be from the bite of an asp.",
+     "fr": "Je suis morte en 30 av. J.-C., traditionnellement de la morsure d'un aspic."
+    }
+   ],
+   "expl": {
+    "en": "Cleopatra VII belonged to the Ptolemaic dynasty founded by Ptolemy I, a general of Alexander the Great. Her Roman partners were Julius Caesar and Mark Antony.",
+    "fr": "Cléopâtre VII appartenait à la dynastie lagide fondée par Ptolémée Ier, général d'Alexandre le Grand. Ses partenaires romains furent Jules César puis Marc Antoine."
+   }
+  },
+  {
+   "id": "cl-006",
+   "category": "politics",
+   "subcategory": "figures",
+   "d": 1,
+   "answer": {
+    "en": "Nelson Mandela",
+    "fr": "Nelson Mandela"
+   },
+   "choices": [
+    {
+     "en": "Desmond Tutu",
+     "fr": "Desmond Tutu"
+    },
+    {
+     "en": "Nelson Mandela",
+     "fr": "Nelson Mandela"
+    },
+    {
+     "en": "Kofi Annan",
+     "fr": "Kofi Annan"
+    },
+    {
+     "en": "Steve Biko",
+     "fr": "Steve Biko"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I was born in 1918 in a village in the Eastern Cape.",
+     "fr": "Je suis né en 1918 dans un village du Cap-Oriental."
+    },
+    {
+     "en": "I trained as a lawyer and joined a movement against apartheid.",
+     "fr": "Je me suis formé comme avocat et j'ai rejoint un mouvement contre l'apartheid."
+    },
+    {
+     "en": "I spent 27 years in prison, a large part of it on Robben Island.",
+     "fr": "J'ai passé 27 ans en prison, dont une grande partie sur l'île de Robben."
+    },
+    {
+     "en": "In 1994 I became my country's president after its first fully democratic elections.",
+     "fr": "En 1994, je suis devenu président de mon pays après ses premières élections pleinement démocratiques."
+    }
+   ],
+   "expl": {
+    "en": "Mandela was South Africa's first president elected in universal-suffrage elections. Tutu, Annan and Biko were never president; Biko died in 1977.",
+    "fr": "Mandela a été le premier président sud-africain élu au suffrage universel. Tutu, Annan et Biko n'ont jamais été présidents ; Biko est mort en 1977."
+   }
+  },
+  {
+   "id": "cl-007",
+   "category": "science",
+   "subcategory": "figures",
+   "d": 2,
+   "answer": {
+    "en": "Alan Turing",
+    "fr": "Alan Turing"
+   },
+   "choices": [
+    {
+     "en": "Charles Babbage",
+     "fr": "Charles Babbage"
+    },
+    {
+     "en": "John von Neumann",
+     "fr": "John von Neumann"
+    },
+    {
+     "en": "Alan Turing",
+     "fr": "Alan Turing"
+    },
+    {
+     "en": "Claude Shannon",
+     "fr": "Claude Shannon"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I was born in London in 1912 and studied at Cambridge.",
+     "fr": "Je suis né à Londres en 1912 et j'ai étudié à Cambridge."
+    },
+    {
+     "en": "In 1936 I described a theoretical machine that formalised the idea of computation.",
+     "fr": "En 1936, j'ai décrit une machine théorique qui formalise la notion de calcul."
+    },
+    {
+     "en": "During the Second World War I worked at Bletchley Park breaking enemy ciphers.",
+     "fr": "Pendant la Seconde Guerre mondiale, j'ai travaillé à Bletchley Park à décrypter des messages ennemis."
+    },
+    {
+     "en": "In 1950 I proposed an imitation game to test whether a machine can behave intelligently.",
+     "fr": "En 1950, j'ai proposé un jeu d'imitation pour tester si une machine peut se comporter de façon intelligente."
+    }
+   ],
+   "expl": {
+    "en": "Alan Turing's 1936 paper introduced what we now call the Turing machine, and his 1950 paper proposed the Turing test.",
+    "fr": "L'article de 1936 d'Alan Turing a introduit la machine de Turing, et celui de 1950 a proposé le test de Turing."
+   }
+  },
+  {
+   "id": "cl-008",
+   "category": "arts",
+   "subcategory": "figures",
+   "d": 2,
+   "answer": {
+    "en": "Frida Kahlo",
+    "fr": "Frida Kahlo"
+   },
+   "choices": [
+    {
+     "en": "Georgia O'Keeffe",
+     "fr": "Georgia O'Keeffe"
+    },
+    {
+     "en": "Tamara de Lempicka",
+     "fr": "Tamara de Lempicka"
+    },
+    {
+     "en": "Remedios Varo",
+     "fr": "Remedios Varo"
+    },
+    {
+     "en": "Frida Kahlo",
+     "fr": "Frida Kahlo"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I was born in 1907 in Coyoacán, near Mexico City.",
+     "fr": "Je suis née en 1907 à Coyoacán, près de Mexico."
+    },
+    {
+     "en": "A bus accident at eighteen injured me for life, and I began to paint while recovering.",
+     "fr": "Un accident d'autobus à dix-huit ans m'a blessée à vie, et j'ai commencé à peindre pendant ma convalescence."
+    },
+    {
+     "en": "Many of my works are self-portraits in vivid colours.",
+     "fr": "Beaucoup de mes œuvres sont des autoportraits aux couleurs vives."
+    },
+    {
+     "en": "I married, divorced and remarried the famous muralist Diego Rivera.",
+     "fr": "J'ai épousé, divorcé puis épousé de nouveau le célèbre muraliste Diego Rivera."
+    }
+   ],
+   "expl": {
+    "en": "Frida Kahlo's famous works include The Two Fridas (1939). O'Keeffe was American, de Lempicka was born in Warsaw and Varo in Spain.",
+    "fr": "Parmi les œuvres célèbres de Frida Kahlo figurent Les Deux Fridas (1939). O'Keeffe était américaine, de Lempicka est née à Varsovie et Varo en Espagne."
+   }
+  },
+  {
+   "id": "cl-009",
+   "category": "philosophy",
+   "subcategory": "figures",
+   "d": 3,
+   "answer": {
+    "en": "Pythagoras",
+    "fr": "Pythagore"
+   },
+   "choices": [
+    {
+     "en": "Pythagoras",
+     "fr": "Pythagore"
+    },
+    {
+     "en": "Thales",
+     "fr": "Thalès"
+    },
+    {
+     "en": "Archimedes",
+     "fr": "Archimède"
+    },
+    {
+     "en": "Euclid",
+     "fr": "Euclide"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I was born on the island of Samos in the 6th century BC.",
+     "fr": "Je suis né sur l'île de Samos au VIe siècle av. J.-C."
+    },
+    {
+     "en": "I later founded a religious and philosophical community in southern Italy.",
+     "fr": "J'ai ensuite fondé une communauté religieuse et philosophique dans le sud de l'Italie."
+    },
+    {
+     "en": "My followers held that numbers lie at the heart of reality, and tradition credits me with finding that musical intervals follow simple ratios.",
+     "fr": "Mes disciples tenaient les nombres pour le cœur de la réalité, et la tradition me crédite d'avoir découvert que les intervalles musicaux suivent des rapports simples."
+    },
+    {
+     "en": "A theorem about right-angled triangles carries my name.",
+     "fr": "Un théorème sur les triangles rectangles porte mon nom."
+    }
+   ],
+   "expl": {
+    "en": "Pythagoras was born on Samos and settled at Croton in southern Italy. Thales came from Miletus, Archimedes from Syracuse and Euclid worked in Alexandria.",
+    "fr": "Pythagore est né à Samos et s'est installé à Crotone, dans le sud de l'Italie. Thalès venait de Milet, Archimède de Syracuse et Euclide travaillait à Alexandrie."
+   }
+  },
+  {
+   "id": "cl-010",
+   "category": "history",
+   "subcategory": "figures",
+   "d": 3,
+   "answer": {
+    "en": "Ibn Battuta",
+    "fr": "Ibn Battuta"
+   },
+   "choices": [
+    {
+     "en": "Marco Polo",
+     "fr": "Marco Polo"
+    },
+    {
+     "en": "Ibn Battuta",
+     "fr": "Ibn Battuta"
+    },
+    {
+     "en": "Zheng He",
+     "fr": "Zheng He"
+    },
+    {
+     "en": "Vasco da Gama",
+     "fr": "Vasco de Gama"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I was born in Tangier in 1304.",
+     "fr": "Je suis né à Tanger en 1304."
+    },
+    {
+     "en": "I set out on a pilgrimage to Mecca at the age of twenty-one and kept travelling for about thirty years.",
+     "fr": "Je suis parti en pèlerinage à La Mecque à vingt et un ans et j'ai voyagé pendant une trentaine d'années."
+    },
+    {
+     "en": "My account describes journeys across North Africa, Arabia, India and as far as China.",
+     "fr": "Mon récit décrit des voyages à travers l'Afrique du Nord, l'Arabie, l'Inde et jusqu'en Chine."
+    },
+    {
+     "en": "After returning to Morocco I dictated my travel book, the Rihla.",
+     "fr": "De retour au Maroc, j'ai dicté mon livre de voyage, la Rihla."
+    }
+   ],
+   "expl": {
+    "en": "Ibn Battuta dictated the Rihla to the scholar Ibn Juzayy in the 1350s. Marco Polo was born in Venice around 1254, Zheng He in Yunnan in 1371 and Vasco da Gama around 1460.",
+    "fr": "Ibn Battuta a dicté la Rihla au lettré Ibn Juzayy dans les années 1350. Marco Polo est né à Venise vers 1254, Zheng He au Yunnan en 1371 et Vasco de Gama vers 1460."
+   }
+  },
+  {
+   "id": "cl-011",
+   "category": "philosophy",
+   "subcategory": "figures",
+   "d": 3,
+   "answer": {
+    "en": "Hypatia",
+    "fr": "Hypatie"
+   },
+   "choices": [
+    {
+     "en": "Aspasia",
+     "fr": "Aspasie"
+    },
+    {
+     "en": "Sappho",
+     "fr": "Sappho"
+    },
+    {
+     "en": "Hypatia",
+     "fr": "Hypatie"
+    },
+    {
+     "en": "Fatima al-Fihri",
+     "fr": "Fatima al-Fihri"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I lived in Alexandria in the late 4th and early 5th century AD.",
+     "fr": "J'ai vécu à Alexandrie à la fin du IVe et au début du Ve siècle apr. J.-C."
+    },
+    {
+     "en": "I taught mathematics, astronomy and philosophy.",
+     "fr": "J'enseignais les mathématiques, l'astronomie et la philosophie."
+    },
+    {
+     "en": "My father, a mathematician, edited a famous edition of a classic work of geometry.",
+     "fr": "Mon père, mathématicien, a établi une édition célèbre d'un grand classique de la géométrie."
+    },
+    {
+     "en": "A mob killed me in the year 415.",
+     "fr": "Une foule m'a tuée en l'an 415."
+    }
+   ],
+   "expl": {
+    "en": "Hypatia's father Theon edited Euclid's Elements. Aspasia lived in 5th-century BC Athens, Sappho on Lesbos around 600 BC and Fatima al-Fihri founded a university in 9th-century Fez.",
+    "fr": "Théon, père d'Hypatie, a édité les Éléments d'Euclide. Aspasie vivait à Athènes au Ve siècle av. J.-C., Sappho à Lesbos vers 600 av. J.-C. et Fatima al-Fihri a fondé une université à Fès au IXe siècle."
+   }
+  },
+  {
+   "id": "cl-012",
+   "category": "science",
+   "subcategory": "figures",
+   "d": 3,
+   "answer": {
+    "en": "Émilie du Châtelet",
+    "fr": "Émilie du Châtelet"
+   },
+   "choices": [
+    {
+     "en": "Madame de Pompadour",
+     "fr": "Madame de Pompadour"
+    },
+    {
+     "en": "Sophie Germain",
+     "fr": "Sophie Germain"
+    },
+    {
+     "en": "Marie-Anne Lavoisier",
+     "fr": "Marie-Anne Lavoisier"
+    },
+    {
+     "en": "Émilie du Châtelet",
+     "fr": "Émilie du Châtelet"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I was born in Paris in 1706 into a family close to the court.",
+     "fr": "Je suis née à Paris en 1706 dans une famille proche de la cour."
+    },
+    {
+     "en": "I studied mathematics and physics and lived for years with a famous writer.",
+     "fr": "J'ai étudié les mathématiques et la physique et j'ai vécu des années auprès d'un écrivain célèbre."
+    },
+    {
+     "en": "I produced the French translation of Newton's Principia, with my own commentary.",
+     "fr": "J'ai réalisé la traduction française des Principia de Newton, avec mon propre commentaire."
+    },
+    {
+     "en": "I died in 1749, days after giving birth.",
+     "fr": "Je suis morte en 1749, quelques jours après un accouchement."
+    }
+   ],
+   "expl": {
+    "en": "Émilie du Châtelet's translation was published in 1759, after her death. Pompadour was born in 1721, Germain in 1776 and Lavoisier in 1758 in Montbrison.",
+    "fr": "La traduction d'Émilie du Châtelet a été publiée en 1759, après sa mort. Pompadour est née en 1721, Germain en 1776 et Lavoisier en 1758 à Montbrison."
+   }
+  },
+  {
+   "id": "cl-013",
+   "category": "geography",
+   "subcategory": "places",
+   "d": 1,
+   "answer": {
+    "en": "Machu Picchu",
+    "fr": "Machu Picchu"
+   },
+   "choices": [
+    {
+     "en": "Machu Picchu",
+     "fr": "Machu Picchu"
+    },
+    {
+     "en": "Chichén Itzá",
+     "fr": "Chichén Itzá"
+    },
+    {
+     "en": "Angkor Wat",
+     "fr": "Angkor Vat"
+    },
+    {
+     "en": "Petra",
+     "fr": "Pétra"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I stand on a ridge about 2,400 metres above sea level in the Andes.",
+     "fr": "Je me dresse sur une crête à environ 2 400 mètres d'altitude dans les Andes."
+    },
+    {
+     "en": "I was built in the 15th century as an estate for an Inca emperor.",
+     "fr": "J'ai été construit au XVe siècle comme domaine pour un empereur inca."
+    },
+    {
+     "en": "I was abandoned around the time of the Spanish conquest and became world-famous after 1911.",
+     "fr": "J'ai été abandonné vers l'époque de la conquête espagnole et suis devenu mondialement célèbre après 1911."
+    },
+    {
+     "en": "I overlook the Urubamba River in Peru.",
+     "fr": "Je domine la rivière Urubamba, au Pérou."
+    }
+   ],
+   "expl": {
+    "en": "Machu Picchu was probably built for Pachacuti. Chichén Itzá is in the Mexican lowlands, Angkor in Cambodia and Petra in Jordan.",
+    "fr": "Le Machu Picchu a probablement été construit pour Pachacutec. Chichén Itzá se trouve dans les basses terres mexicaines, Angkor au Cambodge et Pétra en Jordanie."
+   }
+  },
+  {
+   "id": "cl-014",
+   "category": "history",
+   "subcategory": "places",
+   "d": 3,
+   "answer": {
+    "en": "Petra",
+    "fr": "Pétra"
+   },
+   "choices": [
+    {
+     "en": "Palmyra",
+     "fr": "Palmyre"
+    },
+    {
+     "en": "Petra",
+     "fr": "Pétra"
+    },
+    {
+     "en": "Persepolis",
+     "fr": "Persépolis"
+    },
+    {
+     "en": "Leptis Magna",
+     "fr": "Leptis Magna"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I was the capital of the Nabataean kingdom.",
+     "fr": "J'étais la capitale du royaume nabatéen."
+    },
+    {
+     "en": "Visitors reach me through a narrow gorge called the Siq.",
+     "fr": "On m'atteint par une gorge étroite appelée le Siq."
+    },
+    {
+     "en": "My best-known facade, the Treasury, is carved into rose-coloured sandstone.",
+     "fr": "Ma façade la plus célèbre, le Trésor, est taillée dans le grès rose."
+    },
+    {
+     "en": "I lie in southern Jordan.",
+     "fr": "Je me trouve dans le sud de la Jordanie."
+    }
+   ],
+   "expl": {
+    "en": "Petra was the Nabataean capital. Palmyra is in Syria, Persepolis in Iran and Leptis Magna in Libya.",
+    "fr": "Pétra était la capitale des Nabatéens. Palmyre est en Syrie, Persépolis en Iran et Leptis Magna en Libye."
+   }
+  },
+  {
+   "id": "cl-015",
+   "category": "geography",
+   "subcategory": "places",
+   "d": 1,
+   "answer": {
+    "en": "Venice",
+    "fr": "Venise"
+   },
+   "choices": [
+    {
+     "en": "Amsterdam",
+     "fr": "Amsterdam"
+    },
+    {
+     "en": "Bruges",
+     "fr": "Bruges"
+    },
+    {
+     "en": "Venice",
+     "fr": "Venise"
+    },
+    {
+     "en": "Saint Petersburg",
+     "fr": "Saint-Pétersbourg"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I am built across more than a hundred small islands in a lagoon.",
+     "fr": "Je suis bâtie sur plus d'une centaine de petites îles dans une lagune."
+    },
+    {
+     "en": "I was the capital of a maritime republic that lasted over a thousand years.",
+     "fr": "J'ai été la capitale d'une république maritime qui a duré plus de mille ans."
+    },
+    {
+     "en": "My main streets are canals, and the Rialto Bridge crosses my Grand Canal.",
+     "fr": "Mes principales rues sont des canaux, et le pont du Rialto enjambe mon Grand Canal."
+    },
+    {
+     "en": "Each year I host a famous film festival on the Lido.",
+     "fr": "Chaque année, j'accueille un célèbre festival de cinéma sur le Lido."
+    }
+   ],
+   "expl": {
+    "en": "The Republic of Venice lasted from the 7th century to 1797. Amsterdam and Saint Petersburg were never capitals of such a long-lived republic, and Bruges has no lagoon.",
+    "fr": "La République de Venise a duré du VIIe siècle à 1797. Amsterdam et Saint-Pétersbourg n'ont jamais été la capitale d'une république aussi durable, et Bruges n'a pas de lagune."
+   }
+  },
+  {
+   "id": "cl-016",
+   "category": "geography",
+   "subcategory": "places",
+   "d": 2,
+   "answer": {
+    "en": "Uluru",
+    "fr": "Uluru"
+   },
+   "choices": [
+    {
+     "en": "Kata Tjuta",
+     "fr": "Kata Tjuta"
+    },
+    {
+     "en": "Table Mountain",
+     "fr": "Montagne de la Table"
+    },
+    {
+     "en": "Devils Tower",
+     "fr": "Devils Tower"
+    },
+    {
+     "en": "Uluru",
+     "fr": "Uluru"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I am a huge sandstone formation rising abruptly from a flat desert plain.",
+     "fr": "Je suis une immense formation de grès qui surgit d'une plaine désertique plate."
+    },
+    {
+     "en": "I am sacred to the Anangu people, my traditional owners.",
+     "fr": "Je suis sacré pour le peuple anangu, mes propriétaires traditionnels."
+    },
+    {
+     "en": "I seem to glow red at sunrise and sunset.",
+     "fr": "Je semble rougeoyer au lever et au coucher du soleil."
+    },
+    {
+     "en": "I stand in Australia's Northern Territory and was once named after a South Australian premier.",
+     "fr": "Je me dresse dans le Territoire du Nord australien et j'ai porté le nom d'un premier ministre d'Australie-Méridionale."
+    }
+   ],
+   "expl": {
+    "en": "Uluru was called Ayers Rock after Sir Henry Ayers. Kata Tjuta, its neighbour, was named Mount Olga.",
+    "fr": "Uluru s'est appelé Ayers Rock d'après Sir Henry Ayers. Kata Tjuta, son voisin, s'appelait Mount Olga."
+   }
+  },
+  {
+   "id": "cl-017",
+   "category": "history",
+   "subcategory": "places",
+   "d": 3,
+   "answer": {
+    "en": "Timbuktu",
+    "fr": "Tombouctou"
+   },
+   "choices": [
+    {
+     "en": "Timbuktu",
+     "fr": "Tombouctou"
+    },
+    {
+     "en": "Djenné",
+     "fr": "Djenné"
+    },
+    {
+     "en": "Gao",
+     "fr": "Gao"
+    },
+    {
+     "en": "Agadez",
+     "fr": "Agadez"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I am a city on the southern edge of the Sahara, close to the Niger River.",
+     "fr": "Je suis une ville au sud du Sahara, près du fleuve Niger."
+    },
+    {
+     "en": "In the 14th to 16th centuries I was a centre of trade in gold and salt and of Islamic scholarship.",
+     "fr": "Du XIVe au XVIe siècle, j'ai été un centre du commerce de l'or et du sel et du savoir islamique."
+    },
+    {
+     "en": "My three great mosques include Djinguereber and Sankore.",
+     "fr": "Mes trois grandes mosquées comprennent Djingareyber et Sankoré."
+    },
+    {
+     "en": "I am in Mali, and my old manuscripts are a treasure.",
+     "fr": "Je suis au Mali, et mes anciens manuscrits sont un trésor."
+    }
+   ],
+   "expl": {
+    "en": "Timbuktu's mosques are Djinguereber, Sankore and Sidi Yahia. Djenné and Gao are also in Mali but have different monuments, and Agadez is in Niger.",
+    "fr": "Les mosquées de Tombouctou sont Djingareyber, Sankoré et Sidi Yahia. Djenné et Gao sont aussi au Mali mais ont d'autres monuments, et Agadez est au Niger."
+   }
+  },
+  {
+   "id": "cl-018",
+   "category": "arts",
+   "subcategory": "places",
+   "d": 2,
+   "answer": {
+    "en": "The Alhambra",
+    "fr": "L'Alhambra"
+   },
+   "choices": [
+    {
+     "en": "Alcázar of Seville",
+     "fr": "Alcazar de Séville"
+    },
+    {
+     "en": "The Alhambra",
+     "fr": "L'Alhambra"
+    },
+    {
+     "en": "Mezquita of Córdoba",
+     "fr": "Mezquita de Cordoue"
+    },
+    {
+     "en": "El Escorial",
+     "fr": "L'Escurial"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I am a palace and fortress complex on a hill above a city in southern Spain.",
+     "fr": "Je suis un ensemble de palais et de forteresse sur une colline au-dessus d'une ville du sud de l'Espagne."
+    },
+    {
+     "en": "Most of me was built in the 13th and 14th centuries by the Nasrid dynasty.",
+     "fr": "Je fus en grande partie bâtie aux XIIIe et XIVe siècles par la dynastie nasride."
+    },
+    {
+     "en": "My Court of the Lions has a fountain held up by twelve stone lions.",
+     "fr": "Ma cour des Lions possède une fontaine portée par douze lions de pierre."
+    },
+    {
+     "en": "I overlook Granada.",
+     "fr": "Je domine Grenade."
+    }
+   ],
+   "expl": {
+    "en": "The Alhambra is the Nasrid palace of Granada. The Alcázar of Seville is a later Mudéjar palace, the Mezquita is a mosque in Córdoba and El Escorial is a 16th-century royal monastery near Madrid.",
+    "fr": "L'Alhambra est le palais nasride de Grenade. L'Alcazar de Séville est un palais mudéjar plus tardif, la Mezquita est une mosquée de Cordoue et l'Escurial un monastère royal du XVIe siècle près de Madrid."
+   }
+  },
+  {
+   "id": "cl-019",
+   "category": "history",
+   "subcategory": "places",
+   "d": 2,
+   "answer": {
+    "en": "Angkor Wat",
+    "fr": "Angkor Vat"
+   },
+   "choices": [
+    {
+     "en": "Borobudur",
+     "fr": "Borobudur"
+    },
+    {
+     "en": "Bagan",
+     "fr": "Bagan"
+    },
+    {
+     "en": "Angkor Wat",
+     "fr": "Angkor Vat"
+    },
+    {
+     "en": "Prambanan",
+     "fr": "Prambanan"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I am often called the largest religious monument in the world, covering about 160 hectares.",
+     "fr": "On me dit souvent le plus grand monument religieux du monde, avec environ 160 hectares."
+    },
+    {
+     "en": "I was built in the early 12th century by a king named Suryavarman II.",
+     "fr": "J'ai été construit au début du XIIe siècle par un roi nommé Suryavarman II."
+    },
+    {
+     "en": "I was first dedicated to the god Vishnu and later became a Buddhist site.",
+     "fr": "J'ai d'abord été dédié au dieu Vishnou avant de devenir un site bouddhiste."
+    },
+    {
+     "en": "My towers appear on my country's national flag.",
+     "fr": "Mes tours figurent sur le drapeau national de mon pays."
+    }
+   ],
+   "expl": {
+    "en": "Angkor Wat is on Cambodia's flag. Borobudur and Prambanan are 9th-century monuments in Java, and Bagan in Myanmar is a plain of many temples rather than one monument.",
+    "fr": "Angkor Vat figure sur le drapeau du Cambodge. Borobudur et Prambanan sont des monuments du IXe siècle à Java, et Bagan, en Birmanie, est une plaine de nombreux temples plutôt qu'un seul monument."
+   }
+  },
+  {
+   "id": "cl-020",
+   "category": "science",
+   "subcategory": "inventions",
+   "d": 1,
+   "answer": {
+    "en": "The movable-type printing press",
+    "fr": "La presse à caractères mobiles"
+   },
+   "choices": [
+    {
+     "en": "The steam engine",
+     "fr": "La machine à vapeur"
+    },
+    {
+     "en": "The electric telegraph",
+     "fr": "Le télégraphe électrique"
+    },
+    {
+     "en": "The mechanical clock",
+     "fr": "L'horloge mécanique"
+    },
+    {
+     "en": "The movable-type printing press",
+     "fr": "La presse à caractères mobiles"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I use small reusable pieces of metal arranged in a frame.",
+     "fr": "J'utilise de petites pièces de métal réutilisables disposées dans un cadre."
+    },
+    {
+     "en": "I was developed in the 1440s in the German city of Mainz.",
+     "fr": "J'ai été mise au point dans les années 1440 dans la ville allemande de Mayence."
+    },
+    {
+     "en": "My most famous product is a Bible printed around 1455.",
+     "fr": "Ma production la plus célèbre est une Bible imprimée vers 1455."
+    },
+    {
+     "en": "I made it far faster to copy books and helped ideas spread across Europe.",
+     "fr": "J'ai rendu la copie des livres bien plus rapide et aidé les idées à se répandre en Europe."
+    }
+   ],
+   "expl": {
+    "en": "Johannes Gutenberg's press combined movable metal type, oil-based ink and a screw press.",
+    "fr": "La presse de Johannes Gutenberg associait des caractères métalliques mobiles, une encre grasse et une presse à vis."
+   }
+  },
+  {
+   "id": "cl-021",
+   "category": "science",
+   "subcategory": "inventions",
+   "d": 2,
+   "answer": {
+    "en": "The magnetic compass",
+    "fr": "La boussole"
+   },
+   "choices": [
+    {
+     "en": "The magnetic compass",
+     "fr": "La boussole"
+    },
+    {
+     "en": "The astrolabe",
+     "fr": "L'astrolabe"
+    },
+    {
+     "en": "The sextant",
+     "fr": "Le sextant"
+    },
+    {
+     "en": "The hourglass",
+     "fr": "Le sablier"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I rely on a magnetised needle that swings freely.",
+     "fr": "Je repose sur une aiguille aimantée qui pivote librement."
+    },
+    {
+     "en": "My earliest forms appeared in China, at first used in divination.",
+     "fr": "Mes plus anciennes formes sont apparues en Chine, d'abord utilisées pour la divination."
+    },
+    {
+     "en": "From around the 12th century I helped sailors find their way at sea.",
+     "fr": "À partir du XIIe siècle environ, j'ai aidé les marins à s'orienter en mer."
+    },
+    {
+     "en": "My needle settles toward Earth's magnetic north.",
+     "fr": "Mon aiguille se stabilise vers le nord magnétique de la Terre."
+    }
+   ],
+   "expl": {
+    "en": "The astrolabe and sextant measure the angle of stars; the hourglass measures time. Only the compass uses a magnetised needle.",
+    "fr": "L'astrolabe et le sextant mesurent la hauteur des astres ; le sablier mesure le temps. Seule la boussole utilise une aiguille aimantée."
+   }
+  },
+  {
+   "id": "cl-022",
+   "category": "science",
+   "subcategory": "inventions",
+   "d": 3,
+   "answer": {
+    "en": "The Antikythera mechanism",
+    "fr": "Le mécanisme d'Anticythère"
+   },
+   "choices": [
+    {
+     "en": "The Phaistos Disc",
+     "fr": "Le disque de Phaistos"
+    },
+    {
+     "en": "The Antikythera mechanism",
+     "fr": "Le mécanisme d'Anticythère"
+    },
+    {
+     "en": "The Rosetta Stone",
+     "fr": "La pierre de Rosette"
+    },
+    {
+     "en": "The Piri Reis map",
+     "fr": "La carte de Piri Reis"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I was found by sponge divers in 1900 in a shipwreck off a Greek island.",
+     "fr": "J'ai été trouvé par des plongeurs en 1900 dans une épave au large d'une île grecque."
+    },
+    {
+     "en": "I date from the second or first century BC.",
+     "fr": "Je date du IIe ou du Ier siècle av. J.-C."
+    },
+    {
+     "en": "I contain a complex system of bronze gears.",
+     "fr": "Je renferme un système complexe d'engrenages en bronze."
+    },
+    {
+     "en": "I was used to calculate astronomical positions and predict eclipses.",
+     "fr": "Je servais à calculer des positions astronomiques et à prévoir des éclipses."
+    }
+   ],
+   "expl": {
+    "en": "The Antikythera mechanism is the oldest known geared astronomical calculator. The Phaistos Disc is a clay disc from Crete, the Rosetta Stone an inscribed slab and the Piri Reis map an Ottoman chart from 1513.",
+    "fr": "Le mécanisme d'Anticythère est le plus ancien calculateur astronomique à engrenages connu. Le disque de Phaistos est un disque d'argile de Crète, la pierre de Rosette une stèle gravée et la carte de Piri Reis une carte ottomane de 1513."
+   }
+  },
+  {
+   "id": "cl-023",
+   "category": "history",
+   "subcategory": "inventions",
+   "d": 2,
+   "answer": {
+    "en": "The Rosetta Stone",
+    "fr": "La pierre de Rosette"
+   },
+   "choices": [
+    {
+     "en": "The Behistun Inscription",
+     "fr": "L'inscription de Behistun"
+    },
+    {
+     "en": "The Code of Hammurabi stele",
+     "fr": "La stèle du code de Hammurabi"
+    },
+    {
+     "en": "The Rosetta Stone",
+     "fr": "La pierre de Rosette"
+    },
+    {
+     "en": "The Phaistos Disc",
+     "fr": "Le disque de Phaistos"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I am a fragment of a larger dark stone slab carrying a single decree repeated three times.",
+     "fr": "Je suis le fragment d'une grande stèle sombre portant un même décret répété trois fois."
+    },
+    {
+     "en": "My three scripts are hieroglyphic, Demotic and Ancient Greek.",
+     "fr": "Mes trois écritures sont les hiéroglyphes, le démotique et le grec ancien."
+    },
+    {
+     "en": "French soldiers found me in 1799 in Egypt.",
+     "fr": "Des soldats français m'ont découvert en 1799 en Égypte."
+    },
+    {
+     "en": "Champollion used me to decipher hieroglyphs, and I now sit in the British Museum.",
+     "fr": "Champollion s'est servi de moi pour déchiffrer les hiéroglyphes, et je suis aujourd'hui au British Museum."
+    }
+   ],
+   "expl": {
+    "en": "The Rosetta Stone carries a decree of 196 BC. The Behistun Inscription is a rock relief in Iran, and the Code of Hammurabi is written in Akkadian only.",
+    "fr": "La pierre de Rosette porte un décret de 196 av. J.-C. L'inscription de Behistun est un bas-relief rocheux en Iran, et le code de Hammurabi est écrit en akkadien seulement."
+   }
+  },
+  {
+   "id": "cl-024",
+   "category": "science",
+   "subcategory": "inventions",
+   "d": 3,
+   "answer": {
+    "en": "The Enigma machine",
+    "fr": "La machine Enigma"
+   },
+   "choices": [
+    {
+     "en": "The Colossus computer",
+     "fr": "L'ordinateur Colossus"
+    },
+    {
+     "en": "The Jacquard loom",
+     "fr": "Le métier Jacquard"
+    },
+    {
+     "en": "The Hollerith tabulator",
+     "fr": "La tabulatrice de Hollerith"
+    },
+    {
+     "en": "The Enigma machine",
+     "fr": "La machine Enigma"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I am an electro-mechanical device with a keyboard and rotating wheels.",
+     "fr": "Je suis un appareil électromécanique avec un clavier et des rotors."
+    },
+    {
+     "en": "I was invented by a German engineer after the First World War and first sold commercially.",
+     "fr": "J'ai été inventée par un ingénieur allemand après la Première Guerre mondiale et d'abord vendue dans le commerce."
+    },
+    {
+     "en": "Armed forces adopted me in the late 1920s and 1930s for secret messages.",
+     "fr": "Des armées m'ont adoptée à la fin des années 1920 et dans les années 1930 pour leurs messages secrets."
+    },
+    {
+     "en": "Polish, then British cryptanalysts, including those at Bletchley Park, broke my messages.",
+     "fr": "Des cryptanalystes polonais, puis britanniques, notamment à Bletchley Park, ont percé mes messages."
+    }
+   ],
+   "expl": {
+    "en": "Arthur Scherbius patented the rotor cipher machine in 1918. Colossus was a British codebreaking computer, not a cipher machine; the Jacquard loom and Hollerith tabulator used punched cards.",
+    "fr": "Arthur Scherbius a breveté la machine à chiffrer à rotors en 1918. Colossus était un ordinateur britannique de décryptage, non une machine à chiffrer ; le métier Jacquard et la tabulatrice de Hollerith utilisaient des cartes perforées."
+   }
+  },
+  {
+   "id": "cl-025",
+   "category": "arts",
+   "subcategory": "works",
+   "d": 1,
+   "answer": {
+    "en": "The Mona Lisa",
+    "fr": "La Joconde"
+   },
+   "choices": [
+    {
+     "en": "The Mona Lisa",
+     "fr": "La Joconde"
+    },
+    {
+     "en": "Girl with a Pearl Earring",
+     "fr": "La Jeune Fille à la perle"
+    },
+    {
+     "en": "The Birth of Venus",
+     "fr": "La Naissance de Vénus"
+    },
+    {
+     "en": "The Arnolfini Portrait",
+     "fr": "Les Époux Arnolfini"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I am an oil painting on a poplar wood panel, made in the early 16th century.",
+     "fr": "Je suis une peinture à l'huile sur panneau de peuplier, réalisée au début du XVIe siècle."
+    },
+    {
+     "en": "I show a woman seated with folded hands in front of a distant landscape.",
+     "fr": "Je représente une femme assise, les mains croisées, devant un paysage lointain."
+    },
+    {
+     "en": "I was stolen from my museum in 1911 and recovered two years later.",
+     "fr": "J'ai été volée à mon musée en 1911 et retrouvée deux ans plus tard."
+    },
+    {
+     "en": "I hang in the Louvre in Paris, and my sitter's smile is world-famous.",
+     "fr": "Je suis accrochée au Louvre, à Paris, et le sourire de mon modèle est célèbre dans le monde entier."
+    }
+   ],
+   "expl": {
+    "en": "The Mona Lisa was painted by Leonardo da Vinci from about 1503. Girl with a Pearl Earring is a Dutch canvas of about 1665, The Birth of Venus is a Botticelli canvas of the 1480s and the Arnolfini Portrait an oak-panel work of 1434.",
+    "fr": "La Joconde a été peinte par Léonard de Vinci à partir de 1503 environ. La Jeune Fille à la perle est une toile hollandaise d'environ 1665, La Naissance de Vénus une toile de Botticelli des années 1480 et Les Époux Arnolfini un panneau de chêne de 1434."
+   }
+  },
+  {
+   "id": "cl-026",
+   "category": "literature",
+   "subcategory": "works",
+   "d": 1,
+   "answer": {
+    "en": "Hamlet",
+    "fr": "Hamlet"
+   },
+   "choices": [
+    {
+     "en": "Macbeth",
+     "fr": "Macbeth"
+    },
+    {
+     "en": "Hamlet",
+     "fr": "Hamlet"
+    },
+    {
+     "en": "Othello",
+     "fr": "Othello"
+    },
+    {
+     "en": "King Lear",
+     "fr": "Le Roi Lear"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I am a tragedy written around the year 1600.",
+     "fr": "Je suis une tragédie écrite vers l'an 1600."
+    },
+    {
+     "en": "I am set in a castle in Denmark called Elsinore.",
+     "fr": "Mon action se déroule dans un château du Danemark appelé Elseneur."
+    },
+    {
+     "en": "My hero is told by a ghost that his father was murdered.",
+     "fr": "Mon héros apprend par un fantôme que son père a été assassiné."
+    },
+    {
+     "en": "I contain the line 'To be, or not to be'.",
+     "fr": "Je contiens le vers « Être ou ne pas être »."
+    }
+   ],
+   "expl": {
+    "en": "Hamlet is set in Denmark. Macbeth is set in Scotland, Othello in Venice and Cyprus and King Lear in ancient Britain.",
+    "fr": "Hamlet se passe au Danemark. Macbeth se passe en Écosse, Othello à Venise et à Chypre et Le Roi Lear dans la Grande-Bretagne antique."
+   }
+  },
+  {
+   "id": "cl-027",
+   "category": "literature",
+   "subcategory": "works",
+   "d": 2,
+   "answer": {
+    "en": "Les Misérables",
+    "fr": "Les Misérables"
+   },
+   "choices": [
+    {
+     "en": "The Count of Monte Cristo",
+     "fr": "Le Comte de Monte-Cristo"
+    },
+    {
+     "en": "Germinal",
+     "fr": "Germinal"
+    },
+    {
+     "en": "Les Misérables",
+     "fr": "Les Misérables"
+    },
+    {
+     "en": "Madame Bovary",
+     "fr": "Madame Bovary"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I am a French novel published in 1862.",
+     "fr": "Je suis un roman français publié en 1862."
+    },
+    {
+     "en": "My story follows a former convict across decades of 19th-century France.",
+     "fr": "Mon histoire suit un ancien forçat pendant des décennies dans la France du XIXe siècle."
+    },
+    {
+     "en": "A relentless police inspector pursues my hero.",
+     "fr": "Un inspecteur de police implacable poursuit mon héros."
+    },
+    {
+     "en": "I inspired a long-running stage musical.",
+     "fr": "J'ai inspiré une comédie musicale à l'affiche pendant des décennies."
+    }
+   ],
+   "expl": {
+    "en": "Victor Hugo published Les Misérables in 1862, with Jean Valjean and Inspector Javert. Monte Cristo dates from 1844–46, Germinal from 1885 and Madame Bovary from 1857.",
+    "fr": "Victor Hugo a publié Les Misérables en 1862, avec Jean Valjean et l'inspecteur Javert. Monte-Cristo date de 1844-1846, Germinal de 1885 et Madame Bovary de 1857."
+   }
+  },
+  {
+   "id": "cl-028",
+   "category": "literature",
+   "subcategory": "works",
+   "d": 3,
+   "answer": {
+    "en": "The Divine Comedy",
+    "fr": "La Divine Comédie"
+   },
+   "choices": [
+    {
+     "en": "Orlando Furioso",
+     "fr": "Roland furieux"
+    },
+    {
+     "en": "The Decameron",
+     "fr": "Le Décaméron"
+    },
+    {
+     "en": "The Canterbury Tales",
+     "fr": "Les Contes de Canterbury"
+    },
+    {
+     "en": "The Divine Comedy",
+     "fr": "La Divine Comédie"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I am an epic poem composed in the early 14th century in vernacular Italian.",
+     "fr": "Je suis un poème épique composé au début du XIVe siècle en italien vernaculaire."
+    },
+    {
+     "en": "I am divided into three parts.",
+     "fr": "Je suis divisée en trois parties."
+    },
+    {
+     "en": "My narrator is guided at first by the Roman poet Virgil.",
+     "fr": "Mon narrateur est d'abord guidé par le poète romain Virgile."
+    },
+    {
+     "en": "My parts are named Hell, Purgatory and Paradise.",
+     "fr": "Mes parties s'appellent l'Enfer, le Purgatoire et le Paradis."
+    }
+   ],
+   "expl": {
+    "en": "Dante wrote the Divine Comedy between about 1308 and 1320. Orlando Furioso is a 16th-century poem, the Decameron a prose collection and the Canterbury Tales is in English.",
+    "fr": "Dante a écrit la Divine Comédie entre 1308 et 1320 environ. Roland furieux est un poème du XVIe siècle, le Décaméron un recueil en prose et les Contes de Canterbury sont en anglais."
+   }
+  },
+  {
+   "id": "cl-029",
+   "category": "music",
+   "subcategory": "works",
+   "d": 2,
+   "answer": {
+    "en": "Beethoven's Ninth Symphony",
+    "fr": "La Neuvième Symphonie de Beethoven"
+   },
+   "choices": [
+    {
+     "en": "Beethoven's Ninth Symphony",
+     "fr": "La Neuvième Symphonie de Beethoven"
+    },
+    {
+     "en": "Beethoven's Eroica Symphony",
+     "fr": "La Symphonie héroïque de Beethoven"
+    },
+    {
+     "en": "Berlioz's Symphonie fantastique",
+     "fr": "La Symphonie fantastique de Berlioz"
+    },
+    {
+     "en": "Mozart's Jupiter Symphony",
+     "fr": "La Symphonie Jupiter de Mozart"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I am a symphony first performed in 1824.",
+     "fr": "Je suis une symphonie créée en 1824."
+    },
+    {
+     "en": "My composer was almost completely deaf when I was written.",
+     "fr": "Mon compositeur était presque totalement sourd quand j'ai été écrite."
+    },
+    {
+     "en": "I was the first symphony by a major composer to include vocal soloists and a chorus.",
+     "fr": "J'ai été la première symphonie d'un grand compositeur à inclure des solistes vocaux et un chœur."
+    },
+    {
+     "en": "My finale sets Schiller's 'Ode to Joy'.",
+     "fr": "Mon finale met en musique l'« Ode à la joie » de Schiller."
+    }
+   ],
+   "expl": {
+    "en": "Beethoven's Ninth premiered in Vienna in 1824. The Eroica dates from 1804, Berlioz's work from 1830 and Mozart's Jupiter from 1788, and none has a choral finale.",
+    "fr": "La Neuvième de Beethoven a été créée à Vienne en 1824. L'Héroïque date de 1804, l'œuvre de Berlioz de 1830 et la Jupiter de Mozart de 1788, et aucune n'a de finale choral."
+   }
+  },
+  {
+   "id": "cl-030",
+   "category": "arts",
+   "subcategory": "works",
+   "d": 2,
+   "answer": {
+    "en": "Guernica",
+    "fr": "Guernica"
+   },
+   "choices": [
+    {
+     "en": "The Third of May 1808",
+     "fr": "Le Trois Mai 1808"
+    },
+    {
+     "en": "Guernica",
+     "fr": "Guernica"
+    },
+    {
+     "en": "The Raft of the Medusa",
+     "fr": "Le Radeau de la Méduse"
+    },
+    {
+     "en": "Les Demoiselles d'Avignon",
+     "fr": "Les Demoiselles d'Avignon"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I am a huge oil painting, about 3.5 by 7.8 metres, in black, white and grey.",
+     "fr": "Je suis une immense peinture à l'huile, d'environ 3,5 sur 7,8 mètres, en noir, blanc et gris."
+    },
+    {
+     "en": "I was painted in 1937 for an exhibition in Paris.",
+     "fr": "J'ai été peinte en 1937 pour une exposition à Paris."
+    },
+    {
+     "en": "I respond to the bombing of a Basque town during a civil war.",
+     "fr": "Je réponds au bombardement d'une ville basque pendant une guerre civile."
+    },
+    {
+     "en": "I am by Pablo Picasso and hang in Madrid.",
+     "fr": "Je suis de Pablo Picasso et je suis exposée à Madrid."
+    }
+   ],
+   "expl": {
+    "en": "Guernica is in the Museo Reina Sofía. The Third of May 1808 is Goya's colourful 1814 work, The Raft of the Medusa is by Géricault (1819) and Les Demoiselles d'Avignon, also by Picasso, dates from 1907.",
+    "fr": "Guernica est au Museo Reina Sofía. Le Trois Mai 1808 est l'œuvre colorée de Goya (1814), Le Radeau de la Méduse est de Géricault (1819) et Les Demoiselles d'Avignon, aussi de Picasso, date de 1907."
+   }
+  },
+  {
+   "id": "cl-031",
+   "category": "history",
+   "subcategory": "events",
+   "d": 1,
+   "answer": {
+    "en": "The Storming of the Bastille",
+    "fr": "La prise de la Bastille"
+   },
+   "choices": [
+    {
+     "en": "The Women's March on Versailles",
+     "fr": "La marche des femmes sur Versailles"
+    },
+    {
+     "en": "The Tennis Court Oath",
+     "fr": "Le serment du Jeu de paume"
+    },
+    {
+     "en": "The Storming of the Bastille",
+     "fr": "La prise de la Bastille"
+    },
+    {
+     "en": "The Storming of the Tuileries",
+     "fr": "La prise des Tuileries"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I took place in Paris in the summer of 1789.",
+     "fr": "J'ai eu lieu à Paris pendant l'été 1789."
+    },
+    {
+     "en": "A crowd searched for gunpowder and weapons days after a popular finance minister was dismissed.",
+     "fr": "Une foule cherchait de la poudre et des armes quelques jours après le renvoi d'un ministre des Finances populaire."
+    },
+    {
+     "en": "I targeted a medieval fortress used as a state prison.",
+     "fr": "J'ai visé une forteresse médiévale utilisée comme prison d'État."
+    },
+    {
+     "en": "France now commemorates me every 14 July.",
+     "fr": "La France me commémore aujourd'hui chaque 14 juillet."
+    }
+   ],
+   "expl": {
+    "en": "The Bastille fell on 14 July 1789. The Tennis Court Oath was a pledge of June 1789, the March on Versailles took place in October 1789 and the Tuileries fell in 1792.",
+    "fr": "La Bastille est tombée le 14 juillet 1789. Le serment du Jeu de paume date de juin 1789, la marche sur Versailles d'octobre 1789 et la prise des Tuileries de 1792."
+   }
+  },
+  {
+   "id": "cl-032",
+   "category": "history",
+   "subcategory": "events",
+   "d": 2,
+   "answer": {
+    "en": "The Great Fire of London",
+    "fr": "Le grand incendie de Londres"
+   },
+   "choices": [
+    {
+     "en": "The Great Chicago Fire",
+     "fr": "Le grand incendie de Chicago"
+    },
+    {
+     "en": "The Great Fire of Rome",
+     "fr": "Le grand incendie de Rome"
+    },
+    {
+     "en": "The Fire of Moscow",
+     "fr": "L'incendie de Moscou"
+    },
+    {
+     "en": "The Great Fire of London",
+     "fr": "Le grand incendie de Londres"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I began in the early hours of a Sunday in September 1666.",
+     "fr": "J'ai commencé aux premières heures d'un dimanche de septembre 1666."
+    },
+    {
+     "en": "I started in a baker's shop on Pudding Lane.",
+     "fr": "Je suis né dans la boulangerie de Pudding Lane."
+    },
+    {
+     "en": "I destroyed around 13,000 houses and the old St Paul's Cathedral.",
+     "fr": "J'ai détruit environ 13 000 maisons et l'ancienne cathédrale Saint-Paul."
+    },
+    {
+     "en": "Only a handful of deaths were officially recorded, and a tall Monument now marks where I began.",
+     "fr": "Seule une poignée de morts ont été officiellement recensés, et un haut monument marque aujourd'hui l'endroit où j'ai commencé."
+    }
+   ],
+   "expl": {
+    "en": "The Great Fire of London burned from 2 to 6 September 1666. Chicago burned in 1871, Rome in AD 64 and Moscow in 1812.",
+    "fr": "Le grand incendie de Londres a duré du 2 au 6 septembre 1666. Chicago a brûlé en 1871, Rome en 64 apr. J.-C. et Moscou en 1812."
+   }
+  },
+  {
+   "id": "cl-033",
+   "category": "history",
+   "subcategory": "events",
+   "d": 3,
+   "answer": {
+    "en": "The Congress of Vienna",
+    "fr": "Le congrès de Vienne"
+   },
+   "choices": [
+    {
+     "en": "The Congress of Vienna",
+     "fr": "Le congrès de Vienne"
+    },
+    {
+     "en": "The Congress of Berlin",
+     "fr": "Le congrès de Berlin"
+    },
+    {
+     "en": "The Peace of Westphalia",
+     "fr": "Les traités de Westphalie"
+    },
+    {
+     "en": "The Treaty of Versailles",
+     "fr": "Le traité de Versailles"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I was a diplomatic conference held in 1814 and 1815 after a long series of wars.",
+     "fr": "J'ai été une conférence diplomatique tenue en 1814 et 1815 après une longue série de guerres."
+    },
+    {
+     "en": "My host was the Austrian Empire, and its foreign minister Metternich presided.",
+     "fr": "Mon hôte était l'Empire d'Autriche, et son ministre des Affaires étrangères Metternich me présidait."
+    },
+    {
+     "en": "I tried to restore a balance of power in Europe after the fall of Napoleon.",
+     "fr": "J'ai cherché à rétablir un équilibre des puissances en Europe après la chute de Napoléon."
+    },
+    {
+     "en": "My final act was signed in June 1815, days before Waterloo.",
+     "fr": "Mon acte final a été signé en juin 1815, quelques jours avant Waterloo."
+    }
+   ],
+   "expl": {
+    "en": "The Congress of Vienna's final act dates from 9 June 1815. The Congress of Berlin was in 1878, Westphalia in 1648 and Versailles in 1919.",
+    "fr": "L'acte final du congrès de Vienne date du 9 juin 1815. Le congrès de Berlin eut lieu en 1878, la Westphalie en 1648 et Versailles en 1919."
+   }
+  },
+  {
+   "id": "cl-034",
+   "category": "science",
+   "subcategory": "concepts",
+   "d": 3,
+   "answer": {
+    "en": "Entropy",
+    "fr": "L'entropie"
+   },
+   "choices": [
+    {
+     "en": "Enthalpy",
+     "fr": "L'enthalpie"
+    },
+    {
+     "en": "Entropy",
+     "fr": "L'entropie"
+    },
+    {
+     "en": "Momentum",
+     "fr": "La quantité de mouvement"
+    },
+    {
+     "en": "Inertia",
+     "fr": "L'inertie"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I am a quantity introduced in the 19th century in the study of heat engines.",
+     "fr": "Je suis une grandeur introduite au XIXe siècle dans l'étude des machines thermiques."
+    },
+    {
+     "en": "In an isolated system I never decrease.",
+     "fr": "Dans un système isolé, je ne diminue jamais."
+    },
+    {
+     "en": "I am often loosely called disorder; more precisely I count how many microscopic arrangements match a state.",
+     "fr": "On me dit souvent « désordre » ; plus précisément, je compte combien d'arrangements microscopiques correspondent à un état."
+    },
+    {
+     "en": "The second law of thermodynamics is about me.",
+     "fr": "Le deuxième principe de la thermodynamique me concerne."
+    }
+   ],
+   "expl": {
+    "en": "Clausius introduced entropy in 1865. Enthalpy can fall, momentum is conserved rather than growing, and inertia is a property of mass.",
+    "fr": "Clausius a introduit l'entropie en 1865. L'enthalpie peut baisser, la quantité de mouvement se conserve au lieu de croître, et l'inertie est une propriété de la masse."
+   }
+  },
+  {
+   "id": "cl-035",
+   "category": "politics",
+   "subcategory": "concepts",
+   "d": 2,
+   "answer": {
+    "en": "Inflation",
+    "fr": "L'inflation"
+   },
+   "choices": [
+    {
+     "en": "Deflation",
+     "fr": "La déflation"
+    },
+    {
+     "en": "Gross domestic product",
+     "fr": "Le produit intérieur brut"
+    },
+    {
+     "en": "Inflation",
+     "fr": "L'inflation"
+    },
+    {
+     "en": "Recession",
+     "fr": "La récession"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I describe a general change in prices over time.",
+     "fr": "Je décris une variation générale des prix dans le temps."
+    },
+    {
+     "en": "I am commonly measured by following a basket of goods and services.",
+     "fr": "On me mesure couramment en suivant un panier de biens et de services."
+    },
+    {
+     "en": "When I rise, each unit of money buys less.",
+     "fr": "Quand je monte, chaque unité de monnaie achète moins."
+    },
+    {
+     "en": "Central banks often aim to keep me around 2% a year.",
+     "fr": "Les banques centrales cherchent souvent à me maintenir autour de 2 % par an."
+    }
+   ],
+   "expl": {
+    "en": "Inflation is a rise in the general price level. Deflation is a fall, GDP measures output and a recession is a fall in output.",
+    "fr": "L'inflation est une hausse du niveau général des prix. La déflation en est une baisse, le PIB mesure la production et une récession est un recul de la production."
+   }
+  },
+  {
+   "id": "cl-036",
+   "category": "philosophy",
+   "subcategory": "concepts",
+   "d": 3,
+   "answer": {
+    "en": "The categorical imperative",
+    "fr": "L'impératif catégorique"
+   },
+   "choices": [
+    {
+     "en": "The principle of utility",
+     "fr": "Le principe d'utilité"
+    },
+    {
+     "en": "The veil of ignorance",
+     "fr": "Le voile d'ignorance"
+    },
+    {
+     "en": "The social contract",
+     "fr": "Le contrat social"
+    },
+    {
+     "en": "The categorical imperative",
+     "fr": "L'impératif catégorique"
+    }
+   ],
+   "clues": [
+    {
+     "en": "I am a central principle of a philosopher born in Königsberg in 1724.",
+     "fr": "Je suis un principe central d'un philosophe né à Königsberg en 1724."
+    },
+    {
+     "en": "I say to act only on a maxim you could will to become a universal law.",
+     "fr": "Je demande d'agir selon la seule maxime dont tu pourrais vouloir qu'elle devienne une loi universelle."
+    },
+    {
+     "en": "I bind regardless of desires, rather than serving as a means to some goal.",
+     "fr": "Je m'impose quels que soient les désirs, au lieu de servir de moyen vers un but."
+    },
+    {
+     "en": "I am the cornerstone of an ethics based on duty, in contrast to utilitarianism.",
+     "fr": "Je suis la pierre angulaire d'une éthique du devoir, par opposition à l'utilitarisme."
+    }
+   ],
+   "expl": {
+    "en": "Kant formulated the categorical imperative in 1785. The principle of utility is Bentham's, the veil of ignorance is Rawls's and the social contract belongs to Hobbes, Locke and Rousseau.",
+    "fr": "Kant a formulé l'impératif catégorique en 1785. Le principe d'utilité est celui de Bentham, le voile d'ignorance celui de Rawls et le contrat social appartient à Hobbes, Locke et Rousseau."
+   }
+  }
+ ]
+}

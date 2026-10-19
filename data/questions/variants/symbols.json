@@ -4,1162 +4,6 @@
  "note": "Difficulty ladders: the original question keeps its own level, these are the other levels. Unreviewed.",
  "families": [
   {
-   "id": "sym-001",
-   "ask": {
-    "1": "Easy symbol",
-    "2": "Medium symbol",
-    "3": "Hard symbol"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "What is the chemical symbol for sodium?",
-     "choices": [
-      "Sd",
-      "So",
-      "Nm",
-      "Na"
-     ],
-     "answer": 3,
-     "explanation": "Na comes from the Latin natrium."
-    },
-    {
-     "level": 3,
-     "question": "What is the chemical symbol for tungsten, from its German name Wolfram?",
-     "choices": [
-      "W",
-      "Tn",
-      "Wo",
-      "Tu"
-     ],
-     "answer": 0,
-     "explanation": "Tungsten's symbol W comes from Wolfram."
-    }
-   ]
-  },
-  {
-   "id": "sym-002",
-   "ask": {
-    "1": "Easy symbol",
-    "2": "Medium symbol",
-    "3": "Hard symbol"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "What is the chemical symbol for lead?",
-     "choices": [
-      "Ld",
-      "Pb",
-      "Pl",
-      "Le"
-     ],
-     "answer": 1,
-     "explanation": "Pb comes from the Latin plumbum."
-    },
-    {
-     "level": 3,
-     "question": "What is the chemical symbol for antimony?",
-     "choices": [
-      "An",
-      "Sb",
-      "At",
-      "Am"
-     ],
-     "answer": 1,
-     "explanation": "Sb comes from the Latin stibium."
-    }
-   ]
-  },
-  {
-   "id": "sym-003",
-   "ask": {
-    "1": "Easy symbol",
-    "2": "Medium symbol",
-    "3": "Hard symbol"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "Which element has the chemical symbol Ca?",
-     "choices": [
-      "Cadmium",
-      "Cesium",
-      "Calcium",
-      "Carbon"
-     ],
-     "answer": 2,
-     "explanation": "Ca stands for calcium."
-    },
-    {
-     "level": 3,
-     "question": "Which element has the chemical symbol Mo?",
-     "choices": [
-      "Magnesium",
-      "Molybdenum",
-      "Manganese",
-      "Mercury"
-     ],
-     "answer": 1,
-     "explanation": "Mo is molybdenum, atomic number 42."
-    }
-   ]
-  },
-  {
-   "id": "sym-004",
-   "ask": {
-    "1": "Easy symbol",
-    "2": "Medium symbol",
-    "3": "Hard symbol"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "What is the chemical symbol for oxygen?",
-     "choices": [
-      "Om",
-      "O",
-      "Og",
-      "Ox"
-     ],
-     "answer": 1,
-     "explanation": "O is oxygen."
-    },
-    {
-     "level": 3,
-     "question": "What is the chemical symbol for gold, which comes from its Latin name aurum?",
-     "choices": [
-      "Gd",
-      "Ag",
-      "Go",
-      "Au"
-     ],
-     "answer": 3,
-     "explanation": "Au comes from aurum."
-    }
-   ]
-  },
-  {
-   "id": "sym-005",
-   "ask": {
-    "1": "Easy symbol",
-    "2": "Medium symbol",
-    "3": "Hard symbol"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which element has the chemical symbol C?",
-     "choices": [
-      "Calcium",
-      "Copper",
-      "Carbon",
-      "Chlorine"
-     ],
-     "answer": 2,
-     "explanation": "C stands for carbon."
-    },
-    {
-     "level": 3,
-     "question": "Which element has the chemical symbol Cs?",
-     "choices": [
-      "Carbon",
-      "Chromium",
-      "Caesium",
-      "Cobalt"
-     ],
-     "answer": 2,
-     "explanation": "Cs is caesium, an alkali metal."
-    }
-   ]
-  },
-  {
-   "id": "sym-006",
-   "ask": {
-    "1": "Easy symbol",
-    "2": "Medium symbol",
-    "3": "Hard symbol"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which element has the chemical symbol H?",
-     "choices": [
-      "Hafnium",
-      "Holmium",
-      "Hydrogen",
-      "Helium"
-     ],
-     "answer": 2,
-     "explanation": "H is hydrogen."
-    },
-    {
-     "level": 3,
-     "question": "Which element has the chemical symbol Rb?",
-     "choices": [
-      "Rhenium",
-      "Radium",
-      "Ruthenium",
-      "Rubidium"
-     ],
-     "answer": 3,
-     "explanation": "Rb is rubidium."
-    }
-   ]
-  },
-  {
-   "id": "sym-007",
-   "ask": {
-    "1": "Easy symbol",
-    "2": "Medium symbol",
-    "3": "Hard symbol"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which element has the chemical symbol He?",
-     "choices": [
-      "Hafnium",
-      "Helium",
-      "Holmium",
-      "Hydrogen"
-     ],
-     "answer": 1,
-     "explanation": "He is helium."
-    },
-    {
-     "level": 2,
-     "question": "Which element has the chemical symbol Fe?",
-     "choices": [
-      "Iron",
-      "Francium",
-      "Fermium",
-      "Fluorine"
-     ],
-     "answer": 0,
-     "explanation": "Fe comes from the Latin ferrum."
-    }
-   ]
-  },
-  {
-   "id": "sym-008",
-   "ask": {
-    "1": "Easy symbol",
-    "2": "Medium symbol",
-    "3": "Hard symbol"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which element has the chemical symbol Cl?",
-     "choices": [
-      "Cobalt",
-      "Carbon",
-      "Chlorine",
-      "Calcium"
-     ],
-     "answer": 2,
-     "explanation": "Cl is chlorine."
-    },
-    {
-     "level": 2,
-     "question": "Which element has the chemical symbol Zn?",
-     "choices": [
-      "Xenon",
-      "Zinc",
-      "Tin",
-      "Zirconium"
-     ],
-     "answer": 1,
-     "explanation": "Zn is zinc."
-    }
-   ]
-  },
-  {
-   "id": "sym-009",
-   "ask": {
-    "1": "Easy symbol",
-    "2": "Medium symbol",
-    "3": "Hard symbol"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "What is the chemical symbol for carbon?",
-     "choices": [
-      "Ca",
-      "Co",
-      "Cr",
-      "C"
-     ],
-     "answer": 3,
-     "explanation": "C is carbon."
-    },
-    {
-     "level": 2,
-     "question": "What is the chemical symbol for potassium?",
-     "choices": [
-      "P",
-      "Pt",
-      "Po",
-      "K"
-     ],
-     "answer": 3,
-     "explanation": "K comes from the Latin kalium."
-    }
-   ]
-  },
-  {
-   "id": "sym-010",
-   "ask": {
-    "1": "Easy symbol",
-    "2": "Medium symbol",
-    "3": "Hard symbol"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which element has the chemical symbol Ne?",
-     "choices": [
-      "Neon",
-      "Nickel",
-      "Nitrogen",
-      "Sodium"
-     ],
-     "answer": 0,
-     "explanation": "Ne is neon."
-    },
-    {
-     "level": 2,
-     "question": "Which element has the chemical symbol Ni?",
-     "choices": [
-      "Nitrogen",
-      "Nickel",
-      "Niobium",
-      "Neon"
-     ],
-     "answer": 1,
-     "explanation": "Ni is nickel."
-    }
-   ]
-  },
-  {
-   "id": "sym-011",
-   "ask": {
-    "1": "Easy symbol",
-    "2": "Medium symbol",
-    "3": "Hard symbol"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "What is the chemical symbol for hydrogen?",
-     "choices": [
-      "Hd",
-      "H",
-      "He",
-      "Hy"
-     ],
-     "answer": 1,
-     "explanation": "H is hydrogen."
-    },
-    {
-     "level": 3,
-     "question": "What is the chemical symbol for tin?",
-     "choices": [
-      "Ti",
-      "Sn",
-      "Tn",
-      "St"
-     ],
-     "answer": 1,
-     "explanation": "Sn comes from the Latin stannum."
-    }
-   ]
-  },
-  {
-   "id": "sym-012",
-   "ask": {
-    "1": "Easy symbol",
-    "2": "Medium symbol",
-    "3": "Hard symbol"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "What is the chemical symbol for nitrogen?",
-     "choices": [
-      "N",
-      "Ni",
-      "Ne",
-      "Na"
-     ],
-     "answer": 0,
-     "explanation": "N is nitrogen."
-    },
-    {
-     "level": 2,
-     "question": "What is the chemical symbol for calcium?",
-     "choices": [
-      "Ca",
-      "Cl",
-      "Cd",
-      "C"
-     ],
-     "answer": 0,
-     "explanation": "Ca is calcium."
-    }
-   ]
-  },
-  {
-   "id": "sym-013",
-   "ask": {
-    "1": "Atomic number",
-    "2": "Atomic number",
-    "3": "Atomic number"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "Which element has atomic number 8?",
-     "choices": [
-      "Fluorine",
-      "Oxygen",
-      "Carbon",
-      "Nitrogen"
-     ],
-     "answer": 1,
-     "explanation": "Oxygen has 8 protons."
-    },
-    {
-     "level": 3,
-     "question": "Which element has atomic number 26?",
-     "choices": [
-      "Nickel",
-      "Manganese",
-      "Iron",
-      "Cobalt"
-     ],
-     "answer": 2,
-     "explanation": "Iron is element 26."
-    }
-   ]
-  },
-  {
-   "id": "sym-014",
-   "ask": {
-    "1": "Atomic number",
-    "2": "Atomic number",
-    "3": "Atomic number"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which element has atomic number 2?",
-     "choices": [
-      "Neon",
-      "Helium",
-      "Lithium",
-      "Hydrogen"
-     ],
-     "answer": 1,
-     "explanation": "Helium has 2 protons."
-    },
-    {
-     "level": 3,
-     "question": "Which element has atomic number 47?",
-     "choices": [
-      "Platinum",
-      "Palladium",
-      "Silver",
-      "Gold"
-     ],
-     "answer": 2,
-     "explanation": "Silver is element 47."
-    }
-   ]
-  },
-  {
-   "id": "sym-015",
-   "ask": {
-    "1": "Atomic number",
-    "2": "Atomic number",
-    "3": "Atomic number"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which element has atomic number 6?",
-     "choices": [
-      "Carbon",
-      "Oxygen",
-      "Boron",
-      "Nitrogen"
-     ],
-     "answer": 0,
-     "explanation": "Carbon is element 6."
-    },
-    {
-     "level": 2,
-     "question": "Which element has atomic number 12?",
-     "choices": [
-      "Magnesium",
-      "Aluminium",
-      "Calcium",
-      "Sodium"
-     ],
-     "answer": 0,
-     "explanation": "Magnesium is element 12."
-    }
-   ]
-  },
-  {
-   "id": "sym-016",
-   "ask": {
-    "1": "Atomic number",
-    "2": "Atomic number",
-    "3": "Atomic number"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which element has atomic number 7?",
-     "choices": [
-      "Boron",
-      "Nitrogen",
-      "Oxygen",
-      "Carbon"
-     ],
-     "answer": 1,
-     "explanation": "Nitrogen is element 7."
-    },
-    {
-     "level": 2,
-     "question": "Which element has atomic number 29?",
-     "choices": [
-      "Copper",
-      "Iron",
-      "Zinc",
-      "Nickel"
-     ],
-     "answer": 0,
-     "explanation": "Copper is element 29."
-    }
-   ]
-  },
-  {
-   "id": "sym-017",
-   "ask": {
-    "1": "Gases",
-    "2": "Noble gas",
-    "3": "Noble gas facts"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which gas is used to fill party balloons so that they float?",
-     "choices": [
-      "Nitrogen",
-      "Carbon dioxide",
-      "Helium",
-      "Oxygen"
-     ],
-     "answer": 2,
-     "explanation": "Helium is lighter than air."
-    },
-    {
-     "level": 3,
-     "question": "Which noble gas is used in neon signs to produce a red-orange glow?",
-     "choices": [
-      "Krypton",
-      "Neon",
-      "Argon",
-      "Xenon"
-     ],
-     "answer": 1,
-     "explanation": "Neon glows red-orange in a tube."
-    }
-   ]
-  },
-  {
-   "id": "sym-018",
-   "ask": {
-    "1": "Formula",
-    "2": "Formula",
-    "3": "Formula"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "What is the chemical formula for water?",
-     "choices": [
-      "HO2",
-      "OH",
-      "H2O",
-      "H2O2"
-     ],
-     "answer": 2,
-     "explanation": "Water is H2O."
-    },
-    {
-     "level": 3,
-     "question": "What is the chemical formula for sulfuric acid?",
-     "choices": [
-      "H2SO4",
-      "H2CO3",
-      "HNO3",
-      "HCl"
-     ],
-     "answer": 0,
-     "explanation": "Sulfuric acid is H2SO4."
-    }
-   ]
-  },
-  {
-   "id": "sym-019",
-   "ask": {
-    "1": "Formula",
-    "2": "Formula",
-    "3": "Formula"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "What is the chemical formula for carbon dioxide?",
-     "choices": [
-      "C2O",
-      "CO3",
-      "CO2",
-      "CO"
-     ],
-     "answer": 2,
-     "explanation": "Carbon dioxide is CO2."
-    },
-    {
-     "level": 3,
-     "question": "What is the chemical formula for ammonia?",
-     "choices": [
-      "NH3",
-      "NO3",
-      "NH4",
-      "N2H"
-     ],
-     "answer": 0,
-     "explanation": "Ammonia is NH3."
-    }
-   ]
-  },
-  {
-   "id": "sym-020",
-   "ask": {
-    "1": "Formula",
-    "2": "Formula",
-    "3": "Formula"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "What is the chemical formula of nitrogen gas, the main gas in air?",
-     "choices": [
-      "NO2",
-      "N2",
-      "N",
-      "N3"
-     ],
-     "answer": 1,
-     "explanation": "Nitrogen gas is made of N2 molecules."
-    },
-    {
-     "level": 3,
-     "question": "What is the chemical formula for propane?",
-     "choices": [
-      "C3H8",
-      "C4H10",
-      "C2H6",
-      "C3H6"
-     ],
-     "answer": 0,
-     "explanation": "Propane is C3H8."
-    }
-   ]
-  },
-  {
-   "id": "sym-021",
-   "ask": {
-    "1": "Formula",
-    "2": "Formula",
-    "3": "Formula"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "What is the chemical formula for oxygen gas?",
-     "choices": [
-      "O2",
-      "O4",
-      "O3",
-      "O"
-     ],
-     "answer": 0,
-     "explanation": "Oxygen gas is O2."
-    },
-    {
-     "level": 2,
-     "question": "What is the chemical formula for carbon monoxide?",
-     "choices": [
-      "O2C",
-      "CO2",
-      "C2O",
-      "CO"
-     ],
-     "answer": 3,
-     "explanation": "Carbon monoxide is CO."
-    }
-   ]
-  },
-  {
-   "id": "sym-022",
-   "ask": {
-    "1": "Formula",
-    "2": "Formula",
-    "3": "Formula"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "What is the chemical formula for table sugar's simplest relative, the sugar in your blood?",
-     "choices": [
-      "NaCl",
-      "CO2",
-      "H2O",
-      "C6H12O6"
-     ],
-     "answer": 3,
-     "explanation": "Glucose is C6H12O6."
-    },
-    {
-     "level": 2,
-     "question": "What is the chemical formula for ethanol?",
-     "choices": [
-      "C3H7OH",
-      "CH3OH",
-      "C2H5OH",
-      "C2H6"
-     ],
-     "answer": 2,
-     "explanation": "Ethanol is C2H5OH."
-    }
-   ]
-  },
-  {
-   "id": "sym-023",
-   "ask": {
-    "1": "Symbol",
-    "2": "Symbol",
-    "3": "Symbol"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "What does the percent sign mean?",
-     "choices": [
-      "Per million",
-      "Per ten",
-      "Per thousand",
-      "Per hundred"
-     ],
-     "answer": 3,
-     "explanation": "Percent means per hundred."
-    },
-    {
-     "level": 3,
-     "question": "In logic and maths, what does the symbol ∀ mean?",
-     "choices": [
-      "For all",
-      "Therefore",
-      "There exists",
-      "Approximately"
-     ],
-     "answer": 0,
-     "explanation": "∀ means for all."
-    }
-   ]
-  },
-  {
-   "id": "sym-024",
-   "ask": {
-    "1": "Pi",
-    "2": "Pi",
-    "3": "Pi"
-   },
-   "variants": [
-    {
-     "level": 2,
-     "question": "The ratio of a circle's circumference to its diameter is which constant?",
-     "choices": [
-      "Euler's number",
-      "Pi",
-      "Phi",
-      "Tau"
-     ],
-     "answer": 1,
-     "explanation": "It is pi."
-    },
-    {
-     "level": 3,
-     "question": "Which ancient Greek mathematician gave the approximation of pi between 3 10/71 and 3 1/7?",
-     "choices": [
-      "Euclid",
-      "Archimedes",
-      "Ptolemy",
-      "Pythagoras"
-     ],
-     "answer": 1,
-     "explanation": "Archimedes bounded pi using polygons."
-    }
-   ]
-  },
-  {
-   "id": "sym-025",
-   "ask": {
-    "1": "Symbol",
-    "2": "Symbol",
-    "3": "Symbol"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "In mathematics, what does the symbol + mean?",
-     "choices": [
-      "Multiply",
-      "Divide",
-      "Subtract",
-      "Add"
-     ],
-     "answer": 3,
-     "explanation": "Plus means add."
-    },
-    {
-     "level": 3,
-     "question": "In calculus, what does the symbol ∫ denote?",
-     "choices": [
-      "An integral",
-      "A sum",
-      "A limit",
-      "A derivative"
-     ],
-     "answer": 0,
-     "explanation": "∫ denotes integration."
-    }
-   ]
-  },
-  {
-   "id": "sym-026",
-   "ask": {
-    "1": "Symbol",
-    "2": "Symbol",
-    "3": "Symbol"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "What does the equals sign mean in an equation?",
-     "choices": [
-      "The left side is larger",
-      "Both sides have the same value",
-      "The right side is larger",
-      "The numbers are added"
-     ],
-     "answer": 1,
-     "explanation": "The equals sign shows both sides are the same."
-    },
-    {
-     "level": 2,
-     "question": "In maths, what does the wavy double line sign mean, as in pi roughly 3.14?",
-     "choices": [
-      "Greater than",
-      "Approximately equal to",
-      "Identical to",
-      "Not equal to"
-     ],
-     "answer": 1,
-     "explanation": "The wavy sign means approximately equal."
-    }
-   ]
-  },
-  {
-   "id": "sym-027",
-   "ask": {
-    "1": "Constant",
-    "2": "Constant",
-    "3": "Constant"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which constant is about 3.14?",
-     "choices": [
-      "Phi",
-      "Pi",
-      "e",
-      "Zero"
-     ],
-     "answer": 1,
-     "explanation": "Pi is about 3.14."
-    },
-    {
-     "level": 2,
-     "question": "The golden ratio, often written with the Greek letter phi, is approximately what?",
-     "choices": [
-      "2.718",
-      "1.618",
-      "1.414",
-      "3.142"
-     ],
-     "answer": 1,
-     "explanation": "The golden ratio is about 1.618."
-    }
-   ]
-  },
-  {
-   "id": "sym-028",
-   "ask": {
-    "1": "Imaginary",
-    "2": "Imaginary",
-    "3": "Imaginary"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "What is the square root of 9?",
-     "choices": [
-      "4",
-      "6",
-      "81",
-      "3"
-     ],
-     "answer": 3,
-     "explanation": "3 times 3 is 9."
-    },
-    {
-     "level": 2,
-     "question": "What is the square root of 144?",
-     "choices": [
-      "72",
-      "14",
-      "12",
-      "16"
-     ],
-     "answer": 2,
-     "explanation": "12 squared is 144."
-    }
-   ]
-  },
-  {
-   "id": "sym-029",
-   "ask": {
-    "1": "Roman",
-    "2": "Roman",
-    "3": "Roman"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which number is the Roman numeral V?",
-     "choices": [
-      "4",
-      "10",
-      "5",
-      "6"
-     ],
-     "answer": 2,
-     "explanation": "The numeral V stands for 5."
-    },
-    {
-     "level": 3,
-     "question": "Which number is the Roman numeral D?",
-     "choices": [
-      "500",
-      "100",
-      "1,000",
-      "50"
-     ],
-     "answer": 0,
-     "explanation": "D is 500."
-    }
-   ]
-  },
-  {
-   "id": "sym-030",
-   "ask": {
-    "1": "Roman",
-    "2": "Roman",
-    "3": "Roman"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which number does the Roman numeral X represent?",
-     "choices": [
-      "50",
-      "10",
-      "100",
-      "5"
-     ],
-     "answer": 1,
-     "explanation": "X is 10."
-    },
-    {
-     "level": 2,
-     "question": "Which year is written MM in Roman numerals?",
-     "choices": [
-      "2100",
-      "1900",
-      "2000",
-      "1000"
-     ],
-     "answer": 2,
-     "explanation": "MM is 2000."
-    }
-   ]
-  },
-  {
-   "id": "sym-031",
-   "ask": {
-    "1": "Unit",
-    "2": "Unit",
-    "3": "Unit"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which unit measures the length of something?",
-     "choices": [
-      "Gram",
-      "Litre",
-      "Metre",
-      "Second"
-     ],
-     "answer": 2,
-     "explanation": "Metre measures length."
-    },
-    {
-     "level": 3,
-     "question": "What does the unit symbol Ω stand for?",
-     "choices": [
-      "Ounce",
-      "Ohm",
-      "Omega",
-      "Oersted"
-     ],
-     "answer": 1,
-     "explanation": "Ω stands for ohm."
-    }
-   ]
-  },
-  {
-   "id": "sym-032",
-   "ask": {
-    "1": "Unit",
-    "2": "Unit",
-    "3": "Unit"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "Which unit measures mass in the metric system?",
-     "choices": [
-      "Litre",
-      "Second",
-      "Kilogram",
-      "Metre"
-     ],
-     "answer": 2,
-     "explanation": "Kilogram measures mass."
-    },
-    {
-     "level": 3,
-     "question": "What does the unit symbol J stand for?",
-     "choices": [
-      "Joule",
-      "Jansky",
-      "Jolt",
-      "Jar"
-     ],
-     "answer": 0,
-     "explanation": "J is joule, the unit of energy."
-    }
-   ]
-  },
-  {
-   "id": "sym-033",
-   "ask": {
-    "1": "Unit",
-    "2": "Unit",
-    "3": "Unit"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "What does the unit symbol km stand for?",
-     "choices": [
-      "Kilometer per minute",
-      "Kelvin metre",
-      "Kilometre",
-      "Kilogram"
-     ],
-     "answer": 2,
-     "explanation": "km is kilometre."
-    },
-    {
-     "level": 2,
-     "question": "What does the unit symbol W stand for?",
-     "choices": [
-      "Watt",
-      "Weber",
-      "Wave",
-      "Work"
-     ],
-     "answer": 0,
-     "explanation": "W stands for watt."
-    }
-   ]
-  },
-  {
-   "id": "sym-034",
-   "ask": {
-    "1": "Unit",
-    "2": "Unit",
-    "3": "Unit"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "What does the unit symbol kg stand for?",
-     "choices": [
-      "Kilogauss",
-      "Kilogram",
-      "Kilogene",
-      "Kilogram-force"
-     ],
-     "answer": 1,
-     "explanation": "kg is kilogram."
-    },
-    {
-     "level": 2,
-     "question": "What does the unit symbol V stand for?",
-     "choices": [
-      "Volume",
-      "Vacuum",
-      "Velocity",
-      "Volt"
-     ],
-     "answer": 3,
-     "explanation": "V is volt."
-    }
-   ]
-  },
-  {
    "id": "sym-035",
    "ask": {
     "1": "Acronym",
@@ -1292,6 +136,346 @@
      ],
      "answer": 3,
      "explanation": "SSD is solid-state drive."
+    }
+   ]
+  },
+  {
+   "id": "sym-051",
+   "ask": {
+    "1": "Acronym",
+    "2": "Acronym",
+    "3": "Acronym"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What does ESA stand for in spaceflight?",
+     "choices": [
+      "Eastern Space Alliance",
+      "Earth Science Administration",
+      "European Space Agency",
+      "Extra-Solar Agency"
+     ],
+     "answer": 2,
+     "explanation": "ESA is European Space Agency."
+    },
+    {
+     "level": 3,
+     "question": "What does JWST stand for?",
+     "choices": [
+      "James Webb Space Telescope",
+      "Joint Weather Satellite Team",
+      "Jupiter Wide Survey Telescope",
+      "Jet Wave Space Technology"
+     ],
+     "answer": 0,
+     "explanation": "JWST is James Webb Space Telescope."
+    }
+   ]
+  },
+  {
+   "id": "sym-001",
+   "ask": {
+    "1": "Easy symbol",
+    "2": "Medium symbol",
+    "3": "Hard symbol"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the chemical symbol for sodium?",
+     "choices": [
+      "Sd",
+      "So",
+      "Nm",
+      "Na"
+     ],
+     "answer": 3,
+     "explanation": "Na comes from the Latin natrium."
+    },
+    {
+     "level": 3,
+     "question": "What is the chemical symbol for tungsten, from its German name Wolfram?",
+     "choices": [
+      "W",
+      "Tn",
+      "Wo",
+      "Tu"
+     ],
+     "answer": 0,
+     "explanation": "Tungsten's symbol W comes from Wolfram."
+    }
+   ]
+  },
+  {
+   "id": "sym-002",
+   "ask": {
+    "1": "Easy symbol",
+    "2": "Medium symbol",
+    "3": "Hard symbol"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the chemical symbol for lead?",
+     "choices": [
+      "Ld",
+      "Pb",
+      "Pl",
+      "Le"
+     ],
+     "answer": 1,
+     "explanation": "Pb comes from the Latin plumbum."
+    },
+    {
+     "level": 3,
+     "question": "What is the chemical symbol for antimony?",
+     "choices": [
+      "An",
+      "Sb",
+      "At",
+      "Am"
+     ],
+     "answer": 1,
+     "explanation": "Sb comes from the Latin stibium."
+    }
+   ]
+  },
+  {
+   "id": "sym-003",
+   "ask": {
+    "1": "Easy symbol",
+    "2": "Medium symbol",
+    "3": "Hard symbol"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which element has the chemical symbol Ca?",
+     "choices": [
+      "Cadmium",
+      "Cesium",
+      "Calcium",
+      "Carbon"
+     ],
+     "answer": 2,
+     "explanation": "Ca stands for calcium."
+    },
+    {
+     "level": 3,
+     "question": "Which element has the chemical symbol Mo?",
+     "choices": [
+      "Magnesium",
+      "Molybdenum",
+      "Manganese",
+      "Mercury"
+     ],
+     "answer": 1,
+     "explanation": "Mo is molybdenum, atomic number 42."
+    }
+   ]
+  },
+  {
+   "id": "sym-018",
+   "ask": {
+    "1": "Formula",
+    "2": "Formula",
+    "3": "Formula"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the chemical formula for water?",
+     "choices": [
+      "HO2",
+      "OH",
+      "H2O",
+      "H2O2"
+     ],
+     "answer": 2,
+     "explanation": "Water is H2O."
+    },
+    {
+     "level": 3,
+     "question": "What is the chemical formula for sulfuric acid?",
+     "choices": [
+      "H2SO4",
+      "H2CO3",
+      "HNO3",
+      "HCl"
+     ],
+     "answer": 0,
+     "explanation": "Sulfuric acid is H2SO4."
+    }
+   ]
+  },
+  {
+   "id": "sym-023",
+   "ask": {
+    "1": "Symbol",
+    "2": "Symbol",
+    "3": "Symbol"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What does the percent sign mean?",
+     "choices": [
+      "Per million",
+      "Per ten",
+      "Per thousand",
+      "Per hundred"
+     ],
+     "answer": 3,
+     "explanation": "Percent means per hundred."
+    },
+    {
+     "level": 3,
+     "question": "In logic and maths, what does the symbol ∀ mean?",
+     "choices": [
+      "For all",
+      "Therefore",
+      "There exists",
+      "Approximately"
+     ],
+     "answer": 0,
+     "explanation": "∀ means for all."
+    }
+   ]
+  },
+  {
+   "id": "sym-024",
+   "ask": {
+    "1": "Pi",
+    "2": "Pi",
+    "3": "Pi"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "The ratio of a circle's circumference to its diameter is which constant?",
+     "choices": [
+      "Euler's number",
+      "Pi",
+      "Phi",
+      "Tau"
+     ],
+     "answer": 1,
+     "explanation": "It is pi."
+    },
+    {
+     "level": 3,
+     "question": "Which ancient Greek mathematician gave the approximation of pi between 3 10/71 and 3 1/7?",
+     "choices": [
+      "Euclid",
+      "Archimedes",
+      "Ptolemy",
+      "Pythagoras"
+     ],
+     "answer": 1,
+     "explanation": "Archimedes bounded pi using polygons."
+    }
+   ]
+  },
+  {
+   "id": "sym-013",
+   "ask": {
+    "1": "Atomic number",
+    "2": "Atomic number",
+    "3": "Atomic number"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which element has atomic number 8?",
+     "choices": [
+      "Fluorine",
+      "Oxygen",
+      "Carbon",
+      "Nitrogen"
+     ],
+     "answer": 1,
+     "explanation": "Oxygen has 8 protons."
+    },
+    {
+     "level": 3,
+     "question": "Which element has atomic number 26?",
+     "choices": [
+      "Nickel",
+      "Manganese",
+      "Iron",
+      "Cobalt"
+     ],
+     "answer": 2,
+     "explanation": "Iron is element 26."
+    }
+   ]
+  },
+  {
+   "id": "trk-025",
+   "ask": {
+    "1": "Roman numeral rules",
+    "2": "1994",
+    "3": "Invalid numeral"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "How is 1994 written in standard Roman numerals?",
+     "choices": [
+      "MCMXCIIII",
+      "MDCCCCXCIV",
+      "MXMIV",
+      "MCMXCIV"
+     ],
+     "answer": 3,
+     "explanation": "1994 is M (1000) plus CM (900) plus XC (90) plus IV (4)."
+    },
+    {
+     "level": 3,
+     "question": "Which of these is NOT a valid Roman numeral?",
+     "choices": [
+      "CM",
+      "IX",
+      "VX",
+      "XC"
+     ],
+     "answer": 2,
+     "explanation": "V is never subtracted: 5 is V and 10 is X, so VX is invalid. XC, CM and IX are standard subtractive forms."
+    }
+   ]
+  },
+  {
+   "id": "trk-024",
+   "ask": {
+    "1": "Energy or power",
+    "2": "Heater example",
+    "3": "Which is power"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "A 2 kW heater runs for 3 hours. How much energy does it use?",
+     "choices": [
+      "6 kWh",
+      "1.5 kWh",
+      "5 kWh",
+      "6 kW"
+     ],
+     "answer": 0,
+     "explanation": "Energy is power multiplied by time: 2 kW times 3 h equals 6 kWh."
+    },
+    {
+     "level": 3,
+     "question": "Which of these is a unit of power rather than energy?",
+     "choices": [
+      "Calorie",
+      "Watt",
+      "Joule",
+      "Kilowatt-hour"
+     ],
+     "answer": 1,
+     "explanation": "A watt is one joule per second. Joules, kilowatt-hours and calories measure energy."
     }
    ]
   },
@@ -1432,6 +616,516 @@
    ]
   },
   {
+   "id": "sym-048",
+   "ask": {
+    "1": "Abbreviation",
+    "2": "Abbreviation",
+    "3": "Abbreviation"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What does 'p.m.' stand for in time?",
+     "choices": [
+      "Prime morning",
+      "Post meridiem",
+      "Past midnight",
+      "Per minute"
+     ],
+     "answer": 1,
+     "explanation": "p.m. is post meridiem."
+    },
+    {
+     "level": 3,
+     "question": "What does the abbreviation 'a.d.' in dates stand for?",
+     "choices": [
+      "Ante Diem",
+      "Annual Date",
+      "After Death",
+      "Anno Domini"
+     ],
+     "answer": 3,
+     "explanation": "AD is Anno Domini."
+    }
+   ]
+  },
+  {
+   "id": "sym-050",
+   "ask": {
+    "1": "Acronym",
+    "2": "Acronym",
+    "3": "Acronym"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What does HD stand for in HD television?",
+     "choices": [
+      "High definition",
+      "Hard drive",
+      "Home display",
+      "High density"
+     ],
+     "answer": 0,
+     "explanation": "HD is high definition."
+    },
+    {
+     "level": 3,
+     "question": "What does RGB stand for in screen colours?",
+     "choices": [
+      "Red Gray Black",
+      "Ray Glow Bloom",
+      "Radial Gamma Brightness",
+      "Red Green Blue"
+     ],
+     "answer": 3,
+     "explanation": "RGB is red green blue."
+    }
+   ]
+  },
+  {
+   "id": "sym-054",
+   "ask": {
+    "1": "Acronym",
+    "2": "Acronym",
+    "3": "Acronym"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "On a bill, the abbreviation VAT stands for what?",
+     "choices": [
+      "Voluntary Asset Tax",
+      "Verified Account Transfer",
+      "Value Added Tax",
+      "Variable Annual Tax"
+     ],
+     "answer": 2,
+     "explanation": "VAT is value added tax."
+    },
+    {
+     "level": 3,
+     "question": "What does CPI stand for in economics?",
+     "choices": [
+      "Capital Profit Indicator",
+      "Credit Performance Index",
+      "Central Payment Institute",
+      "Consumer Price Index"
+     ],
+     "answer": 3,
+     "explanation": "CPI is consumer price index."
+    }
+   ]
+  },
+  {
+   "id": "sym-004",
+   "ask": {
+    "1": "Easy symbol",
+    "2": "Medium symbol",
+    "3": "Hard symbol"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What is the chemical symbol for oxygen?",
+     "choices": [
+      "Om",
+      "O",
+      "Og",
+      "Ox"
+     ],
+     "answer": 1,
+     "explanation": "O is oxygen."
+    },
+    {
+     "level": 3,
+     "question": "What is the chemical symbol for gold, which comes from its Latin name aurum?",
+     "choices": [
+      "Gd",
+      "Ag",
+      "Go",
+      "Au"
+     ],
+     "answer": 3,
+     "explanation": "Au comes from aurum."
+    }
+   ]
+  },
+  {
+   "id": "sym-005",
+   "ask": {
+    "1": "Easy symbol",
+    "2": "Medium symbol",
+    "3": "Hard symbol"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the chemical symbol C?",
+     "choices": [
+      "Calcium",
+      "Copper",
+      "Carbon",
+      "Chlorine"
+     ],
+     "answer": 2,
+     "explanation": "C stands for carbon."
+    },
+    {
+     "level": 3,
+     "question": "Which element has the chemical symbol Cs?",
+     "choices": [
+      "Carbon",
+      "Chromium",
+      "Caesium",
+      "Cobalt"
+     ],
+     "answer": 2,
+     "explanation": "Cs is caesium, an alkali metal."
+    }
+   ]
+  },
+  {
+   "id": "sym-006",
+   "ask": {
+    "1": "Easy symbol",
+    "2": "Medium symbol",
+    "3": "Hard symbol"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the chemical symbol H?",
+     "choices": [
+      "Hafnium",
+      "Holmium",
+      "Hydrogen",
+      "Helium"
+     ],
+     "answer": 2,
+     "explanation": "H is hydrogen."
+    },
+    {
+     "level": 3,
+     "question": "Which element has the chemical symbol Rb?",
+     "choices": [
+      "Rhenium",
+      "Radium",
+      "Ruthenium",
+      "Rubidium"
+     ],
+     "answer": 3,
+     "explanation": "Rb is rubidium."
+    }
+   ]
+  },
+  {
+   "id": "sym-011",
+   "ask": {
+    "1": "Easy symbol",
+    "2": "Medium symbol",
+    "3": "Hard symbol"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What is the chemical symbol for hydrogen?",
+     "choices": [
+      "Hd",
+      "H",
+      "He",
+      "Hy"
+     ],
+     "answer": 1,
+     "explanation": "H is hydrogen."
+    },
+    {
+     "level": 3,
+     "question": "What is the chemical symbol for tin?",
+     "choices": [
+      "Ti",
+      "Sn",
+      "Tn",
+      "St"
+     ],
+     "answer": 1,
+     "explanation": "Sn comes from the Latin stannum."
+    }
+   ]
+  },
+  {
+   "id": "sym-019",
+   "ask": {
+    "1": "Formula",
+    "2": "Formula",
+    "3": "Formula"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What is the chemical formula for carbon dioxide?",
+     "choices": [
+      "C2O",
+      "CO3",
+      "CO2",
+      "CO"
+     ],
+     "answer": 2,
+     "explanation": "Carbon dioxide is CO2."
+    },
+    {
+     "level": 3,
+     "question": "What is the chemical formula for ammonia?",
+     "choices": [
+      "NH3",
+      "NO3",
+      "NH4",
+      "N2H"
+     ],
+     "answer": 0,
+     "explanation": "Ammonia is NH3."
+    }
+   ]
+  },
+  {
+   "id": "sym-020",
+   "ask": {
+    "1": "Formula",
+    "2": "Formula",
+    "3": "Formula"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What is the chemical formula of nitrogen gas, the main gas in air?",
+     "choices": [
+      "NO2",
+      "N2",
+      "N",
+      "N3"
+     ],
+     "answer": 1,
+     "explanation": "Nitrogen gas is made of N2 molecules."
+    },
+    {
+     "level": 3,
+     "question": "What is the chemical formula for propane?",
+     "choices": [
+      "C3H8",
+      "C4H10",
+      "C2H6",
+      "C3H6"
+     ],
+     "answer": 0,
+     "explanation": "Propane is C3H8."
+    }
+   ]
+  },
+  {
+   "id": "sym-025",
+   "ask": {
+    "1": "Symbol",
+    "2": "Symbol",
+    "3": "Symbol"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In mathematics, what does the symbol + mean?",
+     "choices": [
+      "Multiply",
+      "Divide",
+      "Subtract",
+      "Add"
+     ],
+     "answer": 3,
+     "explanation": "Plus means add."
+    },
+    {
+     "level": 3,
+     "question": "In calculus, what does the symbol ∫ denote?",
+     "choices": [
+      "An integral",
+      "A sum",
+      "A limit",
+      "A derivative"
+     ],
+     "answer": 0,
+     "explanation": "∫ denotes integration."
+    }
+   ]
+  },
+  {
+   "id": "sym-014",
+   "ask": {
+    "1": "Atomic number",
+    "2": "Atomic number",
+    "3": "Atomic number"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has atomic number 2?",
+     "choices": [
+      "Neon",
+      "Helium",
+      "Lithium",
+      "Hydrogen"
+     ],
+     "answer": 1,
+     "explanation": "Helium has 2 protons."
+    },
+    {
+     "level": 3,
+     "question": "Which element has atomic number 47?",
+     "choices": [
+      "Platinum",
+      "Palladium",
+      "Silver",
+      "Gold"
+     ],
+     "answer": 2,
+     "explanation": "Silver is element 47."
+    }
+   ]
+  },
+  {
+   "id": "sym-017",
+   "ask": {
+    "1": "Gases",
+    "2": "Noble gas",
+    "3": "Noble gas facts"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which gas is used to fill party balloons so that they float?",
+     "choices": [
+      "Nitrogen",
+      "Carbon dioxide",
+      "Helium",
+      "Oxygen"
+     ],
+     "answer": 2,
+     "explanation": "Helium is lighter than air."
+    },
+    {
+     "level": 3,
+     "question": "Which noble gas is used in neon signs to produce a red-orange glow?",
+     "choices": [
+      "Krypton",
+      "Neon",
+      "Argon",
+      "Xenon"
+     ],
+     "answer": 1,
+     "explanation": "Neon glows red-orange in a tube."
+    }
+   ]
+  },
+  {
+   "id": "sym-029",
+   "ask": {
+    "1": "Roman",
+    "2": "Roman",
+    "3": "Roman"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which number is the Roman numeral V?",
+     "choices": [
+      "4",
+      "10",
+      "5",
+      "6"
+     ],
+     "answer": 2,
+     "explanation": "The numeral V stands for 5."
+    },
+    {
+     "level": 3,
+     "question": "Which number is the Roman numeral D?",
+     "choices": [
+      "500",
+      "100",
+      "1,000",
+      "50"
+     ],
+     "answer": 0,
+     "explanation": "D is 500."
+    }
+   ]
+  },
+  {
+   "id": "sym-031",
+   "ask": {
+    "1": "Unit",
+    "2": "Unit",
+    "3": "Unit"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which unit measures the length of something?",
+     "choices": [
+      "Gram",
+      "Litre",
+      "Metre",
+      "Second"
+     ],
+     "answer": 2,
+     "explanation": "Metre measures length."
+    },
+    {
+     "level": 3,
+     "question": "What does the unit symbol Ω stand for?",
+     "choices": [
+      "Ounce",
+      "Ohm",
+      "Omega",
+      "Oersted"
+     ],
+     "answer": 1,
+     "explanation": "Ω stands for ohm."
+    }
+   ]
+  },
+  {
+   "id": "sym-032",
+   "ask": {
+    "1": "Unit",
+    "2": "Unit",
+    "3": "Unit"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which unit measures mass in the metric system?",
+     "choices": [
+      "Litre",
+      "Second",
+      "Kilogram",
+      "Metre"
+     ],
+     "answer": 2,
+     "explanation": "Kilogram measures mass."
+    },
+    {
+     "level": 3,
+     "question": "What does the unit symbol J stand for?",
+     "choices": [
+      "Joule",
+      "Jansky",
+      "Jolt",
+      "Jar"
+     ],
+     "answer": 0,
+     "explanation": "J is joule, the unit of energy."
+    }
+   ]
+  },
+  {
    "id": "sym-043",
    "ask": {
     "1": "Acronym",
@@ -1534,40 +1228,6 @@
    ]
   },
   {
-   "id": "sym-046",
-   "ask": {
-    "1": "Acronym",
-    "2": "Acronym",
-    "3": "Acronym"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "What does SOS traditionally signal?",
-     "choices": [
-      "A weather warning",
-      "A greeting",
-      "A distress call",
-      "A food order"
-     ],
-     "answer": 2,
-     "explanation": "SOS is the distress signal in Morse code."
-    },
-    {
-     "level": 2,
-     "question": "What does ASAP stand for?",
-     "choices": [
-      "Always say a prayer",
-      "As soon as possible",
-      "Anyside at present",
-      "Another second at play"
-     ],
-     "answer": 1,
-     "explanation": "ASAP is as soon as possible."
-    }
-   ]
-  },
-  {
    "id": "sym-047",
    "ask": {
     "1": "Abbreviation",
@@ -1598,40 +1258,6 @@
      ],
      "answer": 0,
      "explanation": "i.e. is id est, that is."
-    }
-   ]
-  },
-  {
-   "id": "sym-048",
-   "ask": {
-    "1": "Abbreviation",
-    "2": "Abbreviation",
-    "3": "Abbreviation"
-   },
-   "variants": [
-    {
-     "level": 1,
-     "question": "What does 'p.m.' stand for in time?",
-     "choices": [
-      "Prime morning",
-      "Post meridiem",
-      "Past midnight",
-      "Per minute"
-     ],
-     "answer": 1,
-     "explanation": "p.m. is post meridiem."
-    },
-    {
-     "level": 3,
-     "question": "What does the abbreviation 'a.d.' in dates stand for?",
-     "choices": [
-      "Ante Diem",
-      "Annual Date",
-      "After Death",
-      "Anno Domini"
-     ],
-     "answer": 3,
-     "explanation": "AD is Anno Domini."
     }
    ]
   },
@@ -1670,7 +1296,7 @@
    ]
   },
   {
-   "id": "sym-050",
+   "id": "sym-053",
    "ask": {
     "1": "Acronym",
     "2": "Acronym",
@@ -1679,32 +1305,440 @@
    "variants": [
     {
      "level": 1,
-     "question": "What does HD stand for in HD television?",
+     "question": "The title CEO at the top of a company stands for what?",
      "choices": [
-      "High definition",
-      "Hard drive",
-      "Home display",
-      "High density"
+      "Chief Executive Officer",
+      "Chief Equity Owner",
+      "Central Economic Office",
+      "Corporate Event Organiser"
      ],
      "answer": 0,
-     "explanation": "HD is high definition."
+     "explanation": "CEO is chief executive officer."
     },
     {
-     "level": 3,
-     "question": "What does RGB stand for in screen colours?",
+     "level": 2,
+     "question": "What does IMF stand for?",
      "choices": [
-      "Red Gray Black",
-      "Ray Glow Bloom",
-      "Radial Gamma Brightness",
-      "Red Green Blue"
+      "Inter-Municipal Finance",
+      "International Monetary Fund",
+      "Independent Money Fund",
+      "International Market Federation"
      ],
-     "answer": 3,
-     "explanation": "RGB is red green blue."
+     "answer": 1,
+     "explanation": "IMF is International Monetary Fund."
     }
    ]
   },
   {
-   "id": "sym-051",
+   "id": "sym-007",
+   "ask": {
+    "1": "Easy symbol",
+    "2": "Medium symbol",
+    "3": "Hard symbol"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the chemical symbol He?",
+     "choices": [
+      "Hafnium",
+      "Helium",
+      "Holmium",
+      "Hydrogen"
+     ],
+     "answer": 1,
+     "explanation": "He is helium."
+    },
+    {
+     "level": 2,
+     "question": "Which element has the chemical symbol Fe?",
+     "choices": [
+      "Iron",
+      "Francium",
+      "Fermium",
+      "Fluorine"
+     ],
+     "answer": 0,
+     "explanation": "Fe comes from the Latin ferrum."
+    }
+   ]
+  },
+  {
+   "id": "sym-008",
+   "ask": {
+    "1": "Easy symbol",
+    "2": "Medium symbol",
+    "3": "Hard symbol"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the chemical symbol Cl?",
+     "choices": [
+      "Cobalt",
+      "Carbon",
+      "Chlorine",
+      "Calcium"
+     ],
+     "answer": 2,
+     "explanation": "Cl is chlorine."
+    },
+    {
+     "level": 2,
+     "question": "Which element has the chemical symbol Zn?",
+     "choices": [
+      "Xenon",
+      "Zinc",
+      "Tin",
+      "Zirconium"
+     ],
+     "answer": 1,
+     "explanation": "Zn is zinc."
+    }
+   ]
+  },
+  {
+   "id": "sym-012",
+   "ask": {
+    "1": "Easy symbol",
+    "2": "Medium symbol",
+    "3": "Hard symbol"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What is the chemical symbol for nitrogen?",
+     "choices": [
+      "N",
+      "Ni",
+      "Ne",
+      "Na"
+     ],
+     "answer": 0,
+     "explanation": "N is nitrogen."
+    },
+    {
+     "level": 2,
+     "question": "What is the chemical symbol for calcium?",
+     "choices": [
+      "Ca",
+      "Cl",
+      "Cd",
+      "C"
+     ],
+     "answer": 0,
+     "explanation": "Ca is calcium."
+    }
+   ]
+  },
+  {
+   "id": "trk-023",
+   "ask": {
+    "1": "Symbols from other names",
+    "2": "Na and K",
+    "3": "Not from English"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The symbol Na stands for which element?",
+     "choices": [
+      "Sodium",
+      "Nitrogen",
+      "Nickel",
+      "Neon"
+     ],
+     "answer": 0,
+     "explanation": "Na comes from the Latin natrium. Nitrogen is N, neon is Ne and nickel is Ni."
+    },
+    {
+     "level": 2,
+     "question": "The symbol K stands for which element?",
+     "choices": [
+      "Calcium",
+      "Cobalt",
+      "Potassium",
+      "Krypton"
+     ],
+     "answer": 2,
+     "explanation": "K comes from the Latin kalium. Krypton is Kr, calcium is Ca and cobalt is Co."
+    }
+   ]
+  },
+  {
+   "id": "sym-021",
+   "ask": {
+    "1": "Formula",
+    "2": "Formula",
+    "3": "Formula"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What is the chemical formula for oxygen gas?",
+     "choices": [
+      "O2",
+      "O4",
+      "O3",
+      "O"
+     ],
+     "answer": 0,
+     "explanation": "Oxygen gas is O2."
+    },
+    {
+     "level": 2,
+     "question": "What is the chemical formula for carbon monoxide?",
+     "choices": [
+      "O2C",
+      "CO2",
+      "C2O",
+      "CO"
+     ],
+     "answer": 3,
+     "explanation": "Carbon monoxide is CO."
+    }
+   ]
+  },
+  {
+   "id": "sym-022",
+   "ask": {
+    "1": "Formula",
+    "2": "Formula",
+    "3": "Formula"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What is the chemical formula for table sugar's simplest relative, the sugar in your blood?",
+     "choices": [
+      "NaCl",
+      "CO2",
+      "H2O",
+      "C6H12O6"
+     ],
+     "answer": 3,
+     "explanation": "Glucose is C6H12O6."
+    },
+    {
+     "level": 2,
+     "question": "What is the chemical formula for ethanol?",
+     "choices": [
+      "C3H7OH",
+      "CH3OH",
+      "C2H5OH",
+      "C2H6"
+     ],
+     "answer": 2,
+     "explanation": "Ethanol is C2H5OH."
+    }
+   ]
+  },
+  {
+   "id": "sym-026",
+   "ask": {
+    "1": "Symbol",
+    "2": "Symbol",
+    "3": "Symbol"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What does the equals sign mean in an equation?",
+     "choices": [
+      "The left side is larger",
+      "Both sides have the same value",
+      "The right side is larger",
+      "The numbers are added"
+     ],
+     "answer": 1,
+     "explanation": "The equals sign shows both sides are the same."
+    },
+    {
+     "level": 2,
+     "question": "In maths, what does the wavy double line sign mean, as in pi roughly 3.14?",
+     "choices": [
+      "Greater than",
+      "Approximately equal to",
+      "Identical to",
+      "Not equal to"
+     ],
+     "answer": 1,
+     "explanation": "The wavy sign means approximately equal."
+    }
+   ]
+  },
+  {
+   "id": "sym-027",
+   "ask": {
+    "1": "Constant",
+    "2": "Constant",
+    "3": "Constant"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which constant is about 3.14?",
+     "choices": [
+      "Phi",
+      "Pi",
+      "e",
+      "Zero"
+     ],
+     "answer": 1,
+     "explanation": "Pi is about 3.14."
+    },
+    {
+     "level": 2,
+     "question": "The golden ratio, often written with the Greek letter phi, is approximately what?",
+     "choices": [
+      "2.718",
+      "1.618",
+      "1.414",
+      "3.142"
+     ],
+     "answer": 1,
+     "explanation": "The golden ratio is about 1.618."
+    }
+   ]
+  },
+  {
+   "id": "sym-028",
+   "ask": {
+    "1": "Imaginary",
+    "2": "Imaginary",
+    "3": "Imaginary"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What is the square root of 9?",
+     "choices": [
+      "4",
+      "6",
+      "81",
+      "3"
+     ],
+     "answer": 3,
+     "explanation": "3 times 3 is 9."
+    },
+    {
+     "level": 2,
+     "question": "What is the square root of 144?",
+     "choices": [
+      "72",
+      "14",
+      "12",
+      "16"
+     ],
+     "answer": 2,
+     "explanation": "12 squared is 144."
+    }
+   ]
+  },
+  {
+   "id": "sym-015",
+   "ask": {
+    "1": "Atomic number",
+    "2": "Atomic number",
+    "3": "Atomic number"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has atomic number 6?",
+     "choices": [
+      "Carbon",
+      "Oxygen",
+      "Boron",
+      "Nitrogen"
+     ],
+     "answer": 0,
+     "explanation": "Carbon is element 6."
+    },
+    {
+     "level": 2,
+     "question": "Which element has atomic number 12?",
+     "choices": [
+      "Magnesium",
+      "Aluminium",
+      "Calcium",
+      "Sodium"
+     ],
+     "answer": 0,
+     "explanation": "Magnesium is element 12."
+    }
+   ]
+  },
+  {
+   "id": "sym-033",
+   "ask": {
+    "1": "Unit",
+    "2": "Unit",
+    "3": "Unit"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What does the unit symbol km stand for?",
+     "choices": [
+      "Kilometer per minute",
+      "Kelvin metre",
+      "Kilometre",
+      "Kilogram"
+     ],
+     "answer": 2,
+     "explanation": "km is kilometre."
+    },
+    {
+     "level": 2,
+     "question": "What does the unit symbol W stand for?",
+     "choices": [
+      "Watt",
+      "Weber",
+      "Wave",
+      "Work"
+     ],
+     "answer": 0,
+     "explanation": "W stands for watt."
+    }
+   ]
+  },
+  {
+   "id": "sym-034",
+   "ask": {
+    "1": "Unit",
+    "2": "Unit",
+    "3": "Unit"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What does the unit symbol kg stand for?",
+     "choices": [
+      "Kilogauss",
+      "Kilogram",
+      "Kilogene",
+      "Kilogram-force"
+     ],
+     "answer": 1,
+     "explanation": "kg is kilogram."
+    },
+    {
+     "level": 2,
+     "question": "What does the unit symbol V stand for?",
+     "choices": [
+      "Volume",
+      "Vacuum",
+      "Velocity",
+      "Volt"
+     ],
+     "answer": 3,
+     "explanation": "V is volt."
+    }
+   ]
+  },
+  {
+   "id": "sym-046",
    "ask": {
     "1": "Acronym",
     "2": "Acronym",
@@ -1712,28 +1746,28 @@
    },
    "variants": [
     {
-     "level": 2,
-     "question": "What does ESA stand for in spaceflight?",
+     "level": 1,
+     "question": "What does SOS traditionally signal?",
      "choices": [
-      "Eastern Space Alliance",
-      "Earth Science Administration",
-      "European Space Agency",
-      "Extra-Solar Agency"
+      "A weather warning",
+      "A greeting",
+      "A distress call",
+      "A food order"
      ],
      "answer": 2,
-     "explanation": "ESA is European Space Agency."
+     "explanation": "SOS is the distress signal in Morse code."
     },
     {
-     "level": 3,
-     "question": "What does JWST stand for?",
+     "level": 2,
+     "question": "What does ASAP stand for?",
      "choices": [
-      "James Webb Space Telescope",
-      "Joint Weather Satellite Team",
-      "Jupiter Wide Survey Telescope",
-      "Jet Wave Space Technology"
+      "Always say a prayer",
+      "As soon as possible",
+      "Anyside at present",
+      "Another second at play"
      ],
-     "answer": 0,
-     "explanation": "JWST is James Webb Space Telescope."
+     "answer": 1,
+     "explanation": "ASAP is as soon as possible."
     }
    ]
   },
@@ -1772,70 +1806,138 @@
    ]
   },
   {
-   "id": "sym-053",
+   "id": "sym-009",
    "ask": {
-    "1": "Acronym",
-    "2": "Acronym",
-    "3": "Acronym"
+    "1": "Easy symbol",
+    "2": "Medium symbol",
+    "3": "Hard symbol"
    },
    "variants": [
     {
      "level": 1,
-     "question": "The title CEO at the top of a company stands for what?",
+     "question": "What is the chemical symbol for carbon?",
      "choices": [
-      "Chief Executive Officer",
-      "Chief Equity Owner",
-      "Central Economic Office",
-      "Corporate Event Organiser"
+      "Ca",
+      "Co",
+      "Cr",
+      "C"
      ],
-     "answer": 0,
-     "explanation": "CEO is chief executive officer."
+     "answer": 3,
+     "explanation": "C is carbon."
     },
     {
      "level": 2,
-     "question": "What does IMF stand for?",
+     "question": "What is the chemical symbol for potassium?",
      "choices": [
-      "Inter-Municipal Finance",
-      "International Monetary Fund",
-      "Independent Money Fund",
-      "International Market Federation"
+      "P",
+      "Pt",
+      "Po",
+      "K"
      ],
-     "answer": 1,
-     "explanation": "IMF is International Monetary Fund."
+     "answer": 3,
+     "explanation": "K comes from the Latin kalium."
     }
    ]
   },
   {
-   "id": "sym-054",
+   "id": "sym-010",
    "ask": {
-    "1": "Acronym",
-    "2": "Acronym",
-    "3": "Acronym"
+    "1": "Easy symbol",
+    "2": "Medium symbol",
+    "3": "Hard symbol"
    },
    "variants": [
     {
      "level": 1,
-     "question": "On a bill, the abbreviation VAT stands for what?",
+     "question": "Which element has the chemical symbol Ne?",
      "choices": [
-      "Voluntary Asset Tax",
-      "Verified Account Transfer",
-      "Value Added Tax",
-      "Variable Annual Tax"
+      "Neon",
+      "Nickel",
+      "Nitrogen",
+      "Sodium"
      ],
-     "answer": 2,
-     "explanation": "VAT is value added tax."
+     "answer": 0,
+     "explanation": "Ne is neon."
     },
     {
-     "level": 3,
-     "question": "What does CPI stand for in economics?",
+     "level": 2,
+     "question": "Which element has the chemical symbol Ni?",
      "choices": [
-      "Capital Profit Indicator",
-      "Credit Performance Index",
-      "Central Payment Institute",
-      "Consumer Price Index"
+      "Nitrogen",
+      "Nickel",
+      "Niobium",
+      "Neon"
      ],
-     "answer": 3,
-     "explanation": "CPI is consumer price index."
+     "answer": 1,
+     "explanation": "Ni is nickel."
+    }
+   ]
+  },
+  {
+   "id": "sym-016",
+   "ask": {
+    "1": "Atomic number",
+    "2": "Atomic number",
+    "3": "Atomic number"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has atomic number 7?",
+     "choices": [
+      "Boron",
+      "Nitrogen",
+      "Oxygen",
+      "Carbon"
+     ],
+     "answer": 1,
+     "explanation": "Nitrogen is element 7."
+    },
+    {
+     "level": 2,
+     "question": "Which element has atomic number 29?",
+     "choices": [
+      "Copper",
+      "Iron",
+      "Zinc",
+      "Nickel"
+     ],
+     "answer": 0,
+     "explanation": "Copper is element 29."
+    }
+   ]
+  },
+  {
+   "id": "sym-030",
+   "ask": {
+    "1": "Roman",
+    "2": "Roman",
+    "3": "Roman"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which number does the Roman numeral X represent?",
+     "choices": [
+      "50",
+      "10",
+      "100",
+      "5"
+     ],
+     "answer": 1,
+     "explanation": "X is 10."
+    },
+    {
+     "level": 2,
+     "question": "Which year is written MM in Roman numerals?",
+     "choices": [
+      "2100",
+      "1900",
+      "2000",
+      "1000"
+     ],
+     "answer": 2,
+     "explanation": "MM is 2000."
     }
    ]
   }

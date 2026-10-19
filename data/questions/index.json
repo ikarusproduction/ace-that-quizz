@@ -21,7 +21,13 @@
     "sports.json",
     "f1.json",
     "hockey.json",
-    "music.json"
+    "music.json",
+    "literature.json",
+    "mythology.json",
+    "philosophy.json",
+    "politics.json",
+    "assoc.json",
+    "chrono.json"
   ],
   "variantFiles": [
     "variants/science.json",
@@ -40,6 +46,12 @@
     "variants/sports.json",
     "variants/f1.json",
     "variants/hockey.json",
-    "variants/music.json"
+    "variants/music.json",
+    "variants/literature.json",
+    "variants/mythology.json",
+    "variants/philosophy.json",
+    "variants/politics.json",
+    "variants/assoc.json",
+    "variants/chrono.json"
   ]
 }

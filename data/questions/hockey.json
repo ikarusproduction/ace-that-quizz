@@ -3,6 +3,20 @@
  "review": "unreviewed",
  "questions": [
   {
+   "id": "hoc-003",
+   "subcategory": "nhl",
+   "difficulty": 1,
+   "question": "Which trophy is awarded to the NHL champion?",
+   "choices": [
+    "Stanley Cup",
+    "Vince Lombardi Cup",
+    "Larry O'Brien Trophy",
+    "Lombardi Trophy"
+   ],
+   "answer": 0,
+   "explanation": "The Stanley Cup was first awarded in 1893."
+  },
+  {
    "id": "hoc-001",
    "subcategory": "rules",
    "difficulty": 1,
@@ -31,20 +45,6 @@
    "explanation": "The puck is made of vulcanised rubber."
   },
   {
-   "id": "hoc-003",
-   "subcategory": "nhl",
-   "difficulty": 1,
-   "question": "Which trophy is awarded to the NHL champion?",
-   "choices": [
-    "Stanley Cup",
-    "Vince Lombardi Cup",
-    "Larry O'Brien Trophy",
-    "Lombardi Trophy"
-   ],
-   "answer": 0,
-   "explanation": "The Stanley Cup was first awarded in 1893."
-  },
-  {
    "id": "hoc-004",
    "subcategory": "rules",
    "difficulty": 1,
@@ -59,6 +59,62 @@
    "explanation": "Also called the goalie."
   },
   {
+   "id": "hoc-024",
+   "subcategory": "rules",
+   "difficulty": 1,
+   "question": "What is a faceoff?",
+   "choices": [
+    "A penalty shot",
+    "A fight",
+    "An icing call",
+    "Dropping the puck between two players to start play"
+   ],
+   "answer": 3,
+   "explanation": "Faceoffs start each period and restart play."
+  },
+  {
+   "id": "hoc-009",
+   "subcategory": "history",
+   "difficulty": 2,
+   "question": "Which country did hockey originate in?",
+   "choices": [
+    "Sweden",
+    "Canada",
+    "Russia",
+    "United States"
+   ],
+   "answer": 1,
+   "explanation": "Modern ice hockey was developed in Montreal in 1875."
+  },
+  {
+   "id": "hoc-022",
+   "subcategory": "leagues",
+   "difficulty": 2,
+   "question": "What is the Swiss hockey league called?",
+   "choices": [
+    "Liiga",
+    "SHL",
+    "KHL",
+    "National League"
+   ],
+   "answer": 3,
+   "explanation": "The Swiss National League is the top tier."
+  },
+  {
+   "id": "hoc-023",
+   "subcategory": "leagues",
+   "difficulty": 2,
+   "question": "What is the Swedish top hockey league called?",
+   "choices": [
+    "NLA",
+    "SHL",
+    "DEL",
+    "Liiga"
+   ],
+   "answer": 1,
+   "explanation": "SHL stands for Svenska Hockeyligan."
+  },
+  {
    "id": "hoc-005",
    "subcategory": "nhl",
    "difficulty": 2,
@@ -71,6 +127,20 @@
    ],
    "answer": 1,
    "explanation": "The Canadiens are the most successful franchise."
+  },
+  {
+   "id": "hoc-010",
+   "subcategory": "nhl",
+   "difficulty": 2,
+   "question": "Which NHL team plays in Pittsburgh?",
+   "choices": [
+    "Capitals",
+    "Bruins",
+    "Penguins",
+    "Flyers"
+   ],
+   "answer": 2,
+   "explanation": "Sidney Crosby has played his whole career there."
   },
   {
    "id": "hoc-006",
@@ -115,146 +185,6 @@
    "explanation": "Fans traditionally throw hats on the ice."
   },
   {
-   "id": "hoc-009",
-   "subcategory": "history",
-   "difficulty": 2,
-   "question": "Which country did hockey originate in?",
-   "choices": [
-    "Sweden",
-    "Canada",
-    "Russia",
-    "United States"
-   ],
-   "answer": 1,
-   "explanation": "Modern ice hockey was developed in Montreal in 1875."
-  },
-  {
-   "id": "hoc-010",
-   "subcategory": "nhl",
-   "difficulty": 2,
-   "question": "Which NHL team plays in Pittsburgh?",
-   "choices": [
-    "Capitals",
-    "Bruins",
-    "Penguins",
-    "Flyers"
-   ],
-   "answer": 2,
-   "explanation": "Sidney Crosby has played his whole career there."
-  },
-  {
-   "id": "hoc-011",
-   "subcategory": "players",
-   "difficulty": 3,
-   "question": "Which Russian star scored 800+ NHL goals?",
-   "choices": [
-    "Evgeni Malkin",
-    "Sergei Fedorov",
-    "Pavel Datsyuk",
-    "Alex Ovechkin"
-   ],
-   "answer": 3,
-   "explanation": "Ovechkin broke Gretzky's career goals record in 2025."
-  },
-  {
-   "id": "hoc-012",
-   "subcategory": "players",
-   "difficulty": 3,
-   "question": "In what year did Wayne Gretzky retire?",
-   "choices": [
-    "2003",
-    "1999",
-    "1989",
-    "1995"
-   ],
-   "answer": 1,
-   "explanation": "His number 99 was retired league-wide."
-  },
-  {
-   "id": "hoc-013",
-   "subcategory": "rules",
-   "difficulty": 3,
-   "question": "What is 'icing'?",
-   "choices": [
-    "Shooting the puck across the opponent's goal line from your own half",
-    "A faceoff",
-    "A penalty shot",
-    "A defence tactic"
-   ],
-   "answer": 0,
-   "explanation": "Icing stops play."
-  },
-  {
-   "id": "hoc-014",
-   "subcategory": "olympics",
-   "difficulty": 3,
-   "question": "Which Olympic hockey team famously won 'The Miracle on Ice' in 1980?",
-   "choices": [
-    "Canada",
-    "Sweden",
-    "United States",
-    "Soviet Union"
-   ],
-   "answer": 2,
-   "explanation": "The US beat the USSR in Lake Placid."
-  },
-  {
-   "id": "hoc-015",
-   "subcategory": "rules",
-   "difficulty": 3,
-   "question": "How wide is the NHL goal?",
-   "choices": [
-    "8 feet",
-    "4 feet",
-    "10 feet",
-    "6 feet (about 1.83 m)"
-   ],
-   "answer": 3,
-   "explanation": "The goal is 6 ft wide and 4 ft high."
-  },
-  {
-   "id": "hoc-016",
-   "subcategory": "players",
-   "difficulty": 4,
-   "question": "Which player won the Hart Trophy most times (9)?",
-   "choices": [
-    "Bobby Orr",
-    "Gordie Howe",
-    "Wayne Gretzky",
-    "Mario Lemieux"
-   ],
-   "answer": 2,
-   "explanation": "Gretzky won nine MVP awards."
-  },
-  {
-   "id": "hoc-017",
-   "subcategory": "history",
-   "difficulty": 4,
-   "question": "Which city's team won the first Stanley Cup after the NHL's creation in 1917?",
-   "choices": [
-    "Toronto Arenas",
-    "Montreal Canadiens",
-    "Boston Bruins",
-    "Ottawa Senators"
-   ],
-   "answer": 0,
-   "explanation": "The Arenas won the 1918 Cup."
-  },
-  {
-   "id": "hoc-018",
-   "subcategory": "olympics",
-   "difficulty": 3,
-   "question": "Which country won Olympic men's ice hockey gold in 2022?",
-   "choices": [
-    "Russia Olympic Committee",
-    "Finland",
-    "Sweden",
-    "Canada"
-   ],
-   "answer": 1,
-   "explanation": "Finland beat ROC 2–1 in Beijing."
-  },
-  {
    "id": "hoc-019",
    "subcategory": "rules",
    "difficulty": 2,
@@ -297,46 +227,60 @@
    "explanation": "Florida repeated, beating Edmonton again."
   },
   {
-   "id": "hoc-022",
-   "subcategory": "leagues",
-   "difficulty": 2,
-   "question": "What is the Swiss hockey league called?",
+   "id": "hoc-014",
+   "subcategory": "olympics",
+   "difficulty": 3,
+   "question": "Which Olympic hockey team famously won 'The Miracle on Ice' in 1980?",
    "choices": [
-    "Liiga",
-    "SHL",
-    "KHL",
-    "National League"
+    "Canada",
+    "Sweden",
+    "United States",
+    "Soviet Union"
    ],
-   "answer": 3,
-   "explanation": "The Swiss National League is the top tier."
+   "answer": 2,
+   "explanation": "The US beat the USSR in Lake Placid."
   },
   {
-   "id": "hoc-023",
-   "subcategory": "leagues",
-   "difficulty": 2,
-   "question": "What is the Swedish top hockey league called?",
+   "id": "hoc-018",
+   "subcategory": "olympics",
+   "difficulty": 3,
+   "question": "Which country won Olympic men's ice hockey gold in 2022?",
    "choices": [
-    "NLA",
-    "SHL",
-    "DEL",
-    "Liiga"
+    "Russia Olympic Committee",
+    "Finland",
+    "Sweden",
+    "Canada"
    ],
    "answer": 1,
-   "explanation": "SHL stands for Svenska Hockeyligan."
+   "explanation": "Finland beat ROC 2–1 in Beijing."
   },
   {
-   "id": "hoc-024",
-   "subcategory": "rules",
-   "difficulty": 1,
-   "question": "What is a faceoff?",
+   "id": "hoc-011",
+   "subcategory": "players",
+   "difficulty": 3,
+   "question": "Which Russian star scored 800+ NHL goals?",
    "choices": [
-    "A penalty shot",
-    "A fight",
-    "An icing call",
-    "Dropping the puck between two players to start play"
+    "Evgeni Malkin",
+    "Sergei Fedorov",
+    "Pavel Datsyuk",
+    "Alex Ovechkin"
    ],
    "answer": 3,
-   "explanation": "Faceoffs start each period and restart play."
+   "explanation": "Ovechkin broke Gretzky's career goals record in 2025."
+  },
+  {
+   "id": "hoc-012",
+   "subcategory": "players",
+   "difficulty": 3,
+   "question": "In what year did Wayne Gretzky retire?",
+   "choices": [
+    "2003",
+    "1999",
+    "1989",
+    "1995"
+   ],
+   "answer": 1,
+   "explanation": "His number 99 was retired league-wide."
   },
   {
    "id": "hoc-025",
@@ -353,6 +297,48 @@
    "explanation": "Crosby has won two Olympic golds for Canada."
   },
   {
+   "id": "hoc-013",
+   "subcategory": "rules",
+   "difficulty": 3,
+   "question": "What is 'icing'?",
+   "choices": [
+    "Shooting the puck across the opponent's goal line from your own half",
+    "A faceoff",
+    "A penalty shot",
+    "A defence tactic"
+   ],
+   "answer": 0,
+   "explanation": "Icing stops play."
+  },
+  {
+   "id": "hoc-015",
+   "subcategory": "rules",
+   "difficulty": 3,
+   "question": "How wide is the NHL goal?",
+   "choices": [
+    "8 feet",
+    "4 feet",
+    "10 feet",
+    "6 feet (about 1.83 m)"
+   ],
+   "answer": 3,
+   "explanation": "The goal is 6 ft wide and 4 ft high."
+  },
+  {
+   "id": "hoc-017",
+   "subcategory": "history",
+   "difficulty": 4,
+   "question": "Which city's team won the first Stanley Cup after the NHL's creation in 1917?",
+   "choices": [
+    "Toronto Arenas",
+    "Montreal Canadiens",
+    "Boston Bruins",
+    "Ottawa Senators"
+   ],
+   "answer": 0,
+   "explanation": "The Arenas won the 1918 Cup."
+  },
+  {
    "id": "hoc-026",
    "subcategory": "history",
    "difficulty": 4,
@@ -365,6 +351,20 @@
    ],
    "answer": 3,
    "explanation": "The International Ice Hockey Federation is based in Zurich."
+  },
+  {
+   "id": "hoc-016",
+   "subcategory": "players",
+   "difficulty": 4,
+   "question": "Which player won the Hart Trophy most times (9)?",
+   "choices": [
+    "Bobby Orr",
+    "Gordie Howe",
+    "Wayne Gretzky",
+    "Mario Lemieux"
+   ],
+   "answer": 2,
+   "explanation": "Gretzky won nine MVP awards."
   }
  ]
 }

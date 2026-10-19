@@ -100,6 +100,11 @@ export const BOSS_ROSTER = {
     blurb: 'Bodies, diseases, drugs and the machines that scan them. A fever blurs your sight and sterile armor shrugs off slow answers.',
     intents: ['strike', 'blur', 'guard', 'mend'], enraged: ['blur', 'guard', 'twin', 'mend'],
   },
+  champion: {
+    id: 'champion', name: 'The Reigning Champion', title: 'Twelve Stars. Zero Mercy.', cat: 'any', tier: 3, hp: 30, sprite: 'boss_champion', color: '#f2c14e', arena: 'stage',
+    blurb: 'A smiling quiz-show champion who has never lost. Rapid fire on everything: the clock shrinks, armor holds, and the last stars hurt.',
+    intents: ['strike', 'accel', 'guard', 'surge'], enraged: ['surge', 'accel', 'twin', 'strike'],
+  },
   house: {
     id: 'house', name: 'The House', title: 'The House Always Knows', cat: 'any', tier: 4, hp: 34, sprite: 'boss_house', color: '#ffd24a', arena: 'house', final: true,
     blurb: 'Every subject, every trick. The last room.',

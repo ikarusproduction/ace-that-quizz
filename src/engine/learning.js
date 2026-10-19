@@ -113,7 +113,7 @@ export function grade(item, outcome, now, cfg = LEARNING) {
   if (!spaced && it.state !== 'new') { it.due = Math.max(it.due, now + cfg.learningSteps[0]); return it; }
 
   it.streak++; it.reps++;
-  if (gap >= DAY) it.delayed++;
+  if (gap >= DAY && !(outcome.hints > 0)) it.delayed++; // only an unaided recall after a day's gap is evidence of retention
   const steps = it.state === 'relearning' ? cfg.relearningSteps : cfg.learningSteps;
   if (it.state === 'new' || it.state === 'learning' || it.state === 'relearning') {
     if (it.state === 'new') it.state = 'learning';

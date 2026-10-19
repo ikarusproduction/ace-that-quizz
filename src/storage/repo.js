@@ -17,6 +17,7 @@ import { newFriendCode, newFriendSecret, normalizeFriendCode, FRIEND_CODE_RE, bu
 import { HEXES, PACKS, openPack, openPackStyle, FORGE_COST, HEX_NUMBERS } from '../engine/hexes.js';
 import { Rng } from '../engine/rng.js';
 import { ADVENTURES, packForStep, xpForStep, totals } from '../engine/adventure.js';
+import { cleanAcad, newAchievements } from '../engine/academy.js';
 import { runMigrations, migrateSnapshot, SchemaError, MIGRATIONS } from './migrations.js';
 import { STARTER_CARDS, CARDS } from '../engine/cards.js';
 
@@ -397,6 +398,37 @@ export async function createRepo(storage, { now = Date.now, uuid = defaultUuid, 
       profile.updatedAt = now();
       await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
       return profile.learn;
+    },
+
+    /**
+     * Save a finished Champion's Academy session in one transaction: the answers go into the learning record (spaced repetition,
+     * independent recall) and the analysable entries into the Academy record. Achievements earned by the new totals pay dust once.
+     * `answers` are learning outcomes (see practice.js); `entries` come from academy.entriesFromRun; `session` is { mode, n, right, score, ms, timed }.
+     */
+    async recordAcademy(id, { answers = [], entries = [], session = null, now: at = now(), offsetMin = 0 } = {}) {
+      const profile = await requireProfile(id);
+      const m = metaOf(profile);
+      const clean = (Array.isArray(answers) ? answers : []).filter((a) => a && typeof a.id === 'string');
+      profile.learn = applyAnswers(m.learn, clean, at, { kind: `acad-${session?.mode ?? 'x'}`.slice(0, 12), offsetMin });
+      const acad = cleanAcad({ ...m.acad, answers: [...m.acad.answers, ...(Array.isArray(entries) ? entries : [])], sessions: session ? [...m.acad.sessions, { ...session, t: at }] : m.acad.sessions });
+      const unlocked = newAchievements(acad, profile.learn, null, at);
+      let dust = 0;
+      for (const a of unlocked) { acad.achv[a.id] = at; dust += a.dust; }
+      profile.acad = acad;
+      if (dust) { profile.hexes = { ...m.hexes, dust: m.hexes.dust + dust }; profile.packs = m.packs; profile.daily = m.daily; }
+      profile.updatedAt = now();
+      await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
+      return { learn: profile.learn, acad, unlocked: unlocked.map((a) => ({ id: a.id, name: a.name, text: a.text, dust: a.dust })) };
+    },
+
+    /** Choose the Academy training plan (and per-subject weights) and whether the optional timer is on. */
+    async setAcademyPrefs(id, { plan, timer } = {}) {
+      const profile = await requireProfile(id);
+      const m = metaOf(profile);
+      profile.acad = cleanAcad({ ...m.acad, plan: plan ?? m.acad.plan, timer: timer ?? m.acad.timer });
+      profile.updatedAt = now();
+      await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
+      return profile.acad;
     },
 
     /** Buy a wardrobe item with dust. */

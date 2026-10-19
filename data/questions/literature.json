@@ -1,0 +1,244 @@
+{
+ "category": "literature",
+ "review": "unreviewed",
+ "questions": [
+  {
+   "id": "lit-001",
+   "subcategory": "authors",
+   "difficulty": 1,
+   "question": "Who wrote the novel Les Misérables?",
+   "choices": [
+    "Gustave Flaubert",
+    "Alexandre Dumas",
+    "Victor Hugo",
+    "Émile Zola"
+   ],
+   "answer": 2,
+   "explanation": "Hugo published Les Misérables in 1862, following the story of the ex-convict Jean Valjean.",
+   "tags": [
+    "hugo"
+   ]
+  },
+  {
+   "id": "lit-006",
+   "subcategory": "authors",
+   "difficulty": 1,
+   "question": "Which Spanish author created the knight Don Quixote of La Mancha?",
+   "choices": [
+    "Lope de Vega",
+    "Pablo Neruda",
+    "Miguel de Cervantes",
+    "Federico García Lorca"
+   ],
+   "answer": 2,
+   "explanation": "Cervantes published the first part in 1605 and the second in 1615.",
+   "tags": [
+    "cervantes"
+   ]
+  },
+  {
+   "id": "lit-008",
+   "subcategory": "authors",
+   "difficulty": 1,
+   "question": "Which Russian author wrote War and Peace?",
+   "choices": [
+    "Fyodor Dostoevsky",
+    "Leo Tolstoy",
+    "Alexander Pushkin",
+    "Anton Chekhov"
+   ],
+   "answer": 1,
+   "explanation": "Tolstoy published it between 1865 and 1869.",
+   "tags": [
+    "tolstoy"
+   ]
+  },
+  {
+   "id": "lit-002",
+   "subcategory": "classics",
+   "difficulty": 1,
+   "question": "Who wrote the play Romeo and Juliet?",
+   "choices": [
+    "Geoffrey Chaucer",
+    "Charles Dickens",
+    "William Shakespeare",
+    "Christopher Marlowe"
+   ],
+   "answer": 2,
+   "explanation": "Shakespeare wrote it in the 1590s.",
+   "tags": [
+    "shakespeare"
+   ]
+  },
+  {
+   "id": "lit-003",
+   "subcategory": "french-lit",
+   "difficulty": 2,
+   "question": "Which author wrote L'Étranger (The Stranger), published in 1942?",
+   "choices": [
+    "Jean-Paul Sartre",
+    "Albert Camus",
+    "André Gide",
+    "Marcel Proust"
+   ],
+   "answer": 1,
+   "explanation": "Camus published The Stranger in 1942; Sartre wrote Nausea.",
+   "tags": [
+    "camus"
+   ]
+  },
+  {
+   "id": "lit-005",
+   "subcategory": "language",
+   "difficulty": 2,
+   "question": "Which institution, founded in 1635, is the official authority on the French language?",
+   "choices": [
+    "The Académie française",
+    "The Collège de France",
+    "The Institut Pasteur",
+    "The Sorbonne"
+   ],
+   "answer": 0,
+   "explanation": "Cardinal Richelieu founded it to regulate and defend the French language.",
+   "tags": [
+    "academie"
+   ]
+  },
+  {
+   "id": "lit-009",
+   "subcategory": "language",
+   "difficulty": 2,
+   "question": "Which language is the ancestor of French, Spanish and Italian?",
+   "choices": [
+    "Greek",
+    "Latin",
+    "Old Norse",
+    "Sanskrit"
+   ],
+   "answer": 1,
+   "explanation": "The Romance languages developed from the Latin spoken across the Roman Empire.",
+   "tags": [
+    "romance"
+   ]
+  },
+  {
+   "id": "lit-014",
+   "subcategory": "language",
+   "difficulty": 2,
+   "question": "The word alphabet comes from the names of the first two letters of which alphabet?",
+   "choices": [
+    "Greek",
+    "Cyrillic",
+    "Latin",
+    "Hebrew"
+   ],
+   "answer": 0,
+   "explanation": "Alpha and beta are the first two Greek letters.",
+   "tags": [
+    "alphabet"
+   ]
+  },
+  {
+   "id": "lit-011",
+   "subcategory": "poetry",
+   "difficulty": 2,
+   "question": "How many lines does a standard sonnet have?",
+   "choices": [
+    "16",
+    "10",
+    "14",
+    "12"
+   ],
+   "answer": 2,
+   "explanation": "Both the Italian and the English sonnet have 14 lines.",
+   "tags": [
+    "sonnet"
+   ]
+  },
+  {
+   "id": "lit-007",
+   "subcategory": "classics",
+   "difficulty": 3,
+   "question": "Which epic poem tells of Odysseus's ten-year journey home after the Trojan War?",
+   "choices": [
+    "The Aeneid",
+    "The Argonautica",
+    "The Odyssey",
+    "The Iliad"
+   ],
+   "answer": 2,
+   "explanation": "The Iliad covers the war itself, the Aeneid is Roman, and the Argonautica follows Jason.",
+   "tags": [
+    "homer"
+   ]
+  },
+  {
+   "id": "lit-013",
+   "subcategory": "classics",
+   "difficulty": 3,
+   "question": "Which three realms does Dante visit in the Divine Comedy?",
+   "choices": [
+    "Limbo, Hell and Elysium",
+    "Hell, Purgatory and Paradise",
+    "Heaven, Earth and Hades",
+    "Inferno, the Styx and Olympus"
+   ],
+   "answer": 1,
+   "explanation": "The poem is divided into Inferno, Purgatorio and Paradiso.",
+   "tags": [
+    "dante"
+   ]
+  },
+  {
+   "id": "lit-012",
+   "subcategory": "french-lit",
+   "difficulty": 3,
+   "question": "Molière, born Jean-Baptiste Poquelin, was the leading playwright at the court of which French king?",
+   "choices": [
+    "Henri IV",
+    "Louis XIV",
+    "Louis XIII",
+    "Louis XV"
+   ],
+   "answer": 1,
+   "explanation": "Molière performed for Louis XIV, who supported him against critics of Tartuffe.",
+   "tags": [
+    "moliere"
+   ]
+  },
+  {
+   "id": "lit-004",
+   "subcategory": "poetry",
+   "difficulty": 3,
+   "question": "The 1857 collection Les Fleurs du mal led to a trial for offending what?",
+   "choices": [
+    "The Church's property",
+    "The monarchy's treasury",
+    "Military honour",
+    "Public morality"
+   ],
+   "answer": 3,
+   "explanation": "Baudelaire and his publisher were fined for offences against public morality, and six poems were suppressed.",
+   "tags": [
+    "baudelaire"
+   ]
+  },
+  {
+   "id": "lit-010",
+   "subcategory": "authors",
+   "difficulty": 4,
+   "question": "Which author wrote In Search of Lost Time (À la recherche du temps perdu), published between 1913 and 1927?",
+   "choices": [
+    "Louis-Ferdinand Céline",
+    "André Malraux",
+    "Marcel Proust",
+    "Marguerite Duras"
+   ],
+   "answer": 2,
+   "explanation": "Proust wrote the seven volumes, which end with Time Regained.",
+   "tags": [
+    "proust"
+   ]
+  }
+ ]
+}

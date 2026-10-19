@@ -25,7 +25,7 @@ export function makeLocalizer(app) {
   const translator = createTranslator({ fetchJson: (p) => app.readJson(p) });
   return async function localized(qid, lang) {
     const q = app.ctx.byId.get(qid);
-    const base = { text: q.question, choices: q.choices.map((t, i) => ({ orig: i, text: t })), explanation: q.explanation, translated: null };
+    const base = { text: q.question, choices: q.choices.map((t, i) => ({ orig: i, text: t })), explanation: q.explanation, misconception: q.misconception ?? null, mnemonic: q.mnemonic ?? null, translated: null };
     if (!lang || lang === 'en') return base;
     const tr = await Promise.race([translator.translateQuestion(q, lang).catch(() => null), new Promise((r) => setTimeout(() => r(null), 3000))]);
     return tr ? applyTranslation(base, tr) : base;
@@ -38,13 +38,14 @@ export function makeLocalizer(app) {
  *   localize(qid, lang), learnItems ({ conceptId: item }) for misconception notes, boss ({ name, sprite }) or event (true),
  *   label(it, run) -> small text above the question, onExit(), onEnd(run).
  */
-export async function playRun({ app, view, scene = null, run, lang = 'en', color = '#6fd1ff', player = null, localize, learnItems = {}, boss = null, event = false, label = null, onExit, onEnd }) {
+export async function playRun({ app, view, scene = null, run, lang = 'en', color = '#6fd1ff', player = null, localize, learnItems = {}, boss = null, event = false, label = null, timer = null, onExit, onEnd }) {
   let r = run;
   let q = null; // the localized current question
   let fx = { blur: false, flip: false };
   let flights = []; // thrown cards in the air
   let token = 0;
   const total0 = run.queue.length;
+  let askedAt = 0; let askedKey = ''; let timerTok = 0; // when the current question was shown (for the Academy's speed stats) and the optional countdown
   const arena = Boolean(boss || event);
   const rig = boss ? createRig(boss.sprite, 96, boss.name) : null;
   const hpFill = h('i', { style: { width: '100%' } });
@@ -147,6 +148,8 @@ export async function playRun({ app, view, scene = null, run, lang = 'en', color
       !p.correct ? h('p.small', {}, 'The answer: ', h('b', {}, correctText)) : null,
       wrongText ? h('p.tiny.dim', {}, `You picked: ${wrongText}`) : null,
       q.explanation ? h('p.small', {}, q.explanation) : null,
+      !p.correct && q.misconception ? h('p.tiny.amber', {}, `Common mix-up: ${q.misconception}`) : null,
+      q.mnemonic ? h('p.tiny.dim', {}, `Memory aid: ${q.mnemonic}`) : null,
       habit ? h('p.tiny.amber', {}, 'You have picked this one before. It is a recurring mix-up, so it will come back.') : null,
       !p.correct && p.confidence === 'sure' ? h('p.tiny.amber', {}, 'You were sure about this one. Mistakes made with confidence are the most useful to fix, so it comes back soon.') : null,
       p.correct && p.hints ? h('p.tiny.dim', {}, `Answered with ${p.hints} hint${p.hints > 1 ? 's' : ''}: it counts for less in your review schedule than a recall without help.`) : null,
@@ -161,12 +164,19 @@ export async function playRun({ app, view, scene = null, run, lang = 'en', color
     const qq = app.ctx.byId.get(it.qid);
     const shown = it.order.map((orig, display) => ({ display, orig, text: q.choices.find((c) => c.orig === orig)?.text ?? qq.choices[orig] }));
     const picked = r.picked; const left = hintsLeft(r, app.ctx);
+    const key = `${r.idx}:${it.qid}`;
+    if (key !== askedKey) { askedKey = key; askedAt = performance.now(); }
+    const secs = timer && !picked ? timer(it) : null;
+    const bar = secs ? h('div.q-timer', { role: 'timer', 'aria-label': `${secs} seconds suggested` }, h('i', { style: { animationDuration: `${secs}s`, animationDelay: `-${Math.min(secs, (performance.now() - askedAt) / 1000).toFixed(2)}s` } })) : null;
+    const myTok = ++timerTok;
+    if (secs) setTimeout(() => { if (myTok === timerTok && !r.picked) document.querySelector('.q-timer')?.classList.add('over'); }, Math.max(0, secs * 1000 - (performance.now() - askedAt)));
     const hearts = r.hearts !== null ? bulbs(r.hearts, r.maxHearts) : null;
     view(
       h('div.topbar', {}, h('button.btn.icon.ghost.back', { type: 'button', 'aria-label': 'Leave', onclick: () => { sfx.tap(); leave(); } }, '✕'),
         h('div.progress.grow', {}, h('i', { style: { width: `${(r.idx / r.queue.length) * 100}%`, background: color } })), hearts),
       strip,
       h('div.row.between', {}, h('span.tiny.dim', {}, label ? label(it, r) : `Question ${r.idx + 1} of ${r.queue.length}`), h('span.row.gap-s', {}, REASON[it.reason] ? h('span.tag.green', {}, REASON[it.reason]) : null, h('span.tag', {}, LEVEL_NAME[it.level] ?? ''))),
+      bar,
       h('div.qwrap', { class: fx.flip ? 'hex-flip' : '', dir: rtlOf() }, h('div.panel.paper.qcard', {}, h('div.q', {}, q.text))),
       !picked && stakesAvailable(r, app.ctx).length > 1 ? h('div.stakes', { role: 'group', 'aria-label': 'Stake on this question' }, h('span.tiny.dim', {}, 'Stake'),
         STAKES.map((st) => { const ok = stakesAvailable(r, app.ctx).includes(st.shift); return h('button.chip', { type: 'button', title: st.hint, disabled: !ok, 'aria-pressed': String(it.shift === st.shift), class: it.shift === st.shift ? 'on' : '', onclick: async () => { sfx.tap(); r = setStake(r, st.shift, app.ctx); await load(); paint(); } }, st.name); }),
@@ -190,7 +200,7 @@ export async function playRun({ app, view, scene = null, run, lang = 'en', color
   function choose(display) {
     unlockAudio();
     cancelFlights();
-    r = answerRun(r, display, app.ctx);
+    timerTok++; r = answerRun(r, display, app.ctx, { ms: performance.now() - askedAt });
     if (r.picked.correct) {
       sfx.correct(); haptic('tap'); scene?.react('good');
       if (boss) {

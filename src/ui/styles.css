@@ -1313,3 +1313,10 @@ details.angle { margin-top: 6px; } details.angle summary { cursor: pointer; colo
 .stakes { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 4px 0; }
 .stakes .chip:disabled { opacity: .35; }
 .stakes .stake-hint { flex: 1 1 100%; }
+
+/* optional response timer: a bar that runs down, then turns amber. Never a penalty in learning. */
+.q-timer { height: 6px; background: rgba(255, 255, 255, .1); box-shadow: inset 0 0 0 2px var(--edge); margin: 4px 0; overflow: hidden; }
+.q-timer i { display: block; height: 100%; width: 100%; background: var(--amber, #e8a33d); transform-origin: left; animation: q-timer-run linear forwards; }
+.q-timer.over i { background: var(--blood, #b3261e); }
+@keyframes q-timer-run { from { transform: scaleX(1); } to { transform: scaleX(0); } }
+@media (prefers-reduced-motion: reduce) { .q-timer i { animation: none; transform: scaleX(.5); } }

@@ -3,20 +3,6 @@
  "review": "unreviewed",
  "questions": [
   {
-   "id": "mus-001",
-   "subcategory": "rock",
-   "difficulty": 1,
-   "question": "Which band performed 'Bohemian Rhapsody'?",
-   "choices": [
-    "Queen",
-    "The Rolling Stones",
-    "Led Zeppelin",
-    "The Beatles"
-   ],
-   "answer": 0,
-   "explanation": "Released in 1975, Freddie Mercury wrote it."
-  },
-  {
    "id": "mus-002",
    "subcategory": "instruments",
    "difficulty": 1,
@@ -29,34 +15,6 @@
    ],
    "answer": 3,
    "explanation": "Standard tuning is E-A-D-G-B-E."
-  },
-  {
-   "id": "mus-003",
-   "subcategory": "pop",
-   "difficulty": 1,
-   "question": "Which singer is known as the 'Queen of Pop'?",
-   "choices": [
-    "Cher",
-    "Mariah Carey",
-    "Madonna",
-    "Whitney Houston"
-   ],
-   "answer": 2,
-   "explanation": "Madonna debuted in 1982."
-  },
-  {
-   "id": "mus-004",
-   "subcategory": "rock",
-   "difficulty": 1,
-   "question": "Which band had a hit with 'Hey Jude'?",
-   "choices": [
-    "The Who",
-    "The Beatles",
-    "Oasis",
-    "The Kinks"
-   ],
-   "answer": 1,
-   "explanation": "Hey Jude was released in 1968."
   },
   {
    "id": "mus-005",
@@ -73,6 +31,20 @@
    "explanation": "A standard piano has 52 white and 36 black keys."
   },
   {
+   "id": "mus-003",
+   "subcategory": "pop",
+   "difficulty": 1,
+   "question": "Which singer is known as the 'Queen of Pop'?",
+   "choices": [
+    "Cher",
+    "Mariah Carey",
+    "Madonna",
+    "Whitney Houston"
+   ],
+   "answer": 2,
+   "explanation": "Madonna debuted in 1982."
+  },
+  {
    "id": "mus-006",
    "subcategory": "pop",
    "difficulty": 1,
@@ -85,6 +57,34 @@
    ],
    "answer": 0,
    "explanation": "Thriller is one of the best-selling albums ever."
+  },
+  {
+   "id": "mus-001",
+   "subcategory": "rock",
+   "difficulty": 1,
+   "question": "Which band performed 'Bohemian Rhapsody'?",
+   "choices": [
+    "Queen",
+    "The Rolling Stones",
+    "Led Zeppelin",
+    "The Beatles"
+   ],
+   "answer": 0,
+   "explanation": "Released in 1975, Freddie Mercury wrote it."
+  },
+  {
+   "id": "mus-004",
+   "subcategory": "rock",
+   "difficulty": 1,
+   "question": "Which band had a hit with 'Hey Jude'?",
+   "choices": [
+    "The Who",
+    "The Beatles",
+    "Oasis",
+    "The Kinks"
+   ],
+   "answer": 1,
+   "explanation": "Hey Jude was released in 1968."
   },
   {
    "id": "mus-007",
@@ -129,32 +129,18 @@
    "explanation": "Beethoven wrote it while almost deaf."
   },
   {
-   "id": "mus-010",
-   "subcategory": "hiphop",
+   "id": "mus-013",
+   "subcategory": "classical",
    "difficulty": 2,
-   "question": "Which rapper released 'Lose Yourself' in 2002?",
+   "question": "Which instrument is Yo-Yo Ma known for?",
    "choices": [
-    "50 Cent",
-    "Jay-Z",
-    "Dr. Dre",
-    "Eminem"
+    "Cello",
+    "Flute",
+    "Harp",
+    "Violin"
    ],
-   "answer": 3,
-   "explanation": "It won the Oscar for Best Original Song."
-  },
-  {
-   "id": "mus-011",
-   "subcategory": "pop",
-   "difficulty": 2,
-   "question": "Which singer-songwriter released the album 'Back to Black' in 2006?",
-   "choices": [
-    "Duffy",
-    "Lily Allen",
-    "Adele",
-    "Amy Winehouse"
-   ],
-   "answer": 3,
-   "explanation": "Amy Winehouse won five Grammys in 2008."
+   "answer": 0,
+   "explanation": "Yo-Yo Ma is one of the world's best-known cellists."
   },
   {
    "id": "mus-012",
@@ -171,18 +157,60 @@
    "explanation": "They are French house duo."
   },
   {
-   "id": "mus-013",
-   "subcategory": "classical",
+   "id": "mus-010",
+   "subcategory": "hiphop",
    "difficulty": 2,
-   "question": "Which instrument is Yo-Yo Ma known for?",
+   "question": "Which rapper released 'Lose Yourself' in 2002?",
    "choices": [
-    "Cello",
-    "Flute",
-    "Harp",
-    "Violin"
+    "50 Cent",
+    "Jay-Z",
+    "Dr. Dre",
+    "Eminem"
+   ],
+   "answer": 3,
+   "explanation": "It won the Oscar for Best Original Song."
+  },
+  {
+   "id": "mus-033",
+   "subcategory": "industry",
+   "difficulty": 2,
+   "question": "Which streaming company, founded in Sweden, offers millions of songs?",
+   "choices": [
+    "Spotify",
+    "Deezer",
+    "Pandora",
+    "Tidal"
    ],
    "answer": 0,
-   "explanation": "Yo-Yo Ma is one of the world's best-known cellists."
+   "explanation": "Spotify launched in 2008."
+  },
+  {
+   "id": "mus-011",
+   "subcategory": "pop",
+   "difficulty": 2,
+   "question": "Which singer-songwriter released the album 'Back to Black' in 2006?",
+   "choices": [
+    "Duffy",
+    "Lily Allen",
+    "Adele",
+    "Amy Winehouse"
+   ],
+   "answer": 3,
+   "explanation": "Amy Winehouse won five Grammys in 2008."
+  },
+  {
+   "id": "mus-034",
+   "subcategory": "pop",
+   "difficulty": 2,
+   "question": "Which girl group sang 'Wannabe' in 1996?",
+   "choices": [
+    "Destiny's Child",
+    "Girls Aloud",
+    "Spice Girls",
+    "TLC"
+   ],
+   "answer": 2,
+   "explanation": "Wannabe topped charts in 37 countries."
   },
   {
    "id": "mus-014",
@@ -213,32 +241,18 @@
    "explanation": "Italian for 'in the manner of the chapel'."
   },
   {
-   "id": "mus-018",
-   "subcategory": "jazz",
+   "id": "mus-025",
+   "subcategory": "classical",
    "difficulty": 3,
-   "question": "Which musical genre originated in New Orleans?",
+   "question": "How many symphonies did Beethoven compose?",
    "choices": [
-    "Jazz",
-    "Reggae",
-    "Country",
-    "Blues"
+    "12",
+    "15",
+    "5",
+    "9"
    ],
-   "answer": 0,
-   "explanation": "Jazz developed in New Orleans in the early 20th century."
-  },
-  {
-   "id": "mus-019",
-   "subcategory": "rock",
-   "difficulty": 3,
-   "question": "Which singer is called 'The King of Rock and Roll'?",
-   "choices": [
-    "Chuck Berry",
-    "Jerry Lee Lewis",
-    "Elvis Presley",
-    "Little Richard"
-   ],
-   "answer": 2,
-   "explanation": "Elvis rose to fame in the 1950s."
+   "answer": 3,
+   "explanation": "His Ninth is his last."
   },
   {
    "id": "mus-020",
@@ -255,32 +269,32 @@
    "explanation": "The song is from the 1997 album Homework."
   },
   {
-   "id": "mus-021",
-   "subcategory": "rock",
+   "id": "mus-024",
+   "subcategory": "hiphop",
    "difficulty": 3,
-   "question": "Which album by Pink Floyd features a prism on the cover?",
+   "question": "Which rapper is known as 'Hov'?",
    "choices": [
-    "Animals",
-    "The Dark Side of the Moon",
-    "The Wall",
-    "Wish You Were Here"
+    "Snoop Dogg",
+    "Kanye West",
+    "Jay-Z",
+    "Nas"
    ],
-   "answer": 1,
-   "explanation": "Released in 1973."
+   "answer": 2,
+   "explanation": "Jay-Z founded Roc-A-Fella Records."
   },
   {
-   "id": "mus-022",
-   "subcategory": "theory",
+   "id": "mus-018",
+   "subcategory": "jazz",
    "difficulty": 3,
-   "question": "What is the term for the speed of music?",
+   "question": "Which musical genre originated in New Orleans?",
    "choices": [
-    "Timbre",
-    "Harmony",
-    "Pitch",
-    "Tempo"
+    "Jazz",
+    "Reggae",
+    "Country",
+    "Blues"
    ],
-   "answer": 3,
-   "explanation": "Measured in beats per minute."
+   "answer": 0,
+   "explanation": "Jazz developed in New Orleans in the early 20th century."
   },
   {
    "id": "mus-023",
@@ -297,32 +311,18 @@
    "explanation": "Kind of Blue is one of the best-selling jazz albums."
   },
   {
-   "id": "mus-024",
-   "subcategory": "hiphop",
+   "id": "mus-035",
+   "subcategory": "pop",
    "difficulty": 3,
-   "question": "Which rapper is known as 'Hov'?",
+   "question": "Which Colombian singer is famous for 'Hips Don't Lie'?",
    "choices": [
-    "Snoop Dogg",
-    "Kanye West",
-    "Jay-Z",
-    "Nas"
+    "Rihanna",
+    "Jennifer Lopez",
+    "Shakira",
+    "Beyoncé"
    ],
    "answer": 2,
-   "explanation": "Jay-Z founded Roc-A-Fella Records."
-  },
-  {
-   "id": "mus-025",
-   "subcategory": "classical",
-   "difficulty": 3,
-   "question": "How many symphonies did Beethoven compose?",
-   "choices": [
-    "12",
-    "15",
-    "5",
-    "9"
-   ],
-   "answer": 3,
-   "explanation": "His Ninth is his last."
+   "explanation": "Shakira is also known for 'Waka Waka'."
   },
   {
    "id": "mus-026",
@@ -339,6 +339,34 @@
    "explanation": "Marley died in 1981."
   },
   {
+   "id": "mus-019",
+   "subcategory": "rock",
+   "difficulty": 3,
+   "question": "Which singer is called 'The King of Rock and Roll'?",
+   "choices": [
+    "Chuck Berry",
+    "Jerry Lee Lewis",
+    "Elvis Presley",
+    "Little Richard"
+   ],
+   "answer": 2,
+   "explanation": "Elvis rose to fame in the 1950s."
+  },
+  {
+   "id": "mus-021",
+   "subcategory": "rock",
+   "difficulty": 3,
+   "question": "Which album by Pink Floyd features a prism on the cover?",
+   "choices": [
+    "Animals",
+    "The Dark Side of the Moon",
+    "The Wall",
+    "Wish You Were Here"
+   ],
+   "answer": 1,
+   "explanation": "Released in 1973."
+  },
+  {
    "id": "mus-027",
    "subcategory": "rock",
    "difficulty": 3,
@@ -353,18 +381,46 @@
    "explanation": "Kurt Cobain was the singer."
   },
   {
-   "id": "mus-028",
-   "subcategory": "theory",
-   "difficulty": 4,
-   "question": "Which key has no sharps or flats in its scale?",
+   "id": "mus-036",
+   "subcategory": "rock",
+   "difficulty": 3,
+   "question": "Which British band released the 'Sgt. Pepper's Lonely Hearts Club Band' album?",
    "choices": [
-    "F major",
-    "G major",
-    "A minor only",
-    "C major"
+    "Pink Floyd",
+    "The Beatles",
+    "The Rolling Stones",
+    "The Kinks"
+   ],
+   "answer": 1,
+   "explanation": "It was released in 1967."
+  },
+  {
+   "id": "mus-022",
+   "subcategory": "theory",
+   "difficulty": 3,
+   "question": "What is the term for the speed of music?",
+   "choices": [
+    "Timbre",
+    "Harmony",
+    "Pitch",
+    "Tempo"
    ],
    "answer": 3,
-   "explanation": "C major uses only the white keys."
+   "explanation": "Measured in beats per minute."
+  },
+  {
+   "id": "mus-032",
+   "subcategory": "theory",
+   "difficulty": 3,
+   "question": "What does 'forte' mean in music?",
+   "choices": [
+    "Fast",
+    "Soft",
+    "Loud",
+    "Slow"
+   ],
+   "answer": 2,
+   "explanation": "Piano means soft."
   },
   {
    "id": "mus-029",
@@ -409,74 +465,18 @@
    "explanation": "Adele's 21 included 'Rolling in the Deep'."
   },
   {
-   "id": "mus-032",
+   "id": "mus-028",
    "subcategory": "theory",
-   "difficulty": 3,
-   "question": "What does 'forte' mean in music?",
+   "difficulty": 4,
+   "question": "Which key has no sharps or flats in its scale?",
    "choices": [
-    "Fast",
-    "Soft",
-    "Loud",
-    "Slow"
+    "F major",
+    "G major",
+    "A minor only",
+    "C major"
    ],
-   "answer": 2,
-   "explanation": "Piano means soft."
-  },
-  {
-   "id": "mus-033",
-   "subcategory": "industry",
-   "difficulty": 2,
-   "question": "Which streaming company, founded in Sweden, offers millions of songs?",
-   "choices": [
-    "Spotify",
-    "Deezer",
-    "Pandora",
-    "Tidal"
-   ],
-   "answer": 0,
-   "explanation": "Spotify launched in 2008."
-  },
-  {
-   "id": "mus-034",
-   "subcategory": "pop",
-   "difficulty": 2,
-   "question": "Which girl group sang 'Wannabe' in 1996?",
-   "choices": [
-    "Destiny's Child",
-    "Girls Aloud",
-    "Spice Girls",
-    "TLC"
-   ],
-   "answer": 2,
-   "explanation": "Wannabe topped charts in 37 countries."
-  },
-  {
-   "id": "mus-035",
-   "subcategory": "pop",
-   "difficulty": 3,
-   "question": "Which Colombian singer is famous for 'Hips Don't Lie'?",
-   "choices": [
-    "Rihanna",
-    "Jennifer Lopez",
-    "Shakira",
-    "Beyoncé"
-   ],
-   "answer": 2,
-   "explanation": "Shakira is also known for 'Waka Waka'."
-  },
-  {
-   "id": "mus-036",
-   "subcategory": "rock",
-   "difficulty": 3,
-   "question": "Which British band released the 'Sgt. Pepper's Lonely Hearts Club Band' album?",
-   "choices": [
-    "Pink Floyd",
-    "The Beatles",
-    "The Rolling Stones",
-    "The Kinks"
-   ],
-   "answer": 1,
-   "explanation": "It was released in 1967."
+   "answer": 3,
+   "explanation": "C major uses only the white keys."
   }
  ]
 }

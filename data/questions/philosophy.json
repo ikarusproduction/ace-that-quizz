@@ -1,0 +1,244 @@
+{
+ "category": "philosophy",
+ "review": "unreviewed",
+ "questions": [
+  {
+   "id": "phil-001",
+   "subcategory": "ancient",
+   "difficulty": 1,
+   "question": "Which ancient Greek philosopher was the teacher of Plato?",
+   "choices": [
+    "Aristotle",
+    "Pythagoras",
+    "Epicurus",
+    "Socrates"
+   ],
+   "answer": 3,
+   "explanation": "Plato recorded Socrates's conversations in his dialogues.",
+   "tags": [
+    "socrates"
+   ]
+  },
+  {
+   "id": "phil-011",
+   "subcategory": "ideas",
+   "difficulty": 1,
+   "question": "Which 18th-century movement emphasised reason and individual rights?",
+   "choices": [
+    "Romanticism",
+    "The Renaissance",
+    "The Enlightenment",
+    "The Reformation"
+   ],
+   "answer": 2,
+   "explanation": "The Enlightenment is also called the Age of Reason.",
+   "tags": [
+    "enlightenment"
+   ]
+  },
+  {
+   "id": "phil-002",
+   "subcategory": "ancient",
+   "difficulty": 2,
+   "question": "Which philosopher was the tutor of Alexander the Great?",
+   "choices": [
+    "Plato",
+    "Aristotle",
+    "Diogenes",
+    "Socrates"
+   ],
+   "answer": 1,
+   "explanation": "Philip of Macedon hired Aristotle to teach his son.",
+   "tags": [
+    "aristotle"
+   ]
+  },
+  {
+   "id": "phil-007",
+   "subcategory": "ethics",
+   "difficulty": 2,
+   "question": "Which ethical theory judges actions by their consequences for overall happiness?",
+   "choices": [
+    "Utilitarianism",
+    "Existentialism",
+    "Deontology",
+    "Virtue ethics"
+   ],
+   "answer": 0,
+   "explanation": "Utilitarianism says the right act produces the greatest good for the greatest number.",
+   "tags": [
+    "utilitarian"
+   ]
+  },
+  {
+   "id": "phil-013",
+   "subcategory": "ideas",
+   "difficulty": 2,
+   "question": "Which Roman emperor wrote the Meditations, a classic of Stoicism?",
+   "choices": [
+    "Nero",
+    "Trajan",
+    "Hadrian",
+    "Marcus Aurelius"
+   ],
+   "answer": 3,
+   "explanation": "Marcus Aurelius wrote it as private notes, in Greek.",
+   "tags": [
+    "stoicism"
+   ]
+  },
+  {
+   "id": "phil-004",
+   "subcategory": "modern",
+   "difficulty": 2,
+   "question": "Which French philosopher is famous for the phrase I think, therefore I am?",
+   "choices": [
+    "Montesquieu",
+    "René Descartes",
+    "Jean-Jacques Rousseau",
+    "Blaise Pascal"
+   ],
+   "answer": 1,
+   "explanation": "Cogito, ergo sum is the first certainty of his method.",
+   "tags": [
+    "descartes"
+   ]
+  },
+  {
+   "id": "phil-006",
+   "subcategory": "modern",
+   "difficulty": 2,
+   "question": "Which philosopher wrote Thus Spoke Zarathustra?",
+   "choices": [
+    "Friedrich Nietzsche",
+    "Martin Heidegger",
+    "Arthur Schopenhauer",
+    "Søren Kierkegaard"
+   ],
+   "answer": 0,
+   "explanation": "Nietzsche published it between 1883 and 1885.",
+   "tags": [
+    "nietzsche"
+   ]
+  },
+  {
+   "id": "phil-009",
+   "subcategory": "political-thought",
+   "difficulty": 2,
+   "question": "Which Genevan philosopher wrote The Social Contract, published in 1762?",
+   "choices": [
+    "Jean-Jacques Rousseau",
+    "Voltaire",
+    "Denis Diderot",
+    "Montesquieu"
+   ],
+   "answer": 0,
+   "explanation": "It opens with: Man is born free, and everywhere he is in chains.",
+   "tags": [
+    "rousseau"
+   ]
+  },
+  {
+   "id": "phil-003",
+   "subcategory": "ancient",
+   "difficulty": 3,
+   "question": "In Plato's allegory of the cave, what do the shadows on the wall represent?",
+   "choices": [
+    "Appearances rather than true reality",
+    "The dreams of philosophers",
+    "The afterlife",
+    "The gods"
+   ],
+   "answer": 0,
+   "explanation": "The prisoners take shadows for reality, while the real forms lie outside the cave.",
+   "tags": [
+    "plato"
+   ]
+  },
+  {
+   "id": "phil-008",
+   "subcategory": "ethics",
+   "difficulty": 3,
+   "question": "Which ethical view holds that the rightness of an act depends on duties or rules rather than outcomes?",
+   "choices": [
+    "Egoism",
+    "Consequentialism",
+    "Deontology",
+    "Relativism"
+   ],
+   "answer": 2,
+   "explanation": "Deontology comes from the Greek for duty.",
+   "tags": [
+    "deontology"
+   ]
+  },
+  {
+   "id": "phil-012",
+   "subcategory": "ideas",
+   "difficulty": 3,
+   "question": "Which French philosopher wrote Being and Nothingness, published in 1943?",
+   "choices": [
+    "Martin Heidegger",
+    "Albert Camus",
+    "Jean-Paul Sartre",
+    "Søren Kierkegaard"
+   ],
+   "answer": 2,
+   "explanation": "Sartre's major work of existentialist philosophy appeared in 1943.",
+   "tags": [
+    "existentialism"
+   ]
+  },
+  {
+   "id": "phil-005",
+   "subcategory": "modern",
+   "difficulty": 3,
+   "question": "Which principle of Kant says to act only on a rule you could will to become a universal law?",
+   "choices": [
+    "The categorical imperative",
+    "The veil of ignorance",
+    "The principle of utility",
+    "The golden mean"
+   ],
+   "answer": 0,
+   "explanation": "The categorical imperative is the core of Kant's moral philosophy.",
+   "tags": [
+    "kant"
+   ]
+  },
+  {
+   "id": "phil-010",
+   "subcategory": "political-thought",
+   "difficulty": 3,
+   "question": "Which Enlightenment thinker's work The Spirit of the Laws (1748) promoted the separation of powers?",
+   "choices": [
+    "Montesquieu",
+    "Diderot",
+    "Voltaire",
+    "Rousseau"
+   ],
+   "answer": 0,
+   "explanation": "Montesquieu argued that dividing power prevents tyranny.",
+   "tags": [
+    "montesquieu"
+   ]
+  },
+  {
+   "id": "phil-014",
+   "subcategory": "ideas",
+   "difficulty": 4,
+   "question": "Which philosopher described the problem of induction, asking why the future should resemble the past?",
+   "choices": [
+    "David Hume",
+    "John Locke",
+    "George Berkeley",
+    "René Descartes"
+   ],
+   "answer": 0,
+   "explanation": "Hume argued that no deduction can justify the expectation that observed patterns continue.",
+   "tags": [
+    "hume"
+   ]
+  }
+ ]
+}

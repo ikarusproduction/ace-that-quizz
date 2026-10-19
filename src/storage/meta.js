@@ -4,6 +4,7 @@ import { HEXES, STARTER_HEXES, PACKS, HEX_NUMBERS } from '../engine/hexes.js';
 import { levelOf, cleanWardrobe } from '../engine/cosmetics.js';
 import { ADVENTURE_IDS, cleanProgress } from '../engine/adventure.js';
 import { cleanLearn, mergeLearn } from '../engine/learning.js';
+import { cleanAcad, mergeAcad } from '../engine/academy.js';
 import { BOSS_ROSTER, cleanRank } from '../engine/duel.js';
 
 /** Boss ranks: { bossId: 0-4 }, only for bosses that exist and have evolved at least once. */
@@ -45,7 +46,7 @@ export function metaOf(p) {
   const xpLog = (Array.isArray(p?.xpLog) ? p.xpLog : []).filter((x) => typeof x === 'string').map((x) => x.slice(0, 64)).slice(-30);
   const cos = cleanWardrobe(p?.cos, levelOf(xp).level);
   const adv = Object.fromEntries(ADVENTURE_IDS.map((id) => [id, cleanProgress(p?.adv?.[id])]));
-  return { hexes: { owned, deck, dust }, packs, daily, friendCode, friendSecret, friends: cleanFriends(p?.friends), xp, xpLog, cos, adv, learn: cleanLearn(p?.learn), bosses: cleanBosses(p?.bosses) };
+  return { hexes: { owned, deck, dust }, packs, daily, friendCode, friendSecret, friends: cleanFriends(p?.friends), xp, xpLog, cos, adv, learn: cleanLearn(p?.learn), acad: cleanAcad(p?.acad), bosses: cleanBosses(p?.bosses) };
 }
 
 /** Day keys look like "2026-10-17" (local date). */
@@ -73,6 +74,7 @@ export function mergeMeta(mine, theirs, theirsIsNewer) {
     })),
     xpLog: [...new Set([...a.xpLog, ...b.xpLog])].slice(-30),
     learn: mergeLearn(a.learn, b.learn),
+    acad: mergeAcad(a.acad, b.acad),
     bosses: cleanBosses(Object.fromEntries(Object.keys(BOSS_ROSTER).map((id) => [id, Math.max(a.bosses[id] ?? 0, b.bosses[id] ?? 0)]))),
     cos: cleanWardrobe({ owned: [...a.cos.owned, ...b.cos.owned], equipped: theirsIsNewer ? b.cos.equipped : a.cos.equipped }, levelOf(Math.max(a.xp, b.xp)).level),
     friendCode: a.friendCode || b.friendCode,
