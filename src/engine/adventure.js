@@ -25,20 +25,31 @@ export const ADVENTURES = {
     bossNames: ['The Spark', 'The Flask', 'The Magnet', 'The Prism', 'The Orbit', 'The Gene', 'The Quark', 'The Vacuum', 'The Paradox', 'Dr. Static'],
     // Concepts the adventure draws from: "category/subcategory", or "category" for everything in it.
     subs: ['science', 'nature/anatomy', 'nature/cells', 'nature/plants', 'symbols/element-symbol', 'symbols/periodic-table', 'symbols/formula', 'symbols/si-units', 'cooking/science'],
-    // One scene per chapter. `focus` lists the subcategories that supply the NEW concepts of that chapter; reviews that are due
-    // can come from anywhere in the adventure.
+    // Ten chapters, ten subjects. Each chapter has three aspects (steps 1 to 3, 4 to 6, 7 to 9) that draw their NEW concepts from
+    // their own subcategories; the boss mixes all three. Reviews that are due can come from anywhere in the adventure.
+    // Questions get harder as the chapters go on: the ladder level rises (levelForStep) and so does the content itself.
     chapters: [
-      { scene: 'bench', name: 'The Bench', focus: ['symbols/element-symbol', 'symbols/periodic-table', 'science/chemistry'] },
-      { scene: 'greenhouse', name: 'The Greenhouse', focus: ['nature/plants', 'nature/cells', 'cooking/science', 'science/history-of-science'] },
-      { scene: 'clinic', name: 'The Clinic', focus: ['nature/anatomy', 'science/phobia'] },
-      { scene: 'workshop', name: 'The Workshop', focus: ['science/physics', 'symbols/si-units', 'symbols/formula'] },
-      { scene: 'observatory', name: 'The Observatory', focus: ['science/space'] },
-      { scene: 'reactor', name: 'The Reactor', focus: ['science/physics', 'symbols/periodic-table', 'symbols/formula'] },
-      { scene: 'fearlab', name: 'The Fear Lab', focus: ['science/phobia', 'nature/anatomy'] },
-      { scene: 'deep', name: 'The Deep', focus: ['science/chemistry', 'nature/cells', 'science/phobia'] },
-      { scene: 'orbit', name: 'High Orbit', focus: ['science/space', 'science/physics'] },
-      { scene: 'paradox', name: 'The Paradox', focus: [] },
-    ],
+      { scene: 'bench', name: 'The Bench', subject: 'Matter', aspects: [
+        { name: 'States of matter', focus: ['science/states'] }, { name: 'Atoms and elements', focus: ['science/atoms', 'symbols/element-symbol', 'symbols/periodic-table'] }, { name: 'Reactions', focus: ['science/reactions', 'science/chemistry'] }] },
+      { scene: 'greenhouse', name: 'The Greenhouse', subject: 'Life', aspects: [
+        { name: 'Cells', focus: ['science/cells', 'nature/cells'] }, { name: 'Plants', focus: ['science/plants', 'nature/plants', 'cooking/science'] }, { name: 'Evolution and ecosystems', focus: ['science/evolution', 'science/history-of-science'] }] },
+      { scene: 'clinic', name: 'The Clinic', subject: 'Body and brain', aspects: [
+        { name: 'The senses', focus: ['science/senses'] }, { name: 'Brain and hormones', focus: ['science/brain'] }, { name: 'Genes and the body', focus: ['science/genes', 'nature/anatomy'] }] },
+      { scene: 'workshop', name: 'The Workshop', subject: 'Forces and machines', aspects: [
+        { name: 'Motion', focus: ['science/motion', 'science/physics'] }, { name: 'Energy and heat', focus: ['science/energy'] }, { name: 'Machines and units', focus: ['science/machines', 'symbols/si-units', 'symbols/formula'] }] },
+      { scene: 'observatory', name: 'The Observatory', subject: 'Space', aspects: [
+        { name: 'The Solar System', focus: ['science/solar', 'science/space'] }, { name: 'Stars and light', focus: ['science/stars'] }, { name: 'The cosmos', focus: ['science/cosmos'] }] },
+      { scene: 'reactor', name: 'The Reactor', subject: 'Electricity, waves and the nucleus', aspects: [
+        { name: 'Electricity and magnets', focus: ['science/electricity'] }, { name: 'Waves and light', focus: ['science/waves'] }, { name: 'The nucleus', focus: ['science/nuclear'] }] },
+      { scene: 'fearlab', name: 'The Fear Lab', subject: 'Mind and method', aspects: [
+        { name: 'Perception and memory', focus: ['science/illusions'] }, { name: 'Fear and conditioning', focus: ['science/fears', 'science/phobia'] }, { name: 'How science works', focus: ['science/method'] }] },
+      { scene: 'deep', name: 'The Deep', subject: 'Earth', aspects: [
+        { name: 'Rocks and plates', focus: ['science/rocks'] }, { name: 'Oceans', focus: ['science/oceans'] }, { name: 'Air and climate', focus: ['science/climate'] }] },
+      { scene: 'orbit', name: 'High Orbit', subject: 'Frontier technology', aspects: [
+        { name: 'Computing and AI', focus: ['science/computing'] }, { name: 'Materials and power', focus: ['science/materials'] }, { name: 'Flight and space travel', focus: ['science/flight'] }] },
+      { scene: 'paradox', name: 'The Paradox', subject: 'The edge of knowledge', aspects: [
+        { name: 'Relativity', focus: ['science/relativity'] }, { name: 'Quantum world', focus: ['science/quantum'] }, { name: 'Maths and logic', focus: ['science/maths'] }] },
+    ].map((c) => ({ ...c, focus: c.aspects.flatMap((a) => a.focus) })),
   },
   history: {
     id: 'history', name: 'The Archive', title: 'History', cats: ['history'], color: '#c9a26b', icon: 'owl', bossSprite: 'boss_archivist',
@@ -83,7 +94,7 @@ export function roadsAt(step) {
 
 /** Question level (1 to 3) for a step: easy first, precise later. A risky road is one level harder. */
 export function levelForStep(step, road = 'main') {
-  const base = step <= 30 ? 1 : step <= 65 ? 2 : 3;
+  const base = step <= 30 ? 1 : step <= 70 ? 2 : 3;
   const bump = road === 'risk' || road === 'boss' ? 1 : 0;
   return Math.min(3, base + bump);
 }
@@ -92,6 +103,13 @@ export const chapterOf = (step) => Math.ceil(step / BOSS_EVERY);
 /** Position inside the chapter, 0 (first step) to 1 (the boss). Drives the scene's lighting. */
 export const phaseOf = (step) => ((step - 1) % BOSS_EVERY) / (BOSS_EVERY - 1);
 export const chapterInfo = (adv, step) => ADVENTURES[adv].chapters?.[chapterOf(step) - 1] ?? { scene: 'bench', name: `Chapter ${chapterOf(step)}`, focus: [] };
+
+/** The aspect a step belongs to: steps 1 to 3 of a chapter are the first, 4 to 6 the second, 7 to 9 the third. A boss has none (null). */
+export function aspectOf(adv, step) {
+  const ch = ADVENTURES[adv]?.chapters?.[chapterOf(step) - 1];
+  const pos = (step - 1) % BOSS_EVERY;
+  return ch?.aspects && pos < 9 ? ch.aspects[Math.floor(pos / 3)] : null;
+}
 
 const inSubs = (q, subs) => subs.some((s) => (s.includes('/') ? s === `${q.category}/${q.subcategory}` : s === q.category));
 
@@ -155,20 +173,30 @@ export function buildLevel(adv, step, road, ctx, { learn = null, now = 0, attemp
   const target = levelForStep(step, kind === 'boss' ? 'boss' : road);
   const chapter = chapterInfo(adv, step);
   const concepts = pool.map((q) => ({ id: q.family, category: q.category, subcategory: q.subcategory }));
-  const focus = chapter.focus.length ? concepts.filter((c) => inSubs(c, chapter.focus)) : concepts;
+  const aspect = aspectOf(adv, step);
+  const focusSubs = aspect?.focus ?? chapter.focus;
+  const focus = focusSubs.length ? concepts.filter((c) => inSubs(c, focusSubs)) : concepts;
   // New concepts come from the chapter's focus; anything already seen and due can come from anywhere in the adventure.
   const allowed = new Map(focus.map((c) => [c.id, c]));
   for (const c of concepts) if (items[c.id] && items[c.id].state !== 'new' && isDue(items[c.id], now)) allowed.set(c.id, c);
   // When the chapter has run out of unseen concepts, unseen ones from elsewhere come in before anything is drilled again.
   const unseen = (c) => !items[c.id] || items[c.id].state === 'new';
-  if ([...allowed.values()].filter(unseen).length < count) for (const c of concepts) if (unseen(c)) allowed.set(c.id, c);
+  // A thin aspect borrows only what it lacks: first from the rest of its chapter, then from elsewhere in the adventure.
+  const borrow = (candidates, tag) => {
+    const need = count + exclude.length - [...allowed.values()].filter(unseen).length;
+    if (need <= 0) return;
+    const fresh = candidates.filter((c) => unseen(c) && !allowed.has(c.id));
+    for (const c of Rng.fromSeed(`borrow:${tag}:${adv}:${step}:${attempt}`).shuffle(fresh).slice(0, need)) allowed.set(c.id, c);
+  };
+  if (chapter.focus.length) borrow(concepts.filter((c) => inSubs(c, chapter.focus)), 'chapter');
+  borrow(concepts, 'any');
   let list = [...allowed.values()];
   if (list.length < count + exclude.length) list = concepts; // a thin focus never starves a step
   const sel = selectSession({ items, pool: list, now, seed: `adv:${adv}:${step}:${road}:${attempt}`, target, mode: 'adventure', size: count, exclude });
   const rng = Rng.fromSeed(`hex:${adv}:${step}:${attempt}`);
   const questions = sel.map((x) => ({ qid: ctx.families.get(x.id)[x.level].id, family: x.id, level: x.level, reason: x.reason }));
   return {
-    adv, step, road, kind, target, hearts: HEARTS, attempt, chapter: chapterOf(step), scene: chapter.scene, phase: phaseOf(step),
+    adv, step, road, kind, target, hearts: HEARTS, attempt, chapter: chapterOf(step), scene: chapter.scene, aspect: aspect?.name ?? null, subject: chapter.subject ?? null, phase: phaseOf(step),
     questions, hexes: hexPlan(kind, step, questions.length, rng),
     boss: kind === 'boss' ? { name: ADVENTURES[adv].bossNames[chapterOf(step) - 1], sprite: step === STEPS ? 'boss_house' : ADVENTURES[adv].bossSprite } : null,
   };
@@ -212,10 +240,13 @@ export function totals(progress) {
 }
 
 /** XP for finishing a step for the first time. */
-export function xpForStep(step, road, stars) {
+export function xpForStep(step, road, stars, stakeBonus = 0) {
   const base = stepKind(step) === 'boss' ? 60 : 12;
-  return Math.round((base + stars * 4) * (road === 'risk' ? 1.5 : 1));
+  return Math.round((base + stars * 4 + Math.max(0, Math.min(STAKE_BONUS_CAP, Math.floor(stakeBonus)))) * (road === 'risk' ? 1.5 : 1));
 }
+export const STAKE_BONUS_CAP = 8;
+/** Bold stakes pay: points above the standard 2 per question become bonus XP (safe stakes never cost XP). */
+export const stakeBonusOf = (run) => Math.max(0, Math.min(STAKE_BONUS_CAP, (run.points ?? 0) - 2 * run.queue.filter((x) => !x.retry).length));
 
 /** A silver pack comes with a first boss win; a gold one with the last boss of an adventure. */
 export function packForStep(step) {

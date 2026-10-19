@@ -1,0 +1,618 @@
+{
+ "category": "medicine",
+ "review": "unreviewed",
+ "questions": [
+  {
+   "id": "med-001",
+   "subcategory": "anatomy",
+   "difficulty": 1,
+   "question": "A healthy human heart is divided into how many chambers?",
+   "choices": [
+    "Two",
+    "Three",
+    "Five",
+    "Four"
+   ],
+   "answer": 3,
+   "explanation": "Two atria sit on top and two ventricles below.",
+   "tags": [
+    "heart"
+   ]
+  },
+  {
+   "id": "med-002",
+   "subcategory": "anatomy",
+   "difficulty": 1,
+   "question": "Which pair of organs do we use to breathe?",
+   "choices": [
+    "Stomach",
+    "Kidneys",
+    "Liver",
+    "Lungs"
+   ],
+   "answer": 3,
+   "explanation": "Air goes in and out of the lungs, where oxygen enters the blood.",
+   "tags": [
+    "lungs"
+   ]
+  },
+  {
+   "id": "med-003",
+   "subcategory": "anatomy",
+   "difficulty": 4,
+   "question": "Damage to which area, usually in the left hemisphere, can leave a person understanding speech but unable to produce fluent words?",
+   "choices": [
+    "Wernicke's area",
+    "Broca's area",
+    "Occipital lobe",
+    "Pons"
+   ],
+   "answer": 1,
+   "explanation": "Broca's area is linked to speech production; damage causes a non-fluent aphasia.",
+   "tags": [
+    "brain"
+   ]
+  },
+  {
+   "id": "med-004",
+   "subcategory": "anatomy",
+   "difficulty": 1,
+   "question": "Which organ mixes food with strong acid and enzymes after you swallow it?",
+   "choices": [
+    "Heart",
+    "Spleen",
+    "Bladder",
+    "Stomach"
+   ],
+   "answer": 3,
+   "explanation": "The stomach churns food and starts breaking down proteins.",
+   "tags": [
+    "digestion"
+   ]
+  },
+  {
+   "id": "med-005",
+   "subcategory": "anatomy",
+   "difficulty": 1,
+   "question": "Which pair of organs filters waste from the blood and makes urine?",
+   "choices": [
+    "Adrenal glands",
+    "Kidneys",
+    "Ovaries",
+    "Lungs"
+   ],
+   "answer": 1,
+   "explanation": "Each kidney filters blood and removes waste and extra water.",
+   "tags": [
+    "kidneys"
+   ]
+  },
+  {
+   "id": "med-006",
+   "subcategory": "anatomy",
+   "difficulty": 1,
+   "question": "Which blood cells contain haemoglobin to carry oxygen?",
+   "choices": [
+    "Plasma proteins",
+    "Platelets",
+    "Red blood cells",
+    "White blood cells"
+   ],
+   "answer": 2,
+   "explanation": "Red cells contain haemoglobin, which binds oxygen.",
+   "tags": [
+    "blood"
+   ]
+  },
+  {
+   "id": "med-007",
+   "subcategory": "anatomy",
+   "difficulty": 2,
+   "question": "About how many bones does an adult human have?",
+   "choices": [
+    "106",
+    "206",
+    "306",
+    "412"
+   ],
+   "answer": 1,
+   "explanation": "Babies have more, but many bones fuse as we grow, leaving 206 in most adults.",
+   "tags": [
+    "bones"
+   ]
+  },
+  {
+   "id": "med-008",
+   "subcategory": "anatomy",
+   "difficulty": 1,
+   "question": "Which organ covers the whole body and shields it from germs and injury?",
+   "choices": [
+    "Brain",
+    "Lungs",
+    "Skin",
+    "Liver"
+   ],
+   "answer": 2,
+   "explanation": "The skin covers the whole body and protects it from germs, water loss and injury.",
+   "tags": [
+    "skin"
+   ]
+  },
+  {
+   "id": "med-009",
+   "subcategory": "disease",
+   "difficulty": 3,
+   "question": "Why do antibiotics not work against influenza?",
+   "choices": [
+    "Antibiotics only work on adults",
+    "Flu is caused by fungi",
+    "Viruses lack the cell structures that antibiotics attack",
+    "Flu germs are too large"
+   ],
+   "answer": 2,
+   "explanation": "Antibiotics target bacterial features such as cell walls; viruses have none of those and live inside our cells.",
+   "tags": [
+    "germs"
+   ]
+  },
+  {
+   "id": "med-010",
+   "subcategory": "disease",
+   "difficulty": 1,
+   "question": "Diabetes is a condition that affects the level of what in the blood?",
+   "choices": [
+    "Oxygen",
+    "Calcium",
+    "Sugar (glucose)",
+    "Iron"
+   ],
+   "answer": 2,
+   "explanation": "In diabetes the body cannot keep blood glucose in a healthy range.",
+   "tags": [
+    "diabetes"
+   ]
+  },
+  {
+   "id": "med-011",
+   "subcategory": "disease",
+   "difficulty": 3,
+   "question": "What does a malignant tumour do that a benign one does not?",
+   "choices": [
+    "Invades nearby tissue and can spread",
+    "Always disappears by itself",
+    "Only grows in bone",
+    "Stays the same size forever"
+   ],
+   "answer": 0,
+   "explanation": "Benign tumours stay in place; malignant ones invade and can metastasise.",
+   "tags": [
+    "cancer"
+   ]
+  },
+  {
+   "id": "med-012",
+   "subcategory": "disease",
+   "difficulty": 1,
+   "question": "Which blood cells are the main fighters of the immune system?",
+   "choices": [
+    "Red blood cells",
+    "Platelets",
+    "Fat cells",
+    "White blood cells"
+   ],
+   "answer": 3,
+   "explanation": "White blood cells find and destroy germs.",
+   "tags": [
+    "immune"
+   ]
+  },
+  {
+   "id": "med-013",
+   "subcategory": "disease",
+   "difficulty": 1,
+   "question": "Which insect spreads malaria to people?",
+   "choices": [
+    "Tick",
+    "Mosquito",
+    "Housefly",
+    "Flea"
+   ],
+   "answer": 1,
+   "explanation": "Female Anopheles mosquitoes carry the malaria parasite.",
+   "tags": [
+    "malaria"
+   ]
+  },
+  {
+   "id": "med-014",
+   "subcategory": "disease",
+   "difficulty": 3,
+   "question": "Roughly which reading is generally considered the upper edge of normal blood pressure for an adult?",
+   "choices": [
+    "Below 160/120 mmHg",
+    "Below 90/40 mmHg",
+    "Below 120/80 mmHg",
+    "Below 200/150 mmHg"
+   ],
+   "answer": 2,
+   "explanation": "About 120/80 mmHg is the usual healthy target.",
+   "tags": [
+    "pressure"
+   ]
+  },
+  {
+   "id": "med-015",
+   "subcategory": "disease",
+   "difficulty": 2,
+   "question": "Cystic fibrosis, sickle cell disease and haemophilia are all examples of what kind of illness?",
+   "choices": [
+    "Allergies",
+    "Genetic disorders",
+    "Infections",
+    "Vitamin deficiencies"
+   ],
+   "answer": 1,
+   "explanation": "They are caused by changes in a person's DNA.",
+   "tags": [
+    "genetic"
+   ]
+  },
+  {
+   "id": "med-016",
+   "subcategory": "disease",
+   "difficulty": 1,
+   "question": "Which condition makes the airways narrow so that breathing is difficult and wheezy?",
+   "choices": [
+    "Asthma",
+    "Eczema",
+    "Gout",
+    "Anaemia"
+   ],
+   "answer": 0,
+   "explanation": "In asthma the airways are inflamed and tighten.",
+   "tags": [
+    "respiratory"
+   ]
+  },
+  {
+   "id": "med-017",
+   "subcategory": "pharma",
+   "difficulty": 1,
+   "question": "Antibiotics are medicines used to treat infections caused by what?",
+   "choices": [
+    "Bacteria",
+    "Allergies",
+    "Cancer",
+    "Viruses"
+   ],
+   "answer": 0,
+   "explanation": "Antibiotics kill or stop the growth of bacteria.",
+   "tags": [
+    "antibiotics"
+   ]
+  },
+  {
+   "id": "med-018",
+   "subcategory": "pharma",
+   "difficulty": 4,
+   "question": "Which kind of vaccine uses a molecule that carries instructions for cells to make a harmless piece of the germ?",
+   "choices": [
+    "Inactivated vaccine",
+    "mRNA vaccine",
+    "Live attenuated vaccine",
+    "Toxoid vaccine"
+   ],
+   "answer": 1,
+   "explanation": "mRNA vaccines deliver instructions so our own cells make an antigen, such as the coronavirus spike protein.",
+   "tags": [
+    "vaccines"
+   ]
+  },
+  {
+   "id": "med-019",
+   "subcategory": "pharma",
+   "difficulty": 1,
+   "question": "Which common medicine is used to reduce fever and mild pain?",
+   "choices": [
+    "Penicillin",
+    "Insulin",
+    "Paracetamol",
+    "Morphine only"
+   ],
+   "answer": 2,
+   "explanation": "Paracetamol (acetaminophen) is widely used for pain and fever.",
+   "tags": [
+    "painkillers"
+   ]
+  },
+  {
+   "id": "med-020",
+   "subcategory": "pharma",
+   "difficulty": 1,
+   "question": "People with type 1 diabetes need regular doses of which medicine?",
+   "choices": [
+    "Penicillin",
+    "Insulin",
+    "Vitamin C",
+    "Aspirin"
+   ],
+   "answer": 1,
+   "explanation": "Without insulin, glucose cannot enter cells.",
+   "tags": [
+    "insulin"
+   ]
+  },
+  {
+   "id": "med-021",
+   "subcategory": "pharma",
+   "difficulty": 1,
+   "question": "What is the main job of an anaesthetic in surgery?",
+   "choices": [
+    "To restart the heart",
+    "To stop pain or consciousness",
+    "To stop bleeding",
+    "To fight infection"
+   ],
+   "answer": 1,
+   "explanation": "Anaesthetics let operations happen without pain.",
+   "tags": [
+    "anaesthetic"
+   ]
+  },
+  {
+   "id": "med-022",
+   "subcategory": "pharma",
+   "difficulty": 1,
+   "question": "A lack of which vitamin caused scurvy among sailors on long voyages?",
+   "choices": [
+    "Vitamin K",
+    "Vitamin B12",
+    "Vitamin C",
+    "Vitamin A"
+   ],
+   "answer": 2,
+   "explanation": "Fresh fruit and vegetables supply vitamin C.",
+   "tags": [
+    "vitamins"
+   ]
+  },
+  {
+   "id": "med-023",
+   "subcategory": "tech",
+   "difficulty": 3,
+   "question": "A CT scan builds its images by combining what?",
+   "choices": [
+    "Radio waves from atoms",
+    "Heat from the skin",
+    "Sound echoes",
+    "Many X-ray slices taken from different angles"
+   ],
+   "answer": 3,
+   "explanation": "A rotating X-ray tube and detectors collect slices that a computer assembles into a 3D picture.",
+   "tags": [
+    "imaging"
+   ]
+  },
+  {
+   "id": "med-024",
+   "subcategory": "tech",
+   "difficulty": 1,
+   "question": "Which imaging method, using sound waves, is commonly used to look at a baby before birth?",
+   "choices": [
+    "Ultrasound",
+    "CT scan",
+    "MRI",
+    "X-ray"
+   ],
+   "answer": 0,
+   "explanation": "Ultrasound is safe and shows live moving images.",
+   "tags": [
+    "ultrasound"
+   ]
+  },
+  {
+   "id": "med-025",
+   "subcategory": "tech",
+   "difficulty": 4,
+   "question": "A defibrillator is used to treat which emergency?",
+   "choices": [
+    "A burst appendix",
+    "A broken bone",
+    "A chaotic heart rhythm such as ventricular fibrillation",
+    "Low blood sugar"
+   ],
+   "answer": 2,
+   "explanation": "A controlled shock can reset the heart to a normal rhythm.",
+   "tags": [
+    "heartdevice"
+   ]
+  },
+  {
+   "id": "med-026",
+   "subcategory": "tech",
+   "difficulty": 1,
+   "question": "A surgeon who makes only tiny cuts and uses a camera on a thin tube is doing what kind of surgery?",
+   "choices": [
+    "Plastic surgery",
+    "Open-heart surgery",
+    "Keyhole (minimally invasive) surgery",
+    "Dental surgery"
+   ],
+   "answer": 2,
+   "explanation": "Laparoscopic or keyhole surgery means smaller wounds and quicker healing.",
+   "tags": [
+    "surgery"
+   ]
+  },
+  {
+   "id": "med-027",
+   "subcategory": "tech",
+   "difficulty": 2,
+   "question": "The Human Genome Project, completed in 2003, was an effort to do what?",
+   "choices": [
+    "Read the full sequence of human DNA",
+    "Map the stars",
+    "Make a new vaccine",
+    "Clone a human"
+   ],
+   "answer": 0,
+   "explanation": "It determined the order of about three billion DNA base pairs.",
+   "tags": [
+    "dna"
+   ]
+  },
+  {
+   "id": "med-028",
+   "subcategory": "tech",
+   "difficulty": 1,
+   "question": "What is an artificial replacement for a missing arm or leg called?",
+   "choices": [
+    "A prosthesis",
+    "A vaccine",
+    "A graft",
+    "A transplant"
+   ],
+   "answer": 0,
+   "explanation": "Prostheses replace a missing body part.",
+   "tags": [
+    "prosthetics"
+   ]
+  },
+  {
+   "id": "med-029",
+   "subcategory": "tech",
+   "difficulty": 3,
+   "question": "Why must doctors match donors and recipients, and give anti-rejection drugs?",
+   "choices": [
+    "The recipient's immune system may attack the new organ",
+    "The new organ would grow too big",
+    "Organs expire at night",
+    "Donor blood would clot"
+   ],
+   "answer": 0,
+   "explanation": "Immunosuppressants reduce the chance that the immune system rejects the foreign tissue.",
+   "tags": [
+    "dialysis"
+   ]
+  },
+  {
+   "id": "med-030",
+   "subcategory": "tech",
+   "difficulty": 1,
+   "question": "Which instrument do doctors use to listen to heartbeats and breathing?",
+   "choices": [
+    "Scalpel",
+    "Stethoscope",
+    "Thermometer",
+    "Syringe"
+   ],
+   "answer": 1,
+   "explanation": "The stethoscope amplifies sounds from inside the chest.",
+   "tags": [
+    "monitoring"
+   ]
+  },
+  {
+   "id": "med-031",
+   "subcategory": "history",
+   "difficulty": 4,
+   "question": "The word 'vaccine' comes from the Latin word for what animal?",
+   "choices": [
+    "Horse",
+    "Pig",
+    "Sheep",
+    "Cow (vacca)"
+   ],
+   "answer": 3,
+   "explanation": "Jenner used cowpox, and vacca is Latin for cow.",
+   "tags": [
+    "jenner"
+   ]
+  },
+  {
+   "id": "med-032",
+   "subcategory": "history",
+   "difficulty": 1,
+   "question": "Which French scientist showed that many diseases are caused by germs and is remembered in the name of a milk process?",
+   "choices": [
+    "Pierre Curie",
+    "Louis Pasteur",
+    "Marie Curie",
+    "Claude Bernard"
+   ],
+   "answer": 1,
+   "explanation": "Pasteurisation uses gentle heat to kill harmful microbes.",
+   "tags": [
+    "pasteur"
+   ]
+  },
+  {
+   "id": "med-033",
+   "subcategory": "history",
+   "difficulty": 4,
+   "question": "Which two scientists, with Fleming, shared the 1945 Nobel Prize for penicillin after turning it into a usable drug?",
+   "choices": [
+    "Koch and Behring",
+    "Howard Florey and Ernst Chain",
+    "Watson and Crick",
+    "Banting and Best"
+   ],
+   "answer": 1,
+   "explanation": "Florey and Chain led the team that purified penicillin and tested it at Oxford.",
+   "tags": [
+    "fleming"
+   ]
+  },
+  {
+   "id": "med-034",
+   "subcategory": "history",
+   "difficulty": 1,
+   "question": "Washing hands with soap helps prevent what?",
+   "choices": [
+    "Sunburn",
+    "Broken bones",
+    "The spread of infections",
+    "High blood pressure"
+   ],
+   "answer": 2,
+   "explanation": "Clean hands remove germs that spread disease.",
+   "tags": [
+    "semmelweis"
+   ]
+  },
+  {
+   "id": "med-035",
+   "subcategory": "history",
+   "difficulty": 4,
+   "question": "Before Harvey, the Roman physician Galen taught that blood was made in the liver and what?",
+   "choices": [
+    "Used up by the body rather than circulating",
+    "Never moved",
+    "Carried only by the nerves",
+    "Cooled by the lungs only"
+   ],
+   "answer": 0,
+   "explanation": "Galen's view held for about 1,400 years until Harvey's experiments.",
+   "tags": [
+    "harvey"
+   ]
+  },
+  {
+   "id": "med-036",
+   "subcategory": "history",
+   "difficulty": 3,
+   "question": "The idea of keeping an operating theatre free of germs is called what?",
+   "choices": [
+    "Dialysis",
+    "Anaesthesia",
+    "Triage",
+    "Aseptic technique"
+   ],
+   "answer": 3,
+   "explanation": "Asepsis aims to keep germs out in the first place, going further than antiseptic treatment.",
+   "tags": [
+    "lister"
+   ]
+  }
+ ]
+}

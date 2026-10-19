@@ -18,7 +18,7 @@ import { checkPuzzle, PUZZLE_RULES } from './minigame.js';
 import { HEXES, STARTER_HEXES, HEX_NUMBERS, tierForStreak, drawHex, usableHexes, missionsFor } from './hexes.js';
 import {
   DUEL, INTENTS, BOSS_ROSTER, BOSS_IDS, TIER_DIFFICULTY, DEALS, DEAL_IDS, DUEL_SHOP_ITEMS,
-  makeEncounter, intentIdFor, advancePhase, timerMultFor, duelDamage, bulbsLostOnMiss, heatCostOf, startHeat, duelCategory, buildMap, availableNodes, isEnraged,
+  makeEncounter, cleanRank, intentIdFor, advancePhase, timerMultFor, duelDamage, bulbsLostOnMiss, heatCostOf, startHeat, duelCategory, buildMap, availableNodes, isEnraged,
 } from './duel.js';
 import { pickQuestion } from './rounds.js';
 
@@ -66,7 +66,7 @@ export function buildConfig(mode, overrides = {}) {
     return { acts: 1, roundsPerAct: RULES.roundsPerAct, noBoss: false, cardsEnabled: false, shop: false, crossroads: true, strikes: true };
   }
   if (['rush', 'map'].includes(overrides.variant)) {
-    return { variant: overrides.variant, duel: true, heat: true, acts: 1, roundsPerAct: 0, noBoss: false, cardsEnabled: true, shop: overrides.variant === 'map', crossroads: false, strikes: true, startStrikes: DUEL.startLives, bossId: overrides.bossId ?? null };
+    return { variant: overrides.variant, duel: true, heat: true, acts: 1, roundsPerAct: 0, noBoss: false, cardsEnabled: true, shop: overrides.variant === 'map', crossroads: false, strikes: true, startStrikes: DUEL.startLives, bossId: overrides.bossId ?? null, bossRanks: Object.fromEntries(Object.entries(overrides.bossRanks ?? {}).map(([k, v]) => [k, cleanRank(v)])) };
   }
   const acts = Math.max(1, Math.min(3, overrides.acts ?? RULES.acts));
   return { acts, roundsPerAct: RULES.roundsPerAct, noBoss: false, cardsEnabled: true, shop: true, crossroads: true, strikes: true, ...(overrides.themes ? { themes: overrides.themes } : {}) };
@@ -245,7 +245,7 @@ function prepareRound(s, ctx) {
 function statCategories(ctx) {
   if (!ctx._duelCats) {
     const have = new Set(ctx.questions.map(statCategory));
-    ctx._duelCats = ['science', 'symbols', 'news', 'history', 'geography', 'nature', 'arts', 'phobia'].filter((c) => have.has(c));
+    ctx._duelCats = ['science', 'symbols', 'news', 'history', 'geography', 'nature', 'arts', 'phobia', 'medicine'].filter((c) => have.has(c));
   }
   return ctx._duelCats;
 }
@@ -253,7 +253,8 @@ function statCategories(ctx) {
 function prepareEncounter(s, ctx, { kind, enemyId = null, depth = 0 }) {
   s.roundIndex += 1;
   s.crossroadsDone = false;
-  s.enc = withRng(s, (rng) => makeEncounter({ kind, enemyId, rng, depth }));
+  const rank = kind === 'boss' && enemyId ? cleanRank(s.config.bossRanks?.[enemyId]) : 0;
+  s.enc = withRng(s, (rng) => makeEncounter({ kind, enemyId, rng, depth, rank }));
   if (s.enc.kind !== 'minion') s.usedBosses.push(s.enc.id);
   s.round = { index: s.roundIndex, act: 0, isBoss: s.enc.kind === 'boss' || s.enc.kind === 'final', bossId: null, hazardId: 'none', markedSlot: null, slots: [], kind: s.enc.kind, comeback: [] };
   s.qIndex = 0;
@@ -311,9 +312,10 @@ function endEncounter(s) {
   let hex = null;
   let bulbLost = 0;
   if (won) {
-    p.chips += rw.chips;
+    p.chips += Math.round(rw.chips * (enc.reward ?? 1));
     p.roundsCleared += 1;
     if (s.round.isBoss) p.bossesCleared += 1;
+    if (enc.kind === 'boss' && enc.id !== 'house') { (s.beaten ??= []).push({ id: enc.id, rank: enc.rank ?? 0 }); s.rankBeaten = Math.max(s.rankBeaten ?? 0, enc.rank ?? 0); }
     if (rw.heal && p.strikes < DUEL.maxLives) { p.strikes += rw.heal; healed = rw.heal; }
     if (rw.hex && s.config.cardsEnabled && p.hexHand.length < HEX_NUMBERS.handMax) {
       const id = drawHex(Rng.fromSeed(`${s.sessionId}:${p.playerId}:hex:${(s.earnSeq ?? 0) + 1}`), p.hexDeck, 'uncommon', s.mode);
@@ -331,7 +333,7 @@ function endEncounter(s) {
   s.roundLog.push({
     roundIndex: s.roundIndex, isBoss: s.round.isBoss, bossId: null, hazardId: 'none', result: enc.over,
     enemy: { id: enc.id, name: enc.name, kind: enc.kind, sprite: enc.sprite, color: enc.color, maxHp: enc.maxHp },
-    players: { [p.playerId]: { correct: p.roundStats.correct, cleared: won, strikesLost: (enc.bulbsLost ?? 0) + bulbLost, bonus: won ? rw.chips : 0, chips: p.chips, strikes: p.strikes, healed, hex, hits: enc.hits } },
+    players: { [p.playerId]: { correct: p.roundStats.correct, cleared: won, strikesLost: (enc.bulbsLost ?? 0) + bulbLost, bonus: won ? Math.round(rw.chips * (enc.reward ?? 1)) : 0, chips: p.chips, strikes: p.strikes, healed, hex, hits: enc.hits } },
   });
   s.phase = 'round-summary';
 }
@@ -707,6 +709,7 @@ const HANDLERS = {
     if (a.seed !== seed) return { ok: false, reason: 'stale puzzle' };
     pz.n += 1; // one attempt per puzzle
     const ok = checkPuzzle(seed, a.choice);
+    if (typeof a.choice !== 'string' || a.choice.length > PUZZLE_RULES.maxLength) return { ok: false, reason: 'bad answer' };
     const room = Math.max(0, Math.min(PUZZLE_RULES.roundCap - pz.roundBonus, PUZZLE_RULES.gameCap - pz.gameBonus));
     const gain = ok ? Math.min(PUZZLE_RULES.reward[level], room) : 0;
     p.chips += gain; pz.roundBonus += gain; pz.gameBonus += gain;

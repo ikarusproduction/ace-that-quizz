@@ -1,0 +1,1231 @@
+{
+ "category": "medicine",
+ "review": "unreviewed",
+ "note": "Difficulty ladders: the original question keeps its own level, these are the other levels. Unreviewed.",
+ "families": [
+  {
+   "id": "med-001",
+   "ask": {
+    "1": "Chambers",
+    "2": "Where blood goes",
+    "3": "Valves"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which chamber of the heart pumps oxygen-rich blood out to the whole body?",
+     "choices": [
+      "Right atrium",
+      "Left atrium",
+      "Left ventricle",
+      "Right ventricle"
+     ],
+     "answer": 2,
+     "explanation": "The left ventricle has the thickest wall because it drives blood round the whole body."
+    },
+    {
+     "level": 3,
+     "question": "Which valve lies between the left atrium and the left ventricle?",
+     "choices": [
+      "Tricuspid valve",
+      "Pulmonary valve",
+      "Aortic valve",
+      "Mitral valve"
+     ],
+     "answer": 3,
+     "explanation": "The mitral (bicuspid) valve lets blood flow from the left atrium to the left ventricle and stops it flowing back."
+    }
+   ]
+  },
+  {
+   "id": "med-002",
+   "ask": {
+    "1": "Breathing organs",
+    "2": "Gas exchange",
+    "3": "The breathing muscle"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "In which tiny air sacs of the lungs does oxygen pass into the blood?",
+     "choices": [
+      "Tonsils",
+      "Pleura",
+      "Alveoli",
+      "Bronchi"
+     ],
+     "answer": 2,
+     "explanation": "Alveoli have extremely thin walls and are wrapped in capillaries, so gases swap quickly."
+    },
+    {
+     "level": 3,
+     "question": "Which large dome-shaped muscle below the lungs does most of the work of breathing in?",
+     "choices": [
+      "Deltoid",
+      "Latissimus dorsi",
+      "Psoas",
+      "Diaphragm"
+     ],
+     "answer": 3,
+     "explanation": "When the diaphragm contracts it flattens, enlarging the chest cavity and drawing air in."
+    }
+   ]
+  },
+  {
+   "id": "med-003",
+   "ask": {
+    "1": "Control centre",
+    "2": "Which part does what",
+    "3": "Language"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which organ controls thinking, memory and movement?",
+     "choices": [
+      "Brain",
+      "Spleen",
+      "Pancreas",
+      "Liver"
+     ],
+     "answer": 0,
+     "explanation": "The brain and the spinal cord together make up the central nervous system."
+    },
+    {
+     "level": 2,
+     "question": "Which part of the brain is mainly responsible for balance and coordinating movement?",
+     "choices": [
+      "Cerebellum",
+      "Pituitary gland",
+      "Amygdala",
+      "Hippocampus"
+     ],
+     "answer": 0,
+     "explanation": "The cerebellum fine-tunes movement and keeps balance."
+    }
+   ]
+  },
+  {
+   "id": "med-004",
+   "ask": {
+    "1": "Stomach",
+    "2": "Absorption",
+    "3": "Bile"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Where does most of the absorption of nutrients into the blood happen?",
+     "choices": [
+      "Small intestine",
+      "Large intestine",
+      "Oesophagus",
+      "Stomach"
+     ],
+     "answer": 0,
+     "explanation": "The small intestine has a huge surface area thanks to folds and tiny villi."
+    },
+    {
+     "level": 3,
+     "question": "Bile, which helps digest fats, is made in the liver and stored in which organ?",
+     "choices": [
+      "Spleen",
+      "Pancreas",
+      "Appendix",
+      "Gallbladder"
+     ],
+     "answer": 3,
+     "explanation": "The gallbladder concentrates and stores bile until fat arrives in the intestine."
+    }
+   ]
+  },
+  {
+   "id": "med-005",
+   "ask": {
+    "1": "Filtering",
+    "2": "Nephrons",
+    "3": "Hormone"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the filtering unit of a kidney called?",
+     "choices": [
+      "Alveolus",
+      "Neuron",
+      "Follicle",
+      "Nephron"
+     ],
+     "answer": 3,
+     "explanation": "A kidney holds about a million nephrons."
+    },
+    {
+     "level": 3,
+     "question": "Which hormone, made mainly by the kidneys, stimulates the bone marrow to make red blood cells?",
+     "choices": [
+      "Erythropoietin",
+      "Insulin",
+      "Cortisol",
+      "Thyroxine"
+     ],
+     "answer": 0,
+     "explanation": "Low oxygen makes the kidneys release erythropoietin (EPO)."
+    }
+   ]
+  },
+  {
+   "id": "med-006",
+   "ask": {
+    "1": "Red cells",
+    "2": "Platelets",
+    "3": "Blood groups"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which blood component helps a clot to form when you cut yourself?",
+     "choices": [
+      "Haemoglobin",
+      "Lymphocytes",
+      "Platelets",
+      "Red blood cells"
+     ],
+     "answer": 2,
+     "explanation": "Platelets stick together and to the wound to plug it."
+    },
+    {
+     "level": 3,
+     "question": "A person with blood group O negative is called a universal donor for red cells because their cells lack which markers?",
+     "choices": [
+      "A, B and Rh antigens",
+      "Only haemoglobin",
+      "White cell antigens",
+      "Only the A antigen"
+     ],
+     "answer": 0,
+     "explanation": "Without A, B or Rh antigens on the surface the recipient's immune system has little to react against."
+    }
+   ]
+  },
+  {
+   "id": "med-007",
+   "ask": {
+    "1": "How many bones",
+    "2": "The longest",
+    "3": "Marrow"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which of these is the longest bone in the human body?",
+     "choices": [
+      "Spine",
+      "Humerus",
+      "Tibia",
+      "Femur"
+     ],
+     "answer": 3,
+     "explanation": "The thigh bone (femur) is the longest and strongest."
+    },
+    {
+     "level": 3,
+     "question": "Red blood cells are mostly made in the soft tissue inside certain bones. What is it called?",
+     "choices": [
+      "Cartilage",
+      "Synovial fluid",
+      "Red bone marrow",
+      "Periosteum"
+     ],
+     "answer": 2,
+     "explanation": "Red bone marrow in the pelvis, vertebrae, ribs and sternum makes blood cells in adults."
+    }
+   ]
+  },
+  {
+   "id": "med-008",
+   "ask": {
+    "1": "Largest organ",
+    "2": "Layers",
+    "3": "Pigment"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which is the outermost layer of the skin?",
+     "choices": [
+      "Cortex",
+      "Hypodermis",
+      "Epidermis",
+      "Dermis"
+     ],
+     "answer": 2,
+     "explanation": "The epidermis is the thin outer layer; the dermis below holds nerves, vessels and glands."
+    },
+    {
+     "level": 3,
+     "question": "Which cells in the skin produce melanin, the pigment that darkens skin and protects against UV light?",
+     "choices": [
+      "Melanocytes",
+      "Langerhans cells",
+      "Keratinocytes",
+      "Fibroblasts"
+     ],
+     "answer": 0,
+     "explanation": "Melanocytes make melanin, which absorbs ultraviolet radiation."
+    }
+   ]
+  },
+  {
+   "id": "med-009",
+   "ask": {
+    "1": "Virus or bacteria",
+    "2": "Which one",
+    "3": "Antibiotics"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which of these is caused by a virus rather than bacteria?",
+     "choices": [
+      "The common cold",
+      "Strep throat",
+      "Cholera",
+      "Tuberculosis"
+     ],
+     "answer": 0,
+     "explanation": "Colds are caused by viruses, so antibiotics do not help."
+    },
+    {
+     "level": 2,
+     "question": "Which pair correctly matches a disease to the kind of germ that causes it?",
+     "choices": [
+      "Cholera: fungus",
+      "Measles: virus",
+      "Malaria: virus",
+      "Tetanus: virus"
+     ],
+     "answer": 1,
+     "explanation": "Measles is a virus. Malaria is a parasite, tetanus and cholera are bacterial."
+    }
+   ]
+  },
+  {
+   "id": "med-010",
+   "ask": {
+    "1": "Blood sugar",
+    "2": "Insulin",
+    "3": "Type 1 and 2"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which hormone lets cells take up glucose from the blood?",
+     "choices": [
+      "Melatonin",
+      "Insulin",
+      "Oestrogen",
+      "Adrenaline"
+     ],
+     "answer": 1,
+     "explanation": "Insulin is made by the pancreas."
+    },
+    {
+     "level": 3,
+     "question": "What happens in type 1 diabetes?",
+     "choices": [
+      "The liver cannot store iron",
+      "The kidneys stop filtering sugar",
+      "The body makes too much insulin",
+      "The immune system destroys the insulin-making cells"
+     ],
+     "answer": 3,
+     "explanation": "Type 1 is an autoimmune loss of the pancreas's beta cells, so insulin must be given."
+    }
+   ]
+  },
+  {
+   "id": "med-011",
+   "ask": {
+    "1": "What it is",
+    "2": "Spread",
+    "3": "Benign or malignant"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Cancer begins when what happens in the body?",
+     "choices": [
+      "Bones become brittle",
+      "Nerves lose their coating",
+      "Cells grow and divide out of control",
+      "Blood stops clotting"
+     ],
+     "answer": 2,
+     "explanation": "Cancer is uncontrolled growth of abnormal cells."
+    },
+    {
+     "level": 2,
+     "question": "What is it called when cancer cells spread from where they started to other parts of the body?",
+     "choices": [
+      "Mutation",
+      "Inflammation",
+      "Metastasis",
+      "Remission"
+     ],
+     "answer": 2,
+     "explanation": "Metastases are secondary tumours formed by cells that travelled in blood or lymph."
+    }
+   ]
+  },
+  {
+   "id": "med-012",
+   "ask": {
+    "1": "White cells",
+    "2": "Allergy",
+    "3": "Antibodies"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which substance released by immune cells causes the sneezing and itching of hay fever?",
+     "choices": [
+      "Histamine",
+      "Bile",
+      "Keratin",
+      "Insulin"
+     ],
+     "answer": 0,
+     "explanation": "Histamine makes vessels leaky and nerves itchy in an allergic reaction."
+    },
+    {
+     "level": 3,
+     "question": "What do B cells make that bind to a specific target (antigen) on a germ?",
+     "choices": [
+      "Antibodies",
+      "Platelets",
+      "Hormones",
+      "Enzymes only"
+     ],
+     "answer": 0,
+     "explanation": "Antibodies lock onto antigens and tag germs for destruction."
+    }
+   ]
+  },
+  {
+   "id": "med-013",
+   "ask": {
+    "1": "Mosquito",
+    "2": "Parasite",
+    "3": "Where"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What type of organism causes malaria?",
+     "choices": [
+      "A fungus",
+      "A virus",
+      "A bacterium",
+      "A single-celled parasite"
+     ],
+     "answer": 3,
+     "explanation": "Plasmodium parasites infect liver and red blood cells."
+    },
+    {
+     "level": 3,
+     "question": "Which genus of parasite causes the most deaths from malaria?",
+     "choices": [
+      "Trypanosoma",
+      "Giardia",
+      "Leishmania",
+      "Plasmodium falciparum"
+     ],
+     "answer": 3,
+     "explanation": "P. falciparum causes the most severe malaria, especially in sub-Saharan Africa."
+    }
+   ]
+  },
+  {
+   "id": "med-014",
+   "ask": {
+    "1": "High blood pressure",
+    "2": "Reading",
+    "3": "Risk"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What is another name for high blood pressure?",
+     "choices": [
+      "Hyperthyroidism",
+      "Hypothermia",
+      "Hypoglycaemia",
+      "Hypertension"
+     ],
+     "answer": 3,
+     "explanation": "Hypertension often has no symptoms but raises the risk of stroke and heart attack."
+    },
+    {
+     "level": 2,
+     "question": "A blood pressure reading is given as two numbers. What does the top (first) number measure?",
+     "choices": [
+      "Pressure between beats",
+      "Oxygen level",
+      "Pressure when the heart beats",
+      "Heart rate"
+     ],
+     "answer": 2,
+     "explanation": "The top number is systolic, when the heart contracts."
+    }
+   ]
+  },
+  {
+   "id": "med-015",
+   "ask": {
+    "1": "Inherited",
+    "2": "Sickle cell",
+    "3": "Carrier"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Down syndrome is typically caused by an extra copy of which chromosome?",
+     "choices": [
+      "Chromosome 18",
+      "Chromosome 1",
+      "Chromosome 21",
+      "The X chromosome"
+     ],
+     "answer": 2,
+     "explanation": "Trisomy 21 means three copies of chromosome 21."
+    },
+    {
+     "level": 3,
+     "question": "Sickle cell disease changes the shape of red blood cells. Which protein is altered?",
+     "choices": [
+      "Haemoglobin",
+      "Collagen",
+      "Insulin",
+      "Keratin"
+     ],
+     "answer": 0,
+     "explanation": "A change in the haemoglobin gene makes cells rigid and sickle-shaped."
+    }
+   ]
+  },
+  {
+   "id": "med-016",
+   "ask": {
+    "1": "Asthma",
+    "2": "Flu",
+    "3": "TB"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which illness, caused by a bacterium that mainly attacks the lungs, was once called consumption?",
+     "choices": [
+      "Cholera",
+      "Pneumonia only",
+      "Tuberculosis",
+      "Bronchitis"
+     ],
+     "answer": 2,
+     "explanation": "Tuberculosis is caused by Mycobacterium tuberculosis."
+    },
+    {
+     "level": 3,
+     "question": "Why does the flu virus need a new vaccine most years?",
+     "choices": [
+      "It mutates and its surface proteins change",
+      "The vaccine wears off in days",
+      "It is a bacterium",
+      "It only infects once in a lifetime"
+     ],
+     "answer": 0,
+     "explanation": "Influenza viruses drift and shift, so the match between vaccine and circulating strains must be updated."
+    }
+   ]
+  },
+  {
+   "id": "med-017",
+   "ask": {
+    "1": "What they treat",
+    "2": "How they work",
+    "3": "Resistance"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What does it mean when bacteria are 'antibiotic resistant'?",
+     "choices": [
+      "They only live in water",
+      "They cannot be seen",
+      "They cause no symptoms",
+      "The drug no longer kills them"
+     ],
+     "answer": 3,
+     "explanation": "Resistant bacteria survive the drug that used to kill them."
+    },
+    {
+     "level": 3,
+     "question": "Which practice most directly speeds up the spread of antibiotic resistance?",
+     "choices": [
+      "Getting vaccinated",
+      "Overusing and not finishing antibiotics when advised",
+      "Washing hands often",
+      "Eating fruit"
+     ],
+     "answer": 1,
+     "explanation": "Unnecessary or incomplete courses let resistant bacteria survive and multiply."
+    }
+   ]
+  },
+  {
+   "id": "med-018",
+   "ask": {
+    "1": "What a vaccine does",
+    "2": "Herd immunity",
+    "3": "Types"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What does a vaccine do for the body?",
+     "choices": [
+      "Trains the immune system to recognise a germ",
+      "Kills all germs in the blood",
+      "Replaces white blood cells",
+      "Makes bones stronger"
+     ],
+     "answer": 0,
+     "explanation": "It shows the immune system a harmless piece or version of the germ so it can respond fast later."
+    },
+    {
+     "level": 2,
+     "question": "What is 'herd immunity'?",
+     "choices": [
+      "Everyone has had the disease",
+      "Animals pass immunity to people",
+      "A vaccine that lasts a lifetime",
+      "Enough people are immune that the disease cannot spread easily"
+     ],
+     "answer": 3,
+     "explanation": "When most of a community is immune, outbreaks fizzle, which also protects people who cannot be vaccinated."
+    }
+   ]
+  },
+  {
+   "id": "med-019",
+   "ask": {
+    "1": "Common medicine",
+    "2": "Aspirin",
+    "3": "Liver"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Aspirin, ibuprofen and similar drugs belong to which group?",
+     "choices": [
+      "Anti-inflammatory drugs (NSAIDs)",
+      "Antihistamines",
+      "Vaccines",
+      "Antibiotics"
+     ],
+     "answer": 0,
+     "explanation": "NSAIDs reduce pain and inflammation by blocking enzymes called cyclooxygenases."
+    },
+    {
+     "level": 3,
+     "question": "An overdose of paracetamol is dangerous mainly because it can damage which organ?",
+     "choices": [
+      "The liver",
+      "The thyroid",
+      "The lungs",
+      "The skin"
+     ],
+     "answer": 0,
+     "explanation": "Toxic by-products overwhelm the liver's defences and can cause liver failure."
+    }
+   ]
+  },
+  {
+   "id": "med-020",
+   "ask": {
+    "1": "Use",
+    "2": "Source",
+    "3": "History"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Today most insulin for medicine is made by which method?",
+     "choices": [
+      "Taken from cows only",
+      "Extracted from human blood",
+      "Genetically engineered bacteria or yeast",
+      "Made from plants by pressing"
+     ],
+     "answer": 2,
+     "explanation": "Recombinant DNA technology lets microbes make human insulin."
+    },
+    {
+     "level": 3,
+     "question": "Insulin was first used to treat a patient in the early 1920s after work in which city?",
+     "choices": [
+      "Cairo",
+      "Toronto",
+      "Vienna",
+      "Tokyo"
+     ],
+     "answer": 1,
+     "explanation": "Banting, Best, Collip and Macleod worked in Toronto, and the first patient was treated in 1922."
+    }
+   ]
+  },
+  {
+   "id": "med-021",
+   "ask": {
+    "1": "Purpose",
+    "2": "Local or general",
+    "3": "Ether"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the difference between a local and a general anaesthetic?",
+     "choices": [
+      "General numbs one finger",
+      "Local makes you unconscious",
+      "They are the same",
+      "General makes you unconscious, local numbs one area"
+     ],
+     "answer": 3,
+     "explanation": "A local blocks nerves in a small area; a general acts on the brain."
+    },
+    {
+     "level": 3,
+     "question": "Ether was first publicly demonstrated as a surgical anaesthetic in 1846 in which US city?",
+     "choices": [
+      "Chicago",
+      "Denver",
+      "Boston",
+      "Philadelphia"
+     ],
+     "answer": 2,
+     "explanation": "William Morton's demonstration took place at Massachusetts General Hospital in Boston."
+    }
+   ]
+  },
+  {
+   "id": "med-022",
+   "ask": {
+    "1": "Vitamin C",
+    "2": "Vitamin D",
+    "3": "Deficiency"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which vitamin does the skin make when exposed to sunlight, helping bones absorb calcium?",
+     "choices": [
+      "Vitamin B6",
+      "Vitamin D",
+      "Vitamin E",
+      "Vitamin C"
+     ],
+     "answer": 1,
+     "explanation": "UVB light lets skin make vitamin D."
+    },
+    {
+     "level": 3,
+     "question": "A severe lack of vitamin D in children causes which bone disease?",
+     "choices": [
+      "Rickets",
+      "Beriberi",
+      "Pellagra",
+      "Scurvy"
+     ],
+     "answer": 0,
+     "explanation": "Rickets leaves bones soft and bowed."
+    }
+   ]
+  },
+  {
+   "id": "med-023",
+   "ask": {
+    "1": "X-ray",
+    "2": "Scans",
+    "3": "Principle"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which technology uses radiation to take pictures of bones inside the body?",
+     "choices": [
+      "Stethoscope",
+      "Blood test",
+      "Thermometer",
+      "X-ray"
+     ],
+     "answer": 3,
+     "explanation": "Dense bone absorbs X-rays and shows up white."
+    },
+    {
+     "level": 2,
+     "question": "Which scan uses strong magnets and radio waves, with no ionising radiation, to image soft tissue?",
+     "choices": [
+      "X-ray",
+      "MRI",
+      "CT scan",
+      "PET scan"
+     ],
+     "answer": 1,
+     "explanation": "MRI aligns hydrogen nuclei with a magnetic field and reads their signals."
+    }
+   ]
+  },
+  {
+   "id": "med-024",
+   "ask": {
+    "1": "Pregnancy",
+    "2": "Principle",
+    "3": "Doppler"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "How does ultrasound make an image?",
+     "choices": [
+      "It records echoes of high-frequency sound",
+      "It photographs the skin",
+      "It uses magnets only",
+      "It measures light from the body"
+     ],
+     "answer": 0,
+     "explanation": "Sound bounces back differently from different tissues."
+    },
+    {
+     "level": 3,
+     "question": "What does a Doppler ultrasound measure?",
+     "choices": [
+      "Blood sugar",
+      "Body temperature",
+      "The speed and direction of blood flow",
+      "Bone density"
+     ],
+     "answer": 2,
+     "explanation": "The shift in frequency of reflected sound reveals movement such as blood flow."
+    }
+   ]
+  },
+  {
+   "id": "med-025",
+   "ask": {
+    "1": "Pacemaker",
+    "2": "Defibrillator",
+    "3": "ECG"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which small implanted device helps the heart keep a regular beat using electrical pulses?",
+     "choices": [
+      "Catheter",
+      "Stent",
+      "Inhaler",
+      "Pacemaker"
+     ],
+     "answer": 3,
+     "explanation": "A pacemaker sends pulses when the heart's own rhythm is too slow or irregular."
+    },
+    {
+     "level": 2,
+     "question": "What does an ECG (EKG) record?",
+     "choices": [
+      "The sound of the lungs",
+      "Bone density",
+      "The electrical activity of the heart",
+      "Blood sugar"
+     ],
+     "answer": 2,
+     "explanation": "Electrodes on the skin trace the heart's electrical signals."
+    }
+   ]
+  },
+  {
+   "id": "med-026",
+   "ask": {
+    "1": "Robot",
+    "2": "Keyhole",
+    "3": "Laser"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "In robot-assisted surgery, who is in control of the robot's arms?",
+     "choices": [
+      "The robot alone",
+      "An anaesthetist",
+      "The surgeon, using controls",
+      "The patient"
+     ],
+     "answer": 2,
+     "explanation": "Systems like the da Vinci robot translate the surgeon's hand movements into precise instrument motion."
+    },
+    {
+     "level": 3,
+     "question": "LASIK surgery uses a laser to reshape which part of the body?",
+     "choices": [
+      "The retina",
+      "The lens of the ear",
+      "The eyelid",
+      "The cornea of the eye"
+     ],
+     "answer": 3,
+     "explanation": "LASIK reshapes the cornea to correct focus."
+    }
+   ]
+  },
+  {
+   "id": "med-027",
+   "ask": {
+    "1": "Genome",
+    "2": "CRISPR",
+    "3": "Sequencing"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The letters DNA stand for which substance?",
+     "choices": [
+      "Dioxygen nucleic acid",
+      "Deoxyribonucleic acid",
+      "Dynamic nitrogen acid",
+      "Dense nuclear acid"
+     ],
+     "answer": 1,
+     "explanation": "DNA carries genetic instructions in a double helix."
+    },
+    {
+     "level": 3,
+     "question": "What can the CRISPR-Cas9 tool do?",
+     "choices": [
+      "Cut DNA at a chosen location",
+      "Grow new organs",
+      "Photograph atoms",
+      "Print proteins only"
+     ],
+     "answer": 0,
+     "explanation": "Cas9 is guided by RNA to a matching sequence and cuts, allowing genes to be edited."
+    }
+   ]
+  },
+  {
+   "id": "med-028",
+   "ask": {
+    "1": "Artificial limbs",
+    "2": "3D printing",
+    "3": "Bionic"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Why is 3D printing useful for making prosthetics and implants?",
+     "choices": [
+      "Each one can be shaped to fit one person",
+      "They are always cheaper than anything else",
+      "It makes them out of living tissue by default",
+      "It needs no design"
+     ],
+     "answer": 0,
+     "explanation": "Printers can build custom shapes from scans of a patient's body."
+    },
+    {
+     "level": 3,
+     "question": "What does a cochlear implant do?",
+     "choices": [
+      "It replaces the eardrum with glass",
+      "It stimulates the hearing nerve electrically",
+      "It makes sound louder like a hearing aid",
+      "It cures the common cold"
+     ],
+     "answer": 1,
+     "explanation": "It bypasses damaged hair cells in the inner ear and sends signals to the auditory nerve."
+    }
+   ]
+  },
+  {
+   "id": "med-029",
+   "ask": {
+    "1": "Kidney failure",
+    "2": "Transplants",
+    "3": "Matching"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which machine cleans the blood of people whose kidneys have failed?",
+     "choices": [
+      "Defibrillator",
+      "Incubator",
+      "Ventilator",
+      "Dialysis machine"
+     ],
+     "answer": 3,
+     "explanation": "Dialysis filters waste and extra fluid from the blood."
+    },
+    {
+     "level": 2,
+     "question": "What is a transplant?",
+     "choices": [
+      "Replacing a diseased organ with a healthy one from a donor",
+      "Photographing an organ",
+      "Removing an organ and not replacing it",
+      "Treating an organ with a drug"
+     ],
+     "answer": 0,
+     "explanation": "Kidneys, livers, hearts and corneas are commonly transplanted."
+    }
+   ]
+  },
+  {
+   "id": "med-030",
+   "ask": {
+    "1": "Thermometer",
+    "2": "Pulse oximeter",
+    "3": "Stethoscope"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "A pulse oximeter clipped on a finger estimates what?",
+     "choices": [
+      "Body fat",
+      "Cholesterol",
+      "Blood sugar",
+      "The oxygen saturation of the blood"
+     ],
+     "answer": 3,
+     "explanation": "It shines light through the finger to measure how much haemoglobin carries oxygen."
+    },
+    {
+     "level": 3,
+     "question": "A normal resting adult heart rate is about how many beats per minute?",
+     "choices": [
+      "60 to 100",
+      "20 to 40",
+      "200 to 240",
+      "120 to 160"
+     ],
+     "answer": 0,
+     "explanation": "A healthy resting rate for most adults is between 60 and 100 beats per minute."
+    }
+   ]
+  },
+  {
+   "id": "med-031",
+   "ask": {
+    "1": "Smallpox",
+    "2": "Jenner",
+    "3": "Eradication"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which disease was the first to be wiped out worldwide by vaccination?",
+     "choices": [
+      "Measles",
+      "Polio",
+      "Malaria",
+      "Smallpox"
+     ],
+     "answer": 3,
+     "explanation": "The World Health Organization declared smallpox eradicated in 1980."
+    },
+    {
+     "level": 2,
+     "question": "Who developed the first vaccine, against smallpox, in 1796?",
+     "choices": [
+      "Edward Jenner",
+      "Alexander Fleming",
+      "Joseph Lister",
+      "Louis Pasteur"
+     ],
+     "answer": 0,
+     "explanation": "Jenner used cowpox material to protect people from smallpox."
+    }
+   ]
+  },
+  {
+   "id": "med-032",
+   "ask": {
+    "1": "Germ theory",
+    "2": "Pasteurisation",
+    "3": "Rabies"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Pasteur and Robert Koch are best known for supporting which idea?",
+     "choices": [
+      "Spontaneous generation",
+      "Germ theory of disease",
+      "Evolution by natural selection",
+      "The four humours"
+     ],
+     "answer": 1,
+     "explanation": "Germ theory says specific microbes cause specific diseases."
+    },
+    {
+     "level": 3,
+     "question": "In 1885 Pasteur's team gave a successful treatment for which disease to a boy bitten by a dog?",
+     "choices": [
+      "Plague",
+      "Rabies",
+      "Tetanus",
+      "Anthrax"
+     ],
+     "answer": 1,
+     "explanation": "Joseph Meister was the first person to receive the rabies vaccine after exposure."
+    }
+   ]
+  },
+  {
+   "id": "med-033",
+   "ask": {
+    "1": "Penicillin",
+    "2": "Mould",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which medicine was discovered by Alexander Fleming from a mould?",
+     "choices": [
+      "Penicillin",
+      "Morphine",
+      "Insulin",
+      "Aspirin"
+     ],
+     "answer": 0,
+     "explanation": "Penicillin was the first widely used antibiotic."
+    },
+    {
+     "level": 2,
+     "question": "In which year did Fleming notice that a mould killed bacteria on a dish?",
+     "choices": [
+      "1828",
+      "1968",
+      "1888",
+      "1928"
+     ],
+     "answer": 3,
+     "explanation": "He saw it in 1928 when he returned from holiday to find a clear ring round a Penicillium mould."
+    }
+   ]
+  },
+  {
+   "id": "med-034",
+   "ask": {
+    "1": "Handwashing",
+    "2": "Who",
+    "3": "Result"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which doctor showed in the 1840s that handwashing by doctors cut deaths from childbed fever in a Vienna hospital?",
+     "choices": [
+      "Edward Jenner",
+      "William Harvey",
+      "Hippocrates",
+      "Ignaz Semmelweis"
+     ],
+     "answer": 3,
+     "explanation": "Semmelweis had doctors wash with chlorinated lime solution and deaths fell sharply."
+    },
+    {
+     "level": 3,
+     "question": "Why was Semmelweis largely ignored at the time?",
+     "choices": [
+      "He worked in another country",
+      "Germ theory had not yet been accepted",
+      "He wrote in a secret code",
+      "He never published"
+     ],
+     "answer": 1,
+     "explanation": "Many doctors rejected the idea that they themselves carried disease."
+    }
+   ]
+  },
+  {
+   "id": "med-035",
+   "ask": {
+    "1": "Blood circulation",
+    "2": "Harvey",
+    "3": "Galen"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which organ pumps blood around the body?",
+     "choices": [
+      "Liver",
+      "Heart",
+      "Kidney",
+      "Spleen"
+     ],
+     "answer": 1,
+     "explanation": "The heart is a muscle that pumps blood."
+    },
+    {
+     "level": 2,
+     "question": "Who first described in 1628 that blood circulates around the body, pumped by the heart?",
+     "choices": [
+      "Andreas Vesalius",
+      "William Harvey",
+      "Ambroise Pare",
+      "Galen"
+     ],
+     "answer": 1,
+     "explanation": "Harvey's book showed blood moves in a circuit rather than being used up."
+    }
+   ]
+  },
+  {
+   "id": "med-036",
+   "ask": {
+    "1": "Antiseptics",
+    "2": "Carbolic",
+    "3": "Surgery"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which kind of substance, first used in surgery by Joseph Lister, kills germs on wounds and instruments?",
+     "choices": [
+      "A hormone",
+      "An antiseptic",
+      "An anaesthetic",
+      "A vitamin"
+     ],
+     "answer": 1,
+     "explanation": "Lister used carbolic acid in the 1860s and deaths after surgery fell."
+    },
+    {
+     "level": 2,
+     "question": "What did Lister spray or apply to clean wounds and tools in the 1860s?",
+     "choices": [
+      "Salt water",
+      "Carbolic acid",
+      "Bleach",
+      "Alcohol only"
+     ],
+     "answer": 1,
+     "explanation": "Carbolic acid (phenol) cut infection after operations."
+    }
+   ]
+  }
+ ]
+}

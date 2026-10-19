@@ -20,8 +20,8 @@ function answer(s, ctx, { right = true, stake = 1, elapsedMs = 3000 } = {}) {
 }
 const next = (s, ctx) => go(s, ctx, { type: 'NEXT' });
 
-test('the roster has nine bosses, each with a pattern, a specialty and a sprite name', () => {
-  assert.equal(BOSS_IDS.length, 9);
+test('the roster has ten bosses, each with a pattern, a specialty and a sprite name', () => {
+  assert.equal(BOSS_IDS.length, 10);
   for (const b of Object.values(BOSS_ROSTER)) {
     assert.ok(b.hp >= 12 && b.name && b.sprite && b.color && b.cat);
     assert.ok(b.intents.length >= 3 && b.enraged.length >= 3);
@@ -332,4 +332,56 @@ test('the House has three faces that only move forward, with their own moves and
   const other = makeEncounter({ kind: 'boss', enemyId: 'static' });
   assert.equal(other.phases, undefined);
   assert.deepEqual(advancePhase(other), { from: 0, to: 0 });
+});
+
+test('evolution: each rank is bigger, harder and nastier; the final boss never evolves', async () => {
+  const { evolveBoss, cleanRank, BOSS_RANK_MAX, evolutionText } = await import('../src/engine/duel.js');
+  const base = BOSS_ROSTER.static;
+  assert.equal(evolveBoss(base, 0).name, base.name);
+  let last = base;
+  for (let r = 1; r <= BOSS_RANK_MAX; r++) {
+    const e = evolveBoss(base, r);
+    assert.ok(e.hp > last.hp, `rank ${r} has more health`);
+    assert.ok(e.tier >= last.tier && e.tier <= 5);
+    assert.ok(e.name.startsWith(base.name) && e.name !== base.name);
+    assert.ok(e.reward > (last.reward ?? 1));
+    assert.ok(!e.intents.includes('strike') || r === 0 || e.intents.filter((i) => i === 'strike').length < base.intents.filter((i) => i === 'strike').length + 1);
+    for (const i of [...e.intents, ...e.enraged]) assert.ok(INTENTS[i], i);
+    last = e;
+  }
+  assert.ok(evolveBoss(base, 4).tier > base.tier);
+  assert.equal(evolveBoss(BOSS_ROSTER.house, 3).hp, BOSS_ROSTER.house.hp, 'the House is always itself');
+  assert.equal(cleanRank(99), BOSS_RANK_MAX); assert.equal(cleanRank('x'), 0); assert.equal(cleanRank(-2), 0);
+  assert.match(evolutionText(0), /Evolved/); assert.match(evolutionText(4), /cannot evolve/);
+});
+
+test('a rush game against an evolved boss uses its rank, and a win records what was beaten', async () => {
+  const { questions } = await realBank();
+  const ctx = fakeContext(questions);
+  const mk = (rank) => createGame({ mode: 'solo', players: [{ id: 'p1', name: 'P', ownedCards: [] }], ctx, seed: 'e1', sessionId: `e-${rank}`, overrides: { variant: 'rush', bossId: 'static', bossRanks: { static: rank } } });
+  const s0 = mk(0); const s2 = mk(2);
+  assert.equal(s0.enc.rank, 0); assert.equal(s2.enc.rank, 2);
+  assert.ok(s2.enc.maxHp > s0.enc.maxHp && s2.enc.tier > s0.enc.tier && /II/.test(s2.enc.name));
+  assert.equal(mk(99).enc.rank, 4, 'ranks are clamped');
+  // beat it
+  let t = startFight(s2, ctx);
+  for (let i = 0; i < 60 && t.enc.over !== 'won'; i++) { t = answer(t, ctx, { right: true, stake: 3 }); if (t.enc.over === 'won') break; t = next(t, ctx); }
+  assert.equal(t.enc.over, 'won');
+  t = next(t, ctx);
+  assert.deepEqual(t.beaten, [{ id: 'static', rank: 2 }]);
+  assert.equal(t.rankBeaten, 2);
+});
+
+test('the Plague Doctor asks only medicine, and the medicine bank has hard questions for evolved ranks', async () => {
+  const { questions } = await realBank();
+  const b = BOSS_ROSTER.plague;
+  assert.equal(b.cat, 'medicine'); assert.equal(b.sprite, 'boss_plague');
+  const med = questions.filter((q) => q.category === 'medicine');
+  assert.ok(med.length >= 36);
+  assert.ok(med.filter((q) => q.difficulty >= 3).length >= 10, 'evolved ranks need hard base questions');
+  const { s: g0, ctx } = await rush('plague', 'plague1');
+  const game = startFight(g0, ctx);
+  assert.equal(game.enc.id, 'plague');
+  const cats = game.round.slots.map((x) => x.category);
+  assert.ok(cats.length > 0 && cats.every((c) => c === 'medicine'), `${cats}`);
 });

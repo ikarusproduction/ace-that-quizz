@@ -1680,6 +1680,3066 @@
      "explanation": "The word describing the fear of long words is itself extremely long."
     }
    ]
+  },
+  {
+   "id": "sci-101",
+   "ask": {
+    "1": "Three states",
+    "2": "Melting and boiling",
+    "3": "Plasma"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the change from a liquid to a gas called?",
+     "choices": [
+      "Freezing",
+      "Condensation",
+      "Evaporation",
+      "Sublimation"
+     ],
+     "answer": 2,
+     "explanation": "Evaporation (boiling when it is fast) turns a liquid into a gas; condensation is the reverse."
+    },
+    {
+     "level": 3,
+     "question": "What is the name for a solid turning directly into a gas without becoming liquid first?",
+     "choices": [
+      "Fusion",
+      "Sublimation",
+      "Condensation",
+      "Deposition"
+     ],
+     "answer": 1,
+     "explanation": "Dry ice and snow in dry cold air sublimate."
+    }
+   ]
+  },
+  {
+   "id": "sci-102",
+   "ask": {
+    "1": "Water forms",
+    "2": "Boiling point",
+    "3": "Ice floats"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "At sea level, at what temperature does pure water boil?",
+     "choices": [
+      "50 degrees Celsius",
+      "100 degrees Celsius",
+      "212 degrees Celsius",
+      "90 degrees Celsius"
+     ],
+     "answer": 1,
+     "explanation": "100 degrees Celsius is 212 degrees Fahrenheit."
+    },
+    {
+     "level": 3,
+     "question": "Why does ice float on liquid water?",
+     "choices": [
+      "Ice is hollow",
+      "Ice is made of lighter atoms",
+      "Ice is less dense than liquid water",
+      "Cold water has no weight"
+     ],
+     "answer": 2,
+     "explanation": "Water molecules form an open crystal lattice when freezing, which takes up about 9 percent more volume."
+    }
+   ]
+  },
+  {
+   "id": "sci-103",
+   "ask": {
+    "1": "Mixing",
+    "2": "Solutions",
+    "3": "Separating"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which method separates salt from salty water?",
+     "choices": [
+      "Sieving",
+      "Burning it",
+      "Evaporating the water",
+      "Using a magnet"
+     ],
+     "answer": 2,
+     "explanation": "The water leaves as vapour and the salt stays behind."
+    },
+    {
+     "level": 3,
+     "question": "Which technique separates the coloured pigments in an ink by how far they travel up paper?",
+     "choices": [
+      "Filtration",
+      "Distillation",
+      "Chromatography",
+      "Electrolysis"
+     ],
+     "answer": 2,
+     "explanation": "Different pigments move at different speeds through the paper."
+    }
+   ]
+  },
+  {
+   "id": "sci-104",
+   "ask": {
+    "1": "Building blocks",
+    "2": "Parts",
+    "3": "Charge"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which tiny particle orbiting the nucleus carries a negative charge?",
+     "choices": [
+      "Nucleus",
+      "Electron",
+      "Neutron",
+      "Proton"
+     ],
+     "answer": 1,
+     "explanation": "Electrons orbit the nucleus; protons are positive and neutrons are neutral."
+    },
+    {
+     "level": 3,
+     "question": "What determines which element an atom is?",
+     "choices": [
+      "The number of neutrons",
+      "Its colour",
+      "The number of electrons only",
+      "The number of protons"
+     ],
+     "answer": 3,
+     "explanation": "The atomic number is the number of protons in the nucleus."
+    }
+   ]
+  },
+  {
+   "id": "sci-105",
+   "ask": {
+    "1": "Table",
+    "2": "Groups",
+    "3": "Noble gases"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which group of the periodic table holds the unreactive gases such as helium, neon and argon?",
+     "choices": [
+      "Alkali metals",
+      "Noble gases",
+      "Transition metals",
+      "Halogens"
+     ],
+     "answer": 1,
+     "explanation": "Their outer electron shells are full, so they rarely react."
+    },
+    {
+     "level": 3,
+     "question": "Why are elements in the same column of the periodic table similar?",
+     "choices": [
+      "They have the same number of outer electrons",
+      "They are found in the same place",
+      "They were discovered together",
+      "They have the same mass"
+     ],
+     "answer": 0,
+     "explanation": "Outer electrons control how an atom bonds."
+    }
+   ]
+  },
+  {
+   "id": "sci-106",
+   "ask": {
+    "1": "Same element",
+    "2": "Carbon",
+    "3": "Dating"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element is the main building block of all living things?",
+     "choices": [
+      "Gold",
+      "Helium",
+      "Neon",
+      "Carbon"
+     ],
+     "answer": 3,
+     "explanation": "Carbon forms long chains and rings, the backbone of life's molecules."
+    },
+    {
+     "level": 3,
+     "question": "Which isotope is used to date remains up to about 50,000 years old?",
+     "choices": [
+      "Uranium-238",
+      "Carbon-14",
+      "Hydrogen-1",
+      "Helium-4"
+     ],
+     "answer": 1,
+     "explanation": "Living things take in carbon-14, which then decays with a half-life of about 5,730 years after death."
+    }
+   ]
+  },
+  {
+   "id": "sci-107",
+   "ask": {
+    "1": "Fire",
+    "2": "Oxygen",
+    "3": "Combustion"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What are the two main products of burning a hydrocarbon fuel completely?",
+     "choices": [
+      "Ozone and salt",
+      "Carbon and nitrogen",
+      "Carbon dioxide and water",
+      "Hydrogen and oxygen"
+     ],
+     "answer": 2,
+     "explanation": "Complete combustion gives CO2 and H2O."
+    },
+    {
+     "level": 3,
+     "question": "What is the name of the chemical that is released when a fuel burns with too little oxygen and is poisonous?",
+     "choices": [
+      "Methane",
+      "Carbon monoxide",
+      "Ozone",
+      "Carbon dioxide"
+     ],
+     "answer": 1,
+     "explanation": "Incomplete combustion makes CO, which binds to haemoglobin."
+    }
+   ]
+  },
+  {
+   "id": "sci-108",
+   "ask": {
+    "1": "pH scale",
+    "2": "Neutral",
+    "3": "Indicators"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the pH of pure water at room temperature?",
+     "choices": [
+      "0",
+      "14",
+      "1",
+      "7"
+     ],
+     "answer": 3,
+     "explanation": "A pH of 7 is neutral; below 7 is acidic and above 7 is alkaline."
+    },
+    {
+     "level": 3,
+     "question": "What is formed when an acid reacts with a base?",
+     "choices": [
+      "A salt and water",
+      "A new element",
+      "Only hydrogen",
+      "A noble gas"
+     ],
+     "answer": 0,
+     "explanation": "This is called neutralisation."
+    }
+   ]
+  },
+  {
+   "id": "sci-109",
+   "ask": {
+    "1": "Corrosion",
+    "2": "Iron",
+    "3": "Protection"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Rust forms when iron reacts with oxygen and what else?",
+     "choices": [
+      "Water",
+      "Sugar",
+      "Helium",
+      "Light"
+     ],
+     "answer": 0,
+     "explanation": "Both oxygen and moisture are needed."
+    },
+    {
+     "level": 3,
+     "question": "Which method protects steel by coating it with a more reactive metal that corrodes instead?",
+     "choices": [
+      "Heating it",
+      "Painting with water",
+      "Polishing",
+      "Galvanising with zinc"
+     ],
+     "answer": 3,
+     "explanation": "Zinc corrodes first and shields the iron beneath, even where the coating is scratched."
+    }
+   ]
+  },
+  {
+   "id": "sci-110",
+   "ask": {
+    "1": "Smallest unit",
+    "2": "Parts",
+    "3": "Powerhouse"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which part of an animal cell contains its DNA?",
+     "choices": [
+      "Nucleus",
+      "Cell wall",
+      "Chloroplast",
+      "Vacuole"
+     ],
+     "answer": 0,
+     "explanation": "The nucleus stores the cell's genetic material."
+    },
+    {
+     "level": 3,
+     "question": "Which organelle releases most of a cell's usable energy from food?",
+     "choices": [
+      "Mitochondrion",
+      "Golgi body",
+      "Lysosome",
+      "Ribosome"
+     ],
+     "answer": 0,
+     "explanation": "Mitochondria carry out aerobic respiration and make ATP."
+    }
+   ]
+  },
+  {
+   "id": "sci-111",
+   "ask": {
+    "1": "Seeing small",
+    "2": "Inventor",
+    "3": "Bacteria"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Who first named 'cells' in 1665 after looking at cork under a microscope?",
+     "choices": [
+      "Gregor Mendel",
+      "Charles Darwin",
+      "Isaac Newton",
+      "Robert Hooke"
+     ],
+     "answer": 3,
+     "explanation": "Hooke thought the little boxes resembled monks' cells."
+    },
+    {
+     "level": 3,
+     "question": "Which type of microscope can show details far smaller than light can, such as viruses?",
+     "choices": [
+      "Binocular microscope",
+      "Electron microscope",
+      "Stereo microscope",
+      "Magnifying glass"
+     ],
+     "answer": 1,
+     "explanation": "Electrons have a much shorter wavelength than light."
+    }
+   ]
+  },
+  {
+   "id": "sci-112",
+   "ask": {
+    "1": "Growth",
+    "2": "Mitosis",
+    "3": "Stem cells"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the name of the type of cell division that makes two identical body cells?",
+     "choices": [
+      "Meiosis",
+      "Mitosis",
+      "Osmosis",
+      "Diffusion"
+     ],
+     "answer": 1,
+     "explanation": "Mitosis copies a cell's chromosomes and shares them equally."
+    },
+    {
+     "level": 3,
+     "question": "What is special about stem cells?",
+     "choices": [
+      "They never divide",
+      "They only exist in plants",
+      "They carry no DNA",
+      "They can develop into many cell types"
+     ],
+     "answer": 3,
+     "explanation": "Stem cells can become specialised cells such as muscle or nerve cells."
+    }
+   ]
+  },
+  {
+   "id": "sci-113",
+   "ask": {
+    "1": "Making food",
+    "2": "Inputs",
+    "3": "Chlorophyll"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which gas do plants take in for photosynthesis?",
+     "choices": [
+      "Carbon dioxide",
+      "Hydrogen",
+      "Oxygen",
+      "Nitrogen"
+     ],
+     "answer": 0,
+     "explanation": "The oxygen they release is a by-product."
+    },
+    {
+     "level": 3,
+     "question": "Which green pigment captures light for photosynthesis?",
+     "choices": [
+      "Chlorophyll",
+      "Melanin",
+      "Haemoglobin",
+      "Keratin"
+     ],
+     "answer": 0,
+     "explanation": "Chlorophyll absorbs mainly red and blue light and reflects green."
+    }
+   ]
+  },
+  {
+   "id": "sci-114",
+   "ask": {
+    "1": "Roots",
+    "2": "Water travel",
+    "3": "Xylem"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the name of the tiny pores on the underside of leaves that let gases in and out?",
+     "choices": [
+      "Petals",
+      "Roots",
+      "Stomata",
+      "Seeds"
+     ],
+     "answer": 2,
+     "explanation": "Stomata open and close to control gas exchange and water loss."
+    },
+    {
+     "level": 3,
+     "question": "Which plant tissue carries water upward from the roots?",
+     "choices": [
+      "Xylem",
+      "Phloem",
+      "Epidermis",
+      "Cambium"
+     ],
+     "answer": 0,
+     "explanation": "Phloem carries sugars; xylem carries water and minerals up."
+    }
+   ]
+  },
+  {
+   "id": "sci-115",
+   "ask": {
+    "1": "Flowers",
+    "2": "Pollination",
+    "3": "Seed spread"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the transfer of pollen from one flower to another called?",
+     "choices": [
+      "Evaporation",
+      "Pollination",
+      "Respiration",
+      "Germination"
+     ],
+     "answer": 1,
+     "explanation": "Insects, wind and birds carry pollen."
+    },
+    {
+     "level": 3,
+     "question": "Plants that lack flowers and seeds and reproduce with spores include which group?",
+     "choices": [
+      "Oaks",
+      "Roses",
+      "Ferns",
+      "Grasses"
+     ],
+     "answer": 2,
+     "explanation": "Ferns, mosses and horsetails reproduce by spores."
+    }
+   ]
+  },
+  {
+   "id": "sci-116",
+   "ask": {
+    "1": "Who",
+    "2": "Natural selection",
+    "3": "Finches"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What does 'natural selection' mean?",
+     "choices": [
+      "Animals choose their traits",
+      "Only the biggest animals survive",
+      "Individuals better suited to their environment tend to survive and reproduce more",
+      "Nature picks animals at random"
+     ],
+     "answer": 2,
+     "explanation": "Helpful inherited traits become more common over generations."
+    },
+    {
+     "level": 3,
+     "question": "On which islands did Darwin study finches whose beaks differed from island to island?",
+     "choices": [
+      "The Galapagos Islands",
+      "The Hawaiian Islands",
+      "The Canary Islands",
+      "The Falkland Islands"
+     ],
+     "answer": 0,
+     "explanation": "The varied beaks fitted the different foods on each island."
+    }
+   ]
+  },
+  {
+   "id": "sci-117",
+   "ask": {
+    "1": "Ancient life",
+    "2": "Dinosaurs",
+    "3": "Layers"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Roughly when did the non-bird dinosaurs die out?",
+     "choices": [
+      "About 66 million years ago",
+      "About 6,000 years ago",
+      "About 500 million years ago",
+      "About 1 million years ago"
+     ],
+     "answer": 0,
+     "explanation": "An asteroid impact at the end of the Cretaceous is the leading explanation."
+    },
+    {
+     "level": 3,
+     "question": "Which living animals are regarded by scientists as the descendants of dinosaurs?",
+     "choices": [
+      "Frogs",
+      "Lizards",
+      "Birds",
+      "Crocodiles only"
+     ],
+     "answer": 2,
+     "explanation": "Birds evolved from small feathered theropod dinosaurs."
+    }
+   ]
+  },
+  {
+   "id": "sci-118",
+   "ask": {
+    "1": "Food chains",
+    "2": "Producers",
+    "3": "Energy"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What do decomposers such as fungi do?",
+     "choices": [
+      "Hunt prey",
+      "Pollinate flowers",
+      "Break down dead material and recycle nutrients",
+      "Make food from sunlight"
+     ],
+     "answer": 2,
+     "explanation": "They return nutrients to the soil."
+    },
+    {
+     "level": 3,
+     "question": "Why are there far fewer top predators than herbivores in an ecosystem?",
+     "choices": [
+      "Much energy is lost at each step up the chain",
+      "Herbivores eat predators",
+      "Predators are never hungry",
+      "Plants poison predators"
+     ],
+     "answer": 0,
+     "explanation": "Roughly 90 percent of energy is lost between levels, so higher levels support fewer individuals."
+    }
+   ]
+  },
+  {
+   "id": "sci-119",
+   "ask": {
+    "1": "Seeing",
+    "2": "Retina",
+    "3": "Colour"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which part at the back of the eye contains the light-sensitive cells?",
+     "choices": [
+      "Iris",
+      "Retina",
+      "Cornea",
+      "Pupil"
+     ],
+     "answer": 1,
+     "explanation": "The retina converts light into nerve signals."
+    },
+    {
+     "level": 3,
+     "question": "Which cells in the retina let us see colour in bright light?",
+     "choices": [
+      "Neurons only",
+      "Cones",
+      "Rods",
+      "Lens cells"
+     ],
+     "answer": 1,
+     "explanation": "Most people have three types of cone, tuned to red, green and blue light."
+    }
+   ]
+  },
+  {
+   "id": "sci-120",
+   "ask": {
+    "1": "Hearing",
+    "2": "Sound path",
+    "3": "Balance"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What vibrates first when sound waves reach the middle ear?",
+     "choices": [
+      "Pupil",
+      "Cochlea",
+      "Retina",
+      "Eardrum"
+     ],
+     "answer": 3,
+     "explanation": "The eardrum passes vibrations on through three tiny bones."
+    },
+    {
+     "level": 3,
+     "question": "Which spiral organ of the inner ear turns vibrations into nerve signals?",
+     "choices": [
+      "Eustachian tube",
+      "Cochlea",
+      "Anvil",
+      "Semicircular canal"
+     ],
+     "answer": 1,
+     "explanation": "Hair cells inside the cochlea respond to different pitches."
+    }
+   ]
+  },
+  {
+   "id": "sci-121",
+   "ask": {
+    "1": "Taste and smell",
+    "2": "Tongue",
+    "3": "Flavour"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which of these is one of the five basic tastes?",
+     "choices": [
+      "Crunchy",
+      "Spicy",
+      "Cold",
+      "Umami"
+     ],
+     "answer": 3,
+     "explanation": "The basic tastes are sweet, sour, salty, bitter and umami."
+    },
+    {
+     "level": 3,
+     "question": "Why does food seem to lose flavour when you have a blocked nose?",
+     "choices": [
+      "Saliva dries up",
+      "The tongue stops working",
+      "Much of flavour is actually smell",
+      "Taste buds fall off"
+     ],
+     "answer": 2,
+     "explanation": "Smell contributes most of what we call flavour."
+    }
+   ]
+  },
+  {
+   "id": "sci-122",
+   "ask": {
+    "1": "Nerve cells",
+    "2": "Signals",
+    "3": "Reflex"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is a reflex?",
+     "choices": [
+      "A fast automatic response",
+      "A type of memory",
+      "A dream",
+      "A planned movement"
+     ],
+     "answer": 0,
+     "explanation": "Reflexes bypass the brain to react quickly, such as pulling your hand from a hot object."
+    },
+    {
+     "level": 3,
+     "question": "What name is given to the tiny gap between two neurons where chemical signals cross?",
+     "choices": [
+      "Dendrite",
+      "Axon",
+      "Myelin",
+      "Synapse"
+     ],
+     "answer": 3,
+     "explanation": "Neurotransmitters cross the synapse."
+    }
+   ]
+  },
+  {
+   "id": "sci-123",
+   "ask": {
+    "1": "Why we sleep",
+    "2": "Dreams",
+    "3": "Memory"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "During which stage of sleep do most vivid dreams happen?",
+     "choices": [
+      "Waking",
+      "Drowsiness",
+      "Deep slow-wave sleep",
+      "REM sleep"
+     ],
+     "answer": 3,
+     "explanation": "REM stands for rapid eye movement."
+    },
+    {
+     "level": 3,
+     "question": "Which process is sleep thought to help by replaying and storing the day's experiences?",
+     "choices": [
+      "Metamorphosis",
+      "Digestion",
+      "Memory consolidation",
+      "Photosynthesis"
+     ],
+     "answer": 2,
+     "explanation": "Sleep helps stabilise new memories in the brain."
+    }
+   ]
+  },
+  {
+   "id": "sci-124",
+   "ask": {
+    "1": "Messengers",
+    "2": "Adrenaline",
+    "3": "Gland"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which hormone prepares the body for 'fight or flight'?",
+     "choices": [
+      "Oestrogen",
+      "Insulin",
+      "Melatonin",
+      "Adrenaline"
+     ],
+     "answer": 3,
+     "explanation": "Adrenaline speeds the heart and widens airways."
+    },
+    {
+     "level": 3,
+     "question": "Which small gland at the base of the brain is often called the master gland?",
+     "choices": [
+      "Thyroid",
+      "Pituitary gland",
+      "Pineal gland",
+      "Pancreas"
+     ],
+     "answer": 1,
+     "explanation": "The pituitary controls many other glands."
+    }
+   ]
+  },
+  {
+   "id": "sci-125",
+   "ask": {
+    "1": "Code",
+    "2": "Double helix",
+    "3": "Bases"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What shape does a DNA molecule have?",
+     "choices": [
+      "A cube",
+      "A double helix",
+      "A single straight line",
+      "A sphere"
+     ],
+     "answer": 1,
+     "explanation": "It looks like a twisted ladder."
+    },
+    {
+     "level": 3,
+     "question": "In DNA, adenine pairs with which base?",
+     "choices": [
+      "Thymine",
+      "Uracil",
+      "Guanine",
+      "Cytosine"
+     ],
+     "answer": 0,
+     "explanation": "A pairs with T and C pairs with G."
+    }
+   ]
+  },
+  {
+   "id": "sci-126",
+   "ask": {
+    "1": "Peas",
+    "2": "Dominant",
+    "3": "Inheritance"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Children often look like their parents because they inherit what from them?",
+     "choices": [
+      "Germs",
+      "Names",
+      "Genes",
+      "Vitamins"
+     ],
+     "answer": 2,
+     "explanation": "Genes carry instructions passed from parents to offspring."
+    },
+    {
+     "level": 3,
+     "question": "If a dominant allele is paired with a recessive allele, which trait is shown?",
+     "choices": [
+      "Neither",
+      "The recessive one",
+      "The dominant one",
+      "A blend of both always"
+     ],
+     "answer": 2,
+     "explanation": "The dominant allele masks the recessive one in heterozygotes."
+    }
+   ]
+  },
+  {
+   "id": "sci-127",
+   "ask": {
+    "1": "Number",
+    "2": "Sex",
+    "3": "Pairs"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which pair of sex chromosomes does a typical male have?",
+     "choices": [
+      "XY",
+      "YY",
+      "XZ",
+      "XX"
+     ],
+     "answer": 0,
+     "explanation": "Typical females have XX."
+    },
+    {
+     "level": 3,
+     "question": "What is the name for a change in the DNA sequence?",
+     "choices": [
+      "Migration",
+      "Mitosis",
+      "Metabolism",
+      "Mutation"
+     ],
+     "answer": 3,
+     "explanation": "Mutations can be harmless, harmful or occasionally useful."
+    }
+   ]
+  },
+  {
+   "id": "sci-128",
+   "ask": {
+    "1": "Falling",
+    "2": "g",
+    "3": "Weight and mass"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Ignoring air resistance, what happens when a feather and a hammer fall together on the Moon?",
+     "choices": [
+      "They land at the same time",
+      "The hammer lands first",
+      "The feather lands first",
+      "Neither falls"
+     ],
+     "answer": 0,
+     "explanation": "With no air, all objects accelerate equally; Apollo 15 showed it."
+    },
+    {
+     "level": 3,
+     "question": "An astronaut has the same mass on the Moon as on Earth. What changes?",
+     "choices": [
+      "Number of atoms",
+      "Mass",
+      "Weight",
+      "Volume"
+     ],
+     "answer": 2,
+     "explanation": "Weight is a force and depends on local gravity; mass does not change."
+    }
+   ]
+  },
+  {
+   "id": "sci-129",
+   "ask": {
+    "1": "Laws",
+    "2": "Inertia",
+    "3": "Action reaction"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Newton's first law says an object keeps moving or stays still unless what happens?",
+     "choices": [
+      "A force acts on it",
+      "The air is cold",
+      "It gets tired",
+      "It is heated"
+     ],
+     "answer": 0,
+     "explanation": "This property is called inertia."
+    },
+    {
+     "level": 3,
+     "question": "A rocket pushes gas down and is pushed up. Which law describes this?",
+     "choices": [
+      "Boyle's law",
+      "Newton's third law",
+      "Newton's first law",
+      "Ohm's law"
+     ],
+     "answer": 1,
+     "explanation": "For every action there is an equal and opposite reaction."
+    }
+   ]
+  },
+  {
+   "id": "sci-130",
+   "ask": {
+    "1": "Speed",
+    "2": "Velocity",
+    "3": "Acceleration"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the difference between speed and velocity?",
+     "choices": [
+      "Speed includes direction",
+      "Velocity is slower",
+      "Velocity includes direction",
+      "They are identical"
+     ],
+     "answer": 2,
+     "explanation": "Velocity is a vector, with both size and direction."
+    },
+    {
+     "level": 3,
+     "question": "A car goes from 0 to 20 m/s in 5 seconds. What is its acceleration?",
+     "choices": [
+      "4 m/s squared",
+      "15 m/s squared",
+      "0.25 m/s squared",
+      "100 m/s squared"
+     ],
+     "answer": 0,
+     "explanation": "Acceleration is change in velocity divided by time: 20 / 5 = 4."
+    }
+   ]
+  },
+  {
+   "id": "sci-131",
+   "ask": {
+    "1": "Kinds",
+    "2": "Kinetic",
+    "3": "Conservation"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What happens to the total energy in a closed system?",
+     "choices": [
+      "It stays the same",
+      "It disappears",
+      "It always grows",
+      "It always shrinks"
+     ],
+     "answer": 0,
+     "explanation": "Energy can be converted but not created or destroyed."
+    },
+    {
+     "level": 3,
+     "question": "What is the SI unit of energy?",
+     "choices": [
+      "Newton",
+      "Pascal",
+      "Watt",
+      "Joule"
+     ],
+     "answer": 3,
+     "explanation": "A watt is one joule per second."
+    }
+   ]
+  },
+  {
+   "id": "sci-132",
+   "ask": {
+    "1": "Temperature",
+    "2": "Transfer",
+    "3": "Conduction"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "How does heat from the Sun reach the Earth through empty space?",
+     "choices": [
+      "Convection",
+      "Evaporation",
+      "Conduction",
+      "Radiation"
+     ],
+     "answer": 3,
+     "explanation": "Radiation needs no medium."
+    },
+    {
+     "level": 3,
+     "question": "What is the lowest possible temperature called, at which particles have minimal motion?",
+     "choices": [
+      "Absolute zero",
+      "Freezing point",
+      "Boiling point",
+      "Dew point"
+     ],
+     "answer": 0,
+     "explanation": "Absolute zero is 0 kelvin, about minus 273.15 degrees Celsius."
+    }
+   ]
+  },
+  {
+   "id": "sci-133",
+   "ask": {
+    "1": "Sources",
+    "2": "Fossil fuels",
+    "3": "Solar"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What do solar panels convert sunlight into?",
+     "choices": [
+      "Electricity",
+      "Wind",
+      "Coal",
+      "Sound"
+     ],
+     "answer": 0,
+     "explanation": "Photovoltaic cells produce electric current from light."
+    },
+    {
+     "level": 3,
+     "question": "Burning fossil fuels adds which gas most to climate change?",
+     "choices": [
+      "Neon",
+      "Helium",
+      "Argon",
+      "Carbon dioxide"
+     ],
+     "answer": 3,
+     "explanation": "CO2 traps heat in the atmosphere."
+    }
+   ]
+  },
+  {
+   "id": "sci-134",
+   "ask": {
+    "1": "Simple machines",
+    "2": "Lever",
+    "3": "Pulley"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What does a simple machine such as a lever or ramp let you do?",
+     "choices": [
+      "Use less force over a greater distance",
+      "Make work free",
+      "Create energy",
+      "Remove friction"
+     ],
+     "answer": 0,
+     "explanation": "Work is conserved: less force, more distance."
+    },
+    {
+     "level": 3,
+     "question": "A ramp is a long way up for a small height gain. What is the benefit?",
+     "choices": [
+      "Friction vanishes",
+      "A smaller force is needed",
+      "The work done is smaller",
+      "Gravity is reduced"
+     ],
+     "answer": 1,
+     "explanation": "The ramp spreads the same work over a longer distance."
+    }
+   ]
+  },
+  {
+   "id": "sci-135",
+   "ask": {
+    "1": "Pressure",
+    "2": "Hydraulics",
+    "3": "Area"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the SI unit of pressure?",
+     "choices": [
+      "Joule",
+      "Pascal",
+      "Hertz",
+      "Newton"
+     ],
+     "answer": 1,
+     "explanation": "One pascal is one newton per square metre."
+    },
+    {
+     "level": 3,
+     "question": "Hydraulic car lifts work because a liquid does what to pressure?",
+     "choices": [
+      "Doubles it",
+      "Transmits it equally in all directions",
+      "Destroys it",
+      "Hides it"
+     ],
+     "answer": 1,
+     "explanation": "Pascal's principle lets a small force on a small piston lift a large force on a large piston."
+    }
+   ]
+  },
+  {
+   "id": "sci-136",
+   "ask": {
+    "1": "Engines",
+    "2": "Wheels",
+    "3": "Efficiency"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Why is no machine ever 100 percent efficient?",
+     "choices": [
+      "Energy gets created",
+      "Some energy is always lost as heat",
+      "Friction adds energy",
+      "Machines have no power"
+     ],
+     "answer": 1,
+     "explanation": "Wasted energy usually ends up as heat and sound."
+    },
+    {
+     "level": 3,
+     "question": "Roughly what proportion of the energy in petrol does a typical car engine turn into motion?",
+     "choices": [
+      "About 5 percent",
+      "About 25 percent",
+      "About 95 percent",
+      "About 100 percent"
+     ],
+     "answer": 1,
+     "explanation": "Most of the rest leaves as heat."
+    }
+   ]
+  },
+  {
+   "id": "sci-137",
+   "ask": {
+    "1": "Order",
+    "2": "Gas giants",
+    "3": "Dwarf planets"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which planet has the greatest mass in the Solar System?",
+     "choices": [
+      "Jupiter",
+      "Neptune",
+      "Earth",
+      "Saturn"
+     ],
+     "answer": 0,
+     "explanation": "Jupiter is more than twice as massive as all other planets combined."
+    },
+    {
+     "level": 3,
+     "question": "Which dwarf planet was reclassified from a planet in 2006?",
+     "choices": [
+      "Ceres",
+      "Pluto",
+      "Haumea",
+      "Eris"
+     ],
+     "answer": 1,
+     "explanation": "The IAU defined 'planet' in 2006; Pluto did not clear its orbit."
+    }
+   ]
+  },
+  {
+   "id": "sci-138",
+   "ask": {
+    "1": "Phases",
+    "2": "Tides",
+    "3": "Eclipse"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What causes the tides of the sea on Earth?",
+     "choices": [
+      "Wind",
+      "Earth's magnetism",
+      "Whales",
+      "The gravity of the Moon and Sun"
+     ],
+     "answer": 3,
+     "explanation": "The Moon's pull is the main cause."
+    },
+    {
+     "level": 3,
+     "question": "When does a total solar eclipse occur?",
+     "choices": [
+      "The Sun turns off",
+      "The Moon passes between the Sun and Earth",
+      "Earth passes between the Sun and Moon",
+      "Mars passes in front"
+     ],
+     "answer": 1,
+     "explanation": "A lunar eclipse is when Earth's shadow falls on the Moon."
+    }
+   ]
+  },
+  {
+   "id": "sci-139",
+   "ask": {
+    "1": "Seasons",
+    "2": "Day",
+    "3": "Tilt"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What causes the seasons?",
+     "choices": [
+      "The Moon's phases",
+      "Earth's tilted axis",
+      "Solar flares",
+      "Earth's distance from the Sun"
+     ],
+     "answer": 1,
+     "explanation": "The tilt of about 23.5 degrees changes how directly sunlight hits each hemisphere."
+    },
+    {
+     "level": 3,
+     "question": "In June, which part of the Earth is tilted toward the Sun?",
+     "choices": [
+      "The Northern Hemisphere",
+      "The Southern Hemisphere",
+      "The equator only",
+      "Neither"
+     ],
+     "answer": 0,
+     "explanation": "That is why June is summer in the north."
+    }
+   ]
+  },
+  {
+   "id": "sci-140",
+   "ask": {
+    "1": "Our star",
+    "2": "Fusion",
+    "3": "Lifespan"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What process powers the Sun?",
+     "choices": [
+      "Friction",
+      "Nuclear fusion",
+      "Fission",
+      "Chemical burning"
+     ],
+     "answer": 1,
+     "explanation": "Hydrogen nuclei fuse into helium and release energy."
+    },
+    {
+     "level": 3,
+     "question": "About how old is the Sun?",
+     "choices": [
+      "4.6 billion years",
+      "4,600 years",
+      "46 million years",
+      "460 billion years"
+     ],
+     "answer": 0,
+     "explanation": "The Sun formed with the Solar System about 4.6 billion years ago."
+    }
+   ]
+  },
+  {
+   "id": "sci-141",
+   "ask": {
+    "1": "Light speed",
+    "2": "Light year",
+    "3": "Distance"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is a light year?",
+     "choices": [
+      "A year with extra daylight",
+      "The age of a star",
+      "The distance light travels in a year",
+      "A unit of time"
+     ],
+     "answer": 2,
+     "explanation": "It is about 9.46 trillion kilometres."
+    },
+    {
+     "level": 3,
+     "question": "Roughly how long does sunlight take to reach the Earth?",
+     "choices": [
+      "About 8 days",
+      "About 8 seconds",
+      "About 8 minutes",
+      "About 8 hours"
+     ],
+     "answer": 2,
+     "explanation": "The Sun is about 150 million kilometres away."
+    }
+   ]
+  },
+  {
+   "id": "sci-142",
+   "ask": {
+    "1": "Birth",
+    "2": "Giants",
+    "3": "End"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What will our Sun become after the red giant stage?",
+     "choices": [
+      "A black hole",
+      "A white dwarf",
+      "A neutron star",
+      "A supernova"
+     ],
+     "answer": 1,
+     "explanation": "The Sun is too small to explode as a supernova."
+    },
+    {
+     "level": 3,
+     "question": "What can remain after the collapse of a very massive star in a supernova?",
+     "choices": [
+      "A neutron star or a black hole",
+      "A new planet",
+      "A white dwarf only",
+      "A comet"
+     ],
+     "answer": 0,
+     "explanation": "The core collapses into an extremely dense neutron star or a black hole."
+    }
+   ]
+  },
+  {
+   "id": "sci-143",
+   "ask": {
+    "1": "Milky Way",
+    "2": "Andromeda",
+    "3": "Count"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which large spiral galaxy is the nearest big neighbour to the Milky Way?",
+     "choices": [
+      "Cartwheel",
+      "Andromeda",
+      "Triangulum",
+      "Whirlpool"
+     ],
+     "answer": 1,
+     "explanation": "Andromeda is about 2.5 million light years away."
+    },
+    {
+     "level": 3,
+     "question": "Roughly how many stars are in the Milky Way?",
+     "choices": [
+      "Exactly one trillion",
+      "A few thousand",
+      "Hundreds of billions",
+      "About a million"
+     ],
+     "answer": 2,
+     "explanation": "Estimates range from 100 to 400 billion."
+    }
+   ]
+  },
+  {
+   "id": "sci-144",
+   "ask": {
+    "1": "Origin",
+    "2": "Age",
+    "3": "Expansion"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "About how old is the universe?",
+     "choices": [
+      "138 million years",
+      "13.8 billion years",
+      "4.6 billion years",
+      "1.38 trillion years"
+     ],
+     "answer": 1,
+     "explanation": "Measured from cosmic microwave background data."
+    },
+    {
+     "level": 3,
+     "question": "Whose observations in 1929 showed that distant galaxies are moving away from us?",
+     "choices": [
+      "Galileo",
+      "Johannes Kepler",
+      "Carl Sagan",
+      "Edwin Hubble"
+     ],
+     "answer": 3,
+     "explanation": "The farther the galaxy, the faster it recedes."
+    }
+   ]
+  },
+  {
+   "id": "sci-145",
+   "ask": {
+    "1": "Invisible",
+    "2": "Black holes",
+    "3": "Gravity"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Dark matter is so called because it does what?",
+     "choices": [
+      "Is black",
+      "Is made of coal",
+      "Does not emit or absorb light",
+      "Is cold"
+     ],
+     "answer": 2,
+     "explanation": "We only detect it through gravity."
+    },
+    {
+     "level": 3,
+     "question": "Approximately what fraction of the universe's energy is dark energy?",
+     "choices": [
+      "About 68 percent",
+      "About 1 percent",
+      "About 27 percent",
+      "About 5 percent"
+     ],
+     "answer": 0,
+     "explanation": "Dark energy accounts for roughly 68, dark matter 27 and ordinary matter 5 percent."
+    }
+   ]
+  },
+  {
+   "id": "sci-146",
+   "ask": {
+    "1": "Current",
+    "2": "Circuit",
+    "3": "Conductors"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the unit of electric current?",
+     "choices": [
+      "Ohm",
+      "Watt",
+      "Ampere",
+      "Volt"
+     ],
+     "answer": 2,
+     "explanation": "The ampere (amp) measures flow of charge."
+    },
+    {
+     "level": 3,
+     "question": "According to Ohm's law, what is voltage equal to?",
+     "choices": [
+      "Current divided by resistance",
+      "Power times time",
+      "Resistance minus current",
+      "Current times resistance"
+     ],
+     "answer": 3,
+     "explanation": "V = I x R."
+    }
+   ]
+  },
+  {
+   "id": "sci-147",
+   "ask": {
+    "1": "Static",
+    "2": "Lightning",
+    "3": "Charge"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is lightning?",
+     "choices": [
+      "A burning gas",
+      "A shooting star",
+      "A giant electrical discharge",
+      "A reflection of the Sun"
+     ],
+     "answer": 2,
+     "explanation": "Charge builds up in clouds until air breaks down."
+    },
+    {
+     "level": 3,
+     "question": "Like charges do what to each other?",
+     "choices": [
+      "Cancel",
+      "Repel",
+      "Attract",
+      "Merge"
+     ],
+     "answer": 1,
+     "explanation": "Opposite charges attract and like charges repel."
+    }
+   ]
+  },
+  {
+   "id": "sci-148",
+   "ask": {
+    "1": "Poles",
+    "2": "Fields",
+    "3": "Electromagnet"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the Earth's magnetic field useful for?",
+     "choices": [
+      "Heating the core",
+      "Making clouds",
+      "Pulling the Moon",
+      "Compass navigation and shielding from solar wind"
+     ],
+     "answer": 3,
+     "explanation": "The field deflects charged particles from the Sun."
+    },
+    {
+     "level": 3,
+     "question": "What happens when electric current flows through a coil of wire?",
+     "choices": [
+      "It becomes a conductor of cold",
+      "It becomes a battery",
+      "It makes gravity",
+      "It becomes an electromagnet"
+     ],
+     "answer": 3,
+     "explanation": "A current produces a magnetic field."
+    }
+   ]
+  },
+  {
+   "id": "sci-149",
+   "ask": {
+    "1": "Vibration",
+    "2": "Medium",
+    "3": "Pitch"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What does the pitch of a sound depend on?",
+     "choices": [
+      "Weight",
+      "Temperature",
+      "Colour",
+      "Frequency"
+     ],
+     "answer": 3,
+     "explanation": "A higher frequency gives a higher pitch."
+    },
+    {
+     "level": 3,
+     "question": "What is the unit of frequency?",
+     "choices": [
+      "Decibel",
+      "Hertz",
+      "Joule",
+      "Metre"
+     ],
+     "answer": 1,
+     "explanation": "One hertz is one cycle per second."
+    }
+   ]
+  },
+  {
+   "id": "sci-150",
+   "ask": {
+    "1": "Spectrum",
+    "2": "Prism",
+    "3": "Reflection"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What does a prism do to white light?",
+     "choices": [
+      "Blocks it",
+      "Splits it into colours",
+      "Makes it louder",
+      "Makes it brighter"
+     ],
+     "answer": 1,
+     "explanation": "Different colours bend by different amounts."
+    },
+    {
+     "level": 3,
+     "question": "Which colour of visible light has the longest wavelength?",
+     "choices": [
+      "Green",
+      "Red",
+      "Blue",
+      "Violet"
+     ],
+     "answer": 1,
+     "explanation": "Violet is shortest."
+    }
+   ]
+  },
+  {
+   "id": "sci-151",
+   "ask": {
+    "1": "Radio",
+    "2": "X-rays",
+    "3": "Spectrum"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "All electromagnetic waves travel at the speed of light in what?",
+     "choices": [
+      "A vacuum",
+      "Water",
+      "Steel",
+      "Glass"
+     ],
+     "answer": 0,
+     "explanation": "In a vacuum they travel at about 300,000 kilometres per second."
+    },
+    {
+     "level": 3,
+     "question": "Which kind of radiation has the highest frequency in the electromagnetic spectrum?",
+     "choices": [
+      "Gamma rays",
+      "Infrared",
+      "Radio waves",
+      "Microwaves"
+     ],
+     "answer": 0,
+     "explanation": "Gamma rays are the most energetic."
+    }
+   ]
+  },
+  {
+   "id": "sci-152",
+   "ask": {
+    "1": "Decay",
+    "2": "Half-life",
+    "3": "Marie Curie"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is a half-life?",
+     "choices": [
+      "The time for half of a radioactive sample to decay",
+      "Half the lifespan of a star",
+      "The time to charge a battery",
+      "Half a day"
+     ],
+     "answer": 0,
+     "explanation": "After one half-life, half the atoms remain."
+    },
+    {
+     "level": 3,
+     "question": "After three half-lives, what fraction of a radioactive sample remains?",
+     "choices": [
+      "One half",
+      "One eighth",
+      "One sixteenth",
+      "One quarter"
+     ],
+     "answer": 1,
+     "explanation": "Halving three times: 1/2 x 1/2 x 1/2 = 1/8."
+    }
+   ]
+  },
+  {
+   "id": "sci-153",
+   "ask": {
+    "1": "Splitting",
+    "2": "Chain reaction",
+    "3": "Power"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is nuclear fission?",
+     "choices": [
+      "A star exploding",
+      "Two nuclei joining",
+      "A chemical burning",
+      "A heavy nucleus splitting into smaller nuclei"
+     ],
+     "answer": 3,
+     "explanation": "Fission releases large amounts of energy."
+    },
+    {
+     "level": 3,
+     "question": "What keeps a fission chain reaction going?",
+     "choices": [
+      "Neutrons released by splitting atoms trigger more splits",
+      "Wind",
+      "Gravity",
+      "Heat alone"
+     ],
+     "answer": 0,
+     "explanation": "Each fission releases neutrons that can split more nuclei."
+    }
+   ]
+  },
+  {
+   "id": "sci-154",
+   "ask": {
+    "1": "Stars",
+    "2": "Hydrogen",
+    "3": "Challenge"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Why is fusion hard to achieve on Earth?",
+     "choices": [
+      "It needs no fuel",
+      "There is no hydrogen",
+      "It is illegal",
+      "It needs extremely high temperature and pressure"
+     ],
+     "answer": 3,
+     "explanation": "Nuclei must overcome their mutual electric repulsion."
+    },
+    {
+     "level": 3,
+     "question": "Which two hydrogen isotopes are the most common fuel for fusion reactors?",
+     "choices": [
+      "Carbon and nitrogen",
+      "Protium and helium",
+      "Deuterium and tritium",
+      "Oxygen and neon"
+     ],
+     "answer": 2,
+     "explanation": "Deuterium-tritium fusion gives helium and a neutron."
+    }
+   ]
+  },
+  {
+   "id": "sci-155",
+   "ask": {
+    "1": "Seeing wrong",
+    "2": "Why",
+    "3": "Colour"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Why do optical illusions work?",
+     "choices": [
+      "The eyes are broken",
+      "The light bends",
+      "Pictures are alive",
+      "The brain makes assumptions about what it sees"
+     ],
+     "answer": 3,
+     "explanation": "The visual system uses shortcuts that can be fooled."
+    },
+    {
+     "level": 3,
+     "question": "What is the blind spot in each eye?",
+     "choices": [
+      "A spot on the cornea",
+      "Where the optic nerve leaves the retina",
+      "The centre of the lens",
+      "The pupil"
+     ],
+     "answer": 1,
+     "explanation": "There are no light-sensitive cells at that point, and the brain fills the gap in."
+    }
+   ]
+  },
+  {
+   "id": "sci-156",
+   "ask": {
+    "1": "Remembering",
+    "2": "Short term",
+    "3": "False memory"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is 'false memory'?",
+     "choices": [
+      "A perfect memory",
+      "Forgetting everything",
+      "A dream",
+      "Remembering something that did not happen"
+     ],
+     "answer": 3,
+     "explanation": "Memories are rebuilt every time, so they can be distorted."
+    },
+    {
+     "level": 3,
+     "question": "Which effect names the better recall of the first and last items in a list?",
+     "choices": [
+      "Mere exposure effect",
+      "Halo effect",
+      "Serial position effect",
+      "Placebo effect"
+     ],
+     "answer": 2,
+     "explanation": "We recall the first (primacy) and last (recency) items best."
+    }
+   ]
+  },
+  {
+   "id": "sci-157",
+   "ask": {
+    "1": "Placebo",
+    "2": "Trials",
+    "3": "Blinding"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Why are some trials 'double blind'?",
+     "choices": [
+      "Nobody reads the results",
+      "The trial has two parts",
+      "Both are wearing masks",
+      "Neither patients nor researchers know who has the real treatment"
+     ],
+     "answer": 3,
+     "explanation": "It prevents bias in treatment and in assessment."
+    },
+    {
+     "level": 3,
+     "question": "What does a control group do in an experiment?",
+     "choices": [
+      "Receives the biggest dose",
+      "Replaces the sample",
+      "Gives a baseline to compare against",
+      "Chooses the results"
+     ],
+     "answer": 2,
+     "explanation": "Differences from the control can be attributed to the variable being tested."
+    }
+   ]
+  },
+  {
+   "id": "sci-158",
+   "ask": {
+    "1": "Fear",
+    "2": "Spiders",
+    "3": "Heights"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is acrophobia the fear of?",
+     "choices": [
+      "Water",
+      "Heights",
+      "Crowds",
+      "Open spaces"
+     ],
+     "answer": 1,
+     "explanation": "Acro means high."
+    },
+    {
+     "level": 3,
+     "question": "A phobia is best described as what?",
+     "choices": [
+      "A allergy",
+      "A normal caution",
+      "A habit",
+      "An intense, irrational fear of something specific"
+     ],
+     "answer": 3,
+     "explanation": "A phobia is out of proportion to the actual danger."
+    }
+   ]
+  },
+  {
+   "id": "sci-159",
+   "ask": {
+    "1": "Fight or flight",
+    "2": "Amygdala",
+    "3": "Habituation"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What bodily changes does the fear response cause?",
+     "choices": [
+      "Slower heartbeat",
+      "Sleep",
+      "Faster heartbeat and breathing",
+      "Lower temperature always"
+     ],
+     "answer": 2,
+     "explanation": "Adrenaline gets the body ready to act."
+    },
+    {
+     "level": 3,
+     "question": "Gradually facing a feared thing in small steps until it troubles you less is called what?",
+     "choices": [
+      "Immunisation",
+      "Hypnosis",
+      "Sedation",
+      "Exposure therapy"
+     ],
+     "answer": 3,
+     "explanation": "Repeated safe exposure reduces fear over time."
+    }
+   ]
+  },
+  {
+   "id": "sci-160",
+   "ask": {
+    "1": "Dogs",
+    "2": "Conditioning",
+    "3": "Reward"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is classical conditioning?",
+     "choices": [
+      "Inheriting a habit",
+      "Memorising by rote",
+      "Remembering numbers",
+      "Learning to link two stimuli"
+     ],
+     "answer": 3,
+     "explanation": "The bell became linked with food."
+    },
+    {
+     "level": 3,
+     "question": "Which psychologist is linked with operant conditioning and the 'Skinner box'?",
+     "choices": [
+      "Albert Bandura",
+      "B. F. Skinner",
+      "Jean Piaget",
+      "Ivan Pavlov"
+     ],
+     "answer": 1,
+     "explanation": "Operant conditioning shapes behaviour through rewards and punishments."
+    }
+   ]
+  },
+  {
+   "id": "sci-161",
+   "ask": {
+    "1": "Steps",
+    "2": "Hypothesis",
+    "3": "Evidence"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What makes a scientific claim 'falsifiable'?",
+     "choices": [
+      "It is popular",
+      "There could be evidence that proves it wrong",
+      "It is always true",
+      "It cannot be tested"
+     ],
+     "answer": 1,
+     "explanation": "Karl Popper argued science must be falsifiable."
+    },
+    {
+     "level": 3,
+     "question": "Why do scientists repeat experiments and publish methods?",
+     "choices": [
+      "So others can replicate and check results",
+      "To hide errors",
+      "To keep secrets",
+      "To make them longer"
+     ],
+     "answer": 0,
+     "explanation": "Replication separates real effects from flukes."
+    }
+   ]
+  },
+  {
+   "id": "sci-162",
+   "ask": {
+    "1": "Units",
+    "2": "Accuracy",
+    "3": "Error"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the difference between accuracy and precision?",
+     "choices": [
+      "Accuracy means repeating",
+      "Accuracy is closeness to the true value; precision is consistency",
+      "Precision means being wrong",
+      "They are identical"
+     ],
+     "answer": 1,
+     "explanation": "A scale can be precise but consistently off."
+    },
+    {
+     "level": 3,
+     "question": "If you measure the same object many times, what does averaging help reduce?",
+     "choices": [
+      "Systematic error",
+      "Random error",
+      "Units",
+      "The object's size"
+     ],
+     "answer": 1,
+     "explanation": "A systematic error would remain in every measurement."
+    }
+   ]
+  },
+  {
+   "id": "sci-163",
+   "ask": {
+    "1": "Famous",
+    "2": "Nobel",
+    "3": "Women in science"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which scientist used X-ray crystallography to find the structures of penicillin and vitamin B12 and won the 1964 Nobel Prize in Chemistry?",
+     "choices": [
+      "Dorothy Hodgkin",
+      "Jane Goodall",
+      "Barbara McClintock",
+      "Rosalind Franklin"
+     ],
+     "answer": 0,
+     "explanation": "Hodgkin also worked out the structure of vitamin B12."
+    },
+    {
+     "level": 3,
+     "question": "Who was awarded the Nobel Prize in Physics in 2018 for the first time in 55 years for a woman, for work on laser pulses?",
+     "choices": [
+      "Maria Goeppert Mayer",
+      "Lise Meitner",
+      "Donna Strickland",
+      "Andrea Ghez"
+     ],
+     "answer": 2,
+     "explanation": "Strickland shared the prize for chirped pulse amplification."
+    }
+   ]
+  },
+  {
+   "id": "sci-164",
+   "ask": {
+    "1": "Three kinds",
+    "2": "Cycle",
+    "3": "Minerals"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which type of rock is formed by layers of sediment pressed together?",
+     "choices": [
+      "Metamorphic",
+      "Volcanic",
+      "Sedimentary",
+      "Igneous"
+     ],
+     "answer": 2,
+     "explanation": "Limestone and sandstone are sedimentary."
+    },
+    {
+     "level": 3,
+     "question": "Marble forms when which rock is changed by heat and pressure?",
+     "choices": [
+      "Basalt",
+      "Limestone",
+      "Granite",
+      "Sandstone"
+     ],
+     "answer": 1,
+     "explanation": "Metamorphism recrystallises limestone into marble."
+    }
+   ]
+  },
+  {
+   "id": "sci-165",
+   "ask": {
+    "1": "Moving land",
+    "2": "Quakes",
+    "3": "Volcanoes"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What causes most earthquakes?",
+     "choices": [
+      "Heavy rain",
+      "Sudden movement along faults",
+      "The Moon",
+      "Underground rivers"
+     ],
+     "answer": 1,
+     "explanation": "Stress builds along plate boundaries until rock slips."
+    },
+    {
+     "level": 3,
+     "question": "The 'Ring of Fire' is a belt of volcanoes and earthquakes around which ocean?",
+     "choices": [
+      "Atlantic Ocean",
+      "Indian Ocean",
+      "Arctic Ocean",
+      "Pacific Ocean"
+     ],
+     "answer": 3,
+     "explanation": "It follows subduction zones around the Pacific."
+    }
+   ]
+  },
+  {
+   "id": "sci-166",
+   "ask": {
+    "1": "Earth inside",
+    "2": "Core",
+    "3": "Magnetic"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which Earth layer lies between the crust and the core?",
+     "choices": [
+      "The hydrosphere",
+      "The mesosphere",
+      "The mantle",
+      "The atmosphere"
+     ],
+     "answer": 2,
+     "explanation": "The mantle is hot, slowly flowing rock."
+    },
+    {
+     "level": 3,
+     "question": "Earth's magnetic field is generated mainly by motion in which layer?",
+     "choices": [
+      "The mantle",
+      "The liquid outer core",
+      "The solid inner core",
+      "The crust"
+     ],
+     "answer": 1,
+     "explanation": "Moving molten iron creates a dynamo effect."
+    }
+   ]
+  },
+  {
+   "id": "sci-167",
+   "ask": {
+    "1": "Largest",
+    "2": "Salt",
+    "3": "Depth"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the name of the deepest known point of the oceans, in the Mariana Trench?",
+     "choices": [
+      "Puerto Rico Trench",
+      "Sigsbee Deep",
+      "Challenger Deep",
+      "Tonga Deep"
+     ],
+     "answer": 2,
+     "explanation": "It is nearly 11 kilometres deep."
+    },
+    {
+     "level": 3,
+     "question": "Why is the sea salty?",
+     "choices": [
+      "Rivers carry dissolved minerals to it",
+      "Fish add salt",
+      "Volcanoes under the sea only",
+      "Ships dropped it"
+     ],
+     "answer": 0,
+     "explanation": "Rain erodes rocks, and the dissolved salts accumulate in the sea."
+    }
+   ]
+  },
+  {
+   "id": "sci-168",
+   "ask": {
+    "1": "Gulf Stream",
+    "2": "Waves",
+    "3": "Tides"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What makes most ocean waves on the surface?",
+     "choices": [
+      "The Moon",
+      "Fish",
+      "Wind",
+      "Earthquakes"
+     ],
+     "answer": 2,
+     "explanation": "Wind transfers energy to the water."
+    },
+    {
+     "level": 3,
+     "question": "A tsunami is usually caused by what?",
+     "choices": [
+      "An undersea earthquake or landslide",
+      "A hurricane",
+      "A full moon",
+      "Ocean temperature"
+     ],
+     "answer": 0,
+     "explanation": "The seafloor suddenly moves and displaces a huge volume of water."
+    }
+   ]
+  },
+  {
+   "id": "sci-169",
+   "ask": {
+    "1": "Coral",
+    "2": "Bleaching",
+    "3": "Life"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What causes coral bleaching?",
+     "choices": [
+      "Water that is too warm",
+      "Too much light at night",
+      "Cold currents",
+      "Too many fish"
+     ],
+     "answer": 0,
+     "explanation": "Stressed corals expel the algae that give them colour."
+    },
+    {
+     "level": 3,
+     "question": "Which is the largest coral reef system in the world?",
+     "choices": [
+      "The Great Barrier Reef",
+      "The Belize Barrier Reef",
+      "The Florida Reef",
+      "The Red Sea Reef"
+     ],
+     "answer": 0,
+     "explanation": "It stretches over 2,300 kilometres off Australia."
+    }
+   ]
+  },
+  {
+   "id": "sci-170",
+   "ask": {
+    "1": "Layers",
+    "2": "Ozone",
+    "3": "Gases"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What does the ozone layer do?",
+     "choices": [
+      "Makes rain",
+      "Produces oxygen",
+      "Traps all heat",
+      "Absorbs harmful ultraviolet light"
+     ],
+     "answer": 3,
+     "explanation": "Ozone in the stratosphere shields life from UV."
+    },
+    {
+     "level": 3,
+     "question": "In which layer of the atmosphere does weather happen?",
+     "choices": [
+      "Troposphere",
+      "Stratosphere",
+      "Exosphere",
+      "Mesosphere"
+     ],
+     "answer": 0,
+     "explanation": "The troposphere is the lowest layer."
+    }
+   ]
+  },
+  {
+   "id": "sci-171",
+   "ask": {
+    "1": "Effect",
+    "2": "Gases",
+    "3": "Warming"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which of these is a greenhouse gas?",
+     "choices": [
+      "Methane",
+      "Argon",
+      "Helium",
+      "Neon"
+     ],
+     "answer": 0,
+     "explanation": "Methane traps heat very effectively."
+    },
+    {
+     "level": 3,
+     "question": "Roughly how much has global average temperature risen since the late 1800s?",
+     "choices": [
+      "About 10 degrees",
+      "About 0.01 degrees",
+      "About 25 degrees",
+      "About 1.1 to 1.2 degrees Celsius"
+     ],
+     "answer": 3,
+     "explanation": "Recent assessments give about 1.1 to 1.2 degrees of warming."
+    }
+   ]
+  },
+  {
+   "id": "sci-172",
+   "ask": {
+    "1": "Clouds",
+    "2": "Rain",
+    "3": "Hurricanes"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the name of the instrument that measures air pressure?",
+     "choices": [
+      "Barometer",
+      "Anemometer",
+      "Thermometer",
+      "Hygrometer"
+     ],
+     "answer": 0,
+     "explanation": "A falling barometer often signals stormy weather."
+    },
+    {
+     "level": 3,
+     "question": "What gives a tropical cyclone its energy?",
+     "choices": [
+      "Cold air",
+      "Mountains",
+      "The Moon",
+      "Warm ocean water"
+     ],
+     "answer": 3,
+     "explanation": "Warm seas supply heat and moisture."
+    }
+   ]
+  },
+  {
+   "id": "sci-173",
+   "ask": {
+    "1": "Bits",
+    "2": "Binary",
+    "3": "Chips"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "How many bits are in a byte?",
+     "choices": [
+      "10",
+      "16",
+      "4",
+      "8"
+     ],
+     "answer": 3,
+     "explanation": "A byte is eight bits."
+    },
+    {
+     "level": 3,
+     "question": "Which component is often called the brain of a computer?",
+     "choices": [
+      "Hard disk",
+      "Monitor",
+      "CPU",
+      "RAM"
+     ],
+     "answer": 2,
+     "explanation": "The central processing unit executes instructions."
+    }
+   ]
+  },
+  {
+   "id": "sci-174",
+   "ask": {
+    "1": "Network",
+    "2": "Web",
+    "3": "Packets"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What does an IP address identify?",
+     "choices": [
+      "A person's age",
+      "A website's colour",
+      "A device on a network",
+      "A password"
+     ],
+     "answer": 2,
+     "explanation": "Packets use IP addresses to find their destination."
+    },
+    {
+     "level": 3,
+     "question": "Why is the internet designed to send data in 'packets'?",
+     "choices": [
+      "Packets are faster to write",
+      "They need less power",
+      "Pieces can take different routes and be reassembled",
+      "Cables are small"
+     ],
+     "answer": 2,
+     "explanation": "Packet switching makes the network resilient."
+    }
+   ]
+  },
+  {
+   "id": "sci-175",
+   "ask": {
+    "1": "Learning",
+    "2": "Neural networks",
+    "3": "Turing"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which British mathematician proposed a test of machine intelligence in 1950?",
+     "choices": [
+      "John von Neumann",
+      "Alan Turing",
+      "Charles Babbage",
+      "Ada Lovelace"
+     ],
+     "answer": 1,
+     "explanation": "The Turing test asks whether a machine can pass as human in conversation."
+    },
+    {
+     "level": 3,
+     "question": "How does a machine learning model mainly improve?",
+     "choices": [
+      "By being rewired by hand",
+      "By sleeping",
+      "By adjusting its parameters from examples",
+      "By reading its own code"
+     ],
+     "answer": 2,
+     "explanation": "Training tunes many numbers to reduce error on data."
+    }
+   ]
+  },
+  {
+   "id": "sci-176",
+   "ask": {
+    "1": "Plastic",
+    "2": "Alloy",
+    "3": "Ceramic"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is an alloy?",
+     "choices": [
+      "A pure element",
+      "A mixture of metals",
+      "A gas",
+      "A plastic"
+     ],
+     "answer": 1,
+     "explanation": "Bronze is copper and tin."
+    },
+    {
+     "level": 3,
+     "question": "What is graphene?",
+     "choices": [
+      "A kind of glass",
+      "A single layer of carbon atoms in a hexagonal lattice",
+      "A new type of plastic",
+      "A liquid metal"
+     ],
+     "answer": 1,
+     "explanation": "It is extremely strong and conductive; its isolation won the 2010 Nobel Prize in Physics."
+    }
+   ]
+  },
+  {
+   "id": "sci-177",
+   "ask": {
+    "1": "Silicon",
+    "2": "Transistor",
+    "3": "Chips"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What does a transistor do in a chip?",
+     "choices": [
+      "Switches or amplifies electrical signals",
+      "Stores heat",
+      "Makes light",
+      "Holds water"
+     ],
+     "answer": 0,
+     "explanation": "Billions sit on a modern processor."
+    },
+    {
+     "level": 3,
+     "question": "What does 'Moore's law' observe?",
+     "choices": [
+      "Batteries double in size",
+      "Computers get cheaper by half each year",
+      "Wi-Fi speeds quadruple",
+      "The number of transistors on a chip doubles about every two years"
+     ],
+     "answer": 3,
+     "explanation": "Gordon Moore noted the trend in 1965; it has been slowing."
+    }
+   ]
+  },
+  {
+   "id": "sci-178",
+   "ask": {
+    "1": "Lithium",
+    "2": "Charge",
+    "3": "Storage"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What happens inside a battery as it powers a device?",
+     "choices": [
+      "The battery fills with water",
+      "Heat turns into light",
+      "Electrons are created",
+      "Chemical energy is turned into electrical energy"
+     ],
+     "answer": 3,
+     "explanation": "Chemical reactions push electrons around a circuit."
+    },
+    {
+     "level": 3,
+     "question": "Why is it a problem to fully drain and overcharge lithium-ion batteries?",
+     "choices": [
+      "They become radioactive",
+      "They lose their metal",
+      "They explode every time",
+      "It speeds up chemical wear and can be unsafe"
+     ],
+     "answer": 3,
+     "explanation": "Extreme charge levels degrade the electrodes."
+    }
+   ]
+  },
+  {
+   "id": "sci-179",
+   "ask": {
+    "1": "Lift",
+    "2": "Wright brothers",
+    "3": "Jet"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What force holds an aeroplane up in the air?",
+     "choices": [
+      "Thrust",
+      "Drag",
+      "Gravity",
+      "Lift"
+     ],
+     "answer": 3,
+     "explanation": "Air moving over the wings creates lift."
+    },
+    {
+     "level": 3,
+     "question": "According to Bernoulli's principle, faster-moving air over a wing has what?",
+     "choices": [
+      "No pressure",
+      "The same pressure",
+      "Lower pressure",
+      "Higher pressure"
+     ],
+     "answer": 2,
+     "explanation": "The pressure difference contributes to lift."
+    }
+   ]
+  },
+  {
+   "id": "sci-180",
+   "ask": {
+    "1": "Escape velocity",
+    "2": "Orbit",
+    "3": "Sputnik"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "In what year did humans first land on the Moon?",
+     "choices": [
+      "1975",
+      "1961",
+      "1957",
+      "1969"
+     ],
+     "answer": 3,
+     "explanation": "Apollo 11 landed in July 1969."
+    },
+    {
+     "level": 3,
+     "question": "Roughly what speed must a rocket reach to leave the Earth's gravity?",
+     "choices": [
+      "About 11 kilometres per second",
+      "About 300,000 kilometres per second",
+      "About 100 metres per second",
+      "About 1 kilometre per second"
+     ],
+     "answer": 0,
+     "explanation": "This is escape velocity at the surface."
+    }
+   ]
+  },
+  {
+   "id": "sci-181",
+   "ask": {
+    "1": "Rovers",
+    "2": "Voyager",
+    "3": "Telescopes"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which spacecraft, launched in 1977, is the most distant human-made object from Earth?",
+     "choices": [
+      "New Horizons",
+      "Voyager 1",
+      "Cassini",
+      "Pioneer 10"
+     ],
+     "answer": 1,
+     "explanation": "It entered interstellar space in 2012."
+    },
+    {
+     "level": 3,
+     "question": "What is the main advantage of placing the James Webb Space Telescope far from Earth at L2?",
+     "choices": [
+      "Easier repairs",
+      "A cold, stable view of the infrared sky",
+      "A view of the Sun",
+      "Closeness to the Moon"
+     ],
+     "answer": 1,
+     "explanation": "Its sunshield keeps it cold enough to detect faint infrared light."
+    }
+   ]
+  },
+  {
+   "id": "sci-182",
+   "ask": {
+    "1": "Time",
+    "2": "Speed limit",
+    "3": "Spacetime"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What is the famous equation that links energy and mass?",
+     "choices": [
+      "F = ma",
+      "V = IR",
+      "E = mc squared",
+      "PV = nRT"
+     ],
+     "answer": 2,
+     "explanation": "Mass is a form of energy."
+    },
+    {
+     "level": 3,
+     "question": "What is time dilation?",
+     "choices": [
+      "Clocks always tick faster",
+      "Time stops in space",
+      "Moving clocks run slower relative to a stationary observer",
+      "Time reverses"
+     ],
+     "answer": 2,
+     "explanation": "It is real and measurable, for example in GPS satellites."
+    }
+   ]
+  },
+  {
+   "id": "sci-183",
+   "ask": {
+    "1": "Curved space",
+    "2": "Light bending",
+    "3": "Waves"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which eclipse in 1919 gave early evidence for Einstein's theory by showing starlight bending near the Sun?",
+     "choices": [
+      "A transit",
+      "A lunar eclipse",
+      "A comet",
+      "A total solar eclipse"
+     ],
+     "answer": 3,
+     "explanation": "Eddington's expeditions measured the displacement."
+    },
+    {
+     "level": 3,
+     "question": "What did LIGO detect for the first time in 2015?",
+     "choices": [
+      "Gravitational waves",
+      "Dark matter",
+      "The Higgs boson",
+      "Neutrinos"
+     ],
+     "answer": 0,
+     "explanation": "It detected ripples in spacetime from merging black holes."
+    }
+   ]
+  },
+  {
+   "id": "sci-184",
+   "ask": {
+    "1": "Singularity",
+    "2": "Hawking",
+    "3": "First image"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In what year was the first image of a black hole's shadow released?",
+     "choices": [
+      "1999",
+      "2009",
+      "1969",
+      "2019"
+     ],
+     "answer": 3,
+     "explanation": "The Event Horizon Telescope imaged M87's black hole."
+    },
+    {
+     "level": 3,
+     "question": "What happens to time near a black hole, as seen by a distant observer?",
+     "choices": [
+      "It stops everywhere",
+      "It speeds up",
+      "It appears to slow down",
+      "It is unaffected"
+     ],
+     "answer": 2,
+     "explanation": "Gravitational time dilation grows near strong gravity."
+    }
+   ]
+  },
+  {
+   "id": "sci-185",
+   "ask": {
+    "1": "Photons",
+    "2": "Wave-particle",
+    "3": "Planck"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What does 'quantum' mean in physics?",
+     "choices": [
+      "A very big number",
+      "A type of metal",
+      "A measure of speed",
+      "The smallest discrete amount of something"
+     ],
+     "answer": 3,
+     "explanation": "Energy comes in discrete packets."
+    },
+    {
+     "level": 3,
+     "question": "What is the double-slit experiment famous for showing?",
+     "choices": [
+      "Particles can show wave-like interference",
+      "Light cannot be reflected",
+      "Atoms cannot be split",
+      "Waves cannot be measured"
+     ],
+     "answer": 0,
+     "explanation": "Even single electrons build up an interference pattern."
+    }
+   ]
+  },
+  {
+   "id": "sci-186",
+   "ask": {
+    "1": "Heisenberg",
+    "2": "Superposition",
+    "3": "Cat"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What famous thought experiment, proposed by Schrodinger, involves a cat in a sealed box?",
+     "choices": [
+      "Maxwell's demon",
+      "Schrodinger's cat",
+      "Zeno's arrow",
+      "Newton's cradle"
+     ],
+     "answer": 1,
+     "explanation": "It illustrates quantum superposition."
+    },
+    {
+     "level": 3,
+     "question": "What is quantum entanglement?",
+     "choices": [
+      "Heat spreading",
+      "Particles remaining correlated however far apart",
+      "Particles stopping",
+      "Particles merging into one"
+     ],
+     "answer": 1,
+     "explanation": "Measuring one particle is linked to the state of the other."
+    }
+   ]
+  },
+  {
+   "id": "sci-187",
+   "ask": {
+    "1": "Standard Model",
+    "2": "Higgs",
+    "3": "Quarks"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which particle, found at CERN in 2012, is linked to giving other particles mass?",
+     "choices": [
+      "The neutrino",
+      "The Higgs boson",
+      "The electron",
+      "The photon"
+     ],
+     "answer": 1,
+     "explanation": "Peter Higgs and Francois Englert shared the 2013 Nobel Prize."
+    },
+    {
+     "level": 3,
+     "question": "Where is the Large Hadron Collider located?",
+     "choices": [
+      "Near Moscow",
+      "Near Tokyo",
+      "Near Geneva on the French-Swiss border",
+      "Near Chicago"
+     ],
+     "answer": 2,
+     "explanation": "It is a 27-kilometre ring beneath the border."
+    }
+   ]
+  },
+  {
+   "id": "sci-188",
+   "ask": {
+    "1": "Infinity",
+    "2": "Primes",
+    "3": "Pi"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What is a prime number?",
+     "choices": [
+      "A negative number",
+      "An even number",
+      "A number that is square",
+      "A number with exactly two divisors, 1 and itself"
+     ],
+     "answer": 3,
+     "explanation": "2, 3, 5 and 7 are prime."
+    },
+    {
+     "level": 3,
+     "question": "What did Euclid prove about prime numbers?",
+     "choices": [
+      "There are infinitely many",
+      "They are all odd",
+      "They can be predicted exactly",
+      "They run out at 1,000"
+     ],
+     "answer": 0,
+     "explanation": "His proof dates from about 300 BC."
+    }
+   ]
+  },
+  {
+   "id": "sci-189",
+   "ask": {
+    "1": "Chance",
+    "2": "Birthdays",
+    "3": "Paradox"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "If you flip a fair coin, what is the chance of heads?",
+     "choices": [
+      "25 percent",
+      "50 percent",
+      "75 percent",
+      "100 percent"
+     ],
+     "answer": 1,
+     "explanation": "Each side is equally likely."
+    },
+    {
+     "level": 3,
+     "question": "The gambler's fallacy is the mistaken belief that what?",
+     "choices": [
+      "Chance does not exist",
+      "Dice remember",
+      "Past random outcomes change future odds",
+      "Coins are biased"
+     ],
+     "answer": 2,
+     "explanation": "Independent events have no memory."
+    }
+   ]
+  },
+  {
+   "id": "sci-190",
+   "ask": {
+    "1": "Paradox",
+    "2": "Godel",
+    "3": "Zeno"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "If all cats are animals and Tom is a cat, what follows?",
+     "choices": [
+      "Tom is a dog",
+      "Tom is not an animal",
+      "Tom is an animal",
+      "All animals are cats"
+     ],
+     "answer": 2,
+     "explanation": "This is a valid deduction."
+    },
+    {
+     "level": 3,
+     "question": "What did Godel's incompleteness theorems show about mathematics?",
+     "choices": [
+      "Every statement can be proven",
+      "Any consistent system of axioms has true statements it cannot prove",
+      "Maths has no rules",
+      "All maths is false"
+     ],
+     "answer": 1,
+     "explanation": "Published in 1931."
+    }
+   ]
   }
  ]
 }

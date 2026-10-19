@@ -28,7 +28,7 @@ export function xpForGame(s, playerId) {
   const mine = s.log.filter((r) => r.playerId === playerId);
   const right = mine.filter((r) => r.correct).length;
   const won = p.result === 'won' || p.placement === 1;
-  return Math.min(400, 15 + right * 3 + (won ? 40 : 0) + (p.bossesCleared ?? 0) * 25 + Math.min(10, p.longestStreak ?? 0) * 2);
+  return Math.min(400, 15 + right * 3 + (won ? 40 : 0) + (p.bossesCleared ?? 0) * 25 + Math.min(10, p.longestStreak ?? 0) * 2 + (s.rankBeaten ?? 0) * 20);
 }
 
 export const TITLES = [
@@ -165,5 +165,6 @@ export function dustForGame(s, playerId) {
   const p = s.players.find((x) => x.playerId === playerId);
   if (!p || s.status !== 'completed') return 0;
   const won = p.result === 'won' || p.placement === 1;
-  return Math.min(30, 4 + (won ? 6 : 0) + (p.bossesCleared ?? 0) * 5);
+  const rank = s.rankBeaten ?? 0; // beating an evolved boss pays more
+  return Math.min(30 + rank * 10, 4 + (won ? 6 : 0) + (p.bossesCleared ?? 0) * 5 + rank * 8);
 }

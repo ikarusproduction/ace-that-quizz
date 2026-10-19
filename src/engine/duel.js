@@ -95,6 +95,11 @@ export const BOSS_ROSTER = {
     blurb: 'Curses stack. Two bulbs ride on its biggest moments.',
     intents: ['ink', 'strike', 'twin', 'goo'], enraged: ['ink', 'twin', 'blur', 'twin'],
   },
+  plague: {
+    id: 'plague', name: 'The Plague Doctor', title: 'Diagnosis: You', cat: 'medicine', only: true, tier: 2, hp: 26, sprite: 'boss_plague', color: '#6fa86b', arena: 'clinic',
+    blurb: 'Bodies, diseases, drugs and the machines that scan them. A fever blurs your sight and sterile armor shrugs off slow answers.',
+    intents: ['strike', 'blur', 'guard', 'mend'], enraged: ['blur', 'guard', 'twin', 'mend'],
+  },
   house: {
     id: 'house', name: 'The House', title: 'The House Always Knows', cat: 'any', tier: 4, hp: 34, sprite: 'boss_house', color: '#ffd24a', arena: 'house', final: true,
     blurb: 'Every subject, every trick. The last room.',
@@ -109,6 +114,44 @@ export const BOSS_ROSTER = {
 };
 export const BOSS_IDS = Object.keys(BOSS_ROSTER);
 
+/**
+ * Evolution. Every time you beat a boss it comes back one rank stronger, up to rank 4: more health, a harder mix of
+ * questions, nastier moves in place of its plain strikes, and a bigger payout. Ranks are saved per player and boss.
+ */
+export const BOSS_RANK_MAX = 4;
+export const RANK_NAMES = ['', 'Evolved', 'Ascended', 'Mythic', 'Apex'];
+const ROMAN = ['', 'II', 'III', 'IV', 'V'];
+/** What a plain "strike" turns into at each rank (cycled, so the pattern stays readable). */
+const STRIKE_UPGRADES = [['surge'], ['surge', 'guard'], ['guard', 'twin', 'surge'], ['twin', 'guard', 'accel', 'surge']];
+export const cleanRank = (r) => Math.max(0, Math.min(BOSS_RANK_MAX, Math.floor(Number(r)) || 0));
+
+function upgradeIntents(list, rank) {
+  if (!list || rank <= 0) return list;
+  const ups = STRIKE_UPGRADES[rank - 1];
+  let n = 0;
+  return list.map((id) => (id === 'strike' ? ups[n++ % ups.length] : id));
+}
+
+/** A boss definition at a given rank. Rank 0 is the boss as written. The final boss never evolves. */
+export function evolveBoss(b, rank = 0) {
+  const r = b.final ? 0 : cleanRank(rank);
+  if (!r) return { ...b, rank: 0 };
+  return {
+    ...b, rank: r,
+    name: `${b.name} ${ROMAN[r]}`, title: `${RANK_NAMES[r]}: ${b.title}`,
+    hp: Math.round(b.hp * (1 + 0.2 * r)),
+    tier: Math.min(5, b.tier + Math.ceil(r / 2)),
+    intents: upgradeIntents(b.intents, r), enraged: upgradeIntents(b.enraged, r),
+    reward: 1 + 0.25 * r,
+  };
+}
+/** What changes at the next rank, for the boss pick screen and the victory screen. */
+export function evolutionText(rank) {
+  const r = cleanRank(rank);
+  if (r >= BOSS_RANK_MAX) return 'It cannot evolve any further.';
+  return `Beat it to meet ${RANK_NAMES[r + 1]}: +${Math.round((0.2 * (r + 1)) * 100)}% health, harder questions, nastier moves, bigger rewards.`;
+}
+
 /** Question difficulty mix per enemy tier. Weights, not percentages. */
 export const TIER_DIFFICULTY = {
   0: { 1: 70, 2: 30 },
@@ -116,6 +159,7 @@ export const TIER_DIFFICULTY = {
   2: { 1: 8, 2: 32, 3: 40, 4: 20 },
   3: { 2: 12, 3: 43, 4: 45 },
   4: { 3: 40, 4: 60 },
+  5: { 3: 20, 4: 80 },
 };
 
 const CONTESTANT_NAMES = ['Gus', 'Mabel', 'Odile', 'Bram', 'Tilda', 'Fenn', 'Ruth', 'Cass', 'Nico', 'Wren'];
@@ -125,7 +169,7 @@ const CONTESTANT_SPRITES = ['owl', 'fox', 'crow', 'miner', 'jester', 'welder', '
 const MINION_CATS = ['science', 'symbols', 'news', 'history', 'geography', 'nature', 'arts'];
 
 /** A fresh encounter. `rng` is only used for contestants and elites; bosses are fixed by their id. */
-export function makeEncounter({ kind, enemyId = null, rng = null, depth = 0 }) {
+export function makeEncounter({ kind, enemyId = null, rng = null, depth = 0, rank = 0 }) {
   if (kind === 'minion') {
     const cat = rng.pick(MINION_CATS);
     const hp = 6 + (depth >= 3 ? 2 : depth >= 1 ? 1 : 0);
@@ -134,13 +178,14 @@ export function makeEncounter({ kind, enemyId = null, rng = null, depth = 0 }) {
       hp, maxHp: hp, intents: ['strike'], enraged: null, sprite: rng.pick(CONTESTANT_SPRITES), color: '#8a9096', arena: 'plain', misses: 0, qCount: 0, over: null, hits: 0, healed: 0,
     };
   }
-  const b = BOSS_ROSTER[enemyId];
-  if (!b) throw new Error(`Unknown enemy "${enemyId}"`);
+  const base = BOSS_ROSTER[enemyId];
+  if (!base) throw new Error(`Unknown enemy "${enemyId}"`);
+  const b = evolveBoss(base, rank);
   const elite = kind === 'elite';
   const hp = elite ? Math.round(b.hp * 0.55) : b.hp;
   return {
     kind: kind === 'boss' && b.final ? 'final' : kind,
-    id: b.id, name: b.name, title: b.title, cat: b.cat, tier: elite ? Math.max(1, b.tier - 1) : b.tier,
+    id: b.id, name: b.name, title: b.title, cat: b.cat, only: Boolean(b.only) && !elite, tier: elite ? Math.max(1, b.tier - 1) : b.tier, rank: b.rank, reward: b.reward ?? 1,
     hp, maxHp: hp, intents: elite ? b.intents.slice(0, 3) : b.intents, enraged: elite ? null : b.enraged,
     sprite: b.sprite, color: b.color, arena: b.arena, misses: 0, qCount: 0, over: null, hits: 0, healed: 0,
     ...(!elite && b.phases ? { phases: b.phases.map((p) => ({ ...p, intents: [...p.intents], enraged: p.enraged ? [...p.enraged] : null })), phase: 0 } : {}),
@@ -220,6 +265,7 @@ export const startHeat = (kind, bonus = 0) => Math.min(DUEL.heatCap, (DUEL.heat[
 export function duelCategory(rng, enc, available) {
   const pool = available.filter(Boolean);
   const own = enc.cat !== 'any' && pool.includes(enc.cat) ? enc.cat : null;
+  if (own && enc.only) return own; // a specialist boss asks nothing else
   if (own && rng.chance(enc.kind === 'minion' ? 0.7 : 0.6)) return own;
   const others = pool.filter((c) => c !== own);
   return rng.pick(others.length ? others : pool);

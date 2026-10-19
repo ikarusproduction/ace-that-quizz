@@ -12,9 +12,9 @@ import { INTENTS, DUEL, intentIdFor } from '../engine/duel.js';
 const GLYPHS = {
   static: ['ϟ', '~', '·', '+'], map: ['N', '+', '·', '↑'], archive: ['§', '¶', '·', '“'], stage: ['♪', '♫', '·', '♪'],
   cipher: ['01', '#', '?', 'Ω'], news: ['!', '▮', '▬', '·'], vines: ['~', '"', ',', '·'], dread: ['?', '·', '!', '·'],
-  house: ['★', '?', '·', '♠'], plain: ['·', '·', '+'],
+  house: ['★', '?', '·', '♠'], clinic: ['+', '✚', '·', '♥'], plain: ['·', '·', '+'],
 };
-const ATTACK_COLORS = { static: ['#6fd1ff', '#effcff'], map: ['#e8a33d', '#f0e4bf'], archive: ['#8a5fb0', '#e8e2d0'], stage: ['#e07b9b', '#ffffff'], cipher: ['#6fd1ff', '#bfc7d1'], news: ['#4f78b4', '#ff5a4f'], vines: ['#6fa86b', '#e0709a'], dread: ['#5c4a86', '#e4dfee'], house: ['#ffd24a', '#c4302b'], plain: ['#ffffff', '#8a9096'] };
+const ATTACK_COLORS = { static: ['#6fd1ff', '#effcff'], map: ['#e8a33d', '#f0e4bf'], archive: ['#8a5fb0', '#e8e2d0'], stage: ['#e07b9b', '#ffffff'], cipher: ['#6fd1ff', '#bfc7d1'], news: ['#4f78b4', '#ff5a4f'], vines: ['#6fa86b', '#e0709a'], dread: ['#5c4a86', '#e4dfee'], house: ['#ffd24a', '#c4302b'], clinic: ['#6fa86b', '#e8e2d0'], plain: ['#ffffff', '#8a9096'] };
 
 const rect = (el) => {
   const r = el.getBoundingClientRect();
@@ -56,6 +56,7 @@ export function createStage({ enc, hp, lives, maxLives = DUEL.maxLives, heat = 0
   const lastBulb = lives === 1;
   const root = h('div.stage', { class: `arena-${arena} ${compact ? 'compact' : ''} ${enraged ? 'enraged' : ''} ${lastBulb ? 'last-bulb' : ''} kind-${enc.kind}` });
   root.style.setProperty('--boss', enc.color ?? '#8a9096');
+  if (enc.rank > 0) { root.classList.add('evolved', `evo-${enc.rank}`); root.append(h('div.rank-pips', { title: `Rank ${enc.rank}`, 'aria-label': `Evolved, rank ${enc.rank}` }, '★'.repeat(enc.rank))); }
 
   // ambient glyphs and embers drifting behind the boss
   const bg = h('div.stage-bg', { 'aria-hidden': 'true' });

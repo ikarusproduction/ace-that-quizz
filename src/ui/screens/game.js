@@ -24,7 +24,7 @@ import { createTranslator, applyTranslation } from '../../i18n/translate.js';
 import { recentlySeenIds, seenCounts } from '../../stats/stats.js';
 import { CARDS as ALL_CARDS } from '../../engine/cards.js';
 import { STARTER_CARDS } from '../../engine/cards.js';
-import { DUEL, INTENTS, NODE_KINDS, DEALS, DUEL_SHOP_ITEMS, BOSS_ROSTER, availableNodes, startHeat } from '../../engine/duel.js';
+import { DUEL, INTENTS, NODE_KINDS, DEALS, DUEL_SHOP_ITEMS, BOSS_ROSTER, BOSS_RANK_MAX, RANK_NAMES, availableNodes, startHeat } from '../../engine/duel.js';
 import { createStage, stageFor } from '../stage.js';
 import '../art_bosses.js';
 
@@ -299,7 +299,7 @@ class GameController {
         players: players.map((p) => ({ id: p.id, name: p.name, ownedCards: p.ownedCards, ownedHexes: metaOf(p).hexes.owned, hexDeck: metaOf(p).hexes.deck })),
         ctx: app.ctx,
         seed: mode === 'daily' ? `daily-${localDateKey()}` : undefined,
-        overrides: { ...(params.mode === 'quick' ? { acts: 1 } : {}), ...(duelVariant ? { variant: duelVariant, bossId: params.bossId ?? null } : {}), ...(params.themes && mode !== 'daily' && !duelVariant ? { themes: params.themes } : {}) },
+        overrides: { ...(params.mode === 'quick' ? { acts: 1 } : {}), ...(duelVariant ? { variant: duelVariant, bossId: params.bossId ?? null, bossRanks: metaOf(players[0]).bosses } : {}), ...(params.themes && mode !== 'daily' && !duelVariant ? { themes: params.themes } : {}) },
         avoidIds,
         seenCounts: mode === 'daily' ? {} : seenCounts(results, ids),
       });
@@ -403,7 +403,7 @@ class GameController {
         const list = packsEarned(s, p.playerId).map((type, i) => ({ id: `${s.sessionId}:${p.playerId}:g${i}`, type, from: i === 0 ? 'Game pack' : i === 1 ? 'Great game' : 'Streak master' }));
         for (const m of evaluateMissions(s, p.playerId, p.missions ?? []).filter((x) => x.done)) list.push({ id: `${s.sessionId}:${p.playerId}:m:${m.id}`, type: 'bronze', from: `Mission: ${m.text}` });
         await this.app.repo.addPacks(p.playerId, list);
-        const xr = await this.app.repo.addXp(p.playerId, s.sessionId, xpForGame(s, p.playerId), dustForGame(s, p.playerId));
+        const xr = await this.app.repo.addXp(p.playerId, s.sessionId, xpForGame(s, p.playerId), dustForGame(s, p.playerId), s.beaten ?? []);
         if (xr.gained) this.notes.push(`${p.name}: +${xr.gained} XP${xr.dust ? ` · +${xr.dust} dust` : ''}${xr.after > xr.before ? ` · LEVEL ${xr.after}!` : ''}`);
         // A player who has shared a friend code keeps their public card fresh.
         const prof = await this.app.repo.getProfile(p.playerId);
@@ -1346,6 +1346,7 @@ class GameController {
         h('div.kv', {}, h('span', {}, 'Questions'), h('b', {}, enc.qCount)),
         h('div.kv', {}, h('span', {}, 'Hits landed'), h('b', {}, enc.hits)),
         won ? h('div.kv', {}, h('span', {}, 'Reward'), h('b.amber', {}, `+${r.bonus} chips`)) : null,
+        won && enc.kind === 'boss' && enc.id !== 'house' ? h('p.small.amber', {}, ((enc.rank ?? 0) >= BOSS_RANK_MAX ? 'You beat it at its final form.' : `It evolves (${RANK_NAMES[(enc.rank ?? 0) + 1]}): more health, harder questions, nastier moves and bigger rewards next time.`)) : null,
         r.healed ? h('p.small.green', {}, 'A bulb comes back on.') : null,
         hexName ? h('p.small.amber', {}, `Spoils: ${hexName} added to your hex hand.`) : null,
         last.result === 'beaten' ? h('p.small.red', {}, 'You lose a bulb. The run goes on.') : null,

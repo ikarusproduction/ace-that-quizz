@@ -3,9 +3,9 @@ import assert from 'node:assert/strict';
 import { makeContext } from '../src/engine/game.js';
 import {
   ADVENTURE_IDS, STEPS, stepKind, roadsAt, levelForStep, buildLevel, startRun,
-  cleanProgress, frontier, isUnlocked, xpForStep, packForStep, poolFor, OPEN_ADVENTURE_IDS,
+  cleanProgress, frontier, isUnlocked, xpForStep, packForStep, poolFor, OPEN_ADVENTURE_IDS, ADVENTURES, aspectOf, stakeBonusOf,
 } from '../src/engine/adventure.js';
-import { useHint, hintsLeft, setConfidence, answerRun, advanceRun, currentItem } from '../src/engine/practice.js';
+import { useHint, hintsLeft, setConfidence, answerRun, advanceRun, currentItem, setStake, stakesAvailable } from '../src/engine/practice.js';
 import { emptyLearn, applyAnswers } from '../src/engine/learning.js';
 import { HEXES } from '../src/engine/hexes.js';
 import { metaOf, mergeMeta } from '../src/storage/meta.js';
@@ -23,7 +23,7 @@ test('steps: a boss every tenth, forks at the third and sixth', () => {
 });
 
 test('difficulty climbs with the step and the risky road is one level harder', () => {
-  assert.deepEqual([1, 30, 31, 65, 66, 99].map((s) => levelForStep(s)), [1, 1, 2, 2, 3, 3]);
+  assert.deepEqual([1, 30, 31, 70, 71, 99].map((s) => levelForStep(s)), [1, 1, 2, 2, 3, 3]);
   assert.equal(levelForStep(5, 'risk'), 2);
   assert.equal(levelForStep(90, 'risk'), 3);
 });
@@ -61,7 +61,8 @@ test('the chapter focus supplies the new concepts and the previous step is exclu
   const c = await ctx();
   const lv = buildLevel('science', 1, 'main', c);
   const subs = lv.questions.map((x) => c.byId.get(x.qid).subcategory);
-  assert.ok(subs.every((x) => ['element-symbol', 'periodic-table', 'chemistry'].includes(x)), `${subs}`);
+  assert.equal(subs.filter((x) => x === 'states').length, 3, `${subs}`); // the aspect's own concepts come first
+  assert.ok(subs.every((x) => ['states', 'atoms', 'reactions', 'element-symbol', 'periodic-table', 'chemistry'].includes(x)), `${subs}`); // the rest from the same chapter
   const next = buildLevel('science', 2, 'main', c, { exclude: lv.questions.map((x) => x.family) });
   assert.ok(next.questions.every((x) => !lv.questions.some((y) => y.family === x.family)));
 });
@@ -172,4 +173,59 @@ test('profile meta keeps the best stars when merged', () => {
   assert.equal(a.adv.science.done[2], 3);
   const m = mergeMeta({ adv: { science: { done: { 1: 1, 2: 3 } } } }, { adv: { science: { done: { 1: 3, 3: 2 } } } }, true);
   assert.deepEqual(m.adv.science.done, { 1: 3, 2: 3, 3: 2 });
+});
+
+test('each chapter is a subject with three aspects, and a step draws its new concepts from its own aspect', async () => {
+  const c = await ctx();
+  const ch = ADVENTURES.science.chapters;
+  assert.equal(ch.length, 10);
+  assert.ok(ch.every((x) => x.subject && x.aspects.length === 3 && x.aspects.every((a) => a.name && a.focus.length)));
+  assert.equal(aspectOf('science', 1).name, 'States of matter');
+  assert.equal(aspectOf('science', 4).name, 'Atoms and elements');
+  assert.equal(aspectOf('science', 8).name, 'Reactions');
+  assert.equal(aspectOf('science', 10), null);
+  // fresh player: step 4 is all atoms/elements, step 14 is cells, step 91 is relativity
+  const subsOf = (step) => buildLevel('science', step, 'main', c).questions.map((x) => c.byId.get(x.qid).subcategory);
+  assert.ok(subsOf(4).every((x) => ['atoms', 'element-symbol', 'periodic-table'].includes(x)), `${subsOf(4)}`);
+  assert.ok(subsOf(4).includes('atoms'), `${subsOf(4)}`);
+  assert.equal(subsOf(12).filter((x) => x === 'cells').length, 4, `${subsOf(12)}`);
+  assert.equal(subsOf(91).filter((x) => x === 'relativity').length, 3, `${subsOf(91)}`);
+});
+
+test('the Science adventure has enough concepts for every aspect to fill a step', async () => {
+  const c = await ctx();
+  const pool = poolFor('science', c);
+  for (const [i, chap] of ADVENTURES.science.chapters.entries()) for (const a of chap.aspects) {
+    const n = pool.filter((q) => a.focus.some((f) => (f.includes('/') ? f === `${q.category}/${q.subcategory}` : f === q.category))).length;
+    assert.ok(n >= 3, `chapter ${i + 1} ${a.name}: ${n} concepts`);
+  }
+});
+
+test('stakes: the same concept at another level, bold gives up hints, and bold pays', async () => {
+  const c = await ctx();
+  const lv = buildLevel('science', 42, 'main', c);
+  const fam0 = lv.questions[0].family; // force a standard level 2 question so all three stakes exist
+  lv.questions[0] = { qid: c.families.get(fam0)[2].id, family: fam0, level: 2, reason: 'new' };
+  let run = startRun(lv, c);
+  const it0 = run.queue[0];
+  assert.deepEqual(stakesAvailable(run, c), [-1, 0, 1]);
+  run = setStake(run, 1, c);
+  const it1 = run.queue[0];
+  assert.equal(it1.family, it0.family); assert.equal(it1.level, Math.min(3, it0.base + 1)); assert.equal(hintsLeft(run, c), 0);
+  run = setStake(run, -1, c);
+  assert.equal(run.queue[0].level, it0.base - 1);
+  assert.ok(hintsLeft(run, c) > 0);
+  run = setStake(run, 1, c);
+  const q = c.byId.get(run.queue[0].qid);
+  run = answerRun(run, run.queue[0].order.indexOf(q.answer), c);
+  assert.equal(run.points, 3); assert.equal(run.answers[0].stake, 1);
+  // a hint locks the stake
+  let r2 = startRun(lv, c); r2 = useHint(r2, c);
+  assert.deepEqual(stakesAvailable(r2, c), [0]);
+  // XP: bonus only above the standard 2 points a question, capped
+  const r3 = { points: 15, queue: [1, 2, 3, 4, 5].map(() => ({ retry: false })) };
+  assert.equal(stakeBonusOf(r3), 5);
+  assert.equal(stakeBonusOf({ points: 5, queue: r3.queue }), 0);
+  assert.equal(xpForStep(3, 'main', 3, 5), xpForStep(3, 'main', 3) + 5);
+  assert.equal(xpForStep(3, 'main', 3, 99), xpForStep(3, 'main', 3) + 8);
 });

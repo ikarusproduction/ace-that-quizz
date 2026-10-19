@@ -71,6 +71,8 @@ const SPRITES = {
     '......', '..kkkk', '.kuuvv', 'kuuvvv', 'kuvvvu', 'kuvvuu', 'kuuvuu', 'kuuuvu', 'kuuuvv', '.kuuuv', '..kkkk', '......' ] },
   science: { m: true, rows: [
     '......', '..kkkk', '...kbb', '...kbb', '...kbb', '..kbbb', '.kbvvv', '.kbvvv', 'kbvvvv', 'kbvvvv', 'kkkkkk', '......' ] },
+  medicine: { m: true, rows: [
+    '......', '..kkkk', '.kwwww', '.kwwrr', '.kwwrr', 'kkwwrr', 'kwwwrr', 'kwwwrr', '.kwwrr', '.kwwww', '..kkkk', '......' ] },
   phobia: { m: true, rows: [
     '......', '.kkkk.', 'kbbbbb', 'kbkkbb', 'kbkkbb', 'kbbbbb', 'kbbbbb', 'kbbkbk', 'kbkbkb', 'kbbbbb', 'kkkkkk', '......' ] },
   nature: { rows: [
@@ -279,4 +281,4 @@ export function sprite(name, px = 32, alt = '') {
 }
 
 export const AVATAR_SPRITES = ['gasmask', 'welder', 'radio', 'owl', 'fox', 'crow', 'miner', 'jester'];
-export const CATEGORY_SPRITES = { news: 'news', history: 'history', geography: 'geography', science: 'science', phobia: 'phobia', nature: 'nature', arts: 'arts', symbols: 'symbols', tunes: 'tunes', cinema: 'cinema', popculture: 'popculture', manga: 'manga', cooking: 'cooking', finance: 'finance', business: 'business', sports: 'sports', f1: 'f1', hockey: 'hockey', music: 'music' };
+export const CATEGORY_SPRITES = { news: 'news', history: 'history', geography: 'geography', science: 'science', medicine: 'medicine', phobia: 'phobia', nature: 'nature', arts: 'arts', symbols: 'symbols', tunes: 'tunes', cinema: 'cinema', popculture: 'popculture', manga: 'manga', cooking: 'cooking', finance: 'finance', business: 'business', sports: 'sports', f1: 'f1', hockey: 'hockey', music: 'music' };

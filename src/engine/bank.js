@@ -7,6 +7,7 @@ export const CATEGORIES = {
   history: { label: 'History', short: 'History' },
   geography: { label: 'Geography', short: 'Geography' },
   science: { label: 'Science', short: 'Science' },
+  medicine: { label: 'Medicine & Health', short: 'Medicine' },
   phobia: { label: 'Phobias', short: 'Phobias' },
   nature: { label: 'Nature & Biology', short: 'Nature' },
   arts: { label: 'Arts & Entertainment', short: 'Arts' },

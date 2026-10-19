@@ -9,7 +9,7 @@ PORT = '8797'
 site = tempfile.mkdtemp(prefix='thk-site-')
 play = os.path.join(site, 'play'); os.makedirs(os.path.join(play, 'api'))
 for f in ('index.html','manifest.webmanifest','sw.js','icon.svg'): shutil.copy(os.path.join(root, f), play)
-for d in ('src','data'): shutil.copytree(os.path.join(root, d), os.path.join(play, d))
+for d in ('src','data','assets'): shutil.copytree(os.path.join(root, d), os.path.join(play, d))
 shutil.copy(os.path.join(root, 'server/php/index.php'), os.path.join(play, 'api/index.php'))
 open(os.path.join(play, 'api/config.php'), 'w').write("<?php return ['access_hash' => '%s'];" % hashlib.sha256(b'sesame').hexdigest())
 open(os.path.join(play, 'config.json'), 'w').write(json.dumps({'relay': '/play/api/index.php', 'gate': True}))

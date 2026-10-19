@@ -16,6 +16,7 @@ export function isFreshNews(q, now = Date.now()) {
 /** @type {Record<string,{label:string, short:string, sprite:string, group:string, match:(q:any)=>boolean}>} */
 export const THEMES = {
   science: { label: 'Science', short: 'Science', sprite: 'science', group: 'Brain', match: (q) => q.category === 'science' },
+  medicine: { label: 'Medicine & Health', short: 'Medicine', sprite: 'medicine', group: 'Brain', match: (q) => q.category === 'medicine' },
   history: { label: 'History', short: 'History', sprite: 'history', group: 'Brain', match: (q) => q.category === 'history' },
   geography: { label: 'Geography', short: 'Geo', sprite: 'geography', group: 'Brain', match: (q) => q.category === 'geography' },
   nature: { label: 'Nature & Animals', short: 'Nature', sprite: 'nature', group: 'Brain', match: (q) => q.category === 'nature' },

@@ -12,7 +12,7 @@ import { createTranslator, applyTranslation } from '../i18n/translate.js';
 import { languageOf } from '../i18n/languages.js';
 import { HEXES } from '../engine/hexes.js';
 import { hexEffects } from '../engine/adventure.js';
-import { currentItem, answerRun, advanceRun, useHint, hintsLeft, setConfidence, noteHex } from '../engine/practice.js';
+import { currentItem, answerRun, advanceRun, useHint, hintsLeft, setConfidence, noteHex, setStake, stakesAvailable, STAKES } from '../engine/practice.js';
 import { misconception } from '../engine/learning.js';
 
 const LETTERS = 'ABCD';
@@ -168,6 +168,9 @@ export async function playRun({ app, view, scene = null, run, lang = 'en', color
       strip,
       h('div.row.between', {}, h('span.tiny.dim', {}, label ? label(it, r) : `Question ${r.idx + 1} of ${r.queue.length}`), h('span.row.gap-s', {}, REASON[it.reason] ? h('span.tag.green', {}, REASON[it.reason]) : null, h('span.tag', {}, LEVEL_NAME[it.level] ?? ''))),
       h('div.qwrap', { class: fx.flip ? 'hex-flip' : '', dir: rtlOf() }, h('div.panel.paper.qcard', {}, h('div.q', {}, q.text))),
+      !picked && stakesAvailable(r, app.ctx).length > 1 ? h('div.stakes', { role: 'group', 'aria-label': 'Stake on this question' }, h('span.tiny.dim', {}, 'Stake'),
+        STAKES.map((st) => { const ok = stakesAvailable(r, app.ctx).includes(st.shift); return h('button.chip', { type: 'button', title: st.hint, disabled: !ok, 'aria-pressed': String(it.shift === st.shift), class: it.shift === st.shift ? 'on' : '', onclick: async () => { sfx.tap(); r = setStake(r, st.shift, app.ctx); await load(); paint(); } }, st.name); }),
+        h('span.tiny.dim.stake-hint', {}, STAKES.find((st) => st.shift === it.shift)?.hint)) : null,
       !picked ? h('div.metacog', {},
         h('div.conf', { role: 'group', 'aria-label': 'How sure are you?' }, h('span.tiny.dim', {}, 'How sure?'), CONF.map(([k, name]) => h('button.chip', { type: 'button', 'aria-pressed': String(it.conf === k), class: it.conf === k ? 'on' : '', onclick: () => { sfx.tap(); r = setConfidence(r, k); paint(); } }, name))),
         run.allowHints ? h('button.btn.ghost.hint', { type: 'button', disabled: left <= 0, onclick: () => { sfx.select?.(); r = useHint(r, app.ctx); paint(); } }, left > 0 ? `Hint · ${left} left` : 'No hints left') : null) : null,

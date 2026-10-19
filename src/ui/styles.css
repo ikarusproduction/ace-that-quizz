@@ -461,6 +461,7 @@ footer.legal { color: var(--mute); font-size: 12px; text-align: center; margin-t
 .arena-vines .stage-bg { background: radial-gradient(70% 60% at 50% 38%, rgba(123, 208, 106, 0.22), transparent 70%), linear-gradient(180deg, #0f1a0f, #14201a); }
 .arena-dread .stage-bg { background: radial-gradient(60% 60% at 50% 40%, rgba(120, 70, 160, 0.25), transparent 70%), linear-gradient(180deg, #0a0710, #120a1a); }
 .arena-house .stage-bg { background: radial-gradient(70% 60% at 50% 38%, rgba(255, 210, 74, 0.22), transparent 70%), repeating-linear-gradient(45deg, transparent 0 18px, rgba(255, 210, 74, 0.04) 18px 20px); }
+.arena-clinic .stage-bg { background: radial-gradient(70% 60% at 50% 38%, rgba(140, 220, 190, 0.22), transparent 70%), repeating-linear-gradient(90deg, transparent 0 20px, rgba(255, 255, 255, 0.04) 20px 22px), linear-gradient(180deg, #0c1714, #10201c); }
 .stage-top { display: flex; align-items: baseline; justify-content: space-between; gap: 2px 8px; flex-wrap: wrap; }
 .stage-top .tiny { font-size: 10px; letter-spacing: 0.04em; }
 .stage-top .nm { white-space: nowrap; font-family: var(--font-display); font-weight: 800; font-size: 20px; text-transform: uppercase; letter-spacing: 0.04em; text-shadow: 0 2px 0 #000; }
@@ -1287,3 +1288,28 @@ details.angle { margin-top: 6px; } details.angle summary { cursor: pointer; colo
 .av-wrap.bg-hexfield .av-bg::before { background: repeating-linear-gradient(60deg, transparent 0 7px, rgba(192, 107, 255, 0.4) 7px 8px), repeating-linear-gradient(120deg, transparent 0 7px, rgba(192, 107, 255, 0.4) 7px 8px); animation: bg-drift 6s linear infinite; }
 .av-wrap.bg-hexfield .av-bg::after { background: radial-gradient(circle at 50% 110%, rgba(255, 120, 220, 0.5), transparent 60%); animation: fire-flicker 2s steps(2) infinite; }
 .fx-hexes .av-fx i { bottom: 8%; border-radius: 0; clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0 50%); background: #d28bff; box-shadow: none; filter: drop-shadow(0 0 3px #c06bff); animation-name: fx-ember; }
+
+/* geography mini-game: flags and typed answers */
+.flag-img { display: block; width: min(260px, 78%); aspect-ratio: 4 / 3; margin: 8px auto; object-fit: cover; background: #222; box-shadow: 0 0 0 3px var(--edge), 0 6px 16px rgba(0, 0, 0, 0.5); image-rendering: auto; user-select: none; -webkit-user-drag: none; }
+.flag-img.small { width: 96px; margin: 4px auto; }
+.geo-name { margin: 6px 0 10px; text-align: center; font-family: var(--font-display); font-size: 30px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; color: var(--amber); }
+.type-in { flex: 1 1 auto; min-width: 0; padding: 12px; font: inherit; font-size: 17px; color: var(--bone); background: #101215; border: 0; box-shadow: inset 0 0 0 3px var(--edge); }
+.type-in:focus { outline: none; box-shadow: inset 0 0 0 3px var(--amber); }
+.type-in:disabled { opacity: 0.6; }
+
+/* evolved bosses: every rank adds a glow, a colour shift and finally an aura */
+.rank-pips { color: #ffd24a; letter-spacing: 1px; font-size: 14px; text-shadow: 0 0 6px rgba(255, 210, 74, 0.6); }
+.stage .rank-pips { position: absolute; left: 10px; top: 8px; z-index: 6; pointer-events: none; }
+.evolved .rig, .stage.evolved .rig { filter: drop-shadow(0 0 5px var(--boss, #fff)); }
+.evo-2 .rig { filter: saturate(1.3) hue-rotate(-14deg) drop-shadow(0 0 8px var(--boss, #fff)); }
+.evo-3 .rig { filter: saturate(1.45) hue-rotate(-28deg) contrast(1.08) drop-shadow(0 0 12px var(--boss, #fff)); }
+.evo-4 .rig { filter: saturate(1.6) hue-rotate(-46deg) contrast(1.15) drop-shadow(0 0 16px #ff3b2a); animation: evo-pulse 1.6s ease-in-out infinite; }
+.stage.evo-3 .stage-bg, .stage.evo-4 .stage-bg { box-shadow: inset 0 0 40px rgba(255, 60, 40, 0.28); }
+@keyframes evo-pulse { 50% { transform: scale(1.04); } }
+.reduce-motion .evo-4 .rig { animation: none; }
+.pick-rig.evolved { border-radius: 4px; box-shadow: 0 0 0 2px rgba(255, 210, 74, 0.35); }
+
+/* stake on a question */
+.stakes { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 4px 0; }
+.stakes .chip:disabled { opacity: .35; }
+.stakes .stake-hint { flex: 1 1 100%; }

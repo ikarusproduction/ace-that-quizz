@@ -24,7 +24,8 @@ try:
         for step in range(900):
             t = pg.evaluate('document.querySelector("#app").textContent')
             if 'Final standings' in t: break
-            if pg.locator('.gate').count(): gates += 1; pg.locator('.gate .btn').click(no_wait_after=True)
+            if pg.locator('.reveal-overlay .btn').count(): pg.locator('.reveal-overlay .btn').first.click(no_wait_after=True, timeout=1500)
+            elif pg.locator('.gate').count(): gates += 1; pg.locator('.gate .btn').click(no_wait_after=True)
             elif pg.locator('.timer').count(): pg.locator('.choice:not(.removed)').first.click(no_wait_after=True)
             elif pg.locator('.stake:not([disabled])').count(): pg.locator('.stake:not([disabled])').first.click(no_wait_after=True, timeout=1500); pg.locator('text=/Lock in/').click(no_wait_after=True, timeout=1500)
             elif pg.locator('.stick-bottom .btn').count(): pg.locator('.stick-bottom .btn').first.click(no_wait_after=True)

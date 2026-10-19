@@ -15,7 +15,7 @@ import { PACKS } from '../../engine/hexes.js';
 import { nextDue, summarize, DAY } from '../../engine/learning.js';
 import {
   ADVENTURES, OPEN_ADVENTURE_IDS, STEPS, BOSS_EVERY, stepKind, roadsAt, chapterOf, chapterInfo, phaseOf, buildLevel, startRun,
-  frontier, isUnlocked, totals,
+  frontier, isUnlocked, totals, stakeBonusOf,
 } from '../../engine/adventure.js';
 
 /** "in 10 minutes", "tomorrow", "in 3 days". */
@@ -128,7 +128,8 @@ export async function adventureScreen(app, params = {}) {
     view(
       screenHeader(a.name, () => goBack('menu')),
       h('div.row.between', {}, h('span.small.dim', {}, `${a.title} · ${t.steps}/${STEPS} steps · ★ ${t.stars}`), playerBar()),
-      h('div.chapter-banner', {}, h('span.tiny.dim', {}, `Chapter ${chapter}`), h('b', {}, info.name)),
+      h('div.chapter-banner', {}, h('span.tiny.dim', {}, `Chapter ${chapter}${info.subject ? ` · ${info.subject}` : ''}`), h('b', {}, info.name),
+        info.aspects ? h('span.tiny.dim', {}, info.aspects.map((x) => x.name).join(' · ')) : null),
       tabs,
       sum.due > 0 ? h('button.panel.tight.due-chip', { type: 'button', onclick: () => go('train', { playerId: pid, mode: 'daily' }) }, h('b', {}, `${sum.due} review${sum.due > 1 ? 's' : ''} due`), h('span.tiny.dim', {}, 'They come back inside your steps. Or train them now.')) : null,
       h('div.adv-path', { style: { '--adv': a.color } }, rows),
@@ -149,7 +150,7 @@ export async function adventureScreen(app, params = {}) {
       const rig = createRig(level.boss.sprite, 128, level.boss.name);
       view(screenHeader(`Step ${step}`, () => { setMood('calm'); map(); }),
         h('div.panel.boss-intro', { style: { '--adv': a.color } }, rig.el, h('h2', {}, level.boss.name),
-          h('p.small', {}, `Seven ${LEVEL_NAME[level.target].toLowerCase()} questions, three hearts, no hints and no second chances. ${level.boss.name} throws hex cards at you as the fight goes on. Tap a card in the air to deflect it, or wipe the mess away when it lands.`)),
+          h('p.small', {}, `Seven ${LEVEL_NAME[level.target].toLowerCase()} questions on ${chapterInfo(advId, level.step).subject?.toLowerCase() ?? 'everything so far'}, three hearts, no hints and no second chances. ${level.boss.name} throws hex cards at you as the fight goes on. Tap a card in the air to deflect it, or wipe the mess away when it lands.`)),
         h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', onclick: () => { sfx.boss?.(); play(level, p, m, lang); } }, 'Face the boss')));
       return;
     }
@@ -162,7 +163,7 @@ export async function adventureScreen(app, params = {}) {
     await playRun({
       app, view, scene, run, lang, color: ADVENTURES[advId].color, player: p, localize, learnItems: m.learn.items,
       boss: level.boss, event: level.kind === 'event',
-      label: (it, r) => (level.kind === 'boss' ? `${level.boss.name} · ${it.retry ? 'another angle' : `${Math.min(level.questions.length, r.idx + 1)} of ${level.questions.length}`}` : `Step ${level.step} · ${chapterInfo(advId, level.step).name}${it.retry ? ' · another angle' : ''}`),
+      label: (it, r) => (level.kind === 'boss' ? `${level.boss.name} · ${it.retry ? 'another angle' : `${Math.min(level.questions.length, r.idx + 1)} of ${level.questions.length}`}` : `Step ${level.step} · ${level.aspect ?? chapterInfo(advId, level.step).name}${it.retry ? ' · another angle' : ''}`),
       onExit: () => { setMood('calm'); map(); },
       onEnd: (done) => finish(level, done),
     });
@@ -188,14 +189,14 @@ export async function adventureScreen(app, params = {}) {
         h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', onclick: () => begin(level.step, level.road) }, 'Try again'), h('button.btn.block', { type: 'button', onclick: () => map() }, 'Back to the path')));
       return;
     }
-    const res = await app.repo.completeAdventureStep(pid, advId, level.step, level.road, run.stars);
+    const res = await app.repo.completeAdventureStep(pid, advId, level.step, level.road, run.stars, stakeBonusOf(run));
     sfx.win(); haptic('big'); confetti({ count: level.kind === 'boss' ? 90 : 45 });
     if (level.kind === 'boss') { sfx.jackpot?.(); stamp('BOSS DOWN!', { kind: 'jackpot' }); }
     const nextStep = level.step < STEPS ? level.step + 1 : null;
     view(screenHeader(`Step ${level.step} complete`, () => map()),
       h('div.panel.center', {}, h('div.big-stars', {}, '★'.repeat(run.stars) + '☆'.repeat(3 - run.stars)),
         h('p.small', {}, `${run.right} right, ${run.wrong} wrong · ${run.hearts} heart${run.hearts === 1 ? '' : 's'} left`),
-        res.first ? h('p', {}, h('b.amber', {}, `+${res.xp.gained} XP`), res.xp.after > res.xp.before ? ` · level ${res.xp.after}!` : '') : h('p.small.dim', {}, 'Already cleared: XP is paid once, stars keep your best.'),
+        res.first ? h('p', {}, h('b.amber', {}, `+${res.xp.gained} XP`), stakeBonusOf(run) > 0 ? ` (incl. +${stakeBonusOf(run)} for bold stakes)` : '', res.xp.after > res.xp.before ? ` · level ${res.xp.after}!` : '') : h('p.small.dim', {}, 'Already cleared: XP is paid once, stars keep your best.'),
         res.pack ? h('p.good', {}, `A ${PACKS[res.pack].name} is waiting in your Inventory.`) : null,
         level.step === STEPS ? h('p.amber', {}, `${ADVENTURES[advId].name} is complete.`) : null, deflectLine),
       summary, remember,

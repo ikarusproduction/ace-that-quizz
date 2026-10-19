@@ -72,3 +72,18 @@ test('export and import keep hexes, packs and dust; merging never loses any', as
   const m = await other.getMeta(imported.id);
   assert.equal(m.packs.length, 2); assert.equal(m.daily.streak, 1);
 });
+
+test('boss evolution is saved once per game: a win moves the rank up, replays and repeats do not', async () => {
+  const { repo, p } = await setup();
+  await repo.addXp(p.id, 's1', 100, 0, [{ id: 'static', rank: 0 }]);
+  assert.equal((await repo.getMeta(p.id)).bosses.static, 1);
+  await repo.addXp(p.id, 's1', 100, 0, [{ id: 'static', rank: 0 }]); // the same game again
+  assert.equal((await repo.getMeta(p.id)).bosses.static, 1);
+  await repo.addXp(p.id, 's2', 100, 0, [{ id: 'static', rank: 0 }, { id: 'house', rank: 0 }, { id: 'nobody', rank: 0 }]); // already beaten at rank 0: no extra rank
+  const m2 = await repo.getMeta(p.id);
+  assert.equal(m2.bosses.static, 1); assert.equal(m2.bosses.house, undefined); assert.equal(m2.bosses.nobody, undefined);
+  await repo.addXp(p.id, 's3', 100, 0, [{ id: 'static', rank: 1 }]);
+  assert.equal((await repo.getMeta(p.id)).bosses.static, 2);
+  for (let i = 0; i < 6; i++) await repo.addXp(p.id, `t${i}`, 100, 0, [{ id: 'static', rank: Math.min(4, 2 + i) }]);
+  assert.equal((await repo.getMeta(p.id)).bosses.static, 4, 'capped at the top rank');
+});

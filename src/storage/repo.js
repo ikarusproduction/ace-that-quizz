@@ -11,6 +11,7 @@ import { isLanguage, DEFAULT_LANGUAGE } from '../i18n/languages.js';
 import { SCHEMA_VERSION, DATA_STORES } from './schema.js';
 import { levelOf, cleanWardrobe, buyCheck, COSMETICS } from '../engine/cosmetics.js';
 import { applyAnswers } from '../engine/learning.js';
+import { BOSS_RANK_MAX } from '../engine/duel.js';
 import { metaOf, mergeMeta, daysBetween, cleanFriends, MAX_FRIENDS } from './meta.js';
 import { newFriendCode, newFriendSecret, normalizeFriendCode, FRIEND_CODE_RE, buildCard, cleanCard } from '../stats/card.js';
 import { HEXES, PACKS, openPack, openPackStyle, FORGE_COST, HEX_NUMBERS } from '../engine/hexes.js';
@@ -338,7 +339,7 @@ export async function createRepo(storage, { now = Date.now, uuid = defaultUuid, 
     },
 
     /** Add XP (and dust) for a finished game once; the session id is remembered. Returns { xp, before, after, gained, dust }. */
-    async addXp(id, sessionId, amount, dust = 0) {
+    async addXp(id, sessionId, amount, dust = 0, beaten = []) {
       const profile = await requireProfile(id);
       const m = metaOf(profile);
       if (m.xpLog.includes(sessionId) || !(amount > 0)) return { xp: m.xp, before: levelOf(m.xp).level, after: levelOf(m.xp).level, gained: 0, dust: 0 };
@@ -346,6 +347,10 @@ export async function createRepo(storage, { now = Date.now, uuid = defaultUuid, 
       const d = dust > 0 ? Math.floor(dust) : 0;
       if (d) { profile.hexes = { ...m.hexes, dust: m.hexes.dust + d }; profile.packs = m.packs; profile.daily = m.daily; }
       profile.xpLog = [...m.xpLog, sessionId].slice(-30);
+      // Every boss beaten comes back one rank stronger (only the rank that was just beaten counts, once per game).
+      const ranks = { ...m.bosses };
+      for (const b of Array.isArray(beaten) ? beaten : []) if (b && typeof b.id === 'string' && Number.isInteger(b.rank) && b.rank >= (ranks[b.id] ?? 0)) ranks[b.id] = Math.min(BOSS_RANK_MAX, b.rank + 1);
+      profile.bosses = ranks;
       profile.updatedAt = now();
       await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
       return { xp: profile.xp, before: levelOf(m.xp).level, after: levelOf(profile.xp).level, gained: Math.floor(amount), dust: d };
@@ -355,7 +360,7 @@ export async function createRepo(storage, { now = Date.now, uuid = defaultUuid, 
      * Record a finished adventure step. Stars only go up; XP and the boss pack are paid once, the first time.
      * Returns { first, stars, xp: {gained, before, after}, pack }.
      */
-    async completeAdventureStep(id, advId, step, road, stars) {
+    async completeAdventureStep(id, advId, step, road, stars, stakeBonus = 0) {
       if (!ADVENTURES[advId] || !Number.isInteger(step) || step < 1 || step > 100 || !(stars >= 1 && stars <= 3)) throw new RepoError('BAD_STEP', 'That step does not exist.');
       const profile = await requireProfile(id);
       const m = metaOf(profile);
@@ -367,7 +372,7 @@ export async function createRepo(storage, { now = Date.now, uuid = defaultUuid, 
       let xp = { gained: 0, before: levelOf(m.xp).level, after: levelOf(m.xp).level };
       let pack = null;
       if (first) {
-        const gain = xpForStep(step, road, stars);
+        const gain = xpForStep(step, road, stars, Number.isFinite(stakeBonus) ? stakeBonus : 0);
         profile.xp = m.xp + gain;
         xp = { gained: gain, before: levelOf(m.xp).level, after: levelOf(profile.xp).level };
         pack = packForStep(step);
