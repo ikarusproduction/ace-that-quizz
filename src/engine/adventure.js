@@ -1,23 +1,44 @@
 // Adventures: a solo path of 100 steps through one theme. Pure data and pure functions; the screen owns the UI and
 // the profile owns the saved progress.
 //
-// A step is a short lesson: you first read three fact cards (learn), then answer five questions (practise) with
-// three hearts. A wrong answer costs a heart and the question comes back once at the end. The path forks at some
-// steps (a safe road or a risky one), and every tenth step is a boss. Difficulty climbs with the step, using the
-// three versions every question has (see `levelFor` in game.js).
+// A step is a short run of questions (five, seven for a boss) with three hearts. There are no lesson cards: what you
+// are asked comes from the learning engine (learning.js), so reviews that are due come back in a new formulation and
+// new concepts fill the rest. The path forks at some steps (a safe road or a risky one), every fifth step is a lab
+// accident (a few hex cards are thrown at you) and every tenth step is a boss that throws more and more of them.
+// Difficulty climbs with the step, using the three versions every question has (see `levelFor` in game.js).
 import { Rng } from './rng.js';
+import { selectSession, isDue } from './learning.js';
+import { startPractice } from './practice.js';
+import { HEXES } from './hexes.js';
 
 export const STEPS = 100;
 export const HEARTS = 3;
 export const BOSS_EVERY = 10;
 export const FORK_AT = [3, 6]; // step % 10 values that fork
+export const EVENT_AT = 5;     // step % 10 value of the lab accident
 
 export const ADVENTURES = {
   science: {
-    id: 'science', name: 'The Lab', title: 'Science', cats: ['science', 'phobia'], color: '#6fd1ff', icon: 'science',
+    id: 'science', name: 'The Lab', title: 'Science', cats: ['science', 'phobia'], color: '#6fd1ff', icon: 'science', open: true,
     blurb: 'Atoms, bodies, space and a few fears.',
     bossSprite: 'boss_static',
     bossNames: ['The Spark', 'The Flask', 'The Magnet', 'The Prism', 'The Orbit', 'The Gene', 'The Quark', 'The Vacuum', 'The Paradox', 'Dr. Static'],
+    // Concepts the adventure draws from: "category/subcategory", or "category" for everything in it.
+    subs: ['science', 'nature/anatomy', 'nature/cells', 'nature/plants', 'symbols/element-symbol', 'symbols/periodic-table', 'symbols/formula', 'symbols/si-units', 'cooking/science'],
+    // One scene per chapter. `focus` lists the subcategories that supply the NEW concepts of that chapter; reviews that are due
+    // can come from anywhere in the adventure.
+    chapters: [
+      { scene: 'bench', name: 'The Bench', focus: ['symbols/element-symbol', 'symbols/periodic-table', 'science/chemistry'] },
+      { scene: 'greenhouse', name: 'The Greenhouse', focus: ['nature/plants', 'nature/cells', 'cooking/science', 'science/history-of-science'] },
+      { scene: 'clinic', name: 'The Clinic', focus: ['nature/anatomy', 'science/phobia'] },
+      { scene: 'workshop', name: 'The Workshop', focus: ['science/physics', 'symbols/si-units', 'symbols/formula'] },
+      { scene: 'observatory', name: 'The Observatory', focus: ['science/space'] },
+      { scene: 'reactor', name: 'The Reactor', focus: ['science/physics', 'symbols/periodic-table', 'symbols/formula'] },
+      { scene: 'fearlab', name: 'The Fear Lab', focus: ['science/phobia', 'nature/anatomy'] },
+      { scene: 'deep', name: 'The Deep', focus: ['science/chemistry', 'nature/cells', 'science/phobia'] },
+      { scene: 'orbit', name: 'High Orbit', focus: ['science/space', 'science/physics'] },
+      { scene: 'paradox', name: 'The Paradox', focus: [] },
+    ],
   },
   history: {
     id: 'history', name: 'The Archive', title: 'History', cats: ['history'], color: '#c9a26b', icon: 'owl', bossSprite: 'boss_archivist',
@@ -42,9 +63,13 @@ export const ADVENTURES = {
 };
 export const ADVENTURE_IDS = Object.keys(ADVENTURES);
 
-/** What kind of step this is: a single road, a fork, or a boss. */
+/** Only some adventures are playable for now. */
+export const OPEN_ADVENTURE_IDS = ADVENTURE_IDS.filter((id) => ADVENTURES[id].open);
+
+/** What kind of step this is: a single road, a fork, a lab accident (event), or a boss. */
 export function stepKind(step) {
   if (step % BOSS_EVERY === 0) return 'boss';
+  if (step % BOSS_EVERY === EVENT_AT) return 'event';
   return FORK_AT.includes(step % BOSS_EVERY) ? 'fork' : 'single';
 }
 
@@ -64,73 +89,96 @@ export function levelForStep(step, road = 'main') {
 }
 
 export const chapterOf = (step) => Math.ceil(step / BOSS_EVERY);
+/** Position inside the chapter, 0 (first step) to 1 (the boss). Drives the scene's lighting. */
+export const phaseOf = (step) => ((step - 1) % BOSS_EVERY) / (BOSS_EVERY - 1);
+export const chapterInfo = (adv, step) => ADVENTURES[adv].chapters?.[chapterOf(step) - 1] ?? { scene: 'bench', name: `Chapter ${chapterOf(step)}`, focus: [] };
+
+const inSubs = (q, subs) => subs.some((s) => (s.includes('/') ? s === `${q.category}/${q.subcategory}` : s === q.category));
 
 /** Primary questions of an adventure that have a complete ladder, in a fixed order. */
 export function poolFor(adv, ctx) {
-  const cats = new Set(ADVENTURES[adv].cats);
+  const a = ADVENTURES[adv];
+  const subs = a.subs ?? a.cats;
   return ctx.questions
-    .filter((q) => cats.has(q.category) && q.family && ctx.families.get(q.family)?.[1] && ctx.families.get(q.family)?.[2] && ctx.families.get(q.family)?.[3])
-    .sort((a, b) => (a.id < b.id ? -1 : 1));
+    .filter((q) => inSubs(q, subs) && q.family && ctx.families.get(q.family)?.[1] && ctx.families.get(q.family)?.[2] && ctx.families.get(q.family)?.[3])
+    .sort((a2, b2) => (a2.id < b2.id ? -1 : 1));
 }
 
-/** The lesson for a step: three facts to learn, then the questions to answer. Deterministic for (adventure, step, road). */
-export function buildLevel(adv, step, road, ctx) {
+/* ---------------------------------------------------------------- hex cards thrown at the player */
+
+const HEX_LADDER = [ // [first progress at which it can be thrown, hex id]
+  [0, 'goo_splat'], [0.2, 'ink_blast'], [0.4, 'blur_out'], [0.6, 'quake'], [0.8, 'flip_table'],
+];
+export const hexEffects = (id) => HEXES[id]?.fx ?? [];
+
+/**
+ * Which hexes are thrown at which question. A boss starts calm and escalates: more cards per question and nastier ones
+ * (slime, ink, blur, quake, and from chapter 3 a flipped table). A lab accident throws one mild card at each of the last
+ * two questions. Everything is visual: no hex can make an answer wrong, and nothing is timed.
+ */
+export function hexPlan(kind, step, count, rng) {
+  const plan = Array.from({ length: count }, () => []);
+  if (kind === 'event') {
+    for (let i = Math.max(1, count - 2); i < count; i++) plan[i] = [rng.pick(['goo_splat', 'ink_blast'])];
+  } else if (kind === 'boss') {
+    const chapter = chapterOf(step);
+    for (let i = 1; i < count; i++) {
+      const t = i / (count - 1);
+      const intensity = Math.min(1, 0.25 + 0.55 * t + 0.02 * chapter);
+      const n = intensity < 0.5 ? 1 : intensity < 0.8 ? 2 : 3;
+      const ok = HEX_LADDER.filter(([from, id]) => t >= from && !(id === 'flip_table' && chapter < 3)).map(([, id]) => id);
+      const picked = [];
+      for (let k = 0; k < n; k++) {
+        const pool = ok.filter((id) => !picked.includes(id));
+        if (!pool.length) break;
+        // later throws in a question lean on the newest tricks
+        picked.push(k === 0 ? rng.pick(pool) : pool[Math.min(pool.length - 1, pool.length - 1 - rng.int(Math.min(2, pool.length)))]);
+      }
+      plan[i] = picked;
+    }
+  }
+  return plan;
+}
+
+/**
+ * The questions for a step. The learning engine picks them: reviews that are due first, then new concepts from this
+ * chapter's focus, never the concepts of the step before (`exclude`). `learn` is the player's learning record.
+ * Deterministic for (adventure, step, road, attempt, learn, now).
+ */
+export function buildLevel(adv, step, road, ctx, { learn = null, now = 0, attempt = 0, exclude = [] } = {}) {
   if (!ADVENTURES[adv] || step < 1 || step > STEPS) throw new Error('No such step');
   const pool = poolFor(adv, ctx);
   if (pool.length < 10) throw new Error(`Not enough questions for ${adv}`);
-  const order = Rng.fromSeed(`adv:${adv}`).shuffle(pool);
+  const items = learn?.items ?? {};
   const kind = stepKind(step);
   const count = kind === 'boss' ? 7 : 5;
-  const level = levelForStep(step, kind === 'boss' ? 'boss' : road);
-  const offset = (step - 1) * 5 + (road === 'risk' ? Math.floor(pool.length / 2) : 0);
-  const picked = [];
-  for (let i = 0; picked.length < count && i < order.length; i++) picked.push(order[(offset + i) % order.length]);
-  const ids = picked.map((q) => ctx.families.get(q.family)[level].id);
+  const target = levelForStep(step, kind === 'boss' ? 'boss' : road);
+  const chapter = chapterInfo(adv, step);
+  const concepts = pool.map((q) => ({ id: q.family, category: q.category, subcategory: q.subcategory }));
+  const focus = chapter.focus.length ? concepts.filter((c) => inSubs(c, chapter.focus)) : concepts;
+  // New concepts come from the chapter's focus; anything already seen and due can come from anywhere in the adventure.
+  const allowed = new Map(focus.map((c) => [c.id, c]));
+  for (const c of concepts) if (items[c.id] && items[c.id].state !== 'new' && isDue(items[c.id], now)) allowed.set(c.id, c);
+  // When the chapter has run out of unseen concepts, unseen ones from elsewhere come in before anything is drilled again.
+  const unseen = (c) => !items[c.id] || items[c.id].state === 'new';
+  if ([...allowed.values()].filter(unseen).length < count) for (const c of concepts) if (unseen(c)) allowed.set(c.id, c);
+  let list = [...allowed.values()];
+  if (list.length < count + exclude.length) list = concepts; // a thin focus never starves a step
+  const sel = selectSession({ items, pool: list, now, seed: `adv:${adv}:${step}:${road}:${attempt}`, target, mode: 'adventure', size: count, exclude });
+  const rng = Rng.fromSeed(`hex:${adv}:${step}:${attempt}`);
+  const questions = sel.map((x) => ({ qid: ctx.families.get(x.id)[x.level].id, family: x.id, level: x.level, reason: x.reason }));
   return {
-    adv, step, road, kind, level, hearts: HEARTS,
-    learn: kind === 'boss' ? [] : ids.slice(0, 3),
-    questions: ids,
+    adv, step, road, kind, target, hearts: HEARTS, attempt, chapter: chapterOf(step), scene: chapter.scene, phase: phaseOf(step),
+    questions, hexes: hexPlan(kind, step, questions.length, rng),
     boss: kind === 'boss' ? { name: ADVENTURES[adv].bossNames[chapterOf(step) - 1], sprite: step === STEPS ? 'boss_house' : ADVENTURES[adv].bossSprite } : null,
   };
 }
 
-/* ---------------------------------------------------------------- a run of one level */
-
-/** Start practising. `seed` fixes the answer order so a saved run could be replayed. */
-export function startRun(level, ctx, seed = `${level.adv}:${level.step}:${level.road}`) {
-  const rng = Rng.fromSeed(seed);
-  const queue = level.questions.map((qid) => ({ qid, order: rng.shuffle(ctx.byId.get(qid).choices.map((_, i) => i)), retry: false }));
-  return { level, queue, idx: 0, hearts: level.hearts, status: 'play', picked: null, right: 0, wrong: 0, stars: 0 };
+/** Start playing a built level. Bosses allow no hints; every other step allows two per question. */
+export function startRun(level, ctx, seed = `${level.adv}:${level.step}:${level.road}:${level.attempt}`) {
+  const run = startPractice({ questions: level.questions, ctx, hearts: level.hearts, allowHints: level.kind !== 'boss', allowRetry: level.kind !== 'boss', hexes: level.hexes, seed });
+  return { ...run, level };
 }
-
-export const currentItem = (run) => (run.status === 'play' ? run.queue[run.idx] : null);
-
-/** Answer the current question by the displayed position. Returns a new run; `picked` holds the outcome until `advance`. */
-export function answerRun(run, display, ctx) {
-  if (run.status !== 'play' || run.picked) return run;
-  const item = run.queue[run.idx];
-  const q = ctx.byId.get(item.qid);
-  const chosen = item.order[display];
-  const correct = chosen === q.answer;
-  const next = { ...run, picked: { display, correct, answerDisplay: item.order.indexOf(q.answer) }, right: run.right + (correct ? 1 : 0), wrong: run.wrong + (correct ? 0 : 1) };
-  if (!correct) {
-    next.hearts = run.hearts - 1;
-    // A missed question returns once at the end of the lesson (not on a boss, which has no second chances).
-    if (!item.retry && run.level.kind !== 'boss') next.queue = [...run.queue, { ...item, retry: true, order: [...item.order].reverse() }];
-  }
-  return next;
-}
-
-/** Move on after seeing the result. Ends the run when hearts are gone or the questions are done. */
-export function advanceRun(run) {
-  if (run.status !== 'play' || !run.picked) return run;
-  if (run.hearts <= 0) return { ...run, status: 'lost', picked: null, stars: 0 };
-  const idx = run.idx + 1;
-  if (idx >= run.queue.length) return { ...run, idx, status: 'won', picked: null, stars: starsFor(run.hearts) };
-  return { ...run, idx, picked: null };
-}
-
-export const starsFor = (hearts) => Math.max(1, Math.min(3, hearts));
 
 /* ---------------------------------------------------------------- progress and rewards */
 

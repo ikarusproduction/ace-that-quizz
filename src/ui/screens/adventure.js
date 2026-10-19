@@ -1,83 +1,103 @@
-// Adventure screens: pick a theme, walk a 100-step path with forks and bosses, learn three facts, then practise.
+// Adventure: a 100-step path through one theme (Science, for now). Questions only: the learning engine decides what you
+// are asked (reviews that are due, then new concepts), each chapter has its own animated backdrop, lab accidents throw a
+// few hex cards at you and every tenth step is a boss that throws more and more.
 import { h, mount } from '../dom.js';
 import { sprite } from '../pixel.js';
 import { go, goBack, setMood } from '../app.js';
-import { screenHeader, avatar, bulbs, toast } from '../components.js';
+import { screenHeader, avatar } from '../components.js';
 import { sfx, unlockAudio } from '../audio.js';
 import { confetti, haptic, stamp } from '../fx.js';
+import { createScene } from '../scenes.js';
+import { playRun, makeLocalizer, LEVEL_NAME } from '../practice.js';
+import { createRig } from '../bossrig.js';
 import { metaOf } from '../../storage/meta.js';
-import { levelOf } from '../../engine/cosmetics.js';
 import { PACKS } from '../../engine/hexes.js';
-import { createTranslator, applyTranslation } from '../../i18n/translate.js';
-import { languageOf } from '../../i18n/languages.js';
+import { nextDue, summarize, DAY } from '../../engine/learning.js';
 import {
-  ADVENTURES, ADVENTURE_IDS, STEPS, BOSS_EVERY, stepKind, roadsAt, chapterOf, buildLevel, startRun, currentItem, answerRun, advanceRun,
-  frontier, isUnlocked, totals, levelForStep,
+  ADVENTURES, OPEN_ADVENTURE_IDS, STEPS, BOSS_EVERY, stepKind, roadsAt, chapterOf, chapterInfo, phaseOf, buildLevel, startRun,
+  frontier, isUnlocked, totals,
 } from '../../engine/adventure.js';
 
-const LETTERS = 'ABCD';
-const LEVEL_NAME = { 1: 'Easy', 2: 'Medium', 3: 'Hard' };
+/** "in 10 minutes", "tomorrow", "in 3 days". */
+export function whenText(ms, now = Date.now()) {
+  const d = ms - now;
+  if (d <= 60_000) return 'now';
+  if (d < 3_600_000) return `in ${Math.round(d / 60_000)} minutes`;
+  if (d < DAY) return `in ${Math.round(d / 3_600_000)} hours`;
+  const days = Math.round(d / DAY);
+  return days <= 1 ? 'tomorrow' : `in ${days} days`;
+}
+export const offsetMin = () => -new Date().getTimezoneOffset();
+
+/** The "what you trained" panel shown after a run (shared with the training modes). */
+export function learningSummary(run, learn, now) {
+  const indep = run.answers.filter((x) => x.correct && !x.hints).length;
+  const helped = run.answers.filter((x) => x.correct && x.hints).length;
+  const fresh = run.queue.filter((x) => x.reason === 'new').length;
+  const reviews = run.queue.filter((x) => ['due', 'relearn', 'weak', 'maintain'].includes(x.reason)).length;
+  const mine = run.answers.map((x) => learn.items[x.id]?.due).filter(Boolean);
+  const soonest = mine.length ? Math.min(...mine) : nextDue(learn.items, now);
+  return h('div.panel.tight.learn-sum', {},
+    h('b', {}, 'What you trained'),
+    h('p.small', {}, `${indep} recalled on your own${helped ? `, ${helped} with a hint` : ''}${fresh ? ` · ${fresh} new` : ''}${reviews ? ` · ${reviews} review${reviews > 1 ? 's' : ''}` : ''}.`),
+    soonest ? h('p.small', {}, `The first of these comes back ${whenText(soonest, now)}.`) : null,
+    learn.streak.count > 1 ? h('p.tiny.amber', {}, `${learn.streak.count} days in a row.`) : null);
+}
+
+/** What was missed, with the answer and the explanation. */
+export function rememberPanel(app, run) {
+  const missed = run.answers.filter((x) => !x.correct);
+  if (!missed.length) return null;
+  return h('div.panel.tight', {}, h('b', {}, 'Worth remembering'),
+    [...new Map(missed.map((x) => [x.id, x])).values()].map((x) => {
+      const q = app.ctx.byId.get(x.qid);
+      return h('div.remember', {}, h('div.small', {}, q.question), h('div.small', {}, h('b', {}, q.choices[q.answer])), q.explanation ? h('div.tiny.dim', {}, q.explanation) : null);
+    }));
+}
 
 export async function adventureScreen(app, params = {}) {
   setMood('calm');
   const profiles = await app.repo.listProfiles();
   const recent = await app.repo.getRecent();
   let pid = params.playerId ?? recent.ids[0] ?? profiles[0]?.id;
-  let advId = params.adv ?? null;
+  const advId = OPEN_ADVENTURE_IDS.includes(params.adv) ? params.adv : OPEN_ADVENTURE_IDS[0];
   let chapter = params.chapter ?? null;
-  const translator = createTranslator({ fetchJson: (p) => app.readJson(p) });
-  const root = h('div.screen.adventure');
-
+  let lastFamilies = [];
+  const attempts = {};
+  const localize = makeLocalizer(app);
+  const scene = createScene();
+  const content = h('div.adv-content');
+  const root = h('div.screen.adventure', {}, scene.el, content);
+  const view = (...nodes) => mount(content, ...nodes);
   const profile = async () => app.repo.getProfile(pid);
 
-  /** The question in the player's language when a translation is available. */
-  async function localized(qid, lang) {
-    const q = app.ctx.byId.get(qid);
-    const base = { text: q.question, choices: q.choices.map((t, i) => ({ orig: i, text: t })), explanation: q.explanation, translated: null };
-    if (lang === 'en') return base;
-    const tr = await Promise.race([translator.translateQuestion(q, lang).catch(() => null), new Promise((r) => setTimeout(() => r(null), 3000))]);
-    return tr ? applyTranslation(base, tr) : base;
-  }
-
   const playerBar = () => profiles.length > 1
-    ? h('div.row.gap-s', { style: { flexWrap: 'wrap' } }, profiles.map((p) => h('button.btn.icon.ghost', { type: 'button', 'aria-pressed': String(p.id === pid), class: p.id === pid ? 'on' : '', 'aria-label': p.name, onclick: () => { pid = p.id; hub(); } }, avatar(p, 32))))
+    ? h('div.row.gap-s', { style: { flexWrap: 'wrap' } }, profiles.map((p) => h('button.btn.icon.ghost', { type: 'button', 'aria-pressed': String(p.id === pid), class: p.id === pid ? 'on' : '', 'aria-label': p.name, onclick: () => { pid = p.id; map(); } }, avatar(p, 32))))
     : null;
 
-  /* ------------------------------------------------------------ hub */
-  async function hub() {
-    advId = null;
+  /* ------------------------------------------------------------ map */
+  async function map() {
+    scene.el.classList.remove('arena');
     if (!profiles.find((p) => p.id === pid)) {
-      mount(root, screenHeader('Adventure', () => goBack('menu')), h('div.panel.inset.empty-state', {}, 'Create a player to start an adventure.'), h('button.btn.primary.block', { type: 'button', onclick: () => go('profiles') }, 'Players'));
+      scene.set('bench', 0.3);
+      view(screenHeader('Adventure', () => goBack('menu')), h('div.panel.inset.empty-state', {}, 'Create a player to start an adventure.'), h('button.btn.primary.block', { type: 'button', onclick: () => go('profiles') }, 'Players'));
       return;
     }
-    const m = metaOf(await profile());
-    mount(root,
-      screenHeader('Adventure', () => goBack('menu')),
-      playerBar(),
-      h('p.small.dim', {}, `Five themed paths of ${STEPS} steps. Each step is three facts to learn, then five questions with three hearts. The road forks now and then, and a boss waits every ${BOSS_EVERY} steps.`),
-      h('div.col.gap-s', {}, ADVENTURE_IDS.map((id) => {
-        const a = ADVENTURES[id]; const t = totals(m.adv[id]);
-        return h('button.panel.adv-card', { type: 'button', style: { '--adv': a.color }, onclick: () => { unlockAudio(); sfx.tap(); chapter = null; openAdventure(id); } },
-          sprite(a.icon, 40),
-          h('div.grow', {}, h('b', {}, a.name), h('div.tiny.dim', {}, a.blurb), h('div.progress', { style: { marginTop: '6px' } }, h('i', { style: { width: `${t.steps}%`, background: a.color } }))),
-          h('div.mono.small', {}, `${t.steps}/${STEPS}`, h('div.tiny.amber', {}, `★ ${t.stars}`)));
-      })));
-  }
-
-  /* ------------------------------------------------------------ map */
-  async function openAdventure(id) {
-    advId = id;
-    const a = ADVENTURES[id];
-    const m = metaOf(await profile());
-    const prog = m.adv[id];
+    const a = ADVENTURES[advId];
+    const p = await profile();
+    const m = metaOf(p);
+    const prog = m.adv[advId];
     const front = frontier(prog);
     if (chapter == null) chapter = Math.min(10, chapterOf(Math.min(front, STEPS)));
     const t = totals(prog);
+    const lo = (chapter - 1) * BOSS_EVERY + 1;
+    const info = chapterInfo(advId, lo);
+    scene.set(info.scene, 0.35 + (front >= lo ? 0.3 * phaseOf(Math.min(front, chapter * BOSS_EVERY)) : 0), { step: chapter * BOSS_EVERY });
+    const sum = summarize(m.learn.items, Date.now());
 
     const tabs = h('div.tabs', {}, Array.from({ length: 10 }, (_, i) => {
-      const c = i + 1; const lo = (c - 1) * BOSS_EVERY + 1;
-      const locked = lo > front;
-      return h('button.tab', { type: 'button', 'aria-pressed': String(c === chapter), class: locked ? 'locked' : '', onclick: () => { chapter = c; openAdventure(id); } }, c === 10 ? '★ 10' : String(c));
+      const c = i + 1;
+      return h('button.tab', { type: 'button', 'aria-pressed': String(c === chapter), class: (c - 1) * BOSS_EVERY + 1 > front ? 'locked' : '', onclick: () => { chapter = c; map(); } }, c === 10 ? '★ 10' : String(c));
     }));
 
     const nodeBtn = (step, road, label) => {
@@ -87,117 +107,102 @@ export async function adventureScreen(app, params = {}) {
       const kind = stepKind(step);
       return h('button.adv-node', {
         type: 'button', disabled: !open, class: `${kind} ${done ? 'done' : ''} ${step === front ? 'now' : ''}`, style: { '--adv': a.color },
-        'aria-label': `Step ${step}${label ? `, ${label}` : ''}${done ? `, ${done} stars` : ''}`,
-        onclick: () => { unlockAudio(); sfx.tap(); lesson(step, road); },
+        'aria-label': `Step ${step}${label ? `, ${label}` : ''}${kind === 'event' ? ', lab accident' : ''}${done ? `, ${done} stars` : ''}`,
+        onclick: () => { unlockAudio(); sfx.tap(); begin(step, road); },
       }, kind === 'boss' ? sprite(step === STEPS ? 'boss_house' : a.bossSprite, 44) : h('span.num', {}, String(step)),
+        kind === 'event' ? h('span.badge', {}, sprite('goo', 16)) : null,
+        step === front && open ? h('span.token', {}, avatar(p, 30)) : null,
         h('span.stars', {}, done ? '★'.repeat(done) + '☆'.repeat(3 - done) : (open ? (label ?? ' ') : '🔒')));
     };
 
-    const lo = (chapter - 1) * BOSS_EVERY + 1;
     const rows = [];
     for (let step = lo; step < lo + BOSS_EVERY; step++) {
       const roads = roadsAt(step);
-      rows.push(h('div.adv-row', { class: roads.length > 1 ? 'fork' : '' },
+      rows.push(h('div.adv-row', { class: `${roads.length > 1 ? 'fork' : ''} z${step % 2}` },
         roads.length > 1 ? h('div.tiny.dim.center', {}, 'The road forks') : null,
-        h('div.adv-nodes', {}, roads.map((r) => h('div.adv-slot', { class: prog.road[step] && prog.road[step] !== r.id ? 'other' : '' }, nodeBtn(step, r.id, roads.length > 1 ? r.label : stepKind(step) === 'boss' ? ADVENTURES[id].bossNames[chapterOf(step) - 1] : null), roads.length > 1 ? h('div.tiny.dim', {}, r.hint) : null)))));
+        h('div.adv-nodes', {}, roads.map((r) => h('div.adv-slot', { class: prog.road[step] && prog.road[step] !== r.id ? 'other' : '' },
+          nodeBtn(step, r.id, roads.length > 1 ? r.label : stepKind(step) === 'boss' ? a.bossNames[chapterOf(step) - 1] : null),
+          roads.length > 1 ? h('div.tiny.dim', {}, r.hint) : stepKind(step) === 'event' ? h('div.tiny.dim', {}, 'Lab accident') : null)))));
     }
 
-    mount(root,
-      screenHeader(a.name, () => hub()),
+    view(
+      screenHeader(a.name, () => goBack('menu')),
       h('div.row.between', {}, h('span.small.dim', {}, `${a.title} · ${t.steps}/${STEPS} steps · ★ ${t.stars}`), playerBar()),
+      h('div.chapter-banner', {}, h('span.tiny.dim', {}, `Chapter ${chapter}`), h('b', {}, info.name)),
       tabs,
-      h('div.adv-path', { style: { '--adv': a.color } }, rows));
+      sum.due > 0 ? h('button.panel.tight.due-chip', { type: 'button', onclick: () => go('train', { playerId: pid, mode: 'daily' }) }, h('b', {}, `${sum.due} review${sum.due > 1 ? 's' : ''} due`), h('span.tiny.dim', {}, 'They come back inside your steps. Or train them now.')) : null,
+      h('div.adv-path', { style: { '--adv': a.color } }, rows),
+      h('p.tiny.dim.center', {}, 'More adventures are on the way. Science is the first.'));
   }
 
-  /* ------------------------------------------------------------ lesson */
-  async function lesson(step, road) {
+  /* ------------------------------------------------------------ a step */
+  async function begin(step, road) {
     const p = await profile();
+    const m = metaOf(p);
     const lang = p.language ?? 'en';
-    const level = buildLevel(advId, step, road, app.ctx);
-    const kind = level.kind;
+    const attempt = attempts[`${step}:${road}`] ?? 0;
+    const level = buildLevel(advId, step, road, app.ctx, { learn: m.learn, now: Date.now(), attempt, exclude: lastFamilies });
     const a = ADVENTURES[advId];
-    if (kind === 'boss') {
-      mount(root, screenHeader(`Step ${step}`, () => openAdventure(advId)),
-        h('div.panel.boss-intro', { style: { '--adv': a.color } }, sprite(level.boss.sprite, 96), h('h2', {}, level.boss.name), h('p.small', {}, `Seven ${LEVEL_NAME[level.level].toLowerCase()} questions, three hearts, and no second chances.`)),
-        h('button.btn.primary.block', { type: 'button', onclick: () => practise(level, lang, p) }, 'Face the boss'));
+    scene.set(chapterInfo(advId, step).scene, level.phase, { arena: level.kind === 'boss', step });
+    if (level.kind === 'boss') {
+      setMood('tense');
+      const rig = createRig(level.boss.sprite, 128, level.boss.name);
+      view(screenHeader(`Step ${step}`, () => { setMood('calm'); map(); }),
+        h('div.panel.boss-intro', { style: { '--adv': a.color } }, rig.el, h('h2', {}, level.boss.name),
+          h('p.small', {}, `Seven ${LEVEL_NAME[level.target].toLowerCase()} questions, three hearts, no hints and no second chances. ${level.boss.name} throws hex cards at you as the fight goes on. Tap a card in the air to deflect it, or wipe the mess away when it lands.`)),
+        h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', onclick: () => { sfx.boss?.(); play(level, p, m, lang); } }, 'Face the boss')));
       return;
     }
-    let i = 0;
-    const cards = await Promise.all(level.learn.map((qid) => localized(qid, lang)));
-    const answers = level.learn.map((qid, k) => cards[k].choices.find((c) => c.orig === app.ctx.byId.get(qid).answer)?.text);
-    const paint = () => {
-      const c = cards[i];
-      mount(root, screenHeader(`Step ${step} · learn`, () => openAdventure(advId)),
-        h('div.row.between', {}, h('span.tiny.dim', {}, `Fact ${i + 1} of ${cards.length}`), h('span.tag', {}, `${LEVEL_NAME[level.level]}${road === 'risk' ? ' · risky road' : ''}`)),
-        h('div.panel.paper.learn-card', { dir: c.translated && languageOf(lang).rtl ? 'rtl' : null }, h('div.q', {}, c.text), h('div.learn-a', {}, h('span.tiny.amber', {}, 'Answer'), h('b', {}, answers[i])), c.explanation ? h('p.small', {}, c.explanation) : null),
-        h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', onclick: () => { sfx.tap(); if (i + 1 < cards.length) { i++; paint(); } else practise(level, lang, p); } }, i + 1 < cards.length ? 'Next fact' : 'Start practising')));
-    };
-    paint();
+    setMood('calm');
+    play(level, p, m, lang);
   }
 
-  /* ------------------------------------------------------------ practise */
-  async function practise(level, lang, p) {
-    let run = startRun(level, app.ctx);
-    const a = ADVENTURES[advId];
-    let view = null;
-    const loadView = async () => { const it = currentItem(run); view = it ? await localized(it.qid, lang) : null; };
-    await loadView();
-
-    const paint = () => {
-      const it = currentItem(run);
-      if (!it) return finish(level, run, p);
-      const q = app.ctx.byId.get(it.qid);
-      const rtl = view.translated && languageOf(lang).rtl ? 'rtl' : null;
-      const shown = it.order.map((orig, display) => ({ display, orig, text: view.choices.find((c) => c.orig === orig)?.text ?? q.choices[orig] }));
-      const picked = run.picked;
-      const total = run.queue.length;
-      mount(root,
-        h('div.topbar', {}, h('button.btn.icon.ghost.back', { type: 'button', 'aria-label': 'Leave', onclick: () => { sfx.tap(); openAdventure(advId); } }, '✕'),
-          h('div.progress.grow', {}, h('i', { style: { width: `${(run.idx / total) * 100}%`, background: a.color } })), bulbs(run.hearts, level.hearts)),
-        h('div.row.between', {}, h('span.tiny.dim', {}, level.kind === 'boss' ? `${level.boss.name} · ${run.idx + 1} of ${total}` : `Question ${run.idx + 1} of ${total}${it.retry ? ' · second chance' : ''}`), h('span.tag', {}, LEVEL_NAME[level.level])),
-        h('div.panel.paper.qcard', { dir: rtl }, h('div.q', {}, view.text)),
-        h('div.choices', { dir: rtl }, shown.map((c) => h('button.choice', {
-          type: 'button', disabled: Boolean(picked), 'data-display': c.display,
-          class: picked ? (c.display === picked.answerDisplay ? 'right' : c.display === picked.display ? 'wrong' : '') : '',
-          onclick: () => choose(c.display),
-        }, h('span.key', {}, LETTERS[c.display]), c.text))),
-        picked ? h('div.panel.tight', { class: picked.correct ? 'good-note' : 'warn' }, h('b', {}, picked.correct ? 'Right.' : 'Not quite.'), view.explanation ? h('p.small', {}, view.explanation) : null,
-          lang !== 'en' && !view.translated ? h('p.tiny.amber', {}, `No ${languageOf(lang).name} translation was available, so this one is in English.`) : null) : null,
-        picked ? h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', onclick: next }, run.hearts <= 0 ? 'See result' : 'Continue')) : null);
-    };
-    const choose = (display) => {
-      unlockAudio();
-      run = answerRun(run, display, app.ctx);
-      if (run.picked.correct) { sfx.correct(); haptic('tap'); } else { sfx.wrong(); haptic('warn'); }
-      paint();
-    };
-    const next = async () => { sfx.tap(); run = advanceRun(run); await loadView(); paint(); };
-    paint();
+  async function play(level, p, m, lang) {
+    const run = startRun(level, app.ctx);
+    await playRun({
+      app, view, scene, run, lang, color: ADVENTURES[advId].color, player: p, localize, learnItems: m.learn.items,
+      boss: level.boss, event: level.kind === 'event',
+      label: (it, r) => (level.kind === 'boss' ? `${level.boss.name} · ${it.retry ? 'another angle' : `${Math.min(level.questions.length, r.idx + 1)} of ${level.questions.length}`}` : `Step ${level.step} · ${chapterInfo(advId, level.step).name}${it.retry ? ' · another angle' : ''}`),
+      onExit: () => { setMood('calm'); map(); },
+      onEnd: (done) => finish(level, done),
+    });
   }
 
   /* ------------------------------------------------------------ result */
-  async function finish(level, run, p) {
-    const a = ADVENTURES[advId];
+  async function finish(level, run) {
+    setMood('calm');
+    const now = Date.now();
+    lastFamilies = run.queue.map((x) => x.family);
+    const learn = await app.repo.recordLearning(pid, run.answers, { now, kind: 'adventure', offsetMin: offsetMin() });
+    const summary = learningSummary(run, learn, now);
+    const remember = rememberPanel(app, run);
+    const deflectLine = run.thrown > 0 ? h('p.tiny.dim', {}, `Hex cards: ${run.deflected} deflected, ${run.thrown - run.deflected} landed.`) : null;
+
     if (run.status === 'lost') {
       sfx.wrong();
-      mount(root, screenHeader('Out of hearts', () => openAdventure(advId)),
-        h('div.panel.warn', {}, sprite('bulb_off', 48), h('h2', {}, level.kind === 'boss' ? `${level.boss.name} wins this time` : 'No hearts left'), h('p.small', {}, 'The facts are still fresh. Go again.')),
-        h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', onclick: () => lesson(level.step, level.road) }, 'Try again'), h('button.btn.block', { type: 'button', onclick: () => openAdventure(advId) }, 'Back to the path')));
+      attempts[`${level.step}:${level.road}`] = (attempts[`${level.step}:${level.road}`] ?? 0) + 1;
+      view(screenHeader('Out of hearts', () => map()),
+        h('div.panel.warn', {}, sprite('bulb_off', 48), h('h2', {}, level.kind === 'boss' ? `${level.boss.name} wins this time` : 'No hearts left'),
+          h('p.small', {}, 'What you missed is already scheduled to come back. The next try starts with it, asked another way.')),
+        remember, summary, deflectLine,
+        h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', onclick: () => begin(level.step, level.road) }, 'Try again'), h('button.btn.block', { type: 'button', onclick: () => map() }, 'Back to the path')));
       return;
     }
     const res = await app.repo.completeAdventureStep(pid, advId, level.step, level.road, run.stars);
     sfx.win(); haptic('big'); confetti({ count: level.kind === 'boss' ? 90 : 45 });
     if (level.kind === 'boss') { sfx.jackpot?.(); stamp('BOSS DOWN!', { kind: 'jackpot' }); }
     const nextStep = level.step < STEPS ? level.step + 1 : null;
-    mount(root, screenHeader(`Step ${level.step} complete`, () => openAdventure(advId)),
-      h('div.panel.center', {}, h('div.big-stars', {}, '★'.repeat(run.stars) + '☆'.repeat(3 - run.stars)), h('p.small', {}, `${run.right} right, ${run.wrong} wrong · ${run.hearts} heart${run.hearts === 1 ? '' : 's'} left`),
+    view(screenHeader(`Step ${level.step} complete`, () => map()),
+      h('div.panel.center', {}, h('div.big-stars', {}, '★'.repeat(run.stars) + '☆'.repeat(3 - run.stars)),
+        h('p.small', {}, `${run.right} right, ${run.wrong} wrong · ${run.hearts} heart${run.hearts === 1 ? '' : 's'} left`),
         res.first ? h('p', {}, h('b.amber', {}, `+${res.xp.gained} XP`), res.xp.after > res.xp.before ? ` · level ${res.xp.after}!` : '') : h('p.small.dim', {}, 'Already cleared: XP is paid once, stars keep your best.'),
         res.pack ? h('p.good', {}, `A ${PACKS[res.pack].name} is waiting in Hexes.`) : null,
-        level.step === STEPS ? h('p.amber', {}, `${a.name} is complete.`) : null),
-      h('div.stick-bottom', {}, nextStep ? h('button.btn.primary.block', { type: 'button', onclick: () => { chapter = chapterOf(nextStep); const roads = roadsAt(nextStep); if (roads.length > 1) openAdventure(advId); else lesson(nextStep, roads[0].id); } }, 'Next step') : null,
-        h('button.btn.block', { type: 'button', onclick: () => { chapter = chapterOf(Math.min(STEPS, level.step)); openAdventure(advId); } }, 'Back to the path')));
+        level.step === STEPS ? h('p.amber', {}, `${ADVENTURES[advId].name} is complete.`) : null, deflectLine),
+      summary, remember,
+      h('div.stick-bottom', {}, nextStep ? h('button.btn.primary.block', { type: 'button', onclick: () => { chapter = chapterOf(nextStep); const roads = roadsAt(nextStep); if (roads.length > 1) map(); else begin(nextStep, roads[0].id); } }, 'Next step') : null,
+        h('button.btn.block', { type: 'button', onclick: () => { chapter = chapterOf(Math.min(STEPS, level.step)); map(); } }, 'Back to the path')));
   }
 
-  if (advId && ADVENTURES[advId]) await openAdventure(advId); else await hub();
+  await map();
   return root;
 }

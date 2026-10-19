@@ -10,6 +10,7 @@
 import { isLanguage, DEFAULT_LANGUAGE } from '../i18n/languages.js';
 import { SCHEMA_VERSION, DATA_STORES } from './schema.js';
 import { levelOf, cleanWardrobe, buyCheck, COSMETICS } from '../engine/cosmetics.js';
+import { applyAnswers } from '../engine/learning.js';
 import { metaOf, mergeMeta, daysBetween, cleanFriends, MAX_FRIENDS } from './meta.js';
 import { newFriendCode, newFriendSecret, normalizeFriendCode, FRIEND_CODE_RE, buildCard, cleanCard } from '../stats/card.js';
 import { HEXES, PACKS, openPack, FORGE_COST, HEX_NUMBERS } from '../engine/hexes.js';
@@ -376,6 +377,19 @@ export async function createRepo(storage, { now = Date.now, uuid = defaultUuid, 
       profile.updatedAt = now();
       await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
       return { first, stars: mine.done[step], xp, pack };
+    },
+
+    /**
+     * Save the answers of a training session into the player's learning record (spaced-repetition state).
+     * `answers`: [{ id: conceptId, correct, hints, confidence, level, wrongText }]. Local to this device; no cloud sync.
+     */
+    async recordLearning(id, answers, { now: at = now(), kind = 'train', offsetMin = 0 } = {}) {
+      const profile = await requireProfile(id);
+      const m = metaOf(profile);
+      profile.learn = applyAnswers(m.learn, (Array.isArray(answers) ? answers : []).filter((a) => a && typeof a.id === 'string'), at, { kind, offsetMin });
+      profile.updatedAt = now();
+      await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
+      return profile.learn;
     },
 
     /** Buy a wardrobe item with dust. */

@@ -3,6 +3,7 @@
 import { HEXES, STARTER_HEXES, PACKS, HEX_NUMBERS } from '../engine/hexes.js';
 import { levelOf, cleanWardrobe } from '../engine/cosmetics.js';
 import { ADVENTURE_IDS, cleanProgress } from '../engine/adventure.js';
+import { cleanLearn, mergeLearn } from '../engine/learning.js';
 import { FRIEND_CODE_RE, cleanCard } from '../stats/card.js';
 
 export const MAX_FRIENDS = 50;
@@ -36,7 +37,7 @@ export function metaOf(p) {
   const xpLog = (Array.isArray(p?.xpLog) ? p.xpLog : []).filter((x) => typeof x === 'string').map((x) => x.slice(0, 64)).slice(-30);
   const cos = cleanWardrobe(p?.cos, levelOf(xp).level);
   const adv = Object.fromEntries(ADVENTURE_IDS.map((id) => [id, cleanProgress(p?.adv?.[id])]));
-  return { hexes: { owned, deck, dust }, packs, daily, friendCode, friendSecret, friends: cleanFriends(p?.friends), xp, xpLog, cos, adv };
+  return { hexes: { owned, deck, dust }, packs, daily, friendCode, friendSecret, friends: cleanFriends(p?.friends), xp, xpLog, cos, adv, learn: cleanLearn(p?.learn) };
 }
 
 /** Day keys look like "2026-10-17" (local date). */
@@ -63,6 +64,7 @@ export function mergeMeta(mine, theirs, theirsIsNewer) {
       return [id, cleanProgress({ done, road: { ...b.adv[id].road, ...a.adv[id].road } })];
     })),
     xpLog: [...new Set([...a.xpLog, ...b.xpLog])].slice(-30),
+    learn: mergeLearn(a.learn, b.learn),
     cos: cleanWardrobe({ owned: [...a.cos.owned, ...b.cos.owned], equipped: theirsIsNewer ? b.cos.equipped : a.cos.equipped }, levelOf(Math.max(a.xp, b.xp)).level),
     friendCode: a.friendCode || b.friendCode,
     friendSecret: a.friendCode ? a.friendSecret : b.friendSecret,

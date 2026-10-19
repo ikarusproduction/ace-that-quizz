@@ -2,9 +2,12 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { makeContext } from '../src/engine/game.js';
 import {
-  ADVENTURE_IDS, STEPS, stepKind, roadsAt, levelForStep, buildLevel, startRun, answerRun, advanceRun, currentItem,
-  cleanProgress, frontier, isUnlocked, xpForStep, packForStep, poolFor,
+  ADVENTURE_IDS, STEPS, stepKind, roadsAt, levelForStep, buildLevel, startRun,
+  cleanProgress, frontier, isUnlocked, xpForStep, packForStep, poolFor, OPEN_ADVENTURE_IDS,
 } from '../src/engine/adventure.js';
+import { useHint, hintsLeft, setConfidence, answerRun, advanceRun, currentItem } from '../src/engine/practice.js';
+import { emptyLearn, applyAnswers } from '../src/engine/learning.js';
+import { HEXES } from '../src/engine/hexes.js';
 import { metaOf, mergeMeta } from '../src/storage/meta.js';
 import { realBank } from './helpers.js';
 
@@ -25,24 +28,76 @@ test('difficulty climbs with the step and the risky road is one level harder', (
   assert.equal(levelForStep(90, 'risk'), 3);
 });
 
-test('every adventure has enough questions with full ladders and builds all 100 steps', async () => {
+test('steps: a boss every tenth, a lab accident every fifth, forks at the third and sixth', () => {
+  assert.equal(stepKind(5), 'event'); assert.equal(stepKind(15), 'event'); assert.equal(stepKind(100), 'boss');
+});
+
+test('only the Science adventure is open for now', () => {
+  assert.deepEqual(OPEN_ADVENTURE_IDS, ['science']);
+});
+
+test('every adventure has enough questions with full ladders; Science builds all 100 steps with no lesson cards', async () => {
   const c = await ctx();
-  for (const adv of ADVENTURE_IDS) {
-    assert.ok(poolFor(adv, c).length >= 25, `${adv} pool`);
-    for (let step = 1; step <= STEPS; step++) for (const r of roadsAt(step)) {
-      const lv = buildLevel(adv, step, r.id, c);
-      assert.equal(lv.questions.length, lv.kind === 'boss' ? 7 : 5);
-      assert.equal(new Set(lv.questions.map((id) => c.byId.get(id).family)).size, lv.questions.length, 'no repeat inside a step');
-      for (const id of lv.questions) assert.equal(c.byId.get(id).level, lv.level);
-      assert.equal(lv.learn.length, lv.kind === 'boss' ? 0 : 3);
-    }
+  for (const adv of ADVENTURE_IDS) assert.ok(poolFor(adv, c).length >= 25, `${adv} pool`);
+  assert.ok(poolFor('science', c).length >= 80, 'Science draws on many subjects');
+  for (let step = 1; step <= STEPS; step++) for (const r of roadsAt(step)) {
+    const lv = buildLevel('science', step, r.id, c);
+    assert.equal(lv.questions.length, lv.kind === 'boss' ? 7 : 5);
+    assert.equal(new Set(lv.questions.map((x) => x.family)).size, lv.questions.length, 'no repeated concept inside a step');
+    assert.equal(lv.learn, undefined, 'no learn cards any more');
+    assert.equal(lv.hexes.length, lv.questions.length);
+    for (const x of lv.questions) { assert.ok(c.byId.get(x.qid)); assert.equal(c.byId.get(x.qid).family, x.family); assert.equal(c.byId.get(x.qid).level, x.level); }
   }
 });
 
-test('levels are deterministic', async () => {
+test('levels are deterministic and a new attempt asks something fresh', async () => {
   const c = await ctx();
-  assert.deepEqual(buildLevel('history', 7, 'main', c), buildLevel('history', 7, 'main', c));
-  assert.notDeepEqual(buildLevel('history', 3, 'safe', c).questions, buildLevel('history', 3, 'risk', c).questions);
+  assert.deepEqual(buildLevel('science', 7, 'main', c), buildLevel('science', 7, 'main', c));
+  assert.notDeepEqual(buildLevel('science', 3, 'safe', c).questions, buildLevel('science', 3, 'risk', c).questions);
+  assert.notDeepEqual(buildLevel('science', 7, 'main', c).questions.map((x) => x.family), buildLevel('science', 7, 'main', c, { attempt: 1 }).questions.map((x) => x.family));
+});
+
+test('the chapter focus supplies the new concepts and the previous step is excluded', async () => {
+  const c = await ctx();
+  const lv = buildLevel('science', 1, 'main', c);
+  const subs = lv.questions.map((x) => c.byId.get(x.qid).subcategory);
+  assert.ok(subs.every((x) => ['element-symbol', 'periodic-table', 'chemistry'].includes(x)), `${subs}`);
+  const next = buildLevel('science', 2, 'main', c, { exclude: lv.questions.map((x) => x.family) });
+  assert.ok(next.questions.every((x) => !lv.questions.some((y) => y.family === x.family)));
+});
+
+test('over many steps concepts come back in a different formulation, not the same question', async () => {
+  const c = await ctx();
+  let learn = emptyLearn(); let now = Date.UTC(2026, 9, 19, 10);
+  const asked = new Map(); let prev = [];
+  for (let step = 1; step <= 40; step++) {
+    const road = roadsAt(step)[0].id;
+    const lv = buildLevel('science', step, road, c, { learn, now, exclude: prev });
+    for (const x of lv.questions) { if (!asked.has(x.family)) asked.set(x.family, []); asked.get(x.family).push({ qid: x.qid, step }); }
+    learn = applyAnswers(learn, lv.questions.map((x) => ({ id: x.family, correct: true, hints: 0, level: x.level })), now);
+    prev = lv.questions.map((x) => x.family);
+    now += 3 * 3600_000; // three hours per step
+  }
+  assert.ok(asked.size >= 80, `variety: ${asked.size} concepts in 40 steps`);
+  // the very same question never returns within ten steps
+  for (const [fam, list] of asked) for (let i = 1; i < list.length; i++) {
+    if (list[i].qid === list[i - 1].qid) assert.ok(list[i].step - list[i - 1].step >= 10, `${fam} repeated too soon`);
+  }
+});
+
+test('bosses throw more, nastier hexes as the fight goes on; nothing is thrown at the first question', async () => {
+  const c = await ctx();
+  const lv = buildLevel('science', 60, 'boss', c);
+  assert.deepEqual(lv.hexes[0], []);
+  const counts = lv.hexes.map((l) => l.length);
+  assert.ok(counts.at(-1) >= counts[1], `${counts}`);
+  assert.ok(counts.at(-1) >= 2);
+  assert.ok(lv.hexes.flat().every((id) => HEXES[id]?.fx?.length));
+  const early = buildLevel('science', 10, 'boss', c).hexes.flat();
+  assert.ok(!early.includes('flip_table'), 'no flipped table in the first chapter');
+  const ev = buildLevel('science', 5, 'main', c);
+  assert.equal(ev.kind, 'event'); assert.equal(ev.hexes.flat().length, 2);
+  assert.equal(buildLevel('science', 4, 'main', c).hexes.flat().length, 0);
 });
 
 function play(run, c, pattern) {
@@ -56,25 +111,46 @@ function play(run, c, pattern) {
   return r;
 }
 
-test('a perfect run wins with three stars', async () => {
+test('a perfect run wins with three stars and records every answer for the learning engine', async () => {
   const c = await ctx();
   const r = play(startRun(buildLevel('science', 1, 'main', c), c), c, () => true);
   assert.equal(r.status, 'won'); assert.equal(r.stars, 3); assert.equal(r.hearts, 3);
+  assert.equal(r.answers.length, 5); assert.ok(r.answers.every((a) => a.correct && a.hints === 0 && a.id && a.level));
 });
 
-test('a wrong answer costs a heart and the question comes back once', async () => {
+test('a wrong answer costs a heart and the concept comes back once in another formulation', async () => {
   const c = await ctx();
   const r = play(startRun(buildLevel('science', 1, 'main', c), c), c, (i) => i !== 0);
   assert.equal(r.status, 'won'); assert.equal(r.hearts, 2); assert.equal(r.stars, 2); assert.equal(r.queue.length, 6);
+  const [first, retry] = [r.queue[0], r.queue[5]];
+  assert.equal(retry.family, first.family); assert.notEqual(retry.level, first.level); assert.notEqual(retry.qid, first.qid);
+  assert.equal(r.answers[0].wrongText.length > 0, true);
 });
 
-test('three misses lose the lesson; a boss has no second chances', async () => {
+test('three misses lose the lesson; a boss has no second chances and no hints', async () => {
   const c = await ctx();
   const lost = play(startRun(buildLevel('science', 1, 'main', c), c), c, () => false);
   assert.equal(lost.status, 'lost');
   const boss = startRun(buildLevel('science', 10, 'boss', c), c);
+  assert.equal(useHint(boss, c), boss);
   const r = play(boss, c, (i) => i !== 2);
   assert.equal(r.queue.length, 7); assert.equal(r.status, 'won'); assert.equal(r.stars, 2);
+});
+
+test('hints remove wrong answers, are recorded, and a removed answer cannot be picked', async () => {
+  const c = await ctx();
+  let r = startRun(buildLevel('science', 1, 'main', c), c);
+  r = useHint(r, c); r = useHint(r, c);
+  const it = currentItem(r); const q = c.byId.get(it.qid);
+  assert.equal(it.hints, 2); assert.equal(it.elim.length, 2); assert.ok(!it.elim.includes(q.answer));
+  assert.equal(hintsLeft(r, c), 0);
+  assert.equal(useHint(r, c), r);
+  const elimDisplay = it.order.indexOf(it.elim[0]);
+  assert.equal(answerRun(r, elimDisplay, c), r);
+  r = setConfidence(r, 'guess');
+  r = answerRun(r, it.order.indexOf(q.answer), c);
+  assert.deepEqual([r.answers[0].hints, r.answers[0].confidence, r.answers[0].correct], [2, 'guess', true]);
+  assert.equal(r.hearts, 3);
 });
 
 test('progress unlocks in order and cleaning drops junk', () => {

@@ -25,7 +25,19 @@ Every finished game gives XP (more for correct answers, wins, bosses and streaks
 
 ## Adventure
 
-Five themed paths (The Lab, The Archive, The Cipher, The Atlas, The Wild), each of 100 steps. A step is three fact cards to learn, then five questions with three hearts; a miss costs a heart and the question returns once at the end. Some steps fork into a safe road and a risky road (one level harder, 1.5× XP), and every tenth step is a boss with seven questions and no second chances. Difficulty climbs with the step by using the three versions of each question. First clears pay XP; boss clears also pay a Silver Pack (a Gold one for step 100). Rules and level building live in `src/engine/adventure.js`, progress in `profile.adv`, the screens in `src/ui/screens/adventure.js`.
+One adventure is open for now: **The Lab** (Science), 100 steps in ten chapters, each with its own animated backdrop (bench, greenhouse, clinic, workshop, observatory, reactor, fear lab, the deep, high orbit, the paradox); the light and hue shift from step to step, and the floating props pop when touched. There are no lesson cards: a step is five questions (seven for a boss) with three hearts, picked by the learning engine (see below). A miss costs a heart and the concept returns once at the end in a different formulation. Hints (two per question, each removes a wrong answer) and a "how sure?" tap are optional and are recorded. Some steps fork into a safe and a risky road (one level harder, 1.5× XP). Every fifth step is a **lab accident** (a couple of hex cards are thrown at you) and every tenth is a **boss** that throws more and nastier hex cards as the fight goes on (slime, ink, blur, quake, and from chapter 3 a flipped table). Tap a card in the air to deflect it; if it lands, wipe the ink, tap the blur, or take the quake. Hexes only affect how the screen looks: they never change an answer, a score or the review schedule, and nothing is timed. First clears pay XP; boss clears also pay a Silver Pack (Gold for step 100). The other four adventures (The Archive, The Cipher, The Atlas, The Wild) are defined in `src/engine/adventure.js` but closed.
+
+Rules and level building: `src/engine/adventure.js`. The run state machine (hints, confidence, retry, hearts): `src/engine/practice.js`. Screens: `src/ui/screens/adventure.js`, `src/ui/practice.js` (question player and arena), `src/ui/scenes.js` (backdrops). Progress: `profile.adv`.
+
+## Learning engine and Train
+
+`src/engine/learning.js` is a pure, tested module (no storage, no UI, no clock reads). A **concept** is a question family; its three difficulty versions are its formulations.
+
+- **Scheduler** (simplified SM-2 with learning steps): states New, Learning, Relearning, Review, Provisionally mastered. Per concept it keeps last review, due date (UTC epoch ms), interval, ease, successful recalls, streak, lapses, hint-assisted successes, recent errors, per-formulation counts and the wrong answers picked again and again. Credit: independent recall 1, "guess" 0.7, one hint 0.55, two hints 0.3 (no schedule progress), wrong 0. A wrong answer is a lapse that collapses the interval and returns the concept within minutes and again the next day. A success sooner than 4 hours after the last review does not count, so repeating a question cannot build mastery; a late recall earns more growth than an early one. Provisional mastery needs three delayed recalls, a 21-day interval and two formulations; one lapse removes it. It is never a certificate. Every number is in `LEARNING` and can be tuned. **Speed is never used.**
+- **Selection** (`selectSession`): overdue and relearning items first, then fragile ones, new concepts at a configurable ratio, occasional maintenance of mastered ones; one appearance per concept per session, category spread, deterministic per seed, graceful with small pools. The formulation rotates (not the one just asked, not one already answered right twice).
+- **Train** (menu): Daily Training, Focused Training (subject and subcategory), Weakness Hunter, Mastery Challenge (hardest formulations, no hints, kept in its own history, never certifies), Review Expedition (review, new, contrast and a boss with shared hearts). Feedback shows the answer, the explanation, a note when you keep picking the same wrong answer or were sure and wrong, and "same idea, another angle" from another formulation.
+- **Persistence**: `profile.learn` (versioned, cleaned on every read, merged by most recent review when two copies meet). Local to this device and profile; nothing is synced to a cloud. Existing profiles get an empty record and nothing else changes. News questions only count while fresh and any question can carry an `expires` date.
+- **Not covered yet**: free-recall (typed) questions, curated misconception data per question (only repeated wrong picks are detected), prerequisite links between concepts, and deeper "learn more" text. Variants are hand-written and unreviewed. A theme with few concepts will repeat; more questions are the real fix.
 
 ## Stakes and difficulty ladders
 
@@ -42,9 +54,10 @@ Ladders live in `data/questions/variants/<category>.json` and are listed under `
 
 ## Test
 ```
-npm test                    # 170 unit tests: engine, scoring, storage, migrations, stats
+npm test                    # unit tests: engine, learning, scoring, storage, migrations, stats
 npm run validate:questions  # content checks
 python3 tests/e2e/versus.py # browser smoke test (Python Playwright + Chromium)
+python3 tests/e2e/adventure.py && python3 tests/e2e/train.py
 python3 tests/e2e/online.py # three phones through the relay
 ```
 
