@@ -106,6 +106,550 @@
    ]
   },
   {
+   "id": "arc-017",
+   "ask": {
+    "1": "Democracy city",
+    "2": "Reformer",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which Athenian reformer introduced the democratic reforms of 508 BC?",
+     "choices": [
+      "Cleisthenes",
+      "Solon",
+      "Pericles",
+      "Draco"
+     ],
+     "answer": 0,
+     "explanation": "Cleisthenes reorganised Athens into tribes and demes, creating a basis for democracy."
+    },
+    {
+     "level": 3,
+     "question": "Cleisthenes' democratic reforms in Athens date to",
+     "choices": [
+      "461 BC",
+      "508 BC",
+      "431 BC",
+      "594 BC"
+     ],
+     "answer": 1,
+     "explanation": "Cleisthenes' reforms are usually dated to 508 or 507 BC; Solon's came in 594 BC."
+    }
+   ]
+  },
+  {
+   "id": "arc-018",
+   "ask": {
+    "1": "God honoured",
+    "2": "Site",
+    "3": "Modern Games"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Where were the ancient Olympic Games held?",
+     "choices": [
+      "Delphi",
+      "Olympia",
+      "Corinth",
+      "Athens"
+     ],
+     "answer": 1,
+     "explanation": "Olympia, in the western Peloponnese, hosted the Games."
+    },
+    {
+     "level": 3,
+     "question": "The first modern Olympic Games were held in Athens in",
+     "choices": [
+      "1904",
+      "1892",
+      "1900",
+      "1896"
+     ],
+     "answer": 3,
+     "explanation": "Pierre de Coubertin's revival opened in Athens in April 1896."
+    }
+   ]
+  },
+  {
+   "id": "arc-019",
+   "ask": {
+    "1": "Conqueror",
+    "2": "Tutor",
+    "3": "Death"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Who was Alexander the Great's tutor?",
+     "choices": [
+      "Plato",
+      "Homer",
+      "Socrates",
+      "Aristotle"
+     ],
+     "answer": 3,
+     "explanation": "Philip II hired Aristotle to teach his son at Mia."
+    },
+    {
+     "level": 3,
+     "question": "Alexander the Great died in Babylon in",
+     "choices": [
+      "331 BC",
+      "300 BC",
+      "336 BC",
+      "323 BC"
+     ],
+     "answer": 3,
+     "explanation": "Alexander died in Babylon in June 323 BC, aged 32."
+    }
+   ]
+  },
+  {
+   "id": "arc-020",
+   "ask": {
+    "1": "Goddess",
+    "2": "Hill",
+    "3": "Construction"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "On which hill does the Parthenon stand?",
+     "choices": [
+      "The Palatine",
+      "The Capitoline",
+      "The Areopagus",
+      "The Acropolis"
+     ],
+     "answer": 3,
+     "explanation": "The Parthenon crowns the Acropolis of Athens."
+    },
+    {
+     "level": 3,
+     "question": "Construction of the Parthenon began in",
+     "choices": [
+      "490 BC",
+      "447 BC",
+      "338 BC",
+      "404 BC"
+     ],
+     "answer": 1,
+     "explanation": "Work began in 447 BC under Pericles and the main building was finished by 438 BC."
+    }
+   ]
+  },
+  {
+   "id": "arc-021",
+   "ask": {
+    "1": "Spartan king",
+    "2": "Enemy",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Against which empire was the stand at Thermopylae made?",
+     "choices": [
+      "Carthage",
+      "Rome",
+      "Persia",
+      "Macedon"
+     ],
+     "answer": 2,
+     "explanation": "The Greeks resisted Xerxes' Persian invasion."
+    },
+    {
+     "level": 3,
+     "question": "The battle of Thermopylae took place in",
+     "choices": [
+      "479 BC",
+      "490 BC",
+      "431 BC",
+      "480 BC"
+     ],
+     "answer": 3,
+     "explanation": "Thermopylae and the sea fight at Artemisium were in 480 BC; Plataea followed in 479 BC."
+    }
+   ]
+  },
+  {
+   "id": "arc-022",
+   "ask": {
+    "1": "Epic poems",
+    "2": "Hero",
+    "3": "Date of Iliad"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Whose anger is the opening theme of the Iliad?",
+     "choices": [
+      "Odysseus",
+      "Achilles",
+      "Agamemnon",
+      "Hector"
+     ],
+     "answer": 1,
+     "explanation": "The Iliad begins with the wrath of Achilles."
+    },
+    {
+     "level": 3,
+     "question": "In which century BC is the Iliad usually thought to have been composed?",
+     "choices": [
+      "The 12th century BC",
+      "The 6th century BC",
+      "The 4th century BC",
+      "The 8th century BC"
+     ],
+     "answer": 3,
+     "explanation": "Scholars generally date Homeric epics to the 8th century BC."
+    }
+   ]
+  },
+  {
+   "id": "arc-023",
+   "ask": {
+    "1": "Plato's teacher",
+    "2": "School",
+    "3": "Death"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Who founded the Academy in Athens?",
+     "choices": [
+      "Aristotle",
+      "Epicurus",
+      "Plato",
+      "Socrates"
+     ],
+     "answer": 2,
+     "explanation": "Plato founded the Academy in about 387 BC."
+    },
+    {
+     "level": 3,
+     "question": "Socrates was put to death in Athens in",
+     "choices": [
+      "399 BC",
+      "430 BC",
+      "323 BC",
+      "350 BC"
+     ],
+     "answer": 0,
+     "explanation": "Socrates was tried and executed by hemlock in 399 BC."
+    }
+   ]
+  },
+  {
+   "id": "arc-024",
+   "ask": {
+    "1": "After Alexander",
+    "2": "First battle",
+    "3": "Last battle"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which of these Persian War battles was fought first?",
+     "choices": [
+      "Marathon",
+      "Thermopylae",
+      "Salamis",
+      "Plataea"
+     ],
+     "answer": 0,
+     "explanation": "Marathon was fought in 490 BC, before the invasion of 480 BC."
+    },
+    {
+     "level": 3,
+     "question": "Which of these battles was fought last?",
+     "choices": [
+      "Plataea",
+      "Thermopylae",
+      "Marathon",
+      "Salamis"
+     ],
+     "answer": 0,
+     "explanation": "Plataea in 479 BC ended the Persian invasion of Greece."
+    }
+   ]
+  },
+  {
+   "id": "arc-009",
+   "ask": {
+    "1": "Bronze recipe",
+    "2": "What followed",
+    "3": "Collapse"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which age followed the Bronze Age in the Near East and Europe?",
+     "choices": [
+      "The Copper Age",
+      "The Iron Age",
+      "The Steel Age",
+      "The Neolithic"
+     ],
+     "answer": 1,
+     "explanation": "Iron working spread after about 1200 BC and gave its name to the Iron Age."
+    },
+    {
+     "level": 3,
+     "question": "The Late Bronze Age collapse around the eastern Mediterranean is dated to about",
+     "choices": [
+      "1200 BC",
+      "1500 BC",
+      "900 BC",
+      "1000 BC"
+     ],
+     "answer": 0,
+     "explanation": "Many palaces and cities fell between about 1200 and 1150 BC."
+    }
+   ]
+  },
+  {
+   "id": "arc-010",
+   "ask": {
+    "1": "Minoan island",
+    "2": "Palace",
+    "3": "Excavation"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which palace on Crete is linked to the legend of the Minotaur?",
+     "choices": [
+      "Pylos",
+      "Mycenae",
+      "Troy",
+      "Knossos"
+     ],
+     "answer": 3,
+     "explanation": "Knossos, with its maze of rooms, inspired the labyrinth myth."
+    },
+    {
+     "level": 3,
+     "question": "Arthur Evans began excavating Knossos in",
+     "choices": [
+      "1870",
+      "1850",
+      "1900",
+      "1925"
+     ],
+     "answer": 2,
+     "explanation": "Evans started work at Knossos in 1900 and reconstructed parts of the palace."
+    }
+   ]
+  },
+  {
+   "id": "arc-011",
+   "ask": {
+    "1": "Hittite lands",
+    "2": "Battle",
+    "3": "Treaty"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "At which battle did Ramesses II fight the Hittites around 1274 BC?",
+     "choices": [
+      "Kadesh",
+      "Troy",
+      "Marathon",
+      "Actium"
+     ],
+     "answer": 0,
+     "explanation": "Kadesh, in Syria, was a large chariot battle between Egypt and the Hittites."
+    },
+    {
+     "level": 3,
+     "question": "The Egyptian-Hittite peace treaty is generally dated to about",
+     "choices": [
+      "1274 BC",
+      "1350 BC",
+      "1259 BC",
+      "1180 BC"
+     ],
+     "answer": 2,
+     "explanation": "The treaty between Ramesses II and Hattusili III is usually dated to about 1259 BC."
+    }
+   ]
+  },
+  {
+   "id": "arc-012",
+   "ask": {
+    "1": "Troy today",
+    "2": "Excavator",
+    "3": "Start"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which amateur archaeologist excavated Hisarlik from the 1870s?",
+     "choices": [
+      "Heinrich Schliemann",
+      "Arthur Evans",
+      "Howard Carter",
+      "Austen Layard"
+     ],
+     "answer": 0,
+     "explanation": "Schliemann dug at Hisarlik, convinced it was Homer's Troy."
+    },
+    {
+     "level": 3,
+     "question": "Schliemann's major excavation at Hisarlik began in",
+     "choices": [
+      "1891",
+      "1851",
+      "1871",
+      "1901"
+     ],
+     "answer": 2,
+     "explanation": "Schliemann began his main campaign at Hisarlik in 1871, after a trial in 1870."
+    }
+   ]
+  },
+  {
+   "id": "arc-013",
+   "ask": {
+    "1": "Lion Gate city",
+    "2": "Script",
+    "3": "Decipherment"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which Mycenaean script was shown to write early Greek?",
+     "choices": [
+      "Linear A",
+      "Hieroglyphic Luwian",
+      "Linear B",
+      "Cuneiform"
+     ],
+     "answer": 2,
+     "explanation": "Linear B tablets record palace accounts in an early form of Greek."
+    },
+    {
+     "level": 3,
+     "question": "In which year was Linear B deciphered as Greek?",
+     "choices": [
+      "1952",
+      "1922",
+      "1972",
+      "1900"
+     ],
+     "answer": 0,
+     "explanation": "Michael Ventris announced his decipherment in 1952."
+    }
+   ]
+  },
+  {
+   "id": "arc-014",
+   "ask": {
+    "1": "Where",
+    "2": "When raised",
+    "3": "Sarsen uprights"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Roughly when were Stonehenge's large sarsen stones raised?",
+     "choices": [
+      "About 2500 BC",
+      "About 500 BC",
+      "About 1000 BC",
+      "About 4500 BC"
+     ],
+     "answer": 0,
+     "explanation": "The big sarsens were set up around 2500 BC, after earlier phases of the monument."
+    },
+    {
+     "level": 3,
+     "question": "How many large sarsen uprights formed the outer circle?",
+     "choices": [
+      "40",
+      "30",
+      "50",
+      "25"
+     ],
+     "answer": 1,
+     "explanation": "The outer circle had 30 upright sarsens, topped by lintels."
+    }
+   ]
+  },
+  {
+   "id": "arc-015",
+   "ask": {
+    "1": "Law king",
+    "2": "Principle",
+    "3": "Reign start"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which principle is Hammurabi's code best known for?",
+     "choices": [
+      "Equal votes for all",
+      "An eye for an eye",
+      "Trial by jury",
+      "Free schooling"
+     ],
+     "answer": 1,
+     "explanation": "The code applied proportional punishment, as in \"an eye for an eye\"."
+    },
+    {
+     "level": 3,
+     "question": "Hammurabi's reign is conventionally said to have begun about",
+     "choices": [
+      "1500 BC",
+      "1792 BC",
+      "1250 BC",
+      "2000 BC"
+     ],
+     "answer": 1,
+     "explanation": "On the common middle chronology, Hammurabi became king of Babylon in about 1792 BC."
+    }
+   ]
+  },
+  {
+   "id": "arc-016",
+   "ask": {
+    "1": "Boy pharaoh",
+    "2": "Discovery",
+    "3": "Reign length"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "In which year was Tutankhamun's tomb discovered?",
+     "choices": [
+      "1912",
+      "1922",
+      "1932",
+      "1900"
+     ],
+     "answer": 1,
+     "explanation": "Carter's team found the tomb's entrance steps in November 1922."
+    },
+    {
+     "level": 3,
+     "question": "About how long did Tutankhamun reign?",
+     "choices": [
+      "About 20 years",
+      "About 3 years",
+      "About 35 years",
+      "About 9 years"
+     ],
+     "answer": 3,
+     "explanation": "He reigned from about 1332 to 1323 BC and died young."
+    }
+   ]
+  },
+  {
    "id": "his2-014",
    "ask": {
     "1": "The king",
@@ -204,6 +748,278 @@
      ],
      "answer": 2,
      "explanation": "The Bastille was a fortress with a small garrison, seven prisoners and about 250 barrels of gunpowder."
+    }
+   ]
+  },
+  {
+   "id": "arc-001",
+   "ask": {
+    "1": "Land between rivers",
+    "2": "Writing",
+    "3": "When"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which people of southern Mesopotamia are credited with inventing cuneiform writing?",
+     "choices": [
+      "The Hittites",
+      "The Phoenicians",
+      "The Akkadians",
+      "The Sumerians"
+     ],
+     "answer": 3,
+     "explanation": "The Sumerians developed cuneiform, wedge-shaped marks pressed into clay, to keep accounts."
+    },
+    {
+     "level": 3,
+     "question": "Roughly when did the earliest cuneiform writing appear in Sumer?",
+     "choices": [
+      "About 3300 BC",
+      "About 1800 BC",
+      "About 2500 BC",
+      "About 4500 BC"
+     ],
+     "answer": 0,
+     "explanation": "The earliest proto-cuneiform tablets from Uruk date to about 3300 BC."
+    }
+   ]
+  },
+  {
+   "id": "arc-002",
+   "ask": {
+    "1": "Nile flood",
+    "2": "Unifier",
+    "3": "Unification date"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which figure, traditionally, united Upper and Lower Egypt?",
+     "choices": [
+      "Narmer (Menes)",
+      "Khufu",
+      "Ramesses II",
+      "Djoser"
+     ],
+     "answer": 0,
+     "explanation": "Tradition credits Narmer, often identified with Menes, with unifying the two lands."
+    },
+    {
+     "level": 3,
+     "question": "Traditionally, when was Egypt unified under one ruler?",
+     "choices": [
+      "About 3600 BC",
+      "About 3100 BC",
+      "About 2600 BC",
+      "About 2100 BC"
+     ],
+     "answer": 1,
+     "explanation": "Egypt's unification and the start of the First Dynasty are traditionally placed around 3100 BC."
+    }
+   ]
+  },
+  {
+   "id": "arc-003",
+   "ask": {
+    "1": "Pyramid purpose",
+    "2": "Builder",
+    "3": "Date"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which pharaoh built the Great Pyramid at Giza?",
+     "choices": [
+      "Khufu",
+      "Djoser",
+      "Tutankhamun",
+      "Khafre"
+     ],
+     "answer": 0,
+     "explanation": "Khufu, also called Cheops, built the Great Pyramid; his son Khafre built the second one."
+    },
+    {
+     "level": 3,
+     "question": "Roughly when was the Great Pyramid built?",
+     "choices": [
+      "About 2560 BC",
+      "About 3000 BC",
+      "About 2100 BC",
+      "About 1500 BC"
+     ],
+     "answer": 0,
+     "explanation": "Khufu's reign is usually dated to about 2589 to 2566 BC; the pyramid dates to around 2560 BC."
+    }
+   ]
+  },
+  {
+   "id": "arc-004",
+   "ask": {
+    "1": "Indus river",
+    "2": "Script",
+    "3": "Peak"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which statement about the Indus Valley script is correct?",
+     "choices": [
+      "It was deciphered with the Rosetta Stone",
+      "It was read as early Greek",
+      "It has never been deciphered",
+      "It is the same as cuneiform"
+     ],
+     "answer": 2,
+     "explanation": "Indus seals carry short inscriptions, but no one has convincingly deciphered the script."
+    },
+    {
+     "level": 3,
+     "question": "The mature phase of the Indus Valley civilization is conventionally dated to",
+     "choices": [
+      "2600 to 1900 BC",
+      "1000 to 500 BC",
+      "1500 to 800 BC",
+      "3500 to 3000 BC"
+     ],
+     "answer": 0,
+     "explanation": "The mature Harappan period is usually placed between about 2600 and 1900 BC."
+    }
+   ]
+  },
+  {
+   "id": "arc-005",
+   "ask": {
+    "1": "Cradle river",
+    "2": "First dynasty",
+    "3": "Dates"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which is the earliest Chinese dynasty confirmed by both written records and archaeology?",
+     "choices": [
+      "The Xia",
+      "The Shang",
+      "The Han",
+      "The Zhou"
+     ],
+     "answer": 1,
+     "explanation": "The Shang left oracle-bone inscriptions and a capital at Anyang; the earlier Xia remains semi-legendary."
+    },
+    {
+     "level": 3,
+     "question": "The Shang dynasty is conventionally dated to",
+     "choices": [
+      "About 2070 to 1600 BC",
+      "About 1600 to 1046 BC",
+      "About 1046 to 256 BC",
+      "About 221 to 206 BC"
+     ],
+     "answer": 1,
+     "explanation": "The Shang ruled from about 1600 BC until the Zhou conquest in about 1046 BC."
+    }
+   ]
+  },
+  {
+   "id": "arc-006",
+   "ask": {
+    "1": "Early city",
+    "2": "Temple towers",
+    "3": "Sargon"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What were Sumerian ziggurats?",
+     "choices": [
+      "Walled marketplaces",
+      "Stepped temple towers",
+      "Royal tombs",
+      "Lighthouses"
+     ],
+     "answer": 1,
+     "explanation": "Ziggurats were stepped platforms topped by a temple, dedicated to a city's patron god."
+    },
+    {
+     "level": 3,
+     "question": "Sargon of Akkad's empire is traditionally dated from about",
+     "choices": [
+      "1750 BC",
+      "2700 BC",
+      "1900 BC",
+      "2334 BC"
+     ],
+     "answer": 3,
+     "explanation": "Sargon of Akkad is traditionally said to have come to power about 2334 BC, founding the first Mesopotamian empire."
+    }
+   ]
+  },
+  {
+   "id": "arc-007",
+   "ask": {
+    "1": "Picture writing",
+    "2": "Decipherer",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Who deciphered Egyptian hieroglyphs?",
+     "choices": [
+      "Thomas Young",
+      "Howard Carter",
+      "Napoleon Bonaparte",
+      "Jean-François Champollion"
+     ],
+     "answer": 3,
+     "explanation": "Champollion cracked the system using the Rosetta Stone; Thomas Young had made earlier partial progress."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Champollion announce his decipherment?",
+     "choices": [
+      "1799",
+      "1822",
+      "1798",
+      "1832"
+     ],
+     "answer": 1,
+     "explanation": "Champollion presented his results in his 1822 letter to Monsieur Dacier."
+    }
+   ]
+  },
+  {
+   "id": "arc-008",
+   "ask": {
+    "1": "Months",
+    "2": "Days per month",
+    "3": "Year length"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "How many days did each month of the Egyptian civil calendar have?",
+     "choices": [
+      "28",
+      "31",
+      "30",
+      "29"
+     ],
+     "answer": 2,
+     "explanation": "Each of the 12 months had exactly 30 days."
+    },
+    {
+     "level": 3,
+     "question": "How many days long was the Egyptian civil year in total?",
+     "choices": [
+      "354",
+      "365",
+      "360",
+      "366"
+     ],
+     "answer": 1,
+     "explanation": "Twelve months of 30 days plus 5 extra days made 365 days."
     }
    ]
   },
@@ -718,6 +1534,176 @@
    ]
   },
   {
+   "id": "arc-049",
+   "ask": {
+    "1": "Who sacked Rome",
+    "2": "Order of events",
+    "3": "Rome's end"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Rome was sacked by Germanic peoples in the 5th century. Which century is that?",
+     "choices": [
+      "The 7th century",
+      "The 3rd century",
+      "The 9th century",
+      "The 5th century"
+     ],
+     "answer": 3,
+     "explanation": "The years 401 to 500 make up the 5th century AD, and Rome was sacked in 410 and again in 455."
+    },
+    {
+     "level": 3,
+     "question": "Which order is correct for these events?",
+     "choices": [
+      "Visigoths sack Rome, Vandals sack Rome, Odoacer deposes the last Western emperor",
+      "Visigoths sack Rome, Odoacer deposes the last Western emperor, Vandals sack Rome",
+      "Vandals sack Rome, Visigoths sack Rome, Odoacer deposes the last Western emperor",
+      "Odoacer deposes the last Western emperor, Visigoths sack Rome, Vandals sack Rome"
+     ],
+     "answer": 0,
+     "explanation": "The Visigoths sacked Rome in 410, the Vandals in 455, and Odoacer deposed Romulus Augustulus in 476."
+    }
+   ]
+  },
+  {
+   "id": "arc-050",
+   "ask": {
+    "1": "Who united the Franks",
+    "2": "Conversion",
+    "3": "Baptism date"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Clovis was king of which people?",
+     "choices": [
+      "The Vandals",
+      "The Goths",
+      "The Saxons",
+      "The Franks"
+     ],
+     "answer": 3,
+     "explanation": "Clovis united most Frankish tribes and ruled much of what is now France."
+    },
+    {
+     "level": 3,
+     "question": "Clovis's baptism is traditionally dated to about which year?",
+     "choices": [
+      "About AD 622",
+      "About AD 568",
+      "About AD 496",
+      "About AD 410"
+     ],
+     "answer": 2,
+     "explanation": "Tradition puts Clovis's baptism at Reims around 496, although some scholars suggest a date up to a decade later."
+    }
+   ]
+  },
+  {
+   "id": "arc-052",
+   "ask": {
+    "1": "Battle of Tours",
+    "2": "Frankish leader",
+    "3": "Famous grandson"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Charles Martel ruled which kingdom as its real power behind the throne?",
+     "choices": [
+      "The Visigothic kingdom",
+      "The Frankish kingdom",
+      "The Kingdom of Wessex",
+      "The Lombard kingdom"
+     ],
+     "answer": 1,
+     "explanation": "As mayor of the palace, Charles Martel held real power over the Frankish realm."
+    },
+    {
+     "level": 3,
+     "question": "Charles Martel was the grandfather of which emperor?",
+     "choices": [
+      "Clovis",
+      "Otto I",
+      "Louis the Pious",
+      "Charlemagne"
+     ],
+     "answer": 3,
+     "explanation": "Charles Martel's son Pepin the Short was the father of Charlemagne."
+    }
+   ]
+  },
+  {
+   "id": "arc-053",
+   "ask": {
+    "1": "Raid on a monastery",
+    "2": "Viking home",
+    "3": "Raid date"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "From which region did the Vikings come?",
+     "choices": [
+      "The Caucasus",
+      "The Iberian peninsula",
+      "The Balkans",
+      "Scandinavia"
+     ],
+     "answer": 3,
+     "explanation": "Vikings came from what are now Norway, Sweden and Denmark."
+    },
+    {
+     "level": 3,
+     "question": "The raid on Lindisfarne is traditionally taken as the start of the Viking Age. In which year did it happen?",
+     "choices": [
+      "AD 878",
+      "AD 843",
+      "AD 711",
+      "AD 793"
+     ],
+     "answer": 3,
+     "explanation": "The 793 raid shocked Christian Europe, and the date is conventionally used as the start of the Viking Age."
+    }
+   ]
+  },
+  {
+   "id": "arc-054",
+   "ask": {
+    "1": "King of Wessex",
+    "2": "Viking law land",
+    "3": "Edington"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which English king of Wessex is the only one called 'the Great'?",
+     "choices": [
+      "Athelstan",
+      "Alfred",
+      "Edgar",
+      "Edward"
+     ],
+     "answer": 1,
+     "explanation": "Alfred defended Wessex against the Danes and promoted learning in English."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Alfred defeat the Danish leader Guthrum at Edington?",
+     "choices": [
+      "AD 793",
+      "AD 937",
+      "AD 1016",
+      "AD 878"
+     ],
+     "answer": 3,
+     "explanation": "Alfred's victory at Edington in 878 forced Guthrum to accept baptism and a settlement."
+    }
+   ]
+  },
+  {
    "id": "his-012",
    "ask": {
     "1": "Ship",
@@ -782,6 +1768,1026 @@
      ],
      "answer": 2,
      "explanation": "Florence was home to the Medici, Botticelli, and Leonardo."
+    }
+   ]
+  },
+  {
+   "id": "arc-097",
+   "ask": {
+    "1": "His movement",
+    "2": "Author of Candide",
+    "3": "Year of Candide"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Voltaire was a leading figure of which 18th-century intellectual movement?",
+     "choices": [
+      "The Renaissance",
+      "The Reformation",
+      "Romanticism",
+      "The Enlightenment"
+     ],
+     "answer": 3,
+     "explanation": "Voltaire championed reason, tolerance and free speech, ideas at the heart of the Enlightenment."
+    },
+    {
+     "level": 3,
+     "question": "In which year was Voltaire's Candide published?",
+     "choices": [
+      "1715",
+      "1748",
+      "1789",
+      "1759"
+     ],
+     "answer": 3,
+     "explanation": "Candide appeared in January 1759, in the middle of the Seven Years' War."
+    }
+   ]
+  },
+  {
+   "id": "arc-098",
+   "ask": {
+    "1": "Home country",
+    "2": "Co-editor",
+    "3": "First volume"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Encyclopédie, a giant reference work of the Enlightenment, was produced in which country?",
+     "choices": [
+      "Germany",
+      "France",
+      "Italy",
+      "England"
+     ],
+     "answer": 1,
+     "explanation": "It was compiled in Paris, in French."
+    },
+    {
+     "level": 3,
+     "question": "In which year did the first volume of the Encyclopédie appear?",
+     "choices": [
+      "1715",
+      "1751",
+      "1789",
+      "1648"
+     ],
+     "answer": 1,
+     "explanation": "The first volume came out in 1751, and the work grew to 28 volumes, plates included, by 1772."
+    }
+   ]
+  },
+  {
+   "id": "arc-099",
+   "ask": {
+    "1": "His homeland",
+    "2": "The famous opening",
+    "3": "Year published"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Jean-Jacques Rousseau was born in Geneva, a city in which modern country?",
+     "choices": [
+      "Italy",
+      "France",
+      "Germany",
+      "Switzerland"
+     ],
+     "answer": 3,
+     "explanation": "Rousseau was born in Geneva in 1712, and Geneva is in Switzerland today."
+    },
+    {
+     "level": 3,
+     "question": "In which year was Rousseau's The Social Contract published?",
+     "choices": [
+      "1789",
+      "1762",
+      "1776",
+      "1748"
+     ],
+     "answer": 1,
+     "explanation": "It appeared in 1762, the same year as his book on education, Émile."
+    }
+   ]
+  },
+  {
+   "id": "arc-101",
+   "ask": {
+    "1": "His homeland",
+    "2": "Natural rights",
+    "3": "An echo in 1776"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "John Locke came from which country?",
+     "choices": [
+      "England",
+      "Germany",
+      "France",
+      "Scotland"
+     ],
+     "answer": 0,
+     "explanation": "Locke was born in Somerset, England, in 1632."
+    },
+    {
+     "level": 3,
+     "question": "Which 1776 document echoes Locke in its phrase 'life, liberty and the pursuit of happiness'?",
+     "choices": [
+      "The Articles of Confederation",
+      "The Declaration of the Rights of Man",
+      "The Bill of Rights",
+      "The Declaration of Independence"
+     ],
+     "answer": 3,
+     "explanation": "Jefferson reworded Locke's 'life, liberty and property' for the Declaration of Independence."
+    }
+   ]
+  },
+  {
+   "id": "arc-082",
+   "ask": {
+    "1": "Route to India",
+    "2": "Indian port",
+    "3": "Arrival year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Vasco da Gama sailed around which continent to reach India by sea?",
+     "choices": [
+      "South America",
+      "Antarctica",
+      "Africa",
+      "Australia"
+     ],
+     "answer": 2,
+     "explanation": "He rounded the Cape of Good Hope and crossed the Indian Ocean."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Vasco da Gama arrive in India?",
+     "choices": [
+      "1498",
+      "1488",
+      "1500",
+      "1519"
+     ],
+     "answer": 0,
+     "explanation": "He arrived in May 1498, opening a sea route from Europe to India."
+    }
+   ]
+  },
+  {
+   "id": "arc-085",
+   "ask": {
+    "1": "French explorer",
+    "2": "River",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Jacques Cartier sailed for which country?",
+     "choices": [
+      "France",
+      "Spain",
+      "Portugal",
+      "England"
+     ],
+     "answer": 0,
+     "explanation": "He was sent by King Francis I."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Cartier first reach the Gulf of St. Lawrence and plant a cross claiming land for France?",
+     "choices": [
+      "1608",
+      "1534",
+      "1492",
+      "1519"
+     ],
+     "answer": 1,
+     "explanation": "Cartier made the claim at Gaspe in July 1534."
+    }
+   ]
+  },
+  {
+   "id": "arc-087",
+   "ask": {
+    "1": "Name of a continent",
+    "2": "Nationality",
+    "3": "Map year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Amerigo Vespucci came from which country?",
+     "choices": [
+      "Portugal",
+      "Italy",
+      "England",
+      "Spain"
+     ],
+     "answer": 1,
+     "explanation": "He was born in Florence."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Waldseemuller's map first use the name America?",
+     "choices": [
+      "1507",
+      "1519",
+      "1492",
+      "1453"
+     ],
+     "answer": 0,
+     "explanation": "The 1507 world map labelled the southern continent America."
+    }
+   ]
+  },
+  {
+   "id": "arc-088",
+   "ask": {
+    "1": "Sailing for England",
+    "2": "Landing",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "John Cabot reached the coast of which continent?",
+     "choices": [
+      "Australia",
+      "Africa",
+      "South America",
+      "North America"
+     ],
+     "answer": 3,
+     "explanation": "He landed on the coast of what is now Canada."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Cabot make his landing in North America?",
+     "choices": [
+      "1500",
+      "1492",
+      "1519",
+      "1497"
+     ],
+     "answer": 3,
+     "explanation": "He sailed from Bristol on the Matthew in 1497."
+    }
+   ]
+  },
+  {
+   "id": "arc-065",
+   "ask": {
+    "1": "Who called it",
+    "2": "Where",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Council of Clermont took place in which country?",
+     "choices": [
+      "France",
+      "Spain",
+      "Germany",
+      "Italy"
+     ],
+     "answer": 0,
+     "explanation": "Clermont is in central France."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Pope Urban II call for the First Crusade?",
+     "choices": [
+      "AD 1066",
+      "AD 1095",
+      "AD 1215",
+      "AD 1204"
+     ],
+     "answer": 1,
+     "explanation": "The call was made in 1095, and the crusaders reached Jerusalem in 1099."
+    }
+   ]
+  },
+  {
+   "id": "arc-066",
+   "ask": {
+    "1": "Survey",
+    "2": "Who ordered it",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What did the Domesday Book record?",
+     "choices": [
+      "Voyages of discovery",
+      "The laws of Rome",
+      "Land and property in England",
+      "Names of saints"
+     ],
+     "answer": 2,
+     "explanation": "It listed landholders, land and livestock across England."
+    },
+    {
+     "level": 3,
+     "question": "In which year was the Domesday survey completed?",
+     "choices": [
+      "AD 1100",
+      "AD 1066",
+      "AD 1086",
+      "AD 1215"
+     ],
+     "answer": 2,
+     "explanation": "It was compiled just twenty years after the Norman Conquest."
+    }
+   ]
+  },
+  {
+   "id": "arc-067",
+   "ask": {
+    "1": "Emperor",
+    "2": "Dynasty",
+    "3": "Coronation"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Otto I was crowned emperor in which city?",
+     "choices": [
+      "Constantinople",
+      "Paris",
+      "Rome",
+      "Aachen"
+     ],
+     "answer": 2,
+     "explanation": "He was crowned by Pope John XII in Rome."
+    },
+    {
+     "level": 3,
+     "question": "In which year was Otto I crowned emperor, an event often seen as the start of the Holy Roman Empire?",
+     "choices": [
+      "AD 962",
+      "AD 1077",
+      "AD 843",
+      "AD 800"
+     ],
+     "answer": 0,
+     "explanation": "The coronation took place on 2 February 962."
+    }
+   ]
+  },
+  {
+   "id": "arc-069",
+   "ask": {
+    "1": "Famous cathedral",
+    "2": "Gothic",
+    "3": "Begun"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which city is Notre-Dame cathedral?",
+     "choices": [
+      "London",
+      "Rome",
+      "Vienna",
+      "Paris"
+     ],
+     "answer": 3,
+     "explanation": "It stands on the Ile de la Cite."
+    },
+    {
+     "level": 3,
+     "question": "In which year did construction of Notre-Dame de Paris traditionally begin?",
+     "choices": [
+      "AD 1248",
+      "AD 1345",
+      "AD 1066",
+      "AD 1163"
+     ],
+     "answer": 3,
+     "explanation": "Work began in 1163 under Bishop Maurice de Sully."
+    }
+   ]
+  },
+  {
+   "id": "arc-070",
+   "ask": {
+    "1": "Oldest university",
+    "2": "Country",
+    "3": "Founding"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Bologna is in which country?",
+     "choices": [
+      "Switzerland",
+      "France",
+      "Italy",
+      "Spain"
+     ],
+     "answer": 2,
+     "explanation": "It lies in northern Italy."
+    },
+    {
+     "level": 3,
+     "question": "The University of Bologna is traditionally dated to which year?",
+     "choices": [
+      "AD 1088",
+      "AD 1300",
+      "AD 1150",
+      "AD 1215"
+     ],
+     "answer": 0,
+     "explanation": "The date 1088 was fixed by later tradition and is used for the university's anniversaries."
+    }
+   ]
+  },
+  {
+   "id": "arc-071",
+   "ask": {
+    "1": "Sacked city",
+    "2": "Ships",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which empire's capital was Constantinople before 1204?",
+     "choices": [
+      "The Holy Roman Empire",
+      "The Byzantine Empire",
+      "The Mongol Empire",
+      "The Persian Empire"
+     ],
+     "answer": 1,
+     "explanation": "Constantinople was the capital of the Byzantine Empire."
+    },
+    {
+     "level": 3,
+     "question": "Which Italian city's fleet transported the Fourth Crusade?",
+     "choices": [
+      "Pisa",
+      "Venice",
+      "Genoa",
+      "Naples"
+     ],
+     "answer": 1,
+     "explanation": "Venice supplied the ships under Doge Enrico Dandolo."
+    }
+   ]
+  },
+  {
+   "id": "arc-072",
+   "ask": {
+    "1": "Scottish king",
+    "2": "Battle",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Robert the Bruce was king of which country?",
+     "choices": [
+      "Ireland",
+      "Scotland",
+      "Wales",
+      "France"
+     ],
+     "answer": 1,
+     "explanation": "He ruled Scotland from 1306 to 1329."
+    },
+    {
+     "level": 3,
+     "question": "In which year was the Battle of Bannockburn fought?",
+     "choices": [
+      "AD 1066",
+      "AD 1215",
+      "AD 1415",
+      "AD 1314"
+     ],
+     "answer": 3,
+     "explanation": "The Scots' victory in June 1314 secured their independence in practice."
+    }
+   ]
+  },
+  {
+   "id": "arc-155",
+   "ask": {
+    "1": "Crash trigger",
+    "2": "New Deal president",
+    "3": "Peak unemployment"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which US president launched the New Deal?",
+     "choices": [
+      "Franklin D. Roosevelt",
+      "Harry Truman",
+      "Woodrow Wilson",
+      "Herbert Hoover"
+     ],
+     "answer": 0,
+     "explanation": "Roosevelt took office in 1933 and began a wave of recovery programmes."
+    },
+    {
+     "level": 3,
+     "question": "Roughly what share of US workers were unemployed at the peak of the Depression in 1933?",
+     "choices": [
+      "About 25%",
+      "About 10%",
+      "About 40%",
+      "About 5%"
+     ],
+     "answer": 0,
+     "explanation": "About one worker in four was jobless."
+    }
+   ]
+  },
+  {
+   "id": "arc-157",
+   "ask": {
+    "1": "Hitler's party",
+    "2": "Chancellor year",
+    "3": "Fire of 1933"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which party did Hitler lead?",
+     "choices": [
+      "The Social Democrats",
+      "The Nazi Party",
+      "The Centre Party",
+      "The Communist Party"
+     ],
+     "answer": 1,
+     "explanation": "The National Socialist German Workers' Party took power in 1933."
+    },
+    {
+     "level": 3,
+     "question": "Which fire in February 1933 was used to justify emergency decrees?",
+     "choices": [
+      "The Beer Hall Putsch",
+      "The Reichstag fire",
+      "The Night of the Long Knives",
+      "Kristallnacht"
+     ],
+     "answer": 1,
+     "explanation": "The Reichstag fire let the Nazis suspend civil liberties."
+    }
+   ]
+  },
+  {
+   "id": "arc-159",
+   "ask": {
+    "1": "Region handed over",
+    "2": "British PM",
+    "3": "Month signed"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Munich Agreement gave Germany which Czechoslovak border region?",
+     "choices": [
+      "The Rhineland",
+      "The Saarland",
+      "The Sudetenland",
+      "Alsace"
+     ],
+     "answer": 2,
+     "explanation": "The Sudetenland had a large German-speaking population."
+    },
+    {
+     "level": 3,
+     "question": "In which month of 1938 was the Munich Agreement signed?",
+     "choices": [
+      "December",
+      "March",
+      "September",
+      "June"
+     ],
+     "answer": 2,
+     "explanation": "It was signed on 29 and 30 September 1938."
+    }
+   ]
+  },
+  {
+   "id": "arc-160",
+   "ask": {
+    "1": "Hitler's birthplace",
+    "2": "1938 annexation",
+    "3": "1936 move"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which country was Hitler born?",
+     "choices": [
+      "Austria",
+      "Czechoslovakia",
+      "Hungary",
+      "Germany"
+     ],
+     "answer": 0,
+     "explanation": "Hitler was born in Braunau am Inn, Austria."
+    },
+    {
+     "level": 3,
+     "question": "Which region did German troops reoccupy in March 1936, breaking the Treaty of Versailles?",
+     "choices": [
+      "The Ruhr",
+      "The Saar",
+      "The Rhineland",
+      "The Sudetenland"
+     ],
+     "answer": 2,
+     "explanation": "The Rhineland had been demilitarised after the First World War."
+    }
+   ]
+  },
+  {
+   "id": "arc-057",
+   "ask": {
+    "1": "Caliphate capital",
+    "2": "Dynasty change",
+    "3": "Revolution date"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which religion's caliphs ruled the Umayyad Caliphate?",
+     "choices": [
+      "Christianity",
+      "Buddhism",
+      "Zoroastrianism",
+      "Islam"
+     ],
+     "answer": 3,
+     "explanation": "The Umayyads were the first hereditary dynasty of Muslim rulers."
+    },
+    {
+     "level": 3,
+     "question": "In which year did the Abbasids overthrow the Umayyads?",
+     "choices": [
+      "AD 661",
+      "AD 711",
+      "AD 622",
+      "AD 750"
+     ],
+     "answer": 3,
+     "explanation": "The Abbasid revolution of 750 moved the centre of power east to Iraq."
+    }
+   ]
+  },
+  {
+   "id": "arc-058",
+   "ask": {
+    "1": "Jerusalem shrine",
+    "2": "Builder",
+    "3": "Completion"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Dome of the Rock stands in which city?",
+     "choices": [
+      "Damascus",
+      "Mecca",
+      "Cairo",
+      "Jerusalem"
+     ],
+     "answer": 3,
+     "explanation": "It stands on the Temple Mount, or Haram al-Sharif, in Jerusalem."
+    },
+    {
+     "level": 3,
+     "question": "The Dome of the Rock was completed in about which year?",
+     "choices": [
+      "About AD 691",
+      "About AD 622",
+      "About AD 800",
+      "About AD 750"
+     ],
+     "answer": 0,
+     "explanation": "It was completed in the early 690s, among the oldest surviving Islamic monuments."
+    }
+   ]
+  },
+  {
+   "id": "arc-060",
+   "ask": {
+    "1": "Spanish capital",
+    "2": "Caliph's title",
+    "3": "Caliphate date"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which present-day country is Cordoba?",
+     "choices": [
+      "Portugal",
+      "Spain",
+      "Italy",
+      "Morocco"
+     ],
+     "answer": 1,
+     "explanation": "Cordoba lies in Andalusia, southern Spain."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Abd al-Rahman III declare himself caliph of Cordoba?",
+     "choices": [
+      "AD 756",
+      "AD 929",
+      "AD 1031",
+      "AD 711"
+     ],
+     "answer": 1,
+     "explanation": "In 929 he took the title of caliph, challenging Baghdad and Cairo."
+    }
+   ]
+  },
+  {
+   "id": "arc-061",
+   "ask": {
+    "1": "Paper",
+    "2": "Where it began",
+    "3": "Talas date"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which country was paper invented?",
+     "choices": [
+      "China",
+      "India",
+      "Persia",
+      "Egypt"
+     ],
+     "answer": 0,
+     "explanation": "Paper was first made in China, around the 2nd century BC to the 2nd century AD."
+    },
+    {
+     "level": 3,
+     "question": "In which year was the Battle of Talas fought?",
+     "choices": [
+      "AD 1258",
+      "AD 930",
+      "AD 751",
+      "AD 622"
+     ],
+     "answer": 2,
+     "explanation": "The 751 battle is traditionally linked to the spread of papermaking westward."
+    }
+   ]
+  },
+  {
+   "id": "arc-062",
+   "ask": {
+    "1": "Latin name",
+    "2": "Field",
+    "3": "Century"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "By what Latin name is Ibn Sina known in Europe?",
+     "choices": [
+      "Alhazen",
+      "Avicenna",
+      "Algazel",
+      "Averroes"
+     ],
+     "answer": 1,
+     "explanation": "Avicenna is the Latinised form of Ibn Sina."
+    },
+    {
+     "level": 3,
+     "question": "In which century was the Canon of Medicine completed?",
+     "choices": [
+      "The 9th century",
+      "The 11th century",
+      "The 7th century",
+      "The 14th century"
+     ],
+     "answer": 1,
+     "explanation": "Ibn Sina finished the Canon around 1025."
+    }
+   ]
+  },
+  {
+   "id": "arc-063",
+   "ask": {
+    "1": "Traveller",
+    "2": "Home country",
+    "3": "Departure year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Ibn Battuta wrote an account of his travels called what?",
+     "choices": [
+      "The Rihla",
+      "The Muqaddimah",
+      "The Shahnameh",
+      "The Canon"
+     ],
+     "answer": 0,
+     "explanation": "The Rihla means 'the journey'."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Ibn Battuta set out from Tangier on his first journey, a pilgrimage to Mecca?",
+     "choices": [
+      "AD 1099",
+      "AD 1453",
+      "AD 1325",
+      "AD 1258"
+     ],
+     "answer": 2,
+     "explanation": "He left in 1325 aged about 21 and travelled for nearly thirty years."
+    }
+   ]
+  },
+  {
+   "id": "arc-064",
+   "ask": {
+    "1": "Mongols",
+    "2": "Commander",
+    "3": "Fall of Baghdad"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Who led the Mongol army that captured Baghdad?",
+     "choices": [
+      "Timur",
+      "Genghis Khan",
+      "Kublai",
+      "Hulagu"
+     ],
+     "answer": 3,
+     "explanation": "Hulagu was a grandson of Genghis Khan."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Baghdad fall to the Mongols?",
+     "choices": [
+      "AD 1453",
+      "AD 1099",
+      "AD 1187",
+      "AD 1258"
+     ],
+     "answer": 3,
+     "explanation": "The city fell in February 1258."
+    }
+   ]
+  },
+  {
+   "id": "arc-044",
+   "ask": {
+    "1": "Carthage taken",
+    "2": "Vandalism",
+    "3": "Sack of Rome"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The word vandalism comes from which Germanic people?",
+     "choices": [
+      "The Franks",
+      "The Huns",
+      "The Goths",
+      "The Vandals"
+     ],
+     "answer": 3,
+     "explanation": "The Vandals sacked Rome."
+    },
+    {
+     "level": 3,
+     "question": "In which year did the Vandals sack Rome?",
+     "choices": [
+      "AD 439",
+      "AD 476",
+      "AD 455",
+      "AD 410"
+     ],
+     "answer": 2,
+     "explanation": "The Vandal sack was in 455."
+    }
+   ]
+  },
+  {
+   "id": "arc-045",
+   "ask": {
+    "1": "Justinian",
+    "2": "Church",
+    "3": "Completed"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Byzantine emperor codified Roman law?",
+     "choices": [
+      "Justinian",
+      "Heraclius",
+      "Basil II",
+      "Constantine"
+     ],
+     "answer": 0,
+     "explanation": "Justinian ordered the Corpus Juris Civilis."
+    },
+    {
+     "level": 3,
+     "question": "Hagia Sophia was completed in",
+     "choices": [
+      "AD 476",
+      "AD 330",
+      "AD 537",
+      "AD 565"
+     ],
+     "answer": 2,
+     "explanation": "It was completed in 537."
+    }
+   ]
+  },
+  {
+   "id": "arc-046",
+   "ask": {
+    "1": "Plague name",
+    "2": "Disease",
+    "3": "Reign length"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Plague of Justinian was caused by which disease?",
+     "choices": [
+      "Smallpox",
+      "Typhus",
+      "Cholera",
+      "Bubonic plague"
+     ],
+     "answer": 3,
+     "explanation": "Yersinia pestis caused it."
+    },
+    {
+     "level": 3,
+     "question": "For about how long did Justinian reign, from 527 to 565?",
+     "choices": [
+      "About 10 years",
+      "About 50 years",
+      "About 20 years",
+      "About 38 years"
+     ],
+     "answer": 3,
+     "explanation": "He reigned from 527 to 565."
+    }
+   ]
+  },
+  {
+   "id": "arc-048",
+   "ask": {
+    "1": "Frankish king",
+    "2": "Franks",
+    "3": "Baptism"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Germanic people gave their name to France?",
+     "choices": [
+      "The Goths",
+      "The Franks",
+      "The Saxons",
+      "The Vandals"
+     ],
+     "answer": 1,
+     "explanation": "France comes from the Franks."
+    },
+    {
+     "level": 3,
+     "question": "Clovis is traditionally said to have been baptised around",
+     "choices": [
+      "AD 800",
+      "AD 732",
+      "AD 496",
+      "AD 476"
+     ],
+     "answer": 2,
+     "explanation": "Tradition dates it to 496."
     }
    ]
   },
@@ -1126,6 +3132,74 @@
    ]
   },
   {
+   "id": "arc-113",
+   "ask": {
+    "1": "Country he ruled",
+    "2": "Island of birth",
+    "3": "Year of birth"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Napoleon Bonaparte rose from army officer to emperor of which country?",
+     "choices": [
+      "Austria",
+      "Italy",
+      "Spain",
+      "France"
+     ],
+     "answer": 3,
+     "explanation": "He ruled as Emperor of the French."
+    },
+    {
+     "level": 3,
+     "question": "In which year was Napoleon born?",
+     "choices": [
+      "1759",
+      "1789",
+      "1769",
+      "1779"
+     ],
+     "answer": 2,
+     "explanation": "He was born on 15 August 1769."
+    }
+   ]
+  },
+  {
+   "id": "arc-115",
+   "ask": {
+    "1": "Country it was for",
+    "2": "The 1804 law",
+    "3": "Number of articles"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Napoleonic Code replaced a patchwork of local laws in which country?",
+     "choices": [
+      "Egypt",
+      "France",
+      "Russia",
+      "Spain"
+     ],
+     "answer": 1,
+     "explanation": "Before it, France lived under hundreds of regional customs and laws."
+    },
+    {
+     "level": 3,
+     "question": "The original 1804 Civil Code had roughly how many articles?",
+     "choices": [
+      "About 800",
+      "About 230",
+      "About 2,300",
+      "About 23,000"
+     ],
+     "answer": 2,
+     "explanation": "The 1804 code contained 2,281 articles."
+    }
+   ]
+  },
+  {
    "id": "his-019",
    "ask": {
     "1": "Nobel winner",
@@ -1194,6 +3268,754 @@
    ]
   },
   {
+   "id": "arc-089",
+   "ask": {
+    "1": "Meeting",
+    "2": "Emperor",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which emperor presided over the Diet of Worms?",
+     "choices": [
+      "Otto I",
+      "Maximilian II",
+      "Charles V",
+      "Charlemagne"
+     ],
+     "answer": 2,
+     "explanation": "Charles V ruled the Holy Roman Empire and Spain."
+    },
+    {
+     "level": 3,
+     "question": "In which year was the Diet of Worms held?",
+     "choices": [
+      "1555",
+      "1521",
+      "1534",
+      "1517"
+     ],
+     "answer": 1,
+     "explanation": "It followed Luther's Ninety-five Theses by four years."
+    }
+   ]
+  },
+  {
+   "id": "arc-090",
+   "ask": {
+    "1": "Translation",
+    "2": "Language",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Luther lived and taught in which German town?",
+     "choices": [
+      "Hamburg",
+      "Wittenberg",
+      "Berlin",
+      "Munich"
+     ],
+     "answer": 1,
+     "explanation": "He was a professor at the University of Wittenberg."
+    },
+    {
+     "level": 3,
+     "question": "In which year was Luther's German New Testament first published?",
+     "choices": [
+      "1522",
+      "1517",
+      "1555",
+      "1534"
+     ],
+     "answer": 0,
+     "explanation": "The September Testament appeared in 1522."
+    }
+   ]
+  },
+  {
+   "id": "arc-091",
+   "ask": {
+    "1": "Reformer",
+    "2": "City",
+    "3": "Book"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "John Calvin was born in which country?",
+     "choices": [
+      "Scotland",
+      "Switzerland",
+      "Germany",
+      "France"
+     ],
+     "answer": 3,
+     "explanation": "He was born in Noyon, France."
+    },
+    {
+     "level": 3,
+     "question": "In which year was the first edition of Calvin's Institutes of the Christian Religion published?",
+     "choices": [
+      "1517",
+      "1536",
+      "1555",
+      "1598"
+     ],
+     "answer": 1,
+     "explanation": "He published the first edition in Basel in 1536."
+    }
+   ]
+  },
+  {
+   "id": "arc-094",
+   "ask": {
+    "1": "Paris event",
+    "2": "Groups",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The massacre was between two religious groups in which country?",
+     "choices": [
+      "France",
+      "Germany",
+      "Spain",
+      "England"
+     ],
+     "answer": 0,
+     "explanation": "It occurred during the French Wars of Religion."
+    },
+    {
+     "level": 3,
+     "question": "In which year was the St. Bartholomew's Day massacre?",
+     "choices": [
+      "1598",
+      "1517",
+      "1572",
+      "1618"
+     ],
+     "answer": 2,
+     "explanation": "It began on 24 August 1572."
+    }
+   ]
+  },
+  {
+   "id": "arc-096",
+   "ask": {
+    "1": "Order",
+    "2": "Founder",
+    "3": "Approval year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Ignatius of Loyola came from which country?",
+     "choices": [
+      "Spain",
+      "France",
+      "Portugal",
+      "Italy"
+     ],
+     "answer": 0,
+     "explanation": "He was born in the Basque country, Spain."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Pope Paul III approve the Society of Jesus?",
+     "choices": [
+      "1555",
+      "1517",
+      "1540",
+      "1563"
+     ],
+     "answer": 2,
+     "explanation": "The order was approved in September 1540."
+    }
+   ]
+  },
+  {
+   "id": "arc-073",
+   "ask": {
+    "1": "Banking family",
+    "2": "Nickname",
+    "3": "Year of death"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Lorenzo de' Medici, ruler of Florence, was known by what nickname?",
+     "choices": [
+      "The Bold",
+      "The Magnificent",
+      "The Wise",
+      "The Great"
+     ],
+     "answer": 1,
+     "explanation": "Lorenzo the Magnificent was a patron of artists and poets."
+    },
+    {
+     "level": 3,
+     "question": "Lorenzo de' Medici died in the same year that Columbus first sailed west. Which year?",
+     "choices": [
+      "1492",
+      "1517",
+      "1453",
+      "1469"
+     ],
+     "answer": 0,
+     "explanation": "Lorenzo died in April 1492, a few months before Columbus's first voyage."
+    }
+   ]
+  },
+  {
+   "id": "arc-075",
+   "ask": {
+    "1": "Ceiling",
+    "2": "Who ordered it",
+    "3": "Finished"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Michelangelo painted the ceiling of the Sistine Chapel in which city?",
+     "choices": [
+      "Venice",
+      "Vatican City",
+      "Florence",
+      "Milan"
+     ],
+     "answer": 1,
+     "explanation": "The chapel is in the Vatican, in Rome."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Michelangelo finish painting the Sistine Chapel ceiling?",
+     "choices": [
+      "1508",
+      "1492",
+      "1534",
+      "1512"
+     ],
+     "answer": 3,
+     "explanation": "He worked on the ceiling from 1508 to 1512."
+    }
+   ]
+  },
+  {
+   "id": "arc-077",
+   "ask": {
+    "1": "The Prince",
+    "2": "City-state",
+    "3": "Year written"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Machiavelli was a diplomat of which Italian city-state?",
+     "choices": [
+      "Milan",
+      "Venice",
+      "Genoa",
+      "Florence"
+     ],
+     "answer": 3,
+     "explanation": "He served the Florentine Republic."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Machiavelli write The Prince?",
+     "choices": [
+      "1492",
+      "1469",
+      "1513",
+      "1527"
+     ],
+     "answer": 2,
+     "explanation": "He wrote it in 1513 after losing his post in Florence."
+    }
+   ]
+  },
+  {
+   "id": "arc-078",
+   "ask": {
+    "1": "Playwright",
+    "2": "Birthplace",
+    "3": "Death year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which city was Shakespeare's theatre, the Globe, built?",
+     "choices": [
+      "Edinburgh",
+      "Paris",
+      "London",
+      "Rome"
+     ],
+     "answer": 2,
+     "explanation": "The Globe opened in 1599 on the south bank of the Thames."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Shakespeare die?",
+     "choices": [
+      "1603",
+      "1588",
+      "1616",
+      "1564"
+     ],
+     "answer": 2,
+     "explanation": "He died on 23 April 1616, according to the Julian calendar then used in England."
+    }
+   ]
+  },
+  {
+   "id": "arc-079",
+   "ask": {
+    "1": "Utopia",
+    "2": "Author's country",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Thomas More served which king of England as Lord Chancellor?",
+     "choices": [
+      "Henry VII",
+      "Richard III",
+      "Henry VIII",
+      "Edward VI"
+     ],
+     "answer": 2,
+     "explanation": "More was Chancellor from 1529 to 1532."
+    },
+    {
+     "level": 3,
+     "question": "In which year was Utopia first published?",
+     "choices": [
+      "1516",
+      "1492",
+      "1534",
+      "1485"
+     ],
+     "answer": 0,
+     "explanation": "It was published in Latin in 1516."
+    }
+   ]
+  },
+  {
+   "id": "arc-080",
+   "ask": {
+    "1": "School of Athens",
+    "2": "Artist",
+    "3": "Death year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The School of Athens shows philosophers of which ancient civilization?",
+     "choices": [
+      "Persia",
+      "Egypt",
+      "Greece",
+      "Rome"
+     ],
+     "answer": 2,
+     "explanation": "It includes Plato and Aristotle at its centre."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Raphael die, aged 37?",
+     "choices": [
+      "1564",
+      "1492",
+      "1520",
+      "1483"
+     ],
+     "answer": 2,
+     "explanation": "He was born in 1483 and died on 6 April 1520."
+    }
+   ]
+  },
+  {
+   "id": "arc-105",
+   "ask": {
+    "1": "What was dumped",
+    "2": "Year of the protest",
+    "3": "Chests destroyed"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In the Boston Tea Party, colonists threw what into Boston Harbor?",
+     "choices": [
+      "Sugar",
+      "Tobacco",
+      "Tea",
+      "Coffee"
+     ],
+     "answer": 2,
+     "explanation": "The protest targeted a tax imposed without their consent."
+    },
+    {
+     "level": 3,
+     "question": "About how many chests of tea were destroyed in the Boston Tea Party?",
+     "choices": [
+      "About 1,000",
+      "About 100",
+      "About 340",
+      "About 3,000"
+     ],
+     "answer": 2,
+     "explanation": "Colonists destroyed 342 chests of tea that night."
+    }
+   ]
+  },
+  {
+   "id": "arc-036",
+   "ask": {
+    "1": "Great Fire",
+    "2": "Which emperor",
+    "3": "Nero died"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which emperor ruled during the Great Fire of Rome?",
+     "choices": [
+      "Domitian",
+      "Caligula",
+      "Nero",
+      "Tiberius"
+     ],
+     "answer": 2,
+     "explanation": "Nero was emperor."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Nero die?",
+     "choices": [
+      "AD 64",
+      "AD 69",
+      "AD 79",
+      "AD 68"
+     ],
+     "answer": 3,
+     "explanation": "Nero killed himself in AD 68."
+    }
+   ]
+  },
+  {
+   "id": "arc-037",
+   "ask": {
+    "1": "Edict of Milan",
+    "2": "Christianity",
+    "3": "New capital"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which emperor ended the persecution of Christians?",
+     "choices": [
+      "Constantine",
+      "Nero",
+      "Diocletian",
+      "Trajan"
+     ],
+     "answer": 0,
+     "explanation": "Constantine supported Christianity."
+    },
+    {
+     "level": 3,
+     "question": "Constantinople was dedicated as the new capital in",
+     "choices": [
+      "AD 324",
+      "AD 313",
+      "AD 330",
+      "AD 395"
+     ],
+     "answer": 2,
+     "explanation": "It was dedicated in 330."
+    }
+   ]
+  },
+  {
+   "id": "arc-040",
+   "ask": {
+    "1": "Appian Way",
+    "2": "Proverb",
+    "3": "Begun"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "According to the proverb, all roads lead to",
+     "choices": [
+      "Constantinople",
+      "Carthage",
+      "Rome",
+      "Athens"
+     ],
+     "answer": 2,
+     "explanation": "The proverb reflects the Roman road network."
+    },
+    {
+     "level": 3,
+     "question": "The Appian Way was begun in",
+     "choices": [
+      "509 BC",
+      "312 BC",
+      "264 BC",
+      "146 BC"
+     ],
+     "answer": 1,
+     "explanation": "Work began in 312 BC."
+    }
+   ]
+  },
+  {
+   "id": "arc-025",
+   "ask": {
+    "1": "Founding date",
+    "2": "Legendary founder",
+    "3": "Birthday"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Who, according to legend, founded Rome?",
+     "choices": [
+      "Aeneas",
+      "Numa",
+      "Romulus",
+      "Julius Caesar"
+     ],
+     "answer": 2,
+     "explanation": "Legend says Romulus founded Rome after killing his twin Remus."
+    },
+    {
+     "level": 3,
+     "question": "On which date did Romans traditionally celebrate the founding of Rome?",
+     "choices": [
+      "21 April",
+      "12 August",
+      "15 March",
+      "1 January"
+     ],
+     "answer": 0,
+     "explanation": "The Parilia on 21 April was identified with the city's birthday."
+    }
+   ]
+  },
+  {
+   "id": "arc-026",
+   "ask": {
+    "1": "Republic year",
+    "2": "New regime",
+    "3": "Last king"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What form of government replaced the kings of Rome?",
+     "choices": [
+      "The Republic",
+      "A theocracy",
+      "A tyranny",
+      "An empire"
+     ],
+     "answer": 0,
+     "explanation": "After the kings, Rome was governed by elected magistrates and the Senate."
+    },
+    {
+     "level": 3,
+     "question": "Who was the last of Rome's seven traditional kings?",
+     "choices": [
+      "Servius Tullius",
+      "Ancus Marcius",
+      "Tarquinius Superbus",
+      "Numa Pompilius"
+     ],
+     "answer": 2,
+     "explanation": "Tarquin the Proud was the last king, according to tradition."
+    }
+   ]
+  },
+  {
+   "id": "arc-027",
+   "ask": {
+    "1": "First Punic War",
+    "2": "How many",
+    "3": "Second War"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "How many Punic Wars did Rome fight against Carthage?",
+     "choices": [
+      "Five",
+      "Two",
+      "Three",
+      "Four"
+     ],
+     "answer": 2,
+     "explanation": "The three Punic Wars lasted from 264 to 146 BC."
+    },
+    {
+     "level": 3,
+     "question": "About how long did the Second Punic War last, from 218 BC to 201 BC?",
+     "choices": [
+      "About 17 years",
+      "About 12 years",
+      "About 25 years",
+      "About 7 years"
+     ],
+     "answer": 0,
+     "explanation": "The Second Punic War ran from 218 to 201 BC."
+    }
+   ]
+  },
+  {
+   "id": "arc-028",
+   "ask": {
+    "1": "Hannibal beaten",
+    "2": "City destroyed",
+    "3": "Zama year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which city did Rome destroy at the end of the Third Punic War in 146 BC?",
+     "choices": [
+      "Carthage",
+      "Syracuse",
+      "Athens",
+      "Alexandria"
+     ],
+     "answer": 0,
+     "explanation": "Rome razed Carthage in 146 BC."
+    },
+    {
+     "level": 3,
+     "question": "The battle of Zama was fought in",
+     "choices": [
+      "190 BC",
+      "218 BC",
+      "202 BC",
+      "216 BC"
+     ],
+     "answer": 2,
+     "explanation": "Zama, in 202 BC, ended the Second Punic War; Cannae was in 216 BC."
+    }
+   ]
+  },
+  {
+   "id": "arc-030",
+   "ask": {
+    "1": "Gaul war",
+    "2": "Rubicon",
+    "3": "Crossing year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which river did Caesar cross, starting a civil war?",
+     "choices": [
+      "The Tiber",
+      "The Po",
+      "The Rubicon",
+      "The Arno"
+     ],
+     "answer": 2,
+     "explanation": "Crossing the Rubicon with his army broke Roman law."
+    },
+    {
+     "level": 3,
+     "question": "In which year did Caesar cross the Rubicon?",
+     "choices": [
+      "49 BC",
+      "58 BC",
+      "44 BC",
+      "51 BC"
+     ],
+     "answer": 0,
+     "explanation": "Caesar crossed the Rubicon in January 49 BC."
+    }
+   ]
+  },
+  {
+   "id": "arc-031",
+   "ask": {
+    "1": "Triumvirate",
+    "2": "Size",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "How many men formed a triumvirate?",
+     "choices": [
+      "Two",
+      "Seven",
+      "Five",
+      "Three"
+     ],
+     "answer": 3,
+     "explanation": "Triumvirate means rule by three men."
+    },
+    {
+     "level": 3,
+     "question": "The First Triumvirate was formed in about",
+     "choices": [
+      "49 BC",
+      "27 BC",
+      "44 BC",
+      "60 BC"
+     ],
+     "answer": 3,
+     "explanation": "The pact among Caesar, Pompey and Crassus is dated to about 60 BC."
+    }
+   ]
+  },
+  {
+   "id": "arc-032",
+   "ask": {
+    "1": "Consul term",
+    "2": "Consuls",
+    "3": "Senate size"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "How many consuls held office at once in the Roman Republic?",
+     "choices": [
+      "Ten",
+      "Two",
+      "Three",
+      "One"
+     ],
+     "answer": 1,
+     "explanation": "Two consuls shared power so neither could rule alone."
+    },
+    {
+     "level": 3,
+     "question": "About how many senators sat in the Senate in the middle Republic?",
+     "choices": [
+      "About 900",
+      "About 300",
+      "About 100",
+      "About 600"
+     ],
+     "answer": 1,
+     "explanation": "The Senate numbered about 300; Sulla raised it to 600 and Caesar to 900."
+    }
+   ]
+  },
+  {
    "id": "his2-002",
    "ask": {
     "1": "The city",
@@ -1258,6 +4080,754 @@
      ],
      "answer": 3,
      "explanation": "The siege ended in August 1521."
+    }
+   ]
+  },
+  {
+   "id": "arc-145",
+   "ask": {
+    "1": "Central Powers",
+    "2": "Entente partners",
+    "3": "Entente Cordiale"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Triple Entente linked Britain, Russia and which other country?",
+     "choices": [
+      "Italy",
+      "France",
+      "Spain",
+      "Japan"
+     ],
+     "answer": 1,
+     "explanation": "France, Russia and Britain made up the Entente that faced the Central Powers."
+    },
+    {
+     "level": 3,
+     "question": "In which year was the Entente Cordiale between Britain and France signed?",
+     "choices": [
+      "1911",
+      "1894",
+      "1898",
+      "1904"
+     ],
+     "answer": 3,
+     "explanation": "The 1904 agreement settled colonial disputes and began the Anglo-French partnership."
+    }
+   ]
+  },
+  {
+   "id": "arc-146",
+   "ask": {
+    "1": "Month of the shots",
+    "2": "Where it happened",
+    "3": "Declaration of war"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Sarajevo, where the assassination happened, is the capital of which present-day country?",
+     "choices": [
+      "Bosnia and Herzegovina",
+      "Serbia",
+      "Austria",
+      "Croatia"
+     ],
+     "answer": 0,
+     "explanation": "Sarajevo is the capital of Bosnia and Herzegovina."
+    },
+    {
+     "level": 3,
+     "question": "How long after the assassination did Austria-Hungary declare war on Serbia?",
+     "choices": [
+      "About one month",
+      "About one week",
+      "About one year",
+      "About six months"
+     ],
+     "answer": 0,
+     "explanation": "The declaration came on 28 July 1914, a month to the day after the shooting."
+    }
+   ]
+  },
+  {
+   "id": "arc-148",
+   "ask": {
+    "1": "Between the trenches",
+    "2": "Main defence",
+    "3": "Length of the front"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which kind of defence marked the Western Front?",
+     "choices": [
+      "Moats",
+      "Stone walls",
+      "Watchtowers",
+      "Trenches"
+     ],
+     "answer": 3,
+     "explanation": "Both sides dug lines of trenches that barely moved for years."
+    },
+    {
+     "level": 3,
+     "question": "Roughly how long was the Western Front trench line, from the North Sea to Switzerland?",
+     "choices": [
+      "About 2,500 km",
+      "About 700 km",
+      "About 7,000 km",
+      "About 100 km"
+     ],
+     "answer": 1,
+     "explanation": "The line ran some 700 kilometres across Belgium and France."
+    }
+   ]
+  },
+  {
+   "id": "arc-151",
+   "ask": {
+    "1": "Why Russia left",
+    "2": "Treaty",
+    "3": "Tannenberg"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Russia left the war after which upheaval in 1917?",
+     "choices": [
+      "A famine only",
+      "A naval defeat",
+      "An earthquake",
+      "A revolution"
+     ],
+     "answer": 3,
+     "explanation": "The revolutions of 1917 toppled the tsar and then brought the Bolsheviks to power."
+    },
+    {
+     "level": 3,
+     "question": "Which German commander won the Battle of Tannenberg in August 1914?",
+     "choices": [
+      "Falkenhayn",
+      "Hindenburg",
+      "Mackensen",
+      "Moltke"
+     ],
+     "answer": 1,
+     "explanation": "Paul von Hindenburg, with Ludendorff, destroyed a Russian army at Tannenberg."
+    }
+   ]
+  },
+  {
+   "id": "arc-152",
+   "ask": {
+    "1": "Year US joined",
+    "2": "Ship sunk 1915",
+    "3": "Armistice time"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which liner's sinking by a German submarine in 1915 outraged American opinion?",
+     "choices": [
+      "Maine",
+      "Titanic",
+      "Lusitania",
+      "Bismarck"
+     ],
+     "answer": 2,
+     "explanation": "The Lusitania went down in May 1915 with many American passengers."
+    },
+    {
+     "level": 3,
+     "question": "At what time on 11 November 1918 did the armistice take effect?",
+     "choices": [
+      "11 a.m.",
+      "6 a.m.",
+      "3 p.m.",
+      "Midnight"
+     ],
+     "answer": 0,
+     "explanation": "Fighting stopped at the eleventh hour of the eleventh day of the eleventh month."
+    }
+   ]
+  },
+  {
+   "id": "arc-161",
+   "ask": {
+    "1": "Who declared war",
+    "2": "Invaded country",
+    "3": "Pact's second name"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which two countries declared war on Germany on 3 September 1939?",
+     "choices": [
+      "Canada and Australia",
+      "Italy and Japan",
+      "The USA and the USSR",
+      "Britain and France"
+     ],
+     "answer": 3,
+     "explanation": "They had promised to support Poland."
+    },
+    {
+     "level": 3,
+     "question": "The 1939 Nazi-Soviet pact is named after Molotov and which German foreign minister?",
+     "choices": [
+      "Himmler",
+      "Goebbels",
+      "Ribbentrop",
+      "Göring"
+     ],
+     "answer": 2,
+     "explanation": "The Molotov-Ribbentrop Pact of August 1939 included a secret plan to divide Poland."
+    }
+   ]
+  },
+  {
+   "id": "arc-163",
+   "ask": {
+    "1": "Who dropped them",
+    "2": "First city bombed",
+    "3": "VE Day date"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country dropped the atomic bombs on Japan?",
+     "choices": [
+      "The Soviet Union",
+      "Britain",
+      "Germany",
+      "The United States"
+     ],
+     "answer": 3,
+     "explanation": "American aircraft dropped both bombs."
+    },
+    {
+     "level": 3,
+     "question": "On which date is VE Day, the Allied victory in Europe, marked?",
+     "choices": [
+      "6 June 1945",
+      "8 May 1945",
+      "11 November 1945",
+      "2 September 1945"
+     ],
+     "answer": 1,
+     "explanation": "Germany's surrender took effect on 8 May 1945, and Japan surrendered in September."
+    }
+   ]
+  },
+  {
+   "id": "arc-165",
+   "ask": {
+    "1": "Pearl Harbor's state",
+    "2": "Year of attack",
+    "3": "Turning-point battle"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Pearl Harbor is in which US state?",
+     "choices": [
+      "Hawaii",
+      "Florida",
+      "Alaska",
+      "California"
+     ],
+     "answer": 0,
+     "explanation": "The naval base is on the island of Oahu."
+    },
+    {
+     "level": 3,
+     "question": "Which naval battle in June 1942 turned the Pacific war against Japan?",
+     "choices": [
+      "Coral Sea",
+      "Guadalcanal",
+      "Midway",
+      "Leyte Gulf"
+     ],
+     "answer": 2,
+     "explanation": "At Midway the US sank four Japanese aircraft carriers."
+    }
+   ]
+  },
+  {
+   "id": "arc-194",
+   "ask": {
+    "1": "Seventeen in 1960",
+    "2": "Decade of change",
+    "3": "Belgian colony"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which decade did most African colonies gain independence?",
+     "choices": [
+      "The 1960s",
+      "The 1990s",
+      "The 1920s",
+      "The 1980s"
+     ],
+     "answer": 0,
+     "explanation": "The wave of independence peaked in the 1960s."
+    },
+    {
+     "level": 2,
+     "question": "Which large central African country, a Belgian colony, became independent in 1960?",
+     "choices": [
+      "Mozambique",
+      "Uganda",
+      "Angola",
+      "Congo"
+     ],
+     "answer": 3,
+     "explanation": "The Belgian Congo became independent on 30 June 1960."
+    }
+   ]
+  },
+  {
+   "id": "arc-196",
+   "ask": {
+    "1": "Length of the genocide",
+    "2": "Which year",
+    "3": "Which month"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which year did the genocide against the Tutsi in Rwanda take place?",
+     "choices": [
+      "1999",
+      "1990",
+      "1994",
+      "1984"
+     ],
+     "answer": 2,
+     "explanation": "It took place in 1994."
+    },
+    {
+     "level": 2,
+     "question": "In which month of 1994 did the genocide in Rwanda begin?",
+     "choices": [
+      "December",
+      "September",
+      "January",
+      "April"
+     ],
+     "answer": 3,
+     "explanation": "It began in April 1994 and lasted until about July."
+    }
+   ]
+  },
+  {
+   "id": "arc-197",
+   "ask": {
+    "1": "Ending the slave trade",
+    "2": "Which country",
+    "3": "Ending slavery"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country passed the 1807 act abolishing the slave trade in its empire?",
+     "choices": [
+      "The United Kingdom",
+      "Spain",
+      "France",
+      "Portugal"
+     ],
+     "answer": 0,
+     "explanation": "The British Parliament passed the Slave Trade Act in 1807."
+    },
+    {
+     "level": 2,
+     "question": "In which year was slavery itself abolished across most of the British Empire?",
+     "choices": [
+      "1865",
+      "1833",
+      "1848",
+      "1807"
+     ],
+     "answer": 1,
+     "explanation": "The Slavery Abolition Act of 1833 took effect in 1834."
+    }
+   ]
+  },
+  {
+   "id": "arc-198",
+   "ask": {
+    "1": "Italian occupation",
+    "2": "Invader",
+    "3": "The emperor"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which European power invaded Ethiopia in 1935?",
+     "choices": [
+      "Italy",
+      "Germany",
+      "Britain",
+      "France"
+     ],
+     "answer": 0,
+     "explanation": "Mussolini's Italy invaded Ethiopia in October 1935."
+    },
+    {
+     "level": 2,
+     "question": "Which emperor of Ethiopia went into exile in 1936 and returned in 1941?",
+     "choices": [
+      "Haile Selassie",
+      "Menelik II",
+      "Tewodros II",
+      "Yohannes IV"
+     ],
+     "answer": 0,
+     "explanation": "Haile Selassie fled in 1936 and was restored in 1941."
+    }
+   ]
+  },
+  {
+   "id": "arc-199",
+   "ask": {
+    "1": "Suez Crisis year",
+    "2": "Egyptian leader",
+    "3": "Who attacked"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Egyptian leader nationalised the Suez Canal in 1956?",
+     "choices": [
+      "King Farouk",
+      "Hosni Mubarak",
+      "Anwar Sadat",
+      "Gamal Abdel Nasser"
+     ],
+     "answer": 3,
+     "explanation": "Nasser took control of the canal in July 1956."
+    },
+    {
+     "level": 2,
+     "question": "Which two European countries, with Israel, attacked Egypt in 1956?",
+     "choices": [
+      "Britain and France",
+      "Italy and Spain",
+      "Germany and the Netherlands",
+      "Belgium and Portugal"
+     ],
+     "answer": 0,
+     "explanation": "Britain and France joined Israel's attack, then withdrew under international pressure."
+    }
+   ]
+  },
+  {
+   "id": "arc-200",
+   "ask": {
+    "1": "End of the Boer War",
+    "2": "Start of the war",
+    "3": "Where it was fought"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which present-day country was the Boer War fought?",
+     "choices": [
+      "Kenya",
+      "South Africa",
+      "Egypt",
+      "Nigeria"
+     ],
+     "answer": 1,
+     "explanation": "The war was fought in southern Africa, in today's South Africa."
+    },
+    {
+     "level": 2,
+     "question": "In which year did the Second Boer War begin?",
+     "choices": [
+      "1902",
+      "1895",
+      "1881",
+      "1899"
+     ],
+     "answer": 3,
+     "explanation": "It began in October 1899 and lasted until 1902."
+    }
+   ]
+  },
+  {
+   "id": "arc-209",
+   "ask": {
+    "1": "Louisiana Purchase",
+    "2": "French seller",
+    "3": "US president"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which French ruler sold Louisiana to the United States?",
+     "choices": [
+      "Louis XIV",
+      "Napoleon Bonaparte",
+      "Louis XVI",
+      "Charlemagne"
+     ],
+     "answer": 1,
+     "explanation": "Napoleon sold the territory to fund his wars in Europe."
+    },
+    {
+     "level": 2,
+     "question": "Which US president made the Louisiana Purchase?",
+     "choices": [
+      "George Washington",
+      "Thomas Jefferson",
+      "Andrew Jackson",
+      "Abraham Lincoln"
+     ],
+     "answer": 1,
+     "explanation": "Jefferson was president in 1803."
+    }
+   ]
+  },
+  {
+   "id": "arc-210",
+   "ask": {
+    "1": "Length of the Civil War",
+    "2": "The two sides",
+    "3": "A turning point"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In the American Civil War, the Union fought which side?",
+     "choices": [
+      "The British",
+      "The Mexicans",
+      "The Spanish",
+      "The Confederacy"
+     ],
+     "answer": 3,
+     "explanation": "The Union fought the Confederate States."
+    },
+    {
+     "level": 2,
+     "question": "Which 1863 battle in Pennsylvania was a turning point of the Civil War?",
+     "choices": [
+      "Gettysburg",
+      "Yorktown",
+      "Saratoga",
+      "Antietam"
+     ],
+     "answer": 0,
+     "explanation": "Gettysburg was fought in July 1863."
+    }
+   ]
+  },
+  {
+   "id": "arc-211",
+   "ask": {
+    "1": "Brazil's independence",
+    "2": "Former ruler",
+    "3": "Who declared it"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Brazil was a colony of which European country?",
+     "choices": [
+      "The Netherlands",
+      "France",
+      "Spain",
+      "Portugal"
+     ],
+     "answer": 3,
+     "explanation": "Portugal ruled Brazil for over three centuries."
+    },
+    {
+     "level": 2,
+     "question": "Which Portuguese prince declared Brazil's independence?",
+     "choices": [
+      "Pedro",
+      "Manuel",
+      "Joao VI",
+      "Sebastian"
+     ],
+     "answer": 0,
+     "explanation": "Prince Pedro became Brazil's first emperor, Pedro I."
+    }
+   ]
+  },
+  {
+   "id": "arc-212",
+   "ask": {
+    "1": "Panama Canal opening",
+    "2": "The ocean linked",
+    "3": "Who finished it"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Panama Canal links the Atlantic with which ocean?",
+     "choices": [
+      "The Indian Ocean",
+      "The Pacific",
+      "The Southern Ocean",
+      "The Arctic Ocean"
+     ],
+     "answer": 1,
+     "explanation": "It lets ships cross between the Atlantic and Pacific."
+    },
+    {
+     "level": 2,
+     "question": "Which country completed the canal after a failed French attempt?",
+     "choices": [
+      "The United States",
+      "Colombia",
+      "Britain",
+      "Spain"
+     ],
+     "answer": 0,
+     "explanation": "The United States finished the canal after the French effort collapsed."
+    }
+   ]
+  },
+  {
+   "id": "arc-213",
+   "ask": {
+    "1": "Revolution start",
+    "2": "Former rulers",
+    "3": "Overthrown ruler"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Mexico was a colony of which empire until 1821?",
+     "choices": [
+      "The Spanish Empire",
+      "The French Empire",
+      "The British Empire",
+      "The Portuguese Empire"
+     ],
+     "answer": 0,
+     "explanation": "Mexico became independent from Spain in 1821."
+    },
+    {
+     "level": 2,
+     "question": "Which long-ruling dictator was overthrown early in the Mexican Revolution?",
+     "choices": [
+      "Santa Anna",
+      "Porfirio Diaz",
+      "Francisco Madero",
+      "Benito Juarez"
+     ],
+     "answer": 1,
+     "explanation": "Diaz resigned in 1911 after decades in power."
+    }
+   ]
+  },
+  {
+   "id": "arc-214",
+   "ask": {
+    "1": "Cuban Revolution year",
+    "2": "Island sea",
+    "3": "Che Guevara"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Cuba is an island in which sea?",
+     "choices": [
+      "The Caribbean Sea",
+      "The Baltic Sea",
+      "The Mediterranean Sea",
+      "The Black Sea"
+     ],
+     "answer": 0,
+     "explanation": "Cuba lies in the Caribbean."
+    },
+    {
+     "level": 2,
+     "question": "Which Argentine-born revolutionary fought alongside Castro?",
+     "choices": [
+      "Juan Peron",
+      "Augusto Pinochet",
+      "Simon Bolivar",
+      "Che Guevara"
+     ],
+     "answer": 3,
+     "explanation": "Ernesto Che Guevara joined the Cuban Revolution."
+    }
+   ]
+  },
+  {
+   "id": "arc-215",
+   "ask": {
+    "1": "Treaty of Guadalupe Hidalgo",
+    "2": "The opponent",
+    "3": "Ceded land"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Mexican-American War was fought between Mexico and which country?",
+     "choices": [
+      "France",
+      "Britain",
+      "Spain",
+      "The United States"
+     ],
+     "answer": 3,
+     "explanation": "It was fought against the United States from 1846 to 1848."
+    },
+    {
+     "level": 2,
+     "question": "Which present-day US state was among the territories Mexico ceded in 1848?",
+     "choices": [
+      "Louisiana",
+      "Oregon",
+      "California",
+      "Florida"
+     ],
+     "answer": 2,
+     "explanation": "Mexico ceded California, Nevada, Utah and other lands."
+    }
+   ]
+  },
+  {
+   "id": "arc-216",
+   "ask": {
+    "1": "Canadian Confederation",
+    "2": "The empire",
+    "3": "Founding provinces"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Canada was formed as a dominion within which empire?",
+     "choices": [
+      "The British Empire",
+      "The Spanish Empire",
+      "The French Empire",
+      "The Russian Empire"
+     ],
+     "answer": 0,
+     "explanation": "Canada became a self-governing dominion of the British Empire."
+    },
+    {
+     "level": 2,
+     "question": "How many provinces formed Canada in 1867?",
+     "choices": [
+      "Two",
+      "Four",
+      "Ten",
+      "Seven"
+     ],
+     "answer": 1,
+     "explanation": "Ontario, Quebec, Nova Scotia and New Brunswick joined first."
     }
    ]
   },
@@ -1466,6 +5036,1808 @@
    ]
   },
   {
+   "id": "arc-137",
+   "ask": {
+    "1": "Last emperor",
+    "2": "End of the Qing",
+    "3": "The founders"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Who was the last emperor of China?",
+     "choices": [
+      "Guangxu",
+      "Kangxi",
+      "Qianlong",
+      "Puyi"
+     ],
+     "answer": 3,
+     "explanation": "Puyi became emperor as a small child in 1908."
+    },
+    {
+     "level": 2,
+     "question": "In which year did the Qing dynasty end with Puyi's abdication?",
+     "choices": [
+      "1912",
+      "1949",
+      "1911",
+      "1900"
+     ],
+     "answer": 0,
+     "explanation": "Puyi abdicated on 12 February 1912, after the revolution of 1911."
+    }
+   ]
+  },
+  {
+   "id": "arc-139",
+   "ask": {
+    "1": "Its nickname",
+    "2": "End of the sultanate",
+    "3": "The reform era"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In the 1800s the Ottoman Empire was nicknamed the 'sick man of' where?",
+     "choices": [
+      "Asia",
+      "Europe",
+      "The Mediterranean",
+      "The Balkans"
+     ],
+     "answer": 1,
+     "explanation": "The remark is usually attributed to Tsar Nicholas I."
+    },
+    {
+     "level": 2,
+     "question": "In which year was the Ottoman sultanate formally abolished?",
+     "choices": [
+      "1922",
+      "1908",
+      "1923",
+      "1918"
+     ],
+     "answer": 0,
+     "explanation": "The Turkish assembly abolished the sultanate on 1 November 1922, and the republic followed in 1923."
+    }
+   ]
+  },
+  {
+   "id": "arc-140",
+   "ask": {
+    "1": "Modern country",
+    "2": "Shah Abbas's capital",
+    "3": "The dynasty"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Safavid Persia covered most of what is now which country?",
+     "choices": [
+      "Turkey",
+      "Iraq",
+      "Egypt",
+      "Iran"
+     ],
+     "answer": 3,
+     "explanation": "The Safavid heartland lay in today's Iran."
+    },
+    {
+     "level": 2,
+     "question": "Which city did Shah Abbas I make his capital around 1598?",
+     "choices": [
+      "Tehran",
+      "Shiraz",
+      "Tabriz",
+      "Isfahan"
+     ],
+     "answer": 3,
+     "explanation": "He rebuilt Isfahan around its great Naqsh-e Jahan Square."
+    }
+   ]
+  },
+  {
+   "id": "arc-141",
+   "ask": {
+    "1": "Its city",
+    "2": "How long it took",
+    "3": "Who built it"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which Indian city is the Taj Mahal?",
+     "choices": [
+      "Mumbai",
+      "Agra",
+      "Delhi",
+      "Jaipur"
+     ],
+     "answer": 1,
+     "explanation": "It stands on the bank of the Yamuna river."
+    },
+    {
+     "level": 2,
+     "question": "Building the Taj Mahal, begun around 1632, took about how long?",
+     "choices": [
+      "About 5 years",
+      "About 2 years",
+      "About 60 years",
+      "About 20 years"
+     ],
+     "answer": 3,
+     "explanation": "The main tomb was finished around 1643 and the whole complex by about 1653."
+    }
+   ]
+  },
+  {
+   "id": "arc-142",
+   "ask": {
+    "1": "Seller of Alaska",
+    "2": "The price",
+    "3": "The tsar who sold it"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which empire sold Alaska to the United States in the 1860s?",
+     "choices": [
+      "The Spanish Empire",
+      "The British Empire",
+      "The Ottoman Empire",
+      "The Russian Empire"
+     ],
+     "answer": 3,
+     "explanation": "The deal was negotiated by Secretary of State William Seward."
+    },
+    {
+     "level": 2,
+     "question": "How much did the United States pay for Alaska?",
+     "choices": [
+      "$27 million",
+      "$7.2 million",
+      "$72 million",
+      "$720,000"
+     ],
+     "answer": 1,
+     "explanation": "The price was $7.2 million, about two cents an acre."
+    }
+   ]
+  },
+  {
+   "id": "arc-143",
+   "ask": {
+    "1": "Japan's opponent",
+    "2": "The sea battle",
+    "3": "Year the war ended"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In 1904 and 1905 Japan fought a war against which large country?",
+     "choices": [
+      "Britain",
+      "Russia",
+      "China",
+      "The United States"
+     ],
+     "answer": 1,
+     "explanation": "Japan's victory stunned the world, because it was widely seen as the first modern victory of an Asian power over a European one."
+    },
+    {
+     "level": 2,
+     "question": "Which May 1905 naval battle destroyed most of Russia's Baltic Fleet?",
+     "choices": [
+      "Midway",
+      "Trafalgar",
+      "Tsushima",
+      "Jutland"
+     ],
+     "answer": 2,
+     "explanation": "Tsushima was one of the most decisive naval victories in history."
+    }
+   ]
+  },
+  {
+   "id": "arc-201",
+   "ask": {
+    "1": "Treaty of 1842",
+    "2": "The opponent",
+    "3": "War start"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Opium Wars were fought between China and which country?",
+     "choices": [
+      "Japan",
+      "Portugal",
+      "Britain",
+      "Russia"
+     ],
+     "answer": 2,
+     "explanation": "British trade in opium led to the wars."
+    },
+    {
+     "level": 2,
+     "question": "In which year did the First Opium War begin?",
+     "choices": [
+      "1815",
+      "1856",
+      "1839",
+      "1860"
+     ],
+     "answer": 2,
+     "explanation": "The First Opium War ran from 1839 to 1842."
+    }
+   ]
+  },
+  {
+   "id": "arc-203",
+   "ask": {
+    "1": "Indian Rebellion year",
+    "2": "The Company",
+    "3": "After the revolt"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The East India Company was a trading company from which country?",
+     "choices": [
+      "Portugal",
+      "Britain",
+      "France",
+      "The Netherlands"
+     ],
+     "answer": 1,
+     "explanation": "It was a British company that came to rule large parts of India."
+    },
+    {
+     "level": 2,
+     "question": "After the rebellion, in 1858 control of India passed from the Company to whom?",
+     "choices": [
+      "The Dutch",
+      "The British Crown",
+      "The Mughal emperor",
+      "Russia"
+     ],
+     "answer": 1,
+     "explanation": "The Government of India Act 1858 transferred rule to the Crown."
+    }
+   ]
+  },
+  {
+   "id": "arc-204",
+   "ask": {
+    "1": "Shogunate span",
+    "2": "Its capital",
+    "3": "Ieyasu"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which city, now called Tokyo, was the Tokugawa capital?",
+     "choices": [
+      "Nara",
+      "Edo",
+      "Osaka",
+      "Kyoto"
+     ],
+     "answer": 1,
+     "explanation": "The shoguns ruled from Edo, today's Tokyo."
+    },
+    {
+     "level": 2,
+     "question": "In which year did Tokugawa Ieyasu become shogun?",
+     "choices": [
+      "1868",
+      "1603",
+      "1600",
+      "1543"
+     ],
+     "answer": 1,
+     "explanation": "Ieyasu took the title in 1603, three years after Sekigahara."
+    }
+   ]
+  },
+  {
+   "id": "arc-205",
+   "ask": {
+    "1": "Date of Hiroshima",
+    "2": "First bombed city",
+    "3": "Days between"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Japanese city was bombed first, Hiroshima or Nagasaki?",
+     "choices": [
+      "Hiroshima",
+      "They were bombed at the same time",
+      "Neither was bombed in 1945",
+      "Nagasaki"
+     ],
+     "answer": 0,
+     "explanation": "Hiroshima came first, then Nagasaki."
+    },
+    {
+     "level": 2,
+     "question": "How many days after Hiroshima was Nagasaki bombed?",
+     "choices": [
+      "Seven days",
+      "Ten days",
+      "Three days",
+      "One day"
+     ],
+     "answer": 2,
+     "explanation": "Nagasaki was bombed on 9 August, three days after Hiroshima."
+    }
+   ]
+  },
+  {
+   "id": "arc-206",
+   "ask": {
+    "1": "Yuan dynasty year",
+    "2": "His grandfather",
+    "3": "Yuan's end"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Kublai Khan was a grandson of which Mongol founder?",
+     "choices": [
+      "Genghis Khan",
+      "Attila",
+      "Tamerlane",
+      "Ogedei Khan"
+     ],
+     "answer": 0,
+     "explanation": "Kublai was Genghis Khan's grandson."
+    },
+    {
+     "level": 2,
+     "question": "Which dynasty ended Yuan rule in China in 1368?",
+     "choices": [
+      "The Ming",
+      "The Song",
+      "The Tang",
+      "The Qing"
+     ],
+     "answer": 0,
+     "explanation": "The Ming dynasty replaced the Yuan in 1368."
+    }
+   ]
+  },
+  {
+   "id": "arc-207",
+   "ask": {
+    "1": "Fall of Saigon",
+    "2": "Saigon's new name",
+    "3": "Dien Bien Phu"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Saigon has been renamed what?",
+     "choices": [
+      "Hanoi",
+      "Da Nang",
+      "Ho Chi Minh City",
+      "Hue"
+     ],
+     "answer": 2,
+     "explanation": "The city was renamed Ho Chi Minh City after 1975."
+    },
+    {
+     "level": 2,
+     "question": "Which 1954 defeat of the French led to Vietnam's division at the 17th parallel?",
+     "choices": [
+      "Khe Sanh",
+      "Midway",
+      "Tet",
+      "Dien Bien Phu"
+     ],
+     "answer": 3,
+     "explanation": "The French defeat at Dien Bien Phu led to the Geneva Accords."
+    }
+   ]
+  },
+  {
+   "id": "arc-208",
+   "ask": {
+    "1": "Armistice year",
+    "2": "The dividing line",
+    "3": "War start"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Korea was divided roughly along which line of latitude after 1945?",
+     "choices": [
+      "The 30th parallel",
+      "The 49th parallel",
+      "The 38th parallel",
+      "The 17th parallel"
+     ],
+     "answer": 2,
+     "explanation": "The 38th parallel marked the division."
+    },
+    {
+     "level": 2,
+     "question": "In which year did the Korean War begin?",
+     "choices": [
+      "1948",
+      "1953",
+      "1945",
+      "1950"
+     ],
+     "answer": 3,
+     "explanation": "North Korea invaded the South in June 1950."
+    }
+   ]
+  },
+  {
+   "id": "arc-233",
+   "ask": {
+    "1": "Constantinople to Columbus",
+    "2": "Which came first",
+    "3": "Fall of Constantinople"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which came first?",
+     "choices": [
+      "The fall of Constantinople",
+      "Columbus's first voyage",
+      "Neither happened before 1500",
+      "They happened in the same year"
+     ],
+     "answer": 0,
+     "explanation": "Constantinople fell in 1453, Columbus sailed in 1492."
+    },
+    {
+     "level": 2,
+     "question": "In which year did Constantinople fall to the Ottomans?",
+     "choices": [
+      "1492",
+      "1517",
+      "1453",
+      "1415"
+     ],
+     "answer": 2,
+     "explanation": "Mehmed II took the city on 29 May 1453."
+    }
+   ]
+  },
+  {
+   "id": "arc-234",
+   "ask": {
+    "1": "1789 to 1989",
+    "2": "Which came first",
+    "3": "1776 to 1789"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which came first: the American Declaration of Independence or the French Revolution?",
+     "choices": [
+      "Neither happened before 1800",
+      "They happened in the same year",
+      "The French Revolution",
+      "The American Declaration of Independence"
+     ],
+     "answer": 3,
+     "explanation": "The Declaration dates from 1776, the Revolution from 1789."
+    },
+    {
+     "level": 2,
+     "question": "How many years after the American Declaration of Independence (1776) did the French Revolution begin?",
+     "choices": [
+      "33 years",
+      "13 years",
+      "3 years",
+      "23 years"
+     ],
+     "answer": 1,
+     "explanation": "1789 minus 1776 is 13."
+    }
+   ]
+  },
+  {
+   "id": "arc-235",
+   "ask": {
+    "1": "Rome to Charlemagne",
+    "2": "Which came first",
+    "3": "Hastings to Magna Carta"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which of these events came first?",
+     "choices": [
+      "Charlemagne's coronation",
+      "The Battle of Hastings",
+      "The fall of Western Rome",
+      "Magna Carta"
+     ],
+     "answer": 2,
+     "explanation": "476, 800, 1066 and 1215 in order."
+    },
+    {
+     "level": 2,
+     "question": "How many years separate the Battle of Hastings (1066) from Magna Carta (1215)?",
+     "choices": [
+      "349 years",
+      "49 years",
+      "249 years",
+      "149 years"
+     ],
+     "answer": 3,
+     "explanation": "1215 minus 1066 is 149."
+    }
+   ]
+  },
+  {
+   "id": "arc-236",
+   "ask": {
+    "1": "Between the world wars",
+    "2": "Versailles or Crash",
+    "3": "Crash to war"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which came first: the Treaty of Versailles or the Wall Street Crash?",
+     "choices": [
+      "They happened in the same year",
+      "Neither happened before 1930",
+      "The Wall Street Crash",
+      "The Treaty of Versailles"
+     ],
+     "answer": 3,
+     "explanation": "Versailles in 1919, the Crash in 1929."
+    },
+    {
+     "level": 2,
+     "question": "How many years separate the Wall Street Crash (1929) from the start of World War II (1939)?",
+     "choices": [
+      "10 years",
+      "15 years",
+      "20 years",
+      "5 years"
+     ],
+     "answer": 0,
+     "explanation": "1939 minus 1929 is 10."
+    }
+   ]
+  },
+  {
+   "id": "arc-237",
+   "ask": {
+    "1": "Gagarin to the Moon",
+    "2": "Sputnik or Gagarin",
+    "3": "Sputnik to Apollo"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which came first: Sputnik 1 or Gagarin's flight?",
+     "choices": [
+      "They happened in the same year",
+      "Sputnik 1",
+      "Gagarin's flight",
+      "Neither happened before 1960"
+     ],
+     "answer": 1,
+     "explanation": "Sputnik flew in 1957, Gagarin in 1961."
+    },
+    {
+     "level": 2,
+     "question": "How many years separate Sputnik (1957) from the Apollo 11 landing (1969)?",
+     "choices": [
+      "12 years",
+      "22 years",
+      "2 years",
+      "32 years"
+     ],
+     "answer": 0,
+     "explanation": "1969 minus 1957 is 12."
+    }
+   ]
+  },
+  {
+   "id": "arc-238",
+   "ask": {
+    "1": "End of WWII to USSR",
+    "2": "Wall or USSR",
+    "3": "Wall to dissolution"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which came first: the fall of the Berlin Wall or the dissolution of the Soviet Union?",
+     "choices": [
+      "Neither happened before 1990",
+      "They happened in the same year",
+      "The fall of the Berlin Wall",
+      "The dissolution of the Soviet Union"
+     ],
+     "answer": 2,
+     "explanation": "The Wall fell in 1989, the USSR dissolved in 1991."
+    },
+    {
+     "level": 2,
+     "question": "About how many years separate the fall of the Berlin Wall from the dissolution of the Soviet Union?",
+     "choices": [
+      "About 2 years",
+      "About 1 year",
+      "About 10 years",
+      "About 5 years"
+     ],
+     "answer": 0,
+     "explanation": "November 1989 to December 1991 is about two years."
+    }
+   ]
+  },
+  {
+   "id": "arc-239",
+   "ask": {
+    "1": "Olympics to Rome",
+    "2": "Which came first",
+    "3": "Founding of Rome"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which came first: the first Olympic Games or the founding of Rome (traditional dates)?",
+     "choices": [
+      "They happened in the same year",
+      "The founding of Rome",
+      "The first Olympic Games",
+      "Neither happened before 700 BC"
+     ],
+     "answer": 2,
+     "explanation": "The traditional dates are 776 BC and 753 BC."
+    },
+    {
+     "level": 2,
+     "question": "In which year BC was Rome traditionally founded?",
+     "choices": [
+      "753 BC",
+      "509 BC",
+      "264 BC",
+      "146 BC"
+     ],
+     "answer": 0,
+     "explanation": "Roman tradition dates the founding to 753 BC."
+    }
+   ]
+  },
+  {
+   "id": "arc-240",
+   "ask": {
+    "1": "Titanic to the Moon",
+    "2": "Titanic or WWI",
+    "3": "Wright to Apollo"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which came first: the sinking of the Titanic or the start of World War I?",
+     "choices": [
+      "Neither happened before 1920",
+      "The start of World War I",
+      "They happened in the same year",
+      "The sinking of the Titanic"
+     ],
+     "answer": 3,
+     "explanation": "The Titanic sank in 1912, the war began in 1914."
+    },
+    {
+     "level": 2,
+     "question": "How many years separate the Wright brothers' first flight (1903) from the Moon landing (1969)?",
+     "choices": [
+      "66 years",
+      "106 years",
+      "46 years",
+      "86 years"
+     ],
+     "answer": 0,
+     "explanation": "1969 minus 1903 is 66."
+    }
+   ]
+  },
+  {
+   "id": "arc-185",
+   "ask": {
+    "1": "Who built it",
+    "2": "How long it stood",
+    "3": "Date it began"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country built the Berlin Wall?",
+     "choices": [
+      "East Germany",
+      "The United States",
+      "Poland",
+      "West Germany"
+     ],
+     "answer": 0,
+     "explanation": "East Germany built it to stop people fleeing to the West."
+    },
+    {
+     "level": 2,
+     "question": "For about how long did the Berlin Wall divide the city?",
+     "choices": [
+      "About 45 years",
+      "About 28 years",
+      "About 5 years",
+      "About 60 years"
+     ],
+     "answer": 1,
+     "explanation": "It stood from 1961 to 1989."
+    }
+   ]
+  },
+  {
+   "id": "arc-186",
+   "ask": {
+    "1": "Island",
+    "2": "US president",
+    "3": "Length in days"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "On which island did the USSR place missiles in 1962?",
+     "choices": [
+      "Haiti",
+      "Cuba",
+      "Puerto Rico",
+      "Jamaica"
+     ],
+     "answer": 1,
+     "explanation": "The missiles were within range of the US mainland."
+    },
+    {
+     "level": 2,
+     "question": "Which US president faced the Cuban Missile Crisis?",
+     "choices": [
+      "Dwight Eisenhower",
+      "Lyndon Johnson",
+      "John F. Kennedy",
+      "Richard Nixon"
+     ],
+     "answer": 2,
+     "explanation": "Kennedy and Khrushchev agreed to a deal on the missiles."
+    }
+   ]
+  },
+  {
+   "id": "arc-187",
+   "ask": {
+    "1": "North's leader",
+    "2": "Dividing parallel",
+    "3": "Fall of Saigon"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Who led North Vietnam during the Vietnam War?",
+     "choices": [
+      "Ho Chi Minh",
+      "Nguyen Van Thieu",
+      "Pol Pot",
+      "Ngo Dinh Diem"
+     ],
+     "answer": 0,
+     "explanation": "He led the north from 1945 until his death in 1969."
+    },
+    {
+     "level": 2,
+     "question": "At which parallel was Vietnam divided in 1954?",
+     "choices": [
+      "The 49th parallel",
+      "The 22nd parallel",
+      "The 17th parallel",
+      "The 38th parallel"
+     ],
+     "answer": 2,
+     "explanation": "The Geneva Accords created a north and a south."
+    }
+   ]
+  },
+  {
+   "id": "arc-189",
+   "ask": {
+    "1": "First on the Moon",
+    "2": "Year of Sputnik",
+    "3": "First American in orbit"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country landed the first humans on the Moon in 1969?",
+     "choices": [
+      "France",
+      "The United States",
+      "China",
+      "The Soviet Union"
+     ],
+     "answer": 1,
+     "explanation": "Apollo 11 landed in July 1969."
+    },
+    {
+     "level": 2,
+     "question": "In which year did the USSR launch Sputnik 1?",
+     "choices": [
+      "1969",
+      "1961",
+      "1957",
+      "1949"
+     ],
+     "answer": 2,
+     "explanation": "The first artificial satellite launched in October 1957."
+    }
+   ]
+  },
+  {
+   "id": "arc-190",
+   "ask": {
+    "1": "Meaning of détente",
+    "2": "Visited China 1972",
+    "3": "Helsinki Accords"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What does 'détente' mean in Cold War history?",
+     "choices": [
+      "Open war",
+      "A new alliance",
+      "A relaxation of tensions",
+      "A trade embargo"
+     ],
+     "answer": 2,
+     "explanation": "The 1970s saw arms talks between the superpowers."
+    },
+    {
+     "level": 2,
+     "question": "Which US president visited China in 1972?",
+     "choices": [
+      "Ronald Reagan",
+      "Richard Nixon",
+      "Jimmy Carter",
+      "Gerald Ford"
+     ],
+     "answer": 1,
+     "explanation": "Nixon's visit opened relations with Mao's China."
+    }
+   ]
+  },
+  {
+   "id": "arc-192",
+   "ask": {
+    "1": "Meaning of glasnost",
+    "2": "Year of dissolution",
+    "3": "Number of republics"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What does the Russian word 'glasnost' mean?",
+     "choices": [
+      "Secrecy",
+      "Openness",
+      "Revolution",
+      "Restructuring"
+     ],
+     "answer": 1,
+     "explanation": "Gorbachev paired glasnost with perestroika."
+    },
+    {
+     "level": 2,
+     "question": "In which year was the Soviet Union dissolved?",
+     "choices": [
+      "1991",
+      "1987",
+      "1993",
+      "1989"
+     ],
+     "answer": 0,
+     "explanation": "Gorbachev resigned on 25 December 1991."
+    }
+   ]
+  },
+  {
+   "id": "arc-169",
+   "ask": {
+    "1": "Yalta's sea",
+    "2": "Yalta leaders",
+    "3": "Potsdam"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Yalta, where the Allied leaders met in February 1945, lies on which sea?",
+     "choices": [
+      "The Black Sea",
+      "The Caspian Sea",
+      "The Mediterranean",
+      "The Baltic Sea"
+     ],
+     "answer": 0,
+     "explanation": "Yalta is in Crimea."
+    },
+    {
+     "level": 2,
+     "question": "Which three leaders met at Yalta?",
+     "choices": [
+      "Roosevelt, Churchill and Mao",
+      "Roosevelt, de Gaulle and Stalin",
+      "Roosevelt, Churchill and Stalin",
+      "Truman, Churchill and Stalin"
+     ],
+     "answer": 2,
+     "explanation": "They planned the postwar order in Europe."
+    }
+   ]
+  },
+  {
+   "id": "arc-170",
+   "ask": {
+    "1": "Cold War rivals",
+    "2": "Containment pledge",
+    "3": "Iron curtain speech"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Cold War was mainly a rivalry between the United States and which other superpower?",
+     "choices": [
+      "The Soviet Union",
+      "Germany",
+      "China",
+      "Britain"
+     ],
+     "answer": 0,
+     "explanation": "The two superpowers never fought each other directly."
+    },
+    {
+     "level": 2,
+     "question": "Which 1947 policy pledged US support for countries resisting communism?",
+     "choices": [
+      "The Monroe Doctrine",
+      "The Eisenhower Doctrine",
+      "The Truman Doctrine",
+      "The Marshall Plan"
+     ],
+     "answer": 2,
+     "explanation": "It began with aid to Greece and Turkey."
+    }
+   ]
+  },
+  {
+   "id": "arc-171",
+   "ask": {
+    "1": "Who launched it",
+    "2": "Year announced",
+    "3": "Total aid"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country launched the Marshall Plan?",
+     "choices": [
+      "Britain",
+      "The Soviet Union",
+      "France",
+      "The United States"
+     ],
+     "answer": 3,
+     "explanation": "It was named after the US Secretary of State George Marshall."
+    },
+    {
+     "level": 2,
+     "question": "In which year was the Marshall Plan announced?",
+     "choices": [
+      "1947",
+      "1950",
+      "1945",
+      "1953"
+     ],
+     "answer": 0,
+     "explanation": "Marshall proposed it in a speech in June 1947."
+    }
+   ]
+  },
+  {
+   "id": "arc-172",
+   "ask": {
+    "1": "Powers in Berlin",
+    "2": "Western supply effort",
+    "3": "Duration"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Berlin was divided among how many occupying powers after 1945?",
+     "choices": [
+      "Four",
+      "Three",
+      "Two",
+      "Six"
+     ],
+     "answer": 0,
+     "explanation": "The US, Britain, France and the Soviet Union each held a sector."
+    },
+    {
+     "level": 2,
+     "question": "What was the Western effort to supply Berlin by air called?",
+     "choices": [
+      "Operation Overlord",
+      "The Berlin Airlift",
+      "Operation Barbarossa",
+      "Operation Torch"
+     ],
+     "answer": 1,
+     "explanation": "Allied aircraft flew in food and fuel for months."
+    }
+   ]
+  },
+  {
+   "id": "arc-173",
+   "ask": {
+    "1": "Attack on one",
+    "2": "Soviet counterpart",
+    "3": "Founding members"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Under NATO's treaty, an armed attack on one member is treated as an attack on whom?",
+     "choices": [
+      "The Soviet Union",
+      "All members",
+      "Only the United States",
+      "The United Nations"
+     ],
+     "answer": 1,
+     "explanation": "This is the collective-defence principle of Article 5."
+    },
+    {
+     "level": 2,
+     "question": "Which alliance did the Soviet bloc form in 1955?",
+     "choices": [
+      "The Warsaw Pact",
+      "The CSTO",
+      "The Cominform",
+      "Comecon"
+     ],
+     "answer": 0,
+     "explanation": "The Warsaw Pact answered West Germany's entry into NATO."
+    }
+   ]
+  },
+  {
+   "id": "arc-174",
+   "ask": {
+    "1": "Who invaded",
+    "2": "Dividing parallel",
+    "3": "Armistice year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country invaded South Korea in June 1950?",
+     "choices": [
+      "Japan",
+      "Vietnam",
+      "China",
+      "North Korea"
+     ],
+     "answer": 3,
+     "explanation": "North Korean forces crossed the border in June 1950."
+    },
+    {
+     "level": 2,
+     "question": "Roughly which line of latitude divided North and South Korea after 1945?",
+     "choices": [
+      "The 49th parallel",
+      "The 17th parallel",
+      "The 38th parallel",
+      "The 30th parallel"
+     ],
+     "answer": 2,
+     "explanation": "The peninsula was split along the 38th parallel."
+    }
+   ]
+  },
+  {
+   "id": "arc-175",
+   "ask": {
+    "1": "MAD meaning",
+    "2": "First H-bomb",
+    "3": "Soviet atomic test"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What does the Cold War doctrine 'MAD' stand for?",
+     "choices": [
+      "Maximum Atomic Defence",
+      "Massive Aerial Deployment",
+      "Military Arms Deterrence",
+      "Mutually Assured Destruction"
+     ],
+     "answer": 3,
+     "explanation": "Each side could destroy the other, which was meant to deter attack."
+    },
+    {
+     "level": 2,
+     "question": "Which new weapon did the US test for the first time in 1952?",
+     "choices": [
+      "A hydrogen bomb",
+      "A neutron bomb",
+      "A nuclear submarine",
+      "A cruise missile"
+     ],
+     "answer": 0,
+     "explanation": "The Ivy Mike test used fusion in November 1952."
+    }
+   ]
+  },
+  {
+   "id": "arc-176",
+   "ask": {
+    "1": "Mao's party",
+    "2": "Nationalist refuge",
+    "3": "PRC proclaimed"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Mao Zedong led which party?",
+     "choices": [
+      "The Viet Minh",
+      "The Congress Party",
+      "The Kuomintang",
+      "The Chinese Communist Party"
+     ],
+     "answer": 3,
+     "explanation": "The Communists won the civil war against the Nationalists."
+    },
+    {
+     "level": 2,
+     "question": "To which island did the Chinese Nationalists retreat in 1949?",
+     "choices": [
+      "Taiwan",
+      "Japan",
+      "Okinawa",
+      "Hainan"
+     ],
+     "answer": 0,
+     "explanation": "Chiang Kai-shek's government set up on Taiwan."
+    }
+   ]
+  },
+  {
+   "id": "arc-129",
+   "ask": {
+    "1": "The continent",
+    "2": "Biggest holders",
+    "3": "Share under control"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The 'Scramble' of the late 1800s, in which European powers divided up a continent, took place in which one?",
+     "choices": [
+      "Africa",
+      "Australia",
+      "Antarctica",
+      "South America"
+     ],
+     "answer": 0,
+     "explanation": "Within a few decades most of the continent was divided into colonies."
+    },
+    {
+     "level": 2,
+     "question": "Which two European powers held the most territory in Africa by 1914?",
+     "choices": [
+      "Spain and Portugal",
+      "Germany and Italy",
+      "Belgium and the Netherlands",
+      "Britain and France"
+     ],
+     "answer": 3,
+     "explanation": "Britain and France controlled the largest areas, from Egypt and the Cape to West Africa and Algeria."
+    }
+   ]
+  },
+  {
+   "id": "arc-130",
+   "ask": {
+    "1": "Where they were taken",
+    "2": "Slavery itself ended",
+    "3": "The trade ban"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Atlantic slave trade carried most enslaved Africans to where?",
+     "choices": [
+      "Australia",
+      "India",
+      "Northern Europe",
+      "The Americas"
+     ],
+     "answer": 3,
+     "explanation": "Millions were shipped to plantations in Brazil, the Caribbean and North America."
+    },
+    {
+     "level": 2,
+     "question": "Slavery itself was abolished across most of the British Empire by the Act of which year?",
+     "choices": [
+      "1833",
+      "1848",
+      "1807",
+      "1865"
+     ],
+     "answer": 0,
+     "explanation": "The Slavery Abolition Act of 1833 took effect in 1834 and paid compensation to slave owners, not to the enslaved."
+    }
+   ]
+  },
+  {
+   "id": "arc-131",
+   "ask": {
+    "1": "The opponent",
+    "2": "Where opium grew",
+    "3": "The 1842 treaty"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Opium Wars were fought between China and which main opponent?",
+     "choices": [
+      "Russia",
+      "Britain",
+      "Japan",
+      "The United States"
+     ],
+     "answer": 1,
+     "explanation": "Britain went to war to force open trade, including the sale of opium."
+    },
+    {
+     "level": 2,
+     "question": "Most of the opium Britain sold to China was grown in which territory?",
+     "choices": [
+      "India",
+      "Burma",
+      "Ceylon",
+      "Egypt"
+     ],
+     "answer": 0,
+     "explanation": "Opium grown under British control in India was shipped to Chinese ports."
+    }
+   ]
+  },
+  {
+   "id": "arc-132",
+   "ask": {
+    "1": "The company's home",
+    "2": "Victoria as Empress",
+    "3": "Crown takes over"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The East India Company, which came to rule much of India, was a trading company based in which country?",
+     "choices": [
+      "The Netherlands",
+      "Britain",
+      "France",
+      "Portugal"
+     ],
+     "answer": 1,
+     "explanation": "The company, founded in 1600, grew from a trader into the ruler of large parts of India."
+    },
+    {
+     "level": 2,
+     "question": "In which year was Queen Victoria proclaimed Empress of India?",
+     "choices": [
+      "1877",
+      "1887",
+      "1866",
+      "1858"
+     ],
+     "answer": 0,
+     "explanation": "Parliament gave her the title in 1876, and she was proclaimed Empress at Delhi on 1 January 1877."
+    }
+   ]
+  },
+  {
+   "id": "arc-133",
+   "ask": {
+    "1": "First settlement",
+    "2": "Claimed in 1770",
+    "3": "The First Fleet"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The first British settlement in Australia grew into which major city?",
+     "choices": [
+      "Sydney",
+      "Perth",
+      "Brisbane",
+      "Melbourne"
+     ],
+     "answer": 0,
+     "explanation": "The fleet settled at Sydney Cove, on Port Jackson."
+    },
+    {
+     "level": 2,
+     "question": "Which navigator claimed the east coast of Australia for Britain in 1770?",
+     "choices": [
+      "Abel Tasman",
+      "James Cook",
+      "Matthew Flinders",
+      "William Dampier"
+     ],
+     "answer": 1,
+     "explanation": "Cook named the territory New South Wales."
+    }
+   ]
+  },
+  {
+   "id": "arc-134",
+   "ask": {
+    "1": "Vietnam's ruler",
+    "2": "The uncolonised kingdom",
+    "3": "Indochina's members"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which European country ruled Vietnam as a colony until 1954?",
+     "choices": [
+      "Britain",
+      "Portugal",
+      "France",
+      "The Netherlands"
+     ],
+     "answer": 2,
+     "explanation": "French rule ended after the defeat at Dien Bien Phu."
+    },
+    {
+     "level": 2,
+     "question": "Which Southeast Asian kingdom was never colonised by a European power?",
+     "choices": [
+      "Siam",
+      "Burma",
+      "Laos",
+      "Cambodia"
+     ],
+     "answer": 0,
+     "explanation": "Siam, now Thailand, kept its independence while its neighbours were colonised."
+    }
+   ]
+  },
+  {
+   "id": "arc-135",
+   "ask": {
+    "1": "Modern name",
+    "2": "The spice islands",
+    "3": "The company"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Dutch East Indies became which independent country?",
+     "choices": [
+      "The Philippines",
+      "Indonesia",
+      "Malaysia",
+      "Sri Lanka"
+     ],
+     "answer": 1,
+     "explanation": "Indonesia proclaimed independence in 1945 and won recognition in 1949."
+    },
+    {
+     "level": 2,
+     "question": "Which spices from the Moluccas did the Dutch company fight to control?",
+     "choices": [
+      "Cinnamon and cardamom",
+      "Nutmeg and cloves",
+      "Pepper and ginger",
+      "Saffron and vanilla"
+     ],
+     "answer": 1,
+     "explanation": "At the time the Banda and Maluku islands were the only source of nutmeg and cloves."
+    }
+   ]
+  },
+  {
+   "id": "arc-136",
+   "ask": {
+    "1": "Former ruler",
+    "2": "The war begins",
+    "3": "Independence year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which European country ruled Algeria before its independence?",
+     "choices": [
+      "Britain",
+      "France",
+      "Italy",
+      "Spain"
+     ],
+     "answer": 1,
+     "explanation": "France invaded Algiers in 1830 and later governed Algeria as part of France."
+    },
+    {
+     "level": 2,
+     "question": "The Algerian War of Independence began in which year?",
+     "choices": [
+      "1962",
+      "1958",
+      "1951",
+      "1954"
+     ],
+     "answer": 3,
+     "explanation": "The war began with attacks on 1 November 1954."
+    }
+   ]
+  },
+  {
+   "id": "arc-177",
+   "ask": {
+    "1": "Partition's new state",
+    "2": "First PM",
+    "3": "Independence date"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Partition in 1947 created India and which other state?",
+     "choices": [
+      "Sri Lanka",
+      "Pakistan",
+      "Nepal",
+      "Bangladesh"
+     ],
+     "answer": 1,
+     "explanation": "East Pakistan later became Bangladesh."
+    },
+    {
+     "level": 2,
+     "question": "Who became India's first prime minister?",
+     "choices": [
+      "Muhammad Ali Jinnah",
+      "Jawaharlal Nehru",
+      "Mahatma Gandhi",
+      "Vallabhbhai Patel"
+     ],
+     "answer": 1,
+     "explanation": "Nehru led India from 1947 until 1964."
+    }
+   ]
+  },
+  {
+   "id": "arc-178",
+   "ask": {
+    "1": "Where Indonesia is",
+    "2": "First president",
+    "3": "Dutch recognition"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Indonesia, a vast archipelago, lies mainly in which part of the world?",
+     "choices": [
+      "Central Asia",
+      "South America",
+      "Southeast Asia",
+      "East Africa"
+     ],
+     "answer": 2,
+     "explanation": "It stretches between the Indian and Pacific oceans."
+    },
+    {
+     "level": 2,
+     "question": "Who proclaimed Indonesian independence in 1945 and became its first president?",
+     "choices": [
+      "Sukarno",
+      "Nehru",
+      "Ho Chi Minh",
+      "Suharto"
+     ],
+     "answer": 0,
+     "explanation": "Sukarno proclaimed independence on 17 August 1945."
+    }
+   ]
+  },
+  {
+   "id": "arc-179",
+   "ask": {
+    "1": "Former ruler",
+    "2": "Independence year",
+    "3": "War began"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Algeria was a colony of which European country?",
+     "choices": [
+      "Italy",
+      "France",
+      "Spain",
+      "Britain"
+     ],
+     "answer": 1,
+     "explanation": "France ruled Algeria from 1830."
+    },
+    {
+     "level": 2,
+     "question": "In which year did Algeria become independent?",
+     "choices": [
+      "1968",
+      "1958",
+      "1954",
+      "1962"
+     ],
+     "answer": 3,
+     "explanation": "Independence was declared on 5 July 1962."
+    }
+   ]
+  },
+  {
+   "id": "arc-180",
+   "ask": {
+    "1": "Old colony name",
+    "2": "First leader",
+    "3": "Independence year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "By what name was Ghana known as a British colony?",
+     "choices": [
+      "The Gold Coast",
+      "The Slave Coast",
+      "The Cape Colony",
+      "The Ivory Coast"
+     ],
+     "answer": 0,
+     "explanation": "The Gold Coast took the name Ghana at independence."
+    },
+    {
+     "level": 2,
+     "question": "Who led Ghana to independence and became its first leader?",
+     "choices": [
+      "Julius Nyerere",
+      "Jomo Kenyatta",
+      "Kwame Nkrumah",
+      "Patrice Lumumba"
+     ],
+     "answer": 2,
+     "explanation": "Nkrumah was a leading voice for African unity."
+    }
+   ]
+  },
+  {
+   "id": "arc-182",
+   "ask": {
+    "1": "Canal's sea",
+    "2": "Invaders",
+    "3": "Year of nationalisation"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Suez Canal joins the Mediterranean to which sea?",
+     "choices": [
+      "The Caspian Sea",
+      "The Black Sea",
+      "The Red Sea",
+      "The Arabian Sea"
+     ],
+     "answer": 2,
+     "explanation": "It shortens the route between Europe and Asia."
+    },
+    {
+     "level": 2,
+     "question": "Which two European powers, with Israel, attacked Egypt in 1956?",
+     "choices": [
+      "Britain and France",
+      "Spain and Portugal",
+      "Germany and Italy",
+      "Russia and Poland"
+     ],
+     "answer": 0,
+     "explanation": "The US and USSR both pressed them to withdraw."
+    }
+   ]
+  },
+  {
+   "id": "arc-183",
+   "ask": {
+    "1": "Country",
+    "2": "Viet Minh leader",
+    "3": "Year of defeat"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Dien Bien Phu is in which country?",
+     "choices": [
+      "Vietnam",
+      "Cambodia",
+      "Thailand",
+      "Laos"
+     ],
+     "answer": 0,
+     "explanation": "It lies in the north-west of Vietnam."
+    },
+    {
+     "level": 2,
+     "question": "Who led the Viet Minh independence movement?",
+     "choices": [
+      "Pol Pot",
+      "Ngo Dinh Diem",
+      "Sukarno",
+      "Ho Chi Minh"
+     ],
+     "answer": 3,
+     "explanation": "Ho Chi Minh proclaimed Vietnamese independence in 1945."
+    }
+   ]
+  },
+  {
+   "id": "arc-184",
+   "ask": {
+    "1": "Mandela's party",
+    "2": "Release year",
+    "3": "Years imprisoned"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which party did Nelson Mandela lead?",
+     "choices": [
+      "The Democratic Alliance",
+      "Inkatha",
+      "The National Party",
+      "The African National Congress"
+     ],
+     "answer": 3,
+     "explanation": "The ANC led the struggle against apartheid."
+    },
+    {
+     "level": 2,
+     "question": "In which year was Mandela released from prison?",
+     "choices": [
+      "1990",
+      "1994",
+      "1985",
+      "1987"
+     ],
+     "answer": 0,
+     "explanation": "He was freed on 11 February 1990 and elected president in 1994."
+    }
+   ]
+  },
+  {
+   "id": "arc-051",
+   "ask": {
+    "1": "Basilica",
+    "2": "Builder",
+    "3": "Completion"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which emperor ordered the building of Hagia Sophia?",
+     "choices": [
+      "Theodosius",
+      "Justinian",
+      "Constantine",
+      "Heraclius"
+     ],
+     "answer": 1,
+     "explanation": "Justinian I rebuilt the church after the Nika riots of 532."
+    },
+    {
+     "level": 2,
+     "question": "Hagia Sophia stands in which city, then the capital of the Eastern Roman Empire?",
+     "choices": [
+      "Antioch",
+      "Constantinople",
+      "Alexandria",
+      "Thessalonica"
+     ],
+     "answer": 1,
+     "explanation": "Constantinople, today Istanbul, was the capital of the Byzantine Empire."
+    }
+   ]
+  },
+  {
+   "id": "arc-055",
+   "ask": {
+    "1": "Splitting the empire",
+    "2": "Three parts",
+    "3": "Verdun"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Charlemagne's empire was split by his heirs. What were they to him?",
+     "choices": [
+      "Nephews",
+      "Cousins",
+      "Grandsons",
+      "Brothers"
+     ],
+     "answer": 2,
+     "explanation": "The Treaty of Verdun was agreed by his three grandsons."
+    },
+    {
+     "level": 2,
+     "question": "Into how many kingdoms did the Treaty of Verdun divide the Carolingian Empire?",
+     "choices": [
+      "Two",
+      "Five",
+      "Four",
+      "Three"
+     ],
+     "answer": 3,
+     "explanation": "West Francia, Middle Francia and East Francia emerged from the treaty."
+    }
+   ]
+  },
+  {
+   "id": "arc-056",
+   "ask": {
+    "1": "Monk historian",
+    "2": "Counting years",
+    "3": "Year of the work"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Bede lived in a monastery in which country today?",
+     "choices": [
+      "Italy",
+      "France",
+      "England",
+      "Ireland"
+     ],
+     "answer": 2,
+     "explanation": "Bede spent most of his life at Wearmouth and Jarrow in Northumbria."
+    },
+    {
+     "level": 2,
+     "question": "Bede helped popularise dating years from the birth of Christ. What is this system called?",
+     "choices": [
+      "Regnal years",
+      "Anno Domini",
+      "Hijri",
+      "Ab Urbe Condita"
+     ],
+     "answer": 1,
+     "explanation": "His writings spread the Anno Domini system across Europe."
+    }
+   ]
+  },
+  {
    "id": "his-024",
    "ask": {
     "1": "Explorer",
@@ -1564,6 +6936,924 @@
      ],
      "answer": 2,
      "explanation": "The 42-line Gutenberg Bible was printed in the 1450s."
+    }
+   ]
+  },
+  {
+   "id": "arc-100",
+   "ask": {
+    "1": "Number of branches",
+    "2": "A document he shaped",
+    "3": "The thinker"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Montesquieu's separation of powers divides government into how many branches?",
+     "choices": [
+      "Two",
+      "Three",
+      "Four",
+      "Five"
+     ],
+     "answer": 1,
+     "explanation": "Legislative, executive and judicial: three branches that check one another."
+    },
+    {
+     "level": 2,
+     "question": "Montesquieu's ideas strongly shaped which document, written in 1787?",
+     "choices": [
+      "The Declaration of Independence",
+      "The Napoleonic Code",
+      "The United States Constitution",
+      "The Magna Carta"
+     ],
+     "answer": 2,
+     "explanation": "The framers of the US Constitution built separated powers and checks and balances on his thinking."
+    }
+   ]
+  },
+  {
+   "id": "arc-102",
+   "ask": {
+    "1": "His homeland",
+    "2": "His famous image",
+    "3": "Year of The Wealth"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Adam Smith, author of The Wealth of Nations, was from which country?",
+     "choices": [
+      "England",
+      "France",
+      "Scotland",
+      "Ireland"
+     ],
+     "answer": 2,
+     "explanation": "Smith was born in Kirkcaldy, Scotland, and taught at Glasgow."
+    },
+    {
+     "level": 2,
+     "question": "Which image did Adam Smith use for how markets steer self-interest towards the common good?",
+     "choices": [
+      "The invisible hand",
+      "The general will",
+      "The iron cage",
+      "The social contract"
+     ],
+     "answer": 0,
+     "explanation": "Smith's 'invisible hand' describes how individual choices can shape a whole economy."
+    }
+   ]
+  },
+  {
+   "id": "arc-103",
+   "ask": {
+    "1": "Kingdom he ruled",
+    "2": "A Russian ruler",
+    "3": "The Prussian king"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Frederick the Great was king of which state?",
+     "choices": [
+      "Saxony",
+      "Austria",
+      "Bavaria",
+      "Prussia"
+     ],
+     "answer": 3,
+     "explanation": "He led Prussia into the front rank of European powers."
+    },
+    {
+     "level": 2,
+     "question": "Which Russian empress, reigning from 1762 to 1796, corresponded with Voltaire and Diderot?",
+     "choices": [
+      "Catherine the Great",
+      "Anna",
+      "Elizabeth",
+      "Alexandra"
+     ],
+     "answer": 0,
+     "explanation": "Catherine admired Enlightenment ideas but kept serfdom and absolute power."
+    }
+   ]
+  },
+  {
+   "id": "arc-104",
+   "ask": {
+    "1": "The motto's language",
+    "2": "His home city",
+    "3": "The philosopher"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "'Sapere aude', the Enlightenment motto meaning 'Dare to know', is in which language?",
+     "choices": [
+      "Latin",
+      "Greek",
+      "German",
+      "French"
+     ],
+     "answer": 0,
+     "explanation": "Kant borrowed this Latin phrase from the Roman poet Horace."
+    },
+    {
+     "level": 2,
+     "question": "Which Prussian city, now in Russia, was Immanuel Kant's home for almost his whole life?",
+     "choices": [
+      "Königsberg",
+      "Breslau",
+      "Berlin",
+      "Danzig"
+     ],
+     "answer": 0,
+     "explanation": "Kant was born, taught and died in Königsberg, today's Kaliningrad."
+    }
+   ]
+  },
+  {
+   "id": "arc-081",
+   "ask": {
+    "1": "Southern tip",
+    "2": "Home country",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Bartolomeu Dias sailed for which country?",
+     "choices": [
+      "England",
+      "Portugal",
+      "France",
+      "Spain"
+     ],
+     "answer": 1,
+     "explanation": "Portugal led early European exploration of Africa's coast."
+    },
+    {
+     "level": 2,
+     "question": "Dias rounded the southern tip of which continent?",
+     "choices": [
+      "Africa",
+      "South America",
+      "Australia",
+      "Asia"
+     ],
+     "answer": 0,
+     "explanation": "He sailed past the Cape of Good Hope in 1488."
+    }
+   ]
+  },
+  {
+   "id": "arc-084",
+   "ask": {
+    "1": "Brazil",
+    "2": "Claimed for",
+    "3": "Order of voyages"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Pedro Alvares Cabral reached Brazil for which crown in 1500?",
+     "choices": [
+      "Spain",
+      "France",
+      "Portugal",
+      "England"
+     ],
+     "answer": 2,
+     "explanation": "Cabral claimed the land for the king of Portugal."
+    },
+    {
+     "level": 2,
+     "question": "In which year did Cabral reach Brazil?",
+     "choices": [
+      "1519",
+      "1500",
+      "1488",
+      "1492"
+     ],
+     "answer": 1,
+     "explanation": "His fleet was bound for India and landed on the Brazilian coast in April 1500."
+    }
+   ]
+  },
+  {
+   "id": "arc-068",
+   "ask": {
+    "1": "Dispute",
+    "2": "Pope",
+    "3": "Canossa"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Investiture Controversy was a dispute between popes and kings over whom?",
+     "choices": [
+      "Appointing bishops",
+      "Choosing generals",
+      "Building roads",
+      "Collecting taxes"
+     ],
+     "answer": 0,
+     "explanation": "It was about who held the right to appoint bishops and abbots."
+    },
+    {
+     "level": 2,
+     "question": "Where was the royal penance of 1077 held?",
+     "choices": [
+      "Reims",
+      "Paris",
+      "Avignon",
+      "Canossa"
+     ],
+     "answer": 3,
+     "explanation": "Henry waited in the snow outside Canossa castle."
+    }
+   ]
+  },
+  {
+   "id": "arc-121",
+   "ask": {
+    "1": "Leading industry",
+    "2": "Flying shuttle inventor",
+    "3": "Hargreaves's machine"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which industry led the first stage of Britain's Industrial Revolution?",
+     "choices": [
+      "Banking",
+      "Glassmaking",
+      "Cotton textiles",
+      "Shipbuilding"
+     ],
+     "answer": 2,
+     "explanation": "Cotton spinning and weaving were the first industries to be mechanised and moved into factories."
+    },
+    {
+     "level": 2,
+     "question": "Who invented the flying shuttle in 1733, speeding up weaving?",
+     "choices": [
+      "Richard Arkwright",
+      "Edmund Cartwright",
+      "Samuel Crompton",
+      "John Kay"
+     ],
+     "answer": 3,
+     "explanation": "Kay's shuttle let one weaver make wide cloth much faster, which created demand for more thread."
+    }
+   ]
+  },
+  {
+   "id": "arc-122",
+   "ask": {
+    "1": "Where railways began",
+    "2": "The Rocket's makers",
+    "3": "The first public line"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which country did steam railways first appear?",
+     "choices": [
+      "Germany",
+      "Britain",
+      "France",
+      "The United States"
+     ],
+     "answer": 1,
+     "explanation": "Steam locomotives were first used on British colliery lines and then on public railways."
+    },
+    {
+     "level": 2,
+     "question": "Whose locomotive, Rocket, won the 1829 Rainhill Trials?",
+     "choices": [
+      "Thomas Telford",
+      "Richard Trevithick",
+      "George and Robert Stephenson",
+      "Isambard Kingdom Brunel"
+     ],
+     "answer": 2,
+     "explanation": "Rocket, built by Robert Stephenson and Company, set the pattern for later steam locomotives."
+    }
+   ]
+  },
+  {
+   "id": "arc-123",
+   "ask": {
+    "1": "Who worked in mills",
+    "2": "What Luddites broke",
+    "3": "Minimum age in 1833"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Early British factories employed large numbers of which workers?",
+     "choices": [
+      "Children",
+      "Priests",
+      "Soldiers",
+      "Sailors"
+     ],
+     "answer": 0,
+     "explanation": "Small hands were used to tend machines in cotton mills."
+    },
+    {
+     "level": 2,
+     "question": "What did the Luddites of 1811 to 1816 smash?",
+     "choices": [
+      "Railway lines",
+      "Church bells",
+      "Printing presses",
+      "Textile machines"
+     ],
+     "answer": 3,
+     "explanation": "Workers feared that machinery would cost them their jobs and wages."
+    }
+   ]
+  },
+  {
+   "id": "arc-124",
+   "ask": {
+    "1": "Host city",
+    "2": "The building's materials",
+    "3": "The building's name"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Great Exhibition of 1851, a showcase of industry, was held in which city?",
+     "choices": [
+      "Paris",
+      "Manchester",
+      "London",
+      "New York"
+     ],
+     "answer": 2,
+     "explanation": "It drew around six million visits in about five months."
+    },
+    {
+     "level": 2,
+     "question": "The Crystal Palace was built mainly of which two materials?",
+     "choices": [
+      "Steel and concrete",
+      "Wood and brick",
+      "Stone and slate",
+      "Iron and glass"
+     ],
+     "answer": 3,
+     "explanation": "Its cast-iron frame and huge glass panes could be assembled in a matter of months."
+    }
+   ]
+  },
+  {
+   "id": "arc-125",
+   "ask": {
+    "1": "What steel contains",
+    "2": "US steel magnate",
+    "3": "Bessemer's gain"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Steel is made mainly of iron with a small amount of which element?",
+     "choices": [
+      "Carbon",
+      "Copper",
+      "Lead",
+      "Zinc"
+     ],
+     "answer": 0,
+     "explanation": "Carbon makes iron harder and stronger."
+    },
+    {
+     "level": 2,
+     "question": "Which Scottish-born American industrialist built a steel empire and sold it in 1901?",
+     "choices": [
+      "Andrew Carnegie",
+      "J. P. Morgan",
+      "Henry Ford",
+      "John D. Rockefeller"
+     ],
+     "answer": 0,
+     "explanation": "Carnegie sold his company to a group led by J. P. Morgan, which became U.S. Steel."
+    }
+   ]
+  },
+  {
+   "id": "arc-127",
+   "ask": {
+    "1": "Where workers moved",
+    "2": "The 1851 census",
+    "3": "The 'Cottonopolis'"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Industrialisation pulled workers off the farms and into growing what?",
+     "choices": [
+      "Colonies",
+      "Cities",
+      "Monasteries",
+      "Forests"
+     ],
+     "answer": 1,
+     "explanation": "Towns such as Manchester and Leeds grew many times over in a few decades."
+    },
+    {
+     "level": 2,
+     "question": "What did Britain's 1851 census show for the first time in a major country?",
+     "choices": [
+      "Most people lived in towns",
+      "Most people could read",
+      "Most people worked abroad",
+      "Most people owned land"
+     ],
+     "answer": 0,
+     "explanation": "By 1851 slightly more than half of Britons lived in towns and cities."
+    }
+   ]
+  },
+  {
+   "id": "arc-154",
+   "ask": {
+    "1": "US alcohol ban",
+    "2": "League of Nations",
+    "3": "Hyperinflation"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What was the ban on alcohol in the United States in the 1920s called?",
+     "choices": [
+      "Rationing",
+      "Prohibition",
+      "Quarantine",
+      "Embargo"
+     ],
+     "answer": 1,
+     "explanation": "Prohibition ran from 1920 to 1933."
+    },
+    {
+     "level": 2,
+     "question": "Which international organisation was founded in 1920 to keep the peace?",
+     "choices": [
+      "The United Nations",
+      "The League of Nations",
+      "The Comintern",
+      "NATO"
+     ],
+     "answer": 1,
+     "explanation": "The League of Nations was set up after the First World War."
+    }
+   ]
+  },
+  {
+   "id": "arc-156",
+   "ask": {
+    "1": "Mussolini's title",
+    "2": "Italy's 1935 target",
+    "3": "March on Rome"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "By what title was Mussolini known?",
+     "choices": [
+      "El Caudillo",
+      "Der Führer",
+      "Generalissimo",
+      "Il Duce"
+     ],
+     "answer": 3,
+     "explanation": "Il Duce means the leader."
+    },
+    {
+     "level": 2,
+     "question": "Which African country did Italy invade in 1935?",
+     "choices": [
+      "Ethiopia",
+      "Egypt",
+      "Morocco",
+      "Kenya"
+     ],
+     "answer": 0,
+     "explanation": "The invasion of Ethiopia showed the League of Nations could not stop aggression."
+    }
+   ]
+  },
+  {
+   "id": "arc-158",
+   "ask": {
+    "1": "Picasso's Guernica",
+    "2": "Nationalist leader",
+    "3": "Years of the war"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Picasso's painting Guernica commemorates a 1937 bombing in which country?",
+     "choices": [
+      "France",
+      "Spain",
+      "Portugal",
+      "Italy"
+     ],
+     "answer": 1,
+     "explanation": "German aircraft bombed the Basque town of Guernica during the civil war."
+    },
+    {
+     "level": 2,
+     "question": "Which general led the Nationalists and ruled Spain until 1975?",
+     "choices": [
+      "Francisco Franco",
+      "Mola",
+      "Primo de Rivera",
+      "Salazar"
+     ],
+     "answer": 0,
+     "explanation": "Franco ruled until his death in 1975."
+    }
+   ]
+  },
+  {
+   "id": "arc-059",
+   "ask": {
+    "1": "Crossing to Iberia",
+    "2": "Strait name",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "From which continent did Tariq's army cross into Iberia?",
+     "choices": [
+      "Australia",
+      "North America",
+      "Africa",
+      "Asia"
+     ],
+     "answer": 2,
+     "explanation": "The army crossed the Strait of Gibraltar from North Africa."
+    },
+    {
+     "level": 2,
+     "question": "The name Gibraltar comes from an Arabic phrase meaning 'mountain of' whom?",
+     "choices": [
+      "Tariq",
+      "Musa",
+      "Muhammad",
+      "Harun"
+     ],
+     "answer": 0,
+     "explanation": "Jabal Tariq means 'mountain of Tariq'."
+    }
+   ]
+  },
+  {
+   "id": "arc-217",
+   "ask": {
+    "1": "Wall built",
+    "2": "Divided city",
+    "3": "Years it stood"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "After 1945, Berlin was divided between the Western Allies and which power?",
+     "choices": [
+      "The Soviet Union",
+      "Japan",
+      "China",
+      "Italy"
+     ],
+     "answer": 0,
+     "explanation": "The Soviets controlled East Berlin."
+    },
+    {
+     "level": 2,
+     "question": "For about how many years did the Berlin Wall stand?",
+     "choices": [
+      "About 60 years",
+      "About 28 years",
+      "About 10 years",
+      "About 45 years"
+     ],
+     "answer": 1,
+     "explanation": "It stood from 1961 to 1989."
+    }
+   ]
+  },
+  {
+   "id": "arc-218",
+   "ask": {
+    "1": "Chernobyl year",
+    "2": "Where it is",
+    "3": "Soviet leader"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which present-day country is Chernobyl?",
+     "choices": [
+      "Belarus",
+      "Ukraine",
+      "Poland",
+      "Russia"
+     ],
+     "answer": 1,
+     "explanation": "Chernobyl lies in northern Ukraine."
+    },
+    {
+     "level": 2,
+     "question": "Which Soviet leader was in power during the Chernobyl disaster?",
+     "choices": [
+      "Mikhail Gorbachev",
+      "Nikita Khrushchev",
+      "Boris Yeltsin",
+      "Leonid Brezhnev"
+     ],
+     "answer": 0,
+     "explanation": "Gorbachev led the Soviet Union from 1985 to 1991."
+    }
+   ]
+  },
+  {
+   "id": "arc-220",
+   "ask": {
+    "1": "Invasion of Afghanistan",
+    "2": "The invader",
+    "3": "Withdrawal"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which superpower invaded Afghanistan in 1979?",
+     "choices": [
+      "China",
+      "The United States",
+      "The Soviet Union",
+      "Britain"
+     ],
+     "answer": 2,
+     "explanation": "The Soviets intervened to support Afghanistan's communist government."
+    },
+    {
+     "level": 2,
+     "question": "In which year did Soviet troops complete their withdrawal from Afghanistan?",
+     "choices": [
+      "1989",
+      "1980",
+      "1985",
+      "1991"
+     ],
+     "answer": 0,
+     "explanation": "The last Soviet troops left in February 1989."
+    }
+   ]
+  },
+  {
+   "id": "arc-221",
+   "ask": {
+    "1": "Iranian Revolution",
+    "2": "Title of the ruler",
+    "3": "The returning cleric"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What was the title of the ruler overthrown in Iran in 1979?",
+     "choices": [
+      "Shah",
+      "Sultan",
+      "Emir",
+      "Caliph"
+     ],
+     "answer": 0,
+     "explanation": "Mohammad Reza Pahlavi was the Shah of Iran."
+    },
+    {
+     "level": 2,
+     "question": "Which exiled cleric returned to lead Iran in 1979?",
+     "choices": [
+      "Gamal Abdel Nasser",
+      "Ayatollah Khomeini",
+      "Mossadegh",
+      "Saddam Hussein"
+     ],
+     "answer": 1,
+     "explanation": "Khomeini returned from exile in February 1979."
+    }
+   ]
+  },
+  {
+   "id": "arc-222",
+   "ask": {
+    "1": "Tiananmen protests",
+    "2": "The city",
+    "3": "Mao's death"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which Chinese city is Tiananmen Square?",
+     "choices": [
+      "Canton",
+      "Beijing",
+      "Shanghai",
+      "Hong Kong"
+     ],
+     "answer": 1,
+     "explanation": "Tiananmen Square lies in the centre of Beijing."
+    },
+    {
+     "level": 2,
+     "question": "In which year did Mao Zedong die?",
+     "choices": [
+      "1949",
+      "1976",
+      "1966",
+      "1989"
+     ],
+     "answer": 1,
+     "explanation": "Mao died in September 1976."
+    }
+   ]
+  },
+  {
+   "id": "arc-223",
+   "ask": {
+    "1": "Falklands War",
+    "2": "The opponent",
+    "3": "How long"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Falklands War was fought between Britain and which country?",
+     "choices": [
+      "Spain",
+      "Chile",
+      "Argentina",
+      "Brazil"
+     ],
+     "answer": 2,
+     "explanation": "Argentina and Britain fought over the Falkland Islands."
+    },
+    {
+     "level": 2,
+     "question": "Roughly how long did the Falklands War last?",
+     "choices": [
+      "About six months",
+      "About ten days",
+      "About ten weeks",
+      "About two years"
+     ],
+     "answer": 2,
+     "explanation": "It ran from 2 April to 14 June 1982."
+    }
+   ]
+  },
+  {
+   "id": "arc-224",
+   "ask": {
+    "1": "Date of reunification",
+    "2": "The year",
+    "3": "The capital"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In which year was Germany reunified?",
+     "choices": [
+      "1991",
+      "1995",
+      "1989",
+      "1990"
+     ],
+     "answer": 3,
+     "explanation": "East and West Germany united in 1990."
+    },
+    {
+     "level": 2,
+     "question": "Which city became the capital of reunified Germany?",
+     "choices": [
+      "Berlin",
+      "Bonn",
+      "Munich",
+      "Frankfurt"
+     ],
+     "answer": 0,
+     "explanation": "Berlin became the capital, with government moving there in the late 1990s."
+    }
+   ]
+  },
+  {
+   "id": "arc-041",
+   "ask": {
+    "1": "Last emperor",
+    "2": "Capital",
+    "3": "Sack of Rome"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which city remained the capital of the Eastern Empire?",
+     "choices": [
+      "Constantinople",
+      "Rome",
+      "Alexandria",
+      "Antioch"
+     ],
+     "answer": 0,
+     "explanation": "Constantinople stayed capital until 1453."
+    },
+    {
+     "level": 2,
+     "question": "In which year did Alaric's Visigoths sack Rome?",
+     "choices": [
+      "AD 455",
+      "AD 378",
+      "AD 476",
+      "AD 410"
+     ],
+     "answer": 3,
+     "explanation": "The sack was in 410."
+    }
+   ]
+  },
+  {
+   "id": "arc-043",
+   "ask": {
+    "1": "Goths",
+    "2": "Visigoths",
+    "3": "Adrianople"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Germanic people, led by Alaric, sacked Rome?",
+     "choices": [
+      "The Vandals",
+      "The Visigoths",
+      "The Huns",
+      "The Franks"
+     ],
+     "answer": 1,
+     "explanation": "Alaric led the Visigoths."
+    },
+    {
+     "level": 2,
+     "question": "Which emperor died at Adrianople?",
+     "choices": [
+      "Theodosius",
+      "Constantine",
+      "Valens",
+      "Julian"
+     ],
+     "answer": 2,
+     "explanation": "Valens died in the battle."
+    }
+   ]
+  },
+  {
+   "id": "arc-047",
+   "ask": {
+    "1": "Rival empire",
+    "2": "Emperor",
+    "3": "War ended"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which empire was Rome's main eastern rival in late antiquity?",
+     "choices": [
+      "The Ottoman Empire",
+      "The Aztec Empire",
+      "The Mali Empire",
+      "Sasanian Persia"
+     ],
+     "answer": 3,
+     "explanation": "Sasanian Persia rivalled Rome."
+    },
+    {
+     "level": 2,
+     "question": "Which emperor won the final Byzantine-Sasanian war?",
+     "choices": [
+      "Theodosius",
+      "Heraclius",
+      "Justinian",
+      "Constantine"
+     ],
+     "answer": 1,
+     "explanation": "Heraclius won."
     }
    ]
   },
@@ -1738,6 +8028,958 @@
    ]
   },
   {
+   "id": "arc-114",
+   "ask": {
+    "1": "His first title",
+    "2": "The government toppled",
+    "3": "Year of the coup"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "After the coup of 1799, Napoleon took which title?",
+     "choices": [
+      "King",
+      "First Consul",
+      "Emperor",
+      "President"
+     ],
+     "answer": 1,
+     "explanation": "He became First Consul, later Consul for life and then Emperor."
+    },
+    {
+     "level": 2,
+     "question": "The coup of 18 Brumaire overthrew which French government?",
+     "choices": [
+      "The Convention",
+      "The Committee of Public Safety",
+      "The Directory",
+      "The Estates-General"
+     ],
+     "answer": 2,
+     "explanation": "The unpopular Directory gave way to the Consulate."
+    }
+   ]
+  },
+  {
+   "id": "arc-116",
+   "ask": {
+    "1": "The enemy fleet",
+    "2": "The admiral",
+    "3": "Year of the battle"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "At Trafalgar the Royal Navy defeated the combined fleets of Spain and which other country?",
+     "choices": [
+      "Russia",
+      "Portugal",
+      "The Netherlands",
+      "France"
+     ],
+     "answer": 3,
+     "explanation": "The victory ended Napoleon's hopes of invading Britain by sea."
+    },
+    {
+     "level": 2,
+     "question": "Which British admiral was killed while winning the Battle of Trafalgar?",
+     "choices": [
+      "Edward Hawke",
+      "Francis Drake",
+      "Cuthbert Collingwood",
+      "Horatio Nelson"
+     ],
+     "answer": 3,
+     "explanation": "Nelson was shot on the deck of HMS Victory at the height of the battle."
+    }
+   ]
+  },
+  {
+   "id": "arc-117",
+   "ask": {
+    "1": "Who he defeated",
+    "2": "Where it is now",
+    "3": "The battle"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "At Austerlitz, Napoleon's army defeated Russia and which other empire?",
+     "choices": [
+      "Austria",
+      "Spain",
+      "Britain",
+      "The Ottoman Empire"
+     ],
+     "answer": 0,
+     "explanation": "Austria's emperor Francis and Tsar Alexander I were both on the field."
+    },
+    {
+     "level": 2,
+     "question": "The battlefield of Austerlitz lies in which present-day country?",
+     "choices": [
+      "Czech Republic",
+      "Austria",
+      "Germany",
+      "Poland"
+     ],
+     "answer": 0,
+     "explanation": "Austerlitz is today Slavkov u Brna in the Czech Republic."
+    }
+   ]
+  },
+  {
+   "id": "arc-118",
+   "ask": {
+    "1": "Target of the blockade",
+    "2": "Who defied it",
+    "3": "Its aim"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Napoleon's blockade of 1806 targeted the trade of which country?",
+     "choices": [
+      "Spain",
+      "Austria",
+      "Russia",
+      "Britain"
+     ],
+     "answer": 3,
+     "explanation": "Britain, with its navy and its merchants, was the one power Napoleon could not beat at sea."
+    },
+    {
+     "level": 2,
+     "question": "Which country's break with the Continental System helped bring on Napoleon's invasion of 1812?",
+     "choices": [
+      "Spain",
+      "Austria",
+      "Denmark",
+      "Russia"
+     ],
+     "answer": 3,
+     "explanation": "Tsar Alexander I reopened trade with Britain in 1810, angering Napoleon."
+    }
+   ]
+  },
+  {
+   "id": "arc-119",
+   "ask": {
+    "1": "The city he reached",
+    "2": "What ruined his army",
+    "3": "Size of the army"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which Russian city did Napoleon's army reach in September 1812, finding it largely burned?",
+     "choices": [
+      "Saint Petersburg",
+      "Minsk",
+      "Moscow",
+      "Kyiv"
+     ],
+     "answer": 2,
+     "explanation": "Napoleon entered Moscow on 14 September and left in October."
+    },
+    {
+     "level": 2,
+     "question": "What did most to destroy Napoleon's army during the retreat from Russia?",
+     "choices": [
+      "Mass defection to the Tsar",
+      "A single decisive battle",
+      "Cold, hunger and disease",
+      "A flood that took its artillery"
+     ],
+     "answer": 2,
+     "explanation": "Winter, hunger and illness killed far more men than the Russian army did."
+    }
+   ]
+  },
+  {
+   "id": "arc-120",
+   "ask": {
+    "1": "Where he died",
+    "2": "First exile",
+    "3": "Year of his death"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "On which remote South Atlantic island did Napoleon die in exile?",
+     "choices": [
+      "Saint Helena",
+      "Corsica",
+      "Elba",
+      "Ascension"
+     ],
+     "answer": 0,
+     "explanation": "Britain sent him there after Waterloo, far from Europe."
+    },
+    {
+     "level": 2,
+     "question": "To which Mediterranean island was Napoleon first exiled in 1814?",
+     "choices": [
+      "Elba",
+      "Corsica",
+      "Sardinia",
+      "Malta"
+     ],
+     "answer": 0,
+     "explanation": "He escaped from Elba in February 1815, beginning the Hundred Days."
+    }
+   ]
+  },
+  {
+   "id": "arc-225",
+   "ask": {
+    "1": "Communist Manifesto",
+    "2": "Co-author",
+    "3": "Das Kapital"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Who co-wrote The Communist Manifesto with Karl Marx?",
+     "choices": [
+      "Friedrich Engels",
+      "Leon Trotsky",
+      "Vladimir Lenin",
+      "Adam Smith"
+     ],
+     "answer": 0,
+     "explanation": "Friedrich Engels was Marx's close collaborator."
+    },
+    {
+     "level": 2,
+     "question": "Which book by Marx had its first volume published in 1867?",
+     "choices": [
+      "The Wealth of Nations",
+      "Leviathan",
+      "Das Kapital",
+      "The Prince"
+     ],
+     "answer": 2,
+     "explanation": "Das Kapital analysed capitalism."
+    }
+   ]
+  },
+  {
+   "id": "arc-227",
+   "ask": {
+    "1": "Enlightenment century",
+    "2": "Author of Candide",
+    "3": "Social Contract"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which French thinker wrote Candide?",
+     "choices": [
+      "Voltaire",
+      "Rousseau",
+      "Diderot",
+      "Montesquieu"
+     ],
+     "answer": 0,
+     "explanation": "Voltaire published Candide in 1759."
+    },
+    {
+     "level": 2,
+     "question": "What is Rousseau's 1762 book on political theory called?",
+     "choices": [
+      "Leviathan",
+      "Two Treatises of Government",
+      "The Spirit of the Laws",
+      "The Social Contract"
+     ],
+     "answer": 3,
+     "explanation": "Rousseau published The Social Contract in 1762."
+    }
+   ]
+  },
+  {
+   "id": "arc-228",
+   "ask": {
+    "1": "Pasteur's rabies vaccine",
+    "2": "His country",
+    "3": "First vaccine"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Louis Pasteur was from which country?",
+     "choices": [
+      "Britain",
+      "Germany",
+      "Italy",
+      "France"
+     ],
+     "answer": 3,
+     "explanation": "Pasteur was French."
+    },
+    {
+     "level": 2,
+     "question": "Which doctor developed the first smallpox vaccine in 1796?",
+     "choices": [
+      "Louis Pasteur",
+      "Robert Koch",
+      "Edward Jenner",
+      "Joseph Lister"
+     ],
+     "answer": 2,
+     "explanation": "Jenner used cowpox to protect against smallpox."
+    }
+   ]
+  },
+  {
+   "id": "arc-229",
+   "ask": {
+    "1": "Women's vote first",
+    "2": "France or NZ",
+    "3": "French women vote"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which gave women the vote first?",
+     "choices": [
+      "France",
+      "Neither before 1900",
+      "They did so in the same year",
+      "New Zealand"
+     ],
+     "answer": 3,
+     "explanation": "New Zealand in 1893; France only in 1944."
+    },
+    {
+     "level": 2,
+     "question": "In which year did French women gain the right to vote?",
+     "choices": [
+      "1918",
+      "1968",
+      "1848",
+      "1944"
+     ],
+     "answer": 3,
+     "explanation": "An ordinance of 1944 granted the right; they first voted in 1945."
+    }
+   ]
+  },
+  {
+   "id": "arc-230",
+   "ask": {
+    "1": "Edison's light bulb",
+    "2": "Edison's country",
+    "3": "AC champion"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Thomas Edison was from which country?",
+     "choices": [
+      "Britain",
+      "Germany",
+      "Canada",
+      "The United States"
+     ],
+     "answer": 3,
+     "explanation": "Edison was American."
+    },
+    {
+     "level": 2,
+     "question": "Which Serbian-born inventor championed alternating current?",
+     "choices": [
+      "Nikola Tesla",
+      "Alexander Graham Bell",
+      "Alessandro Volta",
+      "Guglielmo Marconi"
+     ],
+     "answer": 0,
+     "explanation": "Tesla backed alternating current."
+    }
+   ]
+  },
+  {
+   "id": "arc-231",
+   "ask": {
+    "1": "Gregorian calendar",
+    "2": "Replaced calendar",
+    "3": "Britain adopts"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Gregorian calendar replaced which calendar?",
+     "choices": [
+      "The Hebrew calendar",
+      "The Julian calendar",
+      "The Islamic calendar",
+      "The Mayan calendar"
+     ],
+     "answer": 1,
+     "explanation": "It corrected drift in the Julian calendar."
+    },
+    {
+     "level": 2,
+     "question": "Which country adopted the Gregorian calendar in 1752, dropping eleven days?",
+     "choices": [
+      "Spain",
+      "France",
+      "Russia",
+      "Britain"
+     ],
+     "answer": 3,
+     "explanation": "Britain and its colonies switched in September 1752."
+    }
+   ]
+  },
+  {
+   "id": "arc-232",
+   "ask": {
+    "1": "First Nobel Prizes",
+    "2": "Nobel's invention",
+    "3": "Nobel's country"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Alfred Nobel is remembered for inventing which explosive?",
+     "choices": [
+      "Gunpowder",
+      "Dynamite",
+      "Napalm",
+      "TNT"
+     ],
+     "answer": 1,
+     "explanation": "Nobel invented dynamite, patented in 1867."
+    },
+    {
+     "level": 2,
+     "question": "Alfred Nobel was from which country?",
+     "choices": [
+      "Finland",
+      "Norway",
+      "Denmark",
+      "Sweden"
+     ],
+     "answer": 3,
+     "explanation": "Nobel was Swedish."
+    }
+   ]
+  },
+  {
+   "id": "arc-092",
+   "ask": {
+    "1": "Peace",
+    "2": "Rule",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Peace of Augsburg was made in which present-day country?",
+     "choices": [
+      "Germany",
+      "Spain",
+      "France",
+      "Italy"
+     ],
+     "answer": 0,
+     "explanation": "Augsburg is in Bavaria."
+    },
+    {
+     "level": 2,
+     "question": "Which principle did the Peace of Augsburg establish, usually summarised in Latin?",
+     "choices": [
+      "The pope chooses",
+      "The ruler chooses the religion of the territory",
+      "The emperor chooses",
+      "Every person chooses freely"
+     ],
+     "answer": 1,
+     "explanation": "The rule is known as cuius regio, eius religio."
+    }
+   ]
+  },
+  {
+   "id": "arc-093",
+   "ask": {
+    "1": "Edict",
+    "2": "King",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Who ruled France when the Edict of Nantes was issued?",
+     "choices": [
+      "Charles IX",
+      "Francis I",
+      "Louis XIV",
+      "Henry IV"
+     ],
+     "answer": 3,
+     "explanation": "Henry IV was the first Bourbon king of France."
+    },
+    {
+     "level": 2,
+     "question": "Which king revoked the Edict of Nantes in 1685?",
+     "choices": [
+      "Henry IV",
+      "Louis XVI",
+      "Louis XIV",
+      "Napoleon"
+     ],
+     "answer": 2,
+     "explanation": "The revocation led many Huguenots to leave France."
+    }
+   ]
+  },
+  {
+   "id": "arc-095",
+   "ask": {
+    "1": "Council",
+    "2": "Italian city",
+    "3": "Years"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Council of Trent was a Church council of which tradition?",
+     "choices": [
+      "Catholic",
+      "Anglican",
+      "Lutheran",
+      "Orthodox"
+     ],
+     "answer": 0,
+     "explanation": "It defined Catholic doctrine in response to the Reformation."
+    },
+    {
+     "level": 2,
+     "question": "The Council of Trent met in a city in which present-day country?",
+     "choices": [
+      "France",
+      "Spain",
+      "Italy",
+      "Germany"
+     ],
+     "answer": 2,
+     "explanation": "Trento lies in northern Italy."
+    }
+   ]
+  },
+  {
+   "id": "arc-076",
+   "ask": {
+    "1": "Dome",
+    "2": "Architect",
+    "3": "Completion"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Brunelleschi designed the great dome of the cathedral of which city?",
+     "choices": [
+      "Pisa",
+      "Rome",
+      "Venice",
+      "Florence"
+     ],
+     "answer": 3,
+     "explanation": "The dome crowns Santa Maria del Fiore."
+    },
+    {
+     "level": 2,
+     "question": "The Florence dome was unusual because it was built without what?",
+     "choices": [
+      "Any stone",
+      "A wooden frame supporting the whole dome",
+      "Any foundation",
+      "Any brick"
+     ],
+     "answer": 1,
+     "explanation": "Brunelleschi found ways to build without centring, the wooden frame normally used."
+    }
+   ]
+  },
+  {
+   "id": "arc-106",
+   "ask": {
+    "1": "The ruling power",
+    "2": "The key ally",
+    "3": "The treaty year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The American Revolution was a rebellion against which European power?",
+     "choices": [
+      "Britain",
+      "France",
+      "Spain",
+      "The Netherlands"
+     ],
+     "answer": 0,
+     "explanation": "Thirteen colonies rejected British rule and declared independence."
+    },
+    {
+     "level": 2,
+     "question": "Which European country became the main ally of the American colonists, joining the war in 1778?",
+     "choices": [
+      "Prussia",
+      "Spain",
+      "Russia",
+      "France"
+     ],
+     "answer": 3,
+     "explanation": "France signed a treaty of alliance with the Americans in 1778, after the victory at Saratoga."
+    }
+   ]
+  },
+  {
+   "id": "arc-107",
+   "ask": {
+    "1": "The Third Estate",
+    "2": "What it became",
+    "3": "The Declaration's month"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "In pre-revolutionary France, the Third Estate was made up of whom?",
+     "choices": [
+      "Clergy",
+      "The royal family",
+      "Nobles",
+      "Commoners"
+     ],
+     "answer": 3,
+     "explanation": "The Third Estate covered everyone outside the clergy and the nobility, most of the population."
+    },
+    {
+     "level": 2,
+     "question": "In June 1789 the Third Estate declared itself which body?",
+     "choices": [
+      "The National Assembly",
+      "The Senate",
+      "The Directory",
+      "The Convention"
+     ],
+     "answer": 0,
+     "explanation": "On 17 June 1789 its deputies proclaimed themselves the National Assembly."
+    }
+   ]
+  },
+  {
+   "id": "arc-108",
+   "ask": {
+    "1": "Which revolution",
+    "2": "The king's execution",
+    "3": "Who fell in 1794"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Reign of Terror took place during which revolution?",
+     "choices": [
+      "The French Revolution",
+      "The Industrial Revolution",
+      "The Russian Revolution",
+      "The American Revolution"
+     ],
+     "answer": 0,
+     "explanation": "In 1793 and 1794 revolutionary tribunals sent thousands of people to the guillotine."
+    },
+    {
+     "level": 2,
+     "question": "In which year was King Louis XVI executed?",
+     "choices": [
+      "1791",
+      "1789",
+      "1795",
+      "1793"
+     ],
+     "answer": 3,
+     "explanation": "Louis XVI was guillotined on 21 January 1793."
+    }
+   ]
+  },
+  {
+   "id": "arc-109",
+   "ask": {
+    "1": "Named after him",
+    "2": "Brazil's old ruler",
+    "3": "The liberator"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which country is named after Simón Bolívar?",
+     "choices": [
+      "Bolivia",
+      "Peru",
+      "Paraguay",
+      "Colombia"
+     ],
+     "answer": 0,
+     "explanation": "Bolivia took its name in 1825 in honour of the Liberator."
+    },
+    {
+     "level": 2,
+     "question": "Brazil declared independence in 1822 from which European country?",
+     "choices": [
+      "Britain",
+      "France",
+      "Spain",
+      "Portugal"
+     ],
+     "answer": 3,
+     "explanation": "Dom Pedro, son of Portugal's king, proclaimed Brazilian independence on 7 September 1822."
+    }
+   ]
+  },
+  {
+   "id": "arc-110",
+   "ask": {
+    "1": "The nickname",
+    "2": "Winner in December",
+    "3": "King who abdicated"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The wave of revolutions across Europe in 1848 is often nicknamed what?",
+     "choices": [
+      "The Great Awakening",
+      "The Glorious Revolution",
+      "The Hundred Days",
+      "The Springtime of the Peoples"
+     ],
+     "answer": 3,
+     "explanation": "Uprisings broke out in France, the German states, Italy, Austria and Hungary within a few months."
+    },
+    {
+     "level": 2,
+     "question": "Who won France's presidential election of December 1848 and later made himself emperor?",
+     "choices": [
+      "General Cavaignac",
+      "Alphonse de Lamartine",
+      "Louis-Napoléon Bonaparte",
+      "Louis-Philippe"
+     ],
+     "answer": 2,
+     "explanation": "Napoleon's nephew won by a landslide and became Napoleon III in 1852."
+    }
+   ]
+  },
+  {
+   "id": "arc-111",
+   "ask": {
+    "1": "Where it happened",
+    "2": "The 1689 law",
+    "3": "The Dutch prince"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Glorious Revolution of 1688 took place in which country?",
+     "choices": [
+      "Sweden",
+      "England",
+      "Spain",
+      "France"
+     ],
+     "answer": 1,
+     "explanation": "It replaced King James II with William and Mary, largely without bloodshed."
+    },
+    {
+     "level": 2,
+     "question": "Which 1689 law, passed after the Glorious Revolution, limited the powers of the English crown?",
+     "choices": [
+      "The Habeas Corpus Act",
+      "The Petition of Right",
+      "Magna Carta",
+      "The Bill of Rights"
+     ],
+     "answer": 3,
+     "explanation": "The Bill of Rights barred the monarch from taxing or suspending laws without Parliament's consent."
+    }
+   ]
+  },
+  {
+   "id": "arc-112",
+   "ask": {
+    "1": "Who France fought",
+    "2": "How long it lasted",
+    "3": "Year of the Commune"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Paris Commune followed France's defeat in a war against which state?",
+     "choices": [
+      "Britain",
+      "Spain",
+      "Russia",
+      "Prussia"
+     ],
+     "answer": 3,
+     "explanation": "The Franco-Prussian War ended with the siege of Paris, and the Commune rose in the aftermath."
+    },
+    {
+     "level": 2,
+     "question": "About how long did the Paris Commune hold power?",
+     "choices": [
+      "About six months",
+      "About two years",
+      "About two weeks",
+      "About two months"
+     ],
+     "answer": 3,
+     "explanation": "It lasted from 18 March to 28 May 1871 and ended in the 'Bloody Week'."
+    }
+   ]
+  },
+  {
+   "id": "arc-033",
+   "ask": {
+    "1": "First emperor",
+    "2": "Actium",
+    "3": "Actium year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Who was Rome's first emperor?",
+     "choices": [
+      "Augustus",
+      "Trajan",
+      "Nero",
+      "Julius Caesar"
+     ],
+     "answer": 0,
+     "explanation": "Octavian took the title Augustus and ruled as first emperor."
+    },
+    {
+     "level": 2,
+     "question": "At which battle did Octavian defeat Antony and Cleopatra?",
+     "choices": [
+      "Philippi",
+      "Pharsalus",
+      "Zama",
+      "Actium"
+     ],
+     "answer": 3,
+     "explanation": "The naval battle of Actium decided the civil war."
+    }
+   ]
+  },
+  {
+   "id": "arc-034",
+   "ask": {
+    "1": "Meaning",
+    "2": "Which emperor ended it",
+    "3": "Duration"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What does Pax Romana mean?",
+     "choices": [
+      "Roman law",
+      "Roman war",
+      "Roman peace",
+      "Roman power"
+     ],
+     "answer": 2,
+     "explanation": "Pax Romana means Roman peace."
+    },
+    {
+     "level": 2,
+     "question": "Whose death in AD 180 is often said to end the Pax Romana?",
+     "choices": [
+      "Trajan",
+      "Marcus Aurelius",
+      "Hadrian",
+      "Nero"
+     ],
+     "answer": 1,
+     "explanation": "Marcus Aurelius died in AD 180."
+    }
+   ]
+  },
+  {
+   "id": "arc-035",
+   "ask": {
+    "1": "Good emperors",
+    "2": "Greatest extent",
+    "3": "First of five"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which of these was one of the Five Good Emperors?",
+     "choices": [
+      "Marcus Aurelius",
+      "Commodus",
+      "Caligula",
+      "Nero"
+     ],
+     "answer": 0,
+     "explanation": "Marcus Aurelius was the last of the Five."
+    },
+    {
+     "level": 2,
+     "question": "Which Good Emperor expanded Rome to its greatest extent around AD 117?",
+     "choices": [
+      "Nerva",
+      "Trajan",
+      "Antoninus Pius",
+      "Marcus Aurelius"
+     ],
+     "answer": 1,
+     "explanation": "Trajan's conquests brought the empire to its largest size."
+    }
+   ]
+  },
+  {
+   "id": "arc-039",
+   "ask": {
+    "1": "Greatest extent",
+    "2": "Dacia",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which emperor ruled Rome at its greatest extent?",
+     "choices": [
+      "Constantine",
+      "Augustus",
+      "Trajan",
+      "Nero"
+     ],
+     "answer": 2,
+     "explanation": "Trajan conquered Dacia and parts of Mesopotamia."
+    },
+    {
+     "level": 2,
+     "question": "Trajan conquered which region, rich in gold, in AD 106?",
+     "choices": [
+      "Britannia",
+      "Dacia",
+      "Egypt",
+      "Gaul"
+     ],
+     "answer": 1,
+     "explanation": "Dacia, roughly modern Romania, became a province in 106."
+    }
+   ]
+  },
+  {
    "id": "his2-003",
    "ask": {
     "1": "The emperor",
@@ -1806,6 +9048,278 @@
    ]
   },
   {
+   "id": "arc-147",
+   "ask": {
+    "1": "Plan's first target",
+    "2": "Neutral country",
+    "3": "Why Britain joined"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Germany invaded which neutral country in August 1914 on its way into France?",
+     "choices": [
+      "Belgium",
+      "Switzerland",
+      "Denmark",
+      "Netherlands"
+     ],
+     "answer": 0,
+     "explanation": "The invasion of Belgium was part of the Schlieffen Plan."
+    },
+    {
+     "level": 2,
+     "question": "What brought Britain into the war on 4 August 1914?",
+     "choices": [
+      "A Russian mobilisation",
+      "The sinking of the Lusitania",
+      "The assassination in Sarajevo",
+      "The German invasion of Belgium"
+     ],
+     "answer": 3,
+     "explanation": "Britain had guaranteed Belgian neutrality and declared war when Germany invaded."
+    }
+   ]
+  },
+  {
+   "id": "arc-149",
+   "ask": {
+    "1": "Where Verdun is",
+    "2": "Year",
+    "3": "How long it lasted"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Verdun is a city in which country?",
+     "choices": [
+      "Belgium",
+      "France",
+      "Germany",
+      "Luxembourg"
+     ],
+     "answer": 1,
+     "explanation": "Verdun is in north-eastern France."
+    },
+    {
+     "level": 2,
+     "question": "In which year was the Battle of Verdun fought?",
+     "choices": [
+      "1914",
+      "1915",
+      "1917",
+      "1916"
+     ],
+     "answer": 3,
+     "explanation": "Germany attacked Verdun in February 1916."
+    }
+   ]
+  },
+  {
+   "id": "arc-150",
+   "ask": {
+    "1": "River's country",
+    "2": "New weapon",
+    "3": "First-day casualties"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Somme is a river in which country?",
+     "choices": [
+      "Germany",
+      "France",
+      "Italy",
+      "Belgium"
+     ],
+     "answer": 1,
+     "explanation": "The battle was fought in northern France."
+    },
+    {
+     "level": 2,
+     "question": "Which new weapon did Britain first use in battle at the Somme in September 1916?",
+     "choices": [
+      "Flamethrowers",
+      "Tanks",
+      "Poison gas",
+      "Machine guns"
+     ],
+     "answer": 1,
+     "explanation": "Tanks first went into action near Flers in September 1916."
+    }
+   ]
+  },
+  {
+   "id": "arc-162",
+   "ask": {
+    "1": "Vichy leader",
+    "2": "Evacuation port",
+    "3": "Month of invasion"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which marshal led the Vichy regime in France?",
+     "choices": [
+      "Joseph Joffre",
+      "Charles de Gaulle",
+      "Philippe Pétain",
+      "Ferdinand Foch"
+     ],
+     "answer": 2,
+     "explanation": "Pétain signed the armistice in June 1940 and led Vichy France."
+    },
+    {
+     "level": 2,
+     "question": "Which Allied evacuation brought over 300,000 soldiers out of France in 1940?",
+     "choices": [
+      "Anzio",
+      "Dunkirk",
+      "Dieppe",
+      "Calais"
+     ],
+     "answer": 1,
+     "explanation": "The Dunkirk evacuation took place from late May to early June 1940."
+    }
+   ]
+  },
+  {
+   "id": "arc-164",
+   "ask": {
+    "1": "Target of Barbarossa",
+    "2": "Besieged city",
+    "3": "Month launched"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Operation Barbarossa was the German invasion of which country?",
+     "choices": [
+      "The Soviet Union",
+      "Poland",
+      "Britain",
+      "France"
+     ],
+     "answer": 0,
+     "explanation": "It opened the vast Eastern Front."
+    },
+    {
+     "level": 2,
+     "question": "Which Soviet city did German forces besiege for about 900 days?",
+     "choices": [
+      "Leningrad",
+      "Kyiv",
+      "Moscow",
+      "Stalingrad"
+     ],
+     "answer": 0,
+     "explanation": "The siege of Leningrad lasted from 1941 to January 1944."
+    }
+   ]
+  },
+  {
+   "id": "arc-166",
+   "ask": {
+    "1": "River of Stalingrad",
+    "2": "Modern name",
+    "3": "Battle of Kursk"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Stalingrad stood on the banks of which river?",
+     "choices": [
+      "The Volga",
+      "The Danube",
+      "The Dnieper",
+      "The Rhine"
+     ],
+     "answer": 0,
+     "explanation": "The city lay on the Volga in southern Russia."
+    },
+    {
+     "level": 2,
+     "question": "By what name is the former Stalingrad known today?",
+     "choices": [
+      "Volgograd",
+      "Rostov",
+      "Kazan",
+      "Samara"
+     ],
+     "answer": 0,
+     "explanation": "It was renamed Volgograd in 1961."
+    }
+   ]
+  },
+  {
+   "id": "arc-167",
+   "ask": {
+    "1": "Country of Normandy",
+    "2": "Number of beaches",
+    "3": "Date"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Normandy is a region of which country?",
+     "choices": [
+      "England",
+      "France",
+      "Belgium",
+      "Italy"
+     ],
+     "answer": 1,
+     "explanation": "Normandy is in north-western France."
+    },
+    {
+     "level": 2,
+     "question": "How many beaches were used in the Normandy landings?",
+     "choices": [
+      "Ten",
+      "Five",
+      "Three",
+      "Seven"
+     ],
+     "answer": 1,
+     "explanation": "They were Utah, Omaha, Gold, Juno and Sword."
+    }
+   ]
+  },
+  {
+   "id": "arc-168",
+   "ask": {
+    "1": "Name of the genocide",
+    "2": "Trials city",
+    "3": "Number murdered"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What is the Nazi genocide of Europe's Jews called?",
+     "choices": [
+      "The Anschluss",
+      "The Blitz",
+      "Kristallnacht",
+      "The Holocaust"
+     ],
+     "answer": 3,
+     "explanation": "The Holocaust is also known as the Shoah."
+    },
+    {
+     "level": 2,
+     "question": "Which German city hosted the trials of leading Nazis after the war?",
+     "choices": [
+      "Geneva",
+      "Nuremberg",
+      "Berlin",
+      "Munich"
+     ],
+     "answer": 1,
+     "explanation": "The International Military Tribunal sat in Nuremberg from 1945."
+    }
+   ]
+  },
+  {
    "id": "his-021",
    "ask": {
     "1": "Year",
@@ -1840,6 +9354,142 @@
    ]
   },
   {
+   "id": "arc-138",
+   "ask": {
+    "1": "Where it happened",
+    "2": "The leader's claim",
+    "3": "Death toll"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Taiping Rebellion took place in which country?",
+     "choices": [
+      "Korea",
+      "Japan",
+      "China",
+      "India"
+     ],
+     "answer": 2,
+     "explanation": "It challenged the ruling Qing dynasty."
+    },
+    {
+     "level": 2,
+     "question": "Hong Xiuquan, leader of the Taiping, claimed to be the younger brother of whom?",
+     "choices": [
+      "Muhammad",
+      "The Buddha",
+      "Jesus Christ",
+      "Confucius"
+     ],
+     "answer": 2,
+     "explanation": "After reading Christian tracts he declared himself the brother of Jesus."
+    }
+   ]
+  },
+  {
+   "id": "arc-144",
+   "ask": {
+    "1": "The islands' namesake",
+    "2": "Who received them",
+    "3": "Price paid"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Philippines are named after which Spanish king?",
+     "choices": [
+      "Charles V",
+      "Philip II",
+      "Ferdinand II",
+      "Philip IV"
+     ],
+     "answer": 1,
+     "explanation": "Spanish explorers named the islands in honour of the prince who became Philip II."
+    },
+    {
+     "level": 2,
+     "question": "Which country took over the Philippines from Spain after the war of 1898?",
+     "choices": [
+      "Britain",
+      "Japan",
+      "The United States",
+      "Germany"
+     ],
+     "answer": 2,
+     "explanation": "Spain also gave up Cuba, Puerto Rico and Guam in the treaty."
+    }
+   ]
+  },
+  {
+   "id": "arc-188",
+   "ask": {
+    "1": "Country",
+    "2": "Year crushed",
+    "3": "Reform leader"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The Prague Spring took place in which country?",
+     "choices": [
+      "Czechoslovakia",
+      "Hungary",
+      "Poland",
+      "East Germany"
+     ],
+     "answer": 0,
+     "explanation": "Prague was the Czechoslovak capital."
+    },
+    {
+     "level": 2,
+     "question": "In which year was the Prague Spring crushed?",
+     "choices": [
+      "1956",
+      "1968",
+      "1961",
+      "1979"
+     ],
+     "answer": 1,
+     "explanation": "Warsaw Pact troops invaded in August 1968."
+    }
+   ]
+  },
+  {
+   "id": "arc-181",
+   "ask": {
+    "1": "Name of 1960",
+    "2": "Congo's PM",
+    "3": "Countries freed"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What is 1960 called in African history?",
+     "choices": [
+      "The Great Partition",
+      "The Year of the Colonies",
+      "The Year of Africa",
+      "The Year of Peace"
+     ],
+     "answer": 2,
+     "explanation": "Many French and other colonies became independent that year."
+    },
+    {
+     "level": 2,
+     "question": "Which Belgian colony became independent in June 1960 with Patrice Lumumba as prime minister?",
+     "choices": [
+      "Mozambique",
+      "Uganda",
+      "The Congo",
+      "Kenya"
+     ],
+     "answer": 2,
+     "explanation": "Belgium gave up the Congo in June 1960."
+    }
+   ]
+  },
+  {
    "id": "his2-015",
    "ask": {
     "1": "The dynasty",
@@ -1870,6 +9520,244 @@
      ],
      "answer": 1,
      "explanation": "Babur defeated the Sultan of Delhi at Panipat."
+    }
+   ]
+  },
+  {
+   "id": "arc-083",
+   "ask": {
+    "1": "Treaty parties",
+    "2": "South American land",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which two countries signed the Treaty of Tordesillas?",
+     "choices": [
+      "Spain and France",
+      "Spain and Portugal",
+      "France and England",
+      "Portugal and England"
+     ],
+     "answer": 1,
+     "explanation": "The two Iberian crowns agreed to divide the world beyond Europe between them."
+    },
+    {
+     "level": 2,
+     "question": "The Tordesillas line later gave Portugal a claim to which South American territory?",
+     "choices": [
+      "Chile",
+      "Argentina",
+      "Peru",
+      "Brazil"
+     ],
+     "answer": 3,
+     "explanation": "The line placed the eastern bulge of South America, Brazil, on the Portuguese side."
+    }
+   ]
+  },
+  {
+   "id": "arc-086",
+   "ask": {
+    "1": "Isthmus",
+    "2": "Ocean",
+    "3": "Year"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Balboa crossed which narrow strip of land to see the Pacific?",
+     "choices": [
+      "The Strait of Gibraltar",
+      "The Strait of Magellan",
+      "The Isthmus of Suez",
+      "The Isthmus of Panama"
+     ],
+     "answer": 3,
+     "explanation": "He crossed Panama on foot with Spanish soldiers and local guides."
+    },
+    {
+     "level": 2,
+     "question": "Balboa's expedition was Spanish. Which ocean did he sight?",
+     "choices": [
+      "The Atlantic",
+      "The Arctic",
+      "The Pacific",
+      "The Indian"
+     ],
+     "answer": 2,
+     "explanation": "He named it the South Sea."
+    }
+   ]
+  },
+  {
+   "id": "arc-126",
+   "ask": {
+    "1": "What carried signals",
+    "2": "First long message",
+    "3": "Lasting Atlantic cable"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The telegraph sent messages as electrical signals along what?",
+     "choices": [
+      "Water pipes",
+      "Radio waves",
+      "Light beams",
+      "Wires"
+     ],
+     "answer": 3,
+     "explanation": "Messages travelled as pulses in a code such as Morse's."
+    },
+    {
+     "level": 2,
+     "question": "In which year did Samuel Morse send 'What hath God wrought' between Washington and Baltimore?",
+     "choices": [
+      "1858",
+      "1844",
+      "1866",
+      "1837"
+     ],
+     "answer": 1,
+     "explanation": "That 1844 message opened the first long-distance telegraph line in the United States."
+    }
+   ]
+  },
+  {
+   "id": "arc-128",
+   "ask": {
+    "1": "Fuel of early cars",
+    "2": "The assembly line",
+    "3": "The Motorwagen's maker"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "The first practical cars of the 1880s ran on which fuel?",
+     "choices": [
+      "Petrol",
+      "Uranium",
+      "Whale oil",
+      "Hydrogen"
+     ],
+     "answer": 0,
+     "explanation": "A small, light petrol engine was what made a practical car possible."
+    },
+    {
+     "level": 2,
+     "question": "Which American carmaker introduced the moving assembly line in 1913?",
+     "choices": [
+      "Walter Chrysler",
+      "Louis Renault",
+      "Ransom Olds",
+      "Henry Ford"
+     ],
+     "answer": 3,
+     "explanation": "Ford's moving line at Highland Park cut the time needed to assemble a Model T dramatically."
+    }
+   ]
+  },
+  {
+   "id": "arc-042",
+   "ask": {
+    "1": "Hun king",
+    "2": "Catalaunian",
+    "3": "Death"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Attila was king of which people?",
+     "choices": [
+      "The Huns",
+      "The Vandals",
+      "The Goths",
+      "The Franks"
+     ],
+     "answer": 0,
+     "explanation": "Attila ruled the Huns."
+    },
+    {
+     "level": 2,
+     "question": "At which battle in 451 was Attila halted in Gaul?",
+     "choices": [
+      "Catalaunian Plains",
+      "Hastings",
+      "Adrianople",
+      "Tours"
+     ],
+     "answer": 0,
+     "explanation": "Romans and Visigoths stopped Attila."
+    }
+   ]
+  },
+  {
+   "id": "arc-038",
+   "ask": {
+    "1": "Split year",
+    "2": "Parts",
+    "3": "Tetrarchy"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Into how many parts was the Empire divided after AD 395?",
+     "choices": [
+      "Five",
+      "Four",
+      "Three",
+      "Two"
+     ],
+     "answer": 3,
+     "explanation": "East and West."
+    },
+    {
+     "level": 2,
+     "question": "Who created the Tetrarchy, rule by four, in AD 293?",
+     "choices": [
+      "Aurelian",
+      "Trajan",
+      "Diocletian",
+      "Constantine"
+     ],
+     "answer": 2,
+     "explanation": "Diocletian divided power among four rulers."
+    }
+   ]
+  },
+  {
+   "id": "arc-029",
+   "ask": {
+    "1": "Slave revolt",
+    "2": "Who led",
+    "3": "Revolt began"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What was Spartacus?",
+     "choices": [
+      "A consul",
+      "An emperor",
+      "A Carthaginian general",
+      "A gladiator who led a slave revolt"
+     ],
+     "answer": 3,
+     "explanation": "Spartacus led thousands of slaves against Rome from 73 to 71 BC."
+    },
+    {
+     "level": 2,
+     "question": "Which Roman commander crushed Spartacus's army in 71 BC?",
+     "choices": [
+      "Sulla",
+      "Crassus",
+      "Caesar",
+      "Cicero"
+     ],
+     "answer": 1,
+     "explanation": "Crassus defeated Spartacus; Pompey helped to mop up survivors."
     }
    ]
   },

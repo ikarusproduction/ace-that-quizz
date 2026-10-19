@@ -48,6 +48,278 @@
    ]
   },
   {
+   "id": "arc-017",
+   "subcategory": "ancient-greece",
+   "difficulty": 1,
+   "question": "Which Greek city-state is regarded as the birthplace of democracy?",
+   "choices": [
+    "Corinth",
+    "Athens",
+    "Sparta",
+    "Thebes"
+   ],
+   "answer": 1,
+   "explanation": "Athens developed rule by citizens' assembly in the 5th century BC and earlier.",
+   "tags": [
+    "ancient-greece"
+   ]
+  },
+  {
+   "id": "arc-018",
+   "subcategory": "ancient-greece",
+   "difficulty": 1,
+   "question": "In honour of which god were the ancient Olympic Games held?",
+   "choices": [
+    "Poseidon",
+    "Zeus",
+    "Apollo",
+    "Ares"
+   ],
+   "answer": 1,
+   "explanation": "The Games honoured Zeus at his sanctuary at Olympia.",
+   "tags": [
+    "ancient-greece"
+   ]
+  },
+  {
+   "id": "arc-019",
+   "subcategory": "ancient-greece",
+   "difficulty": 1,
+   "question": "Which king of Macedon conquered the Persian Empire?",
+   "choices": [
+    "Alexander the Great",
+    "Pericles",
+    "Philip II",
+    "Leonidas"
+   ],
+   "answer": 0,
+   "explanation": "Alexander overthrew the Persian Empire between 334 and 330 BC.",
+   "tags": [
+    "ancient-greece"
+   ]
+  },
+  {
+   "id": "arc-020",
+   "subcategory": "ancient-greece",
+   "difficulty": 1,
+   "question": "To which goddess was the Parthenon dedicated?",
+   "choices": [
+    "Hera",
+    "Artemis",
+    "Aphrodite",
+    "Athena"
+   ],
+   "answer": 3,
+   "explanation": "The Parthenon honoured Athena Parthenos, patron of Athens.",
+   "tags": [
+    "ancient-greece"
+   ]
+  },
+  {
+   "id": "arc-021",
+   "subcategory": "ancient-greece",
+   "difficulty": 1,
+   "question": "Which Spartan king led the famous stand at Thermopylae?",
+   "choices": [
+    "Lysander",
+    "Leonidas",
+    "Agis",
+    "Pausanias"
+   ],
+   "answer": 1,
+   "explanation": "Leonidas held the pass with about 300 Spartans and allied Greeks.",
+   "tags": [
+    "ancient-greece"
+   ]
+  },
+  {
+   "id": "arc-022",
+   "subcategory": "ancient-greece",
+   "difficulty": 1,
+   "question": "Which two epic poems are attributed to Homer?",
+   "choices": [
+    "The Iliad and the Odyssey",
+    "The Aeneid and the Odyssey",
+    "The Iliad and the Aeneid",
+    "Theogony and the Iliad"
+   ],
+   "answer": 0,
+   "explanation": "The Iliad tells of the Trojan War; the Odyssey of Odysseus' journey home.",
+   "tags": [
+    "ancient-greece"
+   ]
+  },
+  {
+   "id": "arc-023",
+   "subcategory": "ancient-greece",
+   "difficulty": 1,
+   "question": "Who was Plato's teacher?",
+   "choices": [
+    "Aristotle",
+    "Pythagoras",
+    "Homer",
+    "Socrates"
+   ],
+   "answer": 3,
+   "explanation": "Plato was a student of Socrates and wrote dialogues featuring him.",
+   "tags": [
+    "ancient-greece"
+   ]
+  },
+  {
+   "id": "arc-024",
+   "subcategory": "ancient-greece",
+   "difficulty": 1,
+   "question": "Which period of Greek history followed Alexander the Great's death?",
+   "choices": [
+    "The Archaic period",
+    "The Classical period",
+    "The Geometric period",
+    "The Hellenistic period"
+   ],
+   "answer": 3,
+   "explanation": "The Hellenistic period runs from 323 BC to the Roman conquest.",
+   "tags": [
+    "ancient-greece"
+   ]
+  },
+  {
+   "id": "arc-009",
+   "subcategory": "bronze-age",
+   "difficulty": 1,
+   "question": "Bronze is an alloy of copper and which other metal?",
+   "choices": [
+    "Zinc",
+    "Iron",
+    "Tin",
+    "Lead"
+   ],
+   "answer": 2,
+   "explanation": "Bronze is copper alloyed with a small share of tin, which made tools and weapons harder.",
+   "tags": [
+    "bronze-age"
+   ]
+  },
+  {
+   "id": "arc-010",
+   "subcategory": "bronze-age",
+   "difficulty": 1,
+   "question": "Which island was the centre of the Minoan civilization?",
+   "choices": [
+    "Rhodes",
+    "Sicily",
+    "Cyprus",
+    "Crete"
+   ],
+   "answer": 3,
+   "explanation": "The Minoans built palaces and ports on Crete in the Bronze Age.",
+   "tags": [
+    "bronze-age"
+   ]
+  },
+  {
+   "id": "arc-011",
+   "subcategory": "bronze-age",
+   "difficulty": 1,
+   "question": "In which modern country was Hattusa, capital of the Hittites?",
+   "choices": [
+    "Turkey",
+    "Egypt",
+    "Iraq",
+    "Greece"
+   ],
+   "answer": 0,
+   "explanation": "Hattusa lies in central Anatolia, in present-day Turkey.",
+   "tags": [
+    "bronze-age"
+   ]
+  },
+  {
+   "id": "arc-012",
+   "subcategory": "bronze-age",
+   "difficulty": 1,
+   "question": "In which modern country are the ruins of Troy found?",
+   "choices": [
+    "Egypt",
+    "Italy",
+    "Turkey",
+    "Greece"
+   ],
+   "answer": 2,
+   "explanation": "The mound of Hisarlik, identified with Troy, lies in north-western Turkey.",
+   "tags": [
+    "bronze-age"
+   ]
+  },
+  {
+   "id": "arc-013",
+   "subcategory": "bronze-age",
+   "difficulty": 1,
+   "question": "Which city, with its Lion Gate, was the centre of a Bronze Age Greek civilization?",
+   "choices": [
+    "Mycenae",
+    "Corinth",
+    "Sparta",
+    "Athens"
+   ],
+   "answer": 0,
+   "explanation": "Mycenae gave its name to the Mycenaean civilization, which flourished from about 1600 to 1100 BC.",
+   "tags": [
+    "bronze-age"
+   ]
+  },
+  {
+   "id": "arc-014",
+   "subcategory": "bronze-age",
+   "difficulty": 1,
+   "question": "In which country is Stonehenge?",
+   "choices": [
+    "Ireland",
+    "Scotland",
+    "England",
+    "France"
+   ],
+   "answer": 2,
+   "explanation": "Stonehenge stands on Salisbury Plain in Wiltshire, England.",
+   "tags": [
+    "bronze-age"
+   ]
+  },
+  {
+   "id": "arc-015",
+   "subcategory": "bronze-age",
+   "difficulty": 1,
+   "question": "Which Babylonian king is famous for a law code carved on a stone stele?",
+   "choices": [
+    "Cyrus",
+    "Nebuchadnezzar",
+    "Hammurabi",
+    "Sargon"
+   ],
+   "answer": 2,
+   "explanation": "Hammurabi's stele lists nearly 300 laws and is now in the Louvre.",
+   "tags": [
+    "bronze-age"
+   ]
+  },
+  {
+   "id": "arc-016",
+   "subcategory": "bronze-age",
+   "difficulty": 1,
+   "question": "Whose almost intact tomb did Howard Carter find in the Valley of the Kings?",
+   "choices": [
+    "Tutankhamun",
+    "Ramesses II",
+    "Khufu",
+    "Akhenaten"
+   ],
+   "answer": 0,
+   "explanation": "Carter found Tutankhamun's tomb with its treasures largely undisturbed.",
+   "tags": [
+    "bronze-age"
+   ]
+  },
+  {
    "id": "his2-014",
    "subcategory": "early-modern",
    "difficulty": 1,
@@ -99,6 +371,142 @@
    ],
    "format": "trick",
    "misconception": "Many people think the Bastille was full of political prisoners when it was stormed."
+  },
+  {
+   "id": "arc-001",
+   "subcategory": "early-rivers",
+   "difficulty": 1,
+   "question": "Which two rivers framed Mesopotamia, \"the land between the rivers\"?",
+   "choices": [
+    "The Tigris and the Jordan",
+    "The Tigris and the Euphrates",
+    "The Nile and the Euphrates",
+    "The Indus and the Ganges"
+   ],
+   "answer": 1,
+   "explanation": "Mesopotamia means \"between the rivers\": the Tigris and the Euphrates, in what is now mostly Iraq.",
+   "tags": [
+    "early-rivers"
+   ]
+  },
+  {
+   "id": "arc-002",
+   "subcategory": "early-rivers",
+   "difficulty": 1,
+   "question": "Whose annual flood made farming possible in ancient Egypt?",
+   "choices": [
+    "The Euphrates",
+    "The Nile",
+    "The Niger",
+    "The Jordan"
+   ],
+   "answer": 1,
+   "explanation": "The yearly Nile flood left rich black silt, which fed Egyptian agriculture for millennia.",
+   "tags": [
+    "early-rivers"
+   ]
+  },
+  {
+   "id": "arc-003",
+   "subcategory": "early-rivers",
+   "difficulty": 1,
+   "question": "What were the Egyptian pyramids mainly built as?",
+   "choices": [
+    "Royal tombs",
+    "Temples to the sun god",
+    "Border fortresses",
+    "Grain stores"
+   ],
+   "answer": 0,
+   "explanation": "The pyramids were monumental tombs for pharaohs, meant to secure their afterlife.",
+   "tags": [
+    "early-rivers"
+   ]
+  },
+  {
+   "id": "arc-004",
+   "subcategory": "early-rivers",
+   "difficulty": 1,
+   "question": "Which river gave its name to a Bronze Age civilization with cities such as Mohenjo-daro?",
+   "choices": [
+    "The Tigris",
+    "The Ganges",
+    "The Indus",
+    "The Yangtze"
+   ],
+   "answer": 2,
+   "explanation": "The Indus Valley civilization flourished along the Indus river in present-day Pakistan and India.",
+   "tags": [
+    "early-rivers"
+   ]
+  },
+  {
+   "id": "arc-005",
+   "subcategory": "early-rivers",
+   "difficulty": 1,
+   "question": "Which river is often called the cradle of Chinese civilization?",
+   "choices": [
+    "The Yangtze",
+    "The Pearl River",
+    "The Mekong",
+    "The Yellow River"
+   ],
+   "answer": 3,
+   "explanation": "Early Chinese states grew in the fertile loess plains along the Yellow River.",
+   "tags": [
+    "early-rivers"
+   ]
+  },
+  {
+   "id": "arc-006",
+   "subcategory": "early-rivers",
+   "difficulty": 1,
+   "question": "Which Sumerian city, home of the legendary Gilgamesh, is among the world's first cities?",
+   "choices": [
+    "Uruk",
+    "Memphis",
+    "Troy",
+    "Nineveh"
+   ],
+   "answer": 0,
+   "explanation": "Uruk, in southern Mesopotamia, grew into one of the first true cities by the fourth millennium BC.",
+   "tags": [
+    "early-rivers"
+   ]
+  },
+  {
+   "id": "arc-007",
+   "subcategory": "early-rivers",
+   "difficulty": 1,
+   "question": "What is the picture writing of ancient Egypt called?",
+   "choices": [
+    "Cuneiform",
+    "Linear B",
+    "Hieroglyphs",
+    "Runes"
+   ],
+   "answer": 2,
+   "explanation": "Hieroglyphs combined pictures and sound signs and were used for monuments and sacred texts.",
+   "tags": [
+    "early-rivers"
+   ]
+  },
+  {
+   "id": "arc-008",
+   "subcategory": "early-rivers",
+   "difficulty": 1,
+   "question": "How many months did the ancient Egyptian civil calendar have?",
+   "choices": [
+    "12",
+    "10",
+    "13",
+    "14"
+   ],
+   "answer": 0,
+   "explanation": "The Egyptian civil calendar had 12 months, grouped into three seasons of four months.",
+   "tags": [
+    "early-rivers"
+   ]
   },
   {
    "id": "his2-011",
@@ -346,6 +754,91 @@
    "explanation": "Machu Picchu was built by the Inca in the 15th century, high in the Peruvian Andes."
   },
   {
+   "id": "arc-049",
+   "subcategory": "early-medieval",
+   "difficulty": 2,
+   "question": "Which Germanic people, led by Alaric, sacked Rome in AD 410?",
+   "choices": [
+    "The Huns",
+    "The Franks",
+    "The Lombards",
+    "The Visigoths"
+   ],
+   "answer": 3,
+   "explanation": "Alaric's Visigoths entered Rome in 410, the first time in about 800 years that the city fell to a foreign enemy.",
+   "tags": [
+    "early-medieval"
+   ]
+  },
+  {
+   "id": "arc-050",
+   "subcategory": "early-medieval",
+   "difficulty": 2,
+   "question": "Which Frankish king is traditionally said to have converted to Catholic Christianity, helping unite the Franks and Gauls?",
+   "choices": [
+    "Clovis",
+    "Childeric",
+    "Charles Martel",
+    "Pepin the Short"
+   ],
+   "answer": 0,
+   "explanation": "Clovis, king of the Franks, was baptised as a Catholic. Many historians place this around 496, though some argue for a later date.",
+   "tags": [
+    "early-medieval"
+   ]
+  },
+  {
+   "id": "arc-052",
+   "subcategory": "early-medieval",
+   "difficulty": 2,
+   "question": "Which Frankish leader won the Battle of Tours in 732?",
+   "choices": [
+    "Charlemagne",
+    "Pepin the Short",
+    "Charles Martel",
+    "Clovis"
+   ],
+   "answer": 2,
+   "explanation": "Charles Martel defeated an army from Umayyad Spain near Tours and Poitiers.",
+   "tags": [
+    "early-medieval"
+   ]
+  },
+  {
+   "id": "arc-053",
+   "subcategory": "early-medieval",
+   "difficulty": 2,
+   "question": "In 793 Viking raiders attacked the island monastery of Lindisfarne. Which kingdom was it in?",
+   "choices": [
+    "Northumbria",
+    "Kent",
+    "Mercia",
+    "Wessex"
+   ],
+   "answer": 0,
+   "explanation": "Lindisfarne lies off the coast of Northumbria in north-east England.",
+   "tags": [
+    "early-medieval"
+   ]
+  },
+  {
+   "id": "arc-054",
+   "subcategory": "early-medieval",
+   "difficulty": 2,
+   "question": "The Danelaw was the part of England under which people's law?",
+   "choices": [
+    "The Normans",
+    "The Danes",
+    "The Franks",
+    "The Romans"
+   ],
+   "answer": 1,
+   "explanation": "After the 880s treaty with the Danes, the north-east of England fell under Danish law.",
+   "tags": [
+    "early-medieval"
+   ]
+  },
+  {
    "id": "his-012",
    "subcategory": "early-modern",
    "difficulty": 2,
@@ -372,6 +865,516 @@
    ],
    "answer": 3,
    "explanation": "The Renaissance began in 14th-century Italy, notably in Florence."
+  },
+  {
+   "id": "arc-097",
+   "subcategory": "enlightenment",
+   "difficulty": 2,
+   "question": "Which French writer wrote the satirical novel Candide?",
+   "choices": [
+    "Rousseau",
+    "Montesquieu",
+    "Diderot",
+    "Voltaire"
+   ],
+   "answer": 3,
+   "explanation": "Voltaire wrote Candide, which mocks blind optimism and the cruelty of his age.",
+   "tags": [
+    "enlightenment"
+   ]
+  },
+  {
+   "id": "arc-098",
+   "subcategory": "enlightenment",
+   "difficulty": 2,
+   "question": "Who co-edited the Encyclopédie with Jean le Rond d'Alembert?",
+   "choices": [
+    "Denis Diderot",
+    "Jean-Jacques Rousseau",
+    "Voltaire",
+    "Montesquieu"
+   ],
+   "answer": 0,
+   "explanation": "Diderot edited the Encyclopédie, which aimed to gather and spread all human knowledge.",
+   "tags": [
+    "enlightenment"
+   ]
+  },
+  {
+   "id": "arc-099",
+   "subcategory": "enlightenment",
+   "difficulty": 2,
+   "question": "Which work by Rousseau opens with 'Man is born free, and everywhere he is in chains'?",
+   "choices": [
+    "Discourse on Inequality",
+    "The Confessions",
+    "The Social Contract",
+    "Émile"
+   ],
+   "answer": 2,
+   "explanation": "The Social Contract begins with that line and argues that legitimate authority rests on the consent of the governed.",
+   "tags": [
+    "enlightenment"
+   ]
+  },
+  {
+   "id": "arc-101",
+   "subcategory": "enlightenment",
+   "difficulty": 2,
+   "question": "Which English philosopher argued that people have natural rights to life, liberty and property?",
+   "choices": [
+    "Thomas Hobbes",
+    "Adam Smith",
+    "David Hume",
+    "John Locke"
+   ],
+   "answer": 3,
+   "explanation": "Locke held that governments exist to protect these rights and may be replaced if they fail.",
+   "tags": [
+    "enlightenment"
+   ]
+  },
+  {
+   "id": "arc-082",
+   "subcategory": "exploration",
+   "difficulty": 2,
+   "question": "Which Indian port did Vasco da Gama reach in 1498?",
+   "choices": [
+    "Madras",
+    "Calicut",
+    "Goa",
+    "Bombay"
+   ],
+   "answer": 1,
+   "explanation": "Gama landed at Calicut on the Malabar coast.",
+   "tags": [
+    "exploration"
+   ]
+  },
+  {
+   "id": "arc-085",
+   "subcategory": "exploration",
+   "difficulty": 2,
+   "question": "Which river did Jacques Cartier explore for France, reaching the sites of Quebec and Montreal?",
+   "choices": [
+    "The Mississippi",
+    "The Seine",
+    "The St. Lawrence",
+    "The Hudson"
+   ],
+   "answer": 2,
+   "explanation": "He sailed up the St. Lawrence River in the 1530s.",
+   "tags": [
+    "exploration"
+   ]
+  },
+  {
+   "id": "arc-087",
+   "subcategory": "exploration",
+   "difficulty": 2,
+   "question": "The Americas are named after which Italian navigator and mapmaker?",
+   "choices": [
+    "Amerigo Vespucci",
+    "Giovanni da Verrazzano",
+    "John Cabot",
+    "Christopher Columbus"
+   ],
+   "answer": 0,
+   "explanation": "Martin Waldseemuller used a version of Vespucci's first name on a 1507 map.",
+   "tags": [
+    "exploration"
+   ]
+  },
+  {
+   "id": "arc-088",
+   "subcategory": "exploration",
+   "difficulty": 2,
+   "question": "Which country did John Cabot sail for when he reached North America?",
+   "choices": [
+    "Venice",
+    "England",
+    "Spain",
+    "Portugal"
+   ],
+   "answer": 1,
+   "explanation": "Cabot, an Italian, sailed under King Henry VII.",
+   "tags": [
+    "exploration"
+   ]
+  },
+  {
+   "id": "arc-065",
+   "subcategory": "high-medieval",
+   "difficulty": 2,
+   "question": "Which pope called for the First Crusade at the Council of Clermont?",
+   "choices": [
+    "Urban II",
+    "Gregory VII",
+    "Leo III",
+    "Innocent III"
+   ],
+   "answer": 0,
+   "explanation": "Urban II made his appeal in November 1095.",
+   "tags": [
+    "high-medieval"
+   ]
+  },
+  {
+   "id": "arc-066",
+   "subcategory": "high-medieval",
+   "difficulty": 2,
+   "question": "Which king ordered the Domesday Book survey of England?",
+   "choices": [
+    "Henry II",
+    "William the Conqueror",
+    "Edward I",
+    "Richard I"
+   ],
+   "answer": 1,
+   "explanation": "He ordered the survey in 1085, and it was completed in 1086.",
+   "tags": [
+    "high-medieval"
+   ]
+  },
+  {
+   "id": "arc-067",
+   "subcategory": "high-medieval",
+   "difficulty": 2,
+   "question": "Otto I, crowned emperor in 962, belonged to which royal dynasty?",
+   "choices": [
+    "The Carolingian dynasty",
+    "The Ottonian dynasty",
+    "The Capetian dynasty",
+    "The Salian dynasty"
+   ],
+   "answer": 1,
+   "explanation": "The Ottonians came from Saxony.",
+   "tags": [
+    "high-medieval"
+   ]
+  },
+  {
+   "id": "arc-069",
+   "subcategory": "high-medieval",
+   "difficulty": 2,
+   "question": "Notre-Dame de Paris was built in which architectural style?",
+   "choices": [
+    "Baroque",
+    "Byzantine",
+    "Gothic",
+    "Romanesque"
+   ],
+   "answer": 2,
+   "explanation": "Its pointed arches and flying buttresses are typical of Gothic style.",
+   "tags": [
+    "high-medieval"
+   ]
+  },
+  {
+   "id": "arc-070",
+   "subcategory": "high-medieval",
+   "difficulty": 2,
+   "question": "Which university in Italy is traditionally regarded as the oldest in the Western world?",
+   "choices": [
+    "Padua",
+    "Rome",
+    "Naples",
+    "Bologna"
+   ],
+   "answer": 3,
+   "explanation": "It is usually said to have been founded in 1088.",
+   "tags": [
+    "high-medieval"
+   ]
+  },
+  {
+   "id": "arc-071",
+   "subcategory": "high-medieval",
+   "difficulty": 2,
+   "question": "Which city did the Fourth Crusade sack in 1204?",
+   "choices": [
+    "Damascus",
+    "Cairo",
+    "Constantinople",
+    "Jerusalem"
+   ],
+   "answer": 2,
+   "explanation": "The crusaders attacked the Christian city of Constantinople rather than reaching the Holy Land.",
+   "tags": [
+    "high-medieval"
+   ]
+  },
+  {
+   "id": "arc-072",
+   "subcategory": "high-medieval",
+   "difficulty": 2,
+   "question": "Which Scottish king won the Battle of Bannockburn?",
+   "choices": [
+    "William Wallace",
+    "Macbeth",
+    "Robert the Bruce",
+    "David I"
+   ],
+   "answer": 2,
+   "explanation": "Robert the Bruce defeated Edward II's army in 1314.",
+   "tags": [
+    "high-medieval"
+   ]
+  },
+  {
+   "id": "arc-155",
+   "subcategory": "interwar",
+   "difficulty": 2,
+   "question": "Which event of October 1929 opened the Great Depression?",
+   "choices": [
+    "The Reichstag fire",
+    "The Munich Putsch",
+    "The Dust Bowl",
+    "The Wall Street Crash"
+   ],
+   "answer": 3,
+   "explanation": "Stock prices collapsed in New York, and the crisis spread worldwide.",
+   "tags": [
+    "depression"
+   ]
+  },
+  {
+   "id": "arc-157",
+   "subcategory": "interwar",
+   "difficulty": 2,
+   "question": "In which year did Hitler become Chancellor of Germany?",
+   "choices": [
+    "1929",
+    "1936",
+    "1933",
+    "1939"
+   ],
+   "answer": 2,
+   "explanation": "President Hindenburg appointed him on 30 January 1933.",
+   "tags": [
+    "hitler-rise"
+   ]
+  },
+  {
+   "id": "arc-159",
+   "subcategory": "interwar",
+   "difficulty": 2,
+   "question": "Which British prime minister signed the Munich Agreement in 1938?",
+   "choices": [
+    "David Lloyd George",
+    "Winston Churchill",
+    "Neville Chamberlain",
+    "Stanley Baldwin"
+   ],
+   "answer": 2,
+   "explanation": "Chamberlain returned promising 'peace for our time'.",
+   "tags": [
+    "munich"
+   ]
+  },
+  {
+   "id": "arc-160",
+   "subcategory": "interwar",
+   "difficulty": 2,
+   "question": "Which country did Germany annex in March 1938 in the Anschluss?",
+   "choices": [
+    "Austria",
+    "Czechoslovakia",
+    "Hungary",
+    "Poland"
+   ],
+   "answer": 0,
+   "explanation": "German troops entered Austria and it was merged into the Reich.",
+   "tags": [
+    "expansion"
+   ]
+  },
+  {
+   "id": "arc-057",
+   "subcategory": "islamic-world",
+   "difficulty": 2,
+   "question": "Which city was the capital of the Umayyad Caliphate?",
+   "choices": [
+    "Damascus",
+    "Baghdad",
+    "Mecca",
+    "Cairo"
+   ],
+   "answer": 0,
+   "explanation": "The Umayyads ruled from Damascus from 661 to 750.",
+   "tags": [
+    "islamic-world"
+   ]
+  },
+  {
+   "id": "arc-058",
+   "subcategory": "islamic-world",
+   "difficulty": 2,
+   "question": "Which caliph had the Dome of the Rock built in Jerusalem?",
+   "choices": [
+    "Abd al-Malik",
+    "Umar",
+    "Saladin",
+    "Harun al-Rashid"
+   ],
+   "answer": 0,
+   "explanation": "The shrine was built under the Umayyad caliph Abd al-Malik.",
+   "tags": [
+    "islamic-world"
+   ]
+  },
+  {
+   "id": "arc-060",
+   "subcategory": "islamic-world",
+   "difficulty": 2,
+   "question": "Which city was the capital of the Caliphate of Cordoba in al-Andalus?",
+   "choices": [
+    "Toledo",
+    "Granada",
+    "Seville",
+    "Cordoba"
+   ],
+   "answer": 3,
+   "explanation": "Cordoba became one of the largest cities in Europe under its caliphs.",
+   "tags": [
+    "islamic-world"
+   ]
+  },
+  {
+   "id": "arc-061",
+   "subcategory": "islamic-world",
+   "difficulty": 2,
+   "question": "At the Battle of Talas, the Abbasid Caliphate fought which Chinese dynasty?",
+   "choices": [
+    "The Ming",
+    "The Qin",
+    "The Han",
+    "The Tang"
+   ],
+   "answer": 3,
+   "explanation": "The Abbasids defeated the Tang army by the Talas River in Central Asia.",
+   "tags": [
+    "islamic-world"
+   ]
+  },
+  {
+   "id": "arc-062",
+   "subcategory": "islamic-world",
+   "difficulty": 2,
+   "question": "Ibn Sina, known in Latin as Avicenna, wrote the Canon of what?",
+   "choices": [
+    "Astronomy",
+    "Law",
+    "Medicine",
+    "Geometry"
+   ],
+   "answer": 2,
+   "explanation": "The Canon of Medicine was used as a textbook for centuries in Europe and the Islamic world.",
+   "tags": [
+    "islamic-world"
+   ]
+  },
+  {
+   "id": "arc-063",
+   "subcategory": "islamic-world",
+   "difficulty": 2,
+   "question": "In which country was the traveller Ibn Battuta born?",
+   "choices": [
+    "Morocco",
+    "Spain",
+    "Egypt",
+    "Iraq"
+   ],
+   "answer": 0,
+   "explanation": "He was born in Tangier in 1304.",
+   "tags": [
+    "islamic-world"
+   ]
+  },
+  {
+   "id": "arc-064",
+   "subcategory": "islamic-world",
+   "difficulty": 2,
+   "question": "Which people besieged and sacked Baghdad in 1258?",
+   "choices": [
+    "The Crusaders",
+    "The Mongols",
+    "The Mamluks",
+    "The Seljuks"
+   ],
+   "answer": 1,
+   "explanation": "A Mongol army ended the Abbasid caliphate in Baghdad.",
+   "tags": [
+    "islamic-world"
+   ]
+  },
+  {
+   "id": "arc-044",
+   "subcategory": "late-antiquity",
+   "difficulty": 2,
+   "question": "Which North African city did the Vandals capture in AD 439?",
+   "choices": [
+    "Alexandria",
+    "Carthage",
+    "Cyrene",
+    "Hippo"
+   ],
+   "answer": 1,
+   "explanation": "Gaiseric took Carthage in 439.",
+   "tags": [
+    "late-antiquity"
+   ]
+  },
+  {
+   "id": "arc-045",
+   "subcategory": "late-antiquity",
+   "difficulty": 2,
+   "question": "Which church did Justinian rebuild in Constantinople?",
+   "choices": [
+    "Hagia Sophia",
+    "St Peter's",
+    "The Pantheon",
+    "The Parthenon"
+   ],
+   "answer": 0,
+   "explanation": "Hagia Sophia was rebuilt after fire in the Nika riots.",
+   "tags": [
+    "late-antiquity"
+   ]
+  },
+  {
+   "id": "arc-046",
+   "subcategory": "late-antiquity",
+   "difficulty": 2,
+   "question": "Which emperor gave his name to the plague that began in 541?",
+   "choices": [
+    "Constantine",
+    "Theodosius",
+    "Justinian",
+    "Heraclius"
+   ],
+   "answer": 2,
+   "explanation": "The Plague of Justinian began in 541.",
+   "tags": [
+    "late-antiquity"
+   ]
+  },
+  {
+   "id": "arc-048",
+   "subcategory": "late-antiquity",
+   "difficulty": 2,
+   "question": "Which Frankish king converted to Catholic Christianity around 500?",
+   "choices": [
+    "Charles Martel",
+    "Pepin",
+    "Clovis",
+    "Charlemagne"
+   ],
+   "answer": 2,
+   "explanation": "Clovis was baptised.",
+   "tags": [
+    "late-antiquity"
+   ]
   },
   {
    "id": "his-011",
@@ -520,6 +1523,40 @@
    ]
   },
   {
+   "id": "arc-113",
+   "subcategory": "napoleon",
+   "difficulty": 2,
+   "question": "On which island was Napoleon Bonaparte born?",
+   "choices": [
+    "Sardinia",
+    "Sicily",
+    "Corsica",
+    "Elba"
+   ],
+   "answer": 2,
+   "explanation": "Napoleon was born in Ajaccio, on an island that France had just acquired from Genoa.",
+   "tags": [
+    "napoleon"
+   ]
+  },
+  {
+   "id": "arc-115",
+   "subcategory": "napoleon",
+   "difficulty": 2,
+   "question": "Which law code of 1804 gave France a single civil law and became a model for many other countries?",
+   "choices": [
+    "The Napoleonic Code",
+    "The Code of Justinian",
+    "Magna Carta",
+    "The Code of Hammurabi"
+   ],
+   "answer": 0,
+   "explanation": "The Civil Code of 1804 declared citizens equal before the law and protected property.",
+   "tags": [
+    "napoleon"
+   ]
+  },
+  {
    "id": "his-019",
    "subcategory": "people",
    "difficulty": 2,
@@ -546,6 +1583,380 @@
    ],
    "answer": 2,
    "explanation": "Churchill led the wartime government from May 1940 to July 1945."
+  },
+  {
+   "id": "arc-089",
+   "subcategory": "reformation",
+   "difficulty": 2,
+   "question": "At which assembly in 1521 was Martin Luther ordered to recant his writings?",
+   "choices": [
+    "The Council of Nicaea",
+    "The Diet of Worms",
+    "The Peace of Augsburg",
+    "The Council of Trent"
+   ],
+   "answer": 1,
+   "explanation": "Luther refused to retract, saying his conscience was bound.",
+   "tags": [
+    "reformation"
+   ]
+  },
+  {
+   "id": "arc-090",
+   "subcategory": "reformation",
+   "difficulty": 2,
+   "question": "Luther translated the New Testament into which language?",
+   "choices": [
+    "English",
+    "Hebrew",
+    "German",
+    "Latin"
+   ],
+   "answer": 2,
+   "explanation": "His translation helped shape modern German.",
+   "tags": [
+    "reformation"
+   ]
+  },
+  {
+   "id": "arc-091",
+   "subcategory": "reformation",
+   "difficulty": 2,
+   "question": "In which city did John Calvin lead the Reformation?",
+   "choices": [
+    "Geneva",
+    "Wittenberg",
+    "Zurich",
+    "Paris"
+   ],
+   "answer": 0,
+   "explanation": "Calvin settled in Geneva in 1536 and again in 1541.",
+   "tags": [
+    "reformation"
+   ]
+  },
+  {
+   "id": "arc-094",
+   "subcategory": "reformation",
+   "difficulty": 2,
+   "question": "The St. Bartholomew's Day massacre of 1572 took place first in which city?",
+   "choices": [
+    "Rome",
+    "Geneva",
+    "London",
+    "Paris"
+   ],
+   "answer": 3,
+   "explanation": "Violence began in Paris and spread across France.",
+   "tags": [
+    "reformation"
+   ]
+  },
+  {
+   "id": "arc-096",
+   "subcategory": "reformation",
+   "difficulty": 2,
+   "question": "Who founded the Society of Jesus, the Jesuits?",
+   "choices": [
+    "Francis of Assisi",
+    "Dominic",
+    "Ignatius of Loyola",
+    "Benedict"
+   ],
+   "answer": 2,
+   "explanation": "Ignatius, a Basque from Spain, founded the order with companions.",
+   "tags": [
+    "reformation"
+   ]
+  },
+  {
+   "id": "arc-073",
+   "subcategory": "renaissance",
+   "difficulty": 2,
+   "question": "Which banking family dominated Florence for much of the 15th century and funded Renaissance artists?",
+   "choices": [
+    "The Borgia",
+    "The Medici",
+    "The Sforza",
+    "The Fugger"
+   ],
+   "answer": 1,
+   "explanation": "The Medici bank made the family rich, and they sponsored artists such as Botticelli and Michelangelo.",
+   "tags": [
+    "renaissance"
+   ]
+  },
+  {
+   "id": "arc-075",
+   "subcategory": "renaissance",
+   "difficulty": 2,
+   "question": "Which pope commissioned Michelangelo to paint the ceiling of the Sistine Chapel?",
+   "choices": [
+    "Urban II",
+    "Leo X",
+    "Clement VII",
+    "Julius II"
+   ],
+   "answer": 3,
+   "explanation": "Pope Julius II ordered the work, which Michelangelo painted from 1508.",
+   "tags": [
+    "renaissance"
+   ]
+  },
+  {
+   "id": "arc-077",
+   "subcategory": "renaissance",
+   "difficulty": 2,
+   "question": "Which Florentine wrote The Prince, a book on gaining and keeping political power?",
+   "choices": [
+    "Dante Alighieri",
+    "Niccolo Machiavelli",
+    "Giovanni Boccaccio",
+    "Petrarch"
+   ],
+   "answer": 1,
+   "explanation": "Machiavelli wrote The Prince in 1513, and it was published in 1532.",
+   "tags": [
+    "renaissance"
+   ]
+  },
+  {
+   "id": "arc-078",
+   "subcategory": "renaissance",
+   "difficulty": 2,
+   "question": "In which English town was William Shakespeare born?",
+   "choices": [
+    "Stratford-upon-Avon",
+    "York",
+    "Oxford",
+    "Canterbury"
+   ],
+   "answer": 0,
+   "explanation": "Shakespeare was born in Stratford-upon-Avon in 1564.",
+   "tags": [
+    "renaissance"
+   ]
+  },
+  {
+   "id": "arc-079",
+   "subcategory": "renaissance",
+   "difficulty": 2,
+   "question": "Which English humanist wrote Utopia, describing an imaginary island society?",
+   "choices": [
+    "Francis Bacon",
+    "John Colet",
+    "Erasmus",
+    "Thomas More"
+   ],
+   "answer": 3,
+   "explanation": "Thomas More published Utopia in 1516.",
+   "tags": [
+    "renaissance"
+   ]
+  },
+  {
+   "id": "arc-080",
+   "subcategory": "renaissance",
+   "difficulty": 2,
+   "question": "Who painted The School of Athens, a fresco in the Vatican?",
+   "choices": [
+    "Donatello",
+    "Titian",
+    "Leonardo da Vinci",
+    "Raphael"
+   ],
+   "answer": 3,
+   "explanation": "Raphael painted it between about 1509 and 1511.",
+   "tags": [
+    "renaissance"
+   ]
+  },
+  {
+   "id": "arc-105",
+   "subcategory": "revolutions",
+   "difficulty": 2,
+   "question": "In which year did the Boston Tea Party take place?",
+   "choices": [
+    "1775",
+    "1765",
+    "1773",
+    "1783"
+   ],
+   "answer": 2,
+   "explanation": "On 16 December 1773 colonists threw tea of the British East India Company into Boston Harbor.",
+   "tags": [
+    "revolutions"
+   ]
+  },
+  {
+   "id": "arc-036",
+   "subcategory": "rome-empire",
+   "difficulty": 2,
+   "question": "In which year did the Great Fire of Rome break out?",
+   "choices": [
+    "AD 117",
+    "AD 64",
+    "AD 79",
+    "AD 69"
+   ],
+   "answer": 1,
+   "explanation": "The Great Fire began in July AD 64.",
+   "tags": [
+    "rome-empire"
+   ]
+  },
+  {
+   "id": "arc-037",
+   "subcategory": "rome-empire",
+   "difficulty": 2,
+   "question": "The Edict of Milan, protecting Christians, was issued in",
+   "choices": [
+    "AD 313",
+    "AD 380",
+    "AD 325",
+    "AD 330"
+   ],
+   "answer": 0,
+   "explanation": "Constantine and Licinius issued the Edict in 313.",
+   "tags": [
+    "rome-empire"
+   ]
+  },
+  {
+   "id": "arc-040",
+   "subcategory": "rome-empire",
+   "difficulty": 2,
+   "question": "Who began the Appian Way in 312 BC?",
+   "choices": [
+    "Agrippa",
+    "Trajan",
+    "Appius Claudius Caecus",
+    "Augustus"
+   ],
+   "answer": 2,
+   "explanation": "The censor Appius Claudius Caecus started it.",
+   "tags": [
+    "rome-empire"
+   ]
+  },
+  {
+   "id": "arc-025",
+   "subcategory": "rome-republic",
+   "difficulty": 2,
+   "question": "According to tradition, in which year was Rome founded?",
+   "choices": [
+    "509 BC",
+    "753 BC",
+    "264 BC",
+    "146 BC"
+   ],
+   "answer": 1,
+   "explanation": "Roman tradition, fixed by Varro, dates the founding of Rome to 753 BC.",
+   "tags": [
+    "rome-republic"
+   ]
+  },
+  {
+   "id": "arc-026",
+   "subcategory": "rome-republic",
+   "difficulty": 2,
+   "question": "According to tradition, in which year did Rome become a republic?",
+   "choices": [
+    "44 BC",
+    "509 BC",
+    "753 BC",
+    "264 BC"
+   ],
+   "answer": 1,
+   "explanation": "The last king was traditionally expelled in 509 BC and the Republic founded.",
+   "tags": [
+    "rome-republic"
+   ]
+  },
+  {
+   "id": "arc-027",
+   "subcategory": "rome-republic",
+   "difficulty": 2,
+   "question": "In which year did the First Punic War begin?",
+   "choices": [
+    "218 BC",
+    "149 BC",
+    "202 BC",
+    "264 BC"
+   ],
+   "answer": 3,
+   "explanation": "Rome and Carthage went to war over Sicily in 264 BC.",
+   "tags": [
+    "rome-republic"
+   ]
+  },
+  {
+   "id": "arc-028",
+   "subcategory": "rome-republic",
+   "difficulty": 2,
+   "question": "Which Roman general defeated Hannibal at Zama?",
+   "choices": [
+    "Sulla",
+    "Scipio Africanus",
+    "Marius",
+    "Fabius Maximus"
+   ],
+   "answer": 1,
+   "explanation": "Scipio Africanus defeated Hannibal at Zama in North Africa.",
+   "tags": [
+    "rome-republic"
+   ]
+  },
+  {
+   "id": "arc-030",
+   "subcategory": "rome-republic",
+   "difficulty": 2,
+   "question": "About how long did Caesar's conquest of Gaul last?",
+   "choices": [
+    "About 3 years",
+    "About 8 years",
+    "About 15 years",
+    "About 20 years"
+   ],
+   "answer": 1,
+   "explanation": "Caesar fought in Gaul from 58 to 50 BC.",
+   "tags": [
+    "rome-republic"
+   ]
+  },
+  {
+   "id": "arc-031",
+   "subcategory": "rome-republic",
+   "difficulty": 2,
+   "question": "Who formed the First Triumvirate with Caesar and Pompey?",
+   "choices": [
+    "Mark Antony",
+    "Cicero",
+    "Brutus",
+    "Crassus"
+   ],
+   "answer": 3,
+   "explanation": "Caesar, Pompey and Crassus made a private political alliance.",
+   "tags": [
+    "rome-republic"
+   ]
+  },
+  {
+   "id": "arc-032",
+   "subcategory": "rome-republic",
+   "difficulty": 2,
+   "question": "How long did a regular Roman consul's term last?",
+   "choices": [
+    "One year",
+    "Five years",
+    "Two years",
+    "For life"
+   ],
+   "answer": 0,
+   "explanation": "Consuls were elected annually.",
+   "tags": [
+    "rome-republic"
+   ]
   },
   {
    "id": "his2-002",
@@ -579,6 +1990,380 @@
    "explanation": "Cortés landed in 1519 and allied with peoples hostile to the Aztecs.",
    "tags": [
     "aztec"
+   ]
+  },
+  {
+   "id": "arc-145",
+   "subcategory": "ww1",
+   "difficulty": 2,
+   "question": "Which two powers formed the core of the Central Powers in the First World War?",
+   "choices": [
+    "Britain and France",
+    "Italy and Japan",
+    "Russia and Serbia",
+    "Germany and Austria-Hungary"
+   ],
+   "answer": 3,
+   "explanation": "The Ottoman Empire and Bulgaria later joined Germany and Austria-Hungary.",
+   "tags": [
+    "alliances"
+   ]
+  },
+  {
+   "id": "arc-146",
+   "subcategory": "ww1",
+   "difficulty": 2,
+   "question": "In which month of 1914 was Archduke Franz Ferdinand assassinated?",
+   "choices": [
+    "June",
+    "May",
+    "August",
+    "September"
+   ],
+   "answer": 0,
+   "explanation": "He was shot on 28 June 1914, and the July crisis followed.",
+   "tags": [
+    "sarajevo"
+   ]
+  },
+  {
+   "id": "arc-148",
+   "subcategory": "ww1",
+   "difficulty": 2,
+   "question": "What was the name for the ground between opposing trenches on the Western Front?",
+   "choices": [
+    "The front line",
+    "No man's land",
+    "The breach",
+    "The salient"
+   ],
+   "answer": 1,
+   "explanation": "No man's land was exposed to machine guns and shellfire.",
+   "tags": [
+    "trenches"
+   ]
+  },
+  {
+   "id": "arc-151",
+   "subcategory": "ww1",
+   "difficulty": 2,
+   "question": "Which treaty took Russia out of the First World War in March 1918?",
+   "choices": [
+    "Rapallo",
+    "Brest-Litovsk",
+    "Versailles",
+    "Trianon"
+   ],
+   "answer": 1,
+   "explanation": "The Bolsheviks signed it with the Central Powers, giving up large territories.",
+   "tags": [
+    "eastern-front"
+   ]
+  },
+  {
+   "id": "arc-152",
+   "subcategory": "ww1",
+   "difficulty": 2,
+   "question": "In which year did the United States enter the First World War?",
+   "choices": [
+    "1914",
+    "1916",
+    "1918",
+    "1917"
+   ],
+   "answer": 3,
+   "explanation": "The US declared war on Germany in April 1917.",
+   "tags": [
+    "us-entry"
+   ]
+  },
+  {
+   "id": "arc-161",
+   "subcategory": "ww2",
+   "difficulty": 2,
+   "question": "Which country did Germany invade on 1 September 1939, starting the Second World War in Europe?",
+   "choices": [
+    "Denmark",
+    "France",
+    "Czechoslovakia",
+    "Poland"
+   ],
+   "answer": 3,
+   "explanation": "Britain and France declared war on Germany two days later.",
+   "tags": [
+    "poland-1939"
+   ]
+  },
+  {
+   "id": "arc-163",
+   "subcategory": "ww2",
+   "difficulty": 2,
+   "question": "Which Japanese city was hit by the first atomic bomb in August 1945?",
+   "choices": [
+    "Kyoto",
+    "Hiroshima",
+    "Tokyo",
+    "Nagasaki"
+   ],
+   "answer": 1,
+   "explanation": "Hiroshima was bombed on 6 August 1945 and Nagasaki three days later.",
+   "tags": [
+    "end-of-war"
+   ]
+  },
+  {
+   "id": "arc-165",
+   "subcategory": "ww2",
+   "difficulty": 2,
+   "question": "In which year did Japan attack Pearl Harbor?",
+   "choices": [
+    "1939",
+    "1942",
+    "1941",
+    "1940"
+   ],
+   "answer": 2,
+   "explanation": "The attack came on 7 December 1941 and brought the US into the war.",
+   "tags": [
+    "pacific"
+   ]
+  },
+  {
+   "id": "arc-194",
+   "subcategory": "africa-history",
+   "difficulty": 3,
+   "question": "About how many African countries became independent in 1960, often called the Year of Africa?",
+   "choices": [
+    "Twenty-five",
+    "Five",
+    "Seventeen",
+    "Eleven"
+   ],
+   "answer": 2,
+   "explanation": "Around seventeen African countries gained independence in 1960.",
+   "tags": [
+    "africa-history"
+   ]
+  },
+  {
+   "id": "arc-196",
+   "subcategory": "africa-history",
+   "difficulty": 3,
+   "question": "For about how long did the 1994 genocide against the Tutsi in Rwanda last?",
+   "choices": [
+    "About 10 days",
+    "About three years",
+    "About 100 days",
+    "About one year"
+   ],
+   "answer": 2,
+   "explanation": "The killings ran for roughly 100 days, from April to July 1994.",
+   "tags": [
+    "africa-history"
+   ]
+  },
+  {
+   "id": "arc-197",
+   "subcategory": "africa-history",
+   "difficulty": 3,
+   "question": "In which year did Britain's Parliament abolish the slave trade throughout its empire?",
+   "choices": [
+    "1865",
+    "1807",
+    "1776",
+    "1833"
+   ],
+   "answer": 1,
+   "explanation": "The Slave Trade Act of 1807 ended the trade, but not slavery itself.",
+   "tags": [
+    "africa-history"
+   ]
+  },
+  {
+   "id": "arc-198",
+   "subcategory": "africa-history",
+   "difficulty": 3,
+   "question": "For about how many years was Ethiopia occupied by Fascist Italy, from 1936?",
+   "choices": [
+    "About one year",
+    "About ten years",
+    "About twenty years",
+    "About five years"
+   ],
+   "answer": 3,
+   "explanation": "Italy occupied Ethiopia from 1936 until British and Ethiopian forces freed it in 1941.",
+   "tags": [
+    "africa-history"
+   ]
+  },
+  {
+   "id": "arc-199",
+   "subcategory": "africa-history",
+   "difficulty": 3,
+   "question": "In which year did the Suez Crisis occur, after Egypt nationalised the canal?",
+   "choices": [
+    "1948",
+    "1956",
+    "1952",
+    "1967"
+   ],
+   "answer": 1,
+   "explanation": "Nasser nationalised the Suez Canal Company in July 1956.",
+   "tags": [
+    "africa-history"
+   ]
+  },
+  {
+   "id": "arc-200",
+   "subcategory": "africa-history",
+   "difficulty": 3,
+   "question": "In which year did the Second Boer War end?",
+   "choices": [
+    "1899",
+    "1902",
+    "1910",
+    "1914"
+   ],
+   "answer": 1,
+   "explanation": "The war ended with the Peace of Vereeniging in 1902.",
+   "tags": [
+    "africa-history"
+   ]
+  },
+  {
+   "id": "arc-209",
+   "subcategory": "americas-history",
+   "difficulty": 3,
+   "question": "In which year did the United States buy the Louisiana Territory from France?",
+   "choices": [
+    "1789",
+    "1848",
+    "1803",
+    "1776"
+   ],
+   "answer": 2,
+   "explanation": "The Louisiana Purchase doubled the size of the United States in 1803.",
+   "tags": [
+    "americas-history"
+   ]
+  },
+  {
+   "id": "arc-210",
+   "subcategory": "americas-history",
+   "difficulty": 3,
+   "question": "How many years did the American Civil War last, from 1861 to 1865?",
+   "choices": [
+    "Four years",
+    "Ten years",
+    "Two years",
+    "Seven years"
+   ],
+   "answer": 0,
+   "explanation": "The war lasted from 1861 to 1865.",
+   "tags": [
+    "americas-history"
+   ]
+  },
+  {
+   "id": "arc-211",
+   "subcategory": "americas-history",
+   "difficulty": 3,
+   "question": "In which year did Brazil declare independence from Portugal?",
+   "choices": [
+    "1822",
+    "1789",
+    "1889",
+    "1808"
+   ],
+   "answer": 0,
+   "explanation": "Brazil declared independence on 7 September 1822.",
+   "tags": [
+    "americas-history"
+   ]
+  },
+  {
+   "id": "arc-212",
+   "subcategory": "americas-history",
+   "difficulty": 3,
+   "question": "In which year did the Panama Canal open to ships?",
+   "choices": [
+    "1904",
+    "1869",
+    "1925",
+    "1914"
+   ],
+   "answer": 3,
+   "explanation": "The Panama Canal opened in August 1914.",
+   "tags": [
+    "americas-history"
+   ]
+  },
+  {
+   "id": "arc-213",
+   "subcategory": "americas-history",
+   "difficulty": 3,
+   "question": "In which year did the Mexican Revolution begin?",
+   "choices": [
+    "1929",
+    "1821",
+    "1846",
+    "1910"
+   ],
+   "answer": 3,
+   "explanation": "The revolution began in November 1910.",
+   "tags": [
+    "americas-history"
+   ]
+  },
+  {
+   "id": "arc-214",
+   "subcategory": "americas-history",
+   "difficulty": 3,
+   "question": "In which year did Fidel Castro's revolution take power in Cuba?",
+   "choices": [
+    "1959",
+    "1962",
+    "1953",
+    "1970"
+   ],
+   "answer": 0,
+   "explanation": "Castro's forces entered Havana in January 1959.",
+   "tags": [
+    "americas-history"
+   ]
+  },
+  {
+   "id": "arc-215",
+   "subcategory": "americas-history",
+   "difficulty": 3,
+   "question": "In which year did the Treaty of Guadalupe Hidalgo end the Mexican-American War?",
+   "choices": [
+    "1848",
+    "1836",
+    "1861",
+    "1846"
+   ],
+   "answer": 0,
+   "explanation": "The treaty was signed in February 1848.",
+   "tags": [
+    "americas-history"
+   ]
+  },
+  {
+   "id": "arc-216",
+   "subcategory": "americas-history",
+   "difficulty": 3,
+   "question": "In which year did Canadian Confederation create the Dominion of Canada?",
+   "choices": [
+    "1776",
+    "1867",
+    "1931",
+    "1812"
+   ],
+   "answer": 1,
+   "explanation": "Canada was formed on 1 July 1867.",
+   "tags": [
+    "americas-history"
    ]
   },
   {
@@ -674,6 +2459,907 @@
    "misconception": "Many people think Cleopatra lived about when the Great Pyramid was built."
   },
   {
+   "id": "arc-137",
+   "subcategory": "asia-empires",
+   "difficulty": 3,
+   "question": "Which people founded the Qing dynasty, China's last imperial dynasty?",
+   "choices": [
+    "The Mongols",
+    "The Han",
+    "The Tibetans",
+    "The Manchus"
+   ],
+   "answer": 3,
+   "explanation": "Manchu leaders from the north-east took Beijing in 1644.",
+   "tags": [
+    "asia-empires"
+   ]
+  },
+  {
+   "id": "arc-139",
+   "subcategory": "asia-empires",
+   "difficulty": 3,
+   "question": "Which Ottoman reform era, starting in 1839, aimed to modernise the state?",
+   "choices": [
+    "The Tulip Era",
+    "The Young Turk Revolution",
+    "The Hamidian Era",
+    "The Tanzimat"
+   ],
+   "answer": 3,
+   "explanation": "The Tanzimat reorganised law, taxes and the army along European lines.",
+   "tags": [
+    "asia-empires"
+   ]
+  },
+  {
+   "id": "arc-140",
+   "subcategory": "asia-empires",
+   "difficulty": 3,
+   "question": "Which dynasty made Shia Islam the state religion of Persia from 1501?",
+   "choices": [
+    "The Abbasids",
+    "The Achaemenids",
+    "The Qajars",
+    "The Safavids"
+   ],
+   "answer": 3,
+   "explanation": "Shah Ismail I founded the Safavid state and imposed Twelver Shia Islam.",
+   "tags": [
+    "asia-empires"
+   ]
+  },
+  {
+   "id": "arc-141",
+   "subcategory": "asia-empires",
+   "difficulty": 3,
+   "question": "Which Mughal emperor built the Taj Mahal as a tomb for his wife Mumtaz Mahal?",
+   "choices": [
+    "Aurangzeb",
+    "Akbar",
+    "Shah Jahan",
+    "Babur"
+   ],
+   "answer": 2,
+   "explanation": "Shah Jahan ordered it after she died in 1631.",
+   "tags": [
+    "asia-empires"
+   ]
+  },
+  {
+   "id": "arc-142",
+   "subcategory": "asia-empires",
+   "difficulty": 3,
+   "question": "Which Russian tsar sold Alaska to the United States in 1867?",
+   "choices": [
+    "Peter the Great",
+    "Alexander II",
+    "Nicholas I",
+    "Nicholas II"
+   ],
+   "answer": 1,
+   "explanation": "Russia sold the remote territory because it was costly to defend and hard to reach.",
+   "tags": [
+    "asia-empires"
+   ]
+  },
+  {
+   "id": "arc-143",
+   "subcategory": "asia-empires",
+   "difficulty": 3,
+   "question": "In which year did the Russo-Japanese War end?",
+   "choices": [
+    "1904",
+    "1895",
+    "1910",
+    "1905"
+   ],
+   "answer": 3,
+   "explanation": "The Treaty of Portsmouth, signed in 1905 with US mediation, ended the war.",
+   "tags": [
+    "asia-empires"
+   ]
+  },
+  {
+   "id": "arc-201",
+   "subcategory": "asia-history",
+   "difficulty": 3,
+   "question": "Which treaty ended the First Opium War in 1842 and ceded Hong Kong Island to Britain?",
+   "choices": [
+    "The Treaty of Versailles",
+    "The Treaty of Tordesillas",
+    "The Treaty of Shimonoseki",
+    "The Treaty of Nanking"
+   ],
+   "answer": 3,
+   "explanation": "The Treaty of Nanking opened Chinese ports and ceded Hong Kong Island.",
+   "tags": [
+    "asia-history"
+   ]
+  },
+  {
+   "id": "arc-203",
+   "subcategory": "asia-history",
+   "difficulty": 3,
+   "question": "In which year did the Indian Rebellion against the East India Company break out?",
+   "choices": [
+    "1885",
+    "1857",
+    "1757",
+    "1805"
+   ],
+   "answer": 1,
+   "explanation": "The rebellion of 1857 began with a mutiny of Indian soldiers.",
+   "tags": [
+    "asia-history"
+   ]
+  },
+  {
+   "id": "arc-204",
+   "subcategory": "asia-history",
+   "difficulty": 3,
+   "question": "About how long did the Tokugawa shogunate rule Japan, from 1603 to 1868?",
+   "choices": [
+    "About 100 years",
+    "About 800 years",
+    "About 265 years",
+    "About 500 years"
+   ],
+   "answer": 2,
+   "explanation": "1868 minus 1603 gives about 265 years of Tokugawa rule.",
+   "tags": [
+    "asia-history"
+   ]
+  },
+  {
+   "id": "arc-205",
+   "subcategory": "asia-history",
+   "difficulty": 3,
+   "question": "On which date in August 1945 was the atomic bomb dropped on Hiroshima?",
+   "choices": [
+    "9 August",
+    "2 August",
+    "6 August",
+    "15 August"
+   ],
+   "answer": 2,
+   "explanation": "Hiroshima was bombed on 6 August 1945.",
+   "tags": [
+    "asia-history"
+   ]
+  },
+  {
+   "id": "arc-206",
+   "subcategory": "asia-history",
+   "difficulty": 3,
+   "question": "In which year did Kublai Khan proclaim the Yuan dynasty in China?",
+   "choices": [
+    "1453",
+    "1368",
+    "1271",
+    "1206"
+   ],
+   "answer": 2,
+   "explanation": "Kublai Khan declared the Yuan dynasty in 1271.",
+   "tags": [
+    "asia-history"
+   ]
+  },
+  {
+   "id": "arc-207",
+   "subcategory": "asia-history",
+   "difficulty": 3,
+   "question": "In which year did Saigon fall, ending the Vietnam War?",
+   "choices": [
+    "1973",
+    "1980",
+    "1975",
+    "1968"
+   ],
+   "answer": 2,
+   "explanation": "Saigon fell on 30 April 1975.",
+   "tags": [
+    "asia-history"
+   ]
+  },
+  {
+   "id": "arc-208",
+   "subcategory": "asia-history",
+   "difficulty": 3,
+   "question": "In which year did the armistice halt the fighting in the Korean War?",
+   "choices": [
+    "1950",
+    "1945",
+    "1960",
+    "1953"
+   ],
+   "answer": 3,
+   "explanation": "The armistice was signed on 27 July 1953.",
+   "tags": [
+    "asia-history"
+   ]
+  },
+  {
+   "id": "arc-233",
+   "subcategory": "chronology",
+   "difficulty": 3,
+   "question": "How many years separate the fall of Constantinople (1453) from Columbus's first voyage (1492)?",
+   "choices": [
+    "39 years",
+    "139 years",
+    "79 years",
+    "9 years"
+   ],
+   "answer": 0,
+   "explanation": "1492 minus 1453 is 39.",
+   "tags": [
+    "chronology"
+   ]
+  },
+  {
+   "id": "arc-234",
+   "subcategory": "chronology",
+   "difficulty": 3,
+   "question": "How many years separate the French Revolution (1789) from the fall of the Berlin Wall (1989)?",
+   "choices": [
+    "250 years",
+    "100 years",
+    "150 years",
+    "200 years"
+   ],
+   "answer": 3,
+   "explanation": "1989 minus 1789 is exactly 200.",
+   "tags": [
+    "chronology"
+   ]
+  },
+  {
+   "id": "arc-235",
+   "subcategory": "chronology",
+   "difficulty": 3,
+   "question": "How many years separate the traditional fall of Western Rome (476) from Charlemagne's coronation (800)?",
+   "choices": [
+    "324 years",
+    "224 years",
+    "424 years",
+    "124 years"
+   ],
+   "answer": 0,
+   "explanation": "800 minus 476 is 324.",
+   "tags": [
+    "chronology"
+   ]
+  },
+  {
+   "id": "arc-236",
+   "subcategory": "chronology",
+   "difficulty": 3,
+   "question": "About how many years passed between the end of World War I (1918) and the start of World War II (1939)?",
+   "choices": [
+    "About 11 years",
+    "About 5 years",
+    "About 21 years",
+    "About 31 years"
+   ],
+   "answer": 2,
+   "explanation": "Roughly 21 years separated the two wars.",
+   "tags": [
+    "chronology"
+   ]
+  },
+  {
+   "id": "arc-237",
+   "subcategory": "chronology",
+   "difficulty": 3,
+   "question": "How many years separate Gagarin's flight (1961) from the Apollo 11 landing (1969)?",
+   "choices": [
+    "20 years",
+    "8 years",
+    "12 years",
+    "4 years"
+   ],
+   "answer": 1,
+   "explanation": "1969 minus 1961 is 8.",
+   "tags": [
+    "chronology"
+   ]
+  },
+  {
+   "id": "arc-238",
+   "subcategory": "chronology",
+   "difficulty": 3,
+   "question": "How many years separate the end of World War II (1945) from the dissolution of the Soviet Union (1991)?",
+   "choices": [
+    "66 years",
+    "26 years",
+    "46 years",
+    "86 years"
+   ],
+   "answer": 2,
+   "explanation": "1991 minus 1945 is 46.",
+   "tags": [
+    "chronology"
+   ]
+  },
+  {
+   "id": "arc-239",
+   "subcategory": "chronology",
+   "difficulty": 3,
+   "question": "Traditionally, how many years separate the first Olympic Games (776 BC) from the founding of Rome (753 BC)?",
+   "choices": [
+    "23 years",
+    "3 years",
+    "223 years",
+    "123 years"
+   ],
+   "answer": 0,
+   "explanation": "776 minus 753 is 23.",
+   "tags": [
+    "chronology"
+   ]
+  },
+  {
+   "id": "arc-240",
+   "subcategory": "chronology",
+   "difficulty": 3,
+   "question": "How many years separate the Titanic's sinking (1912) from the Moon landing (1969)?",
+   "choices": [
+    "37 years",
+    "77 years",
+    "57 years",
+    "97 years"
+   ],
+   "answer": 2,
+   "explanation": "1969 minus 1912 is 57.",
+   "tags": [
+    "chronology"
+   ]
+  },
+  {
+   "id": "arc-185",
+   "subcategory": "cold-war-crises",
+   "difficulty": 3,
+   "question": "On which date did construction of the Berlin Wall begin?",
+   "choices": [
+    "1 May 1949",
+    "17 June 1953",
+    "13 August 1961",
+    "9 November 1989"
+   ],
+   "answer": 2,
+   "explanation": "Barbed wire went up overnight, and a concrete wall followed.",
+   "tags": [
+    "berlin-wall"
+   ]
+  },
+  {
+   "id": "arc-186",
+   "subcategory": "cold-war-crises",
+   "difficulty": 3,
+   "question": "About how many days did the Cuban Missile Crisis of October 1962 last?",
+   "choices": [
+    "Thirty",
+    "Three",
+    "Seven",
+    "Thirteen"
+   ],
+   "answer": 3,
+   "explanation": "It ran from 16 to 28 October 1962.",
+   "tags": [
+    "cuba-1962"
+   ]
+  },
+  {
+   "id": "arc-187",
+   "subcategory": "cold-war-crises",
+   "difficulty": 3,
+   "question": "In which year did Saigon fall to North Vietnamese forces?",
+   "choices": [
+    "1975",
+    "1973",
+    "1968",
+    "1979"
+   ],
+   "answer": 0,
+   "explanation": "Saigon fell on 30 April 1975 and was later renamed Ho Chi Minh City.",
+   "tags": [
+    "vietnam"
+   ]
+  },
+  {
+   "id": "arc-189",
+   "subcategory": "cold-war-crises",
+   "difficulty": 3,
+   "question": "Who was the first American to orbit the Earth, in 1962?",
+   "choices": [
+    "John Glenn",
+    "Neil Armstrong",
+    "Alan Shepard",
+    "Buzz Aldrin"
+   ],
+   "answer": 0,
+   "explanation": "Glenn orbited three times in February 1962, after Shepard's short 1961 flight.",
+   "tags": [
+    "space-race"
+   ]
+  },
+  {
+   "id": "arc-190",
+   "subcategory": "cold-war-crises",
+   "difficulty": 3,
+   "question": "In which year were the Helsinki Accords signed?",
+   "choices": [
+    "1972",
+    "1969",
+    "1975",
+    "1979"
+   ],
+   "answer": 2,
+   "explanation": "They were signed in August 1975 by 35 states.",
+   "tags": [
+    "detente"
+   ]
+  },
+  {
+   "id": "arc-192",
+   "subcategory": "cold-war-crises",
+   "difficulty": 3,
+   "question": "How many union republics did the Soviet Union have when it dissolved?",
+   "choices": [
+    "9",
+    "15",
+    "12",
+    "20"
+   ],
+   "answer": 1,
+   "explanation": "Russia, Ukraine, Kazakhstan and twelve others became independent states.",
+   "tags": [
+    "ussr-end"
+   ]
+  },
+  {
+   "id": "arc-169",
+   "subcategory": "cold-war-origins",
+   "difficulty": 3,
+   "question": "Which conference of July and August 1945, held near Berlin, followed Yalta?",
+   "choices": [
+    "Tehran",
+    "Geneva",
+    "Potsdam",
+    "Versailles"
+   ],
+   "answer": 2,
+   "explanation": "Truman, Stalin and Churchill, later Attlee, met at Potsdam.",
+   "tags": [
+    "yalta"
+   ]
+  },
+  {
+   "id": "arc-170",
+   "subcategory": "cold-war-origins",
+   "difficulty": 3,
+   "question": "Who warned in a 1946 speech at Fulton, Missouri, that an 'iron curtain' had descended across Europe?",
+   "choices": [
+    "Clement Attlee",
+    "Joseph Stalin",
+    "Harry Truman",
+    "Winston Churchill"
+   ],
+   "answer": 3,
+   "explanation": "Churchill spoke of a curtain from the Baltic to the Adriatic.",
+   "tags": [
+    "iron-curtain"
+   ]
+  },
+  {
+   "id": "arc-171",
+   "subcategory": "cold-war-origins",
+   "difficulty": 3,
+   "question": "About how much aid did the Marshall Plan give to Europe between 1948 and 1951?",
+   "choices": [
+    "About 1 billion dollars",
+    "About 13 billion dollars",
+    "About 50 billion dollars",
+    "About 100 million dollars"
+   ],
+   "answer": 1,
+   "explanation": "The US sent roughly 13 billion dollars to rebuild western Europe.",
+   "tags": [
+    "marshall"
+   ]
+  },
+  {
+   "id": "arc-172",
+   "subcategory": "cold-war-origins",
+   "difficulty": 3,
+   "question": "About how long did the Soviet blockade of West Berlin last in 1948 and 1949?",
+   "choices": [
+    "About three months",
+    "About three years",
+    "About one week",
+    "About eleven months"
+   ],
+   "answer": 3,
+   "explanation": "It began in June 1948 and ended in May 1949.",
+   "tags": [
+    "berlin-blockade"
+   ]
+  },
+  {
+   "id": "arc-173",
+   "subcategory": "cold-war-origins",
+   "difficulty": 3,
+   "question": "How many countries were founding members of NATO in 1949?",
+   "choices": [
+    "Six",
+    "Sixteen",
+    "Thirty",
+    "Twelve"
+   ],
+   "answer": 3,
+   "explanation": "The founders included the US, Canada, Britain, France and eight other countries.",
+   "tags": [
+    "nato"
+   ]
+  },
+  {
+   "id": "arc-174",
+   "subcategory": "cold-war-origins",
+   "difficulty": 3,
+   "question": "In which year was the armistice that ended the fighting in Korea signed?",
+   "choices": [
+    "1950",
+    "1955",
+    "1951",
+    "1953"
+   ],
+   "answer": 3,
+   "explanation": "The armistice was signed in July 1953, but no peace treaty followed.",
+   "tags": [
+    "korea"
+   ]
+  },
+  {
+   "id": "arc-175",
+   "subcategory": "cold-war-origins",
+   "difficulty": 3,
+   "question": "In which year did the Soviet Union test its first atomic bomb?",
+   "choices": [
+    "1957",
+    "1949",
+    "1953",
+    "1945"
+   ],
+   "answer": 1,
+   "explanation": "The Soviet test in August 1949 ended the US nuclear monopoly.",
+   "tags": [
+    "arms-race"
+   ]
+  },
+  {
+   "id": "arc-176",
+   "subcategory": "cold-war-origins",
+   "difficulty": 3,
+   "question": "In which year did Mao Zedong proclaim the People's Republic of China?",
+   "choices": [
+    "1947",
+    "1949",
+    "1953",
+    "1945"
+   ],
+   "answer": 1,
+   "explanation": "Mao proclaimed it in Beijing on 1 October 1949.",
+   "tags": [
+    "china-1949"
+   ]
+  },
+  {
+   "id": "arc-129",
+   "subcategory": "colonial",
+   "difficulty": 3,
+   "question": "By 1914, about what share of Africa was under European control?",
+   "choices": [
+    "About 30 percent",
+    "About 90 percent",
+    "About 50 percent",
+    "About 10 percent"
+   ],
+   "answer": 1,
+   "explanation": "Only Ethiopia and Liberia remained independent states in 1914.",
+   "tags": [
+    "colonial"
+   ]
+  },
+  {
+   "id": "arc-130",
+   "subcategory": "colonial",
+   "difficulty": 3,
+   "question": "In which year did Britain pass the Act banning the slave trade across its empire?",
+   "choices": [
+    "1807",
+    "1833",
+    "1792",
+    "1865"
+   ],
+   "answer": 0,
+   "explanation": "The Slave Trade Act of 1807 made the trade illegal, while slavery itself ended later.",
+   "tags": [
+    "colonial"
+   ]
+  },
+  {
+   "id": "arc-131",
+   "subcategory": "colonial",
+   "difficulty": 3,
+   "question": "Which 1842 treaty ended the First Opium War and ceded Hong Kong Island to Britain?",
+   "choices": [
+    "The Treaty of Shimonoseki",
+    "The Treaty of Versailles",
+    "The Treaty of Tientsin",
+    "The Treaty of Nanking"
+   ],
+   "answer": 3,
+   "explanation": "China also opened five ports to British trade under the treaty.",
+   "tags": [
+    "colonial"
+   ]
+  },
+  {
+   "id": "arc-132",
+   "subcategory": "colonial",
+   "difficulty": 3,
+   "question": "In which year did the British Crown take over direct rule of India from the East India Company?",
+   "choices": [
+    "1848",
+    "1858",
+    "1877",
+    "1867"
+   ],
+   "answer": 1,
+   "explanation": "The Government of India Act of 1858 followed the great uprising of 1857.",
+   "tags": [
+    "colonial"
+   ]
+  },
+  {
+   "id": "arc-133",
+   "subcategory": "colonial",
+   "difficulty": 3,
+   "question": "In which year did the First Fleet arrive in Australia to found a British colony?",
+   "choices": [
+    "1801",
+    "1815",
+    "1770",
+    "1788"
+   ],
+   "answer": 3,
+   "explanation": "The First Fleet reached Botany Bay in January 1788 and founded the colony of New South Wales.",
+   "tags": [
+    "colonial"
+   ]
+  },
+  {
+   "id": "arc-134",
+   "subcategory": "colonial",
+   "difficulty": 3,
+   "question": "Which three present-day countries made up French Indochina?",
+   "choices": [
+    "Vietnam, Thailand and Myanmar",
+    "Laos, Thailand and Cambodia",
+    "Vietnam, Malaysia and Laos",
+    "Vietnam, Laos and Cambodia"
+   ],
+   "answer": 3,
+   "explanation": "France built this union in the late 1800s and left it in 1954.",
+   "tags": [
+    "colonial"
+   ]
+  },
+  {
+   "id": "arc-135",
+   "subcategory": "colonial",
+   "difficulty": 3,
+   "question": "Which company founded in 1602, one of the first to sell shares to the public, ran much of the Dutch empire in Asia?",
+   "choices": [
+    "The English East India Company",
+    "The Hudson's Bay Company",
+    "The Royal African Company",
+    "The Dutch East India Company"
+   ],
+   "answer": 3,
+   "explanation": "The VOC was founded two years after its English rival.",
+   "tags": [
+    "colonial"
+   ]
+  },
+  {
+   "id": "arc-136",
+   "subcategory": "colonial",
+   "difficulty": 3,
+   "question": "In which year did Algeria gain independence from France?",
+   "choices": [
+    "1956",
+    "1958",
+    "1962",
+    "1960"
+   ],
+   "answer": 2,
+   "explanation": "Independence was proclaimed on 5 July 1962, after the Evian Accords.",
+   "tags": [
+    "colonial"
+   ]
+  },
+  {
+   "id": "arc-177",
+   "subcategory": "decolonisation",
+   "difficulty": 3,
+   "question": "On which date did India become independent from Britain?",
+   "choices": [
+    "26 January 1950",
+    "14 August 1947",
+    "15 August 1947",
+    "15 August 1948"
+   ],
+   "answer": 2,
+   "explanation": "Pakistan became independent a day earlier, on 14 August 1947.",
+   "tags": [
+    "india"
+   ]
+  },
+  {
+   "id": "arc-178",
+   "subcategory": "decolonisation",
+   "difficulty": 3,
+   "question": "In which year did the Netherlands formally recognise Indonesian sovereignty?",
+   "choices": [
+    "1951",
+    "1945",
+    "1949",
+    "1957"
+   ],
+   "answer": 2,
+   "explanation": "Independence was proclaimed in 1945, but recognition came after a war in 1949.",
+   "tags": [
+    "indonesia"
+   ]
+  },
+  {
+   "id": "arc-179",
+   "subcategory": "decolonisation",
+   "difficulty": 3,
+   "question": "In which year did the Algerian War of Independence begin?",
+   "choices": [
+    "1962",
+    "1958",
+    "1954",
+    "1945"
+   ],
+   "answer": 2,
+   "explanation": "The FLN launched its uprising on 1 November 1954.",
+   "tags": [
+    "algeria"
+   ]
+  },
+  {
+   "id": "arc-180",
+   "subcategory": "decolonisation",
+   "difficulty": 3,
+   "question": "In which year did Ghana gain independence from Britain?",
+   "choices": [
+    "1951",
+    "1957",
+    "1963",
+    "1960"
+   ],
+   "answer": 1,
+   "explanation": "Ghana became independent on 6 March 1957.",
+   "tags": [
+    "ghana"
+   ]
+  },
+  {
+   "id": "arc-182",
+   "subcategory": "decolonisation",
+   "difficulty": 3,
+   "question": "In which year did Nasser nationalise the Suez Canal?",
+   "choices": [
+    "1948",
+    "1967",
+    "1956",
+    "1952"
+   ],
+   "answer": 2,
+   "explanation": "Nasser seized the canal company in July 1956.",
+   "tags": [
+    "suez"
+   ]
+  },
+  {
+   "id": "arc-183",
+   "subcategory": "decolonisation",
+   "difficulty": 3,
+   "question": "In which year did France lose the Battle of Dien Bien Phu?",
+   "choices": [
+    "1946",
+    "1968",
+    "1960",
+    "1954"
+   ],
+   "answer": 3,
+   "explanation": "The defeat in May 1954 ended French rule in Indochina.",
+   "tags": [
+    "dien-bien-phu"
+   ]
+  },
+  {
+   "id": "arc-184",
+   "subcategory": "decolonisation",
+   "difficulty": 3,
+   "question": "For about how many years was Nelson Mandela imprisoned?",
+   "choices": [
+    "27",
+    "18",
+    "35",
+    "10"
+   ],
+   "answer": 0,
+   "explanation": "He was jailed in 1962 and freed in 1990.",
+   "tags": [
+    "mandela"
+   ]
+  },
+  {
+   "id": "arc-051",
+   "subcategory": "early-medieval",
+   "difficulty": 3,
+   "question": "In which year was Hagia Sophia in Constantinople completed under Emperor Justinian?",
+   "choices": [
+    "AD 610",
+    "AD 476",
+    "AD 537",
+    "AD 395"
+   ],
+   "answer": 2,
+   "explanation": "Built in under six years, Hagia Sophia was dedicated on 27 December 537.",
+   "tags": [
+    "early-medieval"
+   ]
+  },
+  {
+   "id": "arc-055",
+   "subcategory": "early-medieval",
+   "difficulty": 3,
+   "question": "In which year did the Treaty of Verdun divide the Carolingian Empire among Charlemagne's grandsons?",
+   "choices": [
+    "AD 800",
+    "AD 911",
+    "AD 962",
+    "AD 843"
+   ],
+   "answer": 3,
+   "explanation": "The 843 treaty split the empire into West, Middle and East Francia.",
+   "tags": [
+    "early-medieval"
+   ]
+  },
+  {
+   "id": "arc-056",
+   "subcategory": "early-medieval",
+   "difficulty": 3,
+   "question": "Which monk of Jarrow wrote the Ecclesiastical History of the English People, completed around 731?",
+   "choices": [
+    "Bede",
+    "Alcuin",
+    "Gregory",
+    "Augustine"
+   ],
+   "answer": 0,
+   "explanation": "Bede is often called the father of English history.",
+   "tags": [
+    "early-medieval"
+   ]
+  },
+  {
    "id": "his-024",
    "subcategory": "early-modern",
    "difficulty": 3,
@@ -716,6 +3402,465 @@
    "explanation": "Mainz on the Rhine was his home town and workplace.",
    "tags": [
     "gutenberg"
+   ]
+  },
+  {
+   "id": "arc-100",
+   "subcategory": "enlightenment",
+   "difficulty": 3,
+   "question": "Which thinker's 1748 book The Spirit of the Laws argued for separating legislative, executive and judicial power?",
+   "choices": [
+    "Voltaire",
+    "Montesquieu",
+    "John Locke",
+    "Thomas Hobbes"
+   ],
+   "answer": 1,
+   "explanation": "Montesquieu argued that dividing power prevents any one person or group from becoming a tyrant.",
+   "tags": [
+    "enlightenment"
+   ]
+  },
+  {
+   "id": "arc-102",
+   "subcategory": "enlightenment",
+   "difficulty": 3,
+   "question": "In which year did Adam Smith publish The Wealth of Nations?",
+   "choices": [
+    "1776",
+    "1789",
+    "1759",
+    "1801"
+   ],
+   "answer": 0,
+   "explanation": "The Wealth of Nations appeared in 1776 and became a founding text of modern economics.",
+   "tags": [
+    "enlightenment"
+   ]
+  },
+  {
+   "id": "arc-103",
+   "subcategory": "enlightenment",
+   "difficulty": 3,
+   "question": "Which Prussian king, reigning from 1740 to 1786, corresponded with Voltaire and was called an enlightened despot?",
+   "choices": [
+    "Frederick William I",
+    "Frederick II",
+    "Wilhelm I",
+    "Frederick I"
+   ],
+   "answer": 1,
+   "explanation": "Frederick the Great reformed laws and tolerated faiths, yet ruled as an absolute monarch.",
+   "tags": [
+    "enlightenment"
+   ]
+  },
+  {
+   "id": "arc-104",
+   "subcategory": "enlightenment",
+   "difficulty": 3,
+   "question": "Which German philosopher answered 'What is Enlightenment?' in 1784 with the motto 'Dare to know'?",
+   "choices": [
+    "Friedrich Nietzsche",
+    "Immanuel Kant",
+    "G. W. F. Hegel",
+    "Gottfried Leibniz"
+   ],
+   "answer": 1,
+   "explanation": "Kant defined enlightenment as leaving behind self-imposed immaturity by thinking for yourself.",
+   "tags": [
+    "enlightenment"
+   ]
+  },
+  {
+   "id": "arc-081",
+   "subcategory": "exploration",
+   "difficulty": 3,
+   "question": "In which year did Bartolomeu Dias round the southern tip of Africa?",
+   "choices": [
+    "1471",
+    "1498",
+    "1492",
+    "1488"
+   ],
+   "answer": 3,
+   "explanation": "Dias reached the Cape of Good Hope area in 1488, ten years before Vasco da Gama reached India.",
+   "tags": [
+    "exploration"
+   ]
+  },
+  {
+   "id": "arc-084",
+   "subcategory": "exploration",
+   "difficulty": 3,
+   "question": "Which sequence of voyages is in the correct order?",
+   "choices": [
+    "Dias round Africa, Columbus to the Americas, Gama to India, Cabral to Brazil",
+    "Gama to India, Dias round Africa, Columbus to the Americas, Cabral to Brazil",
+    "Columbus to the Americas, Dias round Africa, Gama to India, Cabral to Brazil",
+    "Dias round Africa, Gama to India, Columbus to the Americas, Cabral to Brazil"
+   ],
+   "answer": 0,
+   "explanation": "The dates are 1488 (Dias), 1492 (Columbus), 1498 (Gama) and 1500 (Cabral).",
+   "tags": [
+    "exploration"
+   ]
+  },
+  {
+   "id": "arc-068",
+   "subcategory": "high-medieval",
+   "difficulty": 3,
+   "question": "In 1077 King Henry IV of Germany did penance at Canossa before which pope?",
+   "choices": [
+    "Urban II",
+    "Gregory VII",
+    "Innocent III",
+    "Leo IX"
+   ],
+   "answer": 1,
+   "explanation": "The Investiture Controversy was a dispute over who could appoint bishops.",
+   "tags": [
+    "high-medieval"
+   ]
+  },
+  {
+   "id": "arc-121",
+   "subcategory": "industrial",
+   "difficulty": 3,
+   "question": "Which invention by James Hargreaves let one worker spin several threads at once?",
+   "choices": [
+    "The water frame",
+    "The spinning jenny",
+    "The flying shuttle",
+    "The power loom"
+   ],
+   "answer": 1,
+   "explanation": "The spinning jenny, invented in the 1760s, multiplied what one spinner could produce.",
+   "tags": [
+    "industrial"
+   ]
+  },
+  {
+   "id": "arc-122",
+   "subcategory": "industrial",
+   "difficulty": 3,
+   "question": "Which railway, opened in 1825, is regarded as the first public line to use steam locomotives?",
+   "choices": [
+    "Paris to Saint-Germain",
+    "Baltimore and Ohio",
+    "Stockton and Darlington",
+    "Liverpool and Manchester"
+   ],
+   "answer": 2,
+   "explanation": "George Stephenson's Locomotion No. 1 hauled the first train on the Stockton and Darlington Railway.",
+   "tags": [
+    "industrial"
+   ]
+  },
+  {
+   "id": "arc-123",
+   "subcategory": "industrial",
+   "difficulty": 3,
+   "question": "The British Factory Act of 1833 banned children below which age from working in textile mills?",
+   "choices": [
+    "Six",
+    "Fourteen",
+    "Nine",
+    "Twelve"
+   ],
+   "answer": 2,
+   "explanation": "Children aged nine to thirteen were limited to nine hours a day, and inspectors were appointed to enforce the law.",
+   "tags": [
+    "industrial"
+   ]
+  },
+  {
+   "id": "arc-124",
+   "subcategory": "industrial",
+   "difficulty": 3,
+   "question": "In which London building was the Great Exhibition of 1851 held?",
+   "choices": [
+    "The Crystal Palace",
+    "The Royal Albert Hall",
+    "The British Museum",
+    "Westminster Hall"
+   ],
+   "answer": 0,
+   "explanation": "Joseph Paxton designed the Crystal Palace in Hyde Park to show off the world's industry.",
+   "tags": [
+    "industrial"
+   ]
+  },
+  {
+   "id": "arc-125",
+   "subcategory": "industrial",
+   "difficulty": 3,
+   "question": "What did Henry Bessemer's process of 1856 make cheap and plentiful?",
+   "choices": [
+    "Glass",
+    "Cement",
+    "Steel",
+    "Paper"
+   ],
+   "answer": 2,
+   "explanation": "Blowing air through molten iron burned off impurities, making steel affordable for rails, ships and bridges.",
+   "tags": [
+    "industrial"
+   ]
+  },
+  {
+   "id": "arc-127",
+   "subcategory": "industrial",
+   "difficulty": 3,
+   "question": "Which British city was nicknamed 'Cottonopolis' for its mills?",
+   "choices": [
+    "Manchester",
+    "Leeds",
+    "Liverpool",
+    "Birmingham"
+   ],
+   "answer": 0,
+   "explanation": "Manchester became the centre of cotton spinning and weaving in the 1800s.",
+   "tags": [
+    "industrial"
+   ]
+  },
+  {
+   "id": "arc-154",
+   "subcategory": "interwar",
+   "difficulty": 3,
+   "question": "In which year did German hyperinflation reach its peak?",
+   "choices": [
+    "1923",
+    "1926",
+    "1929",
+    "1919"
+   ],
+   "answer": 0,
+   "explanation": "In 1923 prices rose so fast that banknotes were worth almost nothing.",
+   "tags": [
+    "twenties"
+   ]
+  },
+  {
+   "id": "arc-156",
+   "subcategory": "interwar",
+   "difficulty": 3,
+   "question": "In which year did Mussolini come to power after the March on Rome?",
+   "choices": [
+    "1919",
+    "1922",
+    "1925",
+    "1933"
+   ],
+   "answer": 1,
+   "explanation": "The king asked him to form a government in October 1922.",
+   "tags": [
+    "mussolini"
+   ]
+  },
+  {
+   "id": "arc-158",
+   "subcategory": "interwar",
+   "difficulty": 3,
+   "question": "In which years was the Spanish Civil War fought?",
+   "choices": [
+    "1931 to 1934",
+    "1936 to 1939",
+    "1939 to 1945",
+    "1918 to 1921"
+   ],
+   "answer": 1,
+   "explanation": "The war began in July 1936 and ended with a Nationalist victory in 1939.",
+   "tags": [
+    "spain"
+   ]
+  },
+  {
+   "id": "arc-059",
+   "subcategory": "islamic-world",
+   "difficulty": 3,
+   "question": "In which year did Tariq ibn Ziyad cross into Iberia and begin the Muslim conquest of Visigothic Spain?",
+   "choices": [
+    "AD 622",
+    "AD 756",
+    "AD 711",
+    "AD 732"
+   ],
+   "answer": 2,
+   "explanation": "In 711 Tariq's army crossed from North Africa and defeated the Visigothic king Roderic.",
+   "tags": [
+    "islamic-world"
+   ]
+  },
+  {
+   "id": "arc-217",
+   "subcategory": "late-20th",
+   "difficulty": 3,
+   "question": "In which year was the Berlin Wall built?",
+   "choices": [
+    "1968",
+    "1961",
+    "1953",
+    "1949"
+   ],
+   "answer": 1,
+   "explanation": "East Germany began building the Wall in August 1961.",
+   "tags": [
+    "late-20th"
+   ]
+  },
+  {
+   "id": "arc-218",
+   "subcategory": "late-20th",
+   "difficulty": 3,
+   "question": "In which year did the Chernobyl nuclear disaster occur?",
+   "choices": [
+    "1996",
+    "1979",
+    "1986",
+    "1991"
+   ],
+   "answer": 2,
+   "explanation": "Reactor 4 exploded on 26 April 1986.",
+   "tags": [
+    "late-20th"
+   ]
+  },
+  {
+   "id": "arc-220",
+   "subcategory": "late-20th",
+   "difficulty": 3,
+   "question": "In which year did the Soviet Union invade Afghanistan?",
+   "choices": [
+    "1975",
+    "1979",
+    "1968",
+    "1985"
+   ],
+   "answer": 1,
+   "explanation": "Soviet troops entered Afghanistan in December 1979.",
+   "tags": [
+    "late-20th"
+   ]
+  },
+  {
+   "id": "arc-221",
+   "subcategory": "late-20th",
+   "difficulty": 3,
+   "question": "In which year did the Iranian Revolution overthrow the Shah?",
+   "choices": [
+    "1979",
+    "1968",
+    "1989",
+    "1953"
+   ],
+   "answer": 0,
+   "explanation": "The Shah left Iran in January 1979.",
+   "tags": [
+    "late-20th"
+   ]
+  },
+  {
+   "id": "arc-222",
+   "subcategory": "late-20th",
+   "difficulty": 3,
+   "question": "In which year did the Tiananmen Square protests take place?",
+   "choices": [
+    "1997",
+    "1989",
+    "1976",
+    "1979"
+   ],
+   "answer": 1,
+   "explanation": "The protests and their suppression took place in the spring of 1989.",
+   "tags": [
+    "late-20th"
+   ]
+  },
+  {
+   "id": "arc-223",
+   "subcategory": "late-20th",
+   "difficulty": 3,
+   "question": "In which year was the Falklands War fought?",
+   "choices": [
+    "1982",
+    "1991",
+    "1973",
+    "2003"
+   ],
+   "answer": 0,
+   "explanation": "Argentina invaded the Falkland Islands in April 1982.",
+   "tags": [
+    "late-20th"
+   ]
+  },
+  {
+   "id": "arc-224",
+   "subcategory": "late-20th",
+   "difficulty": 3,
+   "question": "On which date in 1990 was Germany formally reunified?",
+   "choices": [
+    "9 November",
+    "3 October",
+    "14 July",
+    "1 January"
+   ],
+   "answer": 1,
+   "explanation": "Germany celebrates reunification on 3 October.",
+   "tags": [
+    "late-20th"
+   ]
+  },
+  {
+   "id": "arc-041",
+   "subcategory": "late-antiquity",
+   "difficulty": 3,
+   "question": "Who was the last Western Roman emperor, deposed in 476?",
+   "choices": [
+    "Romulus Augustulus",
+    "Theodoric",
+    "Odoacer",
+    "Justinian"
+   ],
+   "answer": 0,
+   "explanation": "Odoacer deposed the boy emperor.",
+   "tags": [
+    "late-antiquity"
+   ]
+  },
+  {
+   "id": "arc-043",
+   "subcategory": "late-antiquity",
+   "difficulty": 3,
+   "question": "The Goths defeated Emperor Valens at Adrianople in",
+   "choices": [
+    "AD 410",
+    "AD 395",
+    "AD 378",
+    "AD 476"
+   ],
+   "answer": 2,
+   "explanation": "Adrianople was fought in 378.",
+   "tags": [
+    "late-antiquity"
+   ]
+  },
+  {
+   "id": "arc-047",
+   "subcategory": "late-antiquity",
+   "difficulty": 3,
+   "question": "The final Byzantine-Sasanian war ended in",
+   "choices": [
+    "AD 476",
+    "AD 628",
+    "AD 700",
+    "AD 622"
+   ],
+   "answer": 1,
+   "explanation": "It ended in 628.",
+   "tags": [
+    "late-antiquity"
    ]
   },
   {
@@ -797,6 +3942,482 @@
    ]
   },
   {
+   "id": "arc-114",
+   "subcategory": "napoleon",
+   "difficulty": 3,
+   "question": "In which year did Napoleon seize power in the coup of 18 Brumaire?",
+   "choices": [
+    "1789",
+    "1804",
+    "1799",
+    "1795"
+   ],
+   "answer": 2,
+   "explanation": "The coup of 18 Brumaire, on 9 November 1799, overthrew the Directory.",
+   "tags": [
+    "napoleon"
+   ]
+  },
+  {
+   "id": "arc-116",
+   "subcategory": "napoleon",
+   "difficulty": 3,
+   "question": "In which year was the Battle of Trafalgar fought?",
+   "choices": [
+    "1798",
+    "1805",
+    "1815",
+    "1812"
+   ],
+   "answer": 1,
+   "explanation": "The Battle of Trafalgar was fought on 21 October 1805 off the Spanish coast.",
+   "tags": [
+    "napoleon"
+   ]
+  },
+  {
+   "id": "arc-117",
+   "subcategory": "napoleon",
+   "difficulty": 3,
+   "question": "Which battle of December 1805, often called Napoleon's masterpiece, defeated Russia and Austria?",
+   "choices": [
+    "Borodino",
+    "Austerlitz",
+    "Jena",
+    "Wagram"
+   ],
+   "answer": 1,
+   "explanation": "Austerlitz is also known as the Battle of the Three Emperors.",
+   "tags": [
+    "napoleon"
+   ]
+  },
+  {
+   "id": "arc-118",
+   "subcategory": "napoleon",
+   "difficulty": 3,
+   "question": "What was the aim of Napoleon's Continental System, launched in 1806?",
+   "choices": [
+    "To cut off Britain's trade with Europe",
+    "To unify European currencies",
+    "To build a canal network",
+    "To ban the slave trade"
+   ],
+   "answer": 0,
+   "explanation": "It tried to ruin British commerce by closing the ports of the continent to British goods.",
+   "tags": [
+    "napoleon"
+   ]
+  },
+  {
+   "id": "arc-119",
+   "subcategory": "napoleon",
+   "difficulty": 3,
+   "question": "Napoleon's army that invaded Russia in 1812 numbered roughly how many men?",
+   "choices": [
+    "About 100,000",
+    "Over 400,000",
+    "About 1.5 million",
+    "About 50,000"
+   ],
+   "answer": 1,
+   "explanation": "The Grande Armée crossed the Niemen in June 1812. Estimates run from about 450,000 to over 600,000 men.",
+   "tags": [
+    "napoleon"
+   ]
+  },
+  {
+   "id": "arc-120",
+   "subcategory": "napoleon",
+   "difficulty": 3,
+   "question": "In which year did Napoleon die?",
+   "choices": [
+    "1832",
+    "1824",
+    "1821",
+    "1815"
+   ],
+   "answer": 2,
+   "explanation": "Napoleon died on 5 May 1821, in exile.",
+   "tags": [
+    "napoleon"
+   ]
+  },
+  {
+   "id": "arc-225",
+   "subcategory": "people-ideas",
+   "difficulty": 3,
+   "question": "In which year was The Communist Manifesto published?",
+   "choices": [
+    "1848",
+    "1917",
+    "1789",
+    "1867"
+   ],
+   "answer": 0,
+   "explanation": "Marx and Engels published it in 1848.",
+   "tags": [
+    "people-ideas"
+   ]
+  },
+  {
+   "id": "arc-227",
+   "subcategory": "people-ideas",
+   "difficulty": 3,
+   "question": "Which century is usually called the Age of Enlightenment?",
+   "choices": [
+    "The 16th century",
+    "The 20th century",
+    "The 18th century",
+    "The 14th century"
+   ],
+   "answer": 2,
+   "explanation": "The Enlightenment flourished in the 1700s.",
+   "tags": [
+    "people-ideas"
+   ]
+  },
+  {
+   "id": "arc-228",
+   "subcategory": "people-ideas",
+   "difficulty": 3,
+   "question": "In which year did Louis Pasteur first test his rabies vaccine on a person?",
+   "choices": [
+    "1885",
+    "1928",
+    "1796",
+    "1905"
+   ],
+   "answer": 0,
+   "explanation": "Pasteur treated a boy, Joseph Meister, in 1885.",
+   "tags": [
+    "people-ideas"
+   ]
+  },
+  {
+   "id": "arc-229",
+   "subcategory": "people-ideas",
+   "difficulty": 3,
+   "question": "In which year did New Zealand give women the vote in national elections, a world first for a self-governing country?",
+   "choices": [
+    "1848",
+    "1944",
+    "1893",
+    "1918"
+   ],
+   "answer": 2,
+   "explanation": "New Zealand's women won the vote in 1893.",
+   "tags": [
+    "people-ideas"
+   ]
+  },
+  {
+   "id": "arc-230",
+   "subcategory": "people-ideas",
+   "difficulty": 3,
+   "question": "In which year did Thomas Edison demonstrate a practical incandescent light bulb?",
+   "choices": [
+    "1920",
+    "1879",
+    "1901",
+    "1859"
+   ],
+   "answer": 1,
+   "explanation": "Edison's lamp worked in late 1879.",
+   "tags": [
+    "people-ideas"
+   ]
+  },
+  {
+   "id": "arc-231",
+   "subcategory": "people-ideas",
+   "difficulty": 3,
+   "question": "In which year was the Gregorian calendar introduced by Pope Gregory XIII?",
+   "choices": [
+    "1582",
+    "1752",
+    "1648",
+    "1492"
+   ],
+   "answer": 0,
+   "explanation": "The new calendar began in October 1582.",
+   "tags": [
+    "people-ideas"
+   ]
+  },
+  {
+   "id": "arc-232",
+   "subcategory": "people-ideas",
+   "difficulty": 3,
+   "question": "In which year were the first Nobel Prizes awarded?",
+   "choices": [
+    "1901",
+    "1925",
+    "1895",
+    "1914"
+   ],
+   "answer": 0,
+   "explanation": "The first prizes were awarded in 1901, five years after Nobel's death.",
+   "tags": [
+    "people-ideas"
+   ]
+  },
+  {
+   "id": "arc-092",
+   "subcategory": "reformation",
+   "difficulty": 3,
+   "question": "In which year was the Peace of Augsburg agreed?",
+   "choices": [
+    "1555",
+    "1618",
+    "1517",
+    "1648"
+   ],
+   "answer": 0,
+   "explanation": "The 1555 peace allowed Lutheran and Catholic rulers in the Holy Roman Empire to choose their state's religion.",
+   "tags": [
+    "reformation"
+   ]
+  },
+  {
+   "id": "arc-093",
+   "subcategory": "reformation",
+   "difficulty": 3,
+   "question": "In which year did Henry IV of France issue the Edict of Nantes?",
+   "choices": [
+    "1598",
+    "1648",
+    "1572",
+    "1685"
+   ],
+   "answer": 0,
+   "explanation": "The edict granted Huguenots limited rights of worship.",
+   "tags": [
+    "reformation"
+   ]
+  },
+  {
+   "id": "arc-095",
+   "subcategory": "reformation",
+   "difficulty": 3,
+   "question": "In which year did the Council of Trent end?",
+   "choices": [
+    "1598",
+    "1545",
+    "1563",
+    "1517"
+   ],
+   "answer": 2,
+   "explanation": "The council ran in three phases from 1545 to 1563.",
+   "tags": [
+    "reformation"
+   ]
+  },
+  {
+   "id": "arc-076",
+   "subcategory": "renaissance",
+   "difficulty": 3,
+   "question": "In which year was the dome of Florence Cathedral completed by Filippo Brunelleschi?",
+   "choices": [
+    "1436",
+    "1417",
+    "1492",
+    "1453"
+   ],
+   "answer": 0,
+   "explanation": "The dome was finished in 1436 and the cathedral was consecrated that year.",
+   "tags": [
+    "renaissance"
+   ]
+  },
+  {
+   "id": "arc-106",
+   "subcategory": "revolutions",
+   "difficulty": 3,
+   "question": "In which year did the Treaty of Paris recognise American independence?",
+   "choices": [
+    "1783",
+    "1781",
+    "1789",
+    "1776"
+   ],
+   "answer": 0,
+   "explanation": "Britain signed the Treaty of Paris on 3 September 1783, ending the American Revolutionary War.",
+   "tags": [
+    "revolutions"
+   ]
+  },
+  {
+   "id": "arc-107",
+   "subcategory": "revolutions",
+   "difficulty": 3,
+   "question": "In which month of 1789 was the Declaration of the Rights of Man and of the Citizen adopted?",
+   "choices": [
+    "August",
+    "May",
+    "July",
+    "October"
+   ],
+   "answer": 0,
+   "explanation": "The National Assembly adopted it on 26 August 1789.",
+   "tags": [
+    "revolutions"
+   ]
+  },
+  {
+   "id": "arc-108",
+   "subcategory": "revolutions",
+   "difficulty": 3,
+   "question": "Which Jacobin leader of the Committee of Public Safety was guillotined on 28 July 1794?",
+   "choices": [
+    "Jean-Paul Marat",
+    "Georges Danton",
+    "Maximilien Robespierre",
+    "Comte de Mirabeau"
+   ],
+   "answer": 2,
+   "explanation": "Robespierre fell in the coup of 9 Thermidor and went to the guillotine the next day.",
+   "tags": [
+    "revolutions"
+   ]
+  },
+  {
+   "id": "arc-109",
+   "subcategory": "revolutions",
+   "difficulty": 3,
+   "question": "Which Venezuelan-born leader helped liberate Venezuela, Colombia, Ecuador, Peru and Bolivia from Spanish rule?",
+   "choices": [
+    "Simón Bolívar",
+    "Miguel Hidalgo",
+    "José de San Martín",
+    "Bernardo O'Higgins"
+   ],
+   "answer": 0,
+   "explanation": "Bolívar led armies across the Andes in campaigns from the 1810s to the 1820s.",
+   "tags": [
+    "revolutions"
+   ]
+  },
+  {
+   "id": "arc-110",
+   "subcategory": "revolutions",
+   "difficulty": 3,
+   "question": "Which French king abdicated in the February Revolution of 1848?",
+   "choices": [
+    "Louis-Philippe",
+    "Charles X",
+    "Louis XVIII",
+    "Napoleon III"
+   ],
+   "answer": 0,
+   "explanation": "Louis-Philippe gave up the throne on 24 February 1848 and fled to England.",
+   "tags": [
+    "revolutions"
+   ]
+  },
+  {
+   "id": "arc-111",
+   "subcategory": "revolutions",
+   "difficulty": 3,
+   "question": "Which Dutch prince landed in England in 1688 and then reigned jointly with his wife Mary?",
+   "choices": [
+    "Frederick Henry",
+    "Eugene of Savoy",
+    "William of Orange",
+    "Maurice of Nassau"
+   ],
+   "answer": 2,
+   "explanation": "William III and Mary II became joint monarchs after James II fled.",
+   "tags": [
+    "revolutions"
+   ]
+  },
+  {
+   "id": "arc-112",
+   "subcategory": "revolutions",
+   "difficulty": 3,
+   "question": "In which year did the Paris Commune rule the capital?",
+   "choices": [
+    "1848",
+    "1830",
+    "1871",
+    "1789"
+   ],
+   "answer": 2,
+   "explanation": "The Paris Commune governed the city from March to May 1871.",
+   "tags": [
+    "revolutions"
+   ]
+  },
+  {
+   "id": "arc-033",
+   "subcategory": "rome-empire",
+   "difficulty": 3,
+   "question": "The battle of Actium was fought in",
+   "choices": [
+    "42 BC",
+    "31 BC",
+    "49 BC",
+    "27 BC"
+   ],
+   "answer": 1,
+   "explanation": "Octavian beat Antony and Cleopatra at Actium in 31 BC.",
+   "tags": [
+    "rome-empire"
+   ]
+  },
+  {
+   "id": "arc-034",
+   "subcategory": "rome-empire",
+   "difficulty": 3,
+   "question": "About how long did the Pax Romana last?",
+   "choices": [
+    "About 50 years",
+    "About 200 years",
+    "About 400 years",
+    "About 100 years"
+   ],
+   "answer": 1,
+   "explanation": "It is dated from 27 BC to AD 180.",
+   "tags": [
+    "rome-empire"
+   ]
+  },
+  {
+   "id": "arc-035",
+   "subcategory": "rome-empire",
+   "difficulty": 3,
+   "question": "Who was the first of the Five Good Emperors, ruling AD 96 to 98?",
+   "choices": [
+    "Trajan",
+    "Hadrian",
+    "Nerva",
+    "Antoninus Pius"
+   ],
+   "answer": 2,
+   "explanation": "Nerva began the sequence.",
+   "tags": [
+    "rome-empire"
+   ]
+  },
+  {
+   "id": "arc-039",
+   "subcategory": "rome-empire",
+   "difficulty": 3,
+   "question": "Rome reached its greatest territorial extent under Trajan in AD",
+   "choices": [
+    "180",
+    "14",
+    "211",
+    "117"
+   ],
+   "answer": 3,
+   "explanation": "Trajan died in AD 117 with the empire at its largest.",
+   "tags": [
+    "rome-empire"
+   ]
+  },
+  {
    "id": "his2-003",
    "subcategory": "world",
    "difficulty": 3,
@@ -831,6 +4452,142 @@
    ]
   },
   {
+   "id": "arc-147",
+   "subcategory": "ww1",
+   "difficulty": 3,
+   "question": "The Schlieffen Plan aimed to defeat which country first?",
+   "choices": [
+    "France",
+    "Belgium",
+    "Russia",
+    "Britain"
+   ],
+   "answer": 0,
+   "explanation": "Germany planned to knock out France quickly, then turn on Russia.",
+   "tags": [
+    "schlieffen"
+   ]
+  },
+  {
+   "id": "arc-149",
+   "subcategory": "ww1",
+   "difficulty": 3,
+   "question": "About how long did the Battle of Verdun last?",
+   "choices": [
+    "About three years",
+    "About ten days",
+    "About ten months",
+    "About three months"
+   ],
+   "answer": 2,
+   "explanation": "It lasted from February to December 1916.",
+   "tags": [
+    "verdun"
+   ]
+  },
+  {
+   "id": "arc-150",
+   "subcategory": "ww1",
+   "difficulty": 3,
+   "question": "About how many British casualties were there on the first day of the Somme, 1 July 1916?",
+   "choices": [
+    "About 15,000",
+    "About 57,000",
+    "About 5,000",
+    "About 150,000"
+   ],
+   "answer": 1,
+   "explanation": "Roughly 57,000 casualties, about 19,000 of them killed, made it the bloodiest day in British army history.",
+   "tags": [
+    "somme"
+   ]
+  },
+  {
+   "id": "arc-162",
+   "subcategory": "ww2",
+   "difficulty": 3,
+   "question": "In which month of 1940 did Germany launch its attack on France and the Low Countries?",
+   "choices": [
+    "May",
+    "March",
+    "June",
+    "September"
+   ],
+   "answer": 0,
+   "explanation": "The offensive began on 10 May 1940 and France fell within weeks.",
+   "tags": [
+    "france-1940"
+   ]
+  },
+  {
+   "id": "arc-164",
+   "subcategory": "ww2",
+   "difficulty": 3,
+   "question": "In which month did Germany launch Operation Barbarossa?",
+   "choices": [
+    "June",
+    "April",
+    "September",
+    "December"
+   ],
+   "answer": 0,
+   "explanation": "The invasion of the Soviet Union began on 22 June 1941.",
+   "tags": [
+    "barbarossa"
+   ]
+  },
+  {
+   "id": "arc-166",
+   "subcategory": "ww2",
+   "difficulty": 3,
+   "question": "The 1943 Battle of Kursk is often described as the largest what in history?",
+   "choices": [
+    "Tank battle",
+    "Naval battle",
+    "Air raid",
+    "Siege"
+   ],
+   "answer": 0,
+   "explanation": "Thousands of tanks clashed in the summer of 1943.",
+   "tags": [
+    "eastern-turn"
+   ]
+  },
+  {
+   "id": "arc-167",
+   "subcategory": "ww2",
+   "difficulty": 3,
+   "question": "On which date did the D-Day landings in Normandy take place?",
+   "choices": [
+    "8 June 1944",
+    "6 July 1944",
+    "6 June 1944",
+    "6 June 1943"
+   ],
+   "answer": 2,
+   "explanation": "Allied troops landed on 6 June 1944.",
+   "tags": [
+    "d-day"
+   ]
+  },
+  {
+   "id": "arc-168",
+   "subcategory": "ww2",
+   "difficulty": 3,
+   "question": "Roughly how many Jewish people were murdered in the Holocaust?",
+   "choices": [
+    "About three million",
+    "About twelve million",
+    "About six million",
+    "About one million"
+   ],
+   "answer": 2,
+   "explanation": "Nazi Germany and its collaborators murdered about six million Jews.",
+   "tags": [
+    "holocaust"
+   ]
+  },
+  {
    "id": "his-021",
    "subcategory": "ancient",
    "difficulty": 4,
@@ -843,6 +4600,74 @@
    ],
    "answer": 2,
    "explanation": "In 476 the last Western emperor, Romulus Augustulus, was deposed by Odoacer."
+  },
+  {
+   "id": "arc-138",
+   "subcategory": "asia-empires",
+   "difficulty": 4,
+   "question": "At least how many people are estimated to have died in the Taiping Rebellion of 1850 to 1864?",
+   "choices": [
+    "100,000",
+    "5 million",
+    "20 million",
+    "1 million"
+   ],
+   "answer": 2,
+   "explanation": "Estimates run from about 20 to 30 million deaths, making it one of the deadliest wars in history.",
+   "tags": [
+    "asia-empires"
+   ]
+  },
+  {
+   "id": "arc-144",
+   "subcategory": "asia-empires",
+   "difficulty": 4,
+   "question": "How much did the United States pay Spain for the Philippines under the 1898 Treaty of Paris?",
+   "choices": [
+    "$200 million",
+    "$20 million",
+    "$7.2 million",
+    "$2 million"
+   ],
+   "answer": 1,
+   "explanation": "The United States paid $20 million as part of the treaty.",
+   "tags": [
+    "asia-empires"
+   ]
+  },
+  {
+   "id": "arc-188",
+   "subcategory": "cold-war-crises",
+   "difficulty": 4,
+   "question": "Who was the Czechoslovak Communist leader behind the Prague Spring reforms?",
+   "choices": [
+    "Alexander Dubček",
+    "Klement Gottwald",
+    "Václav Havel",
+    "Gustáv Husák"
+   ],
+   "answer": 0,
+   "explanation": "Dubček promised 'socialism with a human face'.",
+   "tags": [
+    "prague-spring"
+   ]
+  },
+  {
+   "id": "arc-181",
+   "subcategory": "decolonisation",
+   "difficulty": 4,
+   "question": "About how many African countries gained independence in 1960?",
+   "choices": [
+    "8",
+    "17",
+    "5",
+    "30"
+   ],
+   "answer": 1,
+   "explanation": "The year became known as the Year of Africa.",
+   "tags": [
+    "africa-1960"
+   ]
   },
   {
    "id": "his2-015",
@@ -859,6 +4684,125 @@
    "explanation": "Akbar abolished the tax on non-Muslims and welcomed scholars of many faiths.",
    "tags": [
     "mughal"
+   ]
+  },
+  {
+   "id": "arc-083",
+   "subcategory": "exploration",
+   "difficulty": 4,
+   "question": "In which year did Spain and Portugal sign the Treaty of Tordesillas?",
+   "choices": [
+    "1500",
+    "1494",
+    "1479",
+    "1492"
+   ],
+   "answer": 1,
+   "explanation": "The treaty divided newly found lands outside Europe between the two crowns along a line west of the Cape Verde islands.",
+   "tags": [
+    "exploration"
+   ]
+  },
+  {
+   "id": "arc-086",
+   "subcategory": "exploration",
+   "difficulty": 4,
+   "question": "In which year did Vasco Nunez de Balboa sight the Pacific Ocean from the Americas?",
+   "choices": [
+    "1513",
+    "1500",
+    "1492",
+    "1521"
+   ],
+   "answer": 0,
+   "explanation": "Balboa crossed the Isthmus of Panama and saw the Pacific in September 1513.",
+   "tags": [
+    "exploration"
+   ]
+  },
+  {
+   "id": "arc-126",
+   "subcategory": "industrial",
+   "difficulty": 4,
+   "question": "In which year was the first lasting transatlantic telegraph cable completed?",
+   "choices": [
+    "1858",
+    "1850",
+    "1876",
+    "1866"
+   ],
+   "answer": 3,
+   "explanation": "A cable of 1858 failed within weeks, but the one laid by the Great Eastern in 1866 lasted.",
+   "tags": [
+    "industrial"
+   ]
+  },
+  {
+   "id": "arc-128",
+   "subcategory": "industrial",
+   "difficulty": 4,
+   "question": "Which German engineer received a patent in 1886 for the Motorwagen, regarded as the first practical car?",
+   "choices": [
+    "Karl Benz",
+    "Ferdinand Porsche",
+    "Nikolaus Otto",
+    "Rudolf Diesel"
+   ],
+   "answer": 0,
+   "explanation": "Benz's three-wheeled Patent-Motorwagen was powered by a small petrol engine.",
+   "tags": [
+    "industrial"
+   ]
+  },
+  {
+   "id": "arc-042",
+   "subcategory": "late-antiquity",
+   "difficulty": 4,
+   "question": "In which year did Attila the Hun die?",
+   "choices": [
+    "AD 451",
+    "AD 476",
+    "AD 453",
+    "AD 455"
+   ],
+   "answer": 2,
+   "explanation": "Attila died in 453.",
+   "tags": [
+    "late-antiquity"
+   ]
+  },
+  {
+   "id": "arc-038",
+   "subcategory": "rome-empire",
+   "difficulty": 4,
+   "question": "The Roman Empire was permanently divided East and West in",
+   "choices": [
+    "AD 330",
+    "AD 395",
+    "AD 410",
+    "AD 476"
+   ],
+   "answer": 1,
+   "explanation": "Theodosius I died in 395.",
+   "tags": [
+    "rome-empire"
+   ]
+  },
+  {
+   "id": "arc-029",
+   "subcategory": "rome-republic",
+   "difficulty": 4,
+   "question": "The Third Servile War led by Spartacus began in",
+   "choices": [
+    "44 BC",
+    "73 BC",
+    "49 BC",
+    "88 BC"
+   ],
+   "answer": 1,
+   "explanation": "Spartacus escaped from a gladiator school in 73 BC.",
+   "tags": [
+    "rome-republic"
    ]
   },
   {

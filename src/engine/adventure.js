@@ -53,8 +53,32 @@ export const ADVENTURES = {
   },
   history: {
     id: 'history', name: 'The Archive', title: 'History', cats: ['history'], color: '#c9a26b', icon: 'owl', bossSprite: 'boss_archivist',
-    blurb: 'Empires, revolutions and dates worth knowing.',
-    bossNames: ['The Scribe', 'The Legion', 'The Crown', 'The Crusader', 'The Printer', 'The Revolution', 'The Engine', 'The Trench', 'The Wall', 'The Archivist'],
+    blurb: 'Dates, durations, causes and chronology, from the first cities to today.',
+    eventName: 'Ambush', open: true,
+    bossNames: ['The Scribe', 'The Legion', 'The Crown', 'The Printer', 'The Revolution', 'The Engine', 'The Trench', 'The Wall', 'The Chronicle', 'The Archivist'],
+    subs: ['history/early-rivers', 'history/bronze-age', 'history/ancient-greece', 'history/rome-republic', 'history/rome-empire', 'history/late-antiquity', 'history/early-medieval', 'history/islamic-world', 'history/high-medieval', 'history/renaissance', 'history/exploration', 'history/reformation', 'history/enlightenment', 'history/revolutions', 'history/napoleon', 'history/industrial', 'history/colonial', 'history/asia-empires', 'history/ww1', 'history/interwar', 'history/ww2', 'history/cold-war-origins', 'history/decolonisation', 'history/cold-war-crises', 'history/africa-history', 'history/asia-history', 'history/americas-history', 'history/late-20th', 'history/people-ideas', 'history/chronology', 'history/figures', 'history/dates'],
+    chapters: [
+      { scene: 'greenhouse', name: 'The Cradles', subject: 'First civilisations', aspects: [
+        { name: 'Rivers and first cities', focus: ['history/early-rivers'] }, { name: 'The Bronze Age', focus: ['history/bronze-age'] }, { name: 'Ancient Greece', focus: ['history/ancient-greece'] }] },
+      { scene: 'observatory', name: 'The Eternal City', subject: 'Rome and its fall', aspects: [
+        { name: 'The Republic', focus: ['history/rome-republic'] }, { name: 'The Empire', focus: ['history/rome-empire'] }, { name: 'Late antiquity', focus: ['history/late-antiquity'] }] },
+      { scene: 'deep', name: 'The Long Night', subject: 'The Middle Ages', aspects: [
+        { name: 'Early medieval Europe', focus: ['history/early-medieval'] }, { name: 'The Islamic world', focus: ['history/islamic-world'] }, { name: 'High Middle Ages', focus: ['history/high-medieval'] }] },
+      { scene: 'workshop', name: 'The Rebirth', subject: 'Renaissance, exploration, reform', aspects: [
+        { name: 'The Renaissance', focus: ['history/renaissance'] }, { name: 'Age of exploration', focus: ['history/exploration'] }, { name: 'The Reformation', focus: ['history/reformation'] }] },
+      { scene: 'bench', name: 'The Upheaval', subject: 'Enlightenment and revolutions', aspects: [
+        { name: 'The Enlightenment', focus: ['history/enlightenment'] }, { name: 'Revolutions', focus: ['history/revolutions'] }, { name: 'Napoleon', focus: ['history/napoleon'] }] },
+      { scene: 'clinic', name: 'The Empires', subject: 'Industry and empire', aspects: [
+        { name: 'Industrial revolution', focus: ['history/industrial'] }, { name: 'Colonial empires', focus: ['history/colonial'] }, { name: 'Empires of Asia', focus: ['history/asia-empires'] }] },
+      { scene: 'reactor', name: 'The World at War', subject: '1914 to 1945', aspects: [
+        { name: 'The First World War', focus: ['history/ww1'] }, { name: 'Between the wars', focus: ['history/interwar'] }, { name: 'The Second World War', focus: ['history/ww2'] }] },
+      { scene: 'orbit', name: 'The Cold War', subject: '1945 to 1991', aspects: [
+        { name: 'Cold War origins', focus: ['history/cold-war-origins'] }, { name: 'Decolonisation', focus: ['history/decolonisation'] }, { name: 'Crises and collapse', focus: ['history/cold-war-crises'] }] },
+      { scene: 'fearlab', name: 'The Wider World', subject: 'Africa, Asia and the Americas', aspects: [
+        { name: 'African history', focus: ['history/africa-history'] }, { name: 'Asian history', focus: ['history/asia-history'] }, { name: 'The Americas', focus: ['history/americas-history'] }] },
+      { scene: 'paradox', name: 'The Modern Age', subject: 'Since 1990 and the whole timeline', aspects: [
+        { name: 'Late 20th century', focus: ['history/late-20th'] }, { name: 'People and ideas', focus: ['history/people-ideas'] }, { name: 'Chronology', focus: ['history/chronology', 'history/figures', 'history/dates'] }] },
+    ].map((c) => ({ ...c, focus: c.aspects.flatMap((a) => a.focus) })),
   },
   symbols: {
     id: 'symbols', name: 'The Cipher', title: 'Symbols', cats: ['symbols'], color: '#b48cff', icon: 'key', bossSprite: 'boss_cipher',
