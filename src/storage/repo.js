@@ -334,16 +334,18 @@ export async function createRepo(storage, { now = Date.now, uuid = defaultUuid, 
       return { type: pack.type, cards };
     },
 
-    /** Add XP for a finished game once (the session id is remembered). Returns { xp, before, after } levels. */
-    async addXp(id, sessionId, amount) {
+    /** Add XP (and dust) for a finished game once; the session id is remembered. Returns { xp, before, after, gained, dust }. */
+    async addXp(id, sessionId, amount, dust = 0) {
       const profile = await requireProfile(id);
       const m = metaOf(profile);
-      if (m.xpLog.includes(sessionId) || !(amount > 0)) return { xp: m.xp, before: levelOf(m.xp).level, after: levelOf(m.xp).level, gained: 0 };
+      if (m.xpLog.includes(sessionId) || !(amount > 0)) return { xp: m.xp, before: levelOf(m.xp).level, after: levelOf(m.xp).level, gained: 0, dust: 0 };
       profile.xp = m.xp + Math.floor(amount);
+      const d = dust > 0 ? Math.floor(dust) : 0;
+      if (d) { profile.hexes = { ...m.hexes, dust: m.hexes.dust + d }; profile.packs = m.packs; profile.daily = m.daily; }
       profile.xpLog = [...m.xpLog, sessionId].slice(-30);
       profile.updatedAt = now();
       await storage.transact([{ op: 'put', store: 'profiles', value: profile }]);
-      return { xp: profile.xp, before: levelOf(m.xp).level, after: levelOf(profile.xp).level, gained: Math.floor(amount) };
+      return { xp: profile.xp, before: levelOf(m.xp).level, after: levelOf(profile.xp).level, gained: Math.floor(amount), dust: d };
     },
 
     /**
@@ -380,7 +382,7 @@ export async function createRepo(storage, { now = Date.now, uuid = defaultUuid, 
     async buyCosmetic(id, itemId) {
       const profile = await requireProfile(id);
       const m = metaOf(profile);
-      const why = buyCheck(m.cos, itemId, levelOf(m.xp).level, m.hexes.dust);
+      const why = buyCheck(m.cos, itemId, m.hexes.dust);
       if (why) throw new RepoError('NO_BUY', why);
       profile.hexes = { ...m.hexes, dust: m.hexes.dust - COSMETICS[itemId].cost };
       profile.cos = { owned: [...m.cos.owned, itemId], equipped: { ...m.cos.equipped, [COSMETICS[itemId].slot]: itemId } };

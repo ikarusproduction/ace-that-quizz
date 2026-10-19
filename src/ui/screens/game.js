@@ -3,7 +3,7 @@
 import { h, mount, localDateKey } from '../dom.js';
 import { sprite } from '../pixel.js';
 import { go } from '../app.js';
-import { xpForGame } from '../../engine/cosmetics.js';
+import { xpForGame, dustForGame } from '../../engine/cosmetics.js';
 import { lightsOn, setMood, pulse, blackout, shake, setPressure } from '../lighting.js';
 import { sfx, playClip, stopClip, unlockAudio, startMusic, stopMusic } from '../audio.js';
 import { avatar, cardTile, emptySlot, categoryTag, categoryIcon, diffPips, chipsLine, bulbs, modal, confirmDialog, toast, floatText } from '../components.js';
@@ -403,8 +403,8 @@ class GameController {
         const list = packsEarned(s, p.playerId).map((type, i) => ({ id: `${s.sessionId}:${p.playerId}:g${i}`, type, from: i === 0 ? 'Game pack' : i === 1 ? 'Great game' : 'Streak master' }));
         for (const m of evaluateMissions(s, p.playerId, p.missions ?? []).filter((x) => x.done)) list.push({ id: `${s.sessionId}:${p.playerId}:m:${m.id}`, type: 'bronze', from: `Mission: ${m.text}` });
         await this.app.repo.addPacks(p.playerId, list);
-        const xr = await this.app.repo.addXp(p.playerId, s.sessionId, xpForGame(s, p.playerId));
-        if (xr.gained) this.notes.push(`${p.name}: +${xr.gained} XP${xr.after > xr.before ? ` · LEVEL ${xr.after}!` : ''}`);
+        const xr = await this.app.repo.addXp(p.playerId, s.sessionId, xpForGame(s, p.playerId), dustForGame(s, p.playerId));
+        if (xr.gained) this.notes.push(`${p.name}: +${xr.gained} XP${xr.dust ? ` · +${xr.dust} dust` : ''}${xr.after > xr.before ? ` · LEVEL ${xr.after}!` : ''}`);
         // A player who has shared a friend code keeps their public card fresh.
         const prof = await this.app.repo.getProfile(p.playerId);
         if (prof?.friendCode && this.app.cloud) this.app.cloud.publishFriendCard(p.playerId).catch(() => {});

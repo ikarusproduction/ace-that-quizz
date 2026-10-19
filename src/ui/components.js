@@ -7,16 +7,34 @@ import { CATEGORIES, DIFFICULTIES } from '../engine/bank.js';
 import { sfx } from './audio.js';
 import { HEXES } from '../engine/hexes.js';
 
+const FX_COUNT = { bubbles: 7, embers: 9, snow: 9, sparkle: 8, static: 6, confetti: 10, ghosts: 5 };
+
+/**
+ * A portrait. With a profile it wears the wardrobe: a frame that lights the face, an animated background, a hat that
+ * moves, and a particle effect around it. Big portraits (36px and up) get the particles; small ones stay still and cheap.
+ */
 export function avatar(profileOrKey, px = 48) {
   const key = typeof profileOrKey === 'string' ? profileOrKey : profileOrKey?.avatar?.key;
   const name = AVATAR_SPRITES.includes(key) ? key : AVATAR_SPRITES[0];
   const eq = typeof profileOrKey === 'object' ? profileOrKey?.cos?.equipped : null;
   const body = sprite(name, px);
-  const parts = [body];
   if (eq?.tint && COSMETICS[eq.tint]?.filter) body.style.filter = COSMETICS[eq.tint].filter;
-  if (eq?.hat && COSMETICS[eq.hat]) { const hat = sprite(COSMETICS[eq.hat].sprite, px); hat.classList.add('av-hat'); parts.push(hat); }
-  const cls = ['avatar', eq?.frame ? `fr-${eq.frame.slice(3)}` : '', eq?.bg ? `bg-${eq.bg.slice(3)}` : ''].filter(Boolean).join('.');
-  return h(`span.${cls}`, { style: { width: `${px + 12}px`, height: `${px + 12}px` } }, ...parts);
+  const frame = eq?.frame && COSMETICS[eq.frame] ? eq.frame.slice(3) : '';
+  const bg = eq?.bg && COSMETICS[eq.bg] ? eq.bg.slice(3) : '';
+  const fx = eq?.fx && COSMETICS[eq.fx] ? eq.fx.slice(3) : '';
+  const hatId = eq?.hat && COSMETICS[eq.hat] ? eq.hat.slice(3) : '';
+  const size = px + 12;
+  const inner = [h('span.av-bg', { 'aria-hidden': 'true' }), body];
+  if (hatId) { const hat = sprite(COSMETICS[eq.hat].sprite, px); hat.classList.add('av-hat', `hat-${hatId}`); inner.push(hat, h('span', { class: `av-hatfx hatfx-${hatId}`, 'aria-hidden': 'true' })); }
+  if (frame || bg) inner.push(h('span.av-light', { 'aria-hidden': 'true' }));
+  if (frame) inner.push(h('span.av-ring', { 'aria-hidden': 'true' }));
+  const face = h('span.avatar', {}, ...inner);
+  const cls = ['av-wrap', frame ? `fr-${frame}` : '', bg ? `bg-${bg}` : '', fx ? `fx-${fx}` : ''].filter(Boolean).join('.');
+  const kids = [];
+  if (frame) kids.push(h('span.av-halo', { 'aria-hidden': 'true' }));
+  kids.push(face);
+  if (fx && size >= 44) kids.push(h('span.av-fx', { 'aria-hidden': 'true' }, Array.from({ length: FX_COUNT[fx] ?? 6 }, (_, i) => h('i', { style: { '--i': i } }))));
+  return h(`span.${cls}`, { style: { width: `${size}px`, height: `${size}px`, '--px': `${size}px`, '--glow': frame ? COSMETICS[eq.frame].glow : '' } }, ...kids);
 }
 
 export function categoryIcon(key, px = 20) {

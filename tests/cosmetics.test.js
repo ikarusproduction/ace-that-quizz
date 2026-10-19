@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { levelOf, xpAtLevel, xpToNext, bestTitle, cleanWardrobe, buyCheck, COSMETICS, MAX_LEVEL } from '../src/engine/cosmetics.js';
+import { levelOf, xpAtLevel, xpToNext, bestTitle, cleanWardrobe, buyCheck, dustForGame, COSMETICS, MAX_LEVEL } from '../src/engine/cosmetics.js';
 import { metaOf, mergeMeta } from '../src/storage/meta.js';
 
 test('levels grow with xp and cap', () => {
@@ -15,17 +15,26 @@ test('titles follow level', () => {
   assert.equal(bestTitle(16).name, 'Bulb Whisperer');
   assert.equal(bestTitle(99).name, 'Master of the House');
 });
-test('wardrobe is cleaned and gated', () => {
+test('wardrobe is cleaned and bought with dust only', () => {
   const w = cleanWardrobe({ owned: ['fr_rust', 'nope'], equipped: { frame: 'fr_rust', bg: 'bg_dusk', title: 't30' } }, 5);
   assert.deepEqual(w.owned, ['fr_rust']);
   assert.equal(w.equipped.frame, 'fr_rust');
   assert.equal(w.equipped.bg, undefined);
   assert.equal(w.equipped.title, undefined);
-  assert.match(buyCheck(w, 'fr_gold', 5, 999), /level 18/);
-  assert.match(buyCheck(w, 'fr_steel', 5, 1), /dust/);
-  assert.equal(buyCheck(w, 'fr_steel', 5, 100), null);
-  assert.match(buyCheck(w, 'fr_rust', 5, 100), /already/);
-  assert.ok(Object.values(COSMETICS).every((c) => c.cost > 0 && c.level >= 1));
+  assert.equal(buyCheck(w, 'fr_gold', 999), null, 'no level gate');
+  assert.match(buyCheck(w, 'fr_steel', 1), /dust/);
+  assert.equal(buyCheck(w, 'fr_steel', 100), null);
+  assert.match(buyCheck(w, 'fr_rust', 100), /already/);
+  assert.ok(Object.values(COSMETICS).every((c) => c.cost > 0));
+  assert.ok(Object.values(COSMETICS).filter((c) => c.slot === 'frame').every((c) => /^#/.test(c.glow)), 'frames carry a light colour');
+  assert.ok(['frame', 'bg', 'tint', 'hat', 'fx'].every((slot) => Object.values(COSMETICS).some((c) => c.slot === slot)));
+  assert.equal(cleanWardrobe({ owned: ['fx_embers'], equipped: { fx: 'fx_embers' } }).equipped.fx, 'fx_embers');
+});
+test('dust for a finished game is small and capped', () => {
+  const s = { status: 'completed', players: [{ playerId: 'a', result: 'won', bossesCleared: 20 }, { playerId: 'b', result: 'lost' }] };
+  assert.equal(dustForGame(s, 'a'), 30);
+  assert.equal(dustForGame(s, 'b'), 4);
+  assert.equal(dustForGame({ ...s, status: 'active' }, 'a'), 0);
 });
 test('meta keeps xp and cosmetics, merge takes the best', () => {
   const a = { xp: 100, xpLog: ['s1'], cos: { owned: ['fr_rust'], equipped: { frame: 'fr_rust' } } };

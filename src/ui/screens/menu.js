@@ -7,6 +7,8 @@ import { sfx, unlockAudio } from '../audio.js';
 import { confirmDialog, toast } from '../components.js';
 import { dispatch } from '../../engine/game.js';
 import { metaOf } from '../../storage/meta.js';
+import { avatar } from '../components.js';
+import { bestTitle, titleById, levelOf } from '../../engine/cosmetics.js';
 import { localDateKey } from '../dom.js';
 
 let introPlayed = false;
@@ -19,9 +21,13 @@ export async function menuScreen(app) {
   const metas = profiles.map((p) => metaOf(p));
   const packsWaiting = metas.reduce((n, m) => n + m.packs.length, 0);
   const dailyReady = metas.some((m) => m.daily.lastDay !== localDateKey());
+  const recent = await app.repo.getRecent();
+  const hero = profiles.find((p) => p.id === recent.ids?.[0]) ?? profiles[0] ?? null;
+  const heroMeta = hero ? metaOf(hero) : null;
 
   const el = h('div.screen', {},
-    h('div.title-stage', { class: introPlayed ? '' : 'intro' },
+    h('div.title-stage', { class: `${introPlayed ? '' : 'intro'} ${hero ? 'has-hero' : ''}` },
+      hero ? heroPortrait(hero, heroMeta) : null,
       interactiveBulb({ intro: !introPlayed }),
       h('h1.logo', {}, h('small', {}, 'The'), 'House', h('br'), 'Knows'),
       h('div.tagline', {}, 'A trivia game of nerve · 1–4 players'),
@@ -52,6 +58,14 @@ export async function menuScreen(app) {
     el.addEventListener('pointerdown', unlock, { once: true });
   }
   return el;
+}
+
+function heroPortrait(p, m) {
+  const title = (titleById(m.cos.equipped.title) ?? bestTitle(levelOf(m.xp).level)).name;
+  return h('button.hero-player', { type: 'button', 'aria-label': `${p.name}: open your style`, onclick: () => { unlockAudio(); sfx.tap(); go('hexes', { playerId: p.id, tab: 'style' }); } },
+    avatar(p, 124),
+    h('span.hero-name', {}, p.name),
+    h('span.hero-title', {}, `${title} · ✦ ${m.hexes.dust}`));
 }
 
 function menuBtn(kind, icon, label, sub, onclick) {

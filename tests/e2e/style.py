@@ -26,10 +26,11 @@ try:
         pg.locator('.ward:has-text("Amber Glow")').click(no_wait_after=True); time.sleep(.5)
         pg.locator('.ward:has-text("Spotlight")').click(no_wait_after=True); time.sleep(.5)
         pg.locator('.ward:has-text("Flat Cap")').click(no_wait_after=True); time.sleep(.5)
-        pg.locator('.ward:has-text("Ember")').click(no_wait_after=True); time.sleep(.5)
-        assert pg.locator('.lvl-card .avatar.fr-amber.bg-spot .av-hat').count() == 1
-        locked = pg.locator('.ward:has-text("Gold Leaf")').first
-        assert locked.is_disabled(), 'level-gated item should be locked'
+        pg.locator('.ward:has-text("Embers")').click(no_wait_after=True); time.sleep(.5)
+        assert pg.locator('.lvl-card .av-wrap.fr-amber.bg-spot .av-hat').count() == 1
+        # dust is the only gate: Gold Leaf (280) was buyable at level 5, but after spending only 90 dust is left
+        assert pg.locator('.ward:has-text("Gold Leaf")').first.is_disabled(), 'not enough dust left'
+        assert pg.locator('.ward:has-text("House Seal")').first.is_disabled(), 'too expensive for the dust left'
         pg.evaluate('window.scrollTo(0,0)'); pg.screenshot(path='/tmp/style-top.png')
         d = pg.evaluate("async()=>{const a=window.__app; const ps=await a.repo.listProfiles(); const m=await a.repo.getMeta(ps[0].id); return [m.hexes.dust, m.cos.owned.length]}")
         print('dust/owned', d); assert d[0] < 400 and d[1] == 4

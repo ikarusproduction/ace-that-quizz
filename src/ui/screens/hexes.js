@@ -106,16 +106,15 @@ export async function hexesScreen(app, params) {
         const titleBtns = TITLES.map((t) => h('button.ward', { type: 'button', 'aria-pressed': String((eq.title ?? bestTitle(lv).id) === t.id), class: t.level > lv ? 'locked' : '', disabled: t.level > lv, onclick: () => { sfx.select(); act(() => app.repo.equipCosmetic(pid, 'title', t.id)); } }, h('div', {}, h('b', {}, t.name), h('small', {}, t.level > lv ? `Level ${t.level}` : 'Unlocked'))));
         const section = ([slot, label]) => {
           const items = cosmeticsIn(slot);
-          const none = h('button.ward', { type: 'button', 'aria-pressed': String(!eq[slot]), onclick: () => { sfx.select(); act(() => app.repo.equipCosmetic(pid, slot, null)); } }, avatar({ ...fresh, cos: { equipped: {} } }, 24), h('div', {}, h('b', {}, 'None'), h('small', {}, 'Plain')));
+          const none = h('button.ward', { type: 'button', 'aria-pressed': String(!eq[slot]), onclick: () => { sfx.select(); act(() => app.repo.equipCosmetic(pid, slot, null)); } }, avatar({ ...fresh, cos: { equipped: {} } }, 44), h('div', {}, h('b', {}, 'None'), h('small', {}, 'Plain')));
           return [h('h3', {}, label), h('div.wardrobe-grid', {}, none, ...items.map((c) => {
             const own = m.cos.owned.includes(c.id);
-            const locked = !own && lv < c.level;
-            const sub = own ? (eq[slot] === c.id ? 'Worn' : 'Owned') : locked ? `Level ${c.level}` : `✦ ${c.cost} dust`;
-            return h('button.ward', { type: 'button', class: locked ? 'locked' : '', 'aria-pressed': String(eq[slot] === c.id), disabled: locked || (!own && m.hexes.dust < c.cost), onclick: () => { sfx.select(); act(async () => { if (own) await app.repo.equipCosmetic(pid, slot, c.id); else { await app.repo.buyCosmetic(pid, c.id); sfx.cash?.(); toast(`${c.name} is yours`); } }); } }, avatar({ ...fresh, cos: { equipped: { [slot]: c.id } } }, 24), h('div', {}, h('b', {}, c.name), h('small', {}, sub)));
+            const sub = own ? (eq[slot] === c.id ? 'Worn' : 'Owned') : `✦ ${c.cost} dust`;
+            return h('button.ward', { type: 'button', 'aria-pressed': String(eq[slot] === c.id), disabled: !own && m.hexes.dust < c.cost, onclick: () => { sfx.select(); act(async () => { if (own) await app.repo.equipCosmetic(pid, slot, c.id); else { await app.repo.buyCosmetic(pid, c.id); sfx.cash?.(); toast(`${c.name} is yours`); } }); } }, avatar({ ...fresh, cos: { equipped: { [slot]: c.id } } }, 44), h('div', {}, h('b', {}, c.name), h('small', {}, sub)));
           }))];
         };
         return [
-          h('p.small.dim', {}, 'Dust also buys looks for your portrait. Frames, backgrounds, colours and costume pieces unlock as your level rises. Titles are free with your level.'),
+          h('p.small.dim', {}, 'Dust buys looks for your portrait: frames that light it, moving backgrounds, particle effects, colours and costume pieces. Duplicate cards, finished games and Adventure clears all pay dust. Titles come with your level.'),
           h('h3', {}, 'Title'), h('div.wardrobe-grid', {}, titleBtns),
           ...SLOTS.flatMap(section),
         ];
