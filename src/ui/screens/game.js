@@ -472,6 +472,7 @@ class GameController {
       shop: () => this.viewShop(),
       map: () => this.viewMap(),
       rest: () => this.viewRest(),
+      'boss-cards': () => this.viewBossCards(),
       event: () => this.viewEvent(),
       finished: () => this.viewFinished(),
     }[phase]();
@@ -652,7 +653,7 @@ class GameController {
     setPressure(Boolean(fight) && s.players.some((p) => p.strikes === 1 && !p.defeated));
     this.syncMusic();
     if (s.phase === 'finished') return setMood(s.players.some((p) => p.result === 'won') ? 'win' : 'out');
-    if (s.enc && ['map', 'rest', 'event', 'shop'].includes(s.phase)) return setMood('calm');
+    if (s.enc && ['map', 'rest', 'event', 'shop', 'boss-cards'].includes(s.phase)) return setMood('calm');
     if (s.enc && s.round) {
       if (s.enc.kind !== 'minion' && s.enc.hp <= s.enc.maxHp * DUEL.enrageAt) return setMood('boss');
       if (s.players.some((p) => p.strikes <= 1 && !p.defeated)) return setMood('danger');
@@ -1443,6 +1444,30 @@ class GameController {
       h('div.stick-bottom', {}, selNode
         ? h('div.col.gap-s', {}, h('div.panel.tight', {}, h('b', {}, NODE_KINDS[selNode.kind].label), h('div.small.dim', {}, NODE_KINDS[selNode.kind].text)), h('button.btn.primary.block', { type: 'button', onclick: go }, selNode.kind === 'fight' || selNode.kind === 'elite' || selNode.kind === 'boss' || selNode.kind === 'final' ? 'Enter the fight' : 'Go in'))
         : h('p.small.dim.center', {}, 'Tap a glowing room.')),
+    ];
+  }
+
+  /** After a boss: choose up to two of the offered cards. They fill the bonus slots for the rest of the run. */
+  viewBossCards() {
+    const s = this.s;
+    const p = s.players[0];
+    const key = `${s.roundIndex}:${s.draft.options.join(',')}`;
+    if (this.bossPickKey !== key) { this.bossPickKey = key; this.bossPick = []; }
+    const picked = this.bossPick;
+    const toggle = (id) => {
+      if (picked.includes(id)) picked.splice(picked.indexOf(id), 1);
+      else if (picked.length >= 2) return toast('You can take two cards. Tap a chosen card to put it back.');
+      else picked.push(id);
+      this.render();
+    };
+    const confirm = () => { sfx.select(); this.bossPickKey = null; this.act({ type: 'BOSS_CARDS', cards: [...picked] }); };
+    return [
+      this.hud(p, {}),
+      h('div.panel.banner', {}, h('div.tiny.dim', {}, 'Spoils'), h('h2', {}, 'Choose two cards'), h('p.small.dim', {}, 'They go into your two bonus slots and stay with you for the rest of the run. You can swap them before any fight.')),
+      h('div.row.between', {}, h('span.tiny.dim', {}, 'Your slots now'), h('span.tiny.dim', {}, `${picked.length}/2 chosen`)),
+      h('div.hand', {}, [0, 1].map((i) => { const id = picked[i] ?? (picked.length ? null : p.loadout[i]); return h('div.slot', {}, id ? cardTile(id, { selected: picked.includes(id), compact: true }) : emptySlot(picked.length ? 'Kept slot' : 'Empty slot')); })),
+      h('div.reward-grid', {}, s.draft.options.map((id) => cardTile(id, { selected: picked.includes(id), onclick: toggle }))),
+      h('div.stick-bottom', {}, h('button.btn.primary.block', { type: 'button', onclick: confirm }, picked.length ? `Take ${picked.length === 1 ? 'this card' : 'both cards'}` : 'Take nothing')),
     ];
   }
 

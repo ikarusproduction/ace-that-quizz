@@ -10,14 +10,17 @@
 // return { ok: false, reason } with the state untouched.
 import { Rng, randomSeed } from './rng.js';
 import { RULES, HAZARDS, BOSSES, SHOP_ITEMS } from './modifiers.js';
-import { CARDS, CARD_NUMBERS, equippableCards, draftCards } from './cards.js';
+import { CARDS, CARD_IDS, CARD_NUMBERS, equippableCards, draftCards } from './cards.js';
+
+/** How many cards each boss puts on the table (you take two). */
+const BOSS_CARD_OFFER = 4;
 import { computeOutcome, previewStake, timerFor, nextStreak, runScore } from './scoring.js';
 import { buildRound, roundInfo, roundCategories } from './rounds.js';
 import { statCategory } from './bank.js';
 import { checkPuzzle, PUZZLE_RULES } from './minigame.js';
 import { HEXES, STARTER_HEXES, HEX_NUMBERS, tierForStreak, drawHex, usableHexes, missionsFor } from './hexes.js';
 import {
-  DUEL, INTENTS, BOSS_ROSTER, BOSS_IDS, TIER_DIFFICULTY, DEALS, DEAL_IDS, DUEL_SHOP_ITEMS,
+  DUEL, INTENTS, BOSS_ROSTER, BOSS_IDS, PRIVATE_CATEGORIES, TIER_DIFFICULTY, DEALS, DEAL_IDS, DUEL_SHOP_ITEMS,
   makeEncounter, cleanRank, intentIdFor, advancePhase, timerMultFor, duelDamage, bulbsLostOnMiss, heatCostOf, startHeat, duelCategory, buildMap, availableNodes, isEnraged,
 } from './duel.js';
 import { pickQuestion } from './rounds.js';
@@ -144,7 +147,8 @@ export function createGame({ mode, players, ctx, seed, sessionId, overrides = {}
         streak: 0,
         longestStreak: 0,
         owned,
-        loadout: equippableCards(owned, mode).slice(0, 2).concat([null, null]).slice(0, 2),
+        // A solo run starts with both bonus slots empty: cards come from the pick-two after each boss.
+        loadout: config.duel ? [null, null] : equippableCards(owned, mode).slice(0, 2).concat([null, null]).slice(0, 2),
         charges: {},
         runCharges: Object.fromEntries(owned.filter((id) => CARDS[id]?.timing === 'run').map((id) => [id, CARDS[id].uses])),
         roundStats: { answered: 0, correct: 0, wrong: 0 },
@@ -275,8 +279,12 @@ function addDuelSlot(s, ctx) {
     const cats = statCategories(ctx);
     const category = duelCategory(rng, enc, cats);
     const difficulty = Number(rng.weighted(TIER_DIFFICULTY[enc.tier] ?? TIER_DIFFICULTY[1]));
-    const pool = ctx.questions.filter((q) => statCategory(q) === category);
-    const q = pickQuestion({ pool: pool.length ? pool : ctx.questions, rng, difficulty, usedIds: new Set(s.usedIds), avoidIds: new Set(s.avoidIds), seen: s.seenCounts ?? null, fallbackPool: ctx.questions });
+    // A private-theme boss (the Harry Potter films) draws only its own questions, and nothing else ever draws them.
+    const open = ctx.questions.filter((q) => !PRIVATE_CATEGORIES.includes(statCategory(q)));
+    const own = enc.private ? ctx.questions.filter((q) => statCategory(q) === enc.cat) : null;
+    const pool = own ?? open.filter((q) => statCategory(q) === category);
+    const fallback = own?.length ? own : open;
+    const q = pickQuestion({ pool: pool.length ? pool : fallback, rng, difficulty, usedIds: new Set(s.usedIds), avoidIds: new Set(s.avoidIds), seen: s.seenCounts ?? null, fallbackPool: fallback });
     return { category: statCategory(q), theme: null, difficulty: q.difficulty, questionId: q.id, slot: s.round.slots.length };
   });
   s.round.slots.push(slot);
@@ -812,6 +820,12 @@ const HANDLERS = {
       const me = s.players[0];
       if (me.defeated) { s.victory = false; return finish(s, ctx); }
       if (s.config.variant === 'rush' || s.round.kind === 'final') { s.victory = s.enc.over === 'won'; return finish(s, ctx); }
+      if (s.enc.kind === 'boss' && s.enc.over === 'won' && s.config.cardsEnabled) {
+        // After every boss: pick up to two cards. They fill the two bonus slots and stay for the rest of the run.
+        const excluded = [...me.loadout.filter(Boolean), ...CARD_IDS.filter((id) => CARDS[id].versusOnly)];
+        const options = draftCards(Rng.fromSeed(`${s.sessionId}:${me.playerId}:boss-cards:${s.roundIndex}`), excluded, BOSS_CARD_OFFER);
+        if (options.length) { s.draft = { options, from: s.enc.id }; s.phase = 'boss-cards'; return; }
+      }
       s.phase = 'map';
       return;
     }
@@ -875,6 +889,25 @@ const HANDLERS = {
     if (s.phase !== 'shop') return { ok: false, reason: 'the shop is closed' };
     if (s.config.duel) { s.phase = 'map'; return; }
     prepareRound(s, ctx);
+  },
+
+  /** After a boss: take up to two of the offered cards into the two bonus slots (they replace what was equipped). */
+  BOSS_CARDS(s, a) {
+    if (s.phase !== 'boss-cards' || !s.draft) return { ok: false, reason: 'no cards on offer' };
+    const p = s.players[0];
+    const picked = [...new Set(Array.isArray(a.cards) ? a.cards : [])];
+    if (picked.length > 2) return { ok: false, reason: 'choose at most two cards' };
+    if (picked.some((id) => !s.draft.options.includes(id))) return { ok: false, reason: 'that card is not on offer' };
+    for (const id of picked) {
+      if (!p.owned.includes(id)) p.owned.push(id);
+      if (CARDS[id]?.timing === 'run' && p.runCharges[id] == null) p.runCharges[id] = CARDS[id].uses;
+    }
+    // New picks first; if only one is taken the better of the old two stays in the other slot.
+    const kept = p.loadout.filter((c) => c && !picked.includes(c));
+    p.loadout = picked.concat(kept).concat([null, null]).slice(0, 2);
+    s.bossPicks = (s.bossPicks ?? 0) + 1;
+    s.draft = null;
+    s.phase = 'map';
   },
 
   /** Walk to a room on the map. */

@@ -20,8 +20,8 @@ function answer(s, ctx, { right = true, stake = 1, elapsedMs = 3000 } = {}) {
 }
 const next = (s, ctx) => go(s, ctx, { type: 'NEXT' });
 
-test('the roster has eleven bosses, each with a pattern, a specialty and a sprite name', () => {
-  assert.equal(BOSS_IDS.length, 11);
+test('the roster has twelve bosses, each with a pattern, a specialty and a sprite name', () => {
+  assert.equal(BOSS_IDS.length, 12);
   for (const b of Object.values(BOSS_ROSTER)) {
     assert.ok(b.hp >= 12 && b.name && b.sprite && b.color && b.cat);
     assert.ok(b.intents.length >= 3 && b.enraged.length >= 3);
@@ -270,6 +270,7 @@ test('a bot that always answers right clears a whole map run, and one that alway
       else if (s.phase === 'shop') s = go(s, ctx, { type: 'LEAVE_SHOP' });
       else if (s.phase === 'rest') s = go(s, ctx, { type: 'REST', choice: s.players[0].strikes < DUEL.maxLives ? 'heal' : 'train' });
       else if (s.phase === 'event') s = go(s, ctx, { type: 'EVENT', choice: 'walk' });
+      else if (s.phase === 'boss-cards') s = go(s, ctx, { type: 'BOSS_CARDS', cards: s.draft.options.slice(0, 2) });
       else throw new Error(`stuck in ${s.phase}`);
     }
     assert.equal(s.phase, 'finished', `${name} run did not finish`);

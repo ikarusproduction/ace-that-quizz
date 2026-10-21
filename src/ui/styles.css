@@ -462,6 +462,7 @@ footer.legal { color: var(--mute); font-size: 12px; text-align: center; margin-t
 .arena-dread .stage-bg { background: radial-gradient(60% 60% at 50% 40%, rgba(120, 70, 160, 0.25), transparent 70%), linear-gradient(180deg, #0a0710, #120a1a); }
 .arena-house .stage-bg { background: radial-gradient(70% 60% at 50% 38%, rgba(255, 210, 74, 0.22), transparent 70%), repeating-linear-gradient(45deg, transparent 0 18px, rgba(255, 210, 74, 0.04) 18px 20px); }
 .arena-clinic .stage-bg { background: radial-gradient(70% 60% at 50% 38%, rgba(140, 220, 190, 0.22), transparent 70%), repeating-linear-gradient(90deg, transparent 0 20px, rgba(255, 255, 255, 0.04) 20px 22px), linear-gradient(180deg, #0c1714, #10201c); }
+.arena-hat .stage-bg { background: radial-gradient(70% 60% at 50% 38%, rgba(246, 215, 127, 0.18), transparent 70%), repeating-radial-gradient(circle at 20% 80%, rgba(246, 215, 127, 0.07) 0 2px, transparent 2px 38px), linear-gradient(180deg, #17121f, #241a2c); }
 .stage-top { display: flex; align-items: baseline; justify-content: space-between; gap: 2px 8px; flex-wrap: wrap; }
 .stage-top .tiny { font-size: 10px; letter-spacing: 0.04em; }
 .stage-top .nm { white-space: nowrap; font-family: var(--font-display); font-weight: 800; font-size: 20px; text-transform: uppercase; letter-spacing: 0.04em; text-shadow: 0 2px 0 #000; }

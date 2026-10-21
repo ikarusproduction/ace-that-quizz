@@ -100,6 +100,11 @@ export const BOSS_ROSTER = {
     blurb: 'Bodies, diseases, drugs and the machines that scan them. A fever blurs your sight and sterile armor shrugs off slow answers.',
     intents: ['strike', 'blur', 'guard', 'mend'], enraged: ['blur', 'guard', 'twin', 'mend'],
   },
+  hat: {
+    id: 'hat', name: 'The Whispering Hat', title: 'It Has Seen Every Film', cat: 'hpfilms', only: true, private: true, tier: 2, hp: 26, sprite: 'boss_hat', color: '#b9863f', arena: 'hat',
+    blurb: 'A talking wizard hat with opinions about every Harry Potter film. It only asks about the films: cast, crew, scenes, spells and sets. Never the books. It flips the question and fogs your sight.',
+    intents: ['strike', 'flip', 'guard', 'blur'], enraged: ['flip', 'blur', 'twin', 'guard'],
+  },
   champion: {
     id: 'champion', name: 'The Reigning Champion', title: 'Twelve Stars. Zero Mercy.', cat: 'any', tier: 3, hp: 30, sprite: 'boss_champion', color: '#f2c14e', arena: 'stage',
     blurb: 'A smiling quiz-show champion who has never lost. Rapid fire on everything: the clock shrinks, armor holds, and the last stars hurt.',
@@ -118,6 +123,8 @@ export const BOSS_ROSTER = {
   },
 };
 export const BOSS_IDS = Object.keys(BOSS_ROSTER);
+/** Categories only their own boss may ask: they never mix into any other fight, mode or theme. */
+export const PRIVATE_CATEGORIES = Object.values(BOSS_ROSTER).filter((b) => b.private).map((b) => b.cat);
 
 /**
  * Evolution. Every time you beat a boss it comes back one rank stronger, up to rank 4: more health, a harder mix of
@@ -190,7 +197,7 @@ export function makeEncounter({ kind, enemyId = null, rng = null, depth = 0, ran
   const hp = elite ? Math.round(b.hp * 0.55) : b.hp;
   return {
     kind: kind === 'boss' && b.final ? 'final' : kind,
-    id: b.id, name: b.name, title: b.title, cat: b.cat, only: Boolean(b.only) && !elite, tier: elite ? Math.max(1, b.tier - 1) : b.tier, rank: b.rank, reward: b.reward ?? 1,
+    id: b.id, name: b.name, title: b.title, cat: b.cat, only: Boolean(b.only) && (!elite || Boolean(b.private)), private: Boolean(b.private), tier: elite ? Math.max(1, b.tier - 1) : b.tier, rank: b.rank, reward: b.reward ?? 1,
     hp, maxHp: hp, intents: elite ? b.intents.slice(0, 3) : b.intents, enraged: elite ? null : b.enraged,
     sprite: b.sprite, color: b.color, arena: b.arena, misses: 0, qCount: 0, over: null, hits: 0, healed: 0,
     ...(!elite && b.phases ? { phases: b.phases.map((p) => ({ ...p, intents: [...p.intents], enraged: p.enraged ? [...p.enraged] : null })), phase: 0 } : {}),
@@ -268,6 +275,7 @@ export const startHeat = (kind, bonus = 0) => Math.min(DUEL.heatCap, (DUEL.heat[
 
 /** Category for the next question of a fight: the specialty most of the time, anything else otherwise. */
 export function duelCategory(rng, enc, available) {
+  if (enc.only && enc.private) return enc.cat; // a private-theme boss asks only about its own theme
   const pool = available.filter(Boolean);
   const own = enc.cat !== 'any' && pool.includes(enc.cat) ? enc.cat : null;
   if (own && enc.only) return own; // a specialist boss asks nothing else

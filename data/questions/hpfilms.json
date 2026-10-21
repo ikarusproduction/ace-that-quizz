@@ -1,0 +1,1893 @@
+{
+ "category": "hpfilms",
+ "review": "unreviewed",
+ "questions": [
+  {
+   "id": "hpf-017",
+   "subcategory": "cast",
+   "difficulty": 1,
+   "question": "Who played Harry Potter in all eight films?",
+   "choices": [
+    "Tom Felton",
+    "Rupert Grint",
+    "Daniel Radcliffe",
+    "Elijah Wood"
+   ],
+   "answer": 2,
+   "explanation": "Daniel Radcliffe played Harry from 2001 to 2011.",
+   "tags": [
+    "cast"
+   ]
+  },
+  {
+   "id": "hpf-019",
+   "subcategory": "cast",
+   "difficulty": 1,
+   "question": "Who played Severus Snape in the films?",
+   "choices": [
+    "Gary Oldman",
+    "Jason Isaacs",
+    "Alan Rickman",
+    "Jim Broadbent"
+   ],
+   "answer": 2,
+   "explanation": "Alan Rickman played Snape throughout the series.",
+   "tags": [
+    "cast"
+   ]
+  },
+  {
+   "id": "hpf-001",
+   "subcategory": "film-order",
+   "difficulty": 1,
+   "question": "How many films make up the main Harry Potter film series?",
+   "choices": [
+    "Seven",
+    "Six",
+    "Eight",
+    "Nine"
+   ],
+   "answer": 2,
+   "explanation": "The series adapted the seven books into eight films, 2001 to 2011, because the last book was split in two.",
+   "tags": [
+    "film-order"
+   ]
+  },
+  {
+   "id": "hpf-067",
+   "subcategory": "magic-creatures",
+   "difficulty": 1,
+   "question": "Which Quidditch ball does the Seeker try to catch?",
+   "choices": [
+    "The Golden Snitch",
+    "The Golden Quaffle",
+    "The Quaffle",
+    "A Bludger"
+   ],
+   "answer": 0,
+   "explanation": "Catching the small winged Golden Snitch ends a Quidditch match.",
+   "tags": [
+    "magic-creatures"
+   ]
+  },
+  {
+   "id": "hpf-080",
+   "subcategory": "magic-creatures",
+   "difficulty": 1,
+   "question": "What is the name of the three-headed dog in Philosopher's Stone?",
+   "choices": [
+    "Norbert",
+    "Fluffy",
+    "Aragog",
+    "Buckbeak"
+   ],
+   "answer": 1,
+   "explanation": "Hagrid's three-headed dog is called Fluffy.",
+   "tags": [
+    "magic-creatures"
+   ]
+  },
+  {
+   "id": "hpf-097",
+   "subcategory": "making-of",
+   "difficulty": 1,
+   "question": "How many Harry Potter films were made?",
+   "choices": [
+    "Seven",
+    "Six",
+    "Eight",
+    "Ten"
+   ],
+   "answer": 2,
+   "explanation": "The saga was adapted into eight films.",
+   "tags": [
+    "making-of"
+   ]
+  },
+  {
+   "id": "hpf-081",
+   "subcategory": "places-sets",
+   "difficulty": 1,
+   "question": "On which platform does the Hogwarts Express wait?",
+   "choices": [
+    "Seven and a half",
+    "Nine and three-quarters",
+    "Four and a half",
+    "Thirteen"
+   ],
+   "answer": 1,
+   "explanation": "The Hogwarts Express leaves from platform 9¾.",
+   "tags": [
+    "places-sets"
+   ]
+  },
+  {
+   "id": "hpf-093",
+   "subcategory": "places-sets",
+   "difficulty": 1,
+   "question": "At which number Privet Drive does Harry live with the Dursleys?",
+   "choices": [
+    "Seven",
+    "Twelve",
+    "Thirteen",
+    "Four"
+   ],
+   "answer": 3,
+   "explanation": "Harry lives at number four, Privet Drive.",
+   "tags": [
+    "places-sets"
+   ]
+  },
+  {
+   "id": "hpf-018",
+   "subcategory": "cast",
+   "difficulty": 2,
+   "question": "Who played Albus Dumbledore in the first two films?",
+   "choices": [
+    "Michael Gambon",
+    "Christopher Lee",
+    "Ian McKellen",
+    "Richard Harris"
+   ],
+   "answer": 3,
+   "explanation": "Harris played Dumbledore in 2001 and 2002.",
+   "tags": [
+    "cast"
+   ]
+  },
+  {
+   "id": "hpf-020",
+   "subcategory": "cast",
+   "difficulty": 2,
+   "question": "Who played Rubeus Hagrid in the films?",
+   "choices": [
+    "Richard Griffiths",
+    "Robbie Coltrane",
+    "Brendan Gleeson",
+    "Timothy Spall"
+   ],
+   "answer": 1,
+   "explanation": "Coltrane played Hagrid throughout the series.",
+   "tags": [
+    "cast"
+   ]
+  },
+  {
+   "id": "hpf-021",
+   "subcategory": "cast",
+   "difficulty": 2,
+   "question": "Who played Professor McGonagall in the films?",
+   "choices": [
+    "Julie Walters",
+    "Maggie Smith",
+    "Emma Thompson",
+    "Imelda Staunton"
+   ],
+   "answer": 1,
+   "explanation": "Dame Maggie Smith played McGonagall.",
+   "tags": [
+    "cast"
+   ]
+  },
+  {
+   "id": "hpf-022",
+   "subcategory": "cast",
+   "difficulty": 2,
+   "question": "Who played the adult Lord Voldemort in the films?",
+   "choices": [
+    "Kenneth Branagh",
+    "Ralph Fiennes",
+    "Jason Isaacs",
+    "Gary Oldman"
+   ],
+   "answer": 1,
+   "explanation": "Fiennes played Voldemort from Goblet of Fire.",
+   "tags": [
+    "cast"
+   ]
+  },
+  {
+   "id": "hpf-023",
+   "subcategory": "cast",
+   "difficulty": 2,
+   "question": "Which actor played Cedric Diggory in the films?",
+   "choices": [
+    "Daniel Radcliffe",
+    "Robert Pattinson",
+    "Rupert Grint",
+    "Tom Felton"
+   ],
+   "answer": 1,
+   "explanation": "Pattinson played Cedric in Goblet of Fire.",
+   "tags": [
+    "cast"
+   ]
+  },
+  {
+   "id": "hpf-024",
+   "subcategory": "cast",
+   "difficulty": 2,
+   "question": "Who played Lucius Malfoy in the films?",
+   "choices": [
+    "Alan Rickman",
+    "Ralph Fiennes",
+    "Tom Felton",
+    "Jason Isaacs"
+   ],
+   "answer": 3,
+   "explanation": "Jason Isaacs played Draco's father.",
+   "tags": [
+    "cast"
+   ]
+  },
+  {
+   "id": "hpf-025",
+   "subcategory": "cast",
+   "difficulty": 2,
+   "question": "Who played Bellatrix Lestrange in the films?",
+   "choices": [
+    "Helena Bonham Carter",
+    "Emma Thompson",
+    "Imelda Staunton",
+    "Helen McCrory"
+   ],
+   "answer": 0,
+   "explanation": "Bonham Carter played Bellatrix.",
+   "tags": [
+    "cast"
+   ]
+  },
+  {
+   "id": "hpf-026",
+   "subcategory": "cast",
+   "difficulty": 2,
+   "question": "Who played Sirius Black in the films?",
+   "choices": [
+    "Alan Rickman",
+    "Gary Oldman",
+    "Timothy Spall",
+    "David Thewlis"
+   ],
+   "answer": 1,
+   "explanation": "Gary Oldman played Sirius from Prisoner of Azkaban.",
+   "tags": [
+    "cast"
+   ]
+  },
+  {
+   "id": "hpf-031",
+   "subcategory": "cast",
+   "difficulty": 2,
+   "question": "Who played Luna Lovegood in the films?",
+   "choices": [
+    "Helena Bonham Carter",
+    "Bonnie Wright",
+    "Emma Watson",
+    "Evanna Lynch"
+   ],
+   "answer": 3,
+   "explanation": "Evanna Lynch played Luna.",
+   "tags": [
+    "cast"
+   ]
+  },
+  {
+   "id": "hpf-033",
+   "subcategory": "crew-music",
+   "difficulty": 2,
+   "question": "Which director made both of the first two Harry Potter films?",
+   "choices": [
+    "David Yates",
+    "Chris Columbus",
+    "Alfonso Cuarón",
+    "Mike Newell"
+   ],
+   "answer": 1,
+   "explanation": "Columbus directed Philosopher's Stone and Chamber of Secrets.",
+   "tags": [
+    "crew-music"
+   ]
+  },
+  {
+   "id": "hpf-034",
+   "subcategory": "crew-music",
+   "difficulty": 2,
+   "question": "Which Mexican director made Harry Potter and the Prisoner of Azkaban?",
+   "choices": [
+    "Alejandro González Iñárritu",
+    "Alfonso Cuarón",
+    "Guillermo del Toro",
+    "Chris Columbus"
+   ],
+   "answer": 1,
+   "explanation": "Cuarón, from Mexico City, directed the third film.",
+   "tags": [
+    "crew-music"
+   ]
+  },
+  {
+   "id": "hpf-035",
+   "subcategory": "crew-music",
+   "difficulty": 2,
+   "question": "Who directed Harry Potter and the Goblet of Fire?",
+   "choices": [
+    "Alfonso Cuarón",
+    "Mike Newell",
+    "Chris Columbus",
+    "David Yates"
+   ],
+   "answer": 1,
+   "explanation": "Mike Newell, a British director, made the fourth film.",
+   "tags": [
+    "crew-music"
+   ]
+  },
+  {
+   "id": "hpf-037",
+   "subcategory": "crew-music",
+   "difficulty": 2,
+   "question": "Who composed the score of the first Harry Potter film, including Hedwig's Theme?",
+   "choices": [
+    "James Horner",
+    "John Williams",
+    "Howard Shore",
+    "Hans Zimmer"
+   ],
+   "answer": 1,
+   "explanation": "Williams scored Philosopher's Stone (2001).",
+   "tags": [
+    "crew-music"
+   ]
+  },
+  {
+   "id": "hpf-040",
+   "subcategory": "crew-music",
+   "difficulty": 2,
+   "question": "Which French composer scored both parts of Deathly Hallows?",
+   "choices": [
+    "Alexandre Desplat",
+    "Maurice Jarre",
+    "Michel Legrand",
+    "Yann Tiersen"
+   ],
+   "answer": 0,
+   "explanation": "Desplat scored Part 1 and Part 2.",
+   "tags": [
+    "crew-music"
+   ]
+  },
+  {
+   "id": "hpf-042",
+   "subcategory": "crew-music",
+   "difficulty": 2,
+   "question": "Which producer worked on all eight Harry Potter films?",
+   "choices": [
+    "Kathleen Kennedy",
+    "Jerry Bruckheimer",
+    "David Heyman",
+    "Brian Grazer"
+   ],
+   "answer": 2,
+   "explanation": "David Heyman produced the whole series.",
+   "tags": [
+    "crew-music"
+   ]
+  },
+  {
+   "id": "hpf-002",
+   "subcategory": "film-order",
+   "difficulty": 2,
+   "question": "Under which title was the first film released in the United States?",
+   "choices": [
+    "Harry Potter and the Magician's Stone",
+    "Harry Potter and the Philosopher's Stone",
+    "Harry Potter and the Sorcerer's Stone",
+    "Harry Potter and the Wizard's Stone"
+   ],
+   "answer": 2,
+   "explanation": "The US release used Sorcerer's Stone in place of the UK title.",
+   "tags": [
+    "film-order"
+   ]
+  },
+  {
+   "id": "hpf-003",
+   "subcategory": "film-order",
+   "difficulty": 2,
+   "question": "Which film was released immediately before Harry Potter and the Goblet of Fire?",
+   "choices": [
+    "Harry Potter and the Half-Blood Prince",
+    "Harry Potter and the Prisoner of Azkaban",
+    "Harry Potter and the Order of the Phoenix",
+    "Harry Potter and the Chamber of Secrets"
+   ],
+   "answer": 1,
+   "explanation": "Prisoner of Azkaban came out in 2004, Goblet of Fire in 2005.",
+   "tags": [
+    "film-order"
+   ]
+  },
+  {
+   "id": "hpf-004",
+   "subcategory": "film-order",
+   "difficulty": 2,
+   "question": "Into how many films was Harry Potter and the Deathly Hallows adapted?",
+   "choices": [
+    "Two",
+    "Three",
+    "Four",
+    "One"
+   ],
+   "answer": 0,
+   "explanation": "The final story was told in Part 1 and Part 2.",
+   "tags": [
+    "film-order"
+   ]
+  },
+  {
+   "id": "hpf-005",
+   "subcategory": "film-order",
+   "difficulty": 2,
+   "question": "Which film is the sixth in the Harry Potter series?",
+   "choices": [
+    "Harry Potter and the Deathly Hallows Part 1",
+    "Harry Potter and the Goblet of Fire",
+    "Harry Potter and the Order of the Phoenix",
+    "Harry Potter and the Half-Blood Prince"
+   ],
+   "answer": 3,
+   "explanation": "Half-Blood Prince is the sixth film.",
+   "tags": [
+    "film-order"
+   ]
+  },
+  {
+   "id": "hpf-006",
+   "subcategory": "film-order",
+   "difficulty": 2,
+   "question": "In which year was Harry Potter and the Chamber of Secrets released?",
+   "choices": [
+    "2003",
+    "2001",
+    "2002",
+    "2004"
+   ],
+   "answer": 2,
+   "explanation": "The second film came out a year after the first, in 2002.",
+   "tags": [
+    "film-order"
+   ]
+  },
+  {
+   "id": "hpf-007",
+   "subcategory": "film-order",
+   "difficulty": 2,
+   "question": "In which year was Harry Potter and the Prisoner of Azkaban released?",
+   "choices": [
+    "2004",
+    "2005",
+    "2003",
+    "2002"
+   ],
+   "answer": 0,
+   "explanation": "The third film came out in 2004.",
+   "tags": [
+    "film-order"
+   ]
+  },
+  {
+   "id": "hpf-012",
+   "subcategory": "film-order",
+   "difficulty": 2,
+   "question": "Which film is the seventh in the Harry Potter series?",
+   "choices": [
+    "Harry Potter and the Order of the Phoenix",
+    "Harry Potter and the Half-Blood Prince",
+    "Harry Potter and the Deathly Hallows Part 2",
+    "Harry Potter and the Deathly Hallows Part 1"
+   ],
+   "answer": 3,
+   "explanation": "Part 1 is the seventh film.",
+   "tags": [
+    "film-order"
+   ]
+  },
+  {
+   "id": "hpf-016",
+   "subcategory": "film-order",
+   "difficulty": 2,
+   "question": "Which of these four films was released last?",
+   "choices": [
+    "Harry Potter and the Order of the Phoenix",
+    "Harry Potter and the Prisoner of Azkaban",
+    "Harry Potter and the Half-Blood Prince",
+    "Harry Potter and the Goblet of Fire"
+   ],
+   "answer": 2,
+   "explanation": "Half-Blood Prince is from 2009, the others are 2004 to 2007.",
+   "tags": [
+    "film-order"
+   ]
+  },
+  {
+   "id": "hpf-065",
+   "subcategory": "magic-creatures",
+   "difficulty": 2,
+   "question": "In the films, what form does Harry Potter's Patronus take?",
+   "choices": [
+    "A phoenix",
+    "A doe",
+    "A stag",
+    "A wolf"
+   ],
+   "answer": 2,
+   "explanation": "Harry's Patronus is a stag, the form linked to his father.",
+   "tags": [
+    "magic-creatures"
+   ]
+  },
+  {
+   "id": "hpf-066",
+   "subcategory": "magic-creatures",
+   "difficulty": 2,
+   "question": "How many players does each Quidditch team field at once?",
+   "choices": [
+    "Nine",
+    "Eleven",
+    "Seven",
+    "Five"
+   ],
+   "answer": 2,
+   "explanation": "A team has three Chasers, two Beaters, a Keeper and a Seeker: seven players.",
+   "tags": [
+    "magic-creatures"
+   ]
+  },
+  {
+   "id": "hpf-068",
+   "subcategory": "magic-creatures",
+   "difficulty": 2,
+   "question": "Who sells Harry his first wand in Diagon Alley?",
+   "choices": [
+    "Mr Ollivander",
+    "Mr Filch",
+    "Mr Flourish",
+    "Mr Borgin"
+   ],
+   "answer": 0,
+   "explanation": "Ollivander's shop sells wands; the wand chooses the wizard.",
+   "tags": [
+    "magic-creatures"
+   ]
+  },
+  {
+   "id": "hpf-071",
+   "subcategory": "magic-creatures",
+   "difficulty": 2,
+   "question": "Which of these is one of the Deathly Hallows?",
+   "choices": [
+    "The Marauder's Map",
+    "The Elder Wand",
+    "The Time-Turner",
+    "The Sword of Gryffindor"
+   ],
+   "answer": 1,
+   "explanation": "The Elder Wand is one of the three Hallows.",
+   "tags": [
+    "magic-creatures"
+   ]
+  },
+  {
+   "id": "hpf-073",
+   "subcategory": "magic-creatures",
+   "difficulty": 2,
+   "question": "Which Hogwarts house has a badger as its emblem?",
+   "choices": [
+    "Gryffindor",
+    "Hufflepuff",
+    "Ravenclaw",
+    "Slytherin"
+   ],
+   "answer": 1,
+   "explanation": "The badger is the animal of Hufflepuff house.",
+   "tags": [
+    "magic-creatures"
+   ]
+  },
+  {
+   "id": "hpf-075",
+   "subcategory": "magic-creatures",
+   "difficulty": 2,
+   "question": "Which prison do the Dementors guard?",
+   "choices": [
+    "Azkaban",
+    "Alcatraz",
+    "Gringotts",
+    "Nurmengard"
+   ],
+   "answer": 0,
+   "explanation": "Dementors guard the wizard prison of Azkaban.",
+   "tags": [
+    "magic-creatures"
+   ]
+  },
+  {
+   "id": "hpf-076",
+   "subcategory": "magic-creatures",
+   "difficulty": 2,
+   "question": "What is the hippogriff in Prisoner of Azkaban called?",
+   "choices": [
+    "Fawkes",
+    "Buckbeak",
+    "Fluffy",
+    "Norbert"
+   ],
+   "answer": 1,
+   "explanation": "Hagrid's hippogriff is Buckbeak.",
+   "tags": [
+    "magic-creatures"
+   ]
+  },
+  {
+   "id": "hpf-077",
+   "subcategory": "magic-creatures",
+   "difficulty": 2,
+   "question": "Which magical device does Hermione use to attend extra classes in Prisoner of Azkaban?",
+   "choices": [
+    "A Remembrall",
+    "A Portkey",
+    "A Pensieve",
+    "A Time-Turner"
+   ],
+   "answer": 3,
+   "explanation": "The Time-Turner lets its wearer travel back a few hours.",
+   "tags": [
+    "magic-creatures"
+   ]
+  },
+  {
+   "id": "hpf-078",
+   "subcategory": "magic-creatures",
+   "difficulty": 2,
+   "question": "What is the magic mirror Harry finds in an unused classroom called?",
+   "choices": [
+    "The Mirror of Mist",
+    "The Mirror of Dreams",
+    "The Looking Glass of Truth",
+    "The Mirror of Erised"
+   ],
+   "answer": 3,
+   "explanation": "The Mirror of Erised shows the deepest desire of whoever looks in it.",
+   "tags": [
+    "magic-creatures"
+   ]
+  },
+  {
+   "id": "hpf-079",
+   "subcategory": "magic-creatures",
+   "difficulty": 2,
+   "question": "Which potion lets Harry and Ron take the appearance of other students in Chamber of Secrets?",
+   "choices": [
+    "Veritaserum",
+    "Polyjuice Potion",
+    "Amortentia",
+    "Felix Felicis"
+   ],
+   "answer": 1,
+   "explanation": "Polyjuice Potion transforms the drinker into someone else.",
+   "tags": [
+    "magic-creatures"
+   ]
+  },
+  {
+   "id": "hpf-098",
+   "subcategory": "making-of",
+   "difficulty": 2,
+   "question": "Who directed the first Harry Potter film, Philosopher's Stone?",
+   "choices": [
+    "Chris Columbus",
+    "Mike Newell",
+    "Alfonso Cuarón",
+    "David Yates"
+   ],
+   "answer": 0,
+   "explanation": "Chris Columbus directed the first two films.",
+   "tags": [
+    "making-of"
+   ]
+  },
+  {
+   "id": "hpf-102",
+   "subcategory": "making-of",
+   "difficulty": 2,
+   "question": "Which actor plays Severus Snape?",
+   "choices": [
+    "Kenneth Branagh",
+    "Gary Oldman",
+    "Ian McKellen",
+    "Alan Rickman"
+   ],
+   "answer": 3,
+   "explanation": "Alan Rickman plays Snape.",
+   "tags": [
+    "making-of"
+   ]
+  },
+  {
+   "id": "hpf-104",
+   "subcategory": "making-of",
+   "difficulty": 2,
+   "question": "Which actor voices Dobby the house-elf?",
+   "choices": [
+    "Simon McBurney",
+    "Warwick Davis",
+    "Toby Jones",
+    "Andy Serkis"
+   ],
+   "answer": 2,
+   "explanation": "Toby Jones voices Dobby.",
+   "tags": [
+    "making-of"
+   ]
+  },
+  {
+   "id": "hpf-105",
+   "subcategory": "making-of",
+   "difficulty": 2,
+   "question": "Which dragon breed does Harry face in the first task?",
+   "choices": [
+    "Chinese Fireball",
+    "Hungarian Horntail",
+    "Norwegian Ridgeback",
+    "Swedish Short-Snout"
+   ],
+   "answer": 1,
+   "explanation": "Harry faces a Hungarian Horntail.",
+   "tags": [
+    "making-of"
+   ]
+  },
+  {
+   "id": "hpf-111",
+   "subcategory": "making-of",
+   "difficulty": 2,
+   "question": "Which make of car flies in Chamber of Secrets?",
+   "choices": [
+    "Morris Minor",
+    "Rolls-Royce",
+    "Ford Anglia",
+    "Mini Cooper"
+   ],
+   "answer": 2,
+   "explanation": "The flying car is a Ford Anglia.",
+   "tags": [
+    "making-of"
+   ]
+  },
+  {
+   "id": "hpf-112",
+   "subcategory": "making-of",
+   "difficulty": 2,
+   "question": "What colour is the Knight Bus?",
+   "choices": [
+    "Red",
+    "Black",
+    "Purple",
+    "Green"
+   ],
+   "answer": 2,
+   "explanation": "The Knight Bus is purple.",
+   "tags": [
+    "making-of"
+   ]
+  },
+  {
+   "id": "hpf-083",
+   "subcategory": "places-sets",
+   "difficulty": 2,
+   "question": "Which English castle appears as Hogwarts in the first two films, including the broomstick lessons?",
+   "choices": [
+    "Alnwick Castle",
+    "Leeds Castle",
+    "Windsor Castle",
+    "Warwick Castle"
+   ],
+   "answer": 0,
+   "explanation": "Alnwick Castle in Northumberland doubled as Hogwarts.",
+   "tags": [
+    "places-sets"
+   ]
+  },
+  {
+   "id": "hpf-084",
+   "subcategory": "places-sets",
+   "difficulty": 2,
+   "question": "Which English cathedral's cloisters were used for Hogwarts corridors?",
+   "choices": [
+    "Lincoln Cathedral",
+    "Ely Cathedral",
+    "Salisbury Cathedral",
+    "Gloucester Cathedral"
+   ],
+   "answer": 3,
+   "explanation": "Gloucester Cathedral's cloisters stood in for Hogwarts corridors.",
+   "tags": [
+    "places-sets"
+   ]
+  },
+  {
+   "id": "hpf-087",
+   "subcategory": "places-sets",
+   "difficulty": 2,
+   "question": "Which beings live in the Black Lake and guard the hostages in the second task?",
+   "choices": [
+    "Inferi",
+    "Dementors",
+    "Merpeople",
+    "Pixies"
+   ],
+   "answer": 2,
+   "explanation": "Merpeople guard the hostages in the lake.",
+   "tags": [
+    "places-sets"
+   ]
+  },
+  {
+   "id": "hpf-088",
+   "subcategory": "places-sets",
+   "difficulty": 2,
+   "question": "What does the ceiling of the Great Hall show in the films?",
+   "choices": [
+    "Nothing, it is bare",
+    "A painting of the founders",
+    "Stars made of glass",
+    "The sky outside"
+   ],
+   "answer": 3,
+   "explanation": "The ceiling is enchanted to show the sky.",
+   "tags": [
+    "places-sets"
+   ]
+  },
+  {
+   "id": "hpf-090",
+   "subcategory": "places-sets",
+   "difficulty": 2,
+   "question": "In Order of the Phoenix, which piece of London street furniture is the visitors' entrance to the Ministry?",
+   "choices": [
+    "A red telephone box",
+    "A red pillar box",
+    "A bus shelter",
+    "A park bench"
+   ],
+   "answer": 0,
+   "explanation": "Visitors enter through a red telephone box.",
+   "tags": [
+    "places-sets"
+   ]
+  },
+  {
+   "id": "hpf-091",
+   "subcategory": "places-sets",
+   "difficulty": 2,
+   "question": "Which sweet shop is a favourite stop on a trip to the wizarding village near Hogwarts?",
+   "choices": [
+    "Zonko's",
+    "Honeydukes",
+    "Flourish and Blotts",
+    "Madam Malkin's"
+   ],
+   "answer": 1,
+   "explanation": "Honeydukes sells wizard sweets in Hogsmeade.",
+   "tags": [
+    "places-sets"
+   ]
+  },
+  {
+   "id": "hpf-092",
+   "subcategory": "places-sets",
+   "difficulty": 2,
+   "question": "Which tree guards the secret passage to the Shrieking Shack?",
+   "choices": [
+    "The Weeping Willow",
+    "The Dancing Elm",
+    "The Forbidden Pine",
+    "The Whomping Willow"
+   ],
+   "answer": 3,
+   "explanation": "The Whomping Willow hides the passage.",
+   "tags": [
+    "places-sets"
+   ]
+  },
+  {
+   "id": "hpf-094",
+   "subcategory": "places-sets",
+   "difficulty": 2,
+   "question": "Where does Harry's secret defence group practise in Order of the Phoenix?",
+   "choices": [
+    "The Forbidden Forest",
+    "The Room of Requirement",
+    "The Great Hall",
+    "The Chamber of Secrets"
+   ],
+   "answer": 1,
+   "explanation": "They meet in the Room of Requirement.",
+   "tags": [
+    "places-sets"
+   ]
+  },
+  {
+   "id": "hpf-095",
+   "subcategory": "places-sets",
+   "difficulty": 2,
+   "question": "What is the Weasley family home called?",
+   "choices": [
+    "Shell Cottage",
+    "Spinner's End",
+    "Grimmauld Place",
+    "The Burrow"
+   ],
+   "answer": 3,
+   "explanation": "The Weasleys live at the Burrow.",
+   "tags": [
+    "places-sets"
+   ]
+  },
+  {
+   "id": "hpf-049",
+   "subcategory": "story-moments",
+   "difficulty": 2,
+   "question": "In which film do the heroes play a life-size game of wizard's chess?",
+   "choices": [
+    "Chamber of Secrets",
+    "Goblet of Fire",
+    "Philosopher's Stone",
+    "Prisoner of Azkaban"
+   ],
+   "answer": 2,
+   "explanation": "The chess game guards the stone in the first film.",
+   "tags": [
+    "story-moments"
+   ]
+  },
+  {
+   "id": "hpf-050",
+   "subcategory": "story-moments",
+   "difficulty": 2,
+   "question": "Which creature does Harry fight in the Chamber of Secrets?",
+   "choices": [
+    "A werewolf",
+    "A dragon",
+    "A hippogriff",
+    "A basilisk"
+   ],
+   "answer": 3,
+   "explanation": "The giant serpent lives under the school.",
+   "tags": [
+    "story-moments"
+   ]
+  },
+  {
+   "id": "hpf-052",
+   "subcategory": "story-moments",
+   "difficulty": 2,
+   "question": "Which competition drives the story of the fourth film?",
+   "choices": [
+    "The Duelling Club",
+    "The Triwizard Tournament",
+    "The House Cup final",
+    "A Quidditch final"
+   ],
+   "answer": 1,
+   "explanation": "Goblet of Fire follows the Triwizard Tournament.",
+   "tags": [
+    "story-moments"
+   ]
+  },
+  {
+   "id": "hpf-053",
+   "subcategory": "story-moments",
+   "difficulty": 2,
+   "question": "In which film is Cedric Diggory killed?",
+   "choices": [
+    "Prisoner of Azkaban",
+    "Order of the Phoenix",
+    "Half-Blood Prince",
+    "Goblet of Fire"
+   ],
+   "answer": 3,
+   "explanation": "Cedric dies in the graveyard.",
+   "tags": [
+    "story-moments"
+   ]
+  },
+  {
+   "id": "hpf-054",
+   "subcategory": "story-moments",
+   "difficulty": 2,
+   "question": "In which film does Sirius Black die?",
+   "choices": [
+    "Goblet of Fire",
+    "Prisoner of Azkaban",
+    "Order of the Phoenix",
+    "Half-Blood Prince"
+   ],
+   "answer": 2,
+   "explanation": "Sirius falls at the Ministry of Magic.",
+   "tags": [
+    "story-moments"
+   ]
+  },
+  {
+   "id": "hpf-055",
+   "subcategory": "story-moments",
+   "difficulty": 2,
+   "question": "In which film is Dumbledore killed?",
+   "choices": [
+    "Half-Blood Prince",
+    "Order of the Phoenix",
+    "Goblet of Fire",
+    "Deathly Hallows Part 1"
+   ],
+   "answer": 0,
+   "explanation": "Dumbledore dies at the end of the sixth film.",
+   "tags": [
+    "story-moments"
+   ]
+  },
+  {
+   "id": "hpf-059",
+   "subcategory": "story-moments",
+   "difficulty": 2,
+   "question": "What does Harry nearly swallow to win his first match in the first film?",
+   "choices": [
+    "A Quaffle",
+    "A Bludger",
+    "The Golden Snitch",
+    "His wand"
+   ],
+   "answer": 2,
+   "explanation": "He catches the Snitch in his mouth.",
+   "tags": [
+    "story-moments"
+   ]
+  },
+  {
+   "id": "hpf-061",
+   "subcategory": "story-moments",
+   "difficulty": 2,
+   "question": "Which creatures guard Azkaban prison in the films?",
+   "choices": [
+    "Basilisks",
+    "Inferi",
+    "Dementors",
+    "Goblins"
+   ],
+   "answer": 2,
+   "explanation": "Dementors guard the wizard prison.",
+   "tags": [
+    "story-moments"
+   ]
+  },
+  {
+   "id": "hpf-063",
+   "subcategory": "story-moments",
+   "difficulty": 2,
+   "question": "In which film do students attend the Yule Ball?",
+   "choices": [
+    "Goblet of Fire",
+    "Order of the Phoenix",
+    "Half-Blood Prince",
+    "Prisoner of Azkaban"
+   ],
+   "answer": 0,
+   "explanation": "The ball takes place in the fourth film.",
+   "tags": [
+    "story-moments"
+   ]
+  },
+  {
+   "id": "hpf-064",
+   "subcategory": "story-moments",
+   "difficulty": 2,
+   "question": "How does the final film end?",
+   "choices": [
+    "With Harry sworn in as Minister",
+    "With Voldemort's funeral",
+    "With a scene at King's Cross nineteen years later",
+    "With Ron and Hermione's wedding"
+   ],
+   "answer": 2,
+   "explanation": "The epilogue shows the heroes as parents.",
+   "tags": [
+    "story-moments"
+   ]
+  },
+  {
+   "id": "hpf-027",
+   "subcategory": "cast",
+   "difficulty": 3,
+   "question": "Who played Professor Quirrell in the first film?",
+   "choices": [
+    "Brendan Gleeson",
+    "Kenneth Branagh",
+    "Ian Hart",
+    "David Thewlis"
+   ],
+   "answer": 2,
+   "explanation": "Ian Hart played Quirrell.",
+   "tags": [
+    "cast"
+   ]
+  },
+  {
+   "id": "hpf-028",
+   "subcategory": "cast",
+   "difficulty": 3,
+   "question": "Who played Alastor \"Mad-Eye\" Moody in Goblet of Fire?",
+   "choices": [
+    "Brendan Gleeson",
+    "Timothy Spall",
+    "David Tennant",
+    "Jim Broadbent"
+   ],
+   "answer": 0,
+   "explanation": "Gleeson played Moody.",
+   "tags": [
+    "cast"
+   ]
+  },
+  {
+   "id": "hpf-029",
+   "subcategory": "cast",
+   "difficulty": 3,
+   "question": "Who played Horace Slughorn in the films?",
+   "choices": [
+    "Mark Williams",
+    "Jim Broadbent",
+    "Brendan Gleeson",
+    "Timothy Spall"
+   ],
+   "answer": 1,
+   "explanation": "Jim Broadbent played Slughorn.",
+   "tags": [
+    "cast"
+   ]
+  },
+  {
+   "id": "hpf-030",
+   "subcategory": "cast",
+   "difficulty": 3,
+   "question": "What is true of the actors who played Fred and George Weasley?",
+   "choices": [
+    "They are unrelated",
+    "They are brothers born three years apart",
+    "They are real-life twins",
+    "They are cousins"
+   ],
+   "answer": 2,
+   "explanation": "James and Oliver Phelps are twin brothers.",
+   "tags": [
+    "cast"
+   ]
+  },
+  {
+   "id": "hpf-032",
+   "subcategory": "cast",
+   "difficulty": 3,
+   "question": "Who voiced Dobby the house-elf in the films?",
+   "choices": [
+    "Andy Serkis",
+    "Toby Jones",
+    "Warwick Davis",
+    "Simon McBurney"
+   ],
+   "answer": 1,
+   "explanation": "Toby Jones voiced Dobby.",
+   "tags": [
+    "cast"
+   ]
+  },
+  {
+   "id": "hpf-036",
+   "subcategory": "crew-music",
+   "difficulty": 3,
+   "question": "How many Harry Potter films did David Yates direct?",
+   "choices": [
+    "Four",
+    "Two",
+    "Five",
+    "Three"
+   ],
+   "answer": 0,
+   "explanation": "Yates directed films five to eight.",
+   "tags": [
+    "crew-music"
+   ]
+  },
+  {
+   "id": "hpf-038",
+   "subcategory": "crew-music",
+   "difficulty": 3,
+   "question": "Who composed the score of Goblet of Fire?",
+   "choices": [
+    "Alexandre Desplat",
+    "Nicholas Hooper",
+    "Patrick Doyle",
+    "John Williams"
+   ],
+   "answer": 2,
+   "explanation": "Patrick Doyle composed the fourth film's score.",
+   "tags": [
+    "crew-music"
+   ]
+  },
+  {
+   "id": "hpf-039",
+   "subcategory": "crew-music",
+   "difficulty": 3,
+   "question": "Which composer scored both Order of the Phoenix and Half-Blood Prince?",
+   "choices": [
+    "Nicholas Hooper",
+    "Patrick Doyle",
+    "Alexandre Desplat",
+    "John Williams"
+   ],
+   "answer": 0,
+   "explanation": "Hooper composed films five and six.",
+   "tags": [
+    "crew-music"
+   ]
+  },
+  {
+   "id": "hpf-041",
+   "subcategory": "crew-music",
+   "difficulty": 3,
+   "question": "Which screenwriter wrote seven of the eight Harry Potter films?",
+   "choices": [
+    "Michael Goldenberg",
+    "Steve Kloves",
+    "Mike Newell",
+    "Chris Columbus"
+   ],
+   "answer": 1,
+   "explanation": "Kloves wrote every film except Order of the Phoenix.",
+   "tags": [
+    "crew-music"
+   ]
+  },
+  {
+   "id": "hpf-045",
+   "subcategory": "crew-music",
+   "difficulty": 3,
+   "question": "Which production designer shaped the look of Hogwarts across all eight films?",
+   "choices": [
+    "Rick Carter",
+    "Stuart Craig",
+    "Dennis Gassner",
+    "Anna Pinnock"
+   ],
+   "answer": 1,
+   "explanation": "Craig led the design of the series.",
+   "tags": [
+    "crew-music"
+   ]
+  },
+  {
+   "id": "hpf-046",
+   "subcategory": "crew-music",
+   "difficulty": 3,
+   "question": "Which costume designer dressed the films from Prisoner of Azkaban to the end?",
+   "choices": [
+    "Colleen Atwood",
+    "Judianna Makovsky",
+    "Jany Temime",
+    "Sandy Powell"
+   ],
+   "answer": 2,
+   "explanation": "Temime designed costumes for films three to eight.",
+   "tags": [
+    "crew-music"
+   ]
+  },
+  {
+   "id": "hpf-008",
+   "subcategory": "film-order",
+   "difficulty": 3,
+   "question": "In which year was Harry Potter and the Order of the Phoenix released?",
+   "choices": [
+    "2008",
+    "2006",
+    "2005",
+    "2007"
+   ],
+   "answer": 3,
+   "explanation": "The fifth film opened in July 2007.",
+   "tags": [
+    "film-order"
+   ]
+  },
+  {
+   "id": "hpf-009",
+   "subcategory": "film-order",
+   "difficulty": 3,
+   "question": "About how many years passed between the first film (2001) and the last film (2011)?",
+   "choices": [
+    "Ten years",
+    "Eight years",
+    "Seven years",
+    "Twelve years"
+   ],
+   "answer": 0,
+   "explanation": "2011 minus 2001 is ten.",
+   "tags": [
+    "film-order"
+   ]
+  },
+  {
+   "id": "hpf-010",
+   "subcategory": "film-order",
+   "difficulty": 3,
+   "question": "In which year was Harry Potter and the Goblet of Fire released?",
+   "choices": [
+    "2005",
+    "2003",
+    "2004",
+    "2006"
+   ],
+   "answer": 0,
+   "explanation": "The fourth film came out in November 2005.",
+   "tags": [
+    "film-order"
+   ]
+  },
+  {
+   "id": "hpf-013",
+   "subcategory": "film-order",
+   "difficulty": 3,
+   "question": "Which film was released directly after Harry Potter and the Order of the Phoenix?",
+   "choices": [
+    "Harry Potter and the Half-Blood Prince",
+    "Harry Potter and the Goblet of Fire",
+    "Harry Potter and the Deathly Hallows Part 1",
+    "Harry Potter and the Prisoner of Azkaban"
+   ],
+   "answer": 0,
+   "explanation": "Half-Blood Prince followed in 2009.",
+   "tags": [
+    "film-order"
+   ]
+  },
+  {
+   "id": "hpf-014",
+   "subcategory": "film-order",
+   "difficulty": 3,
+   "question": "Which of the eight Harry Potter films has the shortest running time?",
+   "choices": [
+    "Harry Potter and the Order of the Phoenix",
+    "Harry Potter and the Deathly Hallows Part 1",
+    "Harry Potter and the Prisoner of Azkaban",
+    "Harry Potter and the Deathly Hallows Part 2"
+   ],
+   "answer": 3,
+   "explanation": "Part 2 runs about 130 minutes, the shortest of the eight.",
+   "tags": [
+    "film-order"
+   ]
+  },
+  {
+   "id": "hpf-015",
+   "subcategory": "film-order",
+   "difficulty": 3,
+   "question": "How many years from 2001 to 2011, both included, had no Harry Potter film released?",
+   "choices": [
+    "Two",
+    "Four",
+    "Three",
+    "Five"
+   ],
+   "answer": 2,
+   "explanation": "The years 2003, 2006 and 2008 had no release.",
+   "tags": [
+    "film-order"
+   ]
+  },
+  {
+   "id": "hpf-069",
+   "subcategory": "magic-creatures",
+   "difficulty": 3,
+   "question": "Which pair give Harry the Marauder's Map in the films?",
+   "choices": [
+    "Ron and Hermione",
+    "Fred and George Weasley",
+    "Lupin and Sirius Black",
+    "Neville and Seamus"
+   ],
+   "answer": 1,
+   "explanation": "The Weasley twins hand Harry the Map in Prisoner of Azkaban.",
+   "tags": [
+    "magic-creatures"
+   ]
+  },
+  {
+   "id": "hpf-070",
+   "subcategory": "magic-creatures",
+   "difficulty": 3,
+   "question": "Who destroys the locket Horcrux with the Sword of Gryffindor in Deathly Hallows Part 1?",
+   "choices": [
+    "Neville",
+    "Harry",
+    "Ron",
+    "Hermione"
+   ],
+   "answer": 2,
+   "explanation": "In the film, Ron destroys the locket with the sword.",
+   "tags": [
+    "magic-creatures"
+   ]
+  },
+  {
+   "id": "hpf-072",
+   "subcategory": "magic-creatures",
+   "difficulty": 3,
+   "question": "In Goblet of Fire, where does the third task take place?",
+   "choices": [
+    "A dungeon",
+    "The Forbidden Forest",
+    "A hedge maze",
+    "The Black Lake"
+   ],
+   "answer": 2,
+   "explanation": "The champions race through a hedge maze to reach the Triwizard Cup.",
+   "tags": [
+    "magic-creatures"
+   ]
+  },
+  {
+   "id": "hpf-074",
+   "subcategory": "magic-creatures",
+   "difficulty": 3,
+   "question": "Which bird helps Harry against the basilisk by attacking its eyes?",
+   "choices": [
+    "Errol the owl",
+    "Pigwidgeon the owl",
+    "Fawkes the phoenix",
+    "Hedwig the owl"
+   ],
+   "answer": 2,
+   "explanation": "Fawkes, Dumbledore's phoenix, blinds the basilisk.",
+   "tags": [
+    "magic-creatures"
+   ]
+  },
+  {
+   "id": "hpf-099",
+   "subcategory": "making-of",
+   "difficulty": 3,
+   "question": "Who directed the last four films, from Order of the Phoenix to Deathly Hallows Part 2?",
+   "choices": [
+    "Alfonso Cuarón",
+    "David Yates",
+    "Chris Columbus",
+    "Mike Newell"
+   ],
+   "answer": 1,
+   "explanation": "David Yates directed the last four films.",
+   "tags": [
+    "making-of"
+   ]
+  },
+  {
+   "id": "hpf-100",
+   "subcategory": "making-of",
+   "difficulty": 3,
+   "question": "Who directed Goblet of Fire?",
+   "choices": [
+    "David Yates",
+    "Chris Columbus",
+    "Alfonso Cuarón",
+    "Mike Newell"
+   ],
+   "answer": 3,
+   "explanation": "Mike Newell directed the fourth film.",
+   "tags": [
+    "making-of"
+   ]
+  },
+  {
+   "id": "hpf-101",
+   "subcategory": "making-of",
+   "difficulty": 3,
+   "question": "Which composer scored both parts of Deathly Hallows?",
+   "choices": [
+    "John Williams",
+    "Nicholas Hooper",
+    "Alexandre Desplat",
+    "Patrick Doyle"
+   ],
+   "answer": 2,
+   "explanation": "Alexandre Desplat scored both parts of Deathly Hallows.",
+   "tags": [
+    "making-of"
+   ]
+  },
+  {
+   "id": "hpf-103",
+   "subcategory": "making-of",
+   "difficulty": 3,
+   "question": "Which species of owl plays Hedwig in the films?",
+   "choices": [
+    "Snowy owl",
+    "Great horned owl",
+    "Tawny owl",
+    "Barn owl"
+   ],
+   "answer": 0,
+   "explanation": "Hedwig was played by snowy owls.",
+   "tags": [
+    "making-of"
+   ]
+  },
+  {
+   "id": "hpf-107",
+   "subcategory": "making-of",
+   "difficulty": 3,
+   "question": "Roughly how much did the eight films earn worldwide?",
+   "choices": [
+    "About 1 billion dollars",
+    "About 3 billion dollars",
+    "Over 7 billion dollars",
+    "Over 15 billion dollars"
+   ],
+   "answer": 2,
+   "explanation": "The series earned over 7 billion dollars.",
+   "tags": [
+    "making-of"
+   ]
+  },
+  {
+   "id": "hpf-108",
+   "subcategory": "making-of",
+   "difficulty": 3,
+   "question": "How many Academy Awards did the eight films win?",
+   "choices": [
+    "Three",
+    "Eight",
+    "One",
+    "None"
+   ],
+   "answer": 3,
+   "explanation": "The series won no Oscars.",
+   "tags": [
+    "making-of"
+   ]
+  },
+  {
+   "id": "hpf-109",
+   "subcategory": "making-of",
+   "difficulty": 3,
+   "question": "In which year did the studio tour open?",
+   "choices": [
+    "2010",
+    "2008",
+    "2014",
+    "2012"
+   ],
+   "answer": 3,
+   "explanation": "The tour opened in 2012.",
+   "tags": [
+    "making-of"
+   ]
+  },
+  {
+   "id": "hpf-110",
+   "subcategory": "making-of",
+   "difficulty": 3,
+   "question": "Which two teams play the Quidditch World Cup final in Goblet of Fire?",
+   "choices": [
+    "Wales and Poland",
+    "Bulgaria and Brazil",
+    "Ireland and Bulgaria",
+    "Ireland and Scotland"
+   ],
+   "answer": 2,
+   "explanation": "Ireland plays Bulgaria in the final.",
+   "tags": [
+    "making-of"
+   ]
+  },
+  {
+   "id": "hpf-082",
+   "subcategory": "places-sets",
+   "difficulty": 3,
+   "question": "The real steam locomotive that played the Hogwarts Express is named",
+   "choices": [
+    "Flying Scotsman",
+    "Tornado",
+    "Mallard",
+    "Olton Hall"
+   ],
+   "answer": 3,
+   "explanation": "The Hall-class engine Olton Hall played the train, dressed as Hogwarts Castle.",
+   "tags": [
+    "places-sets"
+   ]
+  },
+  {
+   "id": "hpf-085",
+   "subcategory": "places-sets",
+   "difficulty": 3,
+   "question": "Which London covered market was used for the exterior of the Leaky Cauldron in Philosopher's Stone?",
+   "choices": [
+    "Covent Garden",
+    "Borough Market",
+    "Leadenhall Market",
+    "Camden Market"
+   ],
+   "answer": 2,
+   "explanation": "Leadenhall Market in the City of London stood in for the Leaky Cauldron's street.",
+   "tags": [
+    "places-sets"
+   ]
+  },
+  {
+   "id": "hpf-086",
+   "subcategory": "places-sets",
+   "difficulty": 3,
+   "question": "Which London building was used for the interior of Gringotts?",
+   "choices": [
+    "The British Museum",
+    "St Pancras Station",
+    "Somerset House",
+    "Australia House"
+   ],
+   "answer": 3,
+   "explanation": "Australia House on the Strand was used for the bank's great hall.",
+   "tags": [
+    "places-sets"
+   ]
+  },
+  {
+   "id": "hpf-089",
+   "subcategory": "places-sets",
+   "difficulty": 3,
+   "question": "Which centaur saves Harry in the Forbidden Forest in Philosopher's Stone?",
+   "choices": [
+    "Firenze",
+    "Ronan",
+    "Bane",
+    "Chiron"
+   ],
+   "answer": 0,
+   "explanation": "Firenze carries Harry to safety.",
+   "tags": [
+    "places-sets"
+   ]
+  },
+  {
+   "id": "hpf-096",
+   "subcategory": "places-sets",
+   "difficulty": 3,
+   "question": "Who is killed in the graveyard in Goblet of Fire?",
+   "choices": [
+    "Viktor Krum",
+    "Cedric Diggory",
+    "Neville Longbottom",
+    "Fleur Delacour"
+   ],
+   "answer": 1,
+   "explanation": "Cedric Diggory is killed there.",
+   "tags": [
+    "places-sets"
+   ]
+  },
+  {
+   "id": "hpf-051",
+   "subcategory": "story-moments",
+   "difficulty": 3,
+   "question": "In which film do Harry and Hermione use a Time-Turner to change one evening?",
+   "choices": [
+    "Goblet of Fire",
+    "Prisoner of Azkaban",
+    "Order of the Phoenix",
+    "Chamber of Secrets"
+   ],
+   "answer": 1,
+   "explanation": "The Time-Turner is central to the third film.",
+   "tags": [
+    "story-moments"
+   ]
+  },
+  {
+   "id": "hpf-056",
+   "subcategory": "story-moments",
+   "difficulty": 3,
+   "question": "In which film does Dobby die?",
+   "choices": [
+    "Chamber of Secrets",
+    "Deathly Hallows Part 1",
+    "Half-Blood Prince",
+    "Deathly Hallows Part 2"
+   ],
+   "answer": 1,
+   "explanation": "Dobby saves the heroes at Shell Cottage.",
+   "tags": [
+    "story-moments"
+   ]
+  },
+  {
+   "id": "hpf-057",
+   "subcategory": "story-moments",
+   "difficulty": 3,
+   "question": "In which film does Snape die?",
+   "choices": [
+    "Order of the Phoenix",
+    "Deathly Hallows Part 1",
+    "Deathly Hallows Part 2",
+    "Half-Blood Prince"
+   ],
+   "answer": 2,
+   "explanation": "Snape dies early in Part 2.",
+   "tags": [
+    "story-moments"
+   ]
+  },
+  {
+   "id": "hpf-058",
+   "subcategory": "story-moments",
+   "difficulty": 3,
+   "question": "Which of these films was released first?",
+   "choices": [
+    "Order of the Phoenix",
+    "Goblet of Fire",
+    "Half-Blood Prince",
+    "Deathly Hallows Part 1"
+   ],
+   "answer": 1,
+   "explanation": "Goblet of Fire came out in 2005.",
+   "tags": [
+    "story-moments"
+   ]
+  },
+  {
+   "id": "hpf-060",
+   "subcategory": "story-moments",
+   "difficulty": 3,
+   "question": "Which teacher shares the back of his head with Voldemort in the first film?",
+   "choices": [
+    "Filius Flitwick",
+    "Professor Quirrell",
+    "Gilderoy Lockhart",
+    "Severus Snape"
+   ],
+   "answer": 1,
+   "explanation": "Quirrell hides Voldemort under his turban.",
+   "tags": [
+    "story-moments"
+   ]
+  },
+  {
+   "id": "hpf-062",
+   "subcategory": "story-moments",
+   "difficulty": 3,
+   "question": "In which film do the heroes escape Gringotts on a dragon?",
+   "choices": [
+    "Half-Blood Prince",
+    "Deathly Hallows Part 2",
+    "Deathly Hallows Part 1",
+    "Order of the Phoenix"
+   ],
+   "answer": 1,
+   "explanation": "The dragon escape is in Part 2.",
+   "tags": [
+    "story-moments"
+   ]
+  },
+  {
+   "id": "hpf-043",
+   "subcategory": "crew-music",
+   "difficulty": 4,
+   "question": "How many Academy Awards did the eight Harry Potter films win in total?",
+   "choices": [
+    "Two",
+    "Three",
+    "One",
+    "None"
+   ],
+   "answer": 3,
+   "explanation": "The series received nominations but no Oscar wins.",
+   "tags": [
+    "crew-music"
+   ]
+  },
+  {
+   "id": "hpf-044",
+   "subcategory": "crew-music",
+   "difficulty": 4,
+   "question": "Which cinematographer earned an Oscar nomination for Half-Blood Prince?",
+   "choices": [
+    "Michael Seresin",
+    "Bruno Delbonnel",
+    "Roger Pratt",
+    "Eduardo Serra"
+   ],
+   "answer": 1,
+   "explanation": "Delbonnel shot the sixth film and was nominated.",
+   "tags": [
+    "crew-music"
+   ]
+  },
+  {
+   "id": "hpf-048",
+   "subcategory": "crew-music",
+   "difficulty": 4,
+   "question": "Which film was the highest-grossing of the series at the worldwide box office?",
+   "choices": [
+    "Goblet of Fire",
+    "Philosopher's Stone",
+    "Order of the Phoenix",
+    "Deathly Hallows Part 2"
+   ],
+   "answer": 3,
+   "explanation": "Part 2 earned about 1.3 billion dollars at release.",
+   "tags": [
+    "crew-music"
+   ]
+  },
+  {
+   "id": "hpf-011",
+   "subcategory": "film-order",
+   "difficulty": 4,
+   "question": "In which month of 2011 did Deathly Hallows Part 2 open in cinemas?",
+   "choices": [
+    "August",
+    "June",
+    "July",
+    "November"
+   ],
+   "answer": 2,
+   "explanation": "Part 2 opened in July 2011.",
+   "tags": [
+    "film-order"
+   ]
+  },
+  {
+   "id": "hpf-106",
+   "subcategory": "making-of",
+   "difficulty": 4,
+   "question": "Which actor voices Aragog in Chamber of Secrets?",
+   "choices": [
+    "Julian Glover",
+    "Timothy Spall",
+    "Brian Blessed",
+    "Jim Broadbent"
+   ],
+   "answer": 0,
+   "explanation": "Julian Glover voices Aragog.",
+   "tags": [
+    "making-of"
+   ]
+  }
+ ]
+}

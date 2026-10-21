@@ -27,7 +27,8 @@
     "philosophy.json",
     "politics.json",
     "assoc.json",
-    "chrono.json"
+    "chrono.json",
+    "hpfilms.json"
   ],
   "variantFiles": [
     "variants/science.json",
@@ -52,6 +53,7 @@
     "variants/philosophy.json",
     "variants/politics.json",
     "variants/assoc.json",
-    "variants/chrono.json"
+    "variants/chrono.json",
+    "variants/hpfilms.json"
   ]
 }

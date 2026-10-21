@@ -281,4 +281,4 @@ export function sprite(name, px = 32, alt = '') {
 }
 
 export const AVATAR_SPRITES = ['gasmask', 'welder', 'radio', 'owl', 'fox', 'crow', 'miner', 'jester'];
-export const CATEGORY_SPRITES = { news: 'news', history: 'history', geography: 'geography', science: 'science', medicine: 'medicine', literature: 'arts', mythology: 'history', philosophy: 'science', politics: 'finance', phobia: 'phobia', nature: 'nature', arts: 'arts', symbols: 'symbols', tunes: 'tunes', cinema: 'cinema', popculture: 'popculture', manga: 'manga', cooking: 'cooking', finance: 'finance', business: 'business', sports: 'sports', f1: 'f1', hockey: 'hockey', music: 'music' };
+export const CATEGORY_SPRITES = { news: 'news', history: 'history', geography: 'geography', science: 'science', medicine: 'medicine', literature: 'arts', mythology: 'history', philosophy: 'science', politics: 'finance', phobia: 'phobia', nature: 'nature', arts: 'arts', symbols: 'symbols', tunes: 'tunes', cinema: 'cinema', popculture: 'popculture', manga: 'manga', cooking: 'cooking', finance: 'finance', business: 'business', sports: 'sports', f1: 'f1', hockey: 'hockey', music: 'music', hpfilms: 'cinema' };

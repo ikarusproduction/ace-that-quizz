@@ -27,6 +27,7 @@ export const CATEGORIES = {
   f1: { label: 'Formula 1', short: 'F1' },
   hockey: { label: 'Hockey', short: 'Hockey' },
   music: { label: 'Music', short: 'Music' },
+  hpfilms: { label: 'Harry Potter (the films)', short: 'HP films' },
 };
 
 /** Categories shown in statistics, in display order. */

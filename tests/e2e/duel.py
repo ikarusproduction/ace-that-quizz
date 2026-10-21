@@ -6,6 +6,7 @@ root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 srv = subprocess.Popen(['node', 'scripts/serve.js'], env={'PORT': '5198', 'PATH': os.environ['PATH']}, cwd=root)
 time.sleep(1.2)
 errors = []
+SPOILS = []
 CORRECT = """(wrong) => {
   const app = window.__app;
   const text = document.querySelector('#app').innerText;
@@ -44,6 +45,12 @@ def drive(pg, tag, accuracy_wrong_every=0, max_steps=900, until=None):
             except Exception: pass
         elif pg.locator('.stick-bottom .btn').count():
             lab = pg.locator('.stick-bottom .btn').first.inner_text().lower()
+            if pg.locator('text=/Choose two cards/i').count():
+                # after a boss: take two of the offered cards
+                pg.locator('.reward-grid .card-tile').nth(0).click(no_wait_after=True); pg.locator('.reward-grid .card-tile').nth(1).click(no_wait_after=True); time.sleep(.2)
+                pg.screenshot(path=f'/tmp/duel-{tag}-spoils.png', full_page=True)
+                assert 'take both' in pg.locator('.stick-bottom .btn').first.inner_text().lower()
+                pg.locator('.stick-bottom .btn').first.click(no_wait_after=True); time.sleep(.4); SPOILS.append(1); continue
             if 'see results' in lab or 'back to the map' in lab or 'face' in lab or 'start' in lab or 'continue' in lab:
                 if 'l' not in shots and 'face' in lab: time.sleep(2); pg.screenshot(path=f'/tmp/duel-{tag}-loadout.png', full_page=True); shots.add('l')
                 try: pg.locator('.stick-bottom .btn').first.click(no_wait_after=True, timeout=1500)
@@ -99,6 +106,7 @@ try:
             t = pg.inner_text('#app')
             if 'beat the House' in t or 'lights go out' in t: break
         print('MAP visited kinds:', visited); print(pg.inner_text('#app')[:300].replace(chr(10), ' | '))
+        print('SPOILS picked:', len(SPOILS))
         pg.screenshot(path='/tmp/duel-map-end.png', full_page=True)
         b.close()
 finally:
