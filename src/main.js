@@ -18,6 +18,7 @@ import { statsScreen } from './ui/screens/stats.js';
 import { settingsScreen } from './ui/screens/settings.js';
 import { loadConfig, ensureAccess, ACCESS_KEY } from './ui/gate.js';
 import { createCloud, cloudAvailable } from './storage/cloud.js';
+import { createSafety, openSafetyStore } from './storage/safety.js';
 import { toast } from './ui/components.js';
 import { OnlineSession } from './net/session.js';
 
@@ -45,6 +46,16 @@ await ensureAccess(document.getElementById('app'), config);
 const ok = await boot(document.getElementById('app'));
 if (ok) {
   try { navigator.storage?.persist?.(); } catch { /* ignore */ }
+  // A second copy of the players on this device: if the main database ever comes back empty, they are put back.
+  try {
+    const safety = createSafety({ repo: app.repo, store: await openSafetyStore() });
+    const back = await safety.restoreIfEmpty().catch(() => null);
+    if (back?.profilesAdded) toast(`Put back ${back.profilesAdded} player${back.profilesAdded === 1 ? '' : 's'} from the safety copy on this device`);
+    else await safety.save().catch(() => {});
+    app.safety = safety;
+    setInterval(() => { safety.save().catch(() => {}); }, 120000);
+    document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') safety.save().catch(() => {}); });
+  } catch { /* no second database in this browser: the main one still works */ }
   if (cloudAvailable(config)) {
     const getAccess = () => { try { return localStorage.getItem(ACCESS_KEY) ?? ''; } catch { return ''; } };
     app.cloud = createCloud({ repo: app.repo, base: config.relay, getAccess });

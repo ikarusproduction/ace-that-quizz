@@ -6,6 +6,7 @@
 //   4-5. two more drawn from News, History, Geography, Nature and Arts,
 //        never the same category twice among these two. While the tune bank is
 //        empty, slot 2 is a music question, so Arts can appear twice.
+import { topicKey } from './learning.js';
 import { RULES, ACT_DIFFICULTY, ACT_BOSSES, NORMAL_HAZARD_IDS, HAZARDS, BOSSES } from './modifiers.js';
 import { statCategory } from './bank.js';
 import { themePool } from './themes.js';
@@ -47,8 +48,12 @@ export function pickQuestion({ pool, rng, difficulty, usedIds, avoidIds = new Se
     { fresh: false, exact: true },
     { fresh: false, exact: false },
   ];
+  // Do not follow a question with another form of the same one (per-007a then per-007b).
+  const recent = new Set([...usedIds].slice(-2).map(topicKey));
   for (const tier of tiers) {
     let candidates = pool.filter((q) => ok(q, tier));
+    const spaced = candidates.filter((q) => !recent.has(topicKey(q.family ?? q.id)));
+    if (spaced.length) candidates = spaced;
     if (candidates.length && !tier.exact) {
       // Closest difficulty first when widening.
       const best = Math.min(...candidates.map((q) => Math.abs(q.difficulty - difficulty)));

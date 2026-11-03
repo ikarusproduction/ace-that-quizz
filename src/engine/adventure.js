@@ -217,7 +217,7 @@ export function hexPlan(kind, step, count, rng) {
 /**
  * The questions for a step. The learning engine picks them: reviews that are due first, then new concepts from this
  * chapter's focus, never the concepts of the step before (`exclude`). `learn` is the player's learning record.
- * Deterministic for (adventure, step, road, attempt, learn, now).
+ * Deterministic for (adventure, step, road, attempt, learn, now). `now` is part of the seed, so every visit to a step is a fresh draw.
  */
 export function buildLevel(adv, step, road, ctx, { learn = null, now = 0, attempt = 0, exclude = [] } = {}) {
   if (!ADVENTURES[adv] || step < 1 || step > STEPS) throw new Error('No such step');
@@ -242,13 +242,13 @@ export function buildLevel(adv, step, road, ctx, { learn = null, now = 0, attemp
     const need = count + exclude.length - [...allowed.values()].filter(unseen).length;
     if (need <= 0) return;
     const fresh = candidates.filter((c) => unseen(c) && !allowed.has(c.id));
-    for (const c of Rng.fromSeed(`borrow:${tag}:${adv}:${step}:${attempt}`).shuffle(fresh).slice(0, need)) allowed.set(c.id, c);
+    for (const c of Rng.fromSeed(`borrow:${tag}:${adv}:${step}:${attempt}:${now}`).shuffle(fresh).slice(0, need)) allowed.set(c.id, c);
   };
   if (chapter.focus.length) borrow(concepts.filter((c) => inSubs(c, chapter.focus)), 'chapter');
   borrow(concepts, 'any');
   let list = [...allowed.values()];
   if (list.length < count + exclude.length) list = concepts; // a thin focus never starves a step
-  const sel = selectSession({ items, pool: list, now, seed: `adv:${adv}:${step}:${road}:${attempt}`, target, mode: 'adventure', size: count, exclude });
+  const sel = selectSession({ items, pool: list, now, seed: `adv:${adv}:${step}:${road}:${attempt}:${now}`, target, mode: 'adventure', size: count, exclude });
   const rng = Rng.fromSeed(`hex:${adv}:${step}:${attempt}`);
   const questions = sel.map((x) => ({ qid: ctx.families.get(x.id)[x.level].id, family: x.id, level: x.level, reason: x.reason }));
   return {

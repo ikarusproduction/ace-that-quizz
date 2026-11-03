@@ -129,3 +129,9 @@ A dedicated trainer to learn all 118 elements by heart, plus a question category
 Dust prices are steep on purpose (a frame costs 120 to 2,400 dust). A few of the best pieces also need prestige: a level (House Seal 35, Little Crown 20, Ghost 15, The House room 30) or the Science Adventure (Wisps at step 50; The Void and the Orbit room when it is finished). Other pieces cannot be bought at all: Hexed, Hex Field, Hex Dust, Hologram, Gilded and the Hex Field room only drop from hex packs (a bonus card rolled from its own seed, so a pack's hex cards never change; a duplicate turns into dust).
 
 The new **Menu rooms** slot is an animated backdrop for the main menu (pure CSS, honours reduce-motion). The menu also plays a short music-box lullaby (`startMusic('menu')`) once the browser allows sound; it stops when you leave the menu. Boss hexes in the Adventure fly at you as effect emblems (ink blob, goo, quake, blur, flip) that you tap to deflect. A lost bulb is the cracked one, and the one that just broke throws sparks.
+
+## Variety and the safety copy
+
+- Adventure steps, training and quizzes are a fresh draw on every visit (the clock is part of the seed), and new concepts no longer come in a fixed alphabetical order of categories.
+- Two forms of one question (`per-007a` / `per-007b`, or `id~level`) are never asked back to back when anything else can be asked: `spreadBy`/`topicKey` in `learning.js`, and a soft rule in `pickQuestion`. The periodic quiz never asks one element twice in a row.
+- A second copy of every player is kept in a separate IndexedDB on the device (`storage/safety.js`). If the main database comes back empty, the players are put back at start-up. It does not survive the browser clearing all site data or a change of address; for those, use the save code (Settings, cloud save) or Export.

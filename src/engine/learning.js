@@ -216,9 +216,34 @@ export function selectSession({ items, pool, now, seed = 'seed', target = 1, mod
   return interleave(picked, rng).map((p) => ({ ...p, level: pickLevel(p.it, target, rng) }));
 }
 
-/** New concepts come in pairs of the same category (guided practice); reviews are spread so neighbours differ. */
+/** Concepts that are the same question in another guise (per-007a / per-007b, a~1 / a~2) share a key. */
+export const topicKey = (id) => String(id).split('~')[0].replace(/^(.*\d)[a-z]$/, '$1');
+
+/**
+ * Reorder a list so that neighbours never share a key, when that is possible at all. Items of the same key keep their
+ * relative order.
+ */
+export function spreadBy(list, keyOf) {
+  const rest = [...list]; const out = [];
+  const left = new Map();
+  for (const x of rest) left.set(keyOf(x), (left.get(keyOf(x)) ?? 0) + 1);
+  while (rest.length) {
+    const last = out.length ? keyOf(out.at(-1)) : null;
+    // the key with the most left goes first (otherwise one key is stranded at the end), but never the same key twice
+    let k = -1; let best = -1;
+    for (let i = 0; i < rest.length; i++) { const key = keyOf(rest[i]); const n = left.get(key); if (key !== last && n > best) { best = n; k = i; } }
+    if (k < 0) k = 0; // only the same key is left: nothing to do
+    const [x] = rest.splice(k, 1); left.set(keyOf(x), left.get(keyOf(x)) - 1);
+    out.push(x);
+  }
+  return out;
+}
+
+/** New concepts come in pairs of the same category (guided practice, in a different order of categories each time); reviews are spread so neighbours differ. */
 export function interleave(list, rng) {
-  const fresh = list.filter((p) => p.reason === 'new').sort((a, b) => (a.category < b.category ? -1 : a.category > b.category ? 1 : 0));
+  const order = rng ? rng.shuffle([...new Set(list.map((p) => p.category))]) : [...new Set(list.map((p) => p.category))].sort();
+  const rank = (p) => order.indexOf(p.category);
+  const fresh = list.filter((p) => p.reason === 'new').sort((a, b) => rank(a) - rank(b));
   const rest = rng.shuffle(list.filter((p) => p.reason !== 'new'));
   const out = []; let f = 0; let r = 0;
   while (f < fresh.length || r < rest.length) {
@@ -230,7 +255,7 @@ export function interleave(list, rng) {
     if (f < fresh.length) out.push(fresh[f++]);
     if (f < fresh.length && (f % 2 === 1)) out.push(fresh[f++]);
   }
-  return out;
+  return spreadBy(out, (p) => topicKey(p.id));
 }
 
 /**

@@ -8,7 +8,7 @@
 //   grp   which group          per   which period       cat   which family          state  gas, liquid or solid
 // "Known by heart" means the four recall facets (sym, name, num, elz) are all in review or mastered.
 import { Rng } from './rng.js';
-import { newItem, grade, DAY } from './learning.js';
+import { newItem, grade, DAY, spreadBy } from './learning.js';
 import { ELEMENTS, BY_Z, AMBIGUOUS, CATEGORIES, CATEGORY_IDS, NAME_ALIASES, nameOf } from './elements.js';
 
 export const FACETS = ['sym', 'name', 'num', 'elz', 'grp', 'per', 'cat', 'state'];
@@ -174,7 +174,7 @@ export function buildSession({ learn, now = 0, seed = 'pt', size = 20, range = R
 
 /** Turn a session into quiz questions (multiple choice, or typed when `typed` and the facet allows it). */
 export function buildQuiz({ learn, now = 0, seed = 'ptq', size = 10, range = RANGES[0], facets = FACET_SETS.core.facets, lang = 'en', typed = false, newLimit = 3 }) {
-  const cards = buildSession({ learn, now, seed, size, range, facets, newLimit });
+  const cards = spreadBy(buildSession({ learn, now, seed, size, range, facets, newLimit }), (c) => c.z); // never the same element twice in a row
   return cards.map((c, i) => {
     const e = BY_Z[c.z]; const rng = Rng.fromSeed(`${seed}:${c.id}:${i}`);
     const txt = cardText(e, c.facet, lang);
