@@ -43,6 +43,7 @@ export async function menuScreen(app) {
       menuBtn('', 'ic_compass', 'Adventure', profiles.length ? 'The Lab · The Archive · The Atlas · 100 steps each' : 'create a player first', () => go('adventure')),
       menuBtn('', 'ic_book', 'Train', profiles.length ? 'daily · focus · weak spots · expedition' : 'create a player first', () => go('train')),
       menuBtn('', 'ic_trophy', "Champion's Academy", profiles.length ? 'rapid fire · clues · exam · the Champion' : 'create a player first', () => go('academy')),
+      menuBtn('', 'symbols', 'Periodic Table', profiles.length ? 'all 118 elements · memory cards · quizzes' : 'create a player first', () => go('periodic')),
       menuBtn('', 'radio', 'Online', 'friends on their own phones', () => go('online')),
       app.cloud ? menuBtn('', 'ic_people', 'Friends', 'codes · compare stats', () => go('friends')) : null,
       menuBtn('', 'gasmask', 'Players', `${profiles.length} on this device`, () => go('profiles')),

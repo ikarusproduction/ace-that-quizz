@@ -1,0 +1,6603 @@
+{
+ "category": "periodic",
+ "review": "unreviewed",
+ "note": "Difficulty ladders: the original question keeps its own level, these are the other levels. Generated from src/engine/elements.js. Unreviewed.",
+ "families": [
+  {
+   "id": "per-001b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which period is Hydrogen in?",
+     "choices": [
+      "Period 5",
+      "Period 1",
+      "Period 3",
+      "Period 7"
+     ],
+     "answer": 1,
+     "explanation": "H · Hydrogen · 1 · Group 1, Period 1 · Reactive nonmetal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Hydrogen in?",
+     "choices": [
+      "Group 1",
+      "Group 2",
+      "Group 4",
+      "Group 3"
+     ],
+     "answer": 0,
+     "explanation": "H · Hydrogen · 1 · Group 1, Period 1 · Reactive nonmetal"
+    }
+   ]
+  },
+  {
+   "id": "per-002b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which period is Helium in?",
+     "choices": [
+      "Period 7",
+      "Period 1",
+      "Period 2",
+      "Period 4"
+     ],
+     "answer": 1,
+     "explanation": "He · Helium · 2 · Group 18, Period 1 · Noble gas"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Helium in?",
+     "choices": [
+      "Group 15",
+      "Group 16",
+      "Group 18",
+      "Group 17"
+     ],
+     "answer": 2,
+     "explanation": "He · Helium · 2 · Group 18, Period 1 · Noble gas"
+    }
+   ]
+  },
+  {
+   "id": "per-003b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which period is Lithium in?",
+     "choices": [
+      "Period 5",
+      "Period 2",
+      "Period 6",
+      "Period 3"
+     ],
+     "answer": 1,
+     "explanation": "Li · Lithium · 3 · Group 1, Period 2 · Alkali metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Lithium in?",
+     "choices": [
+      "Group 3",
+      "Group 1",
+      "Group 4",
+      "Group 2"
+     ],
+     "answer": 1,
+     "explanation": "Li · Lithium · 3 · Group 1, Period 2 · Alkali metal"
+    }
+   ]
+  },
+  {
+   "id": "per-004b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which period is Beryllium in?",
+     "choices": [
+      "Period 2",
+      "Period 3",
+      "Period 4",
+      "Period 1"
+     ],
+     "answer": 0,
+     "explanation": "Be · Beryllium · 4 · Group 2, Period 2 · Alkaline earth metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Beryllium in?",
+     "choices": [
+      "Group 2",
+      "Group 4",
+      "Group 3",
+      "Group 1"
+     ],
+     "answer": 0,
+     "explanation": "Be · Beryllium · 4 · Group 2, Period 2 · Alkaline earth metal"
+    }
+   ]
+  },
+  {
+   "id": "per-005b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which period is Boron in?",
+     "choices": [
+      "Period 7",
+      "Period 6",
+      "Period 5",
+      "Period 2"
+     ],
+     "answer": 3,
+     "explanation": "B · Boron · 5 · Group 13, Period 2 · Metalloid"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Boron in?",
+     "choices": [
+      "Group 12",
+      "Group 11",
+      "Group 13",
+      "Group 10"
+     ],
+     "answer": 2,
+     "explanation": "B · Boron · 5 · Group 13, Period 2 · Metalloid"
+    }
+   ]
+  },
+  {
+   "id": "per-006b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which period is Carbon in?",
+     "choices": [
+      "Period 7",
+      "Period 2",
+      "Period 3",
+      "Period 6"
+     ],
+     "answer": 1,
+     "explanation": "C · Carbon · 6 · Group 14, Period 2 · Reactive nonmetal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Carbon in?",
+     "choices": [
+      "Group 12",
+      "Group 13",
+      "Group 16",
+      "Group 14"
+     ],
+     "answer": 3,
+     "explanation": "C · Carbon · 6 · Group 14, Period 2 · Reactive nonmetal"
+    }
+   ]
+  },
+  {
+   "id": "per-007b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which period is Nitrogen in?",
+     "choices": [
+      "Period 3",
+      "Period 6",
+      "Period 1",
+      "Period 2"
+     ],
+     "answer": 3,
+     "explanation": "N · Nitrogen · 7 · Group 15, Period 2 · Reactive nonmetal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Nitrogen in?",
+     "choices": [
+      "Group 13",
+      "Group 12",
+      "Group 16",
+      "Group 15"
+     ],
+     "answer": 3,
+     "explanation": "N · Nitrogen · 7 · Group 15, Period 2 · Reactive nonmetal"
+    }
+   ]
+  },
+  {
+   "id": "per-008b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which period is Oxygen in?",
+     "choices": [
+      "Period 4",
+      "Period 5",
+      "Period 1",
+      "Period 2"
+     ],
+     "answer": 3,
+     "explanation": "O · Oxygen · 8 · Group 16, Period 2 · Reactive nonmetal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Oxygen in?",
+     "choices": [
+      "Group 17",
+      "Group 16",
+      "Group 14",
+      "Group 18"
+     ],
+     "answer": 1,
+     "explanation": "O · Oxygen · 8 · Group 16, Period 2 · Reactive nonmetal"
+    }
+   ]
+  },
+  {
+   "id": "per-009b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which period is Fluorine in?",
+     "choices": [
+      "Period 4",
+      "Period 1",
+      "Period 2",
+      "Period 3"
+     ],
+     "answer": 2,
+     "explanation": "F · Fluorine · 9 · Group 17, Period 2 · Halogen"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Fluorine in?",
+     "choices": [
+      "Group 16",
+      "Group 18",
+      "Group 14",
+      "Group 17"
+     ],
+     "answer": 3,
+     "explanation": "F · Fluorine · 9 · Group 17, Period 2 · Halogen"
+    }
+   ]
+  },
+  {
+   "id": "per-010b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which period is Neon in?",
+     "choices": [
+      "Period 2",
+      "Period 1",
+      "Period 7",
+      "Period 6"
+     ],
+     "answer": 0,
+     "explanation": "Ne · Neon · 10 · Group 18, Period 2 · Noble gas"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Neon in?",
+     "choices": [
+      "Group 18",
+      "Group 16",
+      "Group 15",
+      "Group 17"
+     ],
+     "answer": 0,
+     "explanation": "Ne · Neon · 10 · Group 18, Period 2 · Noble gas"
+    }
+   ]
+  },
+  {
+   "id": "per-011b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which period is Sodium in?",
+     "choices": [
+      "Period 3",
+      "Period 1",
+      "Period 6",
+      "Period 7"
+     ],
+     "answer": 0,
+     "explanation": "Na · Sodium · 11 · Group 1, Period 3 · Alkali metal (Na comes from “natrium”)"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Sodium in?",
+     "choices": [
+      "Group 1",
+      "Group 3",
+      "Group 4",
+      "Group 2"
+     ],
+     "answer": 0,
+     "explanation": "Na · Sodium · 11 · Group 1, Period 3 · Alkali metal (Na comes from “natrium”)"
+    }
+   ]
+  },
+  {
+   "id": "per-012b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which period is Magnesium in?",
+     "choices": [
+      "Period 3",
+      "Period 4",
+      "Period 1",
+      "Period 7"
+     ],
+     "answer": 0,
+     "explanation": "Mg · Magnesium · 12 · Group 2, Period 3 · Alkaline earth metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Magnesium in?",
+     "choices": [
+      "Group 3",
+      "Group 5",
+      "Group 2",
+      "Group 4"
+     ],
+     "answer": 2,
+     "explanation": "Mg · Magnesium · 12 · Group 2, Period 3 · Alkaline earth metal"
+    }
+   ]
+  },
+  {
+   "id": "per-013b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which period is Aluminium in?",
+     "choices": [
+      "Period 5",
+      "Period 2",
+      "Period 6",
+      "Period 3"
+     ],
+     "answer": 3,
+     "explanation": "Al · Aluminium · 13 · Group 13, Period 3 · Post-transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Aluminium in?",
+     "choices": [
+      "Group 14",
+      "Group 12",
+      "Group 10",
+      "Group 13"
+     ],
+     "answer": 3,
+     "explanation": "Al · Aluminium · 13 · Group 13, Period 3 · Post-transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-014b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which period is Silicon in?",
+     "choices": [
+      "Period 3",
+      "Period 2",
+      "Period 1",
+      "Period 6"
+     ],
+     "answer": 0,
+     "explanation": "Si · Silicon · 14 · Group 14, Period 3 · Metalloid"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Silicon in?",
+     "choices": [
+      "Group 15",
+      "Group 14",
+      "Group 17",
+      "Group 12"
+     ],
+     "answer": 1,
+     "explanation": "Si · Silicon · 14 · Group 14, Period 3 · Metalloid"
+    }
+   ]
+  },
+  {
+   "id": "per-015b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which period is Phosphorus in?",
+     "choices": [
+      "Period 5",
+      "Period 1",
+      "Period 4",
+      "Period 3"
+     ],
+     "answer": 3,
+     "explanation": "P · Phosphorus · 15 · Group 15, Period 3 · Reactive nonmetal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Phosphorus in?",
+     "choices": [
+      "Group 12",
+      "Group 15",
+      "Group 13",
+      "Group 14"
+     ],
+     "answer": 1,
+     "explanation": "P · Phosphorus · 15 · Group 15, Period 3 · Reactive nonmetal"
+    }
+   ]
+  },
+  {
+   "id": "per-016b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which period is Sulfur in?",
+     "choices": [
+      "Period 6",
+      "Period 3",
+      "Period 1",
+      "Period 5"
+     ],
+     "answer": 1,
+     "explanation": "S · Sulfur · 16 · Group 16, Period 3 · Reactive nonmetal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Sulfur in?",
+     "choices": [
+      "Group 14",
+      "Group 15",
+      "Group 16",
+      "Group 18"
+     ],
+     "answer": 2,
+     "explanation": "S · Sulfur · 16 · Group 16, Period 3 · Reactive nonmetal"
+    }
+   ]
+  },
+  {
+   "id": "per-017b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which period is Chlorine in?",
+     "choices": [
+      "Period 5",
+      "Period 1",
+      "Period 4",
+      "Period 3"
+     ],
+     "answer": 3,
+     "explanation": "Cl · Chlorine · 17 · Group 17, Period 3 · Halogen"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Chlorine in?",
+     "choices": [
+      "Group 15",
+      "Group 16",
+      "Group 17",
+      "Group 18"
+     ],
+     "answer": 2,
+     "explanation": "Cl · Chlorine · 17 · Group 17, Period 3 · Halogen"
+    }
+   ]
+  },
+  {
+   "id": "per-018b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which period is Argon in?",
+     "choices": [
+      "Period 5",
+      "Period 1",
+      "Period 6",
+      "Period 3"
+     ],
+     "answer": 3,
+     "explanation": "Ar · Argon · 18 · Group 18, Period 3 · Noble gas"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Argon in?",
+     "choices": [
+      "Group 15",
+      "Group 18",
+      "Group 17",
+      "Group 16"
+     ],
+     "answer": 1,
+     "explanation": "Ar · Argon · 18 · Group 18, Period 3 · Noble gas"
+    }
+   ]
+  },
+  {
+   "id": "per-019b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which period is Potassium in?",
+     "choices": [
+      "Period 6",
+      "Period 4",
+      "Period 1",
+      "Period 7"
+     ],
+     "answer": 1,
+     "explanation": "K · Potassium · 19 · Group 1, Period 4 · Alkali metal (K comes from “kalium”)"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Potassium in?",
+     "choices": [
+      "Group 2",
+      "Group 4",
+      "Group 1",
+      "Group 3"
+     ],
+     "answer": 2,
+     "explanation": "K · Potassium · 19 · Group 1, Period 4 · Alkali metal (K comes from “kalium”)"
+    }
+   ]
+  },
+  {
+   "id": "per-020b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "Which period is Calcium in?",
+     "choices": [
+      "Period 7",
+      "Period 2",
+      "Period 4",
+      "Period 6"
+     ],
+     "answer": 2,
+     "explanation": "Ca · Calcium · 20 · Group 2, Period 4 · Alkaline earth metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Calcium in?",
+     "choices": [
+      "Group 2",
+      "Group 1",
+      "Group 5",
+      "Group 4"
+     ],
+     "answer": 0,
+     "explanation": "Ca · Calcium · 20 · Group 2, Period 4 · Alkaline earth metal"
+    }
+   ]
+  },
+  {
+   "id": "per-001a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the symbol of Hydrogen?",
+     "choices": [
+      "B",
+      "Cs",
+      "He",
+      "H"
+     ],
+     "answer": 3,
+     "explanation": "H · Hydrogen · 1 · Group 1, Period 1 · Reactive nonmetal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 1 protons in its nucleus?",
+     "choices": [
+      "Hydrogen",
+      "Mercury",
+      "Sodium",
+      "Holmium"
+     ],
+     "answer": 0,
+     "explanation": "H · Hydrogen · 1 · Group 1, Period 1 · Reactive nonmetal"
+    }
+   ]
+  },
+  {
+   "id": "per-002a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the symbol of Helium?",
+     "choices": [
+      "C",
+      "He",
+      "Hf",
+      "Be"
+     ],
+     "answer": 1,
+     "explanation": "He · Helium · 2 · Group 18, Period 1 · Noble gas"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 2 protons in its nucleus?",
+     "choices": [
+      "Hassium",
+      "Krypton",
+      "Radon",
+      "Helium"
+     ],
+     "answer": 3,
+     "explanation": "He · Helium · 2 · Group 18, Period 1 · Noble gas"
+    }
+   ]
+  },
+  {
+   "id": "per-006a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the symbol of Carbon?",
+     "choices": [
+      "Si",
+      "Cd",
+      "Cn",
+      "C"
+     ],
+     "answer": 3,
+     "explanation": "C · Carbon · 6 · Group 14, Period 2 · Reactive nonmetal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 6 protons in its nucleus?",
+     "choices": [
+      "Beryllium",
+      "Chromium",
+      "Carbon",
+      "Lead"
+     ],
+     "answer": 2,
+     "explanation": "C · Carbon · 6 · Group 14, Period 2 · Reactive nonmetal"
+    }
+   ]
+  },
+  {
+   "id": "per-007a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the symbol of Nitrogen?",
+     "choices": [
+      "Bi",
+      "Mc",
+      "Li",
+      "N"
+     ],
+     "answer": 3,
+     "explanation": "N · Nitrogen · 7 · Group 15, Period 2 · Reactive nonmetal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 7 protons in its nucleus?",
+     "choices": [
+      "Arsenic",
+      "Nobelium",
+      "Nitrogen",
+      "Fluorine"
+     ],
+     "answer": 2,
+     "explanation": "N · Nitrogen · 7 · Group 15, Period 2 · Reactive nonmetal"
+    }
+   ]
+  },
+  {
+   "id": "per-008a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the symbol of Oxygen?",
+     "choices": [
+      "Og",
+      "O",
+      "B",
+      "Lv"
+     ],
+     "answer": 1,
+     "explanation": "O · Oxygen · 8 · Group 16, Period 2 · Reactive nonmetal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 8 protons in its nucleus?",
+     "choices": [
+      "Fluorine",
+      "Sulfur",
+      "Neon",
+      "Oxygen"
+     ],
+     "answer": 3,
+     "explanation": "O · Oxygen · 8 · Group 16, Period 2 · Reactive nonmetal"
+    }
+   ]
+  },
+  {
+   "id": "per-011a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the symbol of Sodium?",
+     "choices": [
+      "F",
+      "Na",
+      "K",
+      "Cs"
+     ],
+     "answer": 1,
+     "explanation": "Na · Sodium · 11 · Group 1, Period 3 · Alkali metal (Na comes from “natrium”)"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 11 protons in its nucleus?",
+     "choices": [
+      "Nihonium",
+      "Lithium",
+      "Nitrogen",
+      "Sodium"
+     ],
+     "answer": 3,
+     "explanation": "Na · Sodium · 11 · Group 1, Period 3 · Alkali metal (Na comes from “natrium”)"
+    }
+   ]
+  },
+  {
+   "id": "per-012a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the symbol of Magnesium?",
+     "choices": [
+      "Al",
+      "Mt",
+      "Mg",
+      "Ra"
+     ],
+     "answer": 2,
+     "explanation": "Mg · Magnesium · 12 · Group 2, Period 3 · Alkaline earth metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 12 protons in its nucleus?",
+     "choices": [
+      "Mendelevium",
+      "Meitnerium",
+      "Radium",
+      "Magnesium"
+     ],
+     "answer": 3,
+     "explanation": "Mg · Magnesium · 12 · Group 2, Period 3 · Alkaline earth metal"
+    }
+   ]
+  },
+  {
+   "id": "per-013a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the symbol of Aluminium?",
+     "choices": [
+      "Al",
+      "Nh",
+      "Ar",
+      "P"
+     ],
+     "answer": 0,
+     "explanation": "Al · Aluminium · 13 · Group 13, Period 3 · Post-transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 13 protons in its nucleus?",
+     "choices": [
+      "Fluorine",
+      "Boron",
+      "Aluminium",
+      "Actinium"
+     ],
+     "answer": 2,
+     "explanation": "Al · Aluminium · 13 · Group 13, Period 3 · Post-transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-014a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the symbol of Silicon?",
+     "choices": [
+      "Si",
+      "S",
+      "Se",
+      "Pb"
+     ],
+     "answer": 0,
+     "explanation": "Si · Silicon · 14 · Group 14, Period 3 · Metalloid"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 14 protons in its nucleus?",
+     "choices": [
+      "Silicon",
+      "Seaborgium",
+      "Aluminium",
+      "Germanium"
+     ],
+     "answer": 0,
+     "explanation": "Si · Silicon · 14 · Group 14, Period 3 · Metalloid"
+    }
+   ]
+  },
+  {
+   "id": "per-016a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the symbol of Sulfur?",
+     "choices": [
+      "S",
+      "Sb",
+      "Ar",
+      "Se"
+     ],
+     "answer": 0,
+     "explanation": "S · Sulfur · 16 · Group 16, Period 3 · Reactive nonmetal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 16 protons in its nucleus?",
+     "choices": [
+      "Chlorine",
+      "Sulfur",
+      "Silicon",
+      "Scandium"
+     ],
+     "answer": 1,
+     "explanation": "S · Sulfur · 16 · Group 16, Period 3 · Reactive nonmetal"
+    }
+   ]
+  },
+  {
+   "id": "per-017a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the symbol of Chlorine?",
+     "choices": [
+      "Cl",
+      "Sc",
+      "Ce",
+      "Si"
+     ],
+     "answer": 0,
+     "explanation": "Cl · Chlorine · 17 · Group 17, Period 3 · Halogen"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 17 protons in its nucleus?",
+     "choices": [
+      "Chlorine",
+      "Fluorine",
+      "Cobalt",
+      "Cadmium"
+     ],
+     "answer": 0,
+     "explanation": "Cl · Chlorine · 17 · Group 17, Period 3 · Halogen"
+    }
+   ]
+  },
+  {
+   "id": "per-019a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the symbol of Potassium?",
+     "choices": [
+      "H",
+      "Ca",
+      "P",
+      "K"
+     ],
+     "answer": 3,
+     "explanation": "K · Potassium · 19 · Group 1, Period 4 · Alkali metal (K comes from “kalium”)"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 19 protons in its nucleus?",
+     "choices": [
+      "Potassium",
+      "Scandium",
+      "Caesium",
+      "Argon"
+     ],
+     "answer": 0,
+     "explanation": "K · Potassium · 19 · Group 1, Period 4 · Alkali metal (K comes from “kalium”)"
+    }
+   ]
+  },
+  {
+   "id": "per-020a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the symbol of Calcium?",
+     "choices": [
+      "Cd",
+      "Ca",
+      "Cf",
+      "Co"
+     ],
+     "answer": 1,
+     "explanation": "Ca · Calcium · 20 · Group 2, Period 4 · Alkaline earth metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 20 protons in its nucleus?",
+     "choices": [
+      "Vanadium",
+      "Calcium",
+      "Titanium",
+      "Cadmium"
+     ],
+     "answer": 1,
+     "explanation": "Ca · Calcium · 20 · Group 2, Period 4 · Alkaline earth metal"
+    }
+   ]
+  },
+  {
+   "id": "per-026a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the symbol of Iron?",
+     "choices": [
+      "Fr",
+      "Fe",
+      "V",
+      "F"
+     ],
+     "answer": 1,
+     "explanation": "Fe · Iron · 26 · Group 8, Period 4 · Transition metal (Fe comes from “ferrum”)"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 26 protons in its nucleus?",
+     "choices": [
+      "Iron",
+      "Nickel",
+      "Francium",
+      "Osmium"
+     ],
+     "answer": 0,
+     "explanation": "Fe · Iron · 26 · Group 8, Period 4 · Transition metal (Fe comes from “ferrum”)"
+    }
+   ]
+  },
+  {
+   "id": "per-029a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the symbol of Copper?",
+     "choices": [
+      "Ca",
+      "Cu",
+      "Ge",
+      "Fe"
+     ],
+     "answer": 1,
+     "explanation": "Cu · Copper · 29 · Group 11, Period 4 · Transition metal (Cu comes from “cuprum”)"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 29 protons in its nucleus?",
+     "choices": [
+      "Californium",
+      "Curium",
+      "Copper",
+      "Cobalt"
+     ],
+     "answer": 2,
+     "explanation": "Cu · Copper · 29 · Group 11, Period 4 · Transition metal (Cu comes from “cuprum”)"
+    }
+   ]
+  },
+  {
+   "id": "per-047a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the symbol of Silver?",
+     "choices": [
+      "Sb",
+      "In",
+      "Ag",
+      "At"
+     ],
+     "answer": 2,
+     "explanation": "Ag · Silver · 47 · Group 11, Period 5 · Transition metal (Ag comes from “argentum”)"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 47 protons in its nucleus?",
+     "choices": [
+      "Roentgenium",
+      "Silver",
+      "Astatine",
+      "Indium"
+     ],
+     "answer": 1,
+     "explanation": "Ag · Silver · 47 · Group 11, Period 5 · Transition metal (Ag comes from “argentum”)"
+    }
+   ]
+  },
+  {
+   "id": "per-050a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the symbol of Tin?",
+     "choices": [
+      "Sb",
+      "Pd",
+      "Ge",
+      "Sn"
+     ],
+     "answer": 3,
+     "explanation": "Sn · Tin · 50 · Group 14, Period 5 · Post-transition metal (Sn comes from “stannum”)"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 50 protons in its nucleus?",
+     "choices": [
+      "Scandium",
+      "Tin",
+      "Iodine",
+      "Samarium"
+     ],
+     "answer": 1,
+     "explanation": "Sn · Tin · 50 · Group 14, Period 5 · Post-transition metal (Sn comes from “stannum”)"
+    }
+   ]
+  },
+  {
+   "id": "per-053a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the symbol of Iodine?",
+     "choices": [
+      "La",
+      "Te",
+      "I",
+      "In"
+     ],
+     "answer": 2,
+     "explanation": "I · Iodine · 53 · Group 17, Period 5 · Halogen"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 53 protons in its nucleus?",
+     "choices": [
+      "Antimony",
+      "Xenon",
+      "Bromine",
+      "Iodine"
+     ],
+     "answer": 3,
+     "explanation": "I · Iodine · 53 · Group 17, Period 5 · Halogen"
+    }
+   ]
+  },
+  {
+   "id": "per-078a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the symbol of Platinum?",
+     "choices": [
+      "Pr",
+      "Pt",
+      "Ni",
+      "Po"
+     ],
+     "answer": 1,
+     "explanation": "Pt · Platinum · 78 · Group 10, Period 6 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 78 protons in its nucleus?",
+     "choices": [
+      "Promethium",
+      "Platinum",
+      "Palladium",
+      "Osmium"
+     ],
+     "answer": 1,
+     "explanation": "Pt · Platinum · 78 · Group 10, Period 6 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-079a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the symbol of Gold?",
+     "choices": [
+      "Os",
+      "Ar",
+      "Au",
+      "Ag"
+     ],
+     "answer": 2,
+     "explanation": "Au · Gold · 79 · Group 11, Period 6 · Transition metal (Au comes from “aurum”)"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 79 protons in its nucleus?",
+     "choices": [
+      "Rhenium",
+      "Gold",
+      "Osmium",
+      "Lead"
+     ],
+     "answer": 1,
+     "explanation": "Au · Gold · 79 · Group 11, Period 6 · Transition metal (Au comes from “aurum”)"
+    }
+   ]
+  },
+  {
+   "id": "per-080a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the symbol of Mercury?",
+     "choices": [
+      "Ir",
+      "Hg",
+      "Po",
+      "He"
+     ],
+     "answer": 1,
+     "explanation": "Hg · Mercury · 80 · Group 12, Period 6 · Transition metal (Hg comes from “hydrargyrum”)"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 80 protons in its nucleus?",
+     "choices": [
+      "Thallium",
+      "Mercury",
+      "Bismuth",
+      "Helium"
+     ],
+     "answer": 1,
+     "explanation": "Hg · Mercury · 80 · Group 12, Period 6 · Transition metal (Hg comes from “hydrargyrum”)"
+    }
+   ]
+  },
+  {
+   "id": "per-082a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the symbol of Lead?",
+     "choices": [
+      "Pb",
+      "C",
+      "Au",
+      "At"
+     ],
+     "answer": 0,
+     "explanation": "Pb · Lead · 82 · Group 14, Period 6 · Post-transition metal (Pb comes from “plumbum”)"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 82 protons in its nucleus?",
+     "choices": [
+      "Plutonium",
+      "Gold",
+      "Polonium",
+      "Lead"
+     ],
+     "answer": 3,
+     "explanation": "Pb · Lead · 82 · Group 14, Period 6 · Post-transition metal (Pb comes from “plumbum”)"
+    }
+   ]
+  },
+  {
+   "id": "per-092a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 2,
+     "question": "What is the symbol of Uranium?",
+     "choices": [
+      "Pa",
+      "Ra",
+      "Am",
+      "U"
+     ],
+     "answer": 3,
+     "explanation": "U · Uranium · 92 · Period 7 · Actinide"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 92 protons in its nucleus?",
+     "choices": [
+      "Uranium",
+      "Radium",
+      "Curium",
+      "Protactinium"
+     ],
+     "answer": 0,
+     "explanation": "U · Uranium · 92 · Period 7 · Actinide"
+    }
+   ]
+  },
+  {
+   "id": "per-021b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Scandium?",
+     "choices": [
+      "Actinide",
+      "Metalloid",
+      "Transition metal",
+      "Alkaline earth metal"
+     ],
+     "answer": 2,
+     "explanation": "Sc · Scandium · 21 · Group 3, Period 4 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Scandium in?",
+     "choices": [
+      "Group 4",
+      "Group 6",
+      "Group 5",
+      "Group 3"
+     ],
+     "answer": 3,
+     "explanation": "Sc · Scandium · 21 · Group 3, Period 4 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-022b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Titanium?",
+     "choices": [
+      "Reactive nonmetal",
+      "Transition metal",
+      "Alkaline earth metal",
+      "Halogen"
+     ],
+     "answer": 1,
+     "explanation": "Ti · Titanium · 22 · Group 4, Period 4 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Titanium in?",
+     "choices": [
+      "Group 2",
+      "Group 6",
+      "Group 4",
+      "Group 7"
+     ],
+     "answer": 2,
+     "explanation": "Ti · Titanium · 22 · Group 4, Period 4 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-023b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Vanadium?",
+     "choices": [
+      "Alkaline earth metal",
+      "Actinide",
+      "Post-transition metal",
+      "Transition metal"
+     ],
+     "answer": 3,
+     "explanation": "V · Vanadium · 23 · Group 5, Period 4 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Vanadium in?",
+     "choices": [
+      "Group 2",
+      "Group 5",
+      "Group 8",
+      "Group 4"
+     ],
+     "answer": 1,
+     "explanation": "V · Vanadium · 23 · Group 5, Period 4 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-024b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Chromium?",
+     "choices": [
+      "Alkaline earth metal",
+      "Transition metal",
+      "Halogen",
+      "Post-transition metal"
+     ],
+     "answer": 1,
+     "explanation": "Cr · Chromium · 24 · Group 6, Period 4 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Chromium in?",
+     "choices": [
+      "Group 5",
+      "Group 7",
+      "Group 6",
+      "Group 8"
+     ],
+     "answer": 2,
+     "explanation": "Cr · Chromium · 24 · Group 6, Period 4 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-025b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Manganese?",
+     "choices": [
+      "Transition metal",
+      "Lanthanide",
+      "Post-transition metal",
+      "Actinide"
+     ],
+     "answer": 0,
+     "explanation": "Mn · Manganese · 25 · Group 7, Period 4 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Manganese in?",
+     "choices": [
+      "Group 10",
+      "Group 6",
+      "Group 8",
+      "Group 7"
+     ],
+     "answer": 3,
+     "explanation": "Mn · Manganese · 25 · Group 7, Period 4 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-026b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Iron?",
+     "choices": [
+      "Noble gas",
+      "Reactive nonmetal",
+      "Transition metal",
+      "Halogen"
+     ],
+     "answer": 2,
+     "explanation": "Fe · Iron · 26 · Group 8, Period 4 · Transition metal (Fe comes from “ferrum”)"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Iron in?",
+     "choices": [
+      "Group 8",
+      "Group 7",
+      "Group 10",
+      "Group 9"
+     ],
+     "answer": 0,
+     "explanation": "Fe · Iron · 26 · Group 8, Period 4 · Transition metal (Fe comes from “ferrum”)"
+    }
+   ]
+  },
+  {
+   "id": "per-027b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Cobalt?",
+     "choices": [
+      "Metalloid",
+      "Lanthanide",
+      "Transition metal",
+      "Noble gas"
+     ],
+     "answer": 2,
+     "explanation": "Co · Cobalt · 27 · Group 9, Period 4 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Cobalt in?",
+     "choices": [
+      "Group 12",
+      "Group 6",
+      "Group 7",
+      "Group 9"
+     ],
+     "answer": 3,
+     "explanation": "Co · Cobalt · 27 · Group 9, Period 4 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-028b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Nickel?",
+     "choices": [
+      "Metalloid",
+      "Lanthanide",
+      "Reactive nonmetal",
+      "Transition metal"
+     ],
+     "answer": 3,
+     "explanation": "Ni · Nickel · 28 · Group 10, Period 4 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Nickel in?",
+     "choices": [
+      "Group 11",
+      "Group 7",
+      "Group 13",
+      "Group 10"
+     ],
+     "answer": 3,
+     "explanation": "Ni · Nickel · 28 · Group 10, Period 4 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-029b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Copper?",
+     "choices": [
+      "Halogen",
+      "Lanthanide",
+      "Post-transition metal",
+      "Transition metal"
+     ],
+     "answer": 3,
+     "explanation": "Cu · Copper · 29 · Group 11, Period 4 · Transition metal (Cu comes from “cuprum”)"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Copper in?",
+     "choices": [
+      "Group 13",
+      "Group 11",
+      "Group 8",
+      "Group 10"
+     ],
+     "answer": 1,
+     "explanation": "Cu · Copper · 29 · Group 11, Period 4 · Transition metal (Cu comes from “cuprum”)"
+    }
+   ]
+  },
+  {
+   "id": "per-030b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Zinc?",
+     "choices": [
+      "Reactive nonmetal",
+      "Alkaline earth metal",
+      "Transition metal",
+      "Halogen"
+     ],
+     "answer": 2,
+     "explanation": "Zn · Zinc · 30 · Group 12, Period 4 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Zinc in?",
+     "choices": [
+      "Group 11",
+      "Group 15",
+      "Group 9",
+      "Group 12"
+     ],
+     "answer": 3,
+     "explanation": "Zn · Zinc · 30 · Group 12, Period 4 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-031b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Gallium?",
+     "choices": [
+      "Reactive nonmetal",
+      "Lanthanide",
+      "Post-transition metal",
+      "Alkali metal"
+     ],
+     "answer": 2,
+     "explanation": "Ga · Gallium · 31 · Group 13, Period 4 · Post-transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Gallium in?",
+     "choices": [
+      "Group 13",
+      "Group 11",
+      "Group 10",
+      "Group 16"
+     ],
+     "answer": 0,
+     "explanation": "Ga · Gallium · 31 · Group 13, Period 4 · Post-transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-032b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Germanium?",
+     "choices": [
+      "Lanthanide",
+      "Metalloid",
+      "Post-transition metal",
+      "Noble gas"
+     ],
+     "answer": 1,
+     "explanation": "Ge · Germanium · 32 · Group 14, Period 4 · Metalloid"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Germanium in?",
+     "choices": [
+      "Group 16",
+      "Group 14",
+      "Group 12",
+      "Group 13"
+     ],
+     "answer": 1,
+     "explanation": "Ge · Germanium · 32 · Group 14, Period 4 · Metalloid"
+    }
+   ]
+  },
+  {
+   "id": "per-033b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Arsenic?",
+     "choices": [
+      "Metalloid",
+      "Halogen",
+      "Transition metal",
+      "Lanthanide"
+     ],
+     "answer": 0,
+     "explanation": "As · Arsenic · 33 · Group 15, Period 4 · Metalloid"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Arsenic in?",
+     "choices": [
+      "Group 18",
+      "Group 17",
+      "Group 13",
+      "Group 15"
+     ],
+     "answer": 3,
+     "explanation": "As · Arsenic · 33 · Group 15, Period 4 · Metalloid"
+    }
+   ]
+  },
+  {
+   "id": "per-034b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Selenium?",
+     "choices": [
+      "Actinide",
+      "Noble gas",
+      "Alkaline earth metal",
+      "Reactive nonmetal"
+     ],
+     "answer": 3,
+     "explanation": "Se · Selenium · 34 · Group 16, Period 4 · Reactive nonmetal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Selenium in?",
+     "choices": [
+      "Group 18",
+      "Group 13",
+      "Group 16",
+      "Group 17"
+     ],
+     "answer": 2,
+     "explanation": "Se · Selenium · 34 · Group 16, Period 4 · Reactive nonmetal"
+    }
+   ]
+  },
+  {
+   "id": "per-035b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Bromine?",
+     "choices": [
+      "Halogen",
+      "Noble gas",
+      "Reactive nonmetal",
+      "Metalloid"
+     ],
+     "answer": 0,
+     "explanation": "Br · Bromine · 35 · Group 17, Period 4 · Halogen"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Bromine in?",
+     "choices": [
+      "Group 16",
+      "Group 17",
+      "Group 14",
+      "Group 15"
+     ],
+     "answer": 1,
+     "explanation": "Br · Bromine · 35 · Group 17, Period 4 · Halogen"
+    }
+   ]
+  },
+  {
+   "id": "per-036b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Krypton?",
+     "choices": [
+      "Alkaline earth metal",
+      "Alkali metal",
+      "Transition metal",
+      "Noble gas"
+     ],
+     "answer": 3,
+     "explanation": "Kr · Krypton · 36 · Group 18, Period 4 · Noble gas"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Krypton in?",
+     "choices": [
+      "Group 18",
+      "Group 17",
+      "Group 15",
+      "Group 16"
+     ],
+     "answer": 0,
+     "explanation": "Kr · Krypton · 36 · Group 18, Period 4 · Noble gas"
+    }
+   ]
+  },
+  {
+   "id": "per-037b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Rubidium?",
+     "choices": [
+      "Alkaline earth metal",
+      "Lanthanide",
+      "Alkali metal",
+      "Post-transition metal"
+     ],
+     "answer": 2,
+     "explanation": "Rb · Rubidium · 37 · Group 1, Period 5 · Alkali metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Rubidium in?",
+     "choices": [
+      "Group 3",
+      "Group 4",
+      "Group 1",
+      "Group 2"
+     ],
+     "answer": 2,
+     "explanation": "Rb · Rubidium · 37 · Group 1, Period 5 · Alkali metal"
+    }
+   ]
+  },
+  {
+   "id": "per-038b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Strontium?",
+     "choices": [
+      "Noble gas",
+      "Reactive nonmetal",
+      "Alkaline earth metal",
+      "Actinide"
+     ],
+     "answer": 2,
+     "explanation": "Sr · Strontium · 38 · Group 2, Period 5 · Alkaline earth metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Strontium in?",
+     "choices": [
+      "Group 2",
+      "Group 5",
+      "Group 1",
+      "Group 3"
+     ],
+     "answer": 0,
+     "explanation": "Sr · Strontium · 38 · Group 2, Period 5 · Alkaline earth metal"
+    }
+   ]
+  },
+  {
+   "id": "per-039b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Yttrium?",
+     "choices": [
+      "Transition metal",
+      "Alkali metal",
+      "Lanthanide",
+      "Halogen"
+     ],
+     "answer": 0,
+     "explanation": "Y · Yttrium · 39 · Group 3, Period 5 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Yttrium in?",
+     "choices": [
+      "Group 1",
+      "Group 5",
+      "Group 3",
+      "Group 6"
+     ],
+     "answer": 2,
+     "explanation": "Y · Yttrium · 39 · Group 3, Period 5 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-040b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Zirconium?",
+     "choices": [
+      "Noble gas",
+      "Halogen",
+      "Lanthanide",
+      "Transition metal"
+     ],
+     "answer": 3,
+     "explanation": "Zr · Zirconium · 40 · Group 4, Period 5 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Zirconium in?",
+     "choices": [
+      "Group 2",
+      "Group 6",
+      "Group 5",
+      "Group 4"
+     ],
+     "answer": 3,
+     "explanation": "Zr · Zirconium · 40 · Group 4, Period 5 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-041b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Niobium?",
+     "choices": [
+      "Transition metal",
+      "Actinide",
+      "Metalloid",
+      "Reactive nonmetal"
+     ],
+     "answer": 0,
+     "explanation": "Nb · Niobium · 41 · Group 5, Period 5 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Niobium in?",
+     "choices": [
+      "Group 5",
+      "Group 3",
+      "Group 6",
+      "Group 7"
+     ],
+     "answer": 0,
+     "explanation": "Nb · Niobium · 41 · Group 5, Period 5 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-042b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Molybdenum?",
+     "choices": [
+      "Post-transition metal",
+      "Transition metal",
+      "Metalloid",
+      "Alkali metal"
+     ],
+     "answer": 1,
+     "explanation": "Mo · Molybdenum · 42 · Group 6, Period 5 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Molybdenum in?",
+     "choices": [
+      "Group 4",
+      "Group 9",
+      "Group 8",
+      "Group 6"
+     ],
+     "answer": 3,
+     "explanation": "Mo · Molybdenum · 42 · Group 6, Period 5 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-043b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Technetium?",
+     "choices": [
+      "Alkaline earth metal",
+      "Actinide",
+      "Metalloid",
+      "Transition metal"
+     ],
+     "answer": 3,
+     "explanation": "Tc · Technetium · 43 · Group 7, Period 5 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Technetium in?",
+     "choices": [
+      "Group 10",
+      "Group 4",
+      "Group 7",
+      "Group 5"
+     ],
+     "answer": 2,
+     "explanation": "Tc · Technetium · 43 · Group 7, Period 5 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-044b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Ruthenium?",
+     "choices": [
+      "Transition metal",
+      "Alkali metal",
+      "Halogen",
+      "Actinide"
+     ],
+     "answer": 0,
+     "explanation": "Ru · Ruthenium · 44 · Group 8, Period 5 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Ruthenium in?",
+     "choices": [
+      "Group 9",
+      "Group 10",
+      "Group 8",
+      "Group 5"
+     ],
+     "answer": 2,
+     "explanation": "Ru · Ruthenium · 44 · Group 8, Period 5 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-045b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Rhodium?",
+     "choices": [
+      "Alkaline earth metal",
+      "Post-transition metal",
+      "Lanthanide",
+      "Transition metal"
+     ],
+     "answer": 3,
+     "explanation": "Rh · Rhodium · 45 · Group 9, Period 5 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Rhodium in?",
+     "choices": [
+      "Group 11",
+      "Group 7",
+      "Group 10",
+      "Group 9"
+     ],
+     "answer": 3,
+     "explanation": "Rh · Rhodium · 45 · Group 9, Period 5 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-046b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Palladium?",
+     "choices": [
+      "Transition metal",
+      "Lanthanide",
+      "Noble gas",
+      "Alkali metal"
+     ],
+     "answer": 0,
+     "explanation": "Pd · Palladium · 46 · Group 10, Period 5 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Palladium in?",
+     "choices": [
+      "Group 7",
+      "Group 8",
+      "Group 10",
+      "Group 12"
+     ],
+     "answer": 2,
+     "explanation": "Pd · Palladium · 46 · Group 10, Period 5 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-047b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Silver?",
+     "choices": [
+      "Alkaline earth metal",
+      "Metalloid",
+      "Transition metal",
+      "Reactive nonmetal"
+     ],
+     "answer": 2,
+     "explanation": "Ag · Silver · 47 · Group 11, Period 5 · Transition metal (Ag comes from “argentum”)"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Silver in?",
+     "choices": [
+      "Group 13",
+      "Group 11",
+      "Group 9",
+      "Group 8"
+     ],
+     "answer": 1,
+     "explanation": "Ag · Silver · 47 · Group 11, Period 5 · Transition metal (Ag comes from “argentum”)"
+    }
+   ]
+  },
+  {
+   "id": "per-048b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Cadmium?",
+     "choices": [
+      "Alkaline earth metal",
+      "Transition metal",
+      "Reactive nonmetal",
+      "Noble gas"
+     ],
+     "answer": 1,
+     "explanation": "Cd · Cadmium · 48 · Group 12, Period 5 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Cadmium in?",
+     "choices": [
+      "Group 9",
+      "Group 12",
+      "Group 14",
+      "Group 11"
+     ],
+     "answer": 1,
+     "explanation": "Cd · Cadmium · 48 · Group 12, Period 5 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-049b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Indium?",
+     "choices": [
+      "Actinide",
+      "Reactive nonmetal",
+      "Transition metal",
+      "Post-transition metal"
+     ],
+     "answer": 3,
+     "explanation": "In · Indium · 49 · Group 13, Period 5 · Post-transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Indium in?",
+     "choices": [
+      "Group 13",
+      "Group 11",
+      "Group 14",
+      "Group 12"
+     ],
+     "answer": 0,
+     "explanation": "In · Indium · 49 · Group 13, Period 5 · Post-transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-050b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Tin?",
+     "choices": [
+      "Noble gas",
+      "Post-transition metal",
+      "Metalloid",
+      "Alkali metal"
+     ],
+     "answer": 1,
+     "explanation": "Sn · Tin · 50 · Group 14, Period 5 · Post-transition metal (Sn comes from “stannum”)"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Tin in?",
+     "choices": [
+      "Group 15",
+      "Group 11",
+      "Group 12",
+      "Group 14"
+     ],
+     "answer": 3,
+     "explanation": "Sn · Tin · 50 · Group 14, Period 5 · Post-transition metal (Sn comes from “stannum”)"
+    }
+   ]
+  },
+  {
+   "id": "per-051b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Antimony?",
+     "choices": [
+      "Metalloid",
+      "Halogen",
+      "Lanthanide",
+      "Alkali metal"
+     ],
+     "answer": 0,
+     "explanation": "Sb · Antimony · 51 · Group 15, Period 5 · Metalloid (Sb comes from “stibium”)"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Antimony in?",
+     "choices": [
+      "Group 12",
+      "Group 18",
+      "Group 15",
+      "Group 14"
+     ],
+     "answer": 2,
+     "explanation": "Sb · Antimony · 51 · Group 15, Period 5 · Metalloid (Sb comes from “stibium”)"
+    }
+   ]
+  },
+  {
+   "id": "per-052b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Tellurium?",
+     "choices": [
+      "Post-transition metal",
+      "Alkali metal",
+      "Reactive nonmetal",
+      "Metalloid"
+     ],
+     "answer": 3,
+     "explanation": "Te · Tellurium · 52 · Group 16, Period 5 · Metalloid"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Tellurium in?",
+     "choices": [
+      "Group 18",
+      "Group 15",
+      "Group 14",
+      "Group 16"
+     ],
+     "answer": 3,
+     "explanation": "Te · Tellurium · 52 · Group 16, Period 5 · Metalloid"
+    }
+   ]
+  },
+  {
+   "id": "per-053b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Iodine?",
+     "choices": [
+      "Halogen",
+      "Alkaline earth metal",
+      "Transition metal",
+      "Post-transition metal"
+     ],
+     "answer": 0,
+     "explanation": "I · Iodine · 53 · Group 17, Period 5 · Halogen"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Iodine in?",
+     "choices": [
+      "Group 18",
+      "Group 17",
+      "Group 15",
+      "Group 14"
+     ],
+     "answer": 1,
+     "explanation": "I · Iodine · 53 · Group 17, Period 5 · Halogen"
+    }
+   ]
+  },
+  {
+   "id": "per-054b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Xenon?",
+     "choices": [
+      "Post-transition metal",
+      "Transition metal",
+      "Noble gas",
+      "Halogen"
+     ],
+     "answer": 2,
+     "explanation": "Xe · Xenon · 54 · Group 18, Period 5 · Noble gas"
+    },
+    {
+     "level": 3,
+     "question": "Which group is Xenon in?",
+     "choices": [
+      "Group 17",
+      "Group 15",
+      "Group 18",
+      "Group 16"
+     ],
+     "answer": 2,
+     "explanation": "Xe · Xenon · 54 · Group 18, Period 5 · Noble gas"
+    }
+   ]
+  },
+  {
+   "id": "per-003a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Li?",
+     "choices": [
+      "Caesium",
+      "Lithium",
+      "Lutetium",
+      "Lawrencium"
+     ],
+     "answer": 1,
+     "explanation": "Li · Lithium · 3 · Group 1, Period 2 · Alkali metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 3 protons in its nucleus?",
+     "choices": [
+      "Lithium",
+      "Lawrencium",
+      "Hydrogen",
+      "Beryllium"
+     ],
+     "answer": 0,
+     "explanation": "Li · Lithium · 3 · Group 1, Period 2 · Alkali metal"
+    }
+   ]
+  },
+  {
+   "id": "per-004a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Be?",
+     "choices": [
+      "Boron",
+      "Helium",
+      "Lithium",
+      "Beryllium"
+     ],
+     "answer": 3,
+     "explanation": "Be · Beryllium · 4 · Group 2, Period 2 · Alkaline earth metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 4 protons in its nucleus?",
+     "choices": [
+      "Helium",
+      "Barium",
+      "Calcium",
+      "Beryllium"
+     ],
+     "answer": 3,
+     "explanation": "Be · Beryllium · 4 · Group 2, Period 2 · Alkaline earth metal"
+    }
+   ]
+  },
+  {
+   "id": "per-005a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol B?",
+     "choices": [
+      "Boron",
+      "Hydrogen",
+      "Aluminium",
+      "Oxygen"
+     ],
+     "answer": 0,
+     "explanation": "B · Boron · 5 · Group 13, Period 2 · Metalloid"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 5 protons in its nucleus?",
+     "choices": [
+      "Indium",
+      "Thallium",
+      "Bismuth",
+      "Boron"
+     ],
+     "answer": 3,
+     "explanation": "B · Boron · 5 · Group 13, Period 2 · Metalloid"
+    }
+   ]
+  },
+  {
+   "id": "per-009a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol F?",
+     "choices": [
+      "Boron",
+      "Aluminium",
+      "Fluorine",
+      "Francium"
+     ],
+     "answer": 2,
+     "explanation": "F · Fluorine · 9 · Group 17, Period 2 · Halogen"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 9 protons in its nucleus?",
+     "choices": [
+      "Iron",
+      "Fluorine",
+      "Oxygen",
+      "Neon"
+     ],
+     "answer": 1,
+     "explanation": "F · Fluorine · 9 · Group 17, Period 2 · Halogen"
+    }
+   ]
+  },
+  {
+   "id": "per-010a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Ne?",
+     "choices": [
+      "Neon",
+      "Helium",
+      "Aluminium",
+      "Nitrogen"
+     ],
+     "answer": 0,
+     "explanation": "Ne · Neon · 10 · Group 18, Period 2 · Noble gas"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 10 protons in its nucleus?",
+     "choices": [
+      "Neon",
+      "Sodium",
+      "Xenon",
+      "Nobelium"
+     ],
+     "answer": 0,
+     "explanation": "Ne · Neon · 10 · Group 18, Period 2 · Noble gas"
+    }
+   ]
+  },
+  {
+   "id": "per-015a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol P?",
+     "choices": [
+      "Nitrogen",
+      "Phosphorus",
+      "Platinum",
+      "Arsenic"
+     ],
+     "answer": 1,
+     "explanation": "P · Phosphorus · 15 · Group 15, Period 3 · Reactive nonmetal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 15 protons in its nucleus?",
+     "choices": [
+      "Lead",
+      "Moscovium",
+      "Phosphorus",
+      "Praseodymium"
+     ],
+     "answer": 2,
+     "explanation": "P · Phosphorus · 15 · Group 15, Period 3 · Reactive nonmetal"
+    }
+   ]
+  },
+  {
+   "id": "per-018a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Ar?",
+     "choices": [
+      "Potassium",
+      "Xenon",
+      "Argon",
+      "Calcium"
+     ],
+     "answer": 2,
+     "explanation": "Ar · Argon · 18 · Group 18, Period 3 · Noble gas"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 18 protons in its nucleus?",
+     "choices": [
+      "Gold",
+      "Calcium",
+      "Argon",
+      "Titanium"
+     ],
+     "answer": 2,
+     "explanation": "Ar · Argon · 18 · Group 18, Period 3 · Noble gas"
+    }
+   ]
+  },
+  {
+   "id": "per-021a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Sc?",
+     "choices": [
+      "Scandium",
+      "Manganese",
+      "Chromium",
+      "Tin"
+     ],
+     "answer": 0,
+     "explanation": "Sc · Scandium · 21 · Group 3, Period 4 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 21 protons in its nucleus?",
+     "choices": [
+      "Yttrium",
+      "Antimony",
+      "Silicon",
+      "Scandium"
+     ],
+     "answer": 3,
+     "explanation": "Sc · Scandium · 21 · Group 3, Period 4 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-022a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Ti?",
+     "choices": [
+      "Rutherfordium",
+      "Titanium",
+      "Terbium",
+      "Calcium"
+     ],
+     "answer": 1,
+     "explanation": "Ti · Titanium · 22 · Group 4, Period 4 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 22 protons in its nucleus?",
+     "choices": [
+      "Argon",
+      "Chromium",
+      "Technetium",
+      "Titanium"
+     ],
+     "answer": 3,
+     "explanation": "Ti · Titanium · 22 · Group 4, Period 4 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-023a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol V?",
+     "choices": [
+      "Manganese",
+      "Dubnium",
+      "Iron",
+      "Vanadium"
+     ],
+     "answer": 3,
+     "explanation": "V · Vanadium · 23 · Group 5, Period 4 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 23 protons in its nucleus?",
+     "choices": [
+      "Cobalt",
+      "Calcium",
+      "Potassium",
+      "Vanadium"
+     ],
+     "answer": 3,
+     "explanation": "V · Vanadium · 23 · Group 5, Period 4 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-024a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Cr?",
+     "choices": [
+      "Iron",
+      "Manganese",
+      "Seaborgium",
+      "Chromium"
+     ],
+     "answer": 3,
+     "explanation": "Cr · Chromium · 24 · Group 6, Period 4 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 24 protons in its nucleus?",
+     "choices": [
+      "Chromium",
+      "Carbon",
+      "Vanadium",
+      "Curium"
+     ],
+     "answer": 0,
+     "explanation": "Cr · Chromium · 24 · Group 6, Period 4 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-025a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Mn?",
+     "choices": [
+      "Vanadium",
+      "Scandium",
+      "Molybdenum",
+      "Manganese"
+     ],
+     "answer": 3,
+     "explanation": "Mn · Manganese · 25 · Group 7, Period 4 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 25 protons in its nucleus?",
+     "choices": [
+      "Rhenium",
+      "Bohrium",
+      "Chromium",
+      "Manganese"
+     ],
+     "answer": 3,
+     "explanation": "Mn · Manganese · 25 · Group 7, Period 4 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-027a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Co?",
+     "choices": [
+      "Manganese",
+      "Chromium",
+      "Nickel",
+      "Cobalt"
+     ],
+     "answer": 3,
+     "explanation": "Co · Cobalt · 27 · Group 9, Period 4 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 27 protons in its nucleus?",
+     "choices": [
+      "Nickel",
+      "Chromium",
+      "Meitnerium",
+      "Cobalt"
+     ],
+     "answer": 3,
+     "explanation": "Co · Cobalt · 27 · Group 9, Period 4 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-028a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Ni?",
+     "choices": [
+      "Neodymium",
+      "Nickel",
+      "Platinum",
+      "Copper"
+     ],
+     "answer": 1,
+     "explanation": "Ni · Nickel · 28 · Group 10, Period 4 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 28 protons in its nucleus?",
+     "choices": [
+      "Darmstadtium",
+      "Nickel",
+      "Gallium",
+      "Germanium"
+     ],
+     "answer": 1,
+     "explanation": "Ni · Nickel · 28 · Group 10, Period 4 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-030a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Zn?",
+     "choices": [
+      "Mercury",
+      "Zinc",
+      "Selenium",
+      "Zirconium"
+     ],
+     "answer": 1,
+     "explanation": "Zn · Zinc · 30 · Group 12, Period 4 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 30 protons in its nucleus?",
+     "choices": [
+      "Zirconium",
+      "Zinc",
+      "Copper",
+      "Iron"
+     ],
+     "answer": 1,
+     "explanation": "Zn · Zinc · 30 · Group 12, Period 4 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-031a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Ga?",
+     "choices": [
+      "Gallium",
+      "Gadolinium",
+      "Thallium",
+      "Germanium"
+     ],
+     "answer": 0,
+     "explanation": "Ga · Gallium · 31 · Group 13, Period 4 · Post-transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 31 protons in its nucleus?",
+     "choices": [
+      "Arsenic",
+      "Selenium",
+      "Gallium",
+      "Zinc"
+     ],
+     "answer": 2,
+     "explanation": "Ga · Gallium · 31 · Group 13, Period 4 · Post-transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-032a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Ge?",
+     "choices": [
+      "Zinc",
+      "Silicon",
+      "Lead",
+      "Germanium"
+     ],
+     "answer": 3,
+     "explanation": "Ge · Germanium · 32 · Group 14, Period 4 · Metalloid"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 32 protons in its nucleus?",
+     "choices": [
+      "Germanium",
+      "Lead",
+      "Copper",
+      "Gallium"
+     ],
+     "answer": 0,
+     "explanation": "Ge · Germanium · 32 · Group 14, Period 4 · Metalloid"
+    }
+   ]
+  },
+  {
+   "id": "per-033a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol As?",
+     "choices": [
+      "Germanium",
+      "Moscovium",
+      "Arsenic",
+      "Americium"
+     ],
+     "answer": 2,
+     "explanation": "As · Arsenic · 33 · Group 15, Period 4 · Metalloid"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 33 protons in its nucleus?",
+     "choices": [
+      "Nitrogen",
+      "Antimony",
+      "Zinc",
+      "Arsenic"
+     ],
+     "answer": 3,
+     "explanation": "As · Arsenic · 33 · Group 15, Period 4 · Metalloid"
+    }
+   ]
+  },
+  {
+   "id": "per-034a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Se?",
+     "choices": [
+      "Germanium",
+      "Bromine",
+      "Sulfur",
+      "Selenium"
+     ],
+     "answer": 3,
+     "explanation": "Se · Selenium · 34 · Group 16, Period 4 · Reactive nonmetal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 34 protons in its nucleus?",
+     "choices": [
+      "Krypton",
+      "Selenium",
+      "Gallium",
+      "Sulfur"
+     ],
+     "answer": 1,
+     "explanation": "Se · Selenium · 34 · Group 16, Period 4 · Reactive nonmetal"
+    }
+   ]
+  },
+  {
+   "id": "per-035a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Br?",
+     "choices": [
+      "Boron",
+      "Bromine",
+      "Fluorine",
+      "Beryllium"
+     ],
+     "answer": 1,
+     "explanation": "Br · Bromine · 35 · Group 17, Period 4 · Halogen"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 35 protons in its nucleus?",
+     "choices": [
+      "Tennessine",
+      "Bromine",
+      "Fluorine",
+      "Selenium"
+     ],
+     "answer": 1,
+     "explanation": "Br · Bromine · 35 · Group 17, Period 4 · Halogen"
+    }
+   ]
+  },
+  {
+   "id": "per-036a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Kr?",
+     "choices": [
+      "Bromine",
+      "Krypton",
+      "Selenium",
+      "Yttrium"
+     ],
+     "answer": 1,
+     "explanation": "Kr · Krypton · 36 · Group 18, Period 4 · Noble gas"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 36 protons in its nucleus?",
+     "choices": [
+      "Krypton",
+      "Germanium",
+      "Helium",
+      "Radon"
+     ],
+     "answer": 0,
+     "explanation": "Kr · Krypton · 36 · Group 18, Period 4 · Noble gas"
+    }
+   ]
+  },
+  {
+   "id": "per-037a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Rb?",
+     "choices": [
+      "Rutherfordium",
+      "Rubidium",
+      "Radium",
+      "Rhenium"
+     ],
+     "answer": 1,
+     "explanation": "Rb · Rubidium · 37 · Group 1, Period 5 · Alkali metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 37 protons in its nucleus?",
+     "choices": [
+      "Zirconium",
+      "Arsenic",
+      "Rubidium",
+      "Niobium"
+     ],
+     "answer": 2,
+     "explanation": "Rb · Rubidium · 37 · Group 1, Period 5 · Alkali metal"
+    }
+   ]
+  },
+  {
+   "id": "per-038a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Sr?",
+     "choices": [
+      "Bromine",
+      "Molybdenum",
+      "Strontium",
+      "Krypton"
+     ],
+     "answer": 2,
+     "explanation": "Sr · Strontium · 38 · Group 2, Period 5 · Alkaline earth metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 38 protons in its nucleus?",
+     "choices": [
+      "Strontium",
+      "Yttrium",
+      "Barium",
+      "Magnesium"
+     ],
+     "answer": 0,
+     "explanation": "Sr · Strontium · 38 · Group 2, Period 5 · Alkaline earth metal"
+    }
+   ]
+  },
+  {
+   "id": "per-039a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Y?",
+     "choices": [
+      "Technetium",
+      "Bromine",
+      "Lutetium",
+      "Yttrium"
+     ],
+     "answer": 3,
+     "explanation": "Y · Yttrium · 39 · Group 3, Period 5 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 39 protons in its nucleus?",
+     "choices": [
+      "Krypton",
+      "Ytterbium",
+      "Strontium",
+      "Yttrium"
+     ],
+     "answer": 3,
+     "explanation": "Y · Yttrium · 39 · Group 3, Period 5 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-040a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Zr?",
+     "choices": [
+      "Rutherfordium",
+      "Zirconium",
+      "Rubidium",
+      "Hafnium"
+     ],
+     "answer": 1,
+     "explanation": "Zr · Zirconium · 40 · Group 4, Period 5 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 40 protons in its nucleus?",
+     "choices": [
+      "Rutherfordium",
+      "Titanium",
+      "Hafnium",
+      "Zirconium"
+     ],
+     "answer": 3,
+     "explanation": "Zr · Zirconium · 40 · Group 4, Period 5 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-041a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Nb?",
+     "choices": [
+      "Molybdenum",
+      "Niobium",
+      "Dubnium",
+      "Vanadium"
+     ],
+     "answer": 1,
+     "explanation": "Nb · Niobium · 41 · Group 5, Period 5 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 41 protons in its nucleus?",
+     "choices": [
+      "Vanadium",
+      "Neon",
+      "Niobium",
+      "Nihonium"
+     ],
+     "answer": 2,
+     "explanation": "Nb · Niobium · 41 · Group 5, Period 5 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-042a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Mo?",
+     "choices": [
+      "Tungsten",
+      "Palladium",
+      "Technetium",
+      "Molybdenum"
+     ],
+     "answer": 3,
+     "explanation": "Mo · Molybdenum · 42 · Group 6, Period 5 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 42 protons in its nucleus?",
+     "choices": [
+      "Moscovium",
+      "Niobium",
+      "Zirconium",
+      "Molybdenum"
+     ],
+     "answer": 3,
+     "explanation": "Mo · Molybdenum · 42 · Group 6, Period 5 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-043a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Tc?",
+     "choices": [
+      "Rhodium",
+      "Technetium",
+      "Tennessine",
+      "Bohrium"
+     ],
+     "answer": 1,
+     "explanation": "Tc · Technetium · 43 · Group 7, Period 5 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 43 protons in its nucleus?",
+     "choices": [
+      "Tennessine",
+      "Technetium",
+      "Silver",
+      "Thorium"
+     ],
+     "answer": 1,
+     "explanation": "Tc · Technetium · 43 · Group 7, Period 5 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-044a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Ru?",
+     "choices": [
+      "Molybdenum",
+      "Technetium",
+      "Hassium",
+      "Ruthenium"
+     ],
+     "answer": 3,
+     "explanation": "Ru · Ruthenium · 44 · Group 8, Period 5 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 44 protons in its nucleus?",
+     "choices": [
+      "Roentgenium",
+      "Silver",
+      "Hassium",
+      "Ruthenium"
+     ],
+     "answer": 3,
+     "explanation": "Ru · Ruthenium · 44 · Group 8, Period 5 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-045a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Rh?",
+     "choices": [
+      "Cadmium",
+      "Meitnerium",
+      "Silver",
+      "Rhodium"
+     ],
+     "answer": 3,
+     "explanation": "Rh · Rhodium · 45 · Group 9, Period 5 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 45 protons in its nucleus?",
+     "choices": [
+      "Cadmium",
+      "Rhodium",
+      "Meitnerium",
+      "Silver"
+     ],
+     "answer": 1,
+     "explanation": "Rh · Rhodium · 45 · Group 9, Period 5 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-046a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Pd?",
+     "choices": [
+      "Rhodium",
+      "Palladium",
+      "Indium",
+      "Cadmium"
+     ],
+     "answer": 1,
+     "explanation": "Pd · Palladium · 46 · Group 10, Period 5 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 46 protons in its nucleus?",
+     "choices": [
+      "Polonium",
+      "Plutonium",
+      "Palladium",
+      "Darmstadtium"
+     ],
+     "answer": 2,
+     "explanation": "Pd · Palladium · 46 · Group 10, Period 5 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-048a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Cd?",
+     "choices": [
+      "Copernicium",
+      "Calcium",
+      "Chromium",
+      "Cadmium"
+     ],
+     "answer": 3,
+     "explanation": "Cd · Cadmium · 48 · Group 12, Period 5 · Transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 48 protons in its nucleus?",
+     "choices": [
+      "Cadmium",
+      "Cerium",
+      "Indium",
+      "Chlorine"
+     ],
+     "answer": 0,
+     "explanation": "Cd · Cadmium · 48 · Group 12, Period 5 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-049a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol In?",
+     "choices": [
+      "Indium",
+      "Tellurium",
+      "Tin",
+      "Rhodium"
+     ],
+     "answer": 0,
+     "explanation": "In · Indium · 49 · Group 13, Period 5 · Post-transition metal"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 49 protons in its nucleus?",
+     "choices": [
+      "Iodine",
+      "Nihonium",
+      "Cadmium",
+      "Indium"
+     ],
+     "answer": 3,
+     "explanation": "In · Indium · 49 · Group 13, Period 5 · Post-transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-051a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Sb?",
+     "choices": [
+      "Antimony",
+      "Cadmium",
+      "Samarium",
+      "Indium"
+     ],
+     "answer": 0,
+     "explanation": "Sb · Antimony · 51 · Group 15, Period 5 · Metalloid (Sb comes from “stibium”)"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 51 protons in its nucleus?",
+     "choices": [
+      "Arsenic",
+      "Antimony",
+      "Xenon",
+      "Selenium"
+     ],
+     "answer": 1,
+     "explanation": "Sb · Antimony · 51 · Group 15, Period 5 · Metalloid (Sb comes from “stibium”)"
+    }
+   ]
+  },
+  {
+   "id": "per-052a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Te?",
+     "choices": [
+      "Tin",
+      "Tellurium",
+      "Xenon",
+      "Antimony"
+     ],
+     "answer": 1,
+     "explanation": "Te · Tellurium · 52 · Group 16, Period 5 · Metalloid"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 52 protons in its nucleus?",
+     "choices": [
+      "Sulfur",
+      "Antimony",
+      "Tellurium",
+      "Indium"
+     ],
+     "answer": 2,
+     "explanation": "Te · Tellurium · 52 · Group 16, Period 5 · Metalloid"
+    }
+   ]
+  },
+  {
+   "id": "per-054a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Xe?",
+     "choices": [
+      "Krypton",
+      "Xenon",
+      "Cerium",
+      "Tin"
+     ],
+     "answer": 1,
+     "explanation": "Xe · Xenon · 54 · Group 18, Period 5 · Noble gas"
+    },
+    {
+     "level": 3,
+     "question": "Which element has 54 protons in its nucleus?",
+     "choices": [
+      "Cerium",
+      "Iodine",
+      "Argon",
+      "Xenon"
+     ],
+     "answer": 3,
+     "explanation": "Xe · Xenon · 54 · Group 18, Period 5 · Noble gas"
+    }
+   ]
+  },
+  {
+   "id": "per-055b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Caesium?",
+     "choices": [
+      "Post-transition metal",
+      "Alkali metal",
+      "Metalloid",
+      "Noble gas"
+     ],
+     "answer": 1,
+     "explanation": "Cs · Caesium · 55 · Group 1, Period 6 · Alkali metal"
+    },
+    {
+     "level": 2,
+     "question": "Which period is Caesium in?",
+     "choices": [
+      "Period 7",
+      "Period 2",
+      "Period 6",
+      "Period 5"
+     ],
+     "answer": 2,
+     "explanation": "Cs · Caesium · 55 · Group 1, Period 6 · Alkali metal"
+    }
+   ]
+  },
+  {
+   "id": "per-056b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Barium?",
+     "choices": [
+      "Alkaline earth metal",
+      "Halogen",
+      "Post-transition metal",
+      "Lanthanide"
+     ],
+     "answer": 0,
+     "explanation": "Ba · Barium · 56 · Group 2, Period 6 · Alkaline earth metal"
+    },
+    {
+     "level": 2,
+     "question": "Which period is Barium in?",
+     "choices": [
+      "Period 7",
+      "Period 3",
+      "Period 4",
+      "Period 6"
+     ],
+     "answer": 3,
+     "explanation": "Ba · Barium · 56 · Group 2, Period 6 · Alkaline earth metal"
+    }
+   ]
+  },
+  {
+   "id": "per-072b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Hafnium?",
+     "choices": [
+      "Halogen",
+      "Alkali metal",
+      "Transition metal",
+      "Post-transition metal"
+     ],
+     "answer": 2,
+     "explanation": "Hf · Hafnium · 72 · Group 4, Period 6 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "Which period is Hafnium in?",
+     "choices": [
+      "Period 6",
+      "Period 4",
+      "Period 3",
+      "Period 5"
+     ],
+     "answer": 0,
+     "explanation": "Hf · Hafnium · 72 · Group 4, Period 6 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-073b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Tantalum?",
+     "choices": [
+      "Actinide",
+      "Reactive nonmetal",
+      "Transition metal",
+      "Alkaline earth metal"
+     ],
+     "answer": 2,
+     "explanation": "Ta · Tantalum · 73 · Group 5, Period 6 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "Which period is Tantalum in?",
+     "choices": [
+      "Period 4",
+      "Period 2",
+      "Period 7",
+      "Period 6"
+     ],
+     "answer": 3,
+     "explanation": "Ta · Tantalum · 73 · Group 5, Period 6 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-074b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Tungsten?",
+     "choices": [
+      "Lanthanide",
+      "Transition metal",
+      "Metalloid",
+      "Alkali metal"
+     ],
+     "answer": 1,
+     "explanation": "W · Tungsten · 74 · Group 6, Period 6 · Transition metal (W comes from “wolfram”)"
+    },
+    {
+     "level": 2,
+     "question": "Which period is Tungsten in?",
+     "choices": [
+      "Period 1",
+      "Period 6",
+      "Period 5",
+      "Period 2"
+     ],
+     "answer": 1,
+     "explanation": "W · Tungsten · 74 · Group 6, Period 6 · Transition metal (W comes from “wolfram”)"
+    }
+   ]
+  },
+  {
+   "id": "per-075b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Rhenium?",
+     "choices": [
+      "Post-transition metal",
+      "Transition metal",
+      "Alkaline earth metal",
+      "Alkali metal"
+     ],
+     "answer": 1,
+     "explanation": "Re · Rhenium · 75 · Group 7, Period 6 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "Which period is Rhenium in?",
+     "choices": [
+      "Period 7",
+      "Period 3",
+      "Period 2",
+      "Period 6"
+     ],
+     "answer": 3,
+     "explanation": "Re · Rhenium · 75 · Group 7, Period 6 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-076b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Osmium?",
+     "choices": [
+      "Metalloid",
+      "Transition metal",
+      "Reactive nonmetal",
+      "Post-transition metal"
+     ],
+     "answer": 1,
+     "explanation": "Os · Osmium · 76 · Group 8, Period 6 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "Which period is Osmium in?",
+     "choices": [
+      "Period 5",
+      "Period 6",
+      "Period 1",
+      "Period 2"
+     ],
+     "answer": 1,
+     "explanation": "Os · Osmium · 76 · Group 8, Period 6 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-077b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Iridium?",
+     "choices": [
+      "Alkali metal",
+      "Reactive nonmetal",
+      "Actinide",
+      "Transition metal"
+     ],
+     "answer": 3,
+     "explanation": "Ir · Iridium · 77 · Group 9, Period 6 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "Which period is Iridium in?",
+     "choices": [
+      "Period 6",
+      "Period 5",
+      "Period 3",
+      "Period 4"
+     ],
+     "answer": 0,
+     "explanation": "Ir · Iridium · 77 · Group 9, Period 6 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-078b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Platinum?",
+     "choices": [
+      "Post-transition metal",
+      "Lanthanide",
+      "Alkali metal",
+      "Transition metal"
+     ],
+     "answer": 3,
+     "explanation": "Pt · Platinum · 78 · Group 10, Period 6 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "Which period is Platinum in?",
+     "choices": [
+      "Period 3",
+      "Period 7",
+      "Period 6",
+      "Period 1"
+     ],
+     "answer": 2,
+     "explanation": "Pt · Platinum · 78 · Group 10, Period 6 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-079b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Gold?",
+     "choices": [
+      "Transition metal",
+      "Post-transition metal",
+      "Actinide",
+      "Lanthanide"
+     ],
+     "answer": 0,
+     "explanation": "Au · Gold · 79 · Group 11, Period 6 · Transition metal (Au comes from “aurum”)"
+    },
+    {
+     "level": 2,
+     "question": "Which period is Gold in?",
+     "choices": [
+      "Period 1",
+      "Period 6",
+      "Period 5",
+      "Period 2"
+     ],
+     "answer": 1,
+     "explanation": "Au · Gold · 79 · Group 11, Period 6 · Transition metal (Au comes from “aurum”)"
+    }
+   ]
+  },
+  {
+   "id": "per-080b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Mercury?",
+     "choices": [
+      "Noble gas",
+      "Transition metal",
+      "Reactive nonmetal",
+      "Actinide"
+     ],
+     "answer": 1,
+     "explanation": "Hg · Mercury · 80 · Group 12, Period 6 · Transition metal (Hg comes from “hydrargyrum”)"
+    },
+    {
+     "level": 2,
+     "question": "Which period is Mercury in?",
+     "choices": [
+      "Period 4",
+      "Period 3",
+      "Period 6",
+      "Period 7"
+     ],
+     "answer": 2,
+     "explanation": "Hg · Mercury · 80 · Group 12, Period 6 · Transition metal (Hg comes from “hydrargyrum”)"
+    }
+   ]
+  },
+  {
+   "id": "per-081b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Thallium?",
+     "choices": [
+      "Alkali metal",
+      "Halogen",
+      "Post-transition metal",
+      "Noble gas"
+     ],
+     "answer": 2,
+     "explanation": "Tl · Thallium · 81 · Group 13, Period 6 · Post-transition metal"
+    },
+    {
+     "level": 2,
+     "question": "Which period is Thallium in?",
+     "choices": [
+      "Period 2",
+      "Period 6",
+      "Period 3",
+      "Period 1"
+     ],
+     "answer": 1,
+     "explanation": "Tl · Thallium · 81 · Group 13, Period 6 · Post-transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-082b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Lead?",
+     "choices": [
+      "Halogen",
+      "Actinide",
+      "Post-transition metal",
+      "Transition metal"
+     ],
+     "answer": 2,
+     "explanation": "Pb · Lead · 82 · Group 14, Period 6 · Post-transition metal (Pb comes from “plumbum”)"
+    },
+    {
+     "level": 2,
+     "question": "Which period is Lead in?",
+     "choices": [
+      "Period 6",
+      "Period 5",
+      "Period 2",
+      "Period 3"
+     ],
+     "answer": 0,
+     "explanation": "Pb · Lead · 82 · Group 14, Period 6 · Post-transition metal (Pb comes from “plumbum”)"
+    }
+   ]
+  },
+  {
+   "id": "per-083b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Bismuth?",
+     "choices": [
+      "Transition metal",
+      "Halogen",
+      "Metalloid",
+      "Post-transition metal"
+     ],
+     "answer": 3,
+     "explanation": "Bi · Bismuth · 83 · Group 15, Period 6 · Post-transition metal"
+    },
+    {
+     "level": 2,
+     "question": "Which period is Bismuth in?",
+     "choices": [
+      "Period 3",
+      "Period 4",
+      "Period 5",
+      "Period 6"
+     ],
+     "answer": 3,
+     "explanation": "Bi · Bismuth · 83 · Group 15, Period 6 · Post-transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-086b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Radon?",
+     "choices": [
+      "Alkali metal",
+      "Noble gas",
+      "Post-transition metal",
+      "Lanthanide"
+     ],
+     "answer": 1,
+     "explanation": "Rn · Radon · 86 · Group 18, Period 6 · Noble gas"
+    },
+    {
+     "level": 2,
+     "question": "Which period is Radon in?",
+     "choices": [
+      "Period 5",
+      "Period 4",
+      "Period 6",
+      "Period 7"
+     ],
+     "answer": 2,
+     "explanation": "Rn · Radon · 86 · Group 18, Period 6 · Noble gas"
+    }
+   ]
+  },
+  {
+   "id": "per-087b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Francium?",
+     "choices": [
+      "Actinide",
+      "Alkali metal",
+      "Noble gas",
+      "Lanthanide"
+     ],
+     "answer": 1,
+     "explanation": "Fr · Francium · 87 · Group 1, Period 7 · Alkali metal"
+    },
+    {
+     "level": 2,
+     "question": "Which period is Francium in?",
+     "choices": [
+      "Period 1",
+      "Period 4",
+      "Period 5",
+      "Period 7"
+     ],
+     "answer": 3,
+     "explanation": "Fr · Francium · 87 · Group 1, Period 7 · Alkali metal"
+    }
+   ]
+  },
+  {
+   "id": "per-088b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Radium?",
+     "choices": [
+      "Actinide",
+      "Post-transition metal",
+      "Alkaline earth metal",
+      "Lanthanide"
+     ],
+     "answer": 2,
+     "explanation": "Ra · Radium · 88 · Group 2, Period 7 · Alkaline earth metal"
+    },
+    {
+     "level": 2,
+     "question": "Which period is Radium in?",
+     "choices": [
+      "Period 6",
+      "Period 3",
+      "Period 7",
+      "Period 1"
+     ],
+     "answer": 2,
+     "explanation": "Ra · Radium · 88 · Group 2, Period 7 · Alkaline earth metal"
+    }
+   ]
+  },
+  {
+   "id": "per-104b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Rutherfordium?",
+     "choices": [
+      "Post-transition metal",
+      "Lanthanide",
+      "Noble gas",
+      "Transition metal"
+     ],
+     "answer": 3,
+     "explanation": "Rf · Rutherfordium · 104 · Group 4, Period 7 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "Which period is Rutherfordium in?",
+     "choices": [
+      "Period 4",
+      "Period 2",
+      "Period 7",
+      "Period 1"
+     ],
+     "answer": 2,
+     "explanation": "Rf · Rutherfordium · 104 · Group 4, Period 7 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-105b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Dubnium?",
+     "choices": [
+      "Transition metal",
+      "Actinide",
+      "Metalloid",
+      "Reactive nonmetal"
+     ],
+     "answer": 0,
+     "explanation": "Db · Dubnium · 105 · Group 5, Period 7 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "Which period is Dubnium in?",
+     "choices": [
+      "Period 4",
+      "Period 7",
+      "Period 3",
+      "Period 1"
+     ],
+     "answer": 1,
+     "explanation": "Db · Dubnium · 105 · Group 5, Period 7 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-106b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Seaborgium?",
+     "choices": [
+      "Metalloid",
+      "Alkaline earth metal",
+      "Transition metal",
+      "Reactive nonmetal"
+     ],
+     "answer": 2,
+     "explanation": "Sg · Seaborgium · 106 · Group 6, Period 7 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "Which period is Seaborgium in?",
+     "choices": [
+      "Period 7",
+      "Period 4",
+      "Period 5",
+      "Period 2"
+     ],
+     "answer": 0,
+     "explanation": "Sg · Seaborgium · 106 · Group 6, Period 7 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-107b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Bohrium?",
+     "choices": [
+      "Post-transition metal",
+      "Metalloid",
+      "Transition metal",
+      "Lanthanide"
+     ],
+     "answer": 2,
+     "explanation": "Bh · Bohrium · 107 · Group 7, Period 7 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "Which period is Bohrium in?",
+     "choices": [
+      "Period 5",
+      "Period 3",
+      "Period 7",
+      "Period 6"
+     ],
+     "answer": 2,
+     "explanation": "Bh · Bohrium · 107 · Group 7, Period 7 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-108b",
+   "ask": {
+    "1": "Its family",
+    "2": "Its period",
+    "3": "Its group"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "What kind of element is Hassium?",
+     "choices": [
+      "Halogen",
+      "Transition metal",
+      "Actinide",
+      "Reactive nonmetal"
+     ],
+     "answer": 1,
+     "explanation": "Hs · Hassium · 108 · Group 8, Period 7 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "Which period is Hassium in?",
+     "choices": [
+      "Period 4",
+      "Period 5",
+      "Period 7",
+      "Period 2"
+     ],
+     "answer": 2,
+     "explanation": "Hs · Hassium · 108 · Group 8, Period 7 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-055a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Cs?",
+     "choices": [
+      "Caesium",
+      "Antimony",
+      "Cadmium",
+      "Barium"
+     ],
+     "answer": 0,
+     "explanation": "Cs · Caesium · 55 · Group 1, Period 6 · Alkali metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Caesium?",
+     "choices": [
+      "Na",
+      "Cl",
+      "H",
+      "Cs"
+     ],
+     "answer": 3,
+     "explanation": "Cs · Caesium · 55 · Group 1, Period 6 · Alkali metal"
+    }
+   ]
+  },
+  {
+   "id": "per-056a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Ba?",
+     "choices": [
+      "Neodymium",
+      "Xenon",
+      "Bohrium",
+      "Barium"
+     ],
+     "answer": 3,
+     "explanation": "Ba · Barium · 56 · Group 2, Period 6 · Alkaline earth metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Barium?",
+     "choices": [
+      "Ba",
+      "Mg",
+      "I",
+      "Te"
+     ],
+     "answer": 0,
+     "explanation": "Ba · Barium · 56 · Group 2, Period 6 · Alkaline earth metal"
+    }
+   ]
+  },
+  {
+   "id": "per-057a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol La?",
+     "choices": [
+      "Lanthanum",
+      "Caesium",
+      "Lithium",
+      "Neodymium"
+     ],
+     "answer": 0,
+     "explanation": "La · Lanthanum · 57 · Period 6 · Lanthanide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Lanthanum?",
+     "choices": [
+      "Lv",
+      "Nd",
+      "Ba",
+      "La"
+     ],
+     "answer": 3,
+     "explanation": "La · Lanthanum · 57 · Period 6 · Lanthanide"
+    }
+   ]
+  },
+  {
+   "id": "per-058a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Ce?",
+     "choices": [
+      "Cerium",
+      "Copper",
+      "Curium",
+      "Chromium"
+     ],
+     "answer": 0,
+     "explanation": "Ce · Cerium · 58 · Period 6 · Lanthanide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Cerium?",
+     "choices": [
+      "Pr",
+      "Ba",
+      "Xe",
+      "Ce"
+     ],
+     "answer": 3,
+     "explanation": "Ce · Cerium · 58 · Period 6 · Lanthanide"
+    }
+   ]
+  },
+  {
+   "id": "per-059a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Pr?",
+     "choices": [
+      "Praseodymium",
+      "Cerium",
+      "Barium",
+      "Plutonium"
+     ],
+     "answer": 0,
+     "explanation": "Pr · Praseodymium · 59 · Period 6 · Lanthanide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Praseodymium?",
+     "choices": [
+      "Nd",
+      "Ba",
+      "Pr",
+      "La"
+     ],
+     "answer": 2,
+     "explanation": "Pr · Praseodymium · 59 · Period 6 · Lanthanide"
+    }
+   ]
+  },
+  {
+   "id": "per-060a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Nd?",
+     "choices": [
+      "Neodymium",
+      "Lanthanum",
+      "Sodium",
+      "Samarium"
+     ],
+     "answer": 0,
+     "explanation": "Nd · Neodymium · 60 · Period 6 · Lanthanide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Neodymium?",
+     "choices": [
+      "La",
+      "Nd",
+      "Gd",
+      "Na"
+     ],
+     "answer": 1,
+     "explanation": "Nd · Neodymium · 60 · Period 6 · Lanthanide"
+    }
+   ]
+  },
+  {
+   "id": "per-061a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Pm?",
+     "choices": [
+      "Lead",
+      "Phosphorus",
+      "Cerium",
+      "Promethium"
+     ],
+     "answer": 3,
+     "explanation": "Pm · Promethium · 61 · Period 6 · Lanthanide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Promethium?",
+     "choices": [
+      "Pa",
+      "Pt",
+      "Pm",
+      "La"
+     ],
+     "answer": 2,
+     "explanation": "Pm · Promethium · 61 · Period 6 · Lanthanide"
+    }
+   ]
+  },
+  {
+   "id": "per-062a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Sm?",
+     "choices": [
+      "Samarium",
+      "Antimony",
+      "Gadolinium",
+      "Selenium"
+     ],
+     "answer": 0,
+     "explanation": "Sm · Samarium · 62 · Period 6 · Lanthanide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Samarium?",
+     "choices": [
+      "Sm",
+      "Gd",
+      "Sg",
+      "Sb"
+     ],
+     "answer": 0,
+     "explanation": "Sm · Samarium · 62 · Period 6 · Lanthanide"
+    }
+   ]
+  },
+  {
+   "id": "per-063a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Eu?",
+     "choices": [
+      "Neodymium",
+      "Erbium",
+      "Gadolinium",
+      "Europium"
+     ],
+     "answer": 3,
+     "explanation": "Eu · Europium · 63 · Period 6 · Lanthanide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Europium?",
+     "choices": [
+      "Tb",
+      "Eu",
+      "Dy",
+      "Sm"
+     ],
+     "answer": 1,
+     "explanation": "Eu · Europium · 63 · Period 6 · Lanthanide"
+    }
+   ]
+  },
+  {
+   "id": "per-064a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Gd?",
+     "choices": [
+      "Gadolinium",
+      "Germanium",
+      "Samarium",
+      "Gallium"
+     ],
+     "answer": 0,
+     "explanation": "Gd · Gadolinium · 64 · Period 6 · Lanthanide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Gadolinium?",
+     "choices": [
+      "Nd",
+      "Gd",
+      "Dy",
+      "Er"
+     ],
+     "answer": 1,
+     "explanation": "Gd · Gadolinium · 64 · Period 6 · Lanthanide"
+    }
+   ]
+  },
+  {
+   "id": "per-065a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Tb?",
+     "choices": [
+      "Promethium",
+      "Titanium",
+      "Thulium",
+      "Terbium"
+     ],
+     "answer": 3,
+     "explanation": "Tb · Terbium · 65 · Period 6 · Lanthanide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Terbium?",
+     "choices": [
+      "Tb",
+      "Th",
+      "Eu",
+      "Er"
+     ],
+     "answer": 0,
+     "explanation": "Tb · Terbium · 65 · Period 6 · Lanthanide"
+    }
+   ]
+  },
+  {
+   "id": "per-066a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Dy?",
+     "choices": [
+      "Darmstadtium",
+      "Thulium",
+      "Dysprosium",
+      "Samarium"
+     ],
+     "answer": 2,
+     "explanation": "Dy · Dysprosium · 66 · Period 6 · Lanthanide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Dysprosium?",
+     "choices": [
+      "Dy",
+      "Db",
+      "Ds",
+      "Gd"
+     ],
+     "answer": 0,
+     "explanation": "Dy · Dysprosium · 66 · Period 6 · Lanthanide"
+    }
+   ]
+  },
+  {
+   "id": "per-067a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Ho?",
+     "choices": [
+      "Hafnium",
+      "Helium",
+      "Gadolinium",
+      "Holmium"
+     ],
+     "answer": 3,
+     "explanation": "Ho · Holmium · 67 · Period 6 · Lanthanide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Holmium?",
+     "choices": [
+      "Lu",
+      "Yb",
+      "Hf",
+      "Ho"
+     ],
+     "answer": 3,
+     "explanation": "Ho · Holmium · 67 · Period 6 · Lanthanide"
+    }
+   ]
+  },
+  {
+   "id": "per-068a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Er?",
+     "choices": [
+      "Lutetium",
+      "Erbium",
+      "Thulium",
+      "Gadolinium"
+     ],
+     "answer": 1,
+     "explanation": "Er · Erbium · 68 · Period 6 · Lanthanide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Erbium?",
+     "choices": [
+      "Lu",
+      "Ho",
+      "Er",
+      "Tm"
+     ],
+     "answer": 2,
+     "explanation": "Er · Erbium · 68 · Period 6 · Lanthanide"
+    }
+   ]
+  },
+  {
+   "id": "per-069a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Tm?",
+     "choices": [
+      "Thulium",
+      "Erbium",
+      "Tennessine",
+      "Dysprosium"
+     ],
+     "answer": 0,
+     "explanation": "Tm · Thulium · 69 · Period 6 · Lanthanide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Thulium?",
+     "choices": [
+      "Yb",
+      "Ta",
+      "Tm",
+      "Ho"
+     ],
+     "answer": 2,
+     "explanation": "Tm · Thulium · 69 · Period 6 · Lanthanide"
+    }
+   ]
+  },
+  {
+   "id": "per-070a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Yb?",
+     "choices": [
+      "Dysprosium",
+      "Ytterbium",
+      "Tantalum",
+      "Hafnium"
+     ],
+     "answer": 1,
+     "explanation": "Yb · Ytterbium · 70 · Period 6 · Lanthanide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Ytterbium?",
+     "choices": [
+      "Ho",
+      "Dy",
+      "Ta",
+      "Yb"
+     ],
+     "answer": 3,
+     "explanation": "Yb · Ytterbium · 70 · Period 6 · Lanthanide"
+    }
+   ]
+  },
+  {
+   "id": "per-071a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Lu?",
+     "choices": [
+      "Yttrium",
+      "Rhenium",
+      "Lutetium",
+      "Lanthanum"
+     ],
+     "answer": 2,
+     "explanation": "Lu · Lutetium · 71 · Group 3, Period 6 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Lutetium?",
+     "choices": [
+      "Lu",
+      "Ta",
+      "Y",
+      "Sc"
+     ],
+     "answer": 0,
+     "explanation": "Lu · Lutetium · 71 · Group 3, Period 6 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-072a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Hf?",
+     "choices": [
+      "Tungsten",
+      "Hafnium",
+      "Rutherfordium",
+      "Zirconium"
+     ],
+     "answer": 1,
+     "explanation": "Hf · Hafnium · 72 · Group 4, Period 6 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Hafnium?",
+     "choices": [
+      "Hs",
+      "Hf",
+      "Tm",
+      "Ti"
+     ],
+     "answer": 1,
+     "explanation": "Hf · Hafnium · 72 · Group 4, Period 6 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-073a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Ta?",
+     "choices": [
+      "Tantalum",
+      "Thallium",
+      "Tungsten",
+      "Thulium"
+     ],
+     "answer": 0,
+     "explanation": "Ta · Tantalum · 73 · Group 5, Period 6 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Tantalum?",
+     "choices": [
+      "Os",
+      "Te",
+      "Th",
+      "Ta"
+     ],
+     "answer": 3,
+     "explanation": "Ta · Tantalum · 73 · Group 5, Period 6 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-074a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol W?",
+     "choices": [
+      "Seaborgium",
+      "Iridium",
+      "Platinum",
+      "Tungsten"
+     ],
+     "answer": 3,
+     "explanation": "W · Tungsten · 74 · Group 6, Period 6 · Transition metal (W comes from “wolfram”)"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Tungsten?",
+     "choices": [
+      "Hf",
+      "Pt",
+      "Mo",
+      "W"
+     ],
+     "answer": 3,
+     "explanation": "W · Tungsten · 74 · Group 6, Period 6 · Transition metal (W comes from “wolfram”)"
+    }
+   ]
+  },
+  {
+   "id": "per-075a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Re?",
+     "choices": [
+      "Tungsten",
+      "Radium",
+      "Rhenium",
+      "Roentgenium"
+     ],
+     "answer": 2,
+     "explanation": "Re · Rhenium · 75 · Group 7, Period 6 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Rhenium?",
+     "choices": [
+      "Rg",
+      "Re",
+      "Rn",
+      "Rh"
+     ],
+     "answer": 1,
+     "explanation": "Re · Rhenium · 75 · Group 7, Period 6 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-076a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Os?",
+     "choices": [
+      "Osmium",
+      "Mercury",
+      "Gold",
+      "Oxygen"
+     ],
+     "answer": 0,
+     "explanation": "Os · Osmium · 76 · Group 8, Period 6 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Osmium?",
+     "choices": [
+      "Au",
+      "Os",
+      "Pt",
+      "Hs"
+     ],
+     "answer": 1,
+     "explanation": "Os · Osmium · 76 · Group 8, Period 6 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-077a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Ir?",
+     "choices": [
+      "Gold",
+      "Platinum",
+      "Iridium",
+      "Cobalt"
+     ],
+     "answer": 2,
+     "explanation": "Ir · Iridium · 77 · Group 9, Period 6 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Iridium?",
+     "choices": [
+      "Re",
+      "I",
+      "Os",
+      "Ir"
+     ],
+     "answer": 3,
+     "explanation": "Ir · Iridium · 77 · Group 9, Period 6 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-081a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Tl?",
+     "choices": [
+      "Lead",
+      "Thallium",
+      "Polonium",
+      "Tantalum"
+     ],
+     "answer": 1,
+     "explanation": "Tl · Thallium · 81 · Group 13, Period 6 · Post-transition metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Thallium?",
+     "choices": [
+      "At",
+      "Te",
+      "Ta",
+      "Tl"
+     ],
+     "answer": 3,
+     "explanation": "Tl · Thallium · 81 · Group 13, Period 6 · Post-transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-083a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Bi?",
+     "choices": [
+      "Beryllium",
+      "Francium",
+      "Bismuth",
+      "Nitrogen"
+     ],
+     "answer": 2,
+     "explanation": "Bi · Bismuth · 83 · Group 15, Period 6 · Post-transition metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Bismuth?",
+     "choices": [
+      "Bi",
+      "Be",
+      "Ba",
+      "P"
+     ],
+     "answer": 0,
+     "explanation": "Bi · Bismuth · 83 · Group 15, Period 6 · Post-transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-084a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Po?",
+     "choices": [
+      "Praseodymium",
+      "Livermorium",
+      "Tellurium",
+      "Polonium"
+     ],
+     "answer": 3,
+     "explanation": "Po · Polonium · 84 · Group 16, Period 6 · Post-transition metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Polonium?",
+     "choices": [
+      "Rn",
+      "Pt",
+      "Po",
+      "Lv"
+     ],
+     "answer": 2,
+     "explanation": "Po · Polonium · 84 · Group 16, Period 6 · Post-transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-085a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol At?",
+     "choices": [
+      "Gold",
+      "Astatine",
+      "Fluorine",
+      "Radium"
+     ],
+     "answer": 1,
+     "explanation": "At · Astatine · 85 · Group 17, Period 6 · Halogen"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Astatine?",
+     "choices": [
+      "Po",
+      "Au",
+      "I",
+      "At"
+     ],
+     "answer": 3,
+     "explanation": "At · Astatine · 85 · Group 17, Period 6 · Halogen"
+    }
+   ]
+  },
+  {
+   "id": "per-086a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Rn?",
+     "choices": [
+      "Rutherfordium",
+      "Radon",
+      "Krypton",
+      "Ruthenium"
+     ],
+     "answer": 1,
+     "explanation": "Rn · Radon · 86 · Group 18, Period 6 · Noble gas"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Radon?",
+     "choices": [
+      "Rf",
+      "Th",
+      "Re",
+      "Rn"
+     ],
+     "answer": 3,
+     "explanation": "Rn · Radon · 86 · Group 18, Period 6 · Noble gas"
+    }
+   ]
+  },
+  {
+   "id": "per-087a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Fr?",
+     "choices": [
+      "Protactinium",
+      "Potassium",
+      "Francium",
+      "Caesium"
+     ],
+     "answer": 2,
+     "explanation": "Fr · Francium · 87 · Group 1, Period 7 · Alkali metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Francium?",
+     "choices": [
+      "Fm",
+      "Fr",
+      "Na",
+      "Fl"
+     ],
+     "answer": 1,
+     "explanation": "Fr · Francium · 87 · Group 1, Period 7 · Alkali metal"
+    }
+   ]
+  },
+  {
+   "id": "per-088a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Ra?",
+     "choices": [
+      "Radium",
+      "Calcium",
+      "Beryllium",
+      "Strontium"
+     ],
+     "answer": 0,
+     "explanation": "Ra · Radium · 88 · Group 2, Period 7 · Alkaline earth metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Radium?",
+     "choices": [
+      "Ba",
+      "Be",
+      "Ra",
+      "Rh"
+     ],
+     "answer": 2,
+     "explanation": "Ra · Radium · 88 · Group 2, Period 7 · Alkaline earth metal"
+    }
+   ]
+  },
+  {
+   "id": "per-089a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Ac?",
+     "choices": [
+      "Americium",
+      "Astatine",
+      "Arsenic",
+      "Actinium"
+     ],
+     "answer": 3,
+     "explanation": "Ac · Actinium · 89 · Period 7 · Actinide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Actinium?",
+     "choices": [
+      "Ac",
+      "At",
+      "Rn",
+      "Np"
+     ],
+     "answer": 0,
+     "explanation": "Ac · Actinium · 89 · Period 7 · Actinide"
+    }
+   ]
+  },
+  {
+   "id": "per-090a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Th?",
+     "choices": [
+      "Tennessine",
+      "Actinium",
+      "Thorium",
+      "Thulium"
+     ],
+     "answer": 2,
+     "explanation": "Th · Thorium · 90 · Period 7 · Actinide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Thorium?",
+     "choices": [
+      "Tm",
+      "U",
+      "Ra",
+      "Th"
+     ],
+     "answer": 3,
+     "explanation": "Th · Thorium · 90 · Period 7 · Actinide"
+    }
+   ]
+  },
+  {
+   "id": "per-091a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Pa?",
+     "choices": [
+      "Polonium",
+      "Plutonium",
+      "Francium",
+      "Protactinium"
+     ],
+     "answer": 3,
+     "explanation": "Pa · Protactinium · 91 · Period 7 · Actinide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Protactinium?",
+     "choices": [
+      "P",
+      "Th",
+      "Pa",
+      "Pd"
+     ],
+     "answer": 2,
+     "explanation": "Pa · Protactinium · 91 · Period 7 · Actinide"
+    }
+   ]
+  },
+  {
+   "id": "per-093a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Np?",
+     "choices": [
+      "Berkelium",
+      "Neptunium",
+      "Niobium",
+      "Thorium"
+     ],
+     "answer": 1,
+     "explanation": "Np · Neptunium · 93 · Period 7 · Actinide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Neptunium?",
+     "choices": [
+      "Pa",
+      "Ne",
+      "Ac",
+      "Np"
+     ],
+     "answer": 3,
+     "explanation": "Np · Neptunium · 93 · Period 7 · Actinide"
+    }
+   ]
+  },
+  {
+   "id": "per-094a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Pu?",
+     "choices": [
+      "Lead",
+      "Promethium",
+      "Plutonium",
+      "Berkelium"
+     ],
+     "answer": 2,
+     "explanation": "Pu · Plutonium · 94 · Period 7 · Actinide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Plutonium?",
+     "choices": [
+      "Am",
+      "Pt",
+      "Pb",
+      "Pu"
+     ],
+     "answer": 3,
+     "explanation": "Pu · Plutonium · 94 · Period 7 · Actinide"
+    }
+   ]
+  },
+  {
+   "id": "per-095a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Am?",
+     "choices": [
+      "Americium",
+      "Plutonium",
+      "Californium",
+      "Silver"
+     ],
+     "answer": 0,
+     "explanation": "Am · Americium · 95 · Period 7 · Actinide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Americium?",
+     "choices": [
+      "Es",
+      "At",
+      "Am",
+      "Pu"
+     ],
+     "answer": 2,
+     "explanation": "Am · Americium · 95 · Period 7 · Actinide"
+    }
+   ]
+  },
+  {
+   "id": "per-096a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Cm?",
+     "choices": [
+      "Curium",
+      "Berkelium",
+      "Californium",
+      "Copper"
+     ],
+     "answer": 0,
+     "explanation": "Cm · Curium · 96 · Period 7 · Actinide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Curium?",
+     "choices": [
+      "Ce",
+      "Cm",
+      "C",
+      "Ca"
+     ],
+     "answer": 1,
+     "explanation": "Cm · Curium · 96 · Period 7 · Actinide"
+    }
+   ]
+  },
+  {
+   "id": "per-097a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Bk?",
+     "choices": [
+      "Neptunium",
+      "Berkelium",
+      "Californium",
+      "Bromine"
+     ],
+     "answer": 1,
+     "explanation": "Bk · Berkelium · 97 · Period 7 · Actinide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Berkelium?",
+     "choices": [
+      "Es",
+      "B",
+      "Bk",
+      "Pu"
+     ],
+     "answer": 2,
+     "explanation": "Bk · Berkelium · 97 · Period 7 · Actinide"
+    }
+   ]
+  },
+  {
+   "id": "per-098a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Cf?",
+     "choices": [
+      "Chromium",
+      "Calcium",
+      "Americium",
+      "Californium"
+     ],
+     "answer": 3,
+     "explanation": "Cf · Californium · 98 · Period 7 · Actinide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Californium?",
+     "choices": [
+      "Co",
+      "Cf",
+      "Bk",
+      "Cl"
+     ],
+     "answer": 1,
+     "explanation": "Cf · Californium · 98 · Period 7 · Actinide"
+    }
+   ]
+  },
+  {
+   "id": "per-099a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Es?",
+     "choices": [
+      "Lawrencium",
+      "Americium",
+      "Fermium",
+      "Einsteinium"
+     ],
+     "answer": 3,
+     "explanation": "Es · Einsteinium · 99 · Period 7 · Actinide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Einsteinium?",
+     "choices": [
+      "Cf",
+      "Es",
+      "Bk",
+      "Am"
+     ],
+     "answer": 1,
+     "explanation": "Es · Einsteinium · 99 · Period 7 · Actinide"
+    }
+   ]
+  },
+  {
+   "id": "per-100a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Fm?",
+     "choices": [
+      "Iron",
+      "Lawrencium",
+      "Fermium",
+      "Rutherfordium"
+     ],
+     "answer": 2,
+     "explanation": "Fm · Fermium · 100 · Period 7 · Actinide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Fermium?",
+     "choices": [
+      "Fm",
+      "No",
+      "Fe",
+      "Rf"
+     ],
+     "answer": 0,
+     "explanation": "Fm · Fermium · 100 · Period 7 · Actinide"
+    }
+   ]
+  },
+  {
+   "id": "per-101a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Md?",
+     "choices": [
+      "Mendelevium",
+      "Californium",
+      "Manganese",
+      "Nobelium"
+     ],
+     "answer": 0,
+     "explanation": "Md · Mendelevium · 101 · Period 7 · Actinide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Mendelevium?",
+     "choices": [
+      "Db",
+      "Mg",
+      "Md",
+      "Lr"
+     ],
+     "answer": 2,
+     "explanation": "Md · Mendelevium · 101 · Period 7 · Actinide"
+    }
+   ]
+  },
+  {
+   "id": "per-102a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol No?",
+     "choices": [
+      "Nobelium",
+      "Fermium",
+      "Seaborgium",
+      "Nitrogen"
+     ],
+     "answer": 0,
+     "explanation": "No · Nobelium · 102 · Period 7 · Actinide"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Nobelium?",
+     "choices": [
+      "Nd",
+      "Np",
+      "Fm",
+      "No"
+     ],
+     "answer": 3,
+     "explanation": "No · Nobelium · 102 · Period 7 · Actinide"
+    }
+   ]
+  },
+  {
+   "id": "per-103a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Lr?",
+     "choices": [
+      "Livermorium",
+      "Einsteinium",
+      "Mendelevium",
+      "Lawrencium"
+     ],
+     "answer": 3,
+     "explanation": "Lr · Lawrencium · 103 · Group 3, Period 7 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Lawrencium?",
+     "choices": [
+      "Es",
+      "Lr",
+      "Fm",
+      "Y"
+     ],
+     "answer": 1,
+     "explanation": "Lr · Lawrencium · 103 · Group 3, Period 7 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-104a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Rf?",
+     "choices": [
+      "Nobelium",
+      "Roentgenium",
+      "Hassium",
+      "Rutherfordium"
+     ],
+     "answer": 3,
+     "explanation": "Rf · Rutherfordium · 104 · Group 4, Period 7 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Rutherfordium?",
+     "choices": [
+      "Rf",
+      "Hs",
+      "Rn",
+      "Rh"
+     ],
+     "answer": 0,
+     "explanation": "Rf · Rutherfordium · 104 · Group 4, Period 7 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-105a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Db?",
+     "choices": [
+      "Dysprosium",
+      "Dubnium",
+      "Niobium",
+      "Mendelevium"
+     ],
+     "answer": 1,
+     "explanation": "Db · Dubnium · 105 · Group 5, Period 7 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Dubnium?",
+     "choices": [
+      "Rf",
+      "Db",
+      "Sg",
+      "Bh"
+     ],
+     "answer": 1,
+     "explanation": "Db · Dubnium · 105 · Group 5, Period 7 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-106a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Sg?",
+     "choices": [
+      "Seaborgium",
+      "Strontium",
+      "Tungsten",
+      "Tin"
+     ],
+     "answer": 0,
+     "explanation": "Sg · Seaborgium · 106 · Group 6, Period 7 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Seaborgium?",
+     "choices": [
+      "Sg",
+      "Se",
+      "Rf",
+      "No"
+     ],
+     "answer": 0,
+     "explanation": "Sg · Seaborgium · 106 · Group 6, Period 7 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-107a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Bh?",
+     "choices": [
+      "Rhenium",
+      "Darmstadtium",
+      "Bohrium",
+      "Barium"
+     ],
+     "answer": 2,
+     "explanation": "Bh · Bohrium · 107 · Group 7, Period 7 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Bohrium?",
+     "choices": [
+      "Hs",
+      "Bk",
+      "Ba",
+      "Bh"
+     ],
+     "answer": 3,
+     "explanation": "Bh · Bohrium · 107 · Group 7, Period 7 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-108a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Hs?",
+     "choices": [
+      "Hydrogen",
+      "Seaborgium",
+      "Hassium",
+      "Osmium"
+     ],
+     "answer": 2,
+     "explanation": "Hs · Hassium · 108 · Group 8, Period 7 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Hassium?",
+     "choices": [
+      "Hs",
+      "Mt",
+      "Rg",
+      "Ds"
+     ],
+     "answer": 0,
+     "explanation": "Hs · Hassium · 108 · Group 8, Period 7 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-109a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Mt?",
+     "choices": [
+      "Dubnium",
+      "Magnesium",
+      "Bohrium",
+      "Meitnerium"
+     ],
+     "answer": 3,
+     "explanation": "Mt · Meitnerium · 109 · Group 9, Period 7 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Meitnerium?",
+     "choices": [
+      "Bh",
+      "Mt",
+      "Co",
+      "Rg"
+     ],
+     "answer": 1,
+     "explanation": "Mt · Meitnerium · 109 · Group 9, Period 7 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-110a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Ds?",
+     "choices": [
+      "Dysprosium",
+      "Darmstadtium",
+      "Platinum",
+      "Copernicium"
+     ],
+     "answer": 1,
+     "explanation": "Ds · Darmstadtium · 110 · Group 10, Period 7 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Darmstadtium?",
+     "choices": [
+      "Db",
+      "Dy",
+      "Pd",
+      "Ds"
+     ],
+     "answer": 3,
+     "explanation": "Ds · Darmstadtium · 110 · Group 10, Period 7 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-111a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Rg?",
+     "choices": [
+      "Darmstadtium",
+      "Roentgenium",
+      "Flerovium",
+      "Moscovium"
+     ],
+     "answer": 1,
+     "explanation": "Rg · Roentgenium · 111 · Group 11, Period 7 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Roentgenium?",
+     "choices": [
+      "Rg",
+      "Re",
+      "Ru",
+      "Hs"
+     ],
+     "answer": 0,
+     "explanation": "Rg · Roentgenium · 111 · Group 11, Period 7 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-112a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Cn?",
+     "choices": [
+      "Meitnerium",
+      "Californium",
+      "Copernicium",
+      "Curium"
+     ],
+     "answer": 2,
+     "explanation": "Cn · Copernicium · 112 · Group 12, Period 7 · Transition metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Copernicium?",
+     "choices": [
+      "Cn",
+      "Cu",
+      "Cd",
+      "Rg"
+     ],
+     "answer": 0,
+     "explanation": "Cn · Copernicium · 112 · Group 12, Period 7 · Transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-113a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Nh?",
+     "choices": [
+      "Nihonium",
+      "Neptunium",
+      "Neodymium",
+      "Flerovium"
+     ],
+     "answer": 0,
+     "explanation": "Nh · Nihonium · 113 · Group 13, Period 7 · Post-transition metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Nihonium?",
+     "choices": [
+      "Ni",
+      "Nh",
+      "N",
+      "Ga"
+     ],
+     "answer": 1,
+     "explanation": "Nh · Nihonium · 113 · Group 13, Period 7 · Post-transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-114a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Fl?",
+     "choices": [
+      "Fluorine",
+      "Flerovium",
+      "Fermium",
+      "Tennessine"
+     ],
+     "answer": 1,
+     "explanation": "Fl · Flerovium · 114 · Group 14, Period 7 · Post-transition metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Flerovium?",
+     "choices": [
+      "Nh",
+      "Fl",
+      "Mc",
+      "Pb"
+     ],
+     "answer": 1,
+     "explanation": "Fl · Flerovium · 114 · Group 14, Period 7 · Post-transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-115a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Mc?",
+     "choices": [
+      "Moscovium",
+      "Roentgenium",
+      "Phosphorus",
+      "Arsenic"
+     ],
+     "answer": 0,
+     "explanation": "Mc · Moscovium · 115 · Group 15, Period 7 · Post-transition metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Moscovium?",
+     "choices": [
+      "Mc",
+      "Md",
+      "Og",
+      "P"
+     ],
+     "answer": 0,
+     "explanation": "Mc · Moscovium · 115 · Group 15, Period 7 · Post-transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-116a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Lv?",
+     "choices": [
+      "Lanthanum",
+      "Livermorium",
+      "Sulfur",
+      "Copernicium"
+     ],
+     "answer": 1,
+     "explanation": "Lv · Livermorium · 116 · Group 16, Period 7 · Post-transition metal"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Livermorium?",
+     "choices": [
+      "O",
+      "Lv",
+      "Nh",
+      "Cn"
+     ],
+     "answer": 1,
+     "explanation": "Lv · Livermorium · 116 · Group 16, Period 7 · Post-transition metal"
+    }
+   ]
+  },
+  {
+   "id": "per-117a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Ts?",
+     "choices": [
+      "Astatine",
+      "Chlorine",
+      "Tantalum",
+      "Tennessine"
+     ],
+     "answer": 3,
+     "explanation": "Ts · Tennessine · 117 · Group 17, Period 7 · Halogen"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Tennessine?",
+     "choices": [
+      "At",
+      "Ts",
+      "Tc",
+      "Nh"
+     ],
+     "answer": 1,
+     "explanation": "Ts · Tennessine · 117 · Group 17, Period 7 · Halogen"
+    }
+   ]
+  },
+  {
+   "id": "per-118a",
+   "ask": {
+    "1": "Symbol to element",
+    "2": "Element to symbol",
+    "3": "Number to element"
+   },
+   "variants": [
+    {
+     "level": 1,
+     "question": "Which element has the symbol Og?",
+     "choices": [
+      "Livermorium",
+      "Xenon",
+      "Radon",
+      "Oganesson"
+     ],
+     "answer": 3,
+     "explanation": "Og · Oganesson · 118 · Group 18, Period 7 · Noble gas"
+    },
+    {
+     "level": 2,
+     "question": "What is the symbol of Oganesson?",
+     "choices": [
+      "Rn",
+      "Og",
+      "Mc",
+      "Ar"
+     ],
+     "answer": 1,
+     "explanation": "Og · Oganesson · 118 · Group 18, Period 7 · Noble gas"
+    }
+   ]
+  }
+ ]
+}

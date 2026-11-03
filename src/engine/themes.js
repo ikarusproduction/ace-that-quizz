@@ -24,6 +24,7 @@ export const THEMES = {
   history: { label: 'History', short: 'History', sprite: 'history', group: 'Brain', match: (q) => q.category === 'history' },
   geography: { label: 'Geography', short: 'Geo', sprite: 'geography', group: 'Brain', match: (q) => q.category === 'geography' },
   nature: { label: 'Nature & Animals', short: 'Nature', sprite: 'nature', group: 'Brain', match: (q) => q.category === 'nature' },
+  periodic: { label: 'Periodic Table', short: 'Periodic', sprite: 'symbols', group: 'Brain', match: (q) => q.category === 'periodic' },
   symbols: { label: 'Symbols & Elements', short: 'Symbols', sprite: 'symbols', group: 'Brain', match: (q) => q.category === 'symbols' },
   news: { label: 'Current Affairs (last 2 weeks)', short: 'News', sprite: 'news', group: 'Brain', match: (q, now) => q.category === 'news' && isFreshNews(q, now) },
   arts: { label: 'Arts & Literature', short: 'Arts', sprite: 'arts', group: 'Culture', match: (q) => q.category === 'arts' && q.subcategory !== 'music' },

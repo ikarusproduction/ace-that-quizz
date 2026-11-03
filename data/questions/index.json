@@ -28,7 +28,8 @@
     "politics.json",
     "assoc.json",
     "chrono.json",
-    "hpfilms.json"
+    "hpfilms.json",
+    "periodic.json"
   ],
   "variantFiles": [
     "variants/science.json",
@@ -54,6 +55,7 @@
     "variants/politics.json",
     "variants/assoc.json",
     "variants/chrono.json",
-    "variants/hpfilms.json"
+    "variants/hpfilms.json",
+    "variants/periodic.json"
   ]
 }
