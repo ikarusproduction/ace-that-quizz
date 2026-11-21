@@ -1,0 +1,8 @@
+# One-click hosting on Render.com: New + > Blueprint > pick this repo.
+# The free plan sleeps after 15 minutes without visitors; the first visit then takes about a minute.
+services:
+  - type: web
+    name: tournee-generale
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health

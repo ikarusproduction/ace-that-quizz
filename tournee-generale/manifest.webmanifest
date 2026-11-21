@@ -1,0 +1,10 @@
+{
+  "name": "Tournée Générale",
+  "short_name": "Tournée",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1a1036",
+  "theme_color": "#1a1036",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

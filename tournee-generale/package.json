@@ -1,0 +1,12 @@
+{
+  "name": "tournee-generale",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Jeu de plateau à boire multi-téléphones : dés, mini-jeux de 30 secondes, podium qui fait boire.",
+  "type": "module",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "node --test \"tests/**/*.test.js\""
+  },
+  "engines": { "node": ">=22" }
+}
