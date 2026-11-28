@@ -1,0 +1,360 @@
+{
+ "id": "battlefield",
+ "name": "Champ des Escarmouches",
+ "referenceTerrain": "champ_de_bataille",
+ "layoutSource": "original-design",
+ "flavor": "Snipers en vue, couchez-vous !",
+ "specialEffect": "designate_opponent_rack",
+ "medalGoal": {
+  "blue": 7,
+  "red": 7
+ },
+ "nodes": [
+  {
+   "id": "HB",
+   "x": 0,
+   "y": 3,
+   "type": "hq",
+   "owner": "blue"
+  },
+  {
+   "id": "HR",
+   "x": 10,
+   "y": 3,
+   "type": "hq",
+   "owner": "red"
+  },
+  {
+   "id": "P1",
+   "x": 1.5,
+   "y": 1,
+   "type": "base"
+  },
+  {
+   "id": "P2",
+   "x": 1.5,
+   "y": 3,
+   "type": "base"
+  },
+  {
+   "id": "P3",
+   "x": 1.5,
+   "y": 5,
+   "type": "base"
+  },
+  {
+   "id": "Q1",
+   "x": 3,
+   "y": 2,
+   "type": "base"
+  },
+  {
+   "id": "Q2",
+   "x": 3,
+   "y": 4,
+   "type": "base"
+  },
+  {
+   "id": "S1",
+   "x": 4,
+   "y": 0.6,
+   "type": "special"
+  },
+  {
+   "id": "S3",
+   "x": 4,
+   "y": 5.4,
+   "type": "base"
+  },
+  {
+   "id": "M1",
+   "x": 5,
+   "y": 1.8,
+   "type": "base"
+  },
+  {
+   "id": "M2",
+   "x": 5,
+   "y": 4.2,
+   "type": "base"
+  },
+  {
+   "id": "S2",
+   "x": 6,
+   "y": 0.6,
+   "type": "base"
+  },
+  {
+   "id": "S4",
+   "x": 6,
+   "y": 5.4,
+   "type": "special"
+  },
+  {
+   "id": "Q3",
+   "x": 7,
+   "y": 2,
+   "type": "base"
+  },
+  {
+   "id": "Q4",
+   "x": 7,
+   "y": 4,
+   "type": "base"
+  },
+  {
+   "id": "P4",
+   "x": 8.5,
+   "y": 1,
+   "type": "base"
+  },
+  {
+   "id": "P5",
+   "x": 8.5,
+   "y": 3,
+   "type": "base"
+  },
+  {
+   "id": "P6",
+   "x": 8.5,
+   "y": 5,
+   "type": "base"
+  }
+ ],
+ "edges": [
+  [
+   "HB",
+   "P1"
+  ],
+  [
+   "HB",
+   "P2"
+  ],
+  [
+   "HB",
+   "P3"
+  ],
+  [
+   "P1",
+   "P2"
+  ],
+  [
+   "P2",
+   "P3"
+  ],
+  [
+   "P1",
+   "Q1"
+  ],
+  [
+   "P2",
+   "Q1"
+  ],
+  [
+   "P2",
+   "Q2"
+  ],
+  [
+   "P3",
+   "Q2"
+  ],
+  [
+   "Q1",
+   "Q2"
+  ],
+  [
+   "Q1",
+   "S1"
+  ],
+  [
+   "Q1",
+   "M1"
+  ],
+  [
+   "Q2",
+   "M2"
+  ],
+  [
+   "Q2",
+   "S3"
+  ],
+  [
+   "M1",
+   "M2"
+  ],
+  [
+   "S1",
+   "M1"
+  ],
+  [
+   "S3",
+   "M2"
+  ],
+  [
+   "S1",
+   "S2"
+  ],
+  [
+   "S3",
+   "S4"
+  ],
+  [
+   "M1",
+   "S2"
+  ],
+  [
+   "M2",
+   "S4"
+  ],
+  [
+   "M1",
+   "Q3"
+  ],
+  [
+   "M2",
+   "Q4"
+  ],
+  [
+   "S2",
+   "Q3"
+  ],
+  [
+   "S4",
+   "Q4"
+  ],
+  [
+   "Q3",
+   "Q4"
+  ],
+  [
+   "Q3",
+   "P4"
+  ],
+  [
+   "Q3",
+   "P5"
+  ],
+  [
+   "Q4",
+   "P5"
+  ],
+  [
+   "Q4",
+   "P6"
+  ],
+  [
+   "P4",
+   "P5"
+  ],
+  [
+   "P5",
+   "P6"
+  ],
+  [
+   "P4",
+   "HR"
+  ],
+  [
+   "P5",
+   "HR"
+  ],
+  [
+   "P6",
+   "HR"
+  ]
+ ],
+ "regions": [
+  {
+   "id": "r1",
+   "bases": [
+    "Q1",
+    "M1",
+    "M2",
+    "Q2"
+   ],
+   "medals": 3
+  },
+  {
+   "id": "r2",
+   "bases": [
+    "M1",
+    "Q3",
+    "Q4",
+    "M2"
+   ],
+   "medals": 3
+  },
+  {
+   "id": "r3",
+   "bases": [
+    "S1",
+    "S2",
+    "M1"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r4",
+   "bases": [
+    "S3",
+    "M2",
+    "S4"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r5",
+   "bases": [
+    "P2",
+    "Q1",
+    "Q2"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r6",
+   "bases": [
+    "Q3",
+    "P5",
+    "Q4"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r7",
+   "bases": [
+    "Q1",
+    "S1",
+    "M1"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r8",
+   "bases": [
+    "M2",
+    "S4",
+    "Q4"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r9",
+   "bases": [
+    "Q2",
+    "M2",
+    "S3"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r10",
+   "bases": [
+    "M1",
+    "S2",
+    "Q3"
+   ],
+   "medals": 1
+  }
+ ]
+}

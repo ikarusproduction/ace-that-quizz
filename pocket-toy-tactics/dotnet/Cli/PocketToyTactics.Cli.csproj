@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Console test harness: hot-seat / AI games in text mode, AI tournaments, LAN host/join and diagnostics.
+       It plays the exact same core library the Unity client embeds. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <AssemblyName>ptt</AssemblyName>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Core/PocketToyTactics.Core.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="673" font-family="sans-serif">
+<rect width="100%%" height="100%%" fill="#fbf3df"/>
+<text x="60" y="30" font-size="20" font-weight="bold" fill="#284b63">Jungle Glouglou (move_adjacent_enemy) - objectif bleu 7 / rouge 7</text>
+<polygon points="420,235 600,235 690,370 600,505 420,505 330,370" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="510" y="376" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;4</text>
+<polygon points="510,127 600,235 420,235" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="510" y="205" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;2</text>
+<polygon points="510,613 420,505 600,505" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="510" y="547" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;2</text>
+<polygon points="222,208 420,235 330,370" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="324" y="277" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;1</text>
+<polygon points="222,532 330,370 420,505" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="324" y="475" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;1</text>
+<polygon points="798,208 690,370 600,235" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="696" y="277" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;1</text>
+<polygon points="798,532 600,505 690,370" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="696" y="475" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;1</text>
+<polygon points="222,208 510,127 420,235" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="384" y="196" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;1</text>
+<polygon points="798,208 600,235 510,127" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="636" y="196" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;1</text>
+<polygon points="222,532 420,505 510,613" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="384" y="556" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;1</text>
+<polygon points="798,532 510,613 600,505" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="636" y="556" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;1</text>
+<line x1="60" y1="370" x2="222" y2="208" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="60" y1="370" x2="222" y2="532" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="60" y1="370" x2="330" y2="370" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="222" y1="208" x2="330" y2="370" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="222" y1="532" x2="330" y2="370" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="222" y1="208" x2="420" y2="235" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="222" y1="532" x2="420" y2="505" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="420" y1="235" x2="600" y2="235" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="600" y1="235" x2="690" y2="370" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="690" y1="370" x2="600" y2="505" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="600" y1="505" x2="420" y2="505" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="420" y1="505" x2="330" y2="370" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="330" y1="370" x2="420" y2="235" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="420" y1="235" x2="510" y2="127" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="510" y1="127" x2="600" y2="235" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="420" y1="505" x2="510" y2="613" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="510" y1="613" x2="600" y2="505" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="600" y1="235" x2="798" y2="208" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="690" y1="370" x2="798" y2="208" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="690" y1="370" x2="798" y2="532" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="600" y1="505" x2="798" y2="532" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="798" y1="208" x2="960" y2="370" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="798" y1="532" x2="960" y2="370" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="960" y1="370" x2="690" y2="370" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="222" y1="208" x2="510" y2="127" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="798" y1="208" x2="510" y2="127" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="222" y1="532" x2="510" y2="613" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="798" y1="532" x2="510" y2="613" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<rect x="32" y="342" width="56" height="56" rx="10" fill="#2f7fd8"/>
+<text x="60" y="375" text-anchor="middle" font-size="13" fill="#222">HB</text>
+<rect x="932" y="342" width="56" height="56" rx="10" fill="#e2483d"/>
+<text x="960" y="375" text-anchor="middle" font-size="13" fill="#222">HR</text>
+<rect x="200" y="186" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="222" y="213" text-anchor="middle" font-size="13" fill="#222">L1</text>
+<rect x="200" y="510" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="222" y="537" text-anchor="middle" font-size="13" fill="#222">L2</text>
+<rect x="398" y="213" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="420" y="240" text-anchor="middle" font-size="13" fill="#222">V1</text>
+<rect x="578" y="213" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="600" y="240" text-anchor="middle" font-size="13" fill="#222">V2</text>
+<rect x="668" y="348" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="690" y="375" text-anchor="middle" font-size="13" fill="#222">V3</text>
+<rect x="578" y="483" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="600" y="510" text-anchor="middle" font-size="13" fill="#222">V4</text>
+<rect x="398" y="483" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="420" y="510" text-anchor="middle" font-size="13" fill="#222">V5</text>
+<rect x="308" y="348" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="330" y="375" text-anchor="middle" font-size="13" fill="#222">V6</text>
+<rect x="488" y="105" width="44" height="44" rx="8" fill="#f4b942" stroke="#7a6a55" stroke-width="2"/>
+<text x="510" y="132" text-anchor="middle" font-size="13" fill="#222">T</text>
+<rect x="488" y="591" width="44" height="44" rx="8" fill="#f4b942" stroke="#7a6a55" stroke-width="2"/>
+<text x="510" y="618" text-anchor="middle" font-size="13" fill="#222">B</text>
+<rect x="776" y="186" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="798" y="213" text-anchor="middle" font-size="13" fill="#222">R1</text>
+<rect x="776" y="510" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="798" y="537" text-anchor="middle" font-size="13" fill="#222">R2</text>
+</svg>

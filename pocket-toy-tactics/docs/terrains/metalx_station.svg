@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="610" font-family="sans-serif">
+<rect width="100%%" height="100%%" fill="#fbf3df"/>
+<text x="60" y="30" font-size="20" font-weight="bold" fill="#284b63">Station Boulon-X (effect_shield) - objectif bleu 7 / rouge 7</text>
+<polygon points="222,235 348,370 222,505" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="264" y="376" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;1</text>
+<polygon points="222,235 438,190 510,298 348,370" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="380" y="279" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;2</text>
+<polygon points="222,505 348,370 510,442 438,550" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="380" y="473" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;2</text>
+<polygon points="348,370 510,298 510,442" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="456" y="376" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;2</text>
+<polygon points="438,190 582,190 510,298" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="510" y="232" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;1</text>
+<polygon points="438,550 510,442 582,550" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="510" y="520" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;1</text>
+<polygon points="510,298 672,370 510,442" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="564" y="376" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;2</text>
+<polygon points="510,298 582,190 798,235 672,370" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="640" y="279" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;2</text>
+<polygon points="510,442 672,370 798,505 582,550" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="640" y="473" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;2</text>
+<polygon points="672,370 798,235 798,505" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="756" y="376" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;1</text>
+<line x1="60" y1="370" x2="222" y2="235" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="60" y1="370" x2="222" y2="505" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="222" y1="235" x2="222" y2="505" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="222" y1="235" x2="348" y2="370" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="222" y1="505" x2="348" y2="370" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="222" y1="235" x2="438" y2="190" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="222" y1="505" x2="438" y2="550" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="348" y1="370" x2="510" y2="298" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="348" y1="370" x2="510" y2="442" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="438" y1="190" x2="510" y2="298" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="438" y1="550" x2="510" y2="442" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="510" y1="298" x2="510" y2="442" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="438" y1="190" x2="582" y2="190" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="438" y1="550" x2="582" y2="550" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="510" y1="298" x2="582" y2="190" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="510" y1="442" x2="582" y2="550" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="510" y1="298" x2="672" y2="370" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="510" y1="442" x2="672" y2="370" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="582" y1="190" x2="798" y2="235" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="582" y1="550" x2="798" y2="505" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="672" y1="370" x2="798" y2="235" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="672" y1="370" x2="798" y2="505" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="798" y1="235" x2="798" y2="505" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="798" y1="235" x2="960" y2="370" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="798" y1="505" x2="960" y2="370" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<rect x="32" y="342" width="56" height="56" rx="10" fill="#2f7fd8"/>
+<text x="60" y="375" text-anchor="middle" font-size="13" fill="#222">HB</text>
+<rect x="932" y="342" width="56" height="56" rx="10" fill="#e2483d"/>
+<text x="960" y="375" text-anchor="middle" font-size="13" fill="#222">HR</text>
+<rect x="200" y="213" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="222" y="240" text-anchor="middle" font-size="13" fill="#222">A</text>
+<rect x="200" y="483" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="222" y="510" text-anchor="middle" font-size="13" fill="#222">B</text>
+<rect x="326" y="348" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="348" y="375" text-anchor="middle" font-size="13" fill="#222">C</text>
+<rect x="416" y="168" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="438" y="195" text-anchor="middle" font-size="13" fill="#222">D</text>
+<rect x="416" y="528" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="438" y="555" text-anchor="middle" font-size="13" fill="#222">E</text>
+<rect x="488" y="276" width="44" height="44" rx="8" fill="#f4b942" stroke="#7a6a55" stroke-width="2"/>
+<text x="510" y="303" text-anchor="middle" font-size="13" fill="#222">F</text>
+<rect x="488" y="420" width="44" height="44" rx="8" fill="#f4b942" stroke="#7a6a55" stroke-width="2"/>
+<text x="510" y="447" text-anchor="middle" font-size="13" fill="#222">G</text>
+<rect x="560" y="168" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="582" y="195" text-anchor="middle" font-size="13" fill="#222">H</text>
+<rect x="560" y="528" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="582" y="555" text-anchor="middle" font-size="13" fill="#222">I</text>
+<rect x="650" y="348" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="672" y="375" text-anchor="middle" font-size="13" fill="#222">J</text>
+<rect x="776" y="213" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="798" y="240" text-anchor="middle" font-size="13" fill="#222">K</text>
+<rect x="776" y="483" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="798" y="510" text-anchor="middle" font-size="13" fill="#222">L</text>
+</svg>

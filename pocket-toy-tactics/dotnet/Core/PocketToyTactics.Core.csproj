@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Compiles the Unity package sources as a plain .NET library, with Unity 6's C# level (9.0),
+       so that the rules, AI and network code are built and tested outside the Unity editor. -->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <RootNamespace>PocketToyTactics.Core</RootNamespace>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../Packages/com.pockettoytactics.core/Runtime/**/*.cs" />
+  </ItemGroup>
+</Project>

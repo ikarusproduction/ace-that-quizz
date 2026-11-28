@@ -1,0 +1,272 @@
+{
+ "id": "cursed_graveyard",
+ "name": "Cimetière Farceur",
+ "referenceTerrain": "cimetiere_maudit",
+ "layoutSource": "original-design",
+ "flavor": "Ils sont de retour… Tremblez !",
+ "specialEffect": "recover_from_discard",
+ "medalGoal": {
+  "blue": 7,
+  "red": 7
+ },
+ "nodes": [
+  {
+   "id": "HB",
+   "x": 0,
+   "y": 3,
+   "type": "hq",
+   "owner": "blue"
+  },
+  {
+   "id": "HR",
+   "x": 10,
+   "y": 3,
+   "type": "hq",
+   "owner": "red"
+  },
+  {
+   "id": "G1",
+   "x": 1.5,
+   "y": 1.5,
+   "type": "base"
+  },
+  {
+   "id": "G2",
+   "x": 1.5,
+   "y": 4.5,
+   "type": "base"
+  },
+  {
+   "id": "G3",
+   "x": 3,
+   "y": 0.8,
+   "type": "base"
+  },
+  {
+   "id": "G4",
+   "x": 3,
+   "y": 3,
+   "type": "base"
+  },
+  {
+   "id": "G5",
+   "x": 3,
+   "y": 5.2,
+   "type": "special"
+  },
+  {
+   "id": "C1",
+   "x": 5,
+   "y": 1.8,
+   "type": "base"
+  },
+  {
+   "id": "C2",
+   "x": 5,
+   "y": 4.2,
+   "type": "base"
+  },
+  {
+   "id": "G6",
+   "x": 7,
+   "y": 0.8,
+   "type": "special"
+  },
+  {
+   "id": "G7",
+   "x": 7,
+   "y": 3,
+   "type": "base"
+  },
+  {
+   "id": "G8",
+   "x": 7,
+   "y": 5.2,
+   "type": "base"
+  },
+  {
+   "id": "G9",
+   "x": 8.5,
+   "y": 1.5,
+   "type": "base"
+  },
+  {
+   "id": "G10",
+   "x": 8.5,
+   "y": 4.5,
+   "type": "base"
+  }
+ ],
+ "edges": [
+  [
+   "HB",
+   "G1"
+  ],
+  [
+   "HB",
+   "G2"
+  ],
+  [
+   "G1",
+   "G2"
+  ],
+  [
+   "G1",
+   "G3"
+  ],
+  [
+   "G1",
+   "G4"
+  ],
+  [
+   "G2",
+   "G4"
+  ],
+  [
+   "G2",
+   "G5"
+  ],
+  [
+   "G3",
+   "C1"
+  ],
+  [
+   "G4",
+   "C1"
+  ],
+  [
+   "G4",
+   "C2"
+  ],
+  [
+   "G5",
+   "C2"
+  ],
+  [
+   "C1",
+   "C2"
+  ],
+  [
+   "C1",
+   "G6"
+  ],
+  [
+   "C1",
+   "G7"
+  ],
+  [
+   "C2",
+   "G7"
+  ],
+  [
+   "C2",
+   "G8"
+  ],
+  [
+   "G6",
+   "G9"
+  ],
+  [
+   "G7",
+   "G9"
+  ],
+  [
+   "G7",
+   "G10"
+  ],
+  [
+   "G8",
+   "G10"
+  ],
+  [
+   "G9",
+   "G10"
+  ],
+  [
+   "G9",
+   "HR"
+  ],
+  [
+   "G10",
+   "HR"
+  ]
+ ],
+ "regions": [
+  {
+   "id": "r1",
+   "bases": [
+    "G1",
+    "G3",
+    "C1",
+    "G4"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r2",
+   "bases": [
+    "G2",
+    "G4",
+    "C2",
+    "G5"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r3",
+   "bases": [
+    "C1",
+    "G6",
+    "G9",
+    "G7"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r4",
+   "bases": [
+    "C2",
+    "G7",
+    "G10",
+    "G8"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r5",
+   "bases": [
+    "G4",
+    "C1",
+    "C2"
+   ],
+   "medals": 3
+  },
+  {
+   "id": "r6",
+   "bases": [
+    "C1",
+    "G7",
+    "C2"
+   ],
+   "medals": 3
+  },
+  {
+   "id": "r7",
+   "bases": [
+    "G1",
+    "G4",
+    "G2"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r8",
+   "bases": [
+    "G7",
+    "G9",
+    "G10"
+   ],
+   "medals": 1
+  }
+ ]
+}

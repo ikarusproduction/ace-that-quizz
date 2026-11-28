@@ -1,0 +1,322 @@
+{
+ "id": "castle_plain",
+ "name": "Plaine des Remparts",
+ "referenceTerrain": "plaine_des_chateaux",
+ "layoutSource": "original-design",
+ "flavor": "Les tambours sonnent la retraite.",
+ "specialEffect": "recall_own_troop",
+ "medalGoal": {
+  "blue": 7,
+  "red": 7
+ },
+ "nodes": [
+  {
+   "id": "HB",
+   "x": 0,
+   "y": 3,
+   "type": "hq",
+   "owner": "blue"
+  },
+  {
+   "id": "HR",
+   "x": 10,
+   "y": 3,
+   "type": "hq",
+   "owner": "red"
+  },
+  {
+   "id": "L1",
+   "x": 1.5,
+   "y": 1,
+   "type": "base"
+  },
+  {
+   "id": "L2",
+   "x": 1.5,
+   "y": 5,
+   "type": "base"
+  },
+  {
+   "id": "L3",
+   "x": 2.5,
+   "y": 3,
+   "type": "base"
+  },
+  {
+   "id": "P1",
+   "x": 3.5,
+   "y": 0.5,
+   "type": "base"
+  },
+  {
+   "id": "P2",
+   "x": 3.5,
+   "y": 5.5,
+   "type": "special"
+  },
+  {
+   "id": "K1",
+   "x": 4,
+   "y": 2,
+   "type": "base"
+  },
+  {
+   "id": "K2",
+   "x": 4,
+   "y": 4,
+   "type": "base"
+  },
+  {
+   "id": "M",
+   "x": 5,
+   "y": 3,
+   "type": "special"
+  },
+  {
+   "id": "K3",
+   "x": 6,
+   "y": 2,
+   "type": "base"
+  },
+  {
+   "id": "K4",
+   "x": 6,
+   "y": 4,
+   "type": "base"
+  },
+  {
+   "id": "P3",
+   "x": 6.5,
+   "y": 0.5,
+   "type": "special"
+  },
+  {
+   "id": "P4",
+   "x": 6.5,
+   "y": 5.5,
+   "type": "base"
+  },
+  {
+   "id": "R3",
+   "x": 7.5,
+   "y": 3,
+   "type": "base"
+  },
+  {
+   "id": "R1",
+   "x": 8.5,
+   "y": 1,
+   "type": "base"
+  },
+  {
+   "id": "R2",
+   "x": 8.5,
+   "y": 5,
+   "type": "base"
+  }
+ ],
+ "edges": [
+  [
+   "HB",
+   "L1"
+  ],
+  [
+   "HB",
+   "L2"
+  ],
+  [
+   "HB",
+   "L3"
+  ],
+  [
+   "L1",
+   "L3"
+  ],
+  [
+   "L2",
+   "L3"
+  ],
+  [
+   "L1",
+   "P1"
+  ],
+  [
+   "L2",
+   "P2"
+  ],
+  [
+   "L3",
+   "K1"
+  ],
+  [
+   "L3",
+   "K2"
+  ],
+  [
+   "P1",
+   "K1"
+  ],
+  [
+   "P2",
+   "K2"
+  ],
+  [
+   "K1",
+   "K2"
+  ],
+  [
+   "K1",
+   "M"
+  ],
+  [
+   "K2",
+   "M"
+  ],
+  [
+   "P1",
+   "P3"
+  ],
+  [
+   "P2",
+   "P4"
+  ],
+  [
+   "M",
+   "K3"
+  ],
+  [
+   "M",
+   "K4"
+  ],
+  [
+   "K3",
+   "K4"
+  ],
+  [
+   "P3",
+   "K3"
+  ],
+  [
+   "P4",
+   "K4"
+  ],
+  [
+   "K3",
+   "R3"
+  ],
+  [
+   "K4",
+   "R3"
+  ],
+  [
+   "P3",
+   "R1"
+  ],
+  [
+   "P4",
+   "R2"
+  ],
+  [
+   "R1",
+   "R3"
+  ],
+  [
+   "R2",
+   "R3"
+  ],
+  [
+   "R1",
+   "HR"
+  ],
+  [
+   "R2",
+   "HR"
+  ],
+  [
+   "R3",
+   "HR"
+  ]
+ ],
+ "regions": [
+  {
+   "id": "r1",
+   "bases": [
+    "L1",
+    "L3",
+    "K1",
+    "P1"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r2",
+   "bases": [
+    "L2",
+    "P2",
+    "K2",
+    "L3"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r3",
+   "bases": [
+    "R2",
+    "R3",
+    "K4",
+    "P4"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r4",
+   "bases": [
+    "R1",
+    "P3",
+    "K3",
+    "R3"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r5",
+   "bases": [
+    "K1",
+    "M",
+    "K2"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r6",
+   "bases": [
+    "K4",
+    "M",
+    "K3"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r7",
+   "bases": [
+    "P1",
+    "K1",
+    "M",
+    "K3",
+    "P3"
+   ],
+   "medals": 3
+  },
+  {
+   "id": "r8",
+   "bases": [
+    "P4",
+    "K4",
+    "M",
+    "K2",
+    "P2"
+   ],
+   "medals": 3
+  }
+ ]
+}

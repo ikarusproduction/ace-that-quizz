@@ -1,0 +1,8 @@
+{
+  "name": "com.pockettoytactics.core",
+  "version": "0.2.0",
+  "displayName": "Pocket Toy Tactics Core",
+  "description": "Engine-independent rules engine, content database, AI, local network protocol and save system for Pocket Toy Tactics. Pure C# (no UnityEngine dependency).",
+  "unity": "6000.0",
+  "author": { "name": "Pocket Toy Tactics" }
+}

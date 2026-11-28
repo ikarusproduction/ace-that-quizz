@@ -1,0 +1,318 @@
+{
+ "id": "volcano_jungle",
+ "name": "Jungle Glouglou",
+ "referenceTerrain": "jungle_volcanique",
+ "layoutSource": "original-design",
+ "flavor": "Éruptiooooooon !",
+ "specialEffect": "move_adjacent_enemy",
+ "medalGoal": {
+  "blue": 7,
+  "red": 7
+ },
+ "nodes": [
+  {
+   "id": "HB",
+   "x": 0,
+   "y": 3,
+   "type": "hq",
+   "owner": "blue"
+  },
+  {
+   "id": "HR",
+   "x": 10,
+   "y": 3,
+   "type": "hq",
+   "owner": "red"
+  },
+  {
+   "id": "L1",
+   "x": 1.8,
+   "y": 1.2,
+   "type": "base"
+  },
+  {
+   "id": "L2",
+   "x": 1.8,
+   "y": 4.8,
+   "type": "base"
+  },
+  {
+   "id": "V1",
+   "x": 4,
+   "y": 1.5,
+   "type": "base"
+  },
+  {
+   "id": "V2",
+   "x": 6,
+   "y": 1.5,
+   "type": "base"
+  },
+  {
+   "id": "V3",
+   "x": 7,
+   "y": 3,
+   "type": "base"
+  },
+  {
+   "id": "V4",
+   "x": 6,
+   "y": 4.5,
+   "type": "base"
+  },
+  {
+   "id": "V5",
+   "x": 4,
+   "y": 4.5,
+   "type": "base"
+  },
+  {
+   "id": "V6",
+   "x": 3,
+   "y": 3,
+   "type": "base"
+  },
+  {
+   "id": "T",
+   "x": 5,
+   "y": 0.3,
+   "type": "special"
+  },
+  {
+   "id": "B",
+   "x": 5,
+   "y": 5.7,
+   "type": "special"
+  },
+  {
+   "id": "R1",
+   "x": 8.2,
+   "y": 1.2,
+   "type": "base"
+  },
+  {
+   "id": "R2",
+   "x": 8.2,
+   "y": 4.8,
+   "type": "base"
+  }
+ ],
+ "edges": [
+  [
+   "HB",
+   "L1"
+  ],
+  [
+   "HB",
+   "L2"
+  ],
+  [
+   "HB",
+   "V6"
+  ],
+  [
+   "L1",
+   "V6"
+  ],
+  [
+   "L2",
+   "V6"
+  ],
+  [
+   "L1",
+   "V1"
+  ],
+  [
+   "L2",
+   "V5"
+  ],
+  [
+   "V1",
+   "V2"
+  ],
+  [
+   "V2",
+   "V3"
+  ],
+  [
+   "V3",
+   "V4"
+  ],
+  [
+   "V4",
+   "V5"
+  ],
+  [
+   "V5",
+   "V6"
+  ],
+  [
+   "V6",
+   "V1"
+  ],
+  [
+   "V1",
+   "T"
+  ],
+  [
+   "T",
+   "V2"
+  ],
+  [
+   "V5",
+   "B"
+  ],
+  [
+   "B",
+   "V4"
+  ],
+  [
+   "V2",
+   "R1"
+  ],
+  [
+   "V3",
+   "R1"
+  ],
+  [
+   "V3",
+   "R2"
+  ],
+  [
+   "V4",
+   "R2"
+  ],
+  [
+   "R1",
+   "HR"
+  ],
+  [
+   "R2",
+   "HR"
+  ],
+  [
+   "HR",
+   "V3"
+  ],
+  [
+   "L1",
+   "T"
+  ],
+  [
+   "R1",
+   "T"
+  ],
+  [
+   "L2",
+   "B"
+  ],
+  [
+   "R2",
+   "B"
+  ]
+ ],
+ "regions": [
+  {
+   "id": "r1",
+   "bases": [
+    "V1",
+    "V2",
+    "V3",
+    "V4",
+    "V5",
+    "V6"
+   ],
+   "medals": 4
+  },
+  {
+   "id": "r2",
+   "bases": [
+    "T",
+    "V2",
+    "V1"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r3",
+   "bases": [
+    "B",
+    "V5",
+    "V4"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r4",
+   "bases": [
+    "L1",
+    "V1",
+    "V6"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r5",
+   "bases": [
+    "L2",
+    "V6",
+    "V5"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r6",
+   "bases": [
+    "R1",
+    "V3",
+    "V2"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r7",
+   "bases": [
+    "R2",
+    "V4",
+    "V3"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r8",
+   "bases": [
+    "L1",
+    "T",
+    "V1"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r9",
+   "bases": [
+    "R1",
+    "V2",
+    "T"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r10",
+   "bases": [
+    "L2",
+    "V5",
+    "B"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r11",
+   "bases": [
+    "R2",
+    "B",
+    "V4"
+   ],
+   "medals": 1
+  }
+ ]
+}

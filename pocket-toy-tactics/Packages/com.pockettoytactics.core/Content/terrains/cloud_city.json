@@ -1,0 +1,290 @@
+{
+ "id": "cloud_city",
+ "name": "Archipel des Nuées",
+ "referenceTerrain": "cite_des_nuages",
+ "layoutSource": "original-design",
+ "flavor": "Comment résister à sa splendeur…",
+ "specialEffect": "draw_one",
+ "medalGoal": {
+  "blue": 7,
+  "red": 7
+ },
+ "nodes": [
+  {
+   "id": "HB",
+   "x": 0,
+   "y": 3,
+   "type": "hq",
+   "owner": "blue"
+  },
+  {
+   "id": "HR",
+   "x": 10,
+   "y": 3,
+   "type": "hq",
+   "owner": "red"
+  },
+  {
+   "id": "W1",
+   "x": 1.5,
+   "y": 1.5,
+   "type": "base"
+  },
+  {
+   "id": "W2",
+   "x": 1.5,
+   "y": 4.5,
+   "type": "base"
+  },
+  {
+   "id": "R0",
+   "x": 3,
+   "y": 3,
+   "type": "base"
+  },
+  {
+   "id": "R1",
+   "x": 3.6,
+   "y": 1.6,
+   "type": "base"
+  },
+  {
+   "id": "R2",
+   "x": 5,
+   "y": 1,
+   "type": "special"
+  },
+  {
+   "id": "R3",
+   "x": 6.4,
+   "y": 1.6,
+   "type": "base"
+  },
+  {
+   "id": "R4",
+   "x": 7,
+   "y": 3,
+   "type": "base"
+  },
+  {
+   "id": "R5",
+   "x": 6.4,
+   "y": 4.4,
+   "type": "base"
+  },
+  {
+   "id": "R6",
+   "x": 5,
+   "y": 5,
+   "type": "special"
+  },
+  {
+   "id": "R7",
+   "x": 3.6,
+   "y": 4.4,
+   "type": "base"
+  },
+  {
+   "id": "Z",
+   "x": 5,
+   "y": 3,
+   "type": "special"
+  },
+  {
+   "id": "E1",
+   "x": 8.5,
+   "y": 1.5,
+   "type": "base"
+  },
+  {
+   "id": "E2",
+   "x": 8.5,
+   "y": 4.5,
+   "type": "base"
+  }
+ ],
+ "edges": [
+  [
+   "HB",
+   "W1"
+  ],
+  [
+   "HB",
+   "W2"
+  ],
+  [
+   "W1",
+   "W2"
+  ],
+  [
+   "R0",
+   "R1"
+  ],
+  [
+   "R1",
+   "R2"
+  ],
+  [
+   "R2",
+   "R3"
+  ],
+  [
+   "R3",
+   "R4"
+  ],
+  [
+   "R4",
+   "R5"
+  ],
+  [
+   "R5",
+   "R6"
+  ],
+  [
+   "R6",
+   "R7"
+  ],
+  [
+   "R7",
+   "R0"
+  ],
+  [
+   "Z",
+   "R0"
+  ],
+  [
+   "Z",
+   "R2"
+  ],
+  [
+   "Z",
+   "R4"
+  ],
+  [
+   "Z",
+   "R6"
+  ],
+  [
+   "W1",
+   "R1"
+  ],
+  [
+   "W1",
+   "R0"
+  ],
+  [
+   "W2",
+   "R0"
+  ],
+  [
+   "W2",
+   "R7"
+  ],
+  [
+   "E1",
+   "R3"
+  ],
+  [
+   "E1",
+   "R4"
+  ],
+  [
+   "E2",
+   "R4"
+  ],
+  [
+   "E2",
+   "R5"
+  ],
+  [
+   "E1",
+   "E2"
+  ],
+  [
+   "E1",
+   "HR"
+  ],
+  [
+   "E2",
+   "HR"
+  ]
+ ],
+ "regions": [
+  {
+   "id": "r1",
+   "bases": [
+    "Z",
+    "R0",
+    "R1",
+    "R2"
+   ],
+   "medals": 3
+  },
+  {
+   "id": "r2",
+   "bases": [
+    "Z",
+    "R2",
+    "R3",
+    "R4"
+   ],
+   "medals": 3
+  },
+  {
+   "id": "r3",
+   "bases": [
+    "Z",
+    "R4",
+    "R5",
+    "R6"
+   ],
+   "medals": 3
+  },
+  {
+   "id": "r4",
+   "bases": [
+    "Z",
+    "R6",
+    "R7",
+    "R0"
+   ],
+   "medals": 3
+  },
+  {
+   "id": "r5",
+   "bases": [
+    "W1",
+    "R0",
+    "R1"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r6",
+   "bases": [
+    "W2",
+    "R0",
+    "R7"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r7",
+   "bases": [
+    "E1",
+    "R3",
+    "R4"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r8",
+   "bases": [
+    "E2",
+    "R4",
+    "R5"
+   ],
+   "medals": 1
+  }
+ ]
+}

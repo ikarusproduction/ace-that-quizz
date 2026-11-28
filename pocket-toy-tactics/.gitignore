@@ -1,0 +1,12 @@
+bin/
+obj/
+*.user
+.vs/
+TestResults/
+# Unity
+Library/
+Temp/
+Logs/
+UserSettings/
+Build/
+Builds/

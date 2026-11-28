@@ -1,0 +1,29 @@
+{
+  "_comment": "Troop roster. 'id' and 'referenceName' identify the mechanic of the reference board game; 'name', 'tagline' and 'color' are original Pocket Toy Tactics content and can be changed freely. 'ability' must be one of: none, draw, extra_placement, discard_adjacent_enemy, ignore_connection, discard_random_from_opponent_rack.",
+  "troops": [
+    { "id": "skully",  "referenceName": "Skully",    "name": "Bloup",          "strength": 1, "ability": "draw", "amount": 2,
+      "tagline": "Ma caisse à jouets n'a pas de fond !", "color": "#8fd694",
+      "effect": "Vous pouvez piocher jusqu'à 2 troupes de votre réserve (le support reste limité à 8)." },
+    { "id": "captain", "referenceName": "Cap'taine", "name": "Sergent Ressort", "strength": 2, "ability": "extra_placement",
+      "tagline": "Un tour de clé et en avant !", "color": "#f2a541",
+      "effect": "Vous pouvez placer 1 troupe supplémentaire et appliquer son effet. Les effets des troupes passent avant ceux des bases spéciales." },
+    { "id": "mastok",  "referenceName": "Mastok",    "name": "Grizzbloc",      "strength": 3, "ability": "discard_adjacent_enemy",
+      "tagline": "Câlin obligatoire. Et très, très fort.", "color": "#b07d62",
+      "effect": "Vous pouvez défausser 1 troupe adverse visible sur une base reliée à Grizzbloc par un seul tronçon de chemin." },
+    { "id": "crochet", "referenceName": "Crochet",   "name": "Zip-Zap",        "strength": 4, "ability": "ignore_connection",
+      "tagline": "Boing ! Je suis déjà derrière toi.", "color": "#5bc0be",
+      "effect": "Peut être placé sur n'importe quelle base, reliée ou non à votre Q.G. Pour un Q.G. adverse, la connexion reste obligatoire." },
+    { "id": "xb42",    "referenceName": "XB-42",     "name": "Pif-Pof",        "strength": 5, "ability": "discard_random_from_opponent_rack",
+      "tagline": "Arrosage garanti, séchage non compris.", "color": "#6c8ead",
+      "effect": "Vous pouvez défausser face visible 1 troupe tirée au hasard dans le support adverse." },
+    { "id": "star",    "referenceName": "Star",      "name": "Paillette",      "strength": 6, "ability": "draw", "amount": 1,
+      "tagline": "Les fans me suivent partout, chéri.", "color": "#e98ac4",
+      "effect": "Vous pouvez piocher 1 troupe de votre réserve." },
+    { "id": "roxy",    "referenceName": "Roxy",      "name": "Mamie Brique",   "strength": 7, "ability": "none",
+      "tagline": "Ici, c'est chez moi. Essuie tes pieds.", "color": "#e4572e",
+      "effect": "Aucun effet. Elle est simplement la plus coriace." },
+    { "id": "kwak",    "referenceName": "Kwak",      "name": "Caméléo",        "strength": 0, "joker": true, "ability": "none",
+      "tagline": "Tu me vois ? Et maintenant ?", "color": "#a3d65c",
+      "effect": "Joker sans effet : peut recouvrir n'importe quelle troupe adverse, mais n'importe quelle troupe adverse peut aussi le recouvrir." }
+  ]
+}

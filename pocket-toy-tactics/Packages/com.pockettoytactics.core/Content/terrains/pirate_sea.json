@@ -1,0 +1,276 @@
+{
+ "id": "pirate_sea",
+ "name": "Mer des Flibustiers",
+ "referenceTerrain": "mer_des_caraibes",
+ "layoutSource": "original-design",
+ "flavor": "Pas de quartier !",
+ "specialEffect": "none",
+ "medalGoal": {
+  "blue": 8,
+  "red": 7
+ },
+ "nodes": [
+  {
+   "id": "HB1",
+   "x": 0,
+   "y": 1,
+   "type": "hq",
+   "owner": "blue"
+  },
+  {
+   "id": "HB2",
+   "x": 0,
+   "y": 5,
+   "type": "hq",
+   "owner": "blue"
+  },
+  {
+   "id": "HR",
+   "x": 10,
+   "y": 3,
+   "type": "hq",
+   "owner": "red"
+  },
+  {
+   "id": "I1",
+   "x": 1.8,
+   "y": 1,
+   "type": "base"
+  },
+  {
+   "id": "I2",
+   "x": 1.8,
+   "y": 5,
+   "type": "base"
+  },
+  {
+   "id": "I3",
+   "x": 2.5,
+   "y": 3,
+   "type": "base"
+  },
+  {
+   "id": "I4",
+   "x": 4,
+   "y": 1.8,
+   "type": "base"
+  },
+  {
+   "id": "I5",
+   "x": 4,
+   "y": 4.2,
+   "type": "base"
+  },
+  {
+   "id": "I6",
+   "x": 5.5,
+   "y": 0.6,
+   "type": "base"
+  },
+  {
+   "id": "I7",
+   "x": 5.5,
+   "y": 3,
+   "type": "base"
+  },
+  {
+   "id": "I8",
+   "x": 5.5,
+   "y": 5.4,
+   "type": "base"
+  },
+  {
+   "id": "I9",
+   "x": 7,
+   "y": 1.8,
+   "type": "base"
+  },
+  {
+   "id": "I10",
+   "x": 7,
+   "y": 4.2,
+   "type": "base"
+  },
+  {
+   "id": "I11",
+   "x": 8.5,
+   "y": 3,
+   "type": "base"
+  }
+ ],
+ "edges": [
+  [
+   "HB1",
+   "I1"
+  ],
+  [
+   "HB2",
+   "I2"
+  ],
+  [
+   "HB1",
+   "I3"
+  ],
+  [
+   "HB2",
+   "I3"
+  ],
+  [
+   "I1",
+   "I3"
+  ],
+  [
+   "I2",
+   "I3"
+  ],
+  [
+   "I1",
+   "I4"
+  ],
+  [
+   "I3",
+   "I4"
+  ],
+  [
+   "I3",
+   "I5"
+  ],
+  [
+   "I2",
+   "I5"
+  ],
+  [
+   "I4",
+   "I5"
+  ],
+  [
+   "I4",
+   "I6"
+  ],
+  [
+   "I4",
+   "I7"
+  ],
+  [
+   "I5",
+   "I7"
+  ],
+  [
+   "I5",
+   "I8"
+  ],
+  [
+   "I6",
+   "I9"
+  ],
+  [
+   "I7",
+   "I9"
+  ],
+  [
+   "I7",
+   "I10"
+  ],
+  [
+   "I8",
+   "I10"
+  ],
+  [
+   "I9",
+   "I10"
+  ],
+  [
+   "I9",
+   "I11"
+  ],
+  [
+   "I10",
+   "I11"
+  ],
+  [
+   "I11",
+   "HR"
+  ],
+  [
+   "I8",
+   "HR"
+  ]
+ ],
+ "regions": [
+  {
+   "id": "r1",
+   "bases": [
+    "I1",
+    "I3",
+    "I4"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r2",
+   "bases": [
+    "I2",
+    "I5",
+    "I3"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r3",
+   "bases": [
+    "I3",
+    "I4",
+    "I5"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r4",
+   "bases": [
+    "I4",
+    "I6",
+    "I9",
+    "I7"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r5",
+   "bases": [
+    "I4",
+    "I7",
+    "I5"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r6",
+   "bases": [
+    "I5",
+    "I7",
+    "I10",
+    "I8"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r7",
+   "bases": [
+    "I7",
+    "I9",
+    "I10"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r8",
+   "bases": [
+    "I9",
+    "I11",
+    "I10"
+   ],
+   "medals": 2
+  }
+ ],
+ "balanceNotes": "Tuned with AI self-play (ptt simulate): hard vs hard 55-45, normal vs normal 63-37 (blue-red). Starting values, confirm with real games."
+}

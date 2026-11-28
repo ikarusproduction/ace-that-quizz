@@ -1,0 +1,298 @@
+{
+ "id": "metalx_station",
+ "name": "Station Boulon-X",
+ "referenceTerrain": "station_metal_x",
+ "layoutSource": "original-design",
+ "flavor": "Bouclier anti-effet activé !",
+ "specialEffect": "effect_shield",
+ "medalGoal": {
+  "blue": 7,
+  "red": 7
+ },
+ "nodes": [
+  {
+   "id": "HB",
+   "x": 0,
+   "y": 3,
+   "type": "hq",
+   "owner": "blue"
+  },
+  {
+   "id": "HR",
+   "x": 10,
+   "y": 3,
+   "type": "hq",
+   "owner": "red"
+  },
+  {
+   "id": "A",
+   "x": 1.8,
+   "y": 1.5,
+   "type": "base"
+  },
+  {
+   "id": "B",
+   "x": 1.8,
+   "y": 4.5,
+   "type": "base"
+  },
+  {
+   "id": "C",
+   "x": 3.2,
+   "y": 3,
+   "type": "base"
+  },
+  {
+   "id": "D",
+   "x": 4.2,
+   "y": 1,
+   "type": "base"
+  },
+  {
+   "id": "E",
+   "x": 4.2,
+   "y": 5,
+   "type": "base"
+  },
+  {
+   "id": "F",
+   "x": 5,
+   "y": 2.2,
+   "type": "special"
+  },
+  {
+   "id": "G",
+   "x": 5,
+   "y": 3.8,
+   "type": "special"
+  },
+  {
+   "id": "H",
+   "x": 5.8,
+   "y": 1,
+   "type": "base"
+  },
+  {
+   "id": "I",
+   "x": 5.8,
+   "y": 5,
+   "type": "base"
+  },
+  {
+   "id": "J",
+   "x": 6.8,
+   "y": 3,
+   "type": "base"
+  },
+  {
+   "id": "K",
+   "x": 8.2,
+   "y": 1.5,
+   "type": "base"
+  },
+  {
+   "id": "L",
+   "x": 8.2,
+   "y": 4.5,
+   "type": "base"
+  }
+ ],
+ "edges": [
+  [
+   "HB",
+   "A"
+  ],
+  [
+   "HB",
+   "B"
+  ],
+  [
+   "A",
+   "B"
+  ],
+  [
+   "A",
+   "C"
+  ],
+  [
+   "B",
+   "C"
+  ],
+  [
+   "A",
+   "D"
+  ],
+  [
+   "B",
+   "E"
+  ],
+  [
+   "C",
+   "F"
+  ],
+  [
+   "C",
+   "G"
+  ],
+  [
+   "D",
+   "F"
+  ],
+  [
+   "E",
+   "G"
+  ],
+  [
+   "F",
+   "G"
+  ],
+  [
+   "D",
+   "H"
+  ],
+  [
+   "E",
+   "I"
+  ],
+  [
+   "F",
+   "H"
+  ],
+  [
+   "G",
+   "I"
+  ],
+  [
+   "F",
+   "J"
+  ],
+  [
+   "G",
+   "J"
+  ],
+  [
+   "H",
+   "K"
+  ],
+  [
+   "I",
+   "L"
+  ],
+  [
+   "J",
+   "K"
+  ],
+  [
+   "J",
+   "L"
+  ],
+  [
+   "K",
+   "L"
+  ],
+  [
+   "K",
+   "HR"
+  ],
+  [
+   "L",
+   "HR"
+  ]
+ ],
+ "regions": [
+  {
+   "id": "r1",
+   "bases": [
+    "A",
+    "C",
+    "B"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r2",
+   "bases": [
+    "A",
+    "D",
+    "F",
+    "C"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r3",
+   "bases": [
+    "B",
+    "C",
+    "G",
+    "E"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r4",
+   "bases": [
+    "C",
+    "F",
+    "G"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r5",
+   "bases": [
+    "D",
+    "H",
+    "F"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r6",
+   "bases": [
+    "E",
+    "G",
+    "I"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r7",
+   "bases": [
+    "F",
+    "J",
+    "G"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r8",
+   "bases": [
+    "F",
+    "H",
+    "K",
+    "J"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r9",
+   "bases": [
+    "G",
+    "J",
+    "L",
+    "I"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r10",
+   "bases": [
+    "J",
+    "K",
+    "L"
+   ],
+   "medals": 1
+  }
+ ]
+}

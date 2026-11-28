@@ -1,0 +1,288 @@
+{
+ "id": "tropical_pool",
+ "name": "Lagon des Bouées",
+ "referenceTerrain": "piscine_des_tropiques",
+ "layoutSource": "original-design",
+ "flavor": "À chacun sa bouée !",
+ "specialEffect": "strength_restriction",
+ "medalGoal": {
+  "blue": 6,
+  "red": 6
+ },
+ "nodes": [
+  {
+   "id": "HB",
+   "x": 0,
+   "y": 3,
+   "type": "hq",
+   "owner": "blue",
+   "allowedStrengths": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "id": "HR",
+   "x": 10,
+   "y": 3,
+   "type": "hq",
+   "owner": "red",
+   "allowedStrengths": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "id": "T1",
+   "x": 2,
+   "y": 1,
+   "type": "base"
+  },
+  {
+   "id": "T2",
+   "x": 4,
+   "y": 1,
+   "type": "special",
+   "allowedStrengths": [
+    2,
+    4,
+    6
+   ]
+  },
+  {
+   "id": "T3",
+   "x": 6,
+   "y": 1,
+   "type": "special",
+   "allowedStrengths": [
+    1,
+    3,
+    5,
+    7
+   ]
+  },
+  {
+   "id": "T4",
+   "x": 8,
+   "y": 1,
+   "type": "base"
+  },
+  {
+   "id": "C1",
+   "x": 2,
+   "y": 3,
+   "type": "base"
+  },
+  {
+   "id": "C2",
+   "x": 4,
+   "y": 3,
+   "type": "base"
+  },
+  {
+   "id": "C3",
+   "x": 6,
+   "y": 3,
+   "type": "base"
+  },
+  {
+   "id": "C4",
+   "x": 8,
+   "y": 3,
+   "type": "base"
+  },
+  {
+   "id": "B1",
+   "x": 2,
+   "y": 5,
+   "type": "base"
+  },
+  {
+   "id": "B2",
+   "x": 4,
+   "y": 5,
+   "type": "special",
+   "allowedStrengths": [
+    1,
+    3,
+    5,
+    7
+   ]
+  },
+  {
+   "id": "B3",
+   "x": 6,
+   "y": 5,
+   "type": "special",
+   "allowedStrengths": [
+    2,
+    4,
+    6
+   ]
+  },
+  {
+   "id": "B4",
+   "x": 8,
+   "y": 5,
+   "type": "base"
+  }
+ ],
+ "edges": [
+  [
+   "HB",
+   "T1"
+  ],
+  [
+   "HB",
+   "C1"
+  ],
+  [
+   "HB",
+   "B1"
+  ],
+  [
+   "T1",
+   "T2"
+  ],
+  [
+   "T2",
+   "T3"
+  ],
+  [
+   "T3",
+   "T4"
+  ],
+  [
+   "C1",
+   "C2"
+  ],
+  [
+   "C2",
+   "C3"
+  ],
+  [
+   "C3",
+   "C4"
+  ],
+  [
+   "B1",
+   "B2"
+  ],
+  [
+   "B2",
+   "B3"
+  ],
+  [
+   "B3",
+   "B4"
+  ],
+  [
+   "T1",
+   "C1"
+  ],
+  [
+   "C1",
+   "B1"
+  ],
+  [
+   "T2",
+   "C2"
+  ],
+  [
+   "C2",
+   "B2"
+  ],
+  [
+   "T3",
+   "C3"
+  ],
+  [
+   "C3",
+   "B3"
+  ],
+  [
+   "T4",
+   "C4"
+  ],
+  [
+   "C4",
+   "B4"
+  ],
+  [
+   "T4",
+   "HR"
+  ],
+  [
+   "C4",
+   "HR"
+  ],
+  [
+   "B4",
+   "HR"
+  ]
+ ],
+ "regions": [
+  {
+   "id": "r1",
+   "bases": [
+    "T1",
+    "T2",
+    "C2",
+    "C1"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r2",
+   "bases": [
+    "T2",
+    "T3",
+    "C3",
+    "C2"
+   ],
+   "medals": 3
+  },
+  {
+   "id": "r3",
+   "bases": [
+    "T3",
+    "T4",
+    "C4",
+    "C3"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r4",
+   "bases": [
+    "C1",
+    "C2",
+    "B2",
+    "B1"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r5",
+   "bases": [
+    "C2",
+    "C3",
+    "B3",
+    "B2"
+   ],
+   "medals": 3
+  },
+  {
+   "id": "r6",
+   "bases": [
+    "C3",
+    "C4",
+    "B4",
+    "B3"
+   ],
+   "medals": 2
+  }
+ ]
+}
