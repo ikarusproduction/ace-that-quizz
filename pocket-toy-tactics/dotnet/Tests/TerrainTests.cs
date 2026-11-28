@@ -7,11 +7,12 @@ namespace PocketToyTactics.Tests
     public class TerrainDataTests
     {
         [Fact]
-        public void Eight_terrains_with_one_of_each_reference_effect()
+        public void Eight_reference_terrains_plus_two_originals()
         {
             var db = TestContent.Db;
-            Assert.Equal(8, db.Terrains.Count);
-            var refs = db.Terrains.Values.Select(t => t.ReferenceTerrain).OrderBy(x => x).ToArray();
+            Assert.Equal(10, db.Terrains.Count);
+            Assert.Equal(2, db.Terrains.Values.Count(t => t.ReferenceTerrain == "original"));
+            var refs = db.Terrains.Values.Where(t => t.ReferenceTerrain != "original").Select(t => t.ReferenceTerrain).OrderBy(x => x).ToArray();
             Assert.Equal(new[] { "champ_de_bataille", "cimetiere_maudit", "cite_des_nuages", "jungle_volcanique",
                 "mer_des_caraibes", "piscine_des_tropiques", "plaine_des_chateaux", "station_metal_x" }, refs);
             Assert.All(db.Terrains.Values, t =>
@@ -296,6 +297,73 @@ namespace PocketToyTactics.Tests
             Assert.Equal("roxy", ev.RedactFor(Side.Red).TroopId);
             var view = PlayerView.Create(x.S, Side.Blue);
             Assert.Equal(new[] { 0 }, view.OppLaidDownSlots);
+        }
+    
+        // toy_train: stations D1, D2, E1, E2 linked by rail. HB-A1, A1-D1.
+        [Fact]
+        public void Toy_train_stations_are_adjacent_for_connection()
+        {
+            var x = new Sim("toy_train");
+            x.Board("A1", Side.Blue, "kwak");
+            x.Board("D1", Side.Blue, "kwak");
+            int t = x.Rack(Side.Blue, "roxy");
+            // E2 is far away on the map but one rail hop from D1.
+            Assert.Equal(RuleError.None, x.Engine.CheckPlacement(x.S, Side.Blue, t, "E2"));
+            Assert.Equal(RuleError.NotConnected, x.Engine.CheckPlacement(x.S, Side.Blue, t, "C2"));
+            var y = new Sim("toy_train", specialBases: false);
+            y.Board("A1", Side.Blue, "kwak");
+            y.Board("D1", Side.Blue, "kwak");
+            Assert.Equal(RuleError.NotConnected, y.Engine.CheckPlacement(y.S, Side.Blue, y.Rack(Side.Blue, "roxy"), "E2"));
+        }
+
+        [Fact]
+        public void Toy_train_rail_counts_for_mastok_adjacency()
+        {
+            var x = new Sim("toy_train");
+            x.Board("A1", Side.Blue, "kwak");
+            x.Board("E2", Side.Red, "skully");
+            int m = x.Rack(Side.Blue, "mastok");
+            x.Ok(Command.Place(Side.Blue, m, "D1"));
+            x.ExpectDecision(DecisionKind.DiscardAdjacentTarget);
+            x.Ok(Command.ChooseNode(Side.Blue, "E2"));
+            Assert.Empty(x.S.Stacks["E2"]);
+        }
+
+        // bouncy_fair: specials T, B, C. HB-L1, L1-H2, H2-T, T-H3.
+        [Fact]
+        public void Bouncy_fair_without_empty_neighbour_opens_no_decision()
+        {
+            var x = new Sim("bouncy_fair");
+            x.Board("L1", Side.Blue, "kwak");
+            x.Board("H2", Side.Blue, "kwak");
+            x.Board("H3", Side.Red, "skully");
+            int t = x.Rack(Side.Blue, "roxy");
+            Assert.Empty(x.Engine.BounceTargets(new Sim("bouncy_fair").S, t, "T")); // not placed yet: nothing to bounce
+            x.Ok(Command.Place(Side.Blue, t, "T"));
+            // H2 own, H3 enemy: no empty neighbour, so no decision and the turn passes.
+            Assert.Equal(Side.Red, x.S.Active);
+        }
+
+        [Fact]
+        public void Bouncy_fair_bounce_moves_and_can_be_skipped()
+        {
+            var x = new Sim("bouncy_fair");
+            x.Board("L1", Side.Blue, "kwak");
+            x.Board("H2", Side.Blue, "kwak");
+            int t = x.Rack(Side.Blue, "roxy");
+            x.Ok(Command.Place(Side.Blue, t, "T"));
+            x.ExpectDecision(DecisionKind.Bounce);
+            x.Fails(Command.ChooseNode(Side.Blue, "H2"), RuleError.InvalidTarget); // occupied
+            x.Ok(Command.ChooseNode(Side.Blue, "H3"));
+            Assert.Equal(t, x.S.TopTile("H3"));
+            Assert.Empty(x.S.Stacks["T"]);
+            var y = new Sim("bouncy_fair");
+            y.Board("L1", Side.Blue, "kwak");
+            y.Board("H2", Side.Blue, "kwak");
+            int u = y.Rack(Side.Blue, "roxy");
+            y.Ok(Command.Place(Side.Blue, u, "T"));
+            y.Ok(Command.Skip(Side.Blue));
+            Assert.Equal(u, y.S.TopTile("T"));
         }
     }
 }

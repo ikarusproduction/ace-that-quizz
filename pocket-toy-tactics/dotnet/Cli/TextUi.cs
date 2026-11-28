@@ -98,6 +98,7 @@ namespace PocketToyTactics.Cli
                 case DecisionKind.MoveEnemySource: return "base spéciale : troupe adverse adjacente à déplacer : c <base>, ou s";
                 case DecisionKind.MoveEnemyDestination: return $"déplacer la troupe de {d.SelectedNode} vers : c <base>";
                 case DecisionKind.RecoverFromDiscard: return "base spéciale : reprendre une de vos troupes défaussées : c #<tuile>, ou s";
+                case DecisionKind.Bounce: return "château gonflable : faire rebondir la troupe posée vers une base vide : c <base>, ou s";
                 case DecisionKind.DesignateOpponentRack: return "base spéciale : désignez un emplacement du support adverse : c <numéro> (obligatoire)";
                 default: return d.Kind.ToString();
             }

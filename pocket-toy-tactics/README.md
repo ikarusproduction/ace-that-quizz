@@ -2,14 +2,16 @@
 
 Jeu mobile de placement tactique au tour par tour pour 2 joueurs (un téléphone chacun, sans Internet), inspiré des mécaniques de *Toy Battle* (Repos Production). L'univers est original : personnages, noms et terrains sont propres au projet.
 
-> **État actuel : phases 1 et 2 (moteur) et cœur réseau Wi-Fi.** Le moteur de règles, les 8 troupes, 8 terrains originaux, l'IA à 3 niveaux, le protocole réseau local (TCP + découverte UDP + code de partie + reconnexion) et la sauvegarde sont écrits et couverts par 119 tests automatisés. **Il n'y a pas encore de projet Unity, de 3D, d'audio, de Bluetooth ni d'APK.** Le détail est dans [`docs/06-plan-et-etat.md`](docs/06-plan-et-etat.md).
+> **Version jouable sur téléphone (web)** : `web/dist/index.html`, publiée comme page Claude. Elle propose 3 modes : contre l'ordinateur, à deux sur un même téléphone, ou sur deux téléphones avec un code de partie. Elle comprend les 10 terrains et les 8 personnages illustrés. Voir [`web/README.md`](web/README.md).
+>
+> **État du projet natif : phases 1 et 2 (moteur) et cœur réseau Wi-Fi.** Le moteur de règles, les 8 troupes, 10 terrains originaux (dont 2 aux mécaniques inédites), l'IA à 3 niveaux, le protocole réseau local (TCP + découverte UDP + code de partie + reconnexion) et la sauvegarde sont écrits et couverts par 129 tests automatisés. **Il n'y a pas encore de projet Unity, de 3D, d'audio, de Bluetooth ni d'APK.** Le détail est dans [`docs/06-plan-et-etat.md`](docs/06-plan-et-etat.md).
 
 ## Démarrage rapide (sans Unity)
 
 Prérequis : .NET SDK 8.
 
 ```bash
-cd dotnet/Tests && dotnet test                       # 119 tests
+cd dotnet/Tests && dotnet test                       # 129 tests
 cd ../Cli && dotnet build -c Release
 dotnet bin/Release/net8.0/ptt.dll terrains           # liste des terrains
 dotnet bin/Release/net8.0/ptt.dll play --terrain castle_plain --red normal

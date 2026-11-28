@@ -113,6 +113,8 @@ namespace PocketToyTactics.Core
                 case "recover_from_discard": return TerrainEffect.RecoverFromDiscard;
                 case "effect_shield": return TerrainEffect.EffectShield;
                 case "designate_opponent_rack": return TerrainEffect.DesignateOpponentRack;
+                case "railway": return TerrainEffect.Railway;
+                case "bounce": return TerrainEffect.Bounce;
                 default: throw new FormatException("Unknown terrain effect " + s);
             }
         }

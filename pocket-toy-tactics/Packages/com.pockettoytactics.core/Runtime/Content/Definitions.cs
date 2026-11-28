@@ -100,6 +100,12 @@ namespace PocketToyTactics.Core
         EffectShield,
         /// <summary>Champ de bataille: designate one opponent rack troop; it cannot be placed during the opponent's next turn.</summary>
         DesignateOpponentRack,
+        /// <summary>Original (Gare du Petit Train): special bases are stations linked by a railway, adjacent to
+        /// one another for connection and for every effect. Not a placement effect.</summary>
+        Railway,
+        /// <summary>Original (Kermesse Rebondie): may move the troop just placed, if still visible, to an empty
+        /// base adjacent to this special base, ignoring connection.</summary>
+        Bounce,
     }
 
     public sealed class TerrainDefinition

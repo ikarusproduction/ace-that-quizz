@@ -36,7 +36,7 @@ Pour transcrire un plateau physique : copier un fichier, mettre `"layoutSource":
 | `regions[].bases` | bases entourant la région, **dans l'ordre du contour** |
 | `medals` | médailles posées au centre de la région |
 | `medalGoal` | objectif de médailles par camp (peut différer) |
-| `specialEffect` | `none`, `recall_own_troop`, `strength_restriction`, `draw_one`, `move_adjacent_enemy`, `recover_from_discard`, `effect_shield`, `designate_opponent_rack` |
+| `specialEffect` | `none`, `recall_own_troop`, `strength_restriction`, `draw_one`, `move_adjacent_enemy`, `recover_from_discard`, `effect_shield`, `designate_opponent_rack`, et les 2 mécaniques inédites `railway`, `bounce` |
 | `allowedStrengths` / `allowJoker` | restrictions de valeurs (bases spéciales de la piscine et Q.G.) |
 
 Contrôles au chargement (`TerrainDefinition.Build`) : identifiants uniques, chemins valides, au moins un Q.G. par camp, régions dont les bases se suivent par des chemins.
@@ -50,7 +50,7 @@ python3 tools/terrain_tool.py render docs/terrains
 
 L'outil vérifie que le tracé est **planaire** (aucun chemin ne se croise, aucune base posée sur un chemin) et que le graphe est connexe. Il vérifie aussi que chaque région est exactement une **face fermée** du plateau, que le total ne dépasse pas les 16 pions Médaille et que chaque camp a un objectif. Il indique enfin si le plateau est symétrique par rotation de 180° (équité). Le rendu SVG sert de plan de travail aux graphistes.
 
-## Les 8 terrains originaux
+## Les 10 terrains originaux (8 inspirés des terrains de référence, 2 inédits)
 
 | Fichier | Nom | Référence | Bases (spéciales) | Régions | Médailles | Objectif B/R | Particularité de tracé | Aperçu |
 |---|---|---|---|---|---|---|---|---|
@@ -61,6 +61,8 @@ L'outil vérifie que le tracé est **planaire** (aucun chemin ne se croise, aucu
 | `cursed_graveyard` | Cimetière Farceur | Cimetière maudit | 12 (2) | 8 | 16 | 7/7 | allées de cryptes, chemins longs | [svg](terrains/cursed_graveyard.svg) |
 | `pirate_sea` | Mer des Flibustiers | Mer des Caraïbes | 11 (0) | 8 | 14 | 8/7 | **asymétrique** : 2 Q.G. bleus, 1 rouge (accessible par 2 chemins seulement) | [svg](terrains/pirate_sea.svg) |
 | `metalx_station` | Station Boulon-X | Station Métal-X | 12 (2) | 10 | 16 | 7/7 | noyau central blindé | [svg](terrains/metalx_station.svg) |
+| `toy_train` | **Gare du Petit Train** | création originale | 12 (4 gares) | 8 | 14 | 6/6 | nouvelle mécanique `railway` : toutes les gares sont reliées par le train et comptent comme voisines (connexion, Grizzbloc, volcan) | [svg](terrains/toy_train.svg) |
+| `bouncy_fair` | **Kermesse Rebondie** | création originale | 13 (3 châteaux gonflables) | 12 | 16 | 7/7 | nouvelle mécanique `bounce` : la troupe posée peut rebondir vers une base vide voisine, sans tenir compte de la connexion | [svg](terrains/bouncy_fair.svg) |
 | `battlefield` | Champ des Escarmouches | Champ de bataille | 16 (2) | 10 | 16 | 7/7 | tranchées en zigzag, 3 sorties par Q.G. | [svg](terrains/battlefield.svg) |
 
 ## Équilibrage mesuré par auto-jeu de l'IA (`ptt simulate`)

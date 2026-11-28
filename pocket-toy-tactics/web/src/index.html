@@ -1,0 +1,273 @@
+<title>Pocket Toy Tactics</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;700;800&display=swap">
+<style>
+/* Layout: one-screen toy-box app. Opponent strip on top, portrait board in the middle, own rack at the bottom.
+   Single deliberate visual world (sunny toy room), so one palette for both host themes. */
+:root {
+  --cream: #fff7e6; --paper: #fffdf7; --ink: #2b2240; --ink-soft: #6b5f80;
+  --sun: #f6c343; --coral: #f2845c; --tomato: #e4572e; --sky: #7ec8e3; --petrol: #1f6f78;
+  --mint: #a8e6cf; --prairie: #6bbf59; --sand: #e9d8a6; --lavender: #b8a1e3;
+  --blue: #2f7fd8; --blue-dark: #1c4f96; --red: #e2483d; --red-dark: #9b2a22; --gold: #ffc94a;
+  --wood: #c98f55; --wood-dark: #8a5a33;
+  --font-display: "Fredoka", "Baloo 2", ui-rounded, "Arial Rounded MT Bold", system-ui, sans-serif;
+  --font-body: "Nunito", ui-rounded, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radius: 18px;
+  color-scheme: light;
+}
+html, body { height: 100%; }
+body {
+  margin: 0; background: var(--cream); color: var(--ink); font-family: var(--font-body); font-size: 15px;
+  -webkit-tap-highlight-color: transparent; overscroll-behavior: none; touch-action: manipulation;
+  background-image: radial-gradient(circle at 1px 1px, rgba(43,34,64,.07) 1.2px, transparent 0); background-size: 18px 18px;
+}
+button { font-family: var(--font-display); color: inherit; cursor: pointer; }
+button:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+.screen { position: fixed; inset: 0; display: flex; flex-direction: column; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+.wrap { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.scroll { overflow-y: auto; -webkit-overflow-scrolling: touch; flex: 1; min-height: 0; }
+h1, h2, h3 { font-family: var(--font-display); margin: 0; text-wrap: balance; }
+
+/* ---------- buttons */
+.btn {
+  display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%;
+  border: 0; border-radius: var(--radius); padding: 14px 18px; font-size: 19px; font-weight: 600;
+  background: var(--paper); box-shadow: 0 5px 0 rgba(43,34,64,.18), 0 8px 18px rgba(43,34,64,.08);
+  transition: transform .08s ease, box-shadow .08s ease;
+}
+.btn:active { transform: translateY(4px); box-shadow: 0 1px 0 rgba(43,34,64,.18); }
+.btn.primary { background: var(--sun); }
+.btn.blue { background: var(--blue); color: #fff; box-shadow: 0 5px 0 var(--blue-dark); }
+.btn.red { background: var(--tomato); color: #fff; box-shadow: 0 5px 0 var(--red-dark); }
+.btn.small { width: auto; padding: 9px 14px; font-size: 16px; border-radius: 14px; }
+.btn[disabled] { opacity: .45; pointer-events: none; }
+.btn .sub { display: block; font-family: var(--font-body); font-size: 12.5px; font-weight: 700; opacity: .75; }
+.btn .lbl { text-align: left; flex: 1; }
+.btn .ico { width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; font-size: 20px; flex: none; }
+.iconbtn { border: 0; background: var(--paper); width: 42px; height: 42px; border-radius: 14px; font-size: 20px; box-shadow: 0 3px 0 rgba(43,34,64,.18); display: grid; place-items: center; flex: none; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 99px; background: var(--paper); font-weight: 800; font-size: 13px; }
+
+/* ---------- home */
+#home .hero { position: relative; flex: none; height: min(46vh, 380px); overflow: hidden; border-radius: 0 0 32px 32px; box-shadow: 0 8px 0 rgba(43,34,64,.12); }
+#home .hero img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; display: block; max-width: none; }
+#home .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(43,34,64,0) 45%, rgba(43,34,64,.7)); }
+#home .title { position: absolute; left: 0; right: 0; bottom: 14px; z-index: 1; color: #fff; text-align: center; }
+#home .title h1 { font-size: clamp(34px, 10vw, 48px); line-height: .95; letter-spacing: .5px; text-shadow: 0 3px 0 rgba(43,34,64,.6); }
+#home .title p { margin: 6px 0 0; font-weight: 800; font-size: 14px; opacity: .95; }
+.menu { display: grid; gap: 12px; padding-block: 18px 24px; max-width: 520px; margin: 0 auto; width: 100%; box-sizing: border-box; }
+.menu-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+/* ---------- generic sheet pages */
+.topbar { display: flex; align-items: center; gap: 12px; padding-block: 12px; flex: none; }
+.topbar h2 { font-size: 24px; flex: 1; }
+.section { max-width: 560px; margin: 0 auto 28px; width: 100%; box-sizing: border-box; display: grid; gap: 14px; }
+.label { font-weight: 800; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); }
+.seg { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 6px; background: rgba(43,34,64,.08); padding: 5px; border-radius: 16px; }
+.seg button { border: 0; background: transparent; border-radius: 12px; padding: 10px 6px; font-size: 16px; font-weight: 600; }
+.seg button[aria-pressed="true"] { background: var(--paper); box-shadow: 0 3px 0 rgba(43,34,64,.15); }
+.terrains { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.tcard { border: 0; padding: 0; background: var(--paper); border-radius: 18px; overflow: hidden; text-align: left; box-shadow: 0 4px 0 rgba(43,34,64,.15); position: relative; }
+.tcard svg { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; }
+.tcard .tname { padding: 8px 10px 10px; font-family: var(--font-display); font-weight: 600; font-size: 15px; line-height: 1.15; }
+.tcard .tname small { display: block; font-family: var(--font-body); font-size: 11.5px; font-weight: 700; color: var(--ink-soft); margin-top: 2px; }
+.tcard[aria-pressed="true"] { outline: 4px solid var(--sun); outline-offset: -4px; }
+.tcard .badge { position: absolute; top: 8px; left: 8px; background: var(--lavender); color: var(--ink); font: 700 11px var(--font-body); padding: 3px 8px; border-radius: 99px; }
+.toggle { display: flex; align-items: center; gap: 12px; background: var(--paper); border-radius: 16px; padding: 12px 14px; font-weight: 700; }
+.toggle input { width: 22px; height: 22px; accent-color: var(--prairie); flex: none; }
+.toggle span small { display: block; font-weight: 600; color: var(--ink-soft); font-size: 12.5px; }
+.effectbox { background: var(--paper); border-radius: 16px; padding: 12px 14px; font-weight: 600; line-height: 1.4; }
+.effectbox b { font-family: var(--font-display); font-weight: 600; font-size: 17px; display: block; }
+
+/* ---------- characters / rules */
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.ccard { background: var(--paper); border-radius: 18px; overflow: hidden; box-shadow: 0 4px 0 rgba(43,34,64,.15); }
+.ccard img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
+.ccard .cbody { padding: 10px 12px 12px; display: grid; gap: 4px; }
+.ccard h3 { font-size: 18px; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.str { font-family: var(--font-display); background: var(--ink); color: #fff; border-radius: 10px; min-width: 28px; height: 28px; display: inline-grid; place-items: center; font-size: 16px; }
+.ccard p { margin: 0; font-size: 13.5px; line-height: 1.35; }
+.ccard .tag { font-style: italic; color: var(--ink-soft); }
+.rules { background: var(--paper); border-radius: 18px; padding: 16px 18px; line-height: 1.5; max-width: 65ch; }
+.rules h3 { font-size: 19px; margin: 14px 0 4px; }
+.rules h3:first-child { margin-top: 0; }
+.rules p, .rules ul { margin: 6px 0; }
+.rules ul { padding-left: 20px; }
+
+/* ---------- game */
+#game { background: var(--board-bg, #7cc46a); transition: background .4s; }
+.hud { display: flex; align-items: center; gap: 8px; padding-block: 8px; flex: none; }
+.side-pill { display: flex; align-items: center; gap: 8px; background: rgba(255,253,247,.92); border-radius: 16px; padding: 6px 10px 6px 6px; flex: 1; min-width: 0; box-shadow: 0 3px 0 rgba(43,34,64,.15); }
+.side-pill .dot { width: 30px; height: 30px; border-radius: 10px; flex: none; display: grid; place-items: center; color: #fff; font-family: var(--font-display); font-size: 13px; }
+.side-pill.blue .dot { background: var(--blue); border-radius: 50%; }
+.side-pill.red .dot { background: var(--red); clip-path: polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0 50%); }
+.side-pill .who { font-family: var(--font-display); font-weight: 600; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.side-pill .meta { font-size: 12px; font-weight: 800; color: var(--ink-soft); white-space: nowrap; }
+.side-pill.active { box-shadow: 0 0 0 3px var(--sun), 0 3px 0 rgba(43,34,64,.15); }
+.medals { font-family: var(--font-display); font-weight: 700; font-size: 17px; margin-left: auto; white-space: nowrap; display: flex; align-items: center; gap: 4px; }
+.medals .coin { width: 20px; height: 20px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff3b0, var(--gold) 55%, #d39a12); display: grid; place-items: center; font-size: 11px; color: #7a5200; }
+.opp-rack { display: flex; gap: 3px; flex-wrap: nowrap; }
+.back { width: 14px; height: 20px; border-radius: 4px; background: repeating-linear-gradient(45deg, var(--red) 0 4px, var(--red-dark) 4px 8px); border: 0; padding: 0; }
+.back.blue { background: repeating-linear-gradient(45deg, var(--blue) 0 4px, var(--blue-dark) 4px 8px); }
+.back.laid { opacity: .35; transform: rotate(90deg); }
+.back.pick { width: 26px; height: 36px; outline: 3px solid var(--sun); animation: pulse 1s infinite; }
+#boardWrap { flex: 1; min-height: 0; position: relative; }
+#board { width: 100%; height: 100%; display: block; touch-action: manipulation; }
+.node { cursor: pointer; }
+.target .halo { animation: halo 1.1s ease-in-out infinite; }
+@keyframes halo { 0%, 100% { opacity: .35; } 50% { opacity: 1; } }
+@keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+.tok { transform-box: fill-box; transform-origin: center; }
+.tok.drop { animation: drop .55s cubic-bezier(.3,1.6,.5,1) both; }
+@keyframes drop { 0% { transform: translateY(-70px) scale(1.5); opacity: 0; } 60% { transform: translateY(4px) scale(.92, 1.08); opacity: 1; } 100% { transform: none; } }
+.tok.idle { animation: idle 2.6s ease-in-out infinite; }
+@keyframes idle { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2px); } }
+.flash { animation: flash 1.2s ease-out both; }
+@keyframes flash { 0% { fill-opacity: .9; } 100% { fill-opacity: .28; } }
+.ghost { position: fixed; z-index: 30; width: 46px; height: 46px; border-radius: 50%; pointer-events: none; background-size: cover; border: 4px solid #fff; box-shadow: 0 6px 14px rgba(0,0,0,.25); }
+.floater { position: fixed; z-index: 31; pointer-events: none; font-family: var(--font-display); font-weight: 700; font-size: 26px; color: #fff; text-shadow: 0 3px 0 rgba(43,34,64,.55); animation: floatup 1.3s ease-out forwards; }
+@keyframes floatup { 0% { transform: translate(-50%, 0) scale(.6); opacity: 0; } 20% { transform: translate(-50%, -12px) scale(1.1); opacity: 1; } 100% { transform: translate(-50%, -70px) scale(1); opacity: 0; } }
+
+.prompt { flex: none; margin-bottom: 6px; background: var(--paper); border-radius: 16px; padding: 10px 12px; display: flex; align-items: center; gap: 10px; box-shadow: 0 3px 0 rgba(43,34,64,.15); min-height: 44px; }
+.prompt .txt { flex: 1; font-weight: 700; font-size: 14px; line-height: 1.3; min-width: 0; }
+.prompt .acts { display: flex; gap: 8px; flex: none; }
+.prompt .mini { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+.prompt .mini button { border: 3px solid var(--sun); padding: 0; width: 44px; height: 44px; border-radius: 50%; background-size: cover; }
+.thinking::after { content: "…"; display: inline-block; animation: dots 1s steps(3) infinite; width: 1.2em; overflow: hidden; vertical-align: bottom; }
+@keyframes dots { from { width: 0; } to { width: 1.2em; } }
+
+.tray { flex: none; background: rgba(255,253,247,.94); border-radius: 22px 22px 0 0; padding-block: 8px 10px; box-shadow: 0 -4px 0 rgba(43,34,64,.1); }
+.tray-head { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.rack { display: flex; gap: 6px; overflow-x: auto; padding: 8px 2px 4px; scrollbar-width: none; }
+.rack::-webkit-scrollbar { display: none; }
+.rtile {
+  flex: none; width: 54px; height: 66px; border: 0; padding: 0; border-radius: 14px; position: relative;
+  background: #fff; box-shadow: 0 4px 0 var(--side-dark, var(--blue-dark)); transition: transform .15s cubic-bezier(.3,1.6,.5,1);
+  animation: idle 2.8s ease-in-out infinite; animation-delay: calc(var(--i, 0) * -.35s);
+}
+.rtile img { width: 100%; height: 100%; object-fit: cover; border-radius: 14px; border: 3px solid var(--side, var(--blue)); box-sizing: border-box; display: block; }
+.rtile .s { position: absolute; right: -4px; bottom: -4px; }
+.rtile[aria-pressed="true"] { transform: translateY(-10px) rotate(-4deg) scale(1.08); animation: none; box-shadow: 0 0 0 3px var(--sun), 0 8px 0 var(--side-dark, var(--blue-dark)); }
+.rtile.laid { filter: grayscale(1) brightness(.85); }
+.rtile.laid::after { content: "couchée"; position: absolute; inset: auto 0 18px; font: 800 10px var(--font-body); background: var(--ink); color: #fff; text-align: center; }
+.rtile.new { animation: pop .5s cubic-bezier(.3,1.6,.5,1); }
+@keyframes pop { from { transform: scale(.2) translateY(20px); } to { transform: none; } }
+.tray .info { font-size: 12.5px; font-weight: 700; color: var(--ink-soft); min-height: 17px; }
+
+.overlay { position: fixed; inset: 0; z-index: 40; display: grid; place-items: center; background: rgba(43,34,64,.55); padding: 20px; }
+.modal { background: var(--paper); border-radius: 26px; padding: 22px; width: min(420px, 100%); box-sizing: border-box; display: grid; gap: 14px; text-align: center; box-shadow: 0 10px 0 rgba(43,34,64,.25); max-height: 90%; overflow-y: auto; }
+.modal h2 { font-size: 28px; }
+.modal p { margin: 0; line-height: 1.45; font-weight: 600; }
+.modal img.big { width: 140px; height: 140px; border-radius: 24px; object-fit: cover; margin: 0 auto; }
+.log { text-align: left; display: grid; gap: 4px; font-size: 13.5px; font-weight: 600; }
+.log div { padding: 5px 8px; border-radius: 10px; background: rgba(43,34,64,.05); }
+.log .b { border-left: 4px solid var(--blue); }
+.log .r { border-left: 4px solid var(--red); }
+.toast { position: fixed; left: 50%; top: calc(66px + env(safe-area-inset-top, 0px)); transform: translateX(-50%); z-index: 50; background: var(--ink); color: #fff; padding: 10px 16px; border-radius: 14px; font-weight: 700; font-size: 14px; max-width: min(90vw, 420px); text-align: center; animation: toast 2.6s ease forwards; pointer-events: none; }
+@keyframes toast { 0% { opacity: 0; transform: translate(-50%, 10px); } 10%, 85% { opacity: 1; transform: translate(-50%, 0); } 100% { opacity: 0; } }
+.code { font-family: var(--font-display); font-size: 44px; letter-spacing: .15em; background: var(--sun); border-radius: 18px; padding: 8px 12px; }
+input.codein { font: 600 30px var(--font-display); letter-spacing: .2em; text-transform: uppercase; text-align: center; border: 3px solid var(--ink); border-radius: 16px; padding: 10px; width: 100%; box-sizing: border-box; background: #fff; color: var(--ink); }
+.confetti { position: fixed; top: -12px; width: 10px; height: 14px; z-index: 45; pointer-events: none; animation: fall 2.4s linear forwards; }
+@keyframes fall { to { transform: translateY(105vh) rotate(720deg); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition: none !important; } }
+</style>
+
+<!-- ================= HOME ================= -->
+<section id="home" class="screen">
+  <div class="hero"><img id="keyart" alt="Diorama de jouets : deux forts, des bases reliées par des chemins et des figurines qui s'affrontent"><div class="title wrap"><h1>Pocket Toy Tactics</h1><p>Placez vos jouets, coupez les chemins, prenez le Q.G. !</p></div></div>
+  <div class="scroll wrap">
+    <div class="menu">
+      <button class="btn primary" id="resumeBtn" hidden><span class="ico" style="background:#fff">▶</span><span class="lbl">Reprendre la partie<span class="sub" id="resumeSub"></span></span></button>
+      <button class="btn" data-mode="ai"><span class="ico" style="background:var(--mint)">🤖</span><span class="lbl">Contre l'ordinateur<span class="sub">Facile, normal ou difficile</span></span></button>
+      <button class="btn" data-mode="hotseat"><span class="ico" style="background:var(--sky)">⇅</span><span class="lbl">À deux sur ce téléphone<span class="sub">On se passe le téléphone, supports cachés</span></span></button>
+      <button class="btn" data-mode="online"><span class="ico" style="background:var(--lavender)">📱</span><span class="lbl">Deux téléphones<span class="sub">Un code de partie, chacun son écran</span></span></button>
+      <div class="menu-row">
+        <button class="btn" id="rulesBtn">Règles</button>
+        <button class="btn" id="charsBtn">Les jouets</button>
+      </div>
+      <button class="btn" id="settingsBtn">Réglages</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SETUP ================= -->
+<section id="setup" class="screen" hidden>
+  <div class="topbar wrap"><button class="iconbtn" data-back aria-label="Retour">←</button><h2 id="setupTitle">Nouvelle partie</h2></div>
+  <div class="scroll wrap">
+    <div class="section">
+      <div id="levelBox"><div class="label">Niveau de l'ordinateur</div>
+        <div class="seg" id="levelSeg"><button data-v="easy">Facile</button><button data-v="normal" aria-pressed="true">Normal</button><button data-v="hard">Difficile</button></div>
+      </div>
+      <div class="label">Terrain</div>
+      <div class="terrains" id="terrainGrid"></div>
+      <div class="effectbox" id="terrainInfo"></div>
+      <label class="toggle"><input type="checkbox" id="specialToggle" checked><span>Bases spéciales actives<small>Décochez pour la variante débutant : les bases spéciales deviennent des bases normales.</small></span></label>
+      <button class="btn primary" id="startBtn">Jouer !</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ONLINE LOBBY ================= -->
+<section id="lobby" class="screen" hidden>
+  <div class="topbar wrap"><button class="iconbtn" data-back aria-label="Retour">←</button><h2>Deux téléphones</h2></div>
+  <div class="scroll wrap">
+    <div class="section">
+      <div class="effectbox" id="lobbyStatus">Connexion au service de partage…</div>
+      <div id="lobbyActions" hidden>
+        <div class="section" style="margin:0">
+          <button class="btn primary" id="createOnline">Créer une partie<span class="sub">&nbsp;· terrain choisi à l'écran suivant</span></button>
+          <div class="label">Rejoindre avec un code</div>
+          <input class="codein" id="codeIn" maxlength="5" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="ABCDE" aria-label="Code de partie">
+          <button class="btn blue" id="joinOnline">Rejoindre</button>
+        </div>
+      </div>
+      <div id="waitBox" class="modal" style="box-shadow:none" hidden>
+        <p>Donnez ce code à votre adversaire :</p>
+        <div class="code" id="codeOut">-----</div>
+        <p class="thinking" id="waitTxt">En attente du second joueur</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INFO PAGES ================= -->
+<section id="chars" class="screen" hidden>
+  <div class="topbar wrap"><button class="iconbtn" data-back aria-label="Retour">←</button><h2>Les jouets</h2></div>
+  <div class="scroll wrap"><div class="section"><div class="cards" id="charGrid"></div></div></div>
+</section>
+<section id="rules" class="screen" hidden>
+  <div class="topbar wrap"><button class="iconbtn" data-back aria-label="Retour">←</button><h2>Règles</h2></div>
+  <div class="scroll wrap"><div class="section"><div class="rules" id="rulesText"></div></div></div>
+</section>
+<section id="settings" class="screen" hidden>
+  <div class="topbar wrap"><button class="iconbtn" data-back aria-label="Retour">←</button><h2>Réglages</h2></div>
+  <div class="scroll wrap"><div class="section">
+    <label class="toggle"><input type="checkbox" id="optSound" checked><span>Sons<small>Clics de plastique, ressorts et petites fanfares.</small></span></label>
+    <label class="toggle"><input type="checkbox" id="optAutoDraw" checked><span>Pioches automatiques<small>Accepte d'office les effets « piocher ». Décochez pour choisir à chaque fois.</small></span></label>
+    <div class="label">Vitesse des animations</div>
+    <div class="seg" id="speedSeg"><button data-v="1" aria-pressed="true">Normale</button><button data-v="0.5">Rapide</button><button data-v="0">Aucune</button></div>
+  </div></div>
+</section>
+
+<!-- ================= GAME ================= -->
+<section id="game" class="screen" hidden>
+  <div class="hud wrap">
+    <button class="iconbtn" id="menuBtn" aria-label="Menu de la partie">☰</button>
+    <div class="side-pill" id="oppPill"><div class="dot">QG</div><div style="min-width:0"><div class="who" id="oppName"></div><div class="meta"><span class="opp-rack" id="oppRack"></span></div></div><div class="medals" id="oppMedals"></div></div>
+  </div>
+  <div id="boardWrap" class="wrap"><svg id="board" role="img" aria-label="Plateau de jeu"></svg></div>
+  <div class="wrap"><div class="prompt" id="prompt"><div class="txt" id="promptTxt"></div><div class="acts" id="promptActs"></div></div></div>
+  <div class="tray wrap">
+    <div class="tray-head">
+      <div class="side-pill" id="myPill"><div class="dot">QG</div><div style="min-width:0"><div class="who" id="myName"></div><div class="meta" id="myMeta"></div></div><div class="medals" id="myMedals"></div></div>
+      <button class="btn small primary" id="drawBtn">Piocher</button>
+    </div>
+    <div class="rack" id="rack" role="toolbar" aria-label="Votre support"></div>
+    <div class="info" id="tileInfo"></div>
+  </div>
+</section>
+
+<div id="layer"></div>
+<script>/*__CONTENT__*/</script>
+<script>/*__ENGINE__*/</script>
+<script>/*__APP__*/</script>

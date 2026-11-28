@@ -40,6 +40,8 @@ namespace PocketToyTactics.Core
         RecoverFromDiscard,
         /// <summary>Champ de bataille: designate an opponent rack slot (Index). Mandatory.</summary>
         DesignateOpponentRack,
+        /// <summary>Kermesse Rebondie: choose an empty base adjacent to the special base for the placed troop, or Skip.</summary>
+        Bounce,
     }
 
     public sealed class PendingDecision

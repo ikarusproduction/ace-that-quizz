@@ -73,6 +73,23 @@ namespace PocketToyTactics.Core
 
         public TerrainDefinition Terrain(GameState s) => Content.Terrain(s.TerrainId);
 
+        /// <summary>
+        /// Nodes linked to <paramref name="nodeId"/> by one path segment. On a railway terrain (special bases
+        /// enabled) every station is also linked to every other station.
+        /// </summary>
+        public IReadOnlyList<string> Adjacent(GameState s, string nodeId)
+        {
+            var terrain = Terrain(s);
+            var direct = terrain.Neighbors(nodeId);
+            if (!s.SpecialBasesEnabled || terrain.SpecialEffect != TerrainEffect.Railway) return direct;
+            var node = terrain.Node(nodeId);
+            if (node == null || !node.IsSpecial) return direct;
+            var all = new List<string>(direct);
+            foreach (var o in terrain.Nodes)
+                if (o.IsSpecial && o.Id != nodeId && !all.Contains(o.Id)) all.Add(o.Id);
+            return all;
+        }
+
         public Side? TopOwner(GameState s, string nodeId)
         {
             int t = s.TopTile(nodeId);
@@ -95,7 +112,7 @@ namespace PocketToyTactics.Core
             while (stack.Count > 0)
             {
                 var v = stack.Pop();
-                foreach (var w in terrain.Neighbors(v))
+                foreach (var w in Adjacent(s, v))
                 {
                     var n = terrain.Node(w);
                     if (!n.IsBase || seen.Contains(w)) continue;
@@ -112,7 +129,7 @@ namespace PocketToyTactics.Core
         {
             var terrain = Terrain(s);
             connected = connected ?? ConnectedBases(s, side);
-            foreach (var w in terrain.Neighbors(nodeId))
+            foreach (var w in Adjacent(s, nodeId))
             {
                 var n = terrain.Node(w);
                 if (n.IsHq && n.Owner == side) return true;
@@ -201,7 +218,7 @@ namespace PocketToyTactics.Core
         {
             var terrain = Terrain(s);
             var r = new List<string>();
-            foreach (var w in terrain.Neighbors(fromNode))
+            foreach (var w in Adjacent(s, fromNode))
             {
                 var n = terrain.Node(w);
                 if (!n.IsBase || IsShieldedSpecial(s, n)) continue;
@@ -227,7 +244,7 @@ namespace PocketToyTactics.Core
         {
             var terrain = Terrain(s);
             var r = new List<string>();
-            foreach (var w in terrain.Neighbors(specialNode))
+            foreach (var w in Adjacent(s, specialNode))
             {
                 var n = terrain.Node(w);
                 if (n.IsBase && TopOwner(s, w) == side.Other() && MoveDestinations(s, w).Count > 0) r.Add(w);
@@ -239,8 +256,18 @@ namespace PocketToyTactics.Core
         {
             var terrain = Terrain(s);
             var r = new List<string>();
-            foreach (var w in terrain.Neighbors(sourceNode))
+            foreach (var w in Adjacent(s, sourceNode))
                 if (terrain.Node(w).IsBase) r.Add(w);
+            return r;
+        }
+
+        /// <summary>Kermesse Rebondie: empty bases next to the special base, if the placed troop is still on top.</summary>
+        public List<string> BounceTargets(GameState s, int placedTile, string specialNode)
+        {
+            var r = new List<string>();
+            if (s.TopTile(specialNode) != placedTile) return r;
+            foreach (var w in Adjacent(s, specialNode))
+                if (Terrain(s).Node(w).IsBase && s.Stacks[w].Count == 0) r.Add(w);
             return r;
         }
 
@@ -314,6 +341,9 @@ namespace PocketToyTactics.Core
                 case DecisionKind.DesignateOpponentRack:
                     foreach (var i in DesignatableSlots(s, side)) r.Add(Command.ChooseIndex(side, i));
                     break;
+                case DecisionKind.Bounce:
+                    foreach (var n in BounceTargets(s, d.SourceTile, d.SourceNode)) r.Add(Command.ChooseNode(side, n));
+                    break;
             }
             if (d.Optional) r.Add(Command.Skip(side));
             return r;
@@ -380,6 +410,8 @@ namespace PocketToyTactics.Core
                     return RecoverableTiles(s, c.Player).Contains(c.TileId) ? RuleError.None : RuleError.InvalidTarget;
                 case DecisionKind.DesignateOpponentRack:
                     return DesignatableSlots(s, c.Player).Contains(c.Index) ? RuleError.None : RuleError.InvalidTarget;
+                case DecisionKind.Bounce:
+                    return BounceTargets(s, d.SourceTile, d.SourceNode).Contains(c.NodeId) ? RuleError.None : RuleError.InvalidTarget;
                 default:
                     return RuleError.WrongPhase;
             }
@@ -475,6 +507,14 @@ namespace PocketToyTactics.Core
                     int t = PopTop(s, d.SelectedNode);
                     s.Stacks[c.NodeId].Add(t);
                     ev.Add(new GameEvent { Type = GameEventType.TroopMoved, Player = side, TileId = t, TroopId = Content.TileTroop(t).Id, NodeId = d.SelectedNode, ToNodeId = c.NodeId });
+                    CheckRegions(s, ev);
+                    break;
+                }
+                case DecisionKind.Bounce:
+                {
+                    int t = PopTop(s, d.SourceNode);
+                    s.Stacks[c.NodeId].Add(t);
+                    ev.Add(new GameEvent { Type = GameEventType.TroopMoved, Player = side, TileId = t, TroopId = Content.TileTroop(t).Id, NodeId = d.SourceNode, ToNodeId = c.NodeId });
                     CheckRegions(s, ev);
                     break;
                 }
@@ -679,6 +719,9 @@ namespace PocketToyTactics.Core
                     break;
                 case TerrainEffect.DesignateOpponentRack:
                     if (DesignatableSlots(s, side).Count > 0) Open(s, DecisionKind.DesignateOpponentRack, side, rec, 0, optional: false);
+                    break;
+                case TerrainEffect.Bounce:
+                    if (BounceTargets(s, rec.TileId, rec.NodeId).Count > 0) Open(s, DecisionKind.Bounce, side, rec);
                     break;
             }
             if (s.Pending != null)

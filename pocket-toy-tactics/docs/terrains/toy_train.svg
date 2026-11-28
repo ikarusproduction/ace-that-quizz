@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="628" font-family="sans-serif">
+<rect width="100%%" height="100%%" fill="#fbf3df"/>
+<text x="60" y="30" font-size="20" font-weight="bold" fill="#284b63">Gare du Petit Train (railway) - objectif bleu 6 / rouge 6</text>
+<polygon points="204,208 420,172 510,280 330,370" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="366" y="264" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;2</text>
+<polygon points="204,532 330,370 510,460 420,568" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="366" y="488" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;2</text>
+<polygon points="816,532 600,568 510,460 690,370" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="654" y="488" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;2</text>
+<polygon points="816,208 690,370 510,280 600,172" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="654" y="264" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;2</text>
+<polygon points="330,370 510,280 510,460" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="450" y="376" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;1</text>
+<polygon points="690,370 510,460 510,280" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="570" y="376" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;1</text>
+<polygon points="420,172 600,172 510,280" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="510" y="214" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;2</text>
+<polygon points="600,568 420,568 510,460" fill="#9ed99a" fill-opacity="0.45" stroke="none"/>
+<text x="510" y="538" text-anchor="middle" font-size="18" fill="#b8860b">&#9733;2</text>
+<line x1="60" y1="370" x2="204" y2="208" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="60" y1="370" x2="204" y2="532" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="60" y1="370" x2="330" y2="370" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="204" y1="208" x2="330" y2="370" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="204" y1="532" x2="330" y2="370" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="204" y1="208" x2="420" y2="172" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="204" y1="532" x2="420" y2="568" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="330" y1="370" x2="510" y2="280" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="330" y1="370" x2="510" y2="460" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="420" y1="172" x2="510" y2="280" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="420" y1="568" x2="510" y2="460" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="510" y1="280" x2="510" y2="460" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="420" y1="172" x2="600" y2="172" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="420" y1="568" x2="600" y2="568" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="510" y1="280" x2="600" y2="172" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="510" y1="460" x2="600" y2="568" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="510" y1="280" x2="690" y2="370" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="510" y1="460" x2="690" y2="370" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="600" y1="172" x2="816" y2="208" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="600" y1="568" x2="816" y2="532" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="690" y1="370" x2="816" y2="208" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="690" y1="370" x2="816" y2="532" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="816" y1="208" x2="960" y2="370" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="816" y1="532" x2="960" y2="370" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<line x1="690" y1="370" x2="960" y2="370" stroke="#c9a36b" stroke-width="7" stroke-linecap="round"/>
+<rect x="32" y="342" width="56" height="56" rx="10" fill="#2f7fd8"/>
+<text x="60" y="375" text-anchor="middle" font-size="13" fill="#222">HB</text>
+<rect x="932" y="342" width="56" height="56" rx="10" fill="#e2483d"/>
+<text x="960" y="375" text-anchor="middle" font-size="13" fill="#222">HR</text>
+<rect x="182" y="186" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="204" y="213" text-anchor="middle" font-size="13" fill="#222">A1</text>
+<rect x="182" y="510" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="204" y="537" text-anchor="middle" font-size="13" fill="#222">A2</text>
+<rect x="308" y="348" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="330" y="375" text-anchor="middle" font-size="13" fill="#222">C1</text>
+<rect x="398" y="150" width="44" height="44" rx="8" fill="#f4b942" stroke="#7a6a55" stroke-width="2"/>
+<text x="420" y="177" text-anchor="middle" font-size="13" fill="#222">D1</text>
+<rect x="398" y="546" width="44" height="44" rx="8" fill="#f4b942" stroke="#7a6a55" stroke-width="2"/>
+<text x="420" y="573" text-anchor="middle" font-size="13" fill="#222">D2</text>
+<rect x="488" y="258" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="510" y="285" text-anchor="middle" font-size="13" fill="#222">M1</text>
+<rect x="488" y="438" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="510" y="465" text-anchor="middle" font-size="13" fill="#222">M2</text>
+<rect x="578" y="150" width="44" height="44" rx="8" fill="#f4b942" stroke="#7a6a55" stroke-width="2"/>
+<text x="600" y="177" text-anchor="middle" font-size="13" fill="#222">E1</text>
+<rect x="578" y="546" width="44" height="44" rx="8" fill="#f4b942" stroke="#7a6a55" stroke-width="2"/>
+<text x="600" y="573" text-anchor="middle" font-size="13" fill="#222">E2</text>
+<rect x="668" y="348" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="690" y="375" text-anchor="middle" font-size="13" fill="#222">C2</text>
+<rect x="794" y="186" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="816" y="213" text-anchor="middle" font-size="13" fill="#222">F1</text>
+<rect x="794" y="510" width="44" height="44" rx="8" fill="#d8d3c8" stroke="#7a6a55" stroke-width="2"/>
+<text x="816" y="537" text-anchor="middle" font-size="13" fill="#222">F2</text>
+</svg>

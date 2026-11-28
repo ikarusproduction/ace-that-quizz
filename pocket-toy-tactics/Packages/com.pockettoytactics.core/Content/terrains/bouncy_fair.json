@@ -1,0 +1,338 @@
+{
+ "id": "bouncy_fair",
+ "name": "Kermesse Rebondie",
+ "referenceTerrain": "original",
+ "layoutSource": "original-design",
+ "flavor": "Boing ! Les châteaux gonflables font rebondir les troupes.",
+ "specialEffect": "bounce",
+ "medalGoal": {
+  "blue": 7,
+  "red": 7
+ },
+ "nodes": [
+  {
+   "id": "HB",
+   "x": 0,
+   "y": 3,
+   "type": "hq",
+   "owner": "blue"
+  },
+  {
+   "id": "HR",
+   "x": 10,
+   "y": 3,
+   "type": "hq",
+   "owner": "red"
+  },
+  {
+   "id": "L1",
+   "x": 1.5,
+   "y": 1.5,
+   "type": "base"
+  },
+  {
+   "id": "L2",
+   "x": 1.5,
+   "y": 4.5,
+   "type": "base"
+  },
+  {
+   "id": "H1",
+   "x": 3,
+   "y": 3,
+   "type": "base"
+  },
+  {
+   "id": "H2",
+   "x": 4,
+   "y": 1,
+   "type": "base"
+  },
+  {
+   "id": "H3",
+   "x": 6,
+   "y": 1,
+   "type": "base"
+  },
+  {
+   "id": "H4",
+   "x": 7,
+   "y": 3,
+   "type": "base"
+  },
+  {
+   "id": "H5",
+   "x": 6,
+   "y": 5,
+   "type": "base"
+  },
+  {
+   "id": "H6",
+   "x": 4,
+   "y": 5,
+   "type": "base"
+  },
+  {
+   "id": "C",
+   "x": 5,
+   "y": 3,
+   "type": "special"
+  },
+  {
+   "id": "T",
+   "x": 5,
+   "y": 0.2,
+   "type": "special"
+  },
+  {
+   "id": "B",
+   "x": 5,
+   "y": 5.8,
+   "type": "special"
+  },
+  {
+   "id": "R1",
+   "x": 8.5,
+   "y": 1.5,
+   "type": "base"
+  },
+  {
+   "id": "R2",
+   "x": 8.5,
+   "y": 4.5,
+   "type": "base"
+  }
+ ],
+ "edges": [
+  [
+   "HB",
+   "L1"
+  ],
+  [
+   "HB",
+   "L2"
+  ],
+  [
+   "HB",
+   "H1"
+  ],
+  [
+   "L1",
+   "H1"
+  ],
+  [
+   "L2",
+   "H1"
+  ],
+  [
+   "L1",
+   "H2"
+  ],
+  [
+   "L2",
+   "H6"
+  ],
+  [
+   "H1",
+   "H2"
+  ],
+  [
+   "H2",
+   "H3"
+  ],
+  [
+   "H3",
+   "H4"
+  ],
+  [
+   "H4",
+   "H5"
+  ],
+  [
+   "H5",
+   "H6"
+  ],
+  [
+   "H6",
+   "H1"
+  ],
+  [
+   "C",
+   "H1"
+  ],
+  [
+   "C",
+   "H2"
+  ],
+  [
+   "C",
+   "H3"
+  ],
+  [
+   "C",
+   "H4"
+  ],
+  [
+   "C",
+   "H5"
+  ],
+  [
+   "C",
+   "H6"
+  ],
+  [
+   "T",
+   "H2"
+  ],
+  [
+   "T",
+   "H3"
+  ],
+  [
+   "B",
+   "H5"
+  ],
+  [
+   "B",
+   "H6"
+  ],
+  [
+   "R1",
+   "H3"
+  ],
+  [
+   "R1",
+   "H4"
+  ],
+  [
+   "R2",
+   "H4"
+  ],
+  [
+   "R2",
+   "H5"
+  ],
+  [
+   "R1",
+   "HR"
+  ],
+  [
+   "R2",
+   "HR"
+  ],
+  [
+   "H4",
+   "HR"
+  ]
+ ],
+ "regions": [
+  {
+   "id": "r1",
+   "bases": [
+    "C",
+    "H1",
+    "H2"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r2",
+   "bases": [
+    "C",
+    "H2",
+    "H3"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r3",
+   "bases": [
+    "C",
+    "H3",
+    "H4"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r4",
+   "bases": [
+    "C",
+    "H4",
+    "H5"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r5",
+   "bases": [
+    "C",
+    "H5",
+    "H6"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r6",
+   "bases": [
+    "C",
+    "H6",
+    "H1"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r7",
+   "bases": [
+    "L1",
+    "H1",
+    "H2"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r8",
+   "bases": [
+    "R2",
+    "H4",
+    "H5"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r9",
+   "bases": [
+    "L2",
+    "H6",
+    "H1"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r10",
+   "bases": [
+    "R1",
+    "H3",
+    "H4"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r11",
+   "bases": [
+    "T",
+    "H2",
+    "H3"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r12",
+   "bases": [
+    "B",
+    "H5",
+    "H6"
+   ],
+   "medals": 2
+  }
+ ]
+}

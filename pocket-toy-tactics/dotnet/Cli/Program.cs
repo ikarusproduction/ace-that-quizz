@@ -36,6 +36,7 @@ namespace PocketToyTactics.Cli
                 case "host": return Host(db, a);
                 case "join": return Join(db, a);
                 case "discover": return Discover(a);
+                case "dump": return Dump(db, a);
                 default:
                     Console.WriteLine("usage: ptt terrains | play | simulate | host | join | discover  (see Program.cs header)");
                     return 2;
@@ -156,6 +157,33 @@ namespace PocketToyTactics.Cli
             }
             Console.WriteLine($"TOTAL bleu {bw} - {rw} rouge | fins : {string.Join(", ", reasons.Select(kv => kv.Key + "=" + kv.Value))}");
             Console.WriteLine($"tours moyens {turns.Average():0.0} (min {turns.Min()}, max {turns.Max()}) | {decisions} décisions en {sw.Elapsed.TotalSeconds:0.0}s ({1000.0 * sw.Elapsed.TotalSeconds / Math.Max(1, decisions):0.0} ms/décision)");
+            return 0;
+        }
+
+        /// <summary>Random games as JSON lines (seed, history, final state): reference data for other engine ports.</summary>
+        private static int Dump(ContentDatabase db, Args a)
+        {
+            var engine = new RulesEngine(db);
+            int games = (int)a.Long("games", 5);
+            var pick = new Rng((ulong)a.Long("seed", 1));
+            foreach (var terrain in db.TerrainOrder)
+                for (int g = 0; g < games; g++)
+                {
+                    ulong seed = pick.NextULong();
+                    var options = new GameOptions { SpecialBasesEnabled = g % 4 != 3 };
+                    var s = engine.NewGame(terrain, seed, options);
+                    while (s.Phase != Phase.GameOver)
+                    {
+                        var legal = engine.LegalCommands(s);
+                        engine.Apply(s, legal[pick.Next(legal.Count)]);
+                    }
+                    var line = new Dictionary<string, object>
+                    {
+                        ["terrain"] = terrain, ["seed"] = seed.ToString(), ["special"] = options.SpecialBasesEnabled,
+                        ["final"] = StateSerializer.ToJson(s),
+                    };
+                    Console.WriteLine(Json.Write(line));
+                }
             return 0;
         }
 

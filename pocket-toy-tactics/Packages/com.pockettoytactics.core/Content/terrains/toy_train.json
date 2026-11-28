@@ -1,0 +1,280 @@
+{
+ "id": "toy_train",
+ "name": "Gare du Petit Train",
+ "referenceTerrain": "original",
+ "layoutSource": "original-design",
+ "flavor": "Tchou-tchou ! Toutes les gares sont reliées par la voie ferrée.",
+ "specialEffect": "railway",
+ "medalGoal": {
+  "blue": 6,
+  "red": 6
+ },
+ "nodes": [
+  {
+   "id": "HB",
+   "x": 0,
+   "y": 3,
+   "type": "hq",
+   "owner": "blue"
+  },
+  {
+   "id": "HR",
+   "x": 10,
+   "y": 3,
+   "type": "hq",
+   "owner": "red"
+  },
+  {
+   "id": "A1",
+   "x": 1.6,
+   "y": 1.2,
+   "type": "base"
+  },
+  {
+   "id": "A2",
+   "x": 1.6,
+   "y": 4.8,
+   "type": "base"
+  },
+  {
+   "id": "C1",
+   "x": 3,
+   "y": 3,
+   "type": "base"
+  },
+  {
+   "id": "D1",
+   "x": 4,
+   "y": 0.8,
+   "type": "special"
+  },
+  {
+   "id": "D2",
+   "x": 4,
+   "y": 5.2,
+   "type": "special"
+  },
+  {
+   "id": "M1",
+   "x": 5,
+   "y": 2,
+   "type": "base"
+  },
+  {
+   "id": "M2",
+   "x": 5,
+   "y": 4,
+   "type": "base"
+  },
+  {
+   "id": "E1",
+   "x": 6,
+   "y": 0.8,
+   "type": "special"
+  },
+  {
+   "id": "E2",
+   "x": 6,
+   "y": 5.2,
+   "type": "special"
+  },
+  {
+   "id": "C2",
+   "x": 7,
+   "y": 3,
+   "type": "base"
+  },
+  {
+   "id": "F1",
+   "x": 8.4,
+   "y": 1.2,
+   "type": "base"
+  },
+  {
+   "id": "F2",
+   "x": 8.4,
+   "y": 4.8,
+   "type": "base"
+  }
+ ],
+ "edges": [
+  [
+   "HB",
+   "A1"
+  ],
+  [
+   "HB",
+   "A2"
+  ],
+  [
+   "HB",
+   "C1"
+  ],
+  [
+   "A1",
+   "C1"
+  ],
+  [
+   "A2",
+   "C1"
+  ],
+  [
+   "A1",
+   "D1"
+  ],
+  [
+   "A2",
+   "D2"
+  ],
+  [
+   "C1",
+   "M1"
+  ],
+  [
+   "C1",
+   "M2"
+  ],
+  [
+   "D1",
+   "M1"
+  ],
+  [
+   "D2",
+   "M2"
+  ],
+  [
+   "M1",
+   "M2"
+  ],
+  [
+   "D1",
+   "E1"
+  ],
+  [
+   "D2",
+   "E2"
+  ],
+  [
+   "M1",
+   "E1"
+  ],
+  [
+   "M2",
+   "E2"
+  ],
+  [
+   "M1",
+   "C2"
+  ],
+  [
+   "M2",
+   "C2"
+  ],
+  [
+   "E1",
+   "F1"
+  ],
+  [
+   "E2",
+   "F2"
+  ],
+  [
+   "C2",
+   "F1"
+  ],
+  [
+   "C2",
+   "F2"
+  ],
+  [
+   "F1",
+   "HR"
+  ],
+  [
+   "F2",
+   "HR"
+  ],
+  [
+   "C2",
+   "HR"
+  ]
+ ],
+ "regions": [
+  {
+   "id": "r1",
+   "bases": [
+    "A1",
+    "D1",
+    "M1",
+    "C1"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r2",
+   "bases": [
+    "A2",
+    "C1",
+    "M2",
+    "D2"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r3",
+   "bases": [
+    "F2",
+    "E2",
+    "M2",
+    "C2"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r4",
+   "bases": [
+    "F1",
+    "C2",
+    "M1",
+    "E1"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r5",
+   "bases": [
+    "C1",
+    "M1",
+    "M2"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r6",
+   "bases": [
+    "C2",
+    "M2",
+    "M1"
+   ],
+   "medals": 1
+  },
+  {
+   "id": "r7",
+   "bases": [
+    "D1",
+    "E1",
+    "M1"
+   ],
+   "medals": 2
+  },
+  {
+   "id": "r8",
+   "bases": [
+    "E2",
+    "D2",
+    "M2"
+   ],
+   "medals": 2
+  }
+ ]
+}
